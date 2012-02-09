@@ -28,6 +28,13 @@
   .box-shadow(inset 0 3px 5px rgba(0,0,0,.05));
 }
 
+.navbar .search-query {
+	font-size: 16px;
+	border: 1px solid #D9D9D9;
+	border-top: 1px solid silver;
+	background-color: @white;
+}
+
 .search-query {
 	border: 1px solid #CCC;
 	.border-radius(2px);
@@ -40,4 +47,29 @@ h1, h2, h3, h4, h5, h6 {
 
 i[class^="icon-"]{
 	opacity: 0.6;
+}
+
+.btn {
+  .border-radius(2px);
+  #gradient > .vertical-three-colors(@white, @white, 25%, darken(@white, 10%)); // Don't use .gradientbar() here since it does a three-color gradient
+}
+
+.btn-primary {
+  .buttonBackground(lighten(@primaryButtonBackground, 5%), @primaryButtonBackground);
+}
+// Warning appears are orange
+.btn-warning {
+  .buttonBackground(lighten(@orange, 5%), @orange);
+}
+// Danger and error appear as red
+.btn-danger {
+  .buttonBackground(lighten(@red, 5%), @red);
+}
+// Success appears as green
+.btn-success {
+  .buttonBackground(lighten(@green, 5%), @green);
+}
+// Info appears as a neutral blue
+.btn-info {
+  .buttonBackground(lighten(#5bc0de, 5%), #5bc0de);
 }
