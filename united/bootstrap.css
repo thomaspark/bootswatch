@@ -3376,6 +3376,17 @@ a.thumbnail:hover {
 .alert {
   text-shadow: none !important;
 }
+.navbar .nav > li > a {
+  border-right: 1px solid #C03D14;
+  border-left: 1px solid #E6633A;
+}
+.navbar .nav .active > a, .navbar .nav .active > a:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.navbar .divider-vertical {
+  background-color: inherit;
+  border-right: 0px solid #CE4213;
+}
 .pull-right {
   float: right;
 }
