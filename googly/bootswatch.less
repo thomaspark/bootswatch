@@ -18,19 +18,19 @@ h1, h2, h3, h4, h5, h6 {
 	color: @navbarText;
 }
 
-// Match active background with subnav
+// Make active item white
 .navbar .nav .active > a,
 .navbar .nav .active > a:hover {
-  background-color: #e9e9e9;
-  .box-shadow(inset 0 3px 5px rgba(0,0,0,.05));
+	background-color: @grayDarker;
+	color: @white;
 }
 
-// Remove text-shadow and match hover style with subnav
+// Remove text-shadow and make white on hover
 .navbar .nav > li > a {
 	text-shadow: none;
 	&:hover {
-  		background-color: #eee;
-	    .box-shadow(inset 0 3px 5px rgba(0,0,0,.05));
+		color: @white;
+		background-color: rgba(256, 256, 256, 0.2);
 	}
 }
 
@@ -38,6 +38,7 @@ h1, h2, h3, h4, h5, h6 {
 .subnav .nav > li > a {
 	border-left: 0px solid white !important;
 	border-right: 0px solid white !important;
+	color: @grayDark;
 }
 
 // FORMS
@@ -64,7 +65,7 @@ h1, h2, h3, h4, h5, h6 {
 // Make buttons boxier and flatter
 .btn {
   .border-radius(2px);
-  #gradient > .vertical-three-colors(@white, @white, 25%, darken(@white, 10%)); // Don't use .gradientbar() here since it does a three-color gradient
+  #gradient > .vertical-three-colors(@white, @white, 25%, darken(@white, 10%));
 }
 
 .btn-primary {
