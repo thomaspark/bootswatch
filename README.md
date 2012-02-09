@@ -5,7 +5,7 @@ Bootswatch is a library of themed swatches for use with [Twitter Bootstrap](http
 
 Use
 -----
-Visit http://www.bootswatch.com.
+Visit http://bootswatch.com.
 
 Replace Bootstrap's default `bootstrap.css` file with one from the swatch of your choice.
 
