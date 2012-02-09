@@ -1,32 +1,52 @@
 // Bootswatch.less
-// United
+// Swatch: United
 // -----------------------------------------------------
 
+// TYPOGRAPHY
+// -----------------------------------------------------
 
-// CUSTOM
-
+// Ubuntu web font
 @import url(http://fonts.googleapis.com/css?family=Ubuntu);
 
-.btn-primary {
-  .buttonBackground(lighten(@primaryButtonBackground, 15%), @primaryButtonBackground);
-}
+// NAVBAR
+// -----------------------------------------------------
 
-.alert {
-	text-shadow: none !important;
-}
-
+// Added dividers to items
 .navbar .nav > li > a {
 	border-right: 1px solid #C03D14;
 	border-left: 1px solid #E6633A;
 }
 
+// Lightened color of active item
 .navbar .nav .active > a,
 .navbar .nav .active > a:hover {
   background-color: rgba(0,0,0,.2);
 }
 
+// Styled item divider
 .navbar .divider-vertical {
 	background-color: inherit;
 	border-right: 0px solid #CE4213;
+}
+
+// BUTTONS
+// -----------------------------------------------------
+
+// Reversed gradient on primary button
+.btn-primary {
+  .buttonBackground(lighten(@primaryButtonBackground, 15%), @primaryButtonBackground);
+}
+
+// Made warning button yellow since orange is taken
+.btn-warning {
+  .buttonBackground(lighten(@yellow, 15%), @yellow);
+}
+
+// ALERTS
+// -----------------------------------------------------
+
+// Removed text-shadow
+.alert {
+	text-shadow: none !important;
 }
 
