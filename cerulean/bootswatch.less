@@ -1,0 +1,88 @@
+// Bootswatch.less
+// Swatch: Cerulean
+// -----------------------------------------------------
+
+// TYPOGRAPHY
+// -----------------------------------------------------
+
+@import url(http://fonts.googleapis.com/css?family=Telex);
+
+h1,h2,h3,h4,h5,h6, .navbar, .subnav {
+	font-family: 'Telex', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	color: #317EAC
+}
+
+// NAVBAR
+// -----------------------------------------------------
+
+.navbar-inner {
+  #gradient > .vertical-three-colors(@navbarBackground, @navbarBackground, 90%, @navbarBackgroundHighlight);
+}
+
+.navbar .nav .active > a,
+.navbar .nav .active > a:hover {
+  background-color: @navbarBackground;
+  background-color: rgba(0,0,0,.2);
+}
+
+.navbar .search-query {
+	border: 1px solid darken(@linkColor, 10%);
+}
+
+// FORMS
+// -----------------------------------------------------
+
+// Warning
+.control-group.warning {
+  .formFieldState(@orange, @orange, @warningBackground);
+}
+// Error
+.control-group.error {
+  .formFieldState(@red, @red, @errorBackground);
+}
+// Success
+.control-group.success {
+  .formFieldState(darken(@green, 10%), darken(@green, 10%), @successBackground);
+}
+
+// BUTTONS
+// -----------------------------------------------------
+
+.btn {
+  #gradient > .vertical-three-colors(@white, @white, 5%, darken(@white, 0%));
+  @shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+  .box-shadow(@shadow);
+}
+
+// Set the backgrounds
+// -------------------------
+.btn-primary {
+  .buttonBackground(lighten(@linkColor, 5%), @linkColor);
+}
+// Warning appears are orange
+.btn-warning {
+  .buttonBackground(lighten(@orange, 5%), @orange);
+}
+// Danger and error appear as red
+.btn-danger {
+  .buttonBackground(lighten(@red, 5%), @red);
+}
+// Success appears as green
+.btn-success {
+  .buttonBackground(lighten(@green, 5%), @green);
+}
+// Info appears as a neutral blue
+.btn-info {
+  .buttonBackground(lighten(@purple, 5%), @purple);
+}
+
+// ICONS
+// -----------------------------------------------------
+
+// Make icons gray
+i[class^="icon-"]{
+	opacity: 0.8;
+}
