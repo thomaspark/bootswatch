@@ -1,0 +1,98 @@
+// Bootswatch.less
+// Swatch: Gitter
+// -----------------------------------------------------
+
+// NAVBAR
+// -----------------------------------------------------
+
+// navbar style
+.navbar {
+	border-bottom: 1px solid #CACACA;
+	
+	.brand {
+		font-size: 20px;
+		font-weight: bold;
+		color: @textColor;
+	
+		&:hover {
+			color: @linkColor;
+		}
+	}
+}
+
+// navbar dropshadow
+.navbar .navbar-inner {
+	.box-shadow(0 1px 0 rgba(255,255,255,0.4));
+	.box-shadow(0 0 10px rgba(0,0,0,0.1));
+}
+
+// item typography
+.navbar .nav > li > a {
+	font-weight: bold;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	
+}
+
+.navbar .nav .active > a,
+.navbar .nav .active > a:hover {
+	background-color: transparent;
+	color: @textColor;
+}
+
+.subnav .nav > li > a {
+	border-bottom: 2px solid #DADADA;
+	font-weight: bold;
+	color: #777;
+}
+
+.subnav .nav > li.active > a {
+	border-bottom: 2px solid @textColor;
+	color: @textColor;
+}
+
+.navbar-search .search-query {
+	border: none;
+	color: #999;
+}
+
+// BUTTON
+// -----------------------------------------------------
+
+.btn {
+	.buttonBackground(#F4F4F4, #ECECEC);
+}
+
+.btn-primary {
+	.buttonBackground(#909090, #3F3F3F);
+}
+
+.btn-warning {
+  .buttonBackground(lighten(@yellow, 15%), @yellow);
+}
+
+.btn-danger {
+  .buttonBackground(lighten(#DA2D2D, 15%), #DA2D2D);
+}
+
+.btn-success {
+  .buttonBackground(#8ADD6D, #60B044);
+}
+
+.btn-info {
+  .buttonBackground(lighten(#4488BB, 15%), #4488BB);
+}
+
+// FORMS
+// -----------------------------------------------------
+
+.control-group.warning > label, .control-group.warning .help-block, .control-group.warning .help-inline {
+	color: #E29235;
+}
+
+.control-group.error > label, .control-group.error .help-block, .control-group.error .help-inline {
+	color: #C00;
+}
+
+.control-group.success > label, .control-group.success .help-block, .control-group.success .help-inline {
+	color: #35D059;
+}
