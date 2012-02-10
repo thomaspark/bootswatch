@@ -26,28 +26,39 @@
 	.box-shadow(0 0 10px rgba(0,0,0,0.1));
 }
 
-// item typography
+// nav item typography
 .navbar .nav > li > a {
 	font-weight: bold;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-	
 }
 
-.navbar .nav .active > a,
-.navbar .nav .active > a:hover {
+.navbar .nav .active > a {
 	background-color: transparent;
 	color: @textColor;
+	
+	&:hover {
+		background-color: transparent;
+		color: @linkColor;
+	}
 }
 
 .subnav .nav > li > a {
 	border-bottom: 2px solid #DADADA;
 	font-weight: bold;
 	color: #777;
+	
+	&:hover {
+		color: @linkColor;
+	}
 }
 
 .subnav .nav > li.active > a {
 	border-bottom: 2px solid @textColor;
 	color: @textColor;
+	
+	&:hover {
+		color: @grayDark;
+	}
 }
 
 .navbar-search .search-query {
