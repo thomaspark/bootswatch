@@ -43,7 +43,6 @@
 }
 
 .subnav .nav > li > a {
-	border-bottom: 2px solid #DADADA;
 	font-weight: bold;
 	color: #777;
 	
@@ -53,7 +52,6 @@
 }
 
 .subnav .nav > li.active > a {
-	border-bottom: 2px solid @textColor;
 	color: @textColor;
 	
 	&:hover {
@@ -96,17 +94,20 @@
 // FORMS
 // -----------------------------------------------------
 
-.control-group.warning > label, .control-group.warning .help-block, .control-group.warning .help-inline {
-	color: #E29235;
+
+// Warning
+.control-group.warning {
+  .formFieldState(#E29235, #E29235, @warningBackground);
+}
+// Error
+.control-group.error {
+  .formFieldState(#C00, #C00, @errorBackground);
+}
+// Success
+.control-group.success {
+  .formFieldState(#2BA949, #2BA949, @successBackground);
 }
 
-.control-group.error > label, .control-group.error .help-block, .control-group.error .help-inline {
-	color: #C00;
-}
-
-.control-group.success > label, .control-group.success .help-block, .control-group.success .help-inline {
-	color: #35D059;
-}
 
 // LABELS
 // -----------------------------------------------------

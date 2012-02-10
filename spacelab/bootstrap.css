@@ -3380,7 +3380,6 @@ a.thumbnail:hover {
   color: #4183c4;
 }
 .subnav .nav > li > a {
-  border-bottom: 2px solid #DADADA;
   font-weight: bold;
   color: #777;
 }
@@ -3388,7 +3387,6 @@ a.thumbnail:hover {
   color: #4183c4;
 }
 .subnav .nav > li.active > a {
-  border-bottom: 2px solid #333333;
   color: #333333;
 }
 .subnav .nav > li.active > a:hover {
@@ -3543,13 +3541,58 @@ a.thumbnail:hover {
   background-color: #366d96 \9;
 }
 .control-group.warning > label, .control-group.warning .help-block, .control-group.warning .help-inline {
-  color: #E29235;
+  color: #e29235;
+}
+.control-group.warning input, .control-group.warning select, .control-group.warning textarea {
+  color: #e29235;
+  border-color: #e29235;
+}
+.control-group.warning input:focus, .control-group.warning select:focus, .control-group.warning textarea:focus {
+  border-color: #c7781d;
+  -webkit-box-shadow: 0 0 6px #efc28e;
+  -moz-box-shadow: 0 0 6px #efc28e;
+  box-shadow: 0 0 6px #efc28e;
+}
+.control-group.warning .input-prepend .add-on, .control-group.warning .input-append .add-on {
+  color: #e29235;
+  background-color: #f5f3b4;
+  border-color: #e29235;
 }
 .control-group.error > label, .control-group.error .help-block, .control-group.error .help-inline {
-  color: #C00;
+  color: #cc0000;
+}
+.control-group.error input, .control-group.error select, .control-group.error textarea {
+  color: #cc0000;
+  border-color: #cc0000;
+}
+.control-group.error input:focus, .control-group.error select:focus, .control-group.error textarea:focus {
+  border-color: #990000;
+  -webkit-box-shadow: 0 0 6px #ff3333;
+  -moz-box-shadow: 0 0 6px #ff3333;
+  box-shadow: 0 0 6px #ff3333;
+}
+.control-group.error .input-prepend .add-on, .control-group.error .input-append .add-on {
+  color: #cc0000;
+  background-color: #ffe9e9;
+  border-color: #cc0000;
 }
 .control-group.success > label, .control-group.success .help-block, .control-group.success .help-inline {
-  color: #35D059;
+  color: #2ba949;
+}
+.control-group.success input, .control-group.success select, .control-group.success textarea {
+  color: #2ba949;
+  border-color: #2ba949;
+}
+.control-group.success input:focus, .control-group.success select:focus, .control-group.success textarea:focus {
+  border-color: #218037;
+  -webkit-box-shadow: 0 0 6px #63d77e;
+  -moz-box-shadow: 0 0 6px #63d77e;
+  box-shadow: 0 0 6px #63d77e;
+}
+.control-group.success .input-prepend .add-on, .control-group.success .input-append .add-on {
+  color: #2ba949;
+  background-color: #bedebe;
+  border-color: #2ba949;
 }
 .label-important {
   background-color: #BD2C00;
