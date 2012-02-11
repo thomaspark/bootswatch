@@ -1,108 +1,323 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset='utf-8'>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bootswatch: Themed swatches for Twitter Bootstrap</title>
 
-  <title>thomaspark/bootswatch @ GitHub</title>
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
-  <style type="text/css">
-    body {
-      margin-top: 1.0em;
-      background-color: #5b9f0e;
-      font-family: Helvetica, Arial, FreeSans, san-serif;
-      color: #ffffff;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-    h1 { font-size: 3.8em; color: #a460f1; margin-bottom: 3px; }
-    h1 .small { font-size: 0.4em; }
-    h1 a { text-decoration: none }
-    h2 { font-size: 1.5em; color: #a460f1; }
-    h3 { text-align: center; color: #a460f1; }
-    a { color: #a460f1; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-    pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-  </style>
-</head>
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
 
-<body>
-  <a href="https://github.com/thomaspark/bootswatch"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+	    body {
+	      padding-top: 60px;
+	      padding-bottom: 30px;
+	    }
+	  
+	  .hero-unit, .thumbnail {
+		  background-color: #eee;
+	  }
+	  
+	  .hero-unit h1, .hero-unit p {
+		  text-align: center;
+		  margin-bottom: 15px;
+	  }
+	  
+	  #social {
+		  margin-top: 45px;
+	  }
+	  
+	  .twitter-follow-button {
+		  width: 170px !important;
+	  }
+	  
+	  #about {
+		  margin-top: 60px;
+	  }
+	  
+	  #about h3 {
+		  margin: 0 0 5px 35px;
+	  }
+	  
+	  #about img {
+		  float: left;
+		  opacity: 0.8;
+	  }
+	  
+	  #swatches {
+		  margin: 60px 0 45px 0;
+		  padding-right: 20px;
+		  text-align: center;
+	  }
+	  
+	  
+	  .thumbnail {
+	 	  max-width: 300px;
+  		}
+	  
+	  
+	  .thumbnail img {
+	 	  border: 1px solid #DDD;
+		  margin-top: 5px;
+  		}
+	  
+	  .thumbnail .btn-toolbar {
+		  text-align: right;
+	  }
+	  
+    </style>
 
-  <div id="container">
+	<script type="text/javascript">
 
-    <div class="download">
-      <a href="https://github.com/thomaspark/bootswatch/zipball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/zip.png"></a>
-      <a href="https://github.com/thomaspark/bootswatch/tarball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/tar.png"></a>
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-23019901-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+			</a>
+          <a class="brand" href="http://bootswatch.com">Bootswatch</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li><a id="swatch-link" href="#swatches">The Swatches</a></li>
+		       <li class="dropdown">
+		         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Preview <b class="caret"></b></a>
+		         <ul class="dropdown-menu">
+		           <li><a target="_top" href="http://bootswatch.com/default">Default</a></li>
+		           <li class="divider"></li>
+		           <li><a target="_top" href="http://bootswatch.com/cerulean">Cerulean</a></li>
+		           <li><a target="_top" href="http://bootswatch.com/simplex">Simplex</a></li>
+		           <li><a target="_top" href="http://bootswatch.com/spacelab">Spacelab</a></li>
+		           <li><a target="_top" href="http://bootswatch.com/united">United</a></li>
+		         </ul>
+		       </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
     </div>
 
-    <h1><a href="https://github.com/thomaspark/bootswatch">bootswatch</a>
-      <span class="small">by <a href="https://github.com/thomaspark">thomaspark</a></span></h1>
+    <div class="container">
 
-    <div class="description">
-      short project description
-    </div>
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit">
+        <h1>Bootswatch</h1>
+        <p>Add color to your <a target="_blank" href="http://twitter.github.com/bootstrap/">Bootstrap</a> site without touching a color picker.</p>
+		
+        <div id="social">
+  	      <div class="span4 offset1">
+  			<iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=thomaspark&repo=bootswatch&type=watch&count=true"
+  			  allowtransparency="true" frameborder="0" scrolling="0" width="110px" height="20px"></iframe>
+			<iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=thomaspark&repo=bootswatch&type=fork"
+			    allowtransparency="true" frameborder="0" scrolling="0" width="53px" height="20px"></iframe>		
+  		  </div>
+          <div class="span4 offset1">
+  			<a href="https://twitter.com/thomashpark" class="twitter-follow-button" data-show-count="false" data-show-screen-name="true">Follow @thomashpark</a>
+  			<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.bootswatch.com" data-via="thomashpark">Tweet</a>
+  		  </div>
+  	    </div>	
+      </div>
 
-    
-      <p>main project text</p>
-    
+      <!-- Example row of columns -->
+      <div id="about" class="row">
+        <div class="span4">
+          <img src="img/glyphicons_036_file.png">
+		  <h3>Easy to Install</h3>
+          <p>Simply download the CSS file from the swatch of your choice and replace the one in Bootstrap. No messing around with hex values.</p>
+       </div>
+        <div class="span4">
+		  <img src="img/glyphicons_009_magic.png">
+          <h3>Whole New Feel</h3>
+          <p>We've all been there with the black bar and blue buttons. See how a splash of color and typography can transform the feel of your site.</p>
+        </div>
+        <div class="span4">
+          <img src="img/glyphicons_025_binoculars.png">
+		  <h3>Modular</h3>
+          <p>Changes are contained in just two LESS files, enabling modification and ensuring forward compatibility.</p>
+        </div>
+      </div>
+	  
+	  <div class="row">
+		  <div class="span12">
+		  	  <h1 id="swatches">The Swatches</h1>
+			  <ul class="thumbnails">
 
-    
-      <h2>Dependencies</h2>
-      <p>bs</p>
-    
 
-    
-      <h2>Install</h2>
-      <p>Simply replace your</p>
-    
+			    <li class="span4">
+			      <div class="thumbnail">
+			        <img src="cerulean/thumbnail.png" alt="">
+			        <div class="caption">
+			          <h3>Cerulean</h3>
+			          <p>A calm, blue sky.</p>
+			          <div class="btn-toolbar">
+						<div class="btn-group"><a class="btn btn-large" target="_top" href="http://bootswatch.com/cerulean">Preview</a></div>
+						<div class="btn-group">
+						  <a class="btn btn-large btn-primary" target="_blank" href="http://thomaspark.github.com/bootswatch/cerulean/bootstrap.min.css"
+								onClick="_gaq.push(['_trackEvent', 'bootswatch', 'cerulean', 'bootstrap.min.css']);">Download</a>
+						  <a class="btn btn-large btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+						    <span class="caret"></span>
+						  </a>
+						  <ul class="dropdown-menu">
+						    <!-- dropdown menu links -->
+							<li><a target="_blank" href="http://thomaspark.github.com/bootswatch/cerulean/bootstrap.min.css" 
+								onClick="_gaq.push(['_trackEvent', 'bootswatch', 'cerulean', 'bootstrap.min.css']);">bootstrap.min.css</a></li>
+							<li><a target="_blank" href="http://thomaspark.github.com/bootswatch/cerulean/bootstrap.css"
+								onClick="_gaq.push(['_trackEvent', 'bootswatch', 'cerulean', 'bootstrap.css']);">bootstrap.css</a></li>
+							<li class="divider"></li>
+  							<li><a target="_blank" href="http://thomaspark.github.com/bootswatch/cerulean/variables.less"
+								onClick="_gaq.push(['_trackEvent', 'bootswatch', 'cerulean', 'variables.less']);">variables.less</a></li>
+  							<li><a target="_blank" href="http://thomaspark.github.com/bootswatch/cerulean/bootswatch.less"
+								onClick="_gaq.push(['_trackEvent', 'bootswatch', 'cerulean', 'bootswatch.less']);">bootswatch.less</a></li>
+						  </ul>
+						</div>
+					</div>
+			        </div>
+			      </div>
+			    </li>
 
-    
-      <h2>License</h2>
-      <p>CC</p>
-    
+	
+  			    <li class="span4">
+  			      <div class="thumbnail">
+  			        <img src="simplex/thumbnail.png" alt="">
+  			        <div class="caption">
+  			          <h3>Simplex</h3>
+  			          <p>Flat, matte, minimalist.</p>
+  			          <div class="btn-toolbar">
+  						<div class="btn-group"><a class="btn btn-large" target="_top" href="http://bootswatch.com/simplex">Preview</a></div>
+  						<div class="btn-group">
+  						  <a class="btn btn-primary btn-large" target="_blank" href="http://thomaspark.github.com/bootswatch/simplex/bootstrap.min.css"
+								onClick="_gaq.push(['_trackEvent', 'bootswatch', 'simplex', 'bootstrap.min.css']);">Download</a>
+  						  <a class="btn btn-primary btn-large dropdown-toggle" data-toggle="dropdown" href="#">
+  						    <span class="caret"></span>
+  						  </a>
+  						  <ul class="dropdown-menu">
+  						    <!-- dropdown menu links -->
+  							<li><a target="_blank" href="http://thomaspark.github.com/bootswatch/simplex/bootstrap.min.css"
+								onClick="_gaq.push(['_trackEvent', 'bootswatch', 'simplex', 'bootstrap.min.css']);">bootstrap.min.css</a></li>
+  							<li><a target="_blank" href="http://thomaspark.github.com/bootswatch/simplex/bootstrap.min.css"
+								onClick="_gaq.push(['_trackEvent', 'bootswatch', 'simplex', 'bootstrap.css']);">bootstrap.css</a></li>
+							<li class="divider"></li>
+  							<li><a target="_blank" href="http://thomaspark.github.com/bootswatch/simplex/bootstrap.min.css"
+								onClick="_gaq.push(['_trackEvent', 'bootswatch', 'simplex', 'variables.less']);">variables.less</a></li>
+  							<li><a target="_blank" href="http://thomaspark.github.com/bootswatch/simplex/bootstrap.min.css"
+								onClick="_gaq.push(['_trackEvent', 'bootswatch', 'simplex', 'bootswatch.less']);">bootswatch.less</a></li>
+  						  </ul>
+  						</div>
+  					</div>
+  			        </div>
+  			      </div>
+  			    </li>
+				  
+			
+			    <li class="span4">
+			      <div class="thumbnail">
+			        <img src="spacelab/thumbnail.png" alt="">
+			        <div class="caption">
+			          <h3>Spacelab</h3>
+			          <p>Silvery and sleek.</p>
+			          <div class="btn-toolbar">
+						<div class="btn-group"><a class="btn btn-large" target="_top" href="http://bootswatch.com/spacelab">Preview</a></div>
+						<div class="btn-group">
+						  <a class="btn btn-large btn-primary" target="_blank" href="http://thomaspark.github.com/bootswatch/spacelab/bootstrap.min.css"
+								onClick="_gaq.push(['_trackEvent', 'bootswatch', 'spacelab', 'bootstrap.min.css']);">Download</a>
+						  <a class="btn btn-large btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+						    <span class="caret"></span>
+						  </a>
+						  <ul class="dropdown-menu">
+						    <!-- dropdown menu links -->
+							<li><a target="_blank" href="http://thomaspark.github.com/bootswatch/spacelab/bootstrap.min.css"
+								onClick="_gaq.push(['_trackEvent', 'bootswatch', 'spacelab', 'bootstrap.min.css']);">bootstrap.min.css</a></li>
+							<li><a target="_blank" href="http://thomaspark.github.com/bootswatch/spacelab/bootstrap.min.css"
+								onClick="_gaq.push(['_trackEvent', 'bootswatch', 'spacelab', 'bootstrap.css']);">bootstrap.css</a></li>
+							<li class="divider"></li>
+  							<li><a target="_blank" href="http://thomaspark.github.com/bootswatch/spacelab/bootstrap.min.css"
+								onClick="_gaq.push(['_trackEvent', 'bootswatch', 'spacelab', 'variables.less']);">variables.less</a></li>
+  							<li><a target="_blank" href="http://thomaspark.github.com/bootswatch/spacelab/bootstrap.min.css"
+								onClick="_gaq.push(['_trackEvent', 'bootswatch', 'spacelab', 'bootswatch.less']);">bootswatch.less</a></li>
+						  </ul>
+						</div>
+					</div>
+			        </div>
+			      </div>
+			    </li>
+				  
+				    
+			    <li class="span4">
+			      <div class="thumbnail">
+			        <img src="united/thumbnail.png" alt="">
+			        <div class="caption">
+			          <h3>United</h3>
+			          <p>Bright colors and a distinctive font.</p>
+			          <div class="btn-toolbar">
+						<div class="btn-group"><a class="btn btn-large" target="_top" href="http://bootswatch.com/united">Preview</a></div>
+						<div class="btn-group">
+						  <a class="btn btn-large btn-primary" target="_blank" href="http://thomaspark.github.com/bootswatch/united/bootstrap.min.css"
+								onClick="_gaq.push(['_trackEvent', 'bootswatch', 'united', 'bootstrap.min.css']);">Download</a>
+						  <a class="btn btn-large btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+						    <span class="caret"></span>
+						  </a>
+						  <ul class="dropdown-menu">
+						    <!-- dropdown menu links -->
+							<li><a target="_blank" href="http://thomaspark.github.com/bootswatch/united/bootstrap.min.css"
+								onClick="_gaq.push(['_trackEvent', 'bootswatch', 'united', 'bootstrap.min.css']);">bootstrap.min.css</a></li>
+							<li><a target="_blank" href="http://thomaspark.github.com/bootswatch/united/bootstrap.min.css"
+								onClick="_gaq.push(['_trackEvent', 'bootswatch', 'united', 'bootstrap.css']);">bootstrap.css</a></li>
+							<li class="divider"></li>
+  							<li><a target="_blank" href="http://thomaspark.github.com/bootswatch/united/bootstrap.min.css"
+								onClick="_gaq.push(['_trackEvent', 'bootswatch', 'united', 'variables.less']);">variables.less</a></li>
+  							<li><a target="_blank" href="http://thomaspark.github.com/bootswatch/united/bootstrap.min.css"
+								onClick="_gaq.push(['_trackEvent', 'bootswatch', 'united', 'bootswatch.less']);">bootswatch.less</a></li>
+						  </ul>
+						</div>
+					</div>
+			        </div>
+			      </div>
+			    </li>
 
-    
-      <h2>Authors</h2>
-      <p>Thomas Park (thomas@thomaspark.me)<br/>      </p>
-    
+  
+			 </ul>
+		</div>
+	  </div>
 
-    
-      <h2>Contact</h2>
-      <p>Thomas Park (thomas@thomaspark.me)<br/>      </p>
-    
+      <hr>
 
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="https://github.com/thomaspark/bootswatch/zipball/master">zip</a> or
-      <a href="https://github.com/thomaspark/bootswatch/tarball/master">tar formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/thomaspark/bootswatch</pre>
-    </p>
+      <footer>
+		<p class="pull-right"><a href="#">Back to top</a></p>
+        <p>Made by <a target="_blank" href="http://thomaspark.me" onclick="pageTracker._link(this.href); return false;">Thomas Park</a>. Submissions and feedback welcome at <a href="mailto:feedback@bootswatch.com">feedback@bootswatch.com</a>.</p>
+		<p>Based on <a target="_blank" href="http://twitter.github.com/bootstrap/">Bootstrap</a>. Icons from <a target="_blank" href="http://glyphicons.com/">Glyphicons</a>. Web fonts from <a target="_blank" href="http://www.google.com/webfonts">Google</a>.</p>
+      </footer>
 
-    <div class="footer">
-      get the source code on GitHub : <a href="https://github.com/thomaspark/bootswatch">thomaspark/bootswatch</a>
-    </div>
+    </div> <!-- /container -->
 
-  </div>
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-23019901-1");
-pageTracker._trackPageview();
-} catch(err) {}</script>"
-</body>
+
+  </body>
 </html>
