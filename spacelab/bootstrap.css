@@ -3405,9 +3405,21 @@ a.thumbnail:hover {
 .subnav .nav > li.active > a:hover {
   color: #333333;
 }
-.navbar-search .search-query {
+.navbar-search .search-query, .navbar-search .search-query:hover {
   border: none;
-  color: #999;
+  color: #999999;
+}
+.navbar-search .search-query :-moz-placeholder, .navbar-search .search-query:hover :-moz-placeholder {
+  color: #999999;
+}
+.navbar-search .search-query::-webkit-input-placeholder, .navbar-search .search-query:hover::-webkit-input-placeholder {
+  color: #999999;
+}
+.navbar-search .search-query:focus,
+.navbar-search .search-query:hover:focus,
+.navbar-search .search-query.focused,
+.navbar-search .search-query:hover.focused {
+  color: #333333;
 }
 .btn {
   background-color: #f1f1f1;

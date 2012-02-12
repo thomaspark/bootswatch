@@ -42,7 +42,6 @@
 	}
 }
 
-
 .navbar .nav .open.dropdown .dropdown-toggle {
 	color: @linkColor;
 }
@@ -78,9 +77,16 @@
 	}
 }
 
-.navbar-search .search-query {
+.navbar-search .search-query,
+.navbar-search .search-query:hover {
 	border: none;
-	color: #999;
+	color: @grayLight;
+	.placeholder(@grayLight);
+	
+    &:focus,
+    &.focused {
+		color: @textColor;
+	}
 }
 
 // BUTTON
