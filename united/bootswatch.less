@@ -29,6 +29,27 @@
 	border-right: 0px solid #CE4213;
 }
 
+.navbar-search .search-query {
+	border: 1px solid darken(@navbarBackground, 15%);
+}
+
+.navbar .nav-collapse > .nav > li a {
+	color: @white;
+	border-left: 0px solid @orange;
+	border-right: 0px solid @orange;
+}
+
+.navbar .nav-collapse > .nav > li a:hover {
+	background-color: #A6350F;
+}
+
+.navbar .nav-collapse .navbar-form,
+.navbar .nav-collapse .navbar-search {
+	border-top: 0px solid @orange;
+	border-bottom: 0px solid @orange;
+	.box-shadow(none);
+}
+
 // BUTTONS
 // -----------------------------------------------------
 
@@ -40,7 +61,14 @@
 // Made warning button yellow since orange is taken
 .btn-warning {
   .buttonBackground(lighten(@yellow, 15%), @yellow);
+  
+  .caret {
+    border-top-color: @white;
+    .opacity(75);
+  }
 }
+
+
 
 // ALERTS
 // -----------------------------------------------------

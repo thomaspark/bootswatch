@@ -3385,6 +3385,16 @@ h6 {
 .navbar .search-query {
   border: 1px solid #2480b6;
 }
+.navbar .nav-collapse > .nav li > a {
+  color: #ffffff;
+}
+.navbar .nav-collapse > .nav li > a:hover {
+  background-color: #2B7CAC;
+}
+.btn-navbar:hover {
+  background-color: #cccccc;
+  background-position: 0 0;
+}
 .control-group.warning > label, .control-group.warning .help-block, .control-group.warning .help-inline {
   color: #dd5600;
 }
@@ -3452,6 +3462,11 @@ h6 {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.btn-warning .caret {
+  border-top-color: #ffffff;
+  opacity: 0.75;
+  filter: alpha(opacity=75);
 }
 .btn-primary {
   background-color: #43a1da;

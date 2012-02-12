@@ -41,6 +41,11 @@ h1, h2, h3, h4, h5, h6 {
 	color: @grayDark;
 }
 
+.btn-navbar:hover {
+    background-color: darken(@white, 20%);
+    background-position: 0 0;
+}
+
 // FORMS
 // -----------------------------------------------------
 
@@ -58,6 +63,13 @@ h1, h2, h3, h4, h5, h6 {
 .btn {
   .border-radius(2px);
   #gradient > .vertical-three-colors(@white, @white, 25%, darken(@white, 10%));
+}
+
+.btn-warning {
+  .caret {
+    border-top-color: @white;
+    .opacity(75);
+  }
 }
 
 .btn-primary {

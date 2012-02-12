@@ -32,6 +32,19 @@ h1,h2,h3,h4,h5,h6 {
 	border: 1px solid darken(@linkColor, 10%);
 }
 
+.navbar .nav-collapse > .nav li > a {
+	color: @white;
+	
+	&:hover {
+		background-color: #2B7CAC;
+	}
+}
+
+.btn-navbar:hover {
+    background-color: darken(@white, 20%);
+    background-position: 0 0;
+}
+
 // FORMS
 // -----------------------------------------------------
 
@@ -55,6 +68,13 @@ h1,h2,h3,h4,h5,h6 {
   #gradient > .vertical-three-colors(@white, @white, 5%, darken(@white, 0%));
   @shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
   .box-shadow(@shadow);
+}
+
+.btn-warning {
+  .caret {
+    border-top-color: @white;
+    .opacity(75);
+  }
 }
 
 // Set the backgrounds
