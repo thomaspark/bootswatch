@@ -3059,13 +3059,13 @@ a.thumbnail:hover {
   background-color: #b94a48;
 }
 .label-warning {
-  background-color: #ff6600;
+  background-color: #ffa366;
 }
 .label-success {
-  background-color: #468847;
+  background-color: #84c569;
 }
 .label-info {
-  background-color: #3a87ad;
+  background-color: #67abcc;
 }
 @-webkit-keyframes progress-bar-stripes {
   from {
@@ -3395,6 +3395,11 @@ h6 {
   background-image: linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
   background-repeat: no-repeat;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
+}
+.btn-warning .caret {
+  border-top-color: #ffffff;
+  opacity: 0.75;
+  filter: alpha(opacity=75);
 }
 .btn-primary {
   background-color: #4376de;
