@@ -34,7 +34,15 @@ h1,h2,h3,h4,h5,h6 {
 
 // responsive menu colors
 
-.navbar .nav-collapse > .nav li > a {
+.navbar .nav-collapse > .nav > li .dropdown-menu a {
+	color: @linkColor;
+	
+	&:hover {
+		color: @white;
+	}
+}
+
+.navbar .nav-collapse.collapse > .nav li > a {
 	color: @white;
 	
 	&:hover {

@@ -33,14 +33,22 @@
 	border: 1px solid darken(@navbarBackground, 15%);
 }
 
-.navbar .nav-collapse > .nav > li a {
+.navbar .nav-collapse > .nav > li .dropdown-menu a {
+	color: @linkColor;
+	
+	&:hover {
+		color: @white;
+	}
+}
+
+.navbar .nav-collapse.collapse > .nav li > a {
 	color: @white;
 	border-left: 0px solid @orange;
 	border-right: 0px solid @orange;
-}
-
-.navbar .nav-collapse > .nav > li a:hover {
-	background-color: #A6350F;
+	
+	&:hover {
+		background-color: #2B7CAC;
+	}
 }
 
 .navbar .nav-collapse .navbar-form,
