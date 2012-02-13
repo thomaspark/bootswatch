@@ -42,8 +42,9 @@
 	}
 }
 
+.navbar .nav > li > a:hover,
 .navbar .nav .open.dropdown .dropdown-toggle {
-	color: @linkColor;
+	color: @linkColor !important;
 }
 
 .navbar .nav .dropdown-toggle .caret {
@@ -51,13 +52,9 @@
 	opacity: 1;
 }
 
-.navbar .nav .open.dropdown .caret {
-	border-top-color: @linkColor;
-}
-
-
+.navbar .nav .open.dropdown .caret,
 .navbar .nav .dropdown-toggle:hover .caret {
-		border-top-color: @linkColor;
+	border-top-color: @linkColor !important;
 }
 
 .subnav .nav > li > a {
