@@ -13,7 +13,7 @@ Extend
 ------
 Swatches are created in [LESS](http://lesscss.org/). Modifications are made to the existing `variables.less` and with the addition of `bootswatch.less`.
 
-The files can be found in the `gh-pages` branch. You are welcome to fork the files and modify them further.
+The files can be found in the `gh-pages` branch [here](https://github.com/thomaspark/bootswatch/tree/gh-pages). You are welcome to fork the files and modify them further.
 
 Feedback
 ------
