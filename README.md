@@ -7,17 +7,17 @@ Use
 -----
 Visit http://bootswatch.com.
 
-Replace Bootstrap's default `bootstrap.css` file with one from the swatch of your choice.
+Replace Bootstrap's default `bootstrap.min.css` file with the one from your chosen swatch.
 
 Extend
 ------
-Swatches are created in [LESS](http://lesscss.org/). Modifications are made to `variables.less` and introduced with `bootswatch.less`.
+Swatches are created in [LESS](http://lesscss.org/). Modifications are made to the existing `variables.less` and with the addition of `bootswatch.less`.
 
-You are welcome to fork the files from this repository and customize them further.
+The files can be found in the `gh-pages` branch. You are welcome to fork the files and modify them further.
 
 Feedback
 ------
-Please send feedback to feedback@bootswatch.com.
+Please send bugs, submissions, and other feedback to feedback@bootswatch.com.
 
 Author
 ------
