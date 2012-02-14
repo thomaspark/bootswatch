@@ -3354,7 +3354,8 @@ h2,
 h3,
 h4,
 h5,
-.navbar .brand {
+.navbar .brand,
+.navbar .nav-collapse.collapse .nav li > a {
   color: #eeeeee;
   font-weight: normal;
   text-shadow: none;
@@ -3485,17 +3486,15 @@ div.subnav .nav .dropdown.open .dropdown-menu li > a:hover {
   border-bottom: 0;
   background: #33b5e5;
 }
-.nav.nav-tabs .active a:hover {
-  background-color: #33b5e5;
-  color: #ffffff;
-}
-.nav.nav-tabs .dropdown.open .dropdown-toggle, .nav.nav-pills .dropdown.open .dropdown-toggle {
-  background-color: #060606 !important;
-  border-top: 0;
-  border: 1px solid #222;
-}
-.nav.nav-tabs .dropdown.open .dropdown-menu li > a:hover, .nav.nav-pills .dropdown.open .dropdown-menu li > a:hover {
-  border-bottom: 0;
+@media (max-width: 768px) {
+  div.subnav .nav > li + li > a, div.subnav .nav > li:first-child > a {
+    border-top: 1px solid #222;
+    border-left: 1px solid #222;
+  }
+  .subnav .nav > li + li > a:hover, .subnav .nav > li:first-child > a:hover {
+    border-bottom: 0;
+    background-color: #33b5e5;
+  }
 }
 .table-bordered {
   border: 1px solid #222;
@@ -3562,6 +3561,18 @@ select,
 .nav-tabs > .active > a,
 .nav-tabs > .active > a:hover {
   border: 1px solid #222 !important;
+}
+.nav.nav-tabs .active a:hover {
+  background-color: #33b5e5;
+  color: #ffffff;
+}
+.nav.nav-tabs .dropdown.open .dropdown-toggle, .nav.nav-pills .dropdown.open .dropdown-toggle {
+  background-color: #060606 !important;
+  border-top: 0;
+  border: 1px solid #222;
+}
+.nav.nav-tabs .dropdown.open .dropdown-menu li > a:hover, .nav.nav-pills .dropdown.open .dropdown-menu li > a:hover {
+  border-bottom: 0;
 }
 .tabbable .nav-tabs, .thumbnail {
   border-color: #222;

@@ -8,7 +8,7 @@
 // Ubuntu web font
 @import url('http://fonts.googleapis.com/css?family=Droid+Sans:400,700');
 
-h1, h2, h3, h4, h5, .navbar .brand {
+h1, h2, h3, h4, h5, .navbar .brand, .navbar .nav-collapse.collapse .nav li > a {
 	color: @grayLighter;
 	font-weight: normal;
 	text-shadow: none;
@@ -163,20 +163,19 @@ div.subnav .nav .dropdown.open {
 	}
 }
 
-.nav.nav-tabs .active a:hover {
-	background-color: @blue;
-	color: @white;
-}
-
-.nav.nav-tabs .dropdown.open,
-.nav.nav-pills .dropdown.open {
-	.dropdown-toggle {
-		background-color: #060606 !important;
-		border-top: 0;
-		border: 1px solid #222;
+@media (max-width: 768px) {
+	div.subnav .nav > li + li > a,
+	div.subnav .nav > li:first-child > a {
+		border-top: 1px solid #222;
+		border-left: 1px solid #222;
 	}
 	
-	.dropdown-menu li > a:hover { border-bottom: 0; }
+	.subnav .nav > li + li > a:hover,
+	.subnav .nav > li:first-child > a:hover {
+			border-bottom: 0;
+			background-color: @blue;
+	}
+	
 }
 
 // TABLES
@@ -258,6 +257,22 @@ input, textarea, select, .uneditable-input {
 .nav-tabs > .active > a,
 .nav-tabs > .active > a:hover {
 	border: 1px solid #222 !important;
+}
+
+.nav.nav-tabs .active a:hover {
+	background-color: @blue;
+	color: @white;
+}
+
+.nav.nav-tabs .dropdown.open,
+.nav.nav-pills .dropdown.open {
+	.dropdown-toggle {
+		background-color: #060606 !important;
+		border-top: 0;
+		border: 1px solid #222;
+	}
+	
+	.dropdown-menu li > a:hover { border-bottom: 0; }
 }
 
 .tabbable .nav-tabs, .thumbnail {
