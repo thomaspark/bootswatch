@@ -1,7 +1,7 @@
 Bootswatch
 ==========
 
-Bootswatch is a library of themed swatches for use with [Twitter Bootstrap](http://twitter.github.com/bootstrap/). It allows the time-constrained and design-impaired to give their Bootstrap sites a splash of color without having to open a color picker.
+Bootswatch is a library of themed swatches for use with [Twitter Bootstrap](http://twitter.github.com/bootstrap/). It allows the time-constrained and design-impaired to give their Bootstrap sites color without having to open a color picker.
 
 Use
 -----
@@ -17,7 +17,7 @@ The files can be found in the `gh-pages` branch [here](https://github.com/thomas
 
 Feedback
 ------
-Please send bugs, submissions, and other feedback to feedback@bootswatch.com.
+Please send bugs, submissions, and other feedback to feedback@bootswatch.com. For more information, visit http://thomaspark.me/2012/02/introducing-bootswatch/.
 
 Author
 ------
