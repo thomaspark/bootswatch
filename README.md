@@ -1,7 +1,7 @@
 Bootswatch
 ==========
 
-Bootswatch is a collection of themed swatches that you can download for free and drop into your [Bootstrap](http://twitter.github.com/bootstrap/) site. Check it out at [bootswatch.com[(http://bootswatch.com).
+Bootswatch is a collection of themed swatches that you can download for free and drop into your [Bootstrap](http://twitter.github.com/bootstrap/) site. Check it out at [bootswatch.com](http://bootswatch.com).
 
 So how do I use Bootswatch?
 -----
