@@ -1,23 +1,29 @@
 Bootswatch
 ==========
 
-Bootswatch is a library of themed swatches for use with [Twitter Bootstrap](http://twitter.github.com/bootstrap/). It allows the time-constrained and design-impaired to give their Bootstrap sites color without having to open a color picker.
+Bootswatch is a collection of themed swatches that you can download for free and drop into your [Bootstrap](http://twitter.github.com/bootstrap/) site. Check it out at bootswatch.com.
 
-Use
+So how do I use Bootswatch?
 -----
-Visit http://bootswatch.com.
+Head over to [Bootswatch](http://bootswatch.com) and pick a swatch. Download the `bootswatch.min.css` file associated with it.
 
-Replace Bootstrap's default `bootstrap.min.css` file with the one from your chosen swatch.
+In Bootstrap’s CSS directory, you’ll find a stylesheet in full (`bootstrap.css`) and minified (`bootstrap.min.css`) forms. Rename them or move them to a safe place. Then drop in the new CSS file and check that your HTML points to it. If you ever change your mind, simply drop in another swatch or switch back to the original.
 
-Extend
+What if I want to extend Bootswatch?
 ------
-Swatches are created in [LESS](http://lesscss.org/). Modifications are made to the existing `variables.less` and with the addition of `bootswatch.less`.
+Bootswatch is an open source project, and you’re welcome to modify the swatches further or create your own. If you’re interested, fork or follow the GitHub repository.
 
-The files can be found in the `gh-pages` branch [here](https://github.com/thomaspark/bootswatch/tree/gh-pages). You are welcome to fork the files and modify them further.
+Each raw swatch consists of two LESS files. One is variables.less, which is included by default in Bootstrap and allows you to customize these settings. The other is a new file called bootswatch.less that introduces more extensive changes.
+
+First, add these two files to Bootstrap’s own LESS files. You’ll be overwriting the default variables.less.
+
+Next, open up bootstrap.less and just before the line “Utility classes” at the end, add @import "bootswatch.less";. This command includes bootswatch.less when compiling the LESS files to CSS, and placing it near the end overrides earlier styles with the same CSS selector specificity.
+
+Now you can start customizing variables.less and bootswatch.less. You are also free to modify the other LESS files, which in some cases will be easier, but your swatch may become brittle to future changes in Bootstrap itself. When you’re ready to test your code, compile to CSS and enjoy!
 
 Feedback
 ------
-Please send bugs, submissions, and other feedback to feedback@bootswatch.com. For more information, visit http://thomaspark.me/2012/02/introducing-bootswatch/.
+Please send bugs, submissions, and other feedback to thomas@thomaspark.me. For more information, visit http://thomaspark.me/2012/02/introducing-bootswatch/.
 
 Author
 ------
