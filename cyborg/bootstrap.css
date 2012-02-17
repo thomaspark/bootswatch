@@ -3480,6 +3480,21 @@ a.thumbnail:hover {
   font-weight: 200;
   line-height: 27px;
 }
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+.invisible {
+  visibility: hidden;
+}
 h1,
 h2,
 h3,
@@ -3649,6 +3664,9 @@ div.subnav .nav .dropdown.open .dropdown-menu li > a:hover {
 }
 .table-striped tbody tr:nth-child(even) td, .table-striped tbody tr:nth-child(even) th {
   background-color: transparent;
+}
+.table tbody tr:hover th, .table tbody tr:hover td {
+  background-color: #282828;
 }
 code, pre, pre.prettyprint {
   background-color: #eeeeee;
@@ -3969,19 +3987,4 @@ legend, label {
 }
 .label-info:hover {
   background-color: #004d66;
-}
-.pull-right {
-  float: right;
-}
-.pull-left {
-  float: left;
-}
-.hide {
-  display: none;
-}
-.show {
-  display: block;
-}
-.invisible {
-  visibility: hidden;
 }
