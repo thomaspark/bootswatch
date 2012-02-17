@@ -32,17 +32,20 @@ label, input, button, select, textarea {
 	font-family: 'Droid Sans', sans-serif;
 }
 
+blockquote {
+	border-left: 5px solid @blue;
+	
+	&.pull-right {
+		border-right: 5px solid @blue;
+	}
+}
+
 // SCAFFOLDING
 // -----------------------------------------------------
 
 body {
 	background-color: #060606;
 	#gradient > .vertical (#060606, #252A30);
-}
-
-hr {
-	border-top: 1px solid #222;
-	border-bottom: 0;
 }
 
 .page-header {
@@ -208,6 +211,12 @@ div.subnav .nav .dropdown.open {
 .table-striped tbody tr:nth-child(odd) th {
 	background-color: rgba(40, 40, 40, 0.5);
 }
+
+.table-striped tbody tr:nth-child(even) td,
+.table-striped tbody tr:nth-child(even) th {
+	background-color: transparent;
+}
+
 
 code, pre, pre.prettyprint {
 	background-color: @grayLighter;
@@ -416,6 +425,10 @@ legend, label {
 
 .label { background-color: darken(@gray, 20%); }
 .label-important { background-color: @red; }
+.label-important:hover { background-color: darken(@red, 10%); }
 .label-warning   { background-color: darken(@orange, 10%); }
+.label-warning:hover { background-color: darken(@orange, 20%); }
 .label-success   { background-color: darken(@green, 3%); }
+.label-success:hover { background-color: darken(@green, 13%); }
 .label-info      { background-color: darken(@blueDark, 10%); }
+.label-info:hover { background-color: darken(@blueDark, 20%); }
