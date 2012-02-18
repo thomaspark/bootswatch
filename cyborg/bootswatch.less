@@ -23,12 +23,12 @@ label, input, button, select, textarea {
 	color: @gray;
 }
 
-.navbar .search-query&::-moz-placeholder {
+.navbar .search-query:-moz-placeholder {
 	font-family: 'Droid Sans', sans-serif;
 	color: @gray;
 }
 	
-.navbar .search-query&:::-webkit-input-placeholder {
+.navbar .search-query::-webkit-input-placeholder {
 	font-family: 'Droid Sans', sans-serif;
 }
 
@@ -71,9 +71,14 @@ body {
 	padding: 12px 20px 8px;
 }
 
-.navbar .search-query {
-	background: @black;
+.navbar .search-query,
+.navbar .search-query:focus,
+.navbar .search-query.focused {
+	color: @grayLight;
+	text-shadow: none;
+	background-color: #222;
 	.border-radius(1px);
+	.placeholder(@gray);
 }
 
 .navbar .nav .active > a,
@@ -402,14 +407,42 @@ input, textarea, select, .uneditable-input {
 // FORMS
 // -----------------------------------------------------
 
-
-.form-actions {
-	background: transparent;
-}
+input, textarea, select {
+	background-color: #ccc;
+	border-color: #bbb;
+	border-width: 2px;
+	.placeholder(@gray);
+} 
 
 legend, label {
 	color: @textColor;
 	border-bottom: 0px solid #222;
+}
+
+input[disabled], select[disabled], textarea[disabled], input[readonly], select[readonly], textarea[readonly], .uneditable-input {
+	background-color: #555;
+	border-color: #444;
+}
+
+input:focus,
+textarea:focus,
+input.focused,
+textarea.focused {
+  border-color: rgba(82,168,236,1);
+  outline: 0;
+  outline: thin dotted \9; /* IE6-9 */
+}
+
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus,
+select:focus {
+  .box-shadow(none); // override for file inputs
+  .tab-focus();
+}
+
+.form-actions {
+	background: transparent;
 }
 
 .form-actions, footer.footer {
@@ -427,12 +460,43 @@ legend, label {
 	.border-radius(0);
 }
 
-.label { background-color: darken(@gray, 20%); }
-.label-important { background-color: @red; }
+.label {
+	color: @grayLighter;
+}
+
+.label, .alert { background-color: darken(@gray, 20%); }
+
+.label:hover { background-color: darken(@gray, 30%); }
+
+
+.label-important, .alert-danger,
+.alert-error { background-color: @red; }
+
 .label-important:hover { background-color: darken(@red, 10%); }
+
 .label-warning   { background-color: darken(@orange, 10%); }
+
 .label-warning:hover { background-color: darken(@orange, 20%); }
-.label-success   { background-color: darken(@green, 3%); }
+
+.label-success, .alert-success { background-color: darken(@green, 3%); }
+
 .label-success:hover { background-color: darken(@green, 13%); }
-.label-info      { background-color: darken(@blueDark, 10%); }
+
+.label-info, .alert-info { background-color: darken(@blueDark, 10%); }
+
 .label-info:hover { background-color: darken(@blueDark, 20%); }
+
+.alert,
+.alert .alert-heading,
+.alert-success,
+.alert-success .alert-heading,
+.alert-danger,
+.alert-error,
+.alert-danger .alert-heading,
+.alert-error .alert-heading,
+.alert-info,
+.alert-info .alert-heading {
+  color: @grayLighter;
+  text-shadow: none;
+  border: none;
+}

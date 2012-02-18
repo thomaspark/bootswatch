@@ -3517,11 +3517,11 @@ textarea {
   font-family: 'Droid Sans', sans-serif;
   color: #999999;
 }
-.navbar .search-query::-moz-placeholder {
+.navbar .search-query:-moz-placeholder {
   font-family: 'Droid Sans', sans-serif;
   color: #999999;
 }
-.navbar .search-query:::-webkit-input-placeholder {
+.navbar .search-query::-webkit-input-placeholder {
   font-family: 'Droid Sans', sans-serif;
 }
 blockquote {
@@ -3561,11 +3561,19 @@ body {
 .navbar .brand {
   padding: 12px 20px 8px;
 }
-.navbar .search-query {
-  background: #000000;
+.navbar .search-query, .navbar .search-query:focus, .navbar .search-query.focused {
+  color: #adafae;
+  text-shadow: none;
+  background-color: #222;
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
   border-radius: 1px;
+}
+.navbar .search-query :-moz-placeholder, .navbar .search-query:focus :-moz-placeholder, .navbar .search-query.focused :-moz-placeholder {
+  color: #999999;
+}
+.navbar .search-query::-webkit-input-placeholder, .navbar .search-query:focus::-webkit-input-placeholder, .navbar .search-query.focused::-webkit-input-placeholder {
+  color: #999999;
 }
 .navbar .nav .active > a, .navbar .nav li > a:hover, .navbar .brand:hover {
   border-bottom: 3px solid #33b5e5;
@@ -3944,12 +3952,54 @@ select,
 .btn.disabled, .btn[disabled] {
   background-color: #adafae;
 }
-.form-actions {
-  background: transparent;
+input, textarea, select {
+  background-color: #ccc;
+  border-color: #bbb;
+  border-width: 2px;
+}
+input :-moz-placeholder, textarea :-moz-placeholder, select :-moz-placeholder {
+  color: #999999;
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder, select::-webkit-input-placeholder {
+  color: #999999;
 }
 legend, label {
   color: #999999;
   border-bottom: 0px solid #222;
+}
+input[disabled],
+select[disabled],
+textarea[disabled],
+input[readonly],
+select[readonly],
+textarea[readonly],
+.uneditable-input {
+  background-color: #555;
+  border-color: #444;
+}
+input:focus,
+textarea:focus,
+input.focused,
+textarea.focused {
+  border-color: #52a8ec;
+  outline: 0;
+  outline: thin dotted \9;
+  /* IE6-9 */
+
+}
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus,
+select:focus {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.form-actions {
+  background: transparent;
 }
 .form-actions, footer.footer {
   border-top: 1px solid #222;
@@ -3962,9 +4012,15 @@ legend, label {
   border-radius: 0;
 }
 .label {
+  color: #eeeeee;
+}
+.label, .alert {
   background-color: #666666;
 }
-.label-important {
+.label:hover {
+  background-color: #4d4d4d;
+}
+.label-important, .alert-danger, .alert-error {
   background-color: #cc0000;
 }
 .label-important:hover {
@@ -3976,15 +4032,29 @@ legend, label {
 .label-warning:hover {
   background-color: #995200;
 }
-.label-success {
+.label-success, .alert-success {
   background-color: #5c8a00;
 }
 .label-success:hover {
   background-color: #3a5700;
 }
-.label-info {
+.label-info, .alert-info {
   background-color: #007399;
 }
 .label-info:hover {
   background-color: #004d66;
+}
+.alert,
+.alert .alert-heading,
+.alert-success,
+.alert-success .alert-heading,
+.alert-danger,
+.alert-error,
+.alert-danger .alert-heading,
+.alert-error .alert-heading,
+.alert-info,
+.alert-info .alert-heading {
+  color: #eeeeee;
+  text-shadow: none;
+  border: none;
 }
