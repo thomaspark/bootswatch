@@ -13,13 +13,10 @@ What if I want to extend Bootswatch?
 ------
 Bootswatch is an open source project, and you’re welcome to modify the swatches further or create your own. If you’re interested, fork or follow the GitHub repository.
 
-Each raw swatch consists of two LESS files. One is variables.less, which is included by default in Bootstrap and allows you to customize these settings. The other is a new file called bootswatch.less that introduces more extensive changes.
+Each raw swatch consists of two LESS files. One is `variables.less`, which is included by default in Bootstrap and allows you to customize these settings. The other is a new file called `bootswatch.less` that introduces more extensive changes.
 
-First, add these two files to Bootstrap’s own LESS files. You’ll be overwriting the default variables.less.
+Check out the README in the `swatchmaker` directory for step-by-step instructions for building your own swatches.
 
-Next, open up bootstrap.less and just before the line “Utility classes” at the end, add @import "bootswatch.less";. This command includes bootswatch.less when compiling the LESS files to CSS, and placing it near the end overrides earlier styles with the same CSS selector specificity.
-
-Now you can start customizing variables.less and bootswatch.less. You are also free to modify the other LESS files, which in some cases will be easier, but your swatch may become brittle to future changes in Bootstrap itself. When you’re ready to test your code, compile to CSS and enjoy!
 
 Feedback
 ------
