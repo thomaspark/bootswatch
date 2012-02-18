@@ -13,7 +13,7 @@ What if I want to extend Bootswatch?
 ------
 Bootswatch is an open source project, and you’re welcome to modify the swatches further or create your own. If you’re interested, fork or follow the GitHub repository.
 
-Each raw swatch consists of two LESS files. One is `variables.less`, which is included by default in Bootstrap and allows you to customize these settings. The other is a new file called `bootswatch.less` that introduces more extensive changes.
+Each raw swatch consists of two LESS files. One is `variables.less`, which is included by default in Bootstrap and allows you to customize [these settings](http://twitter.github.com/bootstrap/less.html#variables). The other is a new file called `bootswatch.less` that introduces more extensive structural changes.
 
 Check out the README in the `swatchmaker` directory for step-by-step instructions for building your own swatches.
 
