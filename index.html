@@ -44,19 +44,7 @@
           <div class="nav-collapse">
             <ul class="nav">
               <li><a id="swatch-link" href="#swatches">The Swatches</a></li>
-		       <li class="dropdown">
-		         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Preview <b class="caret"></b></a>
-		         <ul class="dropdown-menu">
-		           <li><a href="default">Default</a></li>
-		           <li class="divider"></li>
-		           <li><a href="cerulean">Cerulean</a></li>
-	           	   <li><a href="cyborg">Cyborg</a></li>
-		           <li><a href="journal">Journal</a></li>
-		           <li><a href="simplex">Simplex</a></li>
-		           <li><a href="spacelab">Spacelab</a></li>
-		           <li><a href="united">United</a></li>
-		         </ul>
-		       </li>
+			  
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -66,10 +54,6 @@
     <div class="container">
 		
 		<div class="alert alert-info">
-			
-			<p><strong>18 Feb:</strong> Added a swatchmaker, available on <a target="_blank" href="https://github.com/thomaspark/bootswatch/">GitHub</a>.</p>
-						
-			<p><strong>17 Feb:</strong> Updated to the <a target="_blank" href="http://www.markdotto.com/2012/02/17/bootstrap-2-0-1-released/">newly released</a> Bootstrap 2.0.1. Previous versions can be downloaded from <a target="_blank" href="https://github.com/thomaspark/bootswatch/downloads">GitHub</a>.</p>
 			
 			<p><strong>16 Feb:</strong> Follow the <a target="_blank" href="http://feeds.feedburner.com/bootswatch">RSS feed</a> or the <a target="_blank" href="http://feedburner.google.com/fb/a/mailverify?uri=bootswatch&loc=en_US">email list</a> to get notified when new swatches are released.</p>
 			
@@ -206,7 +190,6 @@
 			    </li>
 
 
-
 			    <li class="span4">
 			      <div class="thumbnail">
 			        <img src="journal/thumbnail.png" alt="">
@@ -272,6 +255,39 @@
   			      </div>
   			    </li>
 				  
+
+			    <li class="span4">
+			      <div class="thumbnail">
+			        <img src="slate/thumbnail.png" alt="">
+			        <div class="caption">
+			          <h3>Slate</h3>
+			          <p>Shades of gunmetal gray.</p>
+			          <div class="btn-toolbar">
+						<div class="btn-group"><a class="btn btn-large" href="slate">Preview</a></div>
+						<div class="btn-group">
+						  <a class="btn btn-large btn-primary" target="_blank" href="slate/bootstrap.min.css"
+								onClick="_gaq.push(['_trackEvent', 'bootswatch', 'slate', 'bootstrap.min.css']);">Download</a>
+						  <a class="btn btn-large btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+						    <span class="caret"></span>
+						  </a>
+						  <ul class="dropdown-menu">
+						    <!-- dropdown menu links -->
+							<li><a target="_blank" href="slate/bootstrap.min.css" 
+								onClick="_gaq.push(['_trackEvent', 'bootswatch', 'slate', 'bootstrap.min.css']);">bootstrap.min.css</a></li>
+							<li><a target="_blank" href="slate/bootstrap.css"
+								onClick="_gaq.push(['_trackEvent', 'bootswatch', 'slate', 'bootstrap.css']);">bootstrap.css</a></li>
+							<li class="divider"></li>
+  							<li><a target="_blank" href="slate/variables.less"
+								onClick="_gaq.push(['_trackEvent', 'bootswatch', 'slate', 'variables.less']);">variables.less</a></li>
+  							<li><a target="_blank" href="slate/bootswatch.less"
+								onClick="_gaq.push(['_trackEvent', 'bootswatch', 'slate', 'bootswatch.less']);">bootswatch.less</a></li>
+						  </ul>
+						</div>
+					</div>
+			        </div>
+			      </div>
+			    </li>
+
 			
 			    <li class="span4">
 			      <div class="thumbnail">
@@ -358,6 +374,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery.js"></script>
+    <script src="js/bootswatch.js"></script>
     <script src="js/bootstrap-dropdown.js"></script>
 	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
