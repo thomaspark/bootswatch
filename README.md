@@ -11,7 +11,7 @@ In Bootstrap’s CSS directory, you’ll find a stylesheet in full (`bootstrap.c
 
 What if I want to extend Bootswatch?
 ------
-Bootswatch is an open source project, and you’re welcome to modify the swatches further or create your own. If you’re interested, fork or follow the GitHub repository.
+Bootswatch is an open source project, and you’re welcome to modify the swatches further or create your own. If you’re interested, fork or follow the GitHub repository. The files of interest are in the `gh-pages` branch.
 
 Each raw swatch consists of two LESS files. One is `variables.less`, which is included by default in Bootstrap and allows you to customize [these settings](http://twitter.github.com/bootstrap/less.html#variables). The other is a new file called `bootswatch.less` that introduces more extensive structural changes.
 
