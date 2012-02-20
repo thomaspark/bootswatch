@@ -12,3 +12,19 @@ $('.navbar .nav').first().append('<li class="dropdown"> \
 	           <li><a href="/united">United</a></li> \
 	         </ul> \
 	       </li>');
+		   
+
+	if(document.title !== 'Bootswatch: Free themes for Twitter Bootstrap') {
+		console.log('true');
+			   $('.navbar .nav').first().append('<li class="divider-vertical"></li> \
+					   <li class="dropdown"> \
+				         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Download <b class="caret"></b></a> \
+				         <ul class="dropdown-menu"> \
+				           <li><a target="_blank" href="bootstrap.min.css">bootstrap.min.css</a></li> \
+				           <li><a target="_blank" href="bootstrap.css">bootstrap.css</a></li> \
+				           <li class="divider"></li> \
+				           <li><a target="_blank" href="variables.less">variables.less</a></li> \
+				           <li><a target="_blank" href="bootswatch.less">bootswatch.less</a></li> \
+				         </ul> \
+				       </li>');
+	   }
