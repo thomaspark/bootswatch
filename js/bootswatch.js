@@ -1,4 +1,6 @@
-$('.navbar .nav').first().append('<li class="dropdown"> \
+var menu = '<ul class="nav"> \
+              <li><a id="swatch-link" href="#swatches">The Swatches</a></li> \
+			  <li class="dropdown"> \
 	         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Preview <b class="caret"></b></a> \
 	         <ul class="dropdown-menu"> \
 	           <li><a href="/default">Default</a></li> \
@@ -11,12 +13,10 @@ $('.navbar .nav').first().append('<li class="dropdown"> \
 	           <li><a href="/spacelab">Spacelab</a></li> \
 	           <li><a href="/united">United</a></li> \
 	         </ul> \
-	       </li>');
-		   
+	       </li>';
 
-	if(document.title !== 'Bootswatch: Free themes for Twitter Bootstrap') {
-		console.log('true');
-			   $('.navbar .nav').first().append('<li class="divider-vertical"></li> \
+if(document.title !== 'Bootswatch: Free themes for Twitter Bootstrap') {
+	menu = menu + '<li class="divider-vertical"></li> \
 					   <li class="dropdown"> \
 				         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Download <b class="caret"></b></a> \
 				         <ul class="dropdown-menu"> \
@@ -26,5 +26,17 @@ $('.navbar .nav').first().append('<li class="dropdown"> \
 				           <li><a target="_blank" href="variables.less">variables.less</a></li> \
 				           <li><a target="_blank" href="bootswatch.less">bootswatch.less</a></li> \
 				         </ul> \
-				       </li>');
-	   }
+				       </li>';
+}
+
+menu = menu + '			</ul> \
+						<ul class="nav pull-right"> \
+			  				<li><a rel="tooltip" target="_blank" href="http://wrapbootstrap.com" title="Marketplace for premium templates and themes">WrapBootstrap <i class="icon-share-alt icon-white"></i></a></li> \
+			  			</ul>';
+
+			$('.navbar .nav-collapse').first().append(menu);
+			
+			console.log($('a[rel=tooltip]'));
+			$('a[rel=tooltip]').tooltip({
+				'placement': 'bottom'
+			});
