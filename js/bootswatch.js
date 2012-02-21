@@ -36,7 +36,6 @@ menu = menu + '			</ul> \
 
 			$('.navbar .nav-collapse').first().append(menu);
 			
-			console.log($('a[rel=tooltip]'));
 			$('a[rel=tooltip]').tooltip({
 				'placement': 'bottom'
 			});
