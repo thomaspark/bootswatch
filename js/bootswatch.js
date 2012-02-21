@@ -1,5 +1,5 @@
 var menu = '<ul class="nav"> \
-              <li><a id="swatch-link" href="#swatches">Gallery</a></li> \
+              <li><a id="swatch-link" href="/#gallery">Gallery</a></li> \
 			  <li class="dropdown"> \
 	         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Preview <b class="caret"></b></a> \
 	         <ul class="dropdown-menu"> \
