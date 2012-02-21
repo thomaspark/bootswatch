@@ -3480,6 +3480,21 @@ a.thumbnail:hover {
   font-weight: 200;
   line-height: 27px;
 }
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+.invisible {
+  visibility: hidden;
+}
 .navbar .nav > li > a {
   border-right: 1px solid #C03D14;
   border-left: 1px solid #E6633A;
@@ -3493,6 +3508,13 @@ a.thumbnail:hover {
 .navbar .divider-vertical {
   background-color: inherit;
   border-right: 0px solid #CE4213;
+}
+.navbar .navbar-text > a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+.navbar .navbar-text > a:hover {
+  color: #ddd;
 }
 .navbar-search .search-query {
   border: 1px solid #97310e;
@@ -3573,19 +3595,4 @@ a.thumbnail:hover {
 }
 .alert {
   text-shadow: none !important;
-}
-.pull-right {
-  float: right;
-}
-.pull-left {
-  float: left;
-}
-.hide {
-  display: none;
-}
-.show {
-  display: block;
-}
-.invisible {
-  visibility: hidden;
 }
