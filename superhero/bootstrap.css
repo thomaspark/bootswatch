@@ -3648,6 +3648,9 @@ div.subnav .nav > li > a, div.subnav .nav > li.active > a {
 div.subnav .nav > li > a:hover, div.subnav .nav > li.active > a:hover {
   background-color: #5a6a7d;
 }
+div.subnav .nav > li + li > a {
+  border-top: 0px solid transparent;
+}
 div.subnav .nav > li:first-child > a,
 div.subnav .nav > li:first-child > a:hover,
 div.subnav .nav > li.active:first-child > a,
@@ -3693,6 +3696,24 @@ div.subnav.subnav-fixed .nav > li > a:hover, div.subnav.subnav-fixed .nav > li.a
 .dropdown-menu .divider {
   border-bottom: none;
   background-color: #45515f;
+}
+@media (max-width: 768px) {
+  div.subnav .nav > li:first-child > a,
+  div.subnav .nav > li:first-child > a:hover,
+  div.subnav .nav > li.active:first-child > a,
+  div.subnav .nav > li.active:first-child > a:hover {
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
+  }
+  div.subnav .nav > li:last-child > a,
+  div.subnav .nav > li:last-child > a:hover,
+  div.subnav .nav > li.active:last-child > a,
+  div.subnav .nav > li.active:last-child > a:hover {
+    -webkit-border-radius: 0 0 4px 4px;
+    -moz-border-radius: 0 0 4px 4px;
+    border-radius: 0 0 4px 4px;
+  }
 }
 .table {
   background-color: #3f4956;

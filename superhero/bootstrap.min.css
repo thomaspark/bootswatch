@@ -660,13 +660,14 @@ body{background-color:#2a333c;}
 .subnav.subnav-fixed{top:70px;}
 div.subnav{background-color:#45515f;background-image:none;border:none;}div.subnav .nav>li>a,div.subnav .nav>li.active>a{border-left:none;border-right:none;color:#cdd0be;}
 div.subnav .nav>li>a:hover,div.subnav .nav>li.active>a:hover{background-color:#5a6a7d;}
+div.subnav .nav>li+li>a{border-top:0px solid transparent;}
 div.subnav .nav>li:first-child>a,div.subnav .nav>li:first-child>a:hover,div.subnav .nav>li.active:first-child>a,div.subnav .nav>li.active:first-child>a:hover{-webkit-border-radius:4px 0 0 4px;-moz-border-radius:4px 0 0 4px;border-radius:4px 0 0 4px;}
 div.subnav .nav>li.active>a,div.subnav .nav>li.active>a:hover{color:#ffffff;background-color:#e36b23;background-image:none;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;}
 div.subnav.subnav-fixed{-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;}div.subnav.subnav-fixed .nav>li>a,div.subnav.subnav-fixed .nav>li.active>a,div.subnav.subnav-fixed .nav>li>a:hover,div.subnav.subnav-fixed .nav>li.active>a:hover{border-color:transparent;padding-left:12px;padding-right:12px;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
 div.subnav.subnav-fixed .nav>li>a:hover,div.subnav.subnav-fixed .nav>li.active>a:hover{color:#ffffff;}
 .dropdown-menu{background-color:#5a6a7d;border:none;}.dropdown-menu a{color:#cdd0be;}
 .dropdown-menu .divider{border-bottom:none;background-color:#45515f;}
-.table{background-color:#3f4956;}
+@media (max-width:768px){div.subnav .nav>li:first-child>a,div.subnav .nav>li:first-child>a:hover,div.subnav .nav>li.active:first-child>a,div.subnav .nav>li.active:first-child>a:hover{-webkit-border-radius:4px 4px 0 0;-moz-border-radius:4px 4px 0 0;border-radius:4px 4px 0 0;} div.subnav .nav>li:last-child>a,div.subnav .nav>li:last-child>a:hover,div.subnav .nav>li.active:last-child>a,div.subnav .nav>li.active:last-child>a:hover{-webkit-border-radius:0 0 4px 4px;-moz-border-radius:0 0 4px 4px;border-radius:0 0 4px 4px;}}.table{background-color:#3f4956;}
 .table th,.table td,.table tbody+tbody{border-top:none;}
 .table-bordered{border:none;}.table-bordered th+th,.table-bordered td+td,.table-bordered th+td,.table-bordered td+th{border-left:none;}
 .table-bordered thead:first-child tr:first-child th,.table-bordered tbody:first-child tr:first-child th,.table-bordered tbody:first-child tr:first-child td{border-top:none;}
