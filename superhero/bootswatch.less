@@ -305,10 +305,6 @@ div.subnav.subnav-fixed {
 
 .btn-warning {
 	background-color: @yellow;
-	
-	&:hover {
-		background-color: darken(@yellow, 10%);
-	}
 }
 
 .btn-primary, .btn-primary:hover {
@@ -336,6 +332,11 @@ div.subnav.subnav-fixed {
 }
 
 
+
+.btn.dropdown-toggle, .btn.dropdown-toggle:hover {
+	.box-shadow(0 2px 0 darken(@white, 80%));
+}
+
 .btn-primary.dropdown-toggle, .btn-primary.dropdown-toggle:hover {
 	.box-shadow(0 2px 0 darken(@primaryButtonBackground, 30%));
 }
@@ -349,7 +350,7 @@ div.subnav.subnav-fixed {
 }
 
 .btn-success.dropdown-toggle, .btn-success.dropdown-toggle:hover {
-	.box-shadow(0 2px 0 darken(#62c462, 40%));
+	.box-shadow(0 2px 0 darken(#62c462, 30%));
 }
 
 .btn-info.dropdown-toggle, .btn-info.dropdown-toggle:hover {
@@ -365,7 +366,7 @@ div.subnav.subnav-fixed {
 	position: relative;
 	top: 1px;
 	left: -1px;
-	.box-shadow(-1px 1px 0 darken(@white, 70%))
+	.box-shadow(-1px 1px 0 darken(@white, 80%))
 }
 
 .btn.disabled,
