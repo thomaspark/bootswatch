@@ -11,6 +11,7 @@ var menu = '<ul class="nav"> \
 	           <li><a href="/simplex">Simplex</a></li> \
 	           <li><a href="/slate">Slate</a></li> \
 	           <li><a href="/spacelab">Spacelab</a></li> \
+	           <li><a href="/spruce">Spruce</a></li> \
 	           <li><a href="/superhero">Superhero</a></li> \
 	           <li><a href="/united">United</a></li> \
 	         </ul> \
