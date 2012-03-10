@@ -3479,6 +3479,21 @@ a.thumbnail:hover {
   font-weight: 200;
   line-height: 27px;
 }
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+.invisible {
+  visibility: hidden;
+}
 h1,
 h2,
 h3,
@@ -3656,21 +3671,30 @@ h6 {
 .btn-info:active, .btn-info.active {
   background-color: #31b0d5 \9;
 }
+.btn-inverse {
+  background-color: #a54ca9;
+  background-image: -moz-linear-gradient(top, #ac4fb0, #9b479f);
+  background-image: -ms-linear-gradient(top, #ac4fb0, #9b479f);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ac4fb0), to(#9b479f));
+  background-image: -webkit-linear-gradient(top, #ac4fb0, #9b479f);
+  background-image: -o-linear-gradient(top, #ac4fb0, #9b479f);
+  background-image: linear-gradient(top, #ac4fb0, #9b479f);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ac4fb0', endColorstr='#9b479f', GradientType=0);
+  border-color: #9b479f #9b479f #672f6a;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.btn-inverse:hover,
+.btn-inverse:active,
+.btn-inverse.active,
+.btn-inverse.disabled,
+.btn-inverse[disabled] {
+  background-color: #9b479f;
+}
+.btn-inverse:active, .btn-inverse.active {
+  background-color: #79377c \9;
+}
 i[class^="icon-"] {
   opacity: 0.6;
-}
-.pull-right {
-  float: right;
-}
-.pull-left {
-  float: left;
-}
-.hide {
-  display: none;
-}
-.show {
-  display: block;
-}
-.invisible {
-  visibility: hidden;
 }

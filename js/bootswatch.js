@@ -6,6 +6,7 @@ var menu = '<ul class="nav"> \
 	         <ul class="dropdown-menu"> \
 	           <li><a href="/default">Default</a></li> \
 	           <li class="divider"></li> \
+	           <li><a href="/amelia">Amelia</a></li> \
 	           <li><a href="/cerulean">Cerulean</a></li> \
 	           <li><a href="/cyborg">Cyborg</a></li> \
 	           <li><a href="/journal">Journal</a></li> \

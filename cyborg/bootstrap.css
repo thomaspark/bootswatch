@@ -3926,6 +3926,30 @@ select,
 .btn-info:active, .btn-info.active {
   background-color: #000000 \9;
 }
+.btn-inverse {
+  background-color: #9f3fcf;
+  background-image: -moz-linear-gradient(top, #a347d1, #9933cc);
+  background-image: -ms-linear-gradient(top, #a347d1, #9933cc);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#a347d1), to(#9933cc));
+  background-image: -webkit-linear-gradient(top, #a347d1, #9933cc);
+  background-image: -o-linear-gradient(top, #a347d1, #9933cc);
+  background-image: linear-gradient(top, #a347d1, #9933cc);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a347d1', endColorstr='#9933cc', GradientType=0);
+  border-color: #9933cc #9933cc #6b248f;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.btn-inverse:hover,
+.btn-inverse:active,
+.btn-inverse.active,
+.btn-inverse.disabled,
+.btn-inverse[disabled] {
+  background-color: #9933cc;
+}
+.btn-inverse:active, .btn-inverse.active {
+  background-color: #7a29a3 \9;
+}
 .btn-group .btn:first-child {
   -webkit-border-top-left-radius: 3px;
   -moz-border-top-left-radius: 3px;

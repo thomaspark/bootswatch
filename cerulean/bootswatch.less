@@ -87,27 +87,30 @@ h1,h2,h3,h4,h5,h6 {
   }
 }
 
-// Set the backgrounds
-// -------------------------
 .btn-primary {
   .buttonBackground(lighten(@linkColor, 5%), @linkColor);
 }
-// Warning appears are orange
+
 .btn-warning {
   .buttonBackground(lighten(@orange, 5%), @orange);
 }
-// Danger and error appear as red
+
 .btn-danger {
   .buttonBackground(lighten(@red, 5%), @red);
 }
-// Success appears as green
+
 .btn-success {
   .buttonBackground(lighten(@green, 5%), @green);
 }
-// Info appears as a neutral blue
+
 .btn-info {
   .buttonBackground(lighten(@purple, 5%), @purple);
 }
+
+.btn-inverse {
+  .buttonBackground(lighten(@yellow, 5%), @yellow);
+}
+
 
 // ICONS
 // -----------------------------------------------------

@@ -348,26 +348,28 @@ input, textarea, select, .uneditable-input {
 	}
 }
 
-// Set the backgrounds
-// -------------------------
 .btn-primary {
   .buttonBackground(@blueDark, darken(@blueDark, 10%));
 }
-// Warning appears are orange
+
 .btn-warning {
   .buttonBackground(lighten(@orange, 10%), @orange);
 }
-// Danger and error appear as red
+
 .btn-danger {
   .buttonBackground(lighten(@red, 10%), @red);
 }
-// Success appears as green
+
 .btn-success {
   .buttonBackground(lighten(@green, 10%), @green);
 }
-// Info appears as a neutral blue
+
 .btn-info {
   .buttonBackground(darken(@gray, 40%), darken(@gray, 50%));
+}
+
+.btn-inverse {
+  .buttonBackground(lighten(@purple, 5%), @purple);
 }
 
 .btn-group .btn:first-child {

@@ -3480,6 +3480,21 @@ a.thumbnail:hover {
   font-weight: 200;
   line-height: 27px;
 }
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+.invisible {
+  visibility: hidden;
+}
 h1,
 h2,
 h3,
@@ -3725,21 +3740,30 @@ h6 {
 .btn-info:active, .btn-info.active {
   background-color: #7d4898 \9;
 }
+.btn-inverse {
+  background-color: #f8b93b;
+  background-image: -moz-linear-gradient(top, #f8bd45, #f7b42c);
+  background-image: -ms-linear-gradient(top, #f8bd45, #f7b42c);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f8bd45), to(#f7b42c));
+  background-image: -webkit-linear-gradient(top, #f8bd45, #f7b42c);
+  background-image: -o-linear-gradient(top, #f8bd45, #f7b42c);
+  background-image: linear-gradient(top, #f8bd45, #f7b42c);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f8bd45', endColorstr='#f7b42c', GradientType=0);
+  border-color: #f7b42c #f7b42c #cf8d08;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.btn-inverse:hover,
+.btn-inverse:active,
+.btn-inverse.active,
+.btn-inverse.disabled,
+.btn-inverse[disabled] {
+  background-color: #f7b42c;
+}
+.btn-inverse:active, .btn-inverse.active {
+  background-color: #e79e09 \9;
+}
 i[class^="icon-"] {
   opacity: 0.8;
-}
-.pull-right {
-  float: right;
-}
-.pull-left {
-  float: left;
-}
-.hide {
-  display: none;
-}
-.show {
-  display: block;
-}
-.invisible {
-  visibility: hidden;
 }
