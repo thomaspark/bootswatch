@@ -30,13 +30,15 @@ body {
 	  
 .hero-unit, .thumbnail {
   background-color: #e3e3e3;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 	  
 .hero-unit h1, .hero-unit p {
   text-align: center;
   margin-bottom: 15px;
+  text-shadow: 1px 1px 0 rgba(256, 256, 256, 0.9);
 }
-	  
+
 #social {
   margin-top: 45px;
 }
@@ -90,9 +92,10 @@ body {
 .thumbnail img {
   width: 290px;
   height: 200px;
-  -webkit-border-radius: 6px;
-     -moz-border-radius: 6px;
-          border-radius: 6px;
+  -webkit-border-radius: 7px;
+     -moz-border-radius: 7px;
+          border-radius: 7px;
+  box-shadow: -1px -1px 0px rgba(0, 0, 0, 0.2), 1px 1px 0px rgba(256, 256, 256, 0.7);
 }
 
 .thumbnail .label {
