@@ -10,6 +10,7 @@ var menu = '<ul class="nav"> \
 	           <li><a href="/cerulean">Cerulean</a></li> \
 	           <li><a href="/cyborg">Cyborg</a></li> \
 	           <li><a href="/journal">Journal</a></li> \
+	           <li><a href="/readable">Readable</a></li> \
 	           <li><a href="/simplex">Simplex</a></li> \
 	           <li><a href="/slate">Slate</a></li> \
 	           <li><a href="/spacelab">Spacelab</a></li> \
