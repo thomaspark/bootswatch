@@ -1,5 +1,5 @@
 // Bootswatch.less
-// Swatch: New Swatch
+// Swatch: Readable
 // -----------------------------------------------------
 
 // CUSTOM VALUES
@@ -60,6 +60,8 @@ body {
 // -----------------------------------------------------
 
 .navbar {
+
+	margin-left: 16px;
 
 	.navbar-inner {
 		.box-shadow(none);
@@ -162,6 +164,28 @@ div.subnav-fixed {
 		color: @linkColorHover;
 		background-color: transparent;
 	}
+}
+
+.navbar .nav-collapse.collapse {
+	
+	.nav > li > a:last-child {
+		margin-bottom: 10px;
+	}
+	
+	li > a {
+		color: @linkColor;
+		.border-radius(0);
+		font-weight: normal;
+		
+		&:hover {
+			color: @linkColorHover;
+		}
+	}
+	
+	li > a:hover {
+		background: transparent;
+	}
+
 }
 
 // NAV
