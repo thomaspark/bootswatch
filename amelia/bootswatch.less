@@ -10,7 +10,7 @@
 h1, h2, h3, h4, h5, h6,
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 	color: @textColor;
-	font-weight: normal;
+	font-weight: bold;
 }
 
 input, button, select, textarea,
@@ -28,7 +28,7 @@ input, button, select, textarea,
 
 body {
 	background-color: #4397A2;
-	#gradient > .vertical(#0F8790, #4397A2);
+	#gradient > .radial(lighten(#0F8790, 7%), #0F8790);
 }
 
 hr {
@@ -49,17 +49,14 @@ footer.footer {
 .navbar {
 	.navbar-inner {
 		.border-radius(0);
-		.box-shadow(none);
 	}
 	
 	.brand {
 		padding-top: 12px;
 		font-size: 24px;
+		font-weight: 700;
 	}
-	
-	.nav {
-	}
-	
+
 	.nav > li > a {
 		padding-top: 17px;
 		padding-bottom: 14px;
@@ -541,7 +538,7 @@ code, pre {
 }
 
 .label-important, .label-important:hover, .alert-error {
-	background-color: @yellow;
+	background-color: darken(@yellow, 3%);
 	color: @textColor;
 }
 
