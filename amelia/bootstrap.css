@@ -3613,10 +3613,6 @@ div.subnav .nav > li:first-child > a, div.subnav .nav > li:first-child > a:hover
   -moz-border-radius: 0;
   border-radius: 0;
 }
-div.subnav .nav > li:first-child > a:hover {
-  border-left-color: rgba(256, 256, 256, 0.4);
-  border-left-width: 1px;
-}
 div.subnav .nav > .active > a {
   background-color: transparent;
   border-color: transparent;
@@ -3629,6 +3625,10 @@ div.subnav .nav > .active > a:hover, div.subnav .nav > li > a:hover, div.subnav 
   border-right-color: transparent;
   background-color: rgba(256, 256, 256, 0.4);
   color: rgba(256, 256, 256, 0.9);
+}
+div.subnav .nav > li:first-child > a:hover {
+  border-left-color: rgba(256, 256, 256, 0.4);
+  border-left-width: 1px;
 }
 div.subnav-fixed {
   top: 50px;
@@ -3880,12 +3880,12 @@ label,
   color: rgba(256, 256, 256, 0.9);
   border: 0px solid transparent;
 }
-input,
-textarea,
-select,
-.uneditable-input {
+input, textarea, .uneditable-input {
   border: 0px solid transparent;
   padding: 10px;
+}
+select {
+  border: 0px solid transparent;
 }
 button {
   margin-left: 12px;

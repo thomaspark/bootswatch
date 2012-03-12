@@ -649,9 +649,9 @@ footer.footer{border-top:1px solid rgba(256, 256, 256, 0.3);}
 div.subnav{background-color:rgba(42, 99, 105, 0.9);background-image:none;border:0px solid transparent;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;}div.subnav .nav>li.dropdown.open>a{border-color:transparent;background-color:rgba(256, 256, 256, 0.4);}
 div.subnav .nav>li>a{color:rgba(256, 256, 256, 0.9);border-color:transparent;}
 div.subnav .nav>li:first-child>a,div.subnav .nav>li:first-child>a:hover{-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
-div.subnav .nav>li:first-child>a:hover{border-left-color:rgba(256, 256, 256, 0.4);border-left-width:1px;}
 div.subnav .nav>.active>a{background-color:transparent;border-color:transparent;color:rgba(256, 256, 256, 0.9);-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;}
 div.subnav .nav>.active>a:hover,div.subnav .nav>li>a:hover,div.subnav .nav>li.active>a:hover{border-right-color:transparent;background-color:rgba(256, 256, 256, 0.4);color:rgba(256, 256, 256, 0.9);}
+div.subnav .nav>li:first-child>a:hover{border-left-color:rgba(256, 256, 256, 0.4);border-left-width:1px;}
 div.subnav-fixed{top:50px;}
 .navbar .nav-collapse.collapse li>a{color:rgba(256, 256, 256, 0.9);-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
 .navbar .nav-collapse.collapse li>a:hover{background-color:#d92432;}
@@ -693,7 +693,8 @@ div.subnav-fixed{top:50px;}
 .table-striped tbody tr:nth-child(odd) td,.table-striped tbody tr:nth-child(odd) th{background-color:#1ebccb;}
 .table tbody tr:hover td,.table tbody tr:hover th{background-color:rgba(256, 256, 256, 0.4);}
 legend,label,.help-block,.input-file{color:rgba(256, 256, 256, 0.9);border:0px solid transparent;}
-input,textarea,select,.uneditable-input{border:0px solid transparent;padding:10px;}
+input,textarea,.uneditable-input{border:0px solid transparent;padding:10px;}
+select{border:0px solid transparent;}
 button{margin-left:12px;}
 input,textarea,.search-query,.uneditable-input,.input-append input,.input-append .uneditable-input,.input-prepend input,.input-prepend .uneditable-input{border-color:transparent;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;}
 .form-actions{background-color:transparent;border-top:0px solid transparent;}

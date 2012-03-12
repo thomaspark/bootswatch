@@ -140,6 +140,11 @@ div.subnav {
 	}
 }
 
+div.subnav .nav > li:first-child > a:hover {
+	border-left-color: rgba(256, 256, 256, 0.4);
+	border-left-width: 1px;
+}
+
 div.subnav-fixed {
 	top: 50px;
 }
@@ -326,9 +331,13 @@ legend, label, .help-block, .input-file {
 	border: 0px solid transparent;
 }
 
-input, textarea, select, .uneditable-input {
+input, textarea, .uneditable-input {
 	border: 0px solid transparent;
 	padding: 10px;
+}
+
+select {
+	border: 0px solid transparent;
 }
 
 button {
