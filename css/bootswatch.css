@@ -1,6 +1,6 @@
 body {
-  padding-top: 60px;
-  padding-bottom: 30px;
+	padding-top: 60px;
+	padding-bottom: 20px;
 }
 
 .navbar .nav > li > a {
@@ -8,7 +8,7 @@ body {
 }
 
 .nav i {
-	opacity: 0.4;
+	opacity: 0.5;
 }
 
 .nav a:hover i {
@@ -30,6 +30,7 @@ body {
 
 .hero-unit {
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+	margin-bottom: 60px;
 }
 
 .hero-unit, .thumbnail {
@@ -50,6 +51,7 @@ body {
 }
 	 
 .rss {
+	width: 40px;
 	height: 14px;
 	font-size: 11px;
 	line-height: 14px;
@@ -69,7 +71,7 @@ body {
 }
 	  
 .about {
-  margin-top: 50px;
+  margin-top: 20px;
 }
 	  
 .about h3 {
@@ -88,12 +90,11 @@ body {
 }
 	  
 .thumbnail {
-  max-width: 300px;
+  max-width: 370px;
 }
 	  
 .thumbnail img {
-  width: 290px;
-  height: 200px;
+  max-height: 250px;
   -webkit-border-radius: 7px;
      -moz-border-radius: 7px;
           border-radius: 7px;
@@ -105,5 +106,73 @@ body {
 
 .thumbnail .btn-toolbar {
   text-align: right;
+}
+
+.thumbnail .btn-group {
+    margin-top: 10px;
+}
+	
+/* Landscape phones and down */
+@media (max-width: 480px) {
+	
+	body {
+		padding-top: 0px;
+	}
+	
+	.hero-unit {
+		padding-bottom: 80px;
+	}
+
+	.about {
+	  margin-top: -10px;
+	}
+	  
+	.about h3 {
+	  margin-top: 20px;
+	}
+
+	.span4 {
+		width: 95%;
+	}
+
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+	body {
+		padding-top: 0px;
+	}
+	
+	.hero-unit {
+		padding-bottom: 80px;
+	}
+
+	.about {
+	  margin-top: -10px;
+	}
+	  
+	.about h3 {
+	  margin-top: 20px;
+	}
+	
+	.span4 {
+		width: 95%;
+	}
+
+}
+ 
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 980px) { 
+	body {
+		padding-top: 0px;
+	}
+
+
+}
+ 
+/* Large desktop */
+@media (min-width: 1200px) {
+
+	
 }
 	
