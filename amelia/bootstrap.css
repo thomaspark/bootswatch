@@ -3608,10 +3608,24 @@ div.subnav .nav > li > a {
   color: rgba(256, 256, 256, 0.9);
   border-color: transparent;
 }
-div.subnav .nav > .active > a,
-div.subnav .nav > .active > a:hover,
-div.subnav .nav > li > a:hover,
-div.subnav .nav > li.active > a:hover {
+div.subnav .nav > li:first-child > a, div.subnav .nav > li:first-child > a:hover {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+div.subnav .nav > li:first-child > a:hover {
+  border-left-color: rgba(256, 256, 256, 0.4);
+  border-left-width: 1px;
+}
+div.subnav .nav > .active > a {
+  background-color: transparent;
+  border-color: transparent;
+  color: rgba(256, 256, 256, 0.9);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+div.subnav .nav > .active > a:hover, div.subnav .nav > li > a:hover, div.subnav .nav > li.active > a:hover {
   border-right-color: transparent;
   background-color: rgba(256, 256, 256, 0.4);
   color: rgba(256, 256, 256, 0.9);

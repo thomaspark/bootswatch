@@ -119,7 +119,18 @@ div.subnav {
 		border-color: transparent;
 	}
 	
-	.nav > .active > a,
+	.nav > li:first-child > a,
+	.nav > li:first-child > a:hover {
+		.border-radius(0);
+	}
+
+	.nav > .active > a {
+		background-color: transparent;
+		border-color: transparent;
+		color: @textColor;
+		.box-shadow(none);
+	}
+	
 	.nav > .active > a:hover,
 	.nav > li > a:hover,
 	.nav > li.active > a:hover, {
