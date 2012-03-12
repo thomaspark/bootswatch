@@ -1,5 +1,4 @@
 body {
-	padding-top: 60px;
 	padding-bottom: 20px;
 }
 
@@ -29,8 +28,9 @@ body {
 }
 
 .hero-unit {
-	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+	margin-top: 60px;
 	margin-bottom: 60px;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
 .hero-unit, .thumbnail {
@@ -50,7 +50,7 @@ body {
   width: 160px !important;
 }
 	 
-.rss {
+.rss-button {
 	width: 40px;
 	height: 14px;
 	font-size: 11px;
@@ -115,12 +115,18 @@ body {
 /* Landscape phones and down */
 @media (max-width: 480px) {
 	
-	body {
-		padding-top: 0px;
+	.hero-unit {
+		padding: 40px 20px 80px;
+		margin-top: 0;
+		margin-bottom: 20px;
 	}
 	
-	.hero-unit {
-		padding-bottom: 120px;
+	.hero-unit h1 {
+	  font-size: 36px;
+	}
+	
+	.hero-unit p {
+		font-size: 13px;
 	}
 
 	.about {
@@ -132,42 +138,30 @@ body {
 	}
 
 	.span4 {
-		width: 95%;
+		width: 85%;
 	}
 
 }
  
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
-	body {
-		padding-top: 0px;
+	.about, .thumbnails {
+		margin-left: 0;
 	}
 	
 	.hero-unit {
-		padding-bottom: 100px;
-	}
-
-	.about {
-	  margin-top: -10px;
-	}
-	  
-	.about h3 {
-	  margin-top: 20px;
-	}
-	
-	.span4 {
-		width: 95%;
+		margin-top: 0;
+		padding-bottom: 80px;
 	}
 
 }
  
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 980px) { 
-	body {
-		padding-top: 0px;
+
+	.hero-unit {
+		margin-top: 0;
 	}
-
-
 }
  
 /* Large desktop */
