@@ -3573,6 +3573,12 @@ body {
   border-top-color: #9c0001;
   opacity: 1;
 }
+@media (max-width: 980px) {
+  form.navbar-form, form.navbar-search {
+    border-top: 1px solid #D4D4D4;
+    border-bottom: 1px solid #D4D4D4;
+  }
+}
 .navbar-fixed-top {
   position: static;
 }
