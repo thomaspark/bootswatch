@@ -1,6 +1,7 @@
 // Variables.less
 // Variables to customize the look and feel of Bootstrap
 // Swatch: Superhero
+// Version: 2.0.2
 // -----------------------------------------------------
 
 
@@ -8,11 +9,9 @@
 // GLOBAL VALUES
 // --------------------------------------------------
 
-// Links
-@linkColor:             @orange;
-@linkColorHover:        @linkColor;
 
 // Grays
+// -------------------------
 @black:                 #000;
 @grayDarker:            #222;
 @grayDark:              #333;
@@ -21,7 +20,9 @@
 @grayLighter:           #eee;
 @white:                 #fff;
 
+
 // Accent colors
+// -------------------------
 @blue:                  #45515F;
 @blueDark:              #2A333C;
 @green:                 #5DA028;
@@ -31,14 +32,79 @@
 @pink:                  #C74871;
 @purple:                #7073CF;
 
-// Typography
-@baseFontSize:          15px;
-@baseFontFamily:        Georgia,Utopia,Palatino,'Palatino Linotype',serif;
-@baseLineHeight:        20px;
+
+// Scaffolding
+// -------------------------
+@bodyBackground:        @blueDark;
 @textColor:             #ECE9D7;
 
+
+// Links
+// -------------------------
+@linkColor:             @orange;
+@linkColorHover:        @linkColor;
+
+
+// Typography
+// -------------------------
+@baseFontSize:          15px;
+@baseFontFamily:        Georgia, Utopia, Palatino, 'Palatino Linotype', serif;
+@baseLineHeight:        20px;
+@altFontFamily:         Georgia, "Times New Roman", Times, serif;
+
+@headingsFontFamily:    'Oswald', sans-serif; // empty to use BS default, @baseFontFamily
+@headingsFontWeight:    bold;    // instead of browser default, bold
+@headingsColor:         @orange; // empty to use BS default, @textColor
+
+
+// Tables
+// -------------------------
+@tableBackground:                   darken(@blue, 3%); // overall background-color
+@tableBackgroundAccent:             @blue; // for striping
+@tableBackgroundHover:              lighten(@blue, 5%); // for hover
+@tableBorder:                       transparent; // table and cell border
+
+
 // Buttons
-@primaryButtonBackground:    @linkColor;
+// -------------------------
+@btnBackground:                     @white;
+@btnBackgroundHighlight:            darken(@white, 10%);
+@btnBorder:                         darken(@white, 20%);
+
+@btnPrimaryBackground:              @linkColor;
+@btnPrimaryBackgroundHighlight:     spin(@btnPrimaryBackground, 15%);
+
+@btnInfoBackground:                 #5bc0de;
+@btnInfoBackgroundHighlight:        #2f96b4;
+
+@btnSuccessBackground:              #62c462;
+@btnSuccessBackgroundHighlight:     #51a351;
+
+@btnWarningBackground:              lighten(@orange, 15%);
+@btnWarningBackgroundHighlight:     @orange;
+
+@btnDangerBackground:               #ee5f5b;
+@btnDangerBackgroundHighlight:      #bd362f;
+
+@btnInverseBackground:              @gray;
+@btnInverseBackgroundHighlight:     @grayDarker;
+
+
+// Forms
+// -------------------------
+@inputBackground:               @white;
+@inputBorder:                   #ccc;
+@inputDisabledBackground:       @grayLighter;
+
+
+// Dropdowns
+// -------------------------
+@dropdownBackground:            lighten(@blue, 10%);
+@dropdownBorder:                rgba(0,0,0,0);
+@dropdownLinkColor:             @textColor;
+@dropdownLinkColorHover:        @white;
+@dropdownLinkBackgroundHover:   @linkColor;
+
 
 
 
@@ -46,6 +112,7 @@
 // --------------------------------------------------
 
 // Z-index master list
+// -------------------------
 // Used for a bird's eye view of components dependent on the z-axis
 // Try to avoid customizing these :)
 @zindexDropdown:          1000;
@@ -55,27 +122,51 @@
 @zindexModalBackdrop:     1040;
 @zindexModal:             1050;
 
+
 // Sprite icons path
+// -------------------------
 @iconSpritePath:          "../img/glyphicons-halflings.png";
 @iconWhiteSpritePath:     "../img/glyphicons-halflings-white.png";
 
+
 // Input placeholder text color
-@placeholderText:         @textColor;
+// -------------------------
+@placeholderText:         @grayLight;
+
 
 // Hr border color
-@hrBorder:                darken(@blueDark, 5%);
+// -------------------------
+@hrBorder:                transparent;
+
 
 // Navbar
+// -------------------------
 @navbarHeight:                    40px;
 @navbarBackground:                @blueDark;
 @navbarBackgroundHighlight:       @navbarBackground;
-@navbarLinkBackgroundHover:       transparent;
 
 @navbarText:                      @grayLight;
 @navbarLinkColor:                 @grayLight;
 @navbarLinkColorHover:            @white;
+@navbarLinkColorActive:           @navbarLinkColorHover;
+@navbarLinkBackgroundHover:       transparent;
+@navbarLinkBackgroundActive:      @navbarBackground;
+
+@navbarSearchBackground:          lighten(@navbarBackground, 25%);
+@navbarSearchBackgroundFocus:     @white;
+@navbarSearchBorder:              darken(@navbarSearchBackground, 30%);
+@navbarSearchPlaceholderColor:    #ccc;
+
+
+// Hero unit
+// -------------------------
+@heroUnitBackground:              @grayLighter;
+@heroUnitHeadingColor:            inherit;
+@heroUnitLeadColor:               inherit;
+
 
 // Form states and alerts
+// -------------------------
 @warningText:             #c09853;
 @warningBackground:       #fcf8e3;
 @warningBorder:           darken(spin(@warningBackground, -10), 3%);
@@ -94,15 +185,19 @@
 
 
 
+
 // GRID
 // --------------------------------------------------
 
 // Default 940px grid
+// -------------------------
 @gridColumns:             12;
 @gridColumnWidth:         60px;
 @gridGutterWidth:         20px;
 @gridRowWidth:            (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
 
+
 // Fluid grid
+// -------------------------
 @fluidGridColumnWidth:    6.382978723%;
 @fluidGridGutterWidth:    2.127659574%;

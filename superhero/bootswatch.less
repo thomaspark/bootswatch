@@ -1,5 +1,6 @@
 // Bootswatch.less
 // Swatch: Superhero
+// Version: 2.0.2
 // -----------------------------------------------------
 
 // TYPOGRAPHY
@@ -66,11 +67,6 @@ blockquote.pull-right {
 	text-shadow: -1px 1px 0 darken(@orange, 30%);
 }
 
-body {
-	background-color: @blueDark;
-}
-
-
 .navbar .navbar-inner {
 	.box-shadow(none);
 	background-image: none;
@@ -101,7 +97,6 @@ body {
 	border: none;
 }
 
-
 .navbar .divider-vertical {
 	height: 70px;
 }
@@ -115,7 +110,9 @@ body {
 }
 
 .navbar .nav .dropdown-toggle .caret,
-.navbar .nav .open.dropdown .caret {
+.navbar .nav .open.dropdown .caret,
+.nav-pills .dropdown .caret,
+.nav-pills .dropdown:hover .caret {
 	border-top-color: @textColor;
 }
 
@@ -139,7 +136,7 @@ body {
 	border-color: transparent;
 }
 
-.navbar .nav-collapse.collapse {
+.navbar .nav-collapse.in {
 	background-color: @blue;
 	.border-radius(4px);
 	
@@ -153,8 +150,12 @@ body {
 	}
 }
 
-.navbar .nav-collapse.collapse > .nav > li > a {
+.navbar .nav-collapse.in > .nav > li > a {
 	color: @orange;
+	
+	&:hover {
+		background-color: lighten(@blue, 10%);
+	}
 }
 
 .subnav.subnav-fixed {
@@ -219,12 +220,6 @@ div.subnav.subnav-fixed {
 }
 
 .dropdown-menu {
-	background-color: lighten(@blue, 10%);
-	border: none;
-	
-	a {
-		color: @textColor;
-	}
 	
 	.divider {
 		border-bottom: none;
@@ -252,44 +247,10 @@ div.subnav.subnav-fixed {
 // TABLES
 // -----------------------------------------------------
 
-.table {
-      background-color: darken(@blue, 3%);
-}
-
-.table th, .table td, .table tbody + tbody {
-	border-top: none;
-}
-
-.table-bordered {
-  border: none;
-  th + th,
-  td + td,
-  th + td,
-  td + th {
-    border-left: none;
-  }
-  // Prevent a double border
-  thead:first-child tr:first-child th,
-  tbody:first-child tr:first-child th,
-  tbody:first-child tr:first-child td {
-    border-top: none;
-  }
-}
-
-.table-striped {
-  tbody {
-    tr:nth-child(odd) td,
-    tr:nth-child(odd) th {
-      background-color: @blue;
-    }
-  }
-}
-
-.table {
-  tbody tr:hover td,
-  tbody tr:hover th {
-    background-color: lighten(@blue, 5%);
-  }
+.table,
+.table-striped tbody > tr > td:first-child,
+.table-striped tbody > tr > td:last-child, {
+	.border-radius(4px);
 }
 
 // BUTTONS
@@ -308,7 +269,7 @@ div.subnav.subnav-fixed {
 }
 
 .btn-primary, .btn-primary:hover {
-	.box-shadow(-2px 2px 0 darken(@primaryButtonBackground, 30%));
+	.box-shadow(-2px 2px 0 darken(@btnPrimaryBackground, 30%));
 }
 
 .btn-warning, .btn-warning:hover {
@@ -331,14 +292,12 @@ div.subnav.subnav-fixed {
 	.box-shadow(-2px 2px 0 darken(#454545, 20%));
 }
 
-
-
 .btn.dropdown-toggle, .btn.dropdown-toggle:hover {
 	.box-shadow(0 2px 0 darken(@white, 80%));
 }
 
 .btn-primary.dropdown-toggle, .btn-primary.dropdown-toggle:hover {
-	.box-shadow(0 2px 0 darken(@primaryButtonBackground, 30%));
+	.box-shadow(0 2px 0 darken(@btnPrimaryBackground, 30%));
 }
 
 .btn-warning.dropdown-toggle, .btn-warning.dropdown-toggle:hover {
@@ -385,6 +344,11 @@ div.subnav.subnav-fixed {
 
 // NAVIGATION
 // --------------------------------------------------
+
+.nav .nav-header {
+	color: @linkColor;
+	text-shadow:none;
+}
 
 .nav-list {
 	padding: 0 15px;
@@ -537,15 +501,14 @@ label {
 	border-top: none;
 }
 
-// Warning
 .control-group.warning {
   .formFieldState(lighten(@warningText, 10%), lighten(@warningText, 10%), @warningBackground);
 }
-// Error
+
 .control-group.error {
   .formFieldState(lighten(@errorText, 10%), lighten(@errorText, 10%), @errorBackground);
 }
-// Success
+
 .control-group.success {
   .formFieldState(lighten(@successText, 10%), lighten(@successText, 10%), @successBackground);
 }
@@ -553,7 +516,7 @@ label {
 // MISCELLANEOUS
 // --------------------------------------------------
 
-hr, .page-header {
+.page-header {
 	border-bottom: none;
 }
 

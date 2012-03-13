@@ -1,31 +1,28 @@
 // Bootswatch.less
 // Swatch: Simplex
+// Version: 2.0.2
 // -----------------------------------------------------
 
 // TYPOGRAPHY
 // -----------------------------------------------------
 
-// Make headers black
-h1, h2, h3, h4, h5, h6 {
+h6 {
 	color: @black;
 }
 
 // NAVBAR
 // -----------------------------------------------------
 
-// Gray text color
 .navbar .brand, .subnav a {
 	color: @navbarText;
 }
 
-// Make active item white
 .navbar .nav .active > a,
 .navbar .nav .active > a:hover {
 	background-color: @grayDarker;
 	color: @white;
 }
 
-// Remove text-shadow and make white on hover
 .navbar .nav > li > a {
 	text-shadow: none;
 	&:hover {
@@ -34,7 +31,6 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
-// Remove menu item dividers on subnav
 .subnav .nav > li > a {
 	border-left: 0px solid white !important;
 	border-right: 0px solid white !important;
@@ -49,31 +45,21 @@ h1, h2, h3, h4, h5, h6 {
 // FORMS
 // -----------------------------------------------------
 
-// Style search input 
 .search-query {
 	border: 1px solid #CCC;
 	.border-radius(2px);
-	background-color: @white;
 }
 
 // BUTTONS
 // -----------------------------------------------------
 
-// Make buttons boxier and flatter
 .btn {
   .border-radius(2px);
   #gradient > .vertical-three-colors(@white, @white, 25%, darken(@white, 10%));
 }
 
-.btn-warning {
-  .caret {
-    border-top-color: @white;
-    .opacity(75);
-  }
-}
-
 .btn-primary {
-  .buttonBackground(lighten(@primaryButtonBackground, 5%), @primaryButtonBackground);
+  .buttonBackground(lighten(@btnPrimaryBackground, 5%), @btnPrimaryBackground);
 }
 
 .btn-warning {
@@ -96,7 +82,7 @@ h1, h2, h3, h4, h5, h6 {
   .buttonBackground(lighten(@purple, 5%), @purple);
 }
 
-// ICONS
+// MISCELLANEOUS
 // -----------------------------------------------------
 
 // Make icons gray

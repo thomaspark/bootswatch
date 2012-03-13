@@ -1,13 +1,10 @@
 // Bootswatch.less
 // Swatch: Journal
+// Version: 2.0.2
 // -----------------------------------------------------
 
 // SCAFFOLDING
 // -----------------------------------------------------
-
-body {
-	background-color: @baseBackgroundColor !important;
-}
 
 a {
 	text-decoration: underline;
@@ -50,7 +47,7 @@ h1, h2, h3, h4, h5, h6, .brand {
 	.box-shadow(@shadow);
 }
 
-.navbar-inner, .navbar .dropdown-menu, div.subnav, .table-bordered, .well, .prettyprint,
+.navbar-inner, .navbar .dropdown-menu, div.subnav, 
 div.subnav .nav > li:first-child > a, div.subnav .nav > li:first-child > a:hover {
 	.border-radius(0);
 }
@@ -67,8 +64,12 @@ div.subnav .nav > li:first-child > a, div.subnav .nav > li:first-child > a:hover
 
 .navbar .nav .active > a:hover,
 .navbar .nav > li > a:hover,
-.navbar .nav-collapse .nav li > a:hover {
+.navbar .nav-collapse.in .nav li > a:hover {
 	background-color: #EEEEEE;
+}
+
+.dropdown.open .dropdown-toggle {
+	color: @textColor;
 }
 
 .navbar .nav .dropdown-toggle .caret,
@@ -89,27 +90,14 @@ form.navbar-form, form.navbar-search {
 	.placeholder(@gray);
 }
 
-.dropdown-menu {
-	background-color: @baseBackgroundColor;
-	
-	a {
-		color: @textColor;
-	}
-
-	li:hover > a {
-		background-color: #eee;
-		color: @textColor;
-	}
-}
-
 div.subnav {
-	background-color: @baseBackgroundColor;
+	background-color: @bodyBackground;
 	background-image: none;
 	@shadow: 0 1px 2px rgba(0,0,0,.25);
 	.box-shadow(@shadow);
 }
 
-.navbar .nav-collapse .nav li > a,
+.navbar .nav-collapse.in .nav li > a,
 div.subnav .nav > li > a:hover,
 div.subnav .nav > .active > a,
 div.subnav .nav > .active > a:hover {
@@ -129,9 +117,10 @@ div.subnav .nav > .active > a:hover {
 // MISC
 // -----------------------------------------------------
 
-// make shaded elements lightGray
-code, pre, pre.prettyprint, .well, .form-actions,
-.table-striped tbody tr:nth-child(odd) td,
-.table-striped tbody tr:nth-child(odd) th {
+code, pre, pre.prettyprint, .well, .form-actions {
 	background-color: @grayLighter;
+}
+
+.table-bordered, .well, .prettyprint {
+	.border-radius(0);
 }

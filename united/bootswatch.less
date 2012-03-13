@@ -1,17 +1,16 @@
 // Bootswatch.less
 // Swatch: United
+// Version: 2.0.2
 // -----------------------------------------------------
 
 // TYPOGRAPHY
 // -----------------------------------------------------
 
-// Ubuntu web font
 @import url(http://fonts.googleapis.com/css?family=Ubuntu);
 
 // NAVBAR
 // -----------------------------------------------------
 
-// Added dividers to items
 .navbar .nav > li > a {
 	border-right: 1px solid #C03D14;
 	border-left: 1px solid #E6633A;
@@ -46,26 +45,18 @@
 	border: 1px solid darken(@navbarBackground, 15%);
 }
 
-.navbar .nav-collapse > .nav > li .dropdown-menu a {
-	color: @linkColor;
-	
-	&:hover {
-		color: @white;
-	}
-}
-
-.navbar .nav-collapse.collapse > .nav li > a {
+.navbar .nav-collapse.in > .nav li > a {
 	color: @white;
 	border-left: 0px solid @orange;
 	border-right: 0px solid @orange;
 	
 	&:hover {
-		background-color: #2B7CAC;
+		background-color: @linkColorHover;
 	}
 }
 
-.navbar .nav-collapse .navbar-form,
-.navbar .nav-collapse .navbar-search {
+.navbar .nav-collapse.in .navbar-form,
+.navbar .nav-collapse.in .navbar-search {
 	border-top: 0px solid @orange;
 	border-bottom: 0px solid @orange;
 	.box-shadow(none);
@@ -74,28 +65,24 @@
 // BUTTONS
 // -----------------------------------------------------
 
-// Reversed gradient on primary button
 .btn-primary {
-  .buttonBackground(lighten(@primaryButtonBackground, 15%), @primaryButtonBackground);
+  .buttonBackground(lighten(@btnPrimaryBackground, 15%), @btnPrimaryBackground);
 }
 
-// Made warning button yellow since orange is taken
 .btn-warning {
   .buttonBackground(lighten(@yellow, 15%), @yellow);
-  
-  .caret {
-    border-top-color: @white;
-    .opacity(75);
-  }
 }
-
-
 
 // ALERTS
 // -----------------------------------------------------
 
-// Removed text-shadow
 .alert {
-	text-shadow: none !important;
+	text-shadow: none;
 }
 
+// FORMS
+// -----------------------------------------------------
+
+.form-actions {
+	background-color: transparent;
+}

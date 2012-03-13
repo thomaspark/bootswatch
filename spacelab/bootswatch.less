@@ -1,5 +1,6 @@
 // Bootswatch.less
 // Swatch: Spacelab
+// Version: 2.0.2
 // -----------------------------------------------------
 
 // NAVBAR
@@ -52,12 +53,12 @@
 	opacity: 1;
 }
 
-.navbar .nav .open.dropdown .caret,
-.navbar .nav .dropdown-toggle:hover .caret {
+.nav .open.dropdown .caret,
+.nav .dropdown-toggle:hover .caret {
 	border-top-color: @linkColor !important;
 }
 
-.subnav .nav > li > a {
+div.subnav .nav > li > a {
 	font-weight: bold;
 	color: #777;
 	
@@ -66,12 +67,17 @@
 	}
 }
 
-.subnav .nav > li.active > a {
+div.subnav .nav > li.active > a {
 	color: @textColor;
 	
 	&:hover {
 		color: @grayDark;
 	}
+}
+
+div.subnav .nav > li > .dropdown-toggle {
+	background-color: transparent;
+	color: @linkColor;
 }
 
 .navbar-search .search-query,
@@ -88,7 +94,7 @@
 	}
 }
 
-.navbar .nav-collapse > .nav li > a {
+.navbar .nav-collapse.in > .nav li > a {
 
 	color: @textColor;
 
@@ -98,7 +104,7 @@
 }
 
 
-.navbar .nav-collapse > .nav li > a:hover {
+.navbar .nav-collapse.in > .nav li > a:hover {
 	text-shadow: none;
 	color: @linkColor;
 	background-color: transparent;
@@ -108,19 +114,11 @@
 	}
 }
 
-
 // BUTTON
 // -----------------------------------------------------
 
 .btn {
 	.buttonBackground(#F4F4F4, #ECECEC);
-}
-
-.btn-warning {
-  .caret {
-    border-top-color: @white;
-    .opacity(75);
-  }
 }
 
 .btn-primary {
@@ -150,16 +148,14 @@
 // FORMS
 // -----------------------------------------------------
 
-
-// Warning
 .control-group.warning {
   .formFieldState(#E29235, #E29235, @warningBackground);
 }
-// Error
+
 .control-group.error {
   .formFieldState(#C00, #C00, @errorBackground);
 }
-// Success
+
 .control-group.success {
   .formFieldState(#2BA949, #2BA949, @successBackground);
 }

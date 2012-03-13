@@ -1,5 +1,6 @@
 // Bootswatch.less
-// Swatch: Vintage
+// Swatch: Spruce
+// Version: 2.0.2
 // -----------------------------------------------------
 
 // TYPOGRAPHY
@@ -7,20 +8,16 @@
 
 @import url('http://fonts.googleapis.com/css?family=Josefin+Slab:400,700');
 
-h1, h2, h3, h4, h5, h6, .navbar .brand, legend, .btn,
+.navbar .brand, legend, .btn,
 .navbar .nav > li > a,
 div.subnav li > a  {
-	font-family: 'Josefin Slab', serif;
-	font-weight: 700;
+	font-family: @headingsFontFamily;
+	font-weight: @headingsFontWeight;
 }
 
 h3 { font-size: 20px; }
 h4 { font-size: 16px; }
 h5 { font-size: 14px; }
-
-.alert-heading {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
 
 h1, h2, h3, h4, h5, h6 {
 	color: @yellow;
@@ -28,13 +25,17 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 > small, h2 > small, h3 > small, h4 > small, h5 > small, h6 > small, .muted {
 	color: @linkColor;
+	font-family: @baseFontFamily;
+}
+
+.alert-heading {
+	font-family: @baseFontFamily;
 }
 
 // SCAFFOLDING
 // --------------------------------------------------
 
 body {
-	background-color: #AEAD8E;
 	#gradient > .vertical-three-colors (#90A38F, #AEAD8E, 60%, #90A38F);
 	background-size: 100% 1400px;
 	background-repeat: repeat-y !important;
@@ -93,6 +94,7 @@ code, pre {
 .navbar-search .search-query {
 	border-color: transparent;
 	padding: 6px 9px 2px 9px;
+	background-color: rgba(256, 256, 256, 0.4);
 }
 
 .navbar .nav > .dropdown.open > a {
@@ -116,18 +118,11 @@ code, pre {
 }
 
 div.subnav {
-	font-size: 18px;
-}
-
-div.subnav-fixed {
-	top: 54px;
-}
-
-div.subnav {
 	background-color: @green;
 	background-image: none;
 	border-color: transparent;
 	.box-shadow(0 1px 5px rgba(0,0,0,.1));
+	font-size: 18px;
 }
 
 div.subnav .nav > li > a {
@@ -145,6 +140,10 @@ div.subnav .dropdown.open .dropdown-toggle {
 	color: @yellow;
 }
 
+div.subnav .nav > li + li > a {
+	border-color: transparent;
+}
+
 div.subnav .dropdown.open > .dropdown-menu {
 	background-color: @linkColor;
 	color: @textColor;
@@ -156,11 +155,15 @@ div.subnav .dropdown.open > .dropdown-menu a:hover {
 	color: @linkColor;
 }
 
+div.subnav-fixed {
+	top: 54px;
+}
+
 .navbar .btn-navbar {
 	margin-top: 14px;
 }
 
-.navbar .nav-collapse.collapse .nav li > a {
+.navbar .nav-collapse.in .nav li > a {
 	color: @linkColor;
 	
 	&:hover {
@@ -174,34 +177,43 @@ div.subnav .dropdown.open > .dropdown-menu a:hover {
 	.box-shadow(none);
 }
 
-div.subnav .nav > li + li > a {
-	border-color: transparent;
-}
-
-
 // TABLES
 // --------------------------------------------------
 
+.table,
+.table.table-bordered,
+.table.table-striped {
+	.border-radius(0 0 8px 8px);
+}
+
+.table-bordered thead:first-child tr:first-child th:first-child,
+.table-bordered tbody:first-child tr:first-child td:first-child,
+.table-bordered thead:first-child tr:first-child th:last-child,
+.table-bordered tbody:first-child tr:first-child td:last-child {
+	.border-radius(0);
+}
+
+.table-striped tbody:last-child tr:last-child td:first-child {
+	.border-radius(0 0 0 8px);
+}
+
+.table-striped tbody:last-child tr:last-child td:last-child {
+	.border-radius(0 0 8px 0);
+}
+
 .table-bordered {
-	border: 2px solid @linkColor;
+	border: none;
+}
+
+.table thead tr th:first-child,
+.table tbody tr td:first-child {
+	border-left: none;
 }
 
 .table th,
 .table-striped tbody tr:nth-child(odd) th {
 	background-color: darken(#90A38F, 10%);
 	color: @linkColor;
-}
-
-.table tbody tr td {
-	background-color: #C3C7AE;
-}
-
-.table-striped tbody tr:nth-child(odd) td {
-	background-color: darken(#C3C7AE, 5%);
-}
-
-.table tbody tr:hover td {
-	background-color: darken(#C3C7AE, 10%);
 }
 
 // BUTTONS
@@ -226,23 +238,23 @@ div.subnav .nav > li + li > a {
 .btn-primary {
 	.buttonBackground(lighten(@blue, 10%), lighten(@blue, 5%));
 }
-// Warning appears are orange
+
 .btn-warning {
   .buttonBackground(@orange, darken(@orange, 5%));
 }
-// Danger and error appear as red
+
 .btn-danger {
   .buttonBackground(lighten(@red, 5%), @red);
 }
-// Success appears as green
+
 .btn-success {
   .buttonBackground(#62c462, #51a351);
 }
-// Info appears as a neutral blue
+
 .btn-info {
   .buttonBackground(#5bc0de, #2f96b4);
 }
-// Inverse appears as dark gray
+
 .btn-inverse {
   .buttonBackground(@yellow, darken(@yellow, 5%));
 }
@@ -260,7 +272,6 @@ div.subnav .nav > li + li > a {
 	border-color: transparent;
 	.box-shadow(none);
 }
-
 
 .breadcrumb li {
 	color: @yellow;

@@ -1,59 +1,54 @@
 // Bootswatch.less
 // Swatch: Readable
+// Version: 2.0.2
 // -----------------------------------------------------
-
-// CUSTOM VALUES
-// --------------------------------------------------
-
-@bodyBackgroundColor:	#FDFDFA;
-
 
 // TYPOGRAPHY
 // -----------------------------------------------------
 
-h1 {
-	font-size: 2em;
+h1, h2, h3, h4, h5, h6 {
 	line-height: 2em;
 	color: @textColor;
+}
+
+h1 {
+	font-size: 2em;
 }
 
 h2 {
 	font-size: 1.5em;
-	line-height: 2em;
-	color: @textColor;
 }
 
 h3, h4, h5, h6 {
 	font-size: 1em;
-	line-height: 2em;
 	text-transform: none;
-	color: @textColor;
-}
-
-input, button, select, textarea {
-	font-family: @baseFontFamily;
-}
-
-input, textarea, select {
-	color: @textColor;
-}
-
-.muted, .help-block, .uneditable-input, blockquote, small {
-	color: @grayLight;
 }
 
 small {
 	font-size: 13px;
 }
 
+.muted, .help-block, .uneditable-input, blockquote, small {
+	color: @grayLight;
+}
+
 // SCAFFOLDING
 // -----------------------------------------------------
 
 body {
-	background-color: @bodyBackgroundColor;
 	padding-top: 20px !important;
 }
 
+.page-header {
+	padding-bottom: 1em;
+	border-bottom: 2px solid @grayLighter;
+}
+
+footer.footer {
+	padding-top: 2em;
+	padding-bottom: 3em;
+	border-top: 2px solid @grayLighter;
+}
 
 // NAVBAR
 // -----------------------------------------------------
@@ -101,7 +96,6 @@ body {
 		border-top-color: @linkColor;
 		opacity: 1;
 	}
-
 }
 
 @media (max-width: 980px) {
@@ -113,6 +107,7 @@ body {
 
 .navbar-fixed-top {
 	position: static;
+	margin-bottom: 1.6em;
 }
 
 div.subnav {
@@ -157,28 +152,22 @@ div.subnav-fixed {
 }
 
 .dropdown-menu {
-	background-color: @white;
 	border: 1px solid #D4D4D4;
 	.border-radius(0);
 	.box-shadow(1px 1px 1px rgba(0, 0, 0, 0.2));
 	
-	li > a {
-		color: @linkColor;
-	}
-	
-	li > a:hover {
-		color: @linkColorHover;
-		background-color: transparent;
+	.divider {
+		margin: 5px 1px;
 	}
 }
 
-.navbar .nav-collapse.collapse {
+.navbar .nav-collapse.in {
 	
-	.nav > li > a:last-child {
+	.nav li:first-child > a {
 		margin-bottom: 10px;
 	}
 	
-	li > a {
+	.nav li > a {
 		color: @linkColor;
 		.border-radius(0);
 		font-weight: normal;
@@ -188,10 +177,9 @@ div.subnav-fixed {
 		}
 	}
 	
-	li > a:hover {
+	.nav li > a:hover {
 		background: transparent;
 	}
-
 }
 
 // NAV
@@ -208,13 +196,13 @@ div.subnav-fixed {
 	}
 
 	li > a:hover {
-		background-color: @bodyBackgroundColor;
+		background-color: @bodyBackground;
 	}
 
 	li.active > a,
 	li.active > a:hover {
 		color: @textColor;
-		background-color: @bodyBackgroundColor;
+		background-color: @bodyBackground;
 	}
 }
 
@@ -223,7 +211,6 @@ div.subnav-fixed {
 	li > a {
 		background-color: @white;
 	}
-	
 
 	li.active > a,
 	li.active > a:hover,
@@ -244,13 +231,13 @@ div.subnav-fixed {
 	}
 
 	li > a:hover {
-		background-color: @bodyBackgroundColor;
+		background-color: @bodyBackground;
 	}
 
 	li.active > a,
 	li.active > a:hover {
 		color: @textColor;
-		background-color: @bodyBackgroundColor;
+		background-color: @bodyBackground;
 	}
 }
 
@@ -320,7 +307,7 @@ div.subnav-fixed {
 // -----------------------------------------------------
 
 .btn-primary {
-  .buttonBackground(lighten(@primaryButtonBackground, 10%), @primaryButtonBackground);
+  .buttonBackground(lighten(@btnPrimaryBackground, 10%), @btnPrimaryBackground);
 }
 
 .btn [class^="icon-"],
@@ -346,28 +333,25 @@ div.subnav-fixed {
 // FORMS
 // -----------------------------------------------------
 
+input, button, select, textarea {
+	font-family: @baseFontFamily;
+}
+
+input, textarea, select {
+	color: @textColor;
+}
+
+.form-actions {
+	background-color: transparent;
+	border-top: 1px solid #D4D4D4;
+	padding-top: 2em;
+}
 
 // TABLES
 // -----------------------------------------------------
 
 .table-bordered {
 	.border-radius(0);
-}
-
-.table-striped {
-  tbody {
-    tr:nth-child(odd) td,
-    tr:nth-child(odd) th {
-      background-color: darken(@bodyBackgroundColor, 2%);
-    }
-  }
-}
-
-.table {
-  tbody tr:hover td,
-  tbody tr:hover th {
-      background-color: darken(@bodyBackgroundColor, 4%);
-  }
 }
 
 // MISCELLANEOUS
@@ -433,21 +417,4 @@ blockquote {
 code, pre {
 	.border-radius(0);
 	background-color: @white;
-}
-
-.page-header {
-	padding-bottom: 1em;
-	border-bottom: 2px solid @grayLighter;
-}
-
-.form-actions {
-	background-color: transparent;
-	border-top: 1px solid #D4D4D4;
-	padding-top: 2em;
-}
-
-footer.footer {
-	padding-top: 2em;
-	padding-bottom: 3em;
-	border-top: 2px solid @grayLighter;
 }

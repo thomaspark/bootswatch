@@ -1,5 +1,6 @@
 // Bootswatch.less
 // Swatch: Cerulean
+// Version: 2.0.2
 // -----------------------------------------------------
 
 // TYPOGRAPHY
@@ -7,12 +8,8 @@
 
 @import url(http://fonts.googleapis.com/css?family=Telex);
 
-h1,h2,h3,h4,h5,h6, .navbar, .subnav {
-	font-family: 'Telex', sans-serif;
-}
-
-h1,h2,h3,h4,h5,h6 {
-	color: #317EAC
+.navbar, .subnav {
+	font-family: @headingsFontFamily;
 }
 
 // NAVBAR
@@ -34,15 +31,15 @@ h1,h2,h3,h4,h5,h6 {
 
 // responsive menu colors
 
-.navbar .nav-collapse > .nav > li .dropdown-menu a {
-	color: @linkColor;
+.navbar .nav-collapse.in > .nav > li .dropdown-menu a {
+	color: @white;
 	
 	&:hover {
 		color: @white;
 	}
 }
 
-.navbar .nav-collapse.collapse > .nav li > a {
+.navbar .nav-collapse.in .nav li > a {
 	color: @white;
 	
 	&:hover {
@@ -52,23 +49,6 @@ h1,h2,h3,h4,h5,h6 {
 
 .btn-navbar:hover {
     background-color: darken(@white, 20%);
-    background-position: 0 0;
-}
-
-// FORMS
-// -----------------------------------------------------
-
-// Warning
-.control-group.warning {
-  .formFieldState(@orange, @orange, @warningBackground);
-}
-// Error
-.control-group.error {
-  .formFieldState(@red, @red, @errorBackground);
-}
-// Success
-.control-group.success {
-  .formFieldState(darken(@green, 10%), darken(@green, 10%), @successBackground);
 }
 
 // BUTTONS
@@ -78,39 +58,35 @@ h1,h2,h3,h4,h5,h6 {
   #gradient > .vertical-three-colors(@white, @white, 5%, darken(@white, 0%));
   @shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
   .box-shadow(@shadow);
-}
-
-.btn-warning {
-  .caret {
-    border-top-color: @white;
-    .opacity(75);
+  
+  &:hover {
+  	background-position: 0 0;
   }
 }
 
 .btn-primary {
-  .buttonBackground(lighten(@linkColor, 5%), @linkColor);
-}
-
-.btn-warning {
-  .buttonBackground(lighten(@orange, 5%), @orange);
-}
-
-.btn-danger {
-  .buttonBackground(lighten(@red, 5%), @red);
-}
-
-.btn-success {
-  .buttonBackground(lighten(@green, 5%), @green);
+  .buttonBackground(lighten(@btnPrimaryBackground, 5%), @btnPrimaryBackground);
 }
 
 .btn-info {
-  .buttonBackground(lighten(@purple, 5%), @purple);
+  .buttonBackground(lighten(@btnInfoBackground, 5%), @btnInfoBackground);
+}
+
+.btn-success {
+  .buttonBackground(lighten(@btnSuccessBackground, 5%), @btnSuccessBackground);
+}
+
+.btn-warning {
+  .buttonBackground(lighten(@btnWarningBackground, 5%), @btnWarningBackground);
+}
+
+.btn-danger {
+  .buttonBackground(lighten(@btnDangerBackground, 5%), @btnDangerBackground);
 }
 
 .btn-inverse {
-  .buttonBackground(lighten(@yellow, 5%), @yellow);
+  .buttonBackground(lighten(@btnInverseBackground, 5%), @btnInverseBackground);
 }
-
 
 // ICONS
 // -----------------------------------------------------
