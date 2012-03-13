@@ -44,3 +44,11 @@ menu = menu + '			</ul> \
 			$('a[rel=tooltip]').tooltip({
 				'placement': 'bottom'
 			});
+
+var taglines = [];
+taglines.push('Add color to your <a target="_blank" href="http://twitter.github.com/bootstrap/">Bootstrap</a> site without touching a color picker.');
+taglines.push('Saving the web from default <a target="_blank" href="http://twitter.github.com/bootstrap/">Bootstrap</a>.');
+
+var line = Math.floor((taglines.length) * Math.random());
+$('#tagline').html(taglines[line]);
+			
