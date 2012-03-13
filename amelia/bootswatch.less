@@ -5,6 +5,7 @@
 // TYPOGRAPHY
 // -----------------------------------------------------
 
+@import url('http://fonts.googleapis.com/css?family=Lobster');
 @import url('http://fonts.googleapis.com/css?family=Cabin:400,700');
 
 h1, h2, h3, h4, h5, h6,
@@ -14,12 +15,17 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 }
 
 input, button, select, textarea,
-.navbar-search .search-query {
+.navbar-search .search-query,
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 	font-family: @baseFontFamily;
 }
 
 .muted {
 	color: rgba(256, 256, 256, 0.5);
+}
+
+.navbar .brand, h1, h2, h3, h4, h5, legend {
+	font-family: 'Lobster', cursive;
 }
 
 
@@ -41,6 +47,10 @@ hr {
 
 footer.footer {
 	border-top: 1px solid rgba(256, 256, 256, 0.3);
+}
+
+footer.footer p {
+	color: @textColor;
 }
 
 // NAVBAR
