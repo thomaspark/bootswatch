@@ -88,13 +88,9 @@ body {
   padding-right: 20px;
   text-align: center;
 }
-	  
-.thumbnail {
-  max-width: 370px;
-}
-	  
+ 
 .thumbnail img {
-  max-height: 250px;
+  max-width: 100%;
   -webkit-border-radius: 7px;
      -moz-border-radius: 7px;
           border-radius: 7px;
@@ -172,6 +168,11 @@ body {
 	.hero-unit {
 		margin-top: 0;
 	}
+	
+	.thumbnail .btn {
+		font-size: 12px;
+	}
+	
 }
  
 /* Large desktop */
