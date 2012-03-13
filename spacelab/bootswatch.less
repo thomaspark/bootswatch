@@ -88,13 +88,20 @@
 	}
 }
 
-.navbar .nav-collapse > .nav > li > a > .caret {
-	border-top-color: @grayLight;
+.navbar .nav-collapse > .nav li > a {
+
+	color: @textColor;
+
+	.caret {
+		border-top-color: @grayLight;
+	}
 }
 
-.navbar .nav-collapse > .nav > li > a:hover {
+
+.navbar .nav-collapse > .nav li > a:hover {
 	text-shadow: none;
-	color: @white;
+	color: @linkColor;
+	background-color: transparent;
 	
 	.caret {
 		border-top-color: @white;
