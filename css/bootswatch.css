@@ -111,9 +111,24 @@ body {
 /* Landscape phones and down */
 @media (max-width: 480px) {
 	
+	body, .navbar {
+		margin: 0;
+	}
+	
+	body {
+		padding: 0;
+	}
+	
+	.container {
+		padding: 20px;
+	}
+	
+	.span4 {
+		width: 100%;
+	}
+	
 	.hero-unit {
 		padding: 40px 20px 80px;
-		margin-top: 0;
 		margin-bottom: 20px;
 	}
 	
@@ -138,22 +153,11 @@ body {
 	.about h3 {
 	  margin-top: 20px;
 	}
-
-	.span4 {
-		width: 85%;
-	}
-
-	.thumbnail .btn {
-		font-size: 13px;
-	}
-
+	
 }
  
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
-	.about, .thumbnails {
-		margin-left: 0;
-	}
 	
 	.hero-unit {
 		margin-top: 0;
@@ -165,12 +169,8 @@ body {
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 980px) { 
 
-	.hero-unit {
-		margin-top: 0;
-	}
-	
 	.thumbnail .btn {
-		font-size: 12px;
+		font-size: 11px;
 	}
 	
 }
