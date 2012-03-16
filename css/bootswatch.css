@@ -100,6 +100,10 @@ body {
 	vertical-align: top;
 }  
 
+.thumbnail p {
+	max-width: 352px;
+}
+
 .thumbnail .btn-toolbar {
   text-align: right;
 }
@@ -107,7 +111,7 @@ body {
 .thumbnail .btn-group {
     margin-top: 10px;
 }
-	
+
 /* Landscape phones and down */
 @media (max-width: 480px) {
 	
@@ -157,7 +161,7 @@ body {
 }
  
 /* Landscape phone to portrait tablet */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 	
 	.hero-unit {
 		margin-top: 0;
@@ -168,6 +172,10 @@ body {
  
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 980px) { 
+
+	.hero-unit {
+		margin-top: 0;
+	}
 
 	.thumbnail .btn {
 		font-size: 11px;
