@@ -3,6 +3,20 @@
 // Version: 2.0.2
 // -----------------------------------------------------
 
+// TYPOGRAPHY
+// -----------------------------------------------------
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+h1, h2, h3, h4, h5, h6, .brand, .navbar, .subnav a, blockquote > p {
+	font-family: 'Open Sans', sans-serif;
+	color: @textColor;
+}
+
+h1, h2, h3, h4, h5, h6, .brand {
+	font-weight: 700;
+}
+
 // SCAFFOLDING
 // -----------------------------------------------------
 
@@ -12,20 +26,6 @@ a {
 
 .nav a, .navbar .brand, .subnav a, a.btn {
 	text-decoration: none;
-}
-
-// TYPOGRAPHY
-// -----------------------------------------------------
-
-@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700');
-
-h1, h2, h3, h4, h5, h6, .brand, .navbar, .subnav a, blockquote > p {
-	font-family: 'Open Sans', sans-serif;
-	color: @textColor;
-}
-
-h1, h2, h3, h4, h5, h6, .brand {
-	font-weight: 700;
 }
 
 // NAVBAR
