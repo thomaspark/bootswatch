@@ -3958,7 +3958,7 @@ a.thumbnail:hover {
 .hero-unit {
   padding: 60px;
   margin-bottom: 30px;
-  background-color: #eeeeee;
+  background-color: #45515f;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
@@ -4542,12 +4542,17 @@ label {
 footer.footer {
   border-top: 1px solid #20262d;
 }
-.well {
+.well,
+.hero-unit {
   background-color: #45515f;
   border: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
+}
+.hero-unit h1 {
+  color: #e36b23;
+  line-height: 2em;
 }
 .progress {
   background-color: #20262d;
