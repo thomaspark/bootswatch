@@ -36,8 +36,8 @@ if(document.title !== 'Bootswatch: Free themes for Twitter Bootstrap') {
 
 menu = menu + '			</ul> \
 						<ul class="nav pull-right"> \
-							<li><a rel="tooltip" target="_blank" href="http://builtwithbootstrap.com/" title="Showcase of sites and apps" onclick="_gaq.push([\'_trackEvent\', \'click\', \'outbound\', \'builtwithbootstrap\']);">Built With Bootstrap <i class="icon-share-alt icon-white"></i></a></li> \
-			  				<li><a rel="tooltip" target="_blank" href="http://wrapbootstrap.com" title="Marketplace for premium templates and themes" onclick="_gaq.push([\'_trackEvent\', \'click\', \'outbound\', \'wrapbootstrap\']);">WrapBootstrap <i class="icon-share-alt icon-white"></i></a></li> \
+							<li><a rel="tooltip" target="_blank" href="http://builtwithbootstrap.com/" title="Showcase of Bootstrap sites & apps" onclick="_gaq.push([\'_trackEvent\', \'click\', \'outbound\', \'builtwithbootstrap\']);">Built With Bootstrap <i class="icon-share-alt icon-white"></i></a></li> \
+			  				<li><a rel="tooltip" target="_blank" href="http://wrapbootstrap.com" title="Marketplace for premium Bootstrap templates" onclick="_gaq.push([\'_trackEvent\', \'click\', \'outbound\', \'wrapbootstrap\']);">WrapBootstrap <i class="icon-share-alt icon-white"></i></a></li> \
 			  			</ul>';
 
 			$('.navbar .nav-collapse').first().append(menu);
