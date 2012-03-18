@@ -742,6 +742,11 @@ input,textarea,select{color:#090000;}
 select,input[type="file"]{height:auto;line-height:normal;}
 .form-actions{background-color:transparent;border-top:1px solid #D4D4D4;padding-top:2em;}
 .table-bordered{-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
+.table-bordered thead:first-child tr:first-child th:first-child,.table-bordered tbody:first-child tr:first-child td:first-child{-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
+.table-bordered thead:last-child tr:last-child th:first-child,.table-bordered tbody:last-child tr:last-child td:first-child{-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
+.modal{background-color:#ffffff;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
+.modal-header{border-bottom:none;}
+.modal-footer{background-color:#fdfdfa;}
 .alert,.label,.label:hover{-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;border:1px solid #D4D4D4;color:#090000;text-shadow:none;}
 .alert-heading{color:#090000;text-shadow:none;}
 .label,.label:hover{background-color:#ffffff;font-weight:normal;font-size:19px;padding:4px;}

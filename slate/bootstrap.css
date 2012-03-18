@@ -1262,11 +1262,11 @@ table {
 }
 .table-striped tbody tr:nth-child(odd) td,
 .table-striped tbody tr:nth-child(odd) th {
-  background-color: #f9f9f9;
+  background-color: #2e3236;
 }
 .table tbody tr:hover td,
 .table tbody tr:hover th {
-  background-color: #f5f5f5;
+  background-color: #3a3f44;
 }
 table .span1 {
   float: none;
@@ -4301,33 +4301,6 @@ div.subnav-fixed {
 .caret {
   border-top-color: #ffffff;
 }
-.table th,
-.table td,
-.table tbody + tbody {
-  border-top: 1px solid #1c1e22;
-}
-.table-bordered {
-  border: 1px solid #1c1e22;
-}
-.table-bordered th + th,
-.table-bordered td + td,
-.table-bordered th + td,
-.table-bordered td + th {
-  border-left: 1px solid #1c1e22;
-}
-.table-bordered thead:first-child tr:first-child th,
-.table-bordered tbody:first-child tr:first-child th,
-.table-bordered tbody:first-child tr:first-child td {
-  border-top: 0;
-}
-.table-striped tbody tr:nth-child(odd) td,
-.table-striped tbody tr:nth-child(odd) th {
-  background-color: #2e3236;
-}
-.table tbody tr:hover td,
-.table tbody tr:hover th {
-  background-color: #3a3f44;
-}
 .pagination > ul {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -4548,6 +4521,22 @@ textarea[readonly] {
 .alert-info {
   background-color: #3a87ad;
   border-color: #3a87ad;
+}
+.modal {
+  background-color: #2e3236;
+}
+.modal-header {
+  border-bottom: none;
+}
+.modal-body {
+  border-bottom: 1px solid #1C1E22;
+}
+.modal-footer {
+  border-top: none;
+  background-color: #272b30;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
 }
 code,
 pre {

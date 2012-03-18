@@ -163,41 +163,7 @@ div.subnav-fixed {
 // TABLES
 // -----------------------------------------------------
 
-.table th, .table td, .table tbody + tbody {
-	border-top: 1px solid darken(@grayDarker, 5%);
-}
 
-.table-bordered {
-  border: 1px solid darken(@grayDarker, 5%);
-  th + th,
-  td + td,
-  th + td,
-  td + th {
-    border-left: 1px solid darken(@grayDarker, 5%);
-  }
-  // Prevent a double border
-  thead:first-child tr:first-child th,
-  tbody:first-child tr:first-child th,
-  tbody:first-child tr:first-child td {
-    border-top: 0;
-  }
-}
-
-.table-striped {
-  tbody {
-    tr:nth-child(odd) td,
-    tr:nth-child(odd) th {
-      background-color: darken(@grayDark, 5%);
-    }
-  }
-}
-
-.table {
-  tbody tr:hover td,
-  tbody tr:hover th {
-    background-color: @grayDark;
-  }
-}
 
 // NAVIGATION
 // -----------------------------------------------------
@@ -391,6 +357,27 @@ label, input, button, select, textarea, legend {
 .alert-info {
   background-color: @infoText;
   border-color: @infoText;
+}
+
+// MODALS
+// -----------------------------------------------------
+
+.modal {
+	background-color: darken(@grayDark, 5%);
+}
+
+.modal-header {
+	border-bottom: none;
+}
+
+.modal-body {
+	border-bottom: 1px solid #1C1E22;
+}
+
+.modal-footer {
+	border-top: none;
+	background-color: @grayDarker;
+	.box-shadow(none);
 }
 
 // MISCELLANEOUS

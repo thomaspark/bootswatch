@@ -4536,6 +4536,28 @@ label {
   background-color: #dff0d8;
   border-color: #58a959;
 }
+.modal {
+  background-color: transparent;
+}
+.modal-header,
+.modal-body,
+.modal-footer {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  background-color: #2a333c;
+  border: none;
+}
+.modal-header {
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.modal-footer {
+  -webkit-border-radius: 0 0 4px 4px;
+  -moz-border-radius: 0 0 4px 4px;
+  border-radius: 0 0 4px 4px;
+}
 .page-header {
   border-bottom: none;
 }

@@ -513,6 +513,29 @@ label {
   .formFieldState(lighten(@successText, 10%), lighten(@successText, 10%), @successBackground);
 }
 
+// MODALS
+// --------------------------------------------------
+
+.modal {
+	background-color: transparent;
+}
+
+.modal-header,
+.modal-body,
+.modal-footer {
+	.box-shadow(none);
+	background-color: @bodyBackground;
+	border: none;
+}
+
+.modal-header {
+	.border-radius(4px 4px 0 0);
+}
+
+.modal-footer {
+	.border-radius(0 0 4px 4px);
+}
+
 // MISCELLANEOUS
 // --------------------------------------------------
 
