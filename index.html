@@ -54,6 +54,7 @@
       </div>
     </div>
 
+
     <div class="container">
 
       <!-- Main hero unit for a primary marketing message or call to action -->
@@ -490,10 +491,10 @@
 			        <img src="img/refs/blank.png" alt="" style="background-image: url('img/refs/stripes.png');">
 			        <div class="caption">
 			          <h3>Still searching?</h3>
-			          <p>Inquire about custom-built swatches.</p>
+			          <p>Get a swatch that's customized to your needs.</p>
 			          <div class="btn-toolbar">
 						<div class="btn-group">
-						  <a class="btn btn-large btn-danger" target="_blank" href="mailto:thomas@thomaspark.me"><i class="icon-envelope icon-white"></i> thomas@thomaspark.me</a>
+						  <a class="btn btn-large btn-warning" data-toggle="modal" target="_blank" href="#modal-custom"><i class="icon-info-sign icon-white"></i> More Info</a>
 						</div>
 					</div>
 			        </div>
@@ -505,6 +506,27 @@
 		</div>
 	  </div> <!-- end row-->
 
+
+		<div class="modal hide fade" id="modal-custom">
+		  <div class="modal-header">
+		    <a class="close" data-dismiss="modal">×</a>
+		    <h3>Custom-Built Swatches</h3>
+		  </div>
+		  <div class="modal-body">
+			<h4>Quick Swatch</h4>
+		    <p>Get a build of Bootstrap with <a target="_blank" href="https://github.com/twitter/bootstrap/blob/master/less/variables.less">variables.less</a> reskinned for you.</p>
+			<h4>Full Swatch</h4>
+		    <p>Get a full theme that goes far beyond variables.less, based on your existing design.</p>
+			<h4>Custom Swatch</h4>
+		    <p>Get a full theme designed and developed from the ground up.</p>
+			<h4>Other Services</h4>
+		    <p>Get help with Bootstrap-ready markup, custom utility classes, and more!</p>
+			<p>Send inquiries to <a href="mailto:thomas@thomaspark.me">thomas@thomaspark.me</a>.</p>
+		  </div>
+		  <div class="modal-footer">
+		    <a href="#" class="btn" data-dismiss="modal">Close</a>
+		  </div>
+		</div>
 
 	  
 	  <div class="row" style="padding-top: 30px;">
@@ -636,6 +658,7 @@
 
     </div> <!-- /container -->
 
+
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -643,6 +666,8 @@
     <script src="js/bootstrap-dropdown.js"></script>
 	<script src="js/bootstrap-tooltip.js"></script>
     <script src="js/bootstrap-collapse.js"></script>
+    <script src="js/bootstrap-modal.js"></script>
+    <script src="js/bootstrap-transition.js"></script>
     <script src="js/bootswatch.js"></script>
 	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
