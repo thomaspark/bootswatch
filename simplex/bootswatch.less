@@ -3,51 +3,178 @@
 // Version: 2.0.2
 // -----------------------------------------------------
 
+@boxShadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+
 // TYPOGRAPHY
 // -----------------------------------------------------
 
-h6 {
-	color: @black;
+h6, .hero-unit h1 {
+	color: @headingsColor;
 }
 
 // NAVBAR
 // -----------------------------------------------------
 
-.navbar .brand, .subnav a {
-	color: @navbarText;
+.navbar .navbar-inner {
+	.box-shadow(inset 0 -1px #CFCACA);
+	border-bottom: 1px solid #FFF;
+	border-bottom: none;
+}
+
+.navbar .brand {
+	padding-top: 10px;
+	color: @headingsColor;
+}
+
+.navbar .nav > li > a {
+	padding-top: 14px;
+	text-shadow: none;
+	font-weight: normal;
+	font-size: 11px;
+}
+
+.navbar .nav > li > a:hover {
+	text-decoration: underline;
 }
 
 .navbar .nav .active > a,
 .navbar .nav .active > a:hover {
-	background-color: @grayDarker;
-	color: @white;
+	background-color: transparent;
 }
 
-.navbar .nav > li > a {
-	text-shadow: none;
+.navbar .nav .dropdown-toggle .caret,
+.navbar .nav .open.dropdown .caret {
+	border-top-color: @textColor;
+}
+
+.dropdown.open .dropdown-toggle {
+	color: @headingsColor;
+}
+
+div.subnav {
+	background-image: none;
+	background-color: @navbarBackground;
+	.box-shadow(@boxShadow);
+}
+
+div.subnav.subnav-fixed {
+	.box-shadow(inset 0 5px #fff~"," @boxShadow);
+}
+
+div.subnav .nav > li > a {
+	padding-top: 12px;
+	color: @navbarText;
+	font-weight: normal;
+	font-size: 11px;
+	
 	&:hover {
-		color: @white;
-		background-color: rgba(256, 256, 256, 0.2);
+		text-decoration: underline;
 	}
 }
 
-.subnav .nav > li > a {
-	border-left: 0px solid white !important;
-	border-right: 0px solid white !important;
-	color: @grayDark;
+.dropdown-menu {
+	.border-radius(0);
+	font-size: 11px;
 }
 
-.btn-navbar:hover {
-    background-color: darken(@white, 20%);
-    background-position: 0 0;
+.nav .nav-header {
+	font-weight: normal;
+	text-transform: none;
 }
+.navbar .nav-collapse.in .nav li > a {
+	color: @headingsColor;
+	font-weight: normal;
+}
+
+.navbar .nav-collapse.in .nav li > a:hover {
+	background-color: transparent;
+	color: @black;
+	text-decoration: underline;
+}
+
+@media (max-width: 979px) {
+	form.navbar-form, form.navbar-search {
+		border-top: 1px solid #ccc;
+		border-bottom: 1px solid #ccc;
+	}
+}
+
+// NAV
+// -----------------------------------------------------
+
+.nav > li > a {
+	font-size: 11px;
+	border-width: 1px;
+}
+
+.nav-tabs > li > a,
+.nav-tabs > li > a:hover,
+.tabbable > .nav-tabs > li > a,
+.tabbable > .nav-tabs > li > a:hover {
+	background-color: darken(@bodyBackground, 3%);
+	border: 1px solid #ccc;
+}
+
+.tabbable > .nav-tabs > li.active > a {
+	border-bottom: 1px solid transparent;
+}
+
+.tabbable.tabs-below > .nav-tabs > li.active > a,
+.tabbable.tabs-left > .nav-tabs > li.active > a,
+.tabbable.tabs-right > .nav-tabs > li.active > a {
+	border-bottom: 1px solid #ccc;
+}
+
+
+.nav-pills > li > a:hover {
+	background-color: transparent;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover {
+	background-color: @bodyBackground;
+}
+
 
 // FORMS
 // -----------------------------------------------------
 
-.search-query {
+input, textarea, select, .uneditable-input {
+	.border-radius(0);
+}
+
+.navbar-search .search-query {
 	border: 1px solid #CCC;
-	.border-radius(2px);
+	.border-radius(0);
+	background-color: @bodyBackground;
+	color: @gray;
+}
+
+.help-inline, .help-block {
+	font-size: 11px;
+}
+
+.input-prepend input,
+.input-append input,
+.input-prepend select,
+.input-append select,
+.input-prepend .uneditable-input,
+.input-append .uneditable-input {
+	.border-radius(0);
+}
+
+.input-prepend .add-on,
+.input-append .add-on,
+.input-prepend .btn,
+.input-append .btn {
+	.border-radius(0);
+}
+
+// TABLES
+// -----------------------------------------------------
+
+.table th {
+	font-weight: normal;
 }
 
 // BUTTONS
@@ -55,6 +182,7 @@ h6 {
 
 .btn {
   .border-radius(2px);
+  font-weight: bold;
   #gradient > .vertical-three-colors(@white, @white, 25%, darken(@white, 10%));
 }
 
@@ -82,14 +210,65 @@ h6 {
   .buttonBackground(lighten(@purple, 5%), @purple);
 }
 
+// MODALS
+// -----------------------------------------------------
+
+.modal,
+.modal-header,
+.modal-footer {
+	.border-radius(0);
+}
+
+.modal-header {
+	border-bottom: none;
+}
+
+.modal-header,
+.modal-body {
+	background-color: @navbarBackground;
+}
+
+.modal-footer {
+	background-color: @bodyBackground;
+}
+
 // MISCELLANEOUS
 // -----------------------------------------------------
 
 i[class^="icon-"]{
 	opacity: 0.6;
+	vertical-align: -2px;
+}
+
+.alert, .alert p, .alert-heading {
+	font-size: 11px;
+}
+
+.progress {
+    #gradient > .vertical(#e0e0e0, #e8e8e8);
+}
+
+.label {
+	font-size: 11px;
+	font-weight: normal;
 }
 
 .hero-unit {
-	border: 1px solid rgba(0,0,0,.05);
-	.box-shadow(inset 0 1px 1px rgba(0,0,0,.05));
+	background-color: @white;
+	.box-shadow(@boxShadow);
+}
+
+.well {
+	.box-shadow(@boxShadow);
+	background-color: @white;
+}
+
+.breadcrumb {
+	.box-shadow(@boxShadow);
+	border: 0px solid transparent;
+	font-size: 11px;
+}
+
+footer.footer p {
+	font-size: 11px;
 }

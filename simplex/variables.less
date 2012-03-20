@@ -35,8 +35,8 @@
 
 // Scaffolding
 // -------------------------
-@bodyBackground:        @white;
-@textColor:             @black;
+@bodyBackground:        #EEF0F4;
+@textColor:             @gray;
 
 
 // Links
@@ -48,13 +48,13 @@
 // Typography
 // -------------------------
 @baseFontSize:          13px;
-@baseFontFamily:        Arial, Helvetica, sans-serif;
+@baseFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
 @baseLineHeight:        18px;
 @altFontFamily:         Georgia, "Times New Roman", Times, serif;
 
 @headingsFontFamily:    inherit; // empty to use BS default, @baseFontFamily
 @headingsFontWeight:    bold;    // instead of browser default, bold
-@headingsColor:         inherit; // empty to use BS default, @textColor
+@headingsColor:         @grayDark; // empty to use BS default, @textColor
 
 
 // Tables
@@ -131,7 +131,7 @@
 
 // Input placeholder text color
 // -------------------------
-@placeholderText:         @grayLight;
+@placeholderText:         @gray;
 
 
 // Hr border color
@@ -142,12 +142,12 @@
 // Navbar
 // -------------------------
 @navbarHeight:                    40px;
-@navbarBackground:                @grayDarker;
-@navbarBackgroundHighlight:       @grayDarker;
+@navbarBackground:                #F4F6F8;
+@navbarBackgroundHighlight:       @navbarBackground;
 
-@navbarText:                      #AAA;
-@navbarLinkColor:                 @navbarText;
-@navbarLinkColorHover:            @gray;
+@navbarText:                      @gray;
+@navbarLinkColor:                 @gray;
+@navbarLinkColorHover:            @grayDark;
 @navbarLinkColorActive:           @navbarLinkColorHover;
 @navbarLinkBackgroundHover:       transparent;
 @navbarLinkBackgroundActive:      @navbarBackground;
