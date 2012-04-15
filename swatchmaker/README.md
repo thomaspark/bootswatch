@@ -5,6 +5,8 @@ Step 1
 ------
 Download the latest Bootstrap source from https://github.com/twitter/bootstrap/downloads. Unpack it to the `swatchmaker` directory and rename the folder `bootstrap`.
 
+This can be done automatically by running `make bootstrap`.
+
 Step 2
 ------
 Make your customizations to the two files found in the `swatch` directory, `variables.less` and `bootswatch.less`.
