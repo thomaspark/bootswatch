@@ -13,5 +13,5 @@ bootstrap:
 	mv twitter-bootstrap* bootstrap
 	rm latest_bootstrap.tar.gz
 
-.PHONY: bootstrap
+.PHONY: bootswatch bootstrap
 
