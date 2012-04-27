@@ -13,13 +13,29 @@
     <![endif]-->
 
     <!-- Le styles -->
+    <link href="docs.css" rel="stylesheet">
     <link href="../swatch/bootstrap.min.css" rel="stylesheet">
     <link href="../bootstrap/docs/assets/css/bootstrap-responsive.css" rel="stylesheet">
-    <link href="docs.css" rel="stylesheet">
     <link href="../bootstrap/docs/assets/js/google-code-prettify/prettify.css" rel="stylesheet">
   </head>
 
   <body data-spy="scroll" data-target=".subnav" data-offset="50">
+
+  <!-- Modal
+    ================================================== -->
+		<div class="modal fade" id="myModal">
+		  <div class="modal-header">
+		    <a class="close" data-dismiss="modal">×</a>
+		    <h3>Modal header</h3>
+		  </div>
+		  <div class="modal-body">
+		    <p>One fine body…</p>
+		  </div>
+		  <div class="modal-footer">
+		    <a href="#" class="btn">Close</a>
+		    <a href="#" class="btn btn-primary">Save changes</a>
+		  </div>
+		</div>
 
 
   <!-- Navbar
@@ -32,34 +48,25 @@
          <span class="icon-bar"></span>
          <span class="icon-bar"></span>
        </a>
-       <a class="brand" href="./index.html">Bootstrap</a>
+       <a class="brand" href="./index.html">Brand</a>
        <div class="nav-collapse">
          <ul class="nav">
            <li class="">
-             <a href="./index.html">Overview</a>
+             <a href="#">Nav</a>
            </li>
            <li class="">
-             <a href="./scaffolding.html">Scaffolding</a>
-           </li>
-           <li class="active">
-             <a href="./base-css.html">Base CSS</a>
-           </li>
-           <li class="">
-             <a href="./components.html">Components</a>
-           </li>
-           <li class="">
-             <a href="./javascript.html">Javascript plugins</a>
-           </li>
-           <li class="">
-             <a href="./less.html">Using LESS</a>
+             <a href="#">Before Divider</a>
            </li>
            <li class="divider-vertical"></li>
            <li class="">
-             <a href="./download.html">Customize</a>
+             <a href="#">After Divider</a>
            </li>
            <li class="">
-             <a href="./examples.html">Examples</a>
+             <a data-toggle="modal" href="#myModal" >Launch Modal</a>
            </li>
+		   <li class="">
+			   <p>Just Text</p>
+		   </li>
          </ul>
        </div>
      </div>
@@ -85,6 +92,7 @@
       <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Navigation <b class="caret"></b></a>
         <ul class="dropdown-menu">
+          <li class="nav-header">Nav</li>
           <li><a href="#navs">Nav, tabs, pills</a></li>
           <li><a href="#navbar">Navbar</a></li>
           <li><a href="#breadcrumbs">Breadcrumbs</a></li>
@@ -98,6 +106,20 @@
   </div>
 </header>
 
+
+<!-- Hero Unit
+================================================== -->
+<section id="typography">
+	<div class="hero-unit">
+	  <h1>Heading</h1>
+	  <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+	  <p>
+	    <a class="btn btn-primary btn-large">
+	      Learn more
+	    </a>
+	  </p>
+	</div>
+</section>
 
 <!-- Typography
 ================================================== -->
@@ -1656,7 +1678,7 @@ For example, &lt;code&gt;section&lt;/code&gt; should be wrapped as inline.
             <li><a href="#">Separated link</a></li>
           </ul>
         </div><!-- /btn-group -->
-        <div class="btn-group">
+        <div class="btn-group dropup">
           <a class="btn btn-danger dropdown-toggle" data-toggle="dropdown" href="#">Danger <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="#">Action</a></li>
@@ -1973,6 +1995,7 @@ For example, &lt;code&gt;section&lt;/code&gt; should be wrapped as inline.
           <li class="nav-header">Another list header</li>
           <li><a href="#">Profile</a></li>
           <li><a href="#">Settings</a></li>
+		  <li class="divider"></li>
           <li><a href="#">Help</a></li>
         </ul>
       </div> <!-- /well -->
@@ -2572,6 +2595,101 @@ For example, &lt;code&gt;section&lt;/code&gt; should be wrapped as inline.
 </section>
 
 
+<!-- Badges
+================================================== -->
+<section id="badges">
+  <div class="page-header">
+    <h1>Badges <small>Indicators and unread counts</small></h1>
+  </div>
+  <div class="row">
+    <div class="span4">
+      <h3>About</h3>
+      <p>Badges are small, simple components for displaying an indicator or count of some sort. They're commonly found in email clients like Mail.app or on mobile apps for push notifications.</p>
+    </div><!-- /.span -->
+    <div class="span8">
+      <h3>Available classes</h3>
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Example</th>
+            <th>Markup</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              Default
+            </td>
+            <td>
+              <span class="badge">1</span>
+            </td>
+            <td>
+              <code>&lt;span class="badge"&gt;1&lt;/span&gt;</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Success
+            </td>
+            <td>
+              <span class="badge badge-success">2</span>
+            </td>
+            <td>
+              <code>&lt;span class="badge badge-success"&gt;2&lt;/span&gt;</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Warning
+            </td>
+            <td>
+              <span class="badge badge-warning">4</span>
+            </td>
+            <td>
+              <code>&lt;span class="badge badge-warning"&gt;4&lt;/span&gt;</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Error
+            </td>
+            <td>
+              <span class="badge badge-important">6</span>
+            </td>
+            <td>
+              <code>&lt;span class="badge badge-important"&gt;6&lt;/span&gt;</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Info
+            </td>
+            <td>
+              <span class="badge badge-info">8</span>
+            </td>
+            <td>
+              <code>&lt;span class="badge badge-info"&gt;8&lt;/span&gt;</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Inverse
+            </td>
+            <td>
+              <span class="badge badge-inverse">10</span>
+            </td>
+            <td>
+              <code>&lt;span class="badge badge-inverse"&gt;10&lt;/span&gt;</code>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div><!-- /.span -->
+  </div><!-- /.row -->
+</section>
+
+
 
 <!-- Thumbnails
 ================================================== -->
@@ -2755,8 +2873,8 @@ For example, &lt;code&gt;section&lt;/code&gt; should be wrapped as inline.
       <p>Easily extend the standard alert message with two optional classes: <code>.alert-block</code> for more padding and text controls and <code>.alert-heading</code> for a matching heading.</p>
       <div class="alert alert-block">
         <a class="close">&times;</a>
-        <h4 class="alert-heading">Warning!</h4>
-        <p>Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+        <h4 class="alert-heading">Warning! <a href="#">Link</a></h4>
+        <p>Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. <a href="#">Link</a></p>
       </div>
 <pre class="prettyprint linenums">
 &lt;div class="alert alert-block"&gt;
@@ -2774,7 +2892,7 @@ For example, &lt;code&gt;section&lt;/code&gt; should be wrapped as inline.
       <h3>Error or danger</h3>
       <div class="alert alert-error">
         <a class="close">&times;</a>
-        <strong>Oh snap!</strong> Change a few things up and try submitting again.
+        <strong>Oh snap!</strong> Change a few things up and try submitting again. <a href="#">Link</a>
       </div>
 <pre class="prettyprint linenums">
 &lt;div class="alert alert-error"&gt;
@@ -2786,7 +2904,7 @@ For example, &lt;code&gt;section&lt;/code&gt; should be wrapped as inline.
       <h3>Success</h3>
       <div class="alert alert-success">
         <a class="close">&times;</a>
-        <strong>Well done!</strong> You successfully read this important alert message.
+        <strong>Well done!</strong> You successfully read this important alert message. <a href="#">Link</a>
       </div>
 <pre class="prettyprint linenums">
 &lt;div class="alert alert-success"&gt;
@@ -2798,7 +2916,7 @@ For example, &lt;code&gt;section&lt;/code&gt; should be wrapped as inline.
       <h3>Information</h3>
       <div class="alert alert-info">
         <a class="close">&times;</a>
-        <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+        <strong>Heads up!</strong> This alert needs your attention, but it's not super important. <a href="#">Link</a>
       </div>
 <pre class="prettyprint linenums">
 &lt;div class="alert alert-info"&gt;
