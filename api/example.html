@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Bootswatch API Example</title>
+	<style type="text/css">
+		.hidden { display: none; }
+	</style>
+</head>
+
+<body>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="http://github.com/janl/mustache.js/raw/master/mustache.js"></script>
+	<script type="text/javascript">
+	
+	$(document).ready(function(){
+	
+		$.get("http://simplejsonp.nodester.com/thomaspark/bootswatch", function (data) {
+			
+					var template_menu = "<div id='menu'><select>{{#.}}<option>{{name}}</option>{{/.}}</select></div>";
+					var template_previews = "{{#.}}<div class='preview hidden' id='{{name}}'><h1>{{name}}: {{description}}</h1><p><a href='{{preview}}'><img src='{{thumbnail}}'></a></p></div>{{/.}}"
+					
+					var output_menu = Mustache.render(template_menu, data.themes);
+					var output_previews = Mustache.render(template_previews, data.themes);					
+
+					$('body').append(output_menu + output_previews);
+					
+					$('.preview').first().removeClass('hidden');
+									
+					$('#menu').change(function(){
+						$('.preview').addClass('hidden');
+						var show = '#' + $('#menu :selected').text();
+						$(show).removeClass('hidden');
+					});
+			
+			}, "json");
+				
+	});
+				
+	</script>
+
+</body>
+</html>
