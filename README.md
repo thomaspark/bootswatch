@@ -1,15 +1,15 @@
 Bootswatch
 ==========
 
-Bootswatch is a collection of themed swatches that you can download for free and drop into your [Bootstrap](http://twitter.github.com/bootstrap/) site. Check it out at [bootswatch.com](http://bootswatch.com).
+Bootswatch is a collection of free themes that you can drop into your [Bootstrap](http://twitter.github.com/bootstrap/) site. Check it out at [bootswatch.com](http://bootswatch.com).
 
-So how do I use Bootswatch?
+How do I use Bootswatch?
 -----
-Head over to [Bootswatch](http://bootswatch.com) and pick a swatch. Download the `bootswatch.min.css` file associated with it.
+Head over to [Bootswatch](http://bootswatch.com) and download the `bootswatch.min.css` file associated with a swatch.
 
 In Bootstrap’s CSS directory, you’ll find a stylesheet in full (`bootstrap.css`) and minified (`bootstrap.min.css`) forms. Rename them or move them to a safe place. Then drop in the new CSS file and check that your HTML points to it. If you ever change your mind, simply drop in another swatch or switch back to the original.
 
-What if I want to extend Bootswatch?
+How do I extend Bootswatch?
 ------
 Bootswatch is an open source project, and you’re welcome to modify the swatches further or create your own. If you’re interested, fork or follow the GitHub repository. The files of interest are in the `gh-pages` branch.
 
@@ -17,10 +17,21 @@ Each raw swatch consists of two LESS files. One is `variables.less`, which is in
 
 Check out the README in the `swatchmaker` directory for step-by-step instructions for building your own swatches.
 
+How do I plug into Bootswatch?
+-----
+
+A simple API is available for integrating your site or app with Bootswatch.
+
+The following properties are available for each swatch: `name`, `description`, `preview`, `thumbnail`, `css`, and `css-min`.
+
+CORS and JSONP are supported. Send your request to `http://simplejsonp.nodester.com/thomaspark/bootswatch/`
+
+A simple demo, using mustache.js for templating: http://jsbin.com/aqagev/1/edit
+
 
 Feedback
 ------
-Please send bugs, submissions, and other feedback to thomas@thomaspark.me. For more information, visit http://thomaspark.me/2012/02/introducing-bootswatch/.
+Please send feedback to thomas@thomaspark.me. For more information, visit http://thomaspark.me/2012/02/introducing-bootswatch/.
 
 Author
 ------
