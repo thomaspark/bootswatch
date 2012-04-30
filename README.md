@@ -22,7 +22,7 @@ How do I plug into Bootswatch?
 
 A simple API is available for integrating your site or app with Bootswatch.
 
-The swatches are housed in an array called `themes`, and each swatch has the following properties:  `name`, `description`, `preview`, `thumbnail`, `css`, and `css-min`.
+The swatches are housed in an array called `themes`, and each swatch has the following properties:  `name`, `description`, `preview`, `thumbnail`, `css`, `css-min`, `less`, and `less-variables`.
 
 CORS and JSONP are supported. Send your request to `http://simplejsonp.nodester.com/thomaspark/bootswatch/`
 
