@@ -1,10 +1,8 @@
 // Variables.less
 // Variables to customize the look and feel of Bootstrap
 // Swatch: Spruce
-// Version: 2.0.2
+// Version: 2.0.3
 // -----------------------------------------------------
-
-
 
 // GLOBAL VALUES
 // --------------------------------------------------
@@ -47,10 +45,14 @@
 
 // Typography
 // -------------------------
+@sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
+@serifFontFamily:       Georgia, "Times New Roman", Times, serif;
+@monoFontFamily:        Menlo, Monaco, Consolas, "Courier New", monospace;
+
 @baseFontSize:          14px;
-@baseFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
+@baseFontFamily:        @sansFontFamily;
 @baseLineHeight:        21px;
-@altFontFamily:         Georgia, "Times New Roman", Times, serif;
+@altFontFamily:         @serifFontFamily;
 
 @headingsFontFamily:    'Josefin Slab', serif; // empty to use BS default, @baseFontFamily
 @headingsFontWeight:    700;    // instead of browser default, bold
@@ -94,8 +96,9 @@
 // -------------------------
 @inputBackground:               @white;
 @inputBorder:                   #ccc;
+@inputBorderRadius:             3px;
 @inputDisabledBackground:       @grayLighter;
-
+@formActionsBackground:         transparent;
 
 // Dropdowns
 // -------------------------
@@ -146,8 +149,8 @@
 @navbarBackgroundHighlight:       @navbarBackground;
 
 @navbarText:                      @grayLight;
-@navbarLinkColor:                 @grayLight;
-@navbarLinkColorHover:            @white;
+@navbarLinkColor:                 @linkColor;
+@navbarLinkColorHover:            @yellow;
 @navbarLinkColorActive:           @navbarLinkColorHover;
 @navbarLinkBackgroundHover:       transparent;
 @navbarLinkBackgroundActive:      @navbarBackground;
@@ -156,6 +159,7 @@
 @navbarSearchBackgroundFocus:     @white;
 @navbarSearchBorder:              darken(@navbarSearchBackground, 30%);
 @navbarSearchPlaceholderColor:    #ccc;
+@navbarBrandColor:                @linkColor;
 
 
 // Hero unit
@@ -185,7 +189,6 @@
 
 
 
-
 // GRID
 // --------------------------------------------------
 
@@ -195,7 +198,6 @@
 @gridColumnWidth:         60px;
 @gridGutterWidth:         20px;
 @gridRowWidth:            (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
-
 
 // Fluid grid
 // -------------------------

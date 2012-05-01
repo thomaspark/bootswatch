@@ -1,10 +1,8 @@
 // Variables.less
 // Variables to customize the look and feel of Bootstrap
 // Swatch: Amelia
-// Version: 2.0.2
+// Version: 2.0.3
 // -----------------------------------------------------
-
-
 
 // GLOBAL VALUES
 // --------------------------------------------------
@@ -47,10 +45,14 @@
 
 // Typography
 // -------------------------
+@sansFontFamily:        'Cabin', Verdana, sans-serif;
+@serifFontFamily:       Georgia, "Times New Roman", Times, serif;
+@monoFontFamily:        Menlo, Monaco, Consolas, "Courier New", monospace;
+
 @baseFontSize:          14px;
-@baseFontFamily:        'Cabin', Verdana, sans-serif;
+@baseFontFamily:        @sansFontFamily;
 @baseLineHeight:        20px;
-@altFontFamily:         Georgia, "Times New Roman", Times, serif;
+@altFontFamily:         @serifFontFamily;
 
 @headingsFontFamily:    'Lobster', cursive; // empty to use BS default, @baseFontFamily
 @headingsFontWeight:    normal;    // instead of browser default, bold
@@ -94,8 +96,9 @@
 // -------------------------
 @inputBackground:               @white;
 @inputBorder:                   transparent;
+@inputBorderRadius:             0;
 @inputDisabledBackground:       @grayLighter;
-
+@formActionsBackground:         transparent;
 
 // Dropdowns
 // -------------------------
@@ -156,6 +159,7 @@
 @navbarSearchBackgroundFocus:     lighten(@navbarBackground, 25%);
 @navbarSearchBorder:              darken(@navbarSearchBackground, 30%);
 @navbarSearchPlaceholderColor:    @textColor;
+@navbarBrandColor:                @navbarLinkColor;
 
 
 // Hero unit
@@ -185,7 +189,6 @@
 
 
 
-
 // GRID
 // --------------------------------------------------
 
@@ -195,7 +198,6 @@
 @gridColumnWidth:         60px;
 @gridGutterWidth:         20px;
 @gridRowWidth:            (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
-
 
 // Fluid grid
 // -------------------------

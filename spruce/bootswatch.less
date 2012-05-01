@@ -1,6 +1,6 @@
 // Bootswatch.less
 // Swatch: Spruce
-// Version: 2.0.2
+// Version: 2.0.3
 // -----------------------------------------------------
 
 // TYPOGRAPHY
@@ -10,7 +10,8 @@
 
 .navbar .brand, legend, .btn,
 .navbar .nav > li > a,
-div.subnav li > a  {
+div.subnav li > a,
+.navbar-text  {
 	font-family: @headingsFontFamily;
 	font-weight: @headingsFontWeight;
 }
@@ -61,55 +62,75 @@ code, pre {
 // NAVBAR
 // --------------------------------------------------
 
-.navbar-inner {
-	background-image: none;
-	.box-shadow(none);
-}
-
-.navbar .brand {
-	font-size: 26px;
-	padding: 18px 20px 12px;
-	color: @linkColor;
-}
-
-.navbar .nav > li > a, {
-	font-size: 20px;
-	padding: 22px 10px 11px;
-	color: @linkColor;
+.navbar {
 	
-	&:hover {
+	.navbar-inner {
+		background-image: none;
+		.box-shadow(none);
+	}
+	
+	.brand {
+		font-size: 26px;
+		padding: 18px 20px 12px;
+	}
+
+	.nav > li > a {
+		font-size: 20px;
+		padding: 22px 10px 11px;
+	}
+	
+	.nav .active > a,
+	.nav .active > a:hover {
 		color: @yellow;
 	}
-}
+	
+	.navbar-text {
+		font-size: 20px;
+		padding-top: 12px;
+	}
 
-.navbar .nav .active > a,
-.navbar .nav .active > a:hover {
-	color: @yellow;
-}
+	.navbar-search {
+		margin-top: 12px;
+	}
 
-.navbar-search {
-	margin-top: 12px;
-}
+	.navbar-search .search-query {
+		border-color: transparent;
+		padding: 6px 9px 2px 9px;
+		background-color: rgba(255, 255, 255, 0.4);
+	}
 
-.navbar-search .search-query {
-	border-color: transparent;
-	padding: 6px 9px 2px 9px;
-	background-color: rgba(255, 255, 255, 0.4);
-}
+	.nav > .open > a {
+		color: @yellow;
+	}
 
-.navbar .nav > .dropdown.open > a {
-	color: @yellow;
-}
+	.nav > .open > .dropdown-menu {
+		background-color: @linkColor;
+		color: @textColor;
+		border-color: transparent;
+	}
 
-.navbar .nav > .dropdown.open > .dropdown-menu {
-	background-color: @linkColor;
-	color: @textColor;
-	border-color: transparent;
-}
+	.nav > .open > .dropdown-menu a:hover {
+		background-color: darken(#90A38F, 10%);
+		color: @linkColor;
+	}
 
-.navbar .nav > .dropdown.open > .dropdown-menu a:hover {
-	background-color: darken(#90A38F, 10%);
-	color: @linkColor;
+	.btn-navbar {
+		margin-top: 14px;
+	}
+
+	.nav-collapse.in .nav li > a {
+		color: @linkColor;
+
+		&:hover {
+			color: @yellow;
+			background-color: @blue;
+		}
+	}
+
+	.navbar-form, .navbar-search {
+		border-color: transparent;
+		.box-shadow(none);
+	}
 }
 
 .dropdown-menu .divider {
@@ -123,59 +144,42 @@ div.subnav {
 	border-color: transparent;
 	.box-shadow(0 1px 5px rgba(0,0,0,.1));
 	font-size: 18px;
-}
-
-div.subnav .nav > li > a {
-	color: @linkColor;
-	border-color: transparent;
-	background-color: transparent;
-}
-
-div.subnav .nav > li.active > a,
-div.subnav .nav > li > a:hover,
-div.subnav .nav > li.active > a:hover,
-div.subnav .dropdown.open .dropdown-toggle {
-	.box-shadow(none);
-	background-color: transparent;
-	border-color: transparent;
-	color: @yellow;
-}
-
-div.subnav .nav > li + li > a {
-	border-color: transparent;
-}
-
-div.subnav .dropdown.open > .dropdown-menu {
-	background-color: @linkColor;
-	color: @textColor;
-	border-color: transparent;
-}
-
-div.subnav .dropdown.open > .dropdown-menu a:hover {
-	background-color: darken(#90A38F, 10%);
-	color: @linkColor;
-}
-
-div.subnav-fixed {
-	top: 54px;
-}
-
-.navbar .btn-navbar {
-	margin-top: 14px;
-}
-
-.navbar .nav-collapse.in .nav li > a {
-	color: @linkColor;
 	
-	&:hover {
-		color: @yellow;
-		background-color: @blue;
+	.nav > li > a {
+		color: @linkColor;
+		border-color: transparent;
+		background-color: transparent;
 	}
-}
 
-.navbar .navbar-form, .navbar .navbar-search {
-	border-color: transparent;
-	.box-shadow(none);
+	.nav > li + li > a {
+		border-color: transparent;
+	}
+
+	.nav > li.active > a,
+	.nav > li > a:hover,
+	.nav > li.active > a:hover,
+	.dropdown.open .dropdown-toggle,
+	.dropdown.open.active .dropdown-toggle:hover {
+		.box-shadow(none);
+		background-color: transparent;
+		border-color: transparent;
+		color: @yellow;
+	}
+
+	.dropdown.open > .dropdown-menu {
+		background-color: @linkColor;
+		color: @textColor;
+		border-color: transparent;
+	}
+
+	.dropdown.open > .dropdown-menu a:hover {
+		background-color: darken(#90A38F, 10%);
+		color: @linkColor;
+	}
+
+	&.subnav-fixed {
+		top: 54px;
+	}
 }
 
 // TABLES
@@ -267,28 +271,35 @@ div.subnav-fixed {
 // NAVIGATION
 // --------------------------------------------------
 
-.breadcrumb, .pagination > ul {
+.breadcrumb {
 	background-color: darken(#90A38F, 10%);
 	background-image: none;
 	border-color: transparent;
 	.box-shadow(none);
+	
+	li {
+		color: @yellow;
+		text-shadow: none;
+
+		a {
+			color: @linkColor;
+		}
+
+		a:hover {
+			color: @yellow;
+		}
+
+		.divider {
+			color: @blue;
+		}
+	}
 }
 
-.breadcrumb li {
-	color: @yellow;
-	text-shadow: none;
-	
-	a {
-		color: @linkColor;
-	}
-	
-	a:hover {
-		color: @yellow;
-	}
-	
-	.divider {
-		color: @blue;
-	}
+.pagination > ul {
+	background-color: darken(#90A38F, 10%);
+	background-image: none;
+	border-color: transparent;
+	.box-shadow(none);
 }
 
 .pagination a {
@@ -311,17 +322,27 @@ div.subnav-fixed {
 	color: @blue;
 }
 
-.nav-list > li > a, .nav-list .nav-header {
-	text-shadow: none;
-}
+.nav-list {
+	
+	li > a,
+	.nav-header {
+		text-shadow: none;
+	}
 
-.nav-list .active > a, .nav-list .active > a:hover {
-	background-color: #A2CDB5;
-	text-shadow: none;
-}
-
-.nav-list li > a:hover {
-	background-color: transparent;
+	li > a:hover {
+		background-color: transparent;
+	}
+	
+	li.active > a,
+	li.active > a:hover {
+		background-color: #A2CDB5;
+		text-shadow: none;
+	}
+	
+	.divider {
+		background-color: transparent;
+		border-bottom: 1px solid @linkColor;
+	}
 }
 
 .nav-tabs {
@@ -383,12 +404,14 @@ div.subnav-fixed {
 	color: @blue;
 }
 
-.tabbable > .nav-tabs,
-.tabbable > .nav-tabs > li > a,
-.tabbable > .nav-tabs > li > a:hover,
-.tabbable > .nav-tabs > li.active > a,
-.tabbable > .nav-tabs > li.active > a:hover  {
-	border-color: transparent;
+.tabbable {
+	.nav-tabs,
+	.nav-tabs > li > a,
+	.nav-tabs > li > a:hover,
+	.nav-tabs > li.active > a,
+	.nav-tabs > li.active > a:hover  {
+		border-color: transparent;
+	}
 }
 
 .pager a {
@@ -425,7 +448,6 @@ legend {
 }
 
 .form-actions {
-	background-color: transparent;
 	border-top: none;
 	.border-radius(4px);
 }

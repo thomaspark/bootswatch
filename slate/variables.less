@@ -1,10 +1,8 @@
 // Variables.less
 // Variables to customize the look and feel of Bootstrap
 // Swatch: Slate
-// Version: 2.0.2
+// Version: 2.0.3
 // -----------------------------------------------------
-
-
 
 // GLOBAL VALUES
 // --------------------------------------------------
@@ -47,10 +45,14 @@
 
 // Typography
 // -------------------------
+@sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
+@serifFontFamily:       Georgia, "Times New Roman", Times, serif;
+@monoFontFamily:        Menlo, Monaco, Consolas, "Courier New", monospace;
+
 @baseFontSize:          13px;
-@baseFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
+@baseFontFamily:        @sansFontFamily;
 @baseLineHeight:        18px;
-@altFontFamily:         Georgia, "Times New Roman", Times, serif;
+@altFontFamily:         @serifFontFamily;
 
 @headingsFontFamily:    inherit; // empty to use BS default, @baseFontFamily
 @headingsFontWeight:    bold;    // instead of browser default, bold
@@ -94,8 +96,9 @@
 // -------------------------
 @inputBackground:               @white;
 @inputBorder:                   #ccc;
+@inputBorderRadius:             3px;
 @inputDisabledBackground:       @grayLighter;
-
+@formActionsBackground:         darken(@grayDarker, 3%);
 
 // Dropdowns
 // -------------------------
@@ -146,16 +149,17 @@
 @navbarBackgroundHighlight:       @grayDark;
 
 @navbarText:                      @grayLight;
-@navbarLinkColor:                 @grayLight;
-@navbarLinkColorHover:            @white;
+@navbarLinkColor:                 @grayLighter;
+@navbarLinkColorHover:            @grayLighter;
 @navbarLinkColorActive:           @navbarLinkColorHover;
-@navbarLinkBackgroundHover:       transparent;
+@navbarLinkBackgroundHover:       @grayDark;
 @navbarLinkBackgroundActive:      @navbarBackground;
 
 @navbarSearchBackground:          lighten(@navbarBackground, 25%);
 @navbarSearchBackgroundFocus:     @white;
 @navbarSearchBorder:              darken(@navbarSearchBackground, 30%);
 @navbarSearchPlaceholderColor:    #ccc;
+@navbarBrandColor:                @grayLighter;
 
 
 // Hero unit
@@ -185,7 +189,6 @@
 
 
 
-
 // GRID
 // --------------------------------------------------
 
@@ -195,7 +198,6 @@
 @gridColumnWidth:         60px;
 @gridGutterWidth:         20px;
 @gridRowWidth:            (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
-
 
 // Fluid grid
 // -------------------------

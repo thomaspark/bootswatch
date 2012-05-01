@@ -50,8 +50,6 @@ var taglines = [];
 taglines.push('Free themes for <a target="_blank" href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>');
 taglines.push('Add color to your <a target="_blank" href="http://twitter.github.com/bootstrap/">Bootstrap</a> site without touching a color picker');
 taglines.push('Saving the web from default <a target="_blank" href="http://twitter.github.com/bootstrap/">Bootstrap</a>');
-taglines.push('Give your <a target="_blank" href="http://twitter.github.com/bootstrap/">Bootstrap</a> site a whole new feel');
-taglines.push('Lose the black bar and blue buttons on your <a target="_blank" href="http://twitter.github.com/bootstrap/">Bootstrap</a> site');
 
 var line = Math.floor((taglines.length) * Math.random());
 $('#tagline').html(taglines[line]);
