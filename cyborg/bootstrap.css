@@ -4197,7 +4197,11 @@ textarea,
 .jumbotron h1 {
   font-weight: normal !important;
 }
+html {
+  min-height: 100%;
+}
 body {
+  min-height: 100%;
   background-color: #121417;
   background-image: -moz-linear-gradient(top, #060606, #252a30);
   background-image: -ms-linear-gradient(top, #060606, #252a30);
@@ -4804,4 +4808,19 @@ blockquote.pull-right {
 }
 footer.footer {
   border-top: 1px solid #222;
+}
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+.invisible {
+  visibility: hidden;
 }

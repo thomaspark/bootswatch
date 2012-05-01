@@ -718,7 +718,8 @@ a.label:hover,a.badge:hover{color:#ffffff;text-decoration:none;cursor:pointer;}
 .navbar .brand,.navbar .nav-collapse.in .nav li>a{color:#eeeeee;font-weight:normal;text-shadow:none;}
 label,input,button,select,textarea,.navbar .search-query:-moz-placeholder,.navbar .search-query::-webkit-input-placeholder{font-family:'Droid Sans',sans-serif;color:#999999;}
 .jumbotron h1{font-weight:normal !important;}
-body{background-color:#121417;background-image:-moz-linear-gradient(top, #060606, #252a30);background-image:-ms-linear-gradient(top, #060606, #252a30);background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#060606), to(#252a30));background-image:-webkit-linear-gradient(top, #060606, #252a30);background-image:-o-linear-gradient(top, #060606, #252a30);background-image:linear-gradient(top, #060606, #252a30);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#060606', endColorstr='#252a30', GradientType=0);}
+html{min-height:100%;}
+body{min-height:100%;background-color:#121417;background-image:-moz-linear-gradient(top, #060606, #252a30);background-image:-ms-linear-gradient(top, #060606, #252a30);background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#060606), to(#252a30));background-image:-webkit-linear-gradient(top, #060606, #252a30);background-image:-o-linear-gradient(top, #060606, #252a30);background-image:linear-gradient(top, #060606, #252a30);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#060606', endColorstr='#252a30', GradientType=0);}
 .page-header{border-bottom:2px solid #33b5e5;}
 .navbar-inner{-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;border-bottom:2px solid #33b5e5;}
 .navbar .brand{padding:12px 20px 8px;}
@@ -805,3 +806,8 @@ blockquote{border-left:5px solid #33b5e5;}blockquote.pull-right{border-right:5px
 .label-info:hover{background-color:#004d66;}
 .alert,.alert .alert-heading,.alert-success,.alert-success .alert-heading,.alert-danger,.alert-error,.alert-danger .alert-heading,.alert-error .alert-heading,.alert-info,.alert-info .alert-heading{color:#eeeeee;text-shadow:none;border:none;}
 footer.footer{border-top:1px solid #222;}
+.pull-right{float:right;}
+.pull-left{float:left;}
+.hide{display:none;}
+.show{display:block;}
+.invisible{visibility:hidden;}
