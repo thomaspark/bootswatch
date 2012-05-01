@@ -1,7 +1,7 @@
 Bootswatch
 ==========
 
-Bootswatch is a collection of free themes that you can drop into your [Bootstrap](http://twitter.github.com/bootstrap/) site. Check it out at [bootswatch.com](http://bootswatch.com).
+Bootswatch is a collection of free themes for your [Twitter Bootstrap](http://twitter.github.com/bootstrap/) site. Check it out at [bootswatch.com](http://bootswatch.com).
 
 How do I use Bootswatch?
 -----
@@ -35,10 +35,17 @@ Please send feedback to thomas@thomaspark.me. For more information, visit http:/
 
 Author
 ------
-**Thomas Park**
+[Thomas Park](http://github.com/thomaspark)
 
 + http://thomaspark.me
 + http://twitter.com/thomashpark
+
+Thanks
+------
+[Mark Otto](http://github.com/markdotto) and [Jacob Thornton](http://github.com/fat) for Bootstrap.
+
+[James Taylor](http://github.com/jostylr) for simplejsonp.
+
 
 Copyright and License
 ----
