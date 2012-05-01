@@ -3156,7 +3156,7 @@ input[type="submit"].btn.btn-mini {
   padding: 5px 5px 6px;
 }
 .navbar .nav > li > a:hover {
-  background-color: transparent;
+  background-color: #eeeeee;
   color: #222222;
   text-decoration: none;
 }
@@ -3164,7 +3164,7 @@ input[type="submit"].btn.btn-mini {
 .navbar .nav .active > a:hover {
   color: #222222;
   text-decoration: none;
-  background-color: #fcfbfd;
+  background-color: #eeeeee;
 }
 .navbar .divider-vertical {
   height: 40px;
@@ -4212,20 +4212,21 @@ a.btn,
 .navbar .nav > li > a {
   text-shadow: none;
 }
-.navbar .nav .active > a,
-.navbar .nav .active > a:hover {
-  color: #222222;
-  background-color: rgba(0, 0, 0, 0);
-}
-.navbar .nav .active > a:hover,
-.navbar .nav > li > a:hover,
 .navbar .nav-collapse.in .nav li > a:hover {
-  background-color: #EEEEEE;
+  background-color: #eeeeee;
 }
 .navbar .dropdown-menu {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
+}
+.navbar .nav li.dropdown.active > .dropdown-toggle,
+.navbar .nav li.dropdown.active > .dropdown-toggle:hover,
+.navbar .nav li.dropdown.open > .dropdown-toggle,
+.navbar .nav li.dropdown.active.open > .dropdown-toggle,
+.navbar .nav li.dropdown.active.open > .dropdown-toggle:hover {
+  background-color: #eeeeee;
+  color: #222222;
 }
 .navbar .nav li.dropdown .dropdown-toggle .caret,
 .navbar .nav .open .caret,
@@ -4347,4 +4348,19 @@ pre.prettyprint,
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
+}
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+.invisible {
+  visibility: hidden;
 }

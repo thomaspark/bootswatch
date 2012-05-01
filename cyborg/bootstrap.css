@@ -4215,7 +4215,7 @@ body {
 .page-header {
   border-bottom: 2px solid #33b5e5;
 }
-.navbar-inner {
+.navbar .navbar-inner {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
@@ -4227,13 +4227,18 @@ body {
 .navbar .brand {
   padding: 12px 20px 8px;
 }
+.navbar .brand:hover {
+  border-bottom: 3px solid #33b5e5;
+}
 .navbar .nav li > a {
   padding: 13px 10px 8px;
   border-bottom: 3px solid rgba(0, 0, 0, 0);
+  border-left: 1px solid #222;
 }
-.navbar .nav .active > a,
-.navbar .nav li > a:hover,
-.navbar .brand:hover {
+.navbar .nav li > a:hover {
+  border-bottom: 3px solid #33b5e5;
+}
+.navbar .nav .active > a {
   border-bottom: 3px solid #33b5e5;
 }
 .navbar .search-query,
@@ -4256,8 +4261,19 @@ body {
 .navbar .search-query.focused ::-webkit-input-placeholder {
   color: #999999;
 }
-.navbar .nav > li > a {
+.navbar .nav li.dropdown.active.open .dropdown-toggle:hover {
+  border-bottom: 3px solid #33b5e5;
   border-left: 1px solid #222;
+}
+.navbar .dropdown-menu::before,
+.navbar .dropdown-menu::after {
+  display: none;
+}
+.navbar .nav-collapse.in .nav > li > a {
+  border-left: 0;
+}
+.navbar .nav-collapse.in .nav a:hover {
+  background-color: #33b5e5;
 }
 .dropdown-menu {
   background-color: #191A1A;
@@ -4273,16 +4289,6 @@ body {
 .dropdown-menu .divider {
   background-color: #222;
   border-bottom: 0px solid white;
-}
-.navbar .dropdown-menu::before,
-.navbar .dropdown-menu::after {
-  display: none;
-}
-.navbar .nav-collapse.in .nav > li > a {
-  border-left: 0;
-}
-.navbar .nav-collapse.in .nav a:hover {
-  background-color: #33b5e5;
 }
 div.subnav {
   position: static;
@@ -4305,9 +4311,9 @@ div.subnav .nav .active a {
 div.subnav .nav li.nav-header {
   text-shadow: none;
 }
-.subnav .nav > li > a:hover,
-.subnav .nav > li.active > a:hover,
-.subnav .nav > li:first-child > a:hover {
+div.subnav .nav > li > a:hover,
+div.subnav .nav > li.active > a:hover,
+div.subnav .nav > li:first-child > a:hover {
   background: transparent;
   border-bottom: 2px solid #33b5e5;
   border-left: 1px solid #222;

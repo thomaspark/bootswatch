@@ -78,9 +78,28 @@ footer.footer {
 	}
 
 	.nav > li.active > a,
-	.nav > li:active > a,
 	.open .dropdown-toggle {
 		color: @linkColor;
+	}
+	
+	.nav li.dropdown.active > .dropdown-toggle,
+	.nav li.dropdown.open > .dropdown-toggle,
+	.nav li.dropdown.active.open > .dropdown-toggle {
+		color: @linkColor;
+		
+		&:hover {
+			color: @linkColorHover;
+		}
+	}
+	
+	.nav li.dropdown .dropdown-toggle .caret,
+	.nav li.dropdown.open .caret {
+		border-top-color: @linkColor;
+		opacity: 1;
+	}
+	
+	.nav li.dropdown.open .dropdown-toggle:hover .caret {
+		border-top-color: @linkColorHover;
 	}
 	
 	.search-query {
@@ -88,12 +107,6 @@ footer.footer {
 		.border-radius(0);
 		color: @textColor;
 		background-color: @white;
-	}
-
-	.nav .dropdown-toggle .caret,
-	.nav .open .caret {
-		border-top-color: @linkColor;
-		opacity: 1;
 	}
 }
 

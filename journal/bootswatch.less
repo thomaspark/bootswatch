@@ -46,21 +46,18 @@ a {
 	.nav > li > a {
 		text-shadow: none;		
 	}
-
-	.nav .active > a,
-	.nav .active > a:hover {
-		color: @navbarLinkColor;
-		background-color: rgba(0, 0, 0, 0);
-	}
-		
-	.nav .active > a:hover,
-	.nav > li > a:hover,
-	.nav-collapse.in .nav li > a:hover {
-		background-color: #EEEEEE;
-	}
-
+	
 	.dropdown-menu {
 		.border-radius(0);		
+	}
+
+	.nav li.dropdown.active > .dropdown-toggle,
+	.nav li.dropdown.active > .dropdown-toggle:hover,
+	.nav li.dropdown.open > .dropdown-toggle,
+	.nav li.dropdown.active.open > .dropdown-toggle,
+	.nav li.dropdown.active.open > .dropdown-toggle:hover {
+		background-color: @grayLighter;
+		color: @linkColor;
 	}
 
 	.nav li.dropdown .dropdown-toggle .caret,
@@ -68,6 +65,10 @@ a {
 	.nav .open .dropdown-toggle:hover .caret {
 		border-top-color: @black;
 		opacity: 1;
+	}
+	
+	.nav-collapse.in .nav li > a:hover {
+		background-color: @grayLighter;
 	}
 		
 	.nav-collapse .nav li > a {

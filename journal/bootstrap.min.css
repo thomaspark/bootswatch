@@ -573,8 +573,8 @@ button.btn.btn-mini,input[type="submit"].btn.btn-mini{*padding-top:1px;*padding-
 .navbar .nav>li>a{float:none;padding:9px 10px 11px;line-height:19px;color:#222222;text-decoration:none;text-shadow:0 -1px 0 rgba(0, 0, 0, 0.25);}
 .navbar .btn{display:inline-block;padding:4px 10px 4px;margin:5px 5px 6px;line-height:18px;}
 .navbar .btn-group{margin:0;padding:5px 5px 6px;}
-.navbar .nav>li>a:hover{background-color:transparent;color:#222222;text-decoration:none;}
-.navbar .nav .active>a,.navbar .nav .active>a:hover{color:#222222;text-decoration:none;background-color:#fcfbfd;}
+.navbar .nav>li>a:hover{background-color:#eeeeee;color:#222222;text-decoration:none;}
+.navbar .nav .active>a,.navbar .nav .active>a:hover{color:#222222;text-decoration:none;background-color:#eeeeee;}
 .navbar .divider-vertical{height:40px;width:1px;margin:0 9px;overflow:hidden;background-color:#fcfbfd;border-right:1px solid #fcfbfd;}
 .navbar .nav.pull-right{margin-left:10px;margin-right:0;}
 .navbar .btn-navbar{display:none;float:right;padding:7px 10px;margin-left:5px;margin-right:5px;background-color:#fcfbfd;background-image:-moz-linear-gradient(top, #fcfbfd, #fcfbfd);background-image:-ms-linear-gradient(top, #fcfbfd, #fcfbfd);background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#fcfbfd), to(#fcfbfd));background-image:-webkit-linear-gradient(top, #fcfbfd, #fcfbfd);background-image:-o-linear-gradient(top, #fcfbfd, #fcfbfd);background-image:linear-gradient(top, #fcfbfd, #fcfbfd);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfbfd', endColorstr='#fcfbfd', GradientType=0);border-color:#fcfbfd #fcfbfd #d6c8e4;border-color:rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);*background-color:#fcfbfd;filter:progid:DXImageTransform.Microsoft.gradient(enabled = false);-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.075);-moz-box-shadow:inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.075);box-shadow:inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.075);}.navbar .btn-navbar:hover,.navbar .btn-navbar:active,.navbar .btn-navbar.active,.navbar .btn-navbar.disabled,.navbar .btn-navbar[disabled]{background-color:#fcfbfd;*background-color:#efeaf5;}
@@ -720,9 +720,9 @@ a{text-decoration:underline;}
 .navbar .navbar-inner{-webkit-box-shadow:0 2px 4px rgba(0, 0, 0, 0.25),inset 0 -1px 0 rgba(0, 0, 0, 0.1);-moz-box-shadow:0 2px 4px rgba(0, 0, 0, 0.25),inset 0 -1px 0 rgba(0, 0, 0, 0.1);box-shadow:0 2px 4px rgba(0, 0, 0, 0.25),inset 0 -1px 0 rgba(0, 0, 0, 0.1);border-top:1px solid #E5E5E5;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
 .navbar .brand{text-shadow:none;}.navbar .brand:hover{background-color:#EEEEEE;}
 .navbar .nav>li>a{text-shadow:none;}
-.navbar .nav .active>a,.navbar .nav .active>a:hover{color:#222222;background-color:rgba(0, 0, 0, 0);}
-.navbar .nav .active>a:hover,.navbar .nav>li>a:hover,.navbar .nav-collapse.in .nav li>a:hover{background-color:#EEEEEE;}
+.navbar .nav-collapse.in .nav li>a:hover{background-color:#eeeeee;}
 .navbar .dropdown-menu{-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
+.navbar .nav li.dropdown.active>.dropdown-toggle,.navbar .nav li.dropdown.active>.dropdown-toggle:hover,.navbar .nav li.dropdown.open>.dropdown-toggle,.navbar .nav li.dropdown.active.open>.dropdown-toggle,.navbar .nav li.dropdown.active.open>.dropdown-toggle:hover{background-color:#eeeeee;color:#222222;}
 .navbar .nav li.dropdown .dropdown-toggle .caret,.navbar .nav .open .caret,.navbar .nav .open .dropdown-toggle:hover .caret{border-top-color:#000000;opacity:1;}
 .navbar .nav-collapse .nav li>a{color:#222222;text-decoration:none;font-weight:normal;}
 .navbar .nav-collapse .navbar-form,.navbar .nav-collapse .navbar-search{border-color:transparent;}
@@ -739,3 +739,8 @@ div.subnav .nav>li:first-child>a,div.subnav .nav>li:first-child>a:hover{-webkit-
 code,pre,pre.prettyprint,.well{background-color:#eeeeee;}
 .hero-unit{-webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.05);-moz-box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.05);box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.05);border:1px solid rgba(0, 0, 0, 0.05);-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
 .table-bordered,.well,.prettyprint{-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
+.pull-right{float:right;}
+.pull-left{float:left;}
+.hide{display:none;}
+.show{display:block;}
+.invisible{visibility:hidden;}

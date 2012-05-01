@@ -725,9 +725,11 @@ footer.footer{padding-top:2em;padding-bottom:3em;border-top:2px solid #cdcdcd;}
 .navbar{margin-left:16px;}.navbar .navbar-inner{-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;}
 .navbar .brand{font-size:19px;font-weight:bold;line-height:1em;padding:10px 10px 11px;}.navbar .brand:hover{color:#c50001;}
 .navbar .nav>li>a{text-shadow:none;padding:10px;}
-.navbar .nav>li.active>a,.navbar .nav>li:active>a,.navbar .open .dropdown-toggle{color:#9c0001;}
+.navbar .nav>li.active>a,.navbar .open .dropdown-toggle{color:#9c0001;}
+.navbar .nav li.dropdown.active>.dropdown-toggle,.navbar .nav li.dropdown.open>.dropdown-toggle,.navbar .nav li.dropdown.active.open>.dropdown-toggle{color:#9c0001;}.navbar .nav li.dropdown.active>.dropdown-toggle:hover,.navbar .nav li.dropdown.open>.dropdown-toggle:hover,.navbar .nav li.dropdown.active.open>.dropdown-toggle:hover{color:#c50001;}
+.navbar .nav li.dropdown .dropdown-toggle .caret,.navbar .nav li.dropdown.open .caret{border-top-color:#9c0001;opacity:1;}
+.navbar .nav li.dropdown.open .dropdown-toggle:hover .caret{border-top-color:#c50001;}
 .navbar .search-query{border:1px solid #D4D4D4;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;color:#090000;background-color:#ffffff;}
-.navbar .nav .dropdown-toggle .caret,.navbar .nav .open .caret{border-top-color:#9c0001;opacity:1;}
 @media (max-width:980px){form.navbar-form,form.navbar-search{border-top:1px solid #D4D4D4;border-bottom:1px solid #D4D4D4;}}.navbar-fixed-top{position:static;margin-bottom:1.6em;}
 div.subnav{-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;background-color:#ffffff;background-image:none;}div.subnav .nav{padding:0;}
 div.subnav .nav>li.active>a,div.subnav .nav>li:active>a{color:#9c0001;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;background-color:transparent;}
@@ -789,3 +791,8 @@ blockquote p{font-size:1em;line-height:1.2em;}
 .thumbnail{background-color:#ffffff;}
 .thumbnail,.thumbnail>img{-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;}
 code,pre{-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;background-color:#ffffff;}
+.pull-right{float:right;}
+.pull-left{float:left;}
+.hide{display:none;}
+.show{display:block;}
+.invisible{visibility:hidden;}
