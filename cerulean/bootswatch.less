@@ -3,51 +3,54 @@
 // Version: 2.0.3
 // -----------------------------------------------------
 
-// TYPOGRAPHY
+// IMPORTS
 // -----------------------------------------------------
 
 @import url(https://fonts.googleapis.com/css?family=Telex);
 
-.navbar, .subnav {
-	font-family: @headingsFontFamily;
-}
-
 // NAVBAR
 // -----------------------------------------------------
 
-.navbar-inner {
-  #gradient > .vertical-three-colors(@navbarBackground, @navbarBackground, 90%, @navbarBackgroundHighlight);
-}
-
+.navbar {
+	
+	font-family: @headingsFontFamily;
+	
+	.navbar-inner {
+		#gradient > .vertical-three-colors(@navbarBackground, @navbarBackground, 90%, @navbarBackgroundHighlight);
+	}
+	
 	.nav li.dropdown.active > .dropdown-toggle,
 	.nav li.dropdown.active.open > .dropdown-toggle {
 		background-color: @navbarLinkBackgroundActive;
 	}
-
-.navbar .search-query {
-	border: 1px solid darken(@linkColor, 10%);
-}
-
-// responsive menu colors
-
-.navbar .nav-collapse.in > .nav > li .dropdown-menu a {
-	color: @white;
 	
-	&:hover {
+	.search-query {
+		border: 1px solid darken(@linkColor, 10%);
+	}
+
+	.nav-collapse.in > .nav > li .dropdown-menu a {
 		color: @white;
+
+		&:hover {
+			color: @white;
+		}
+	}
+
+	.nav-collapse.in .nav li > a {
+		color: @white;
+
+		&:hover {
+			background-color: #2B7CAC;
+		}
+	}
+
+	.btn-navbar:hover {
+	    background-color: darken(@white, 20%);
 	}
 }
 
-.navbar .nav-collapse.in .nav li > a {
-	color: @white;
-	
-	&:hover {
-		background-color: #2B7CAC;
-	}
-}
-
-.btn-navbar:hover {
-    background-color: darken(@white, 20%);
+div.subnav {
+	font-family: @headingsFontFamily;
 }
 
 // BUTTONS

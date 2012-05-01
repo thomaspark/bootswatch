@@ -4175,11 +4175,10 @@ a.badge:hover {
 .invisible {
   visibility: hidden;
 }
-.navbar,
-.subnav {
+.navbar {
   font-family: 'Telex', sans-serif;
 }
-.navbar-inner {
+.navbar .navbar-inner {
   background-color: #3f9fd9;
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#369bd7), color-stop(90%, #369bd7), to(#61b0df));
   background-image: -webkit-linear-gradient(#369bd7, #369bd7 90%, #61b0df);
@@ -4209,8 +4208,11 @@ a.badge:hover {
 .navbar .nav-collapse.in .nav li > a:hover {
   background-color: #2B7CAC;
 }
-.btn-navbar:hover {
+.navbar .btn-navbar:hover {
   background-color: #cccccc;
+}
+div.subnav {
+  font-family: 'Telex', sans-serif;
 }
 .btn {
   background-color: #ffffff;
@@ -4405,4 +4407,19 @@ a.badge:hover {
 }
 i[class^="icon-"] {
   opacity: 0.8;
+}
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+.invisible {
+  visibility: hidden;
 }
