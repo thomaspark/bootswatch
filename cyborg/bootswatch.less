@@ -1,6 +1,6 @@
 // Bootswatch.less
 // Swatch: Cyborg
-// Version: 2.0.2
+// Version: 2.0.3
 // -----------------------------------------------------
 
 // TYPOGRAPHY
@@ -30,14 +30,6 @@ label, input, button, select, textarea,
 	font-weight: normal !important;
 }
 
-blockquote {
-	border-left: 5px solid @blue;
-	
-	&.pull-right {
-		border-right: 5px solid @blue;
-	}
-}
-
 // SCAFFOLDING
 // -----------------------------------------------------
 
@@ -54,8 +46,7 @@ body {
 
 .navbar-inner {
   .border-radius(0);
-  @shadow: none;
-  .box-shadow(@shadow);
+  .box-shadow(none);
   border-bottom: 2px solid @blue
 }
 
@@ -151,7 +142,7 @@ div.subnav .nav li.nav-header {
 	color: @white;
 }
 
-div.subnav .nav .dropdown.open {
+div.subnav .nav .open {
 
 	.dropdown-toggle {
 		border: 0;
@@ -188,49 +179,83 @@ div.subnav .nav .dropdown.open {
 // NAVIGATION
 // -----------------------------------------------------
 
-.nav-list > li > a, .nav-list .nav-header {
-	text-shadow: none;
-}
-
-.nav-list li > a:hover,
-.nav-tabs li > a:hover,
-.nav-tabs li.active > a,
-.nav-pills li > a:hover,
-.nav-stacked li > a:hover,
-.nav-stacked li.active > a {
-	background-color: @blue;
-	color: @white;
+.nav-list {
+	
+	li > a {
+		text-shadow: none;	
+	}
+	
+	li > a:hover {
+		background-color: @blue;
+		color: @white;	
+	}
+	
+	.nav-header {
+		text-shadow: none;
+	}
+	
+	.divider {
+		background-color: transparent;
+		border-bottom: 1px solid #222;
+	}
 }
 
 .nav-tabs {
+	
 	border-bottom: 1px solid #222;
-}
-
-.nav-stacked > li > a,
-.nav-tabs > li > a:hover,
-.nav-tabs > .active > a,
-.nav-tabs > .active > a:hover {
-	border: 1px solid #222 !important;
-}
-
-.nav.nav-tabs .active a:hover {
-	background-color: @blue;
-	color: @white;
-}
-
-.nav.nav-tabs .dropdown.open,
-.nav.nav-pills .dropdown.open {
-	.dropdown-toggle {
+	
+	li > a:hover,
+	li.active > a,
+	li.active > a:hover {
+		border: 1px solid #222;
+		background-color: @blue;
+		color: @white;
+	}
+	
+	.open .dropdown-toggle {
 		background-color: #060606 !important;
-		border-top: 0;
 		border: 1px solid #222;
 	}
 	
-	.dropdown-menu li > a:hover { border-bottom: 0; }
+	.dropdown-menu li > a:hover {
+		border: none;
+	}
 }
 
-.tabbable .nav-tabs, .thumbnail {
-	border-color: #222;
+.nav-pills {
+
+	li > a:hover {
+		background-color: @blue;
+		color: @white;	
+	}
+	
+	.open .dropdown-toggle {
+		background-color: #060606;
+	}
+			
+	.dropdown-menu li > a:hover {
+		border: none;
+	}
+}
+
+.nav-stacked {
+	
+	li > a {
+		border: 1px solid #222 !important;	
+	}
+	
+	li > a:hover,
+	li.active > a {
+		background-color: @blue;
+		color: @white;
+	}
+}
+
+.tabbable  {
+	.nav-tabs,
+	.nav-tabs li.active > a {
+		border-color: #222;
+	}
 }
 
 .breadcrumb {
@@ -270,7 +295,6 @@ div.subnav .nav .dropdown.open {
 // -----------------------------------------------------
 
 .btn {
-	.border-radius(3px);
 	.box-shadow(1px 1px 2px #111);
 	.buttonBackground(darken(@gray, 20%), darken(@gray, 30%));
 	color: @white;
@@ -304,27 +328,6 @@ div.subnav .nav .dropdown.open {
 
 .btn-inverse {
   .buttonBackground(lighten(@purple, 5%), @purple);
-}
-
-.btn-group .btn:first-child {
-    -webkit-border-top-left-radius: 3px;
-       -moz-border-top-left-radius: 3px;
-            border-top-left-radius: 3px;
-
-    -webkit-border-bottom-left-radius: 3px;
-       -moz-border-bottom-left-radius: 3px;
-            border-bottom-left-radius: 3px;
-}
-
-.btn-group .btn:last-child, .btn-group .dropdown-toggle {
-    -webkit-border-top-right-radius: 3px;
-       -moz-border-top-right-radius: 3px;
-            border-top-right-radius: 3px;
-
-    -webkit-border-bottom-right-radius: 3px;
-       -moz-border-bottom-right-radius: 3px;
-            border-bottom-right-radius: 3px;
-	
 }
 
 .btn .caret {
@@ -379,10 +382,6 @@ select:focus {
 }
 
 .form-actions {
-	background: transparent;
-}
-
-.form-actions, footer.footer {
 	border-top: 1px solid #222;
 }
 
@@ -413,7 +412,7 @@ select:focus {
 	.border-radius(1px);
 }
 
-code, pre, pre.prettyprint {
+code, pre {
 	background-color: @grayLighter;
 }
 
@@ -421,6 +420,18 @@ code, pre, pre.prettyprint {
 	background-color: #131517;
 	border-top: solid 1px rgba(255, 255, 255, 0.1);
 	.box-shadow(0 2px 4px rgba(0,0,0,.8));
+}
+
+blockquote {
+	border-left: 5px solid @blue;
+	
+	&.pull-right {
+		border-right: 5px solid @blue;
+	}
+}
+
+.thumbnail {
+	border-color: #222;
 }
 
 .progress {
@@ -436,7 +447,6 @@ code, pre, pre.prettyprint {
 .label, .alert { background-color: darken(@gray, 20%); }
 
 .label:hover { background-color: darken(@gray, 30%); }
-
 
 .label-important, .alert-danger,
 .alert-error { background-color: @red; }
@@ -470,4 +480,6 @@ code, pre, pre.prettyprint {
   border: none;
 }
 
-
+footer.footer {
+	border-top: 1px solid #222;
+}
