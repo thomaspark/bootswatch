@@ -3164,7 +3164,7 @@ input[type="submit"].btn.btn-mini {
 .navbar .nav .active > a:hover {
   color: #ffffff;
   text-decoration: none;
-  background-color: #369bd7;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 .navbar .divider-vertical {
   height: 40px;
@@ -4190,9 +4190,8 @@ a.badge:hover {
   background-repeat: no-repeat;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#369bd7', endColorstr='#61b0df', GradientType=0);
 }
-.navbar .nav .active > a,
-.navbar .nav .active > a:hover {
-  background-color: #369bd7;
+.navbar .nav li.dropdown.active > .dropdown-toggle,
+.navbar .nav li.dropdown.active.open > .dropdown-toggle {
   background-color: rgba(0, 0, 0, 0.2);
 }
 .navbar .search-query {

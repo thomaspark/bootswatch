@@ -19,11 +19,10 @@
   #gradient > .vertical-three-colors(@navbarBackground, @navbarBackground, 90%, @navbarBackgroundHighlight);
 }
 
-.navbar .nav .active > a,
-.navbar .nav .active > a:hover {
-  background-color: @navbarBackground;
-  background-color: rgba(0,0,0,.2);
-}
+	.nav li.dropdown.active > .dropdown-toggle,
+	.nav li.dropdown.active.open > .dropdown-toggle {
+		background-color: @navbarLinkBackgroundActive;
+	}
 
 .navbar .search-query {
 	border: 1px solid darken(@linkColor, 10%);
