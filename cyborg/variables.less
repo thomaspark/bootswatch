@@ -1,8 +1,10 @@
 // Variables.less
 // Variables to customize the look and feel of Bootstrap
 // Swatch: Cyborg
-// Version: 2.0.3
+// Version: 2.0.2
 // -----------------------------------------------------
+
+
 
 // GLOBAL VALUES
 // --------------------------------------------------
@@ -45,14 +47,10 @@
 
 // Typography
 // -------------------------
-@sansFontFamily:        'Droid Sans', sans-serif;
-@serifFontFamily:       Georgia, "Times New Roman", Times, serif;
-@monoFontFamily:        Menlo, Monaco, Consolas, "Courier New", monospace;
-
 @baseFontSize:          13px;
-@baseFontFamily:        @sansFontFamily;
+@baseFontFamily:        'Droid Sans', sans-serif;
 @baseLineHeight:        18px;
-@altFontFamily:         @serifFontFamily;
+@altFontFamily:         Georgia, "Times New Roman", Times, serif;
 
 @headingsFontFamily:    inherit; // empty to use BS default, @baseFontFamily
 @headingsFontWeight:    normal;    // instead of browser default, bold
@@ -69,36 +67,35 @@
 
 // Buttons
 // -------------------------
-@btnBackground:                     darken(@gray, 20%);
-@btnBackgroundHighlight:            darken(@gray, 25%);
+@btnBackground:                     @white;
+@btnBackgroundHighlight:            darken(@white, 10%);
 @btnBorder:                         rgba(0, 0, 0, 0);
 
 @btnPrimaryBackground:              @blueDark;
 @btnPrimaryBackgroundHighlight:     darken(@blueDark, 10%);
 
-@btnInfoBackground:                 darken(@gray, 40%);
-@btnInfoBackgroundHighlight:        darken(@gray, 50%);
+@btnInfoBackground:                 #5bc0de;
+@btnInfoBackgroundHighlight:        #2f96b4;
 
-@btnSuccessBackground:              lighten(@green, 10%);
-@btnSuccessBackgroundHighlight:     @green;
+@btnSuccessBackground:              #62c462;
+@btnSuccessBackgroundHighlight:     #51a351;
 
 @btnWarningBackground:              lighten(@orange, 15%);
 @btnWarningBackgroundHighlight:     @orange;
 
-@btnDangerBackground:               lighten(@red, 10%);
-@btnDangerBackgroundHighlight:      @red;
+@btnDangerBackground:               #ee5f5b;
+@btnDangerBackgroundHighlight:      #bd362f;
 
-@btnInverseBackground:              lighten(@purple, 5%);
-@btnInverseBackgroundHighlight:     @purple;
+@btnInverseBackground:              @gray;
+@btnInverseBackgroundHighlight:     @grayDarker;
 
 
 // Forms
 // -------------------------
 @inputBackground:               #ccc;
 @inputBorder:                   #bbb;
-@inputBorderRadius:             3px;
 @inputDisabledBackground:       @grayLighter;
-@formActionsBackground:         transparent;
+
 
 // Dropdowns
 // -------------------------
@@ -159,7 +156,6 @@
 @navbarSearchBackgroundFocus:     @white;
 @navbarSearchBorder:              darken(@navbarSearchBackground, 30%);
 @navbarSearchPlaceholderColor:    #ccc;
-@navbarBrandColor:                @navbarLinkColor;
 
 
 // Hero unit
@@ -189,6 +185,7 @@
 
 
 
+
 // GRID
 // --------------------------------------------------
 
@@ -198,6 +195,7 @@
 @gridColumnWidth:         60px;
 @gridGutterWidth:         20px;
 @gridRowWidth:            (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
+
 
 // Fluid grid
 // -------------------------

@@ -1,6 +1,6 @@
 // Bootswatch.less
 // Swatch: Superhero
-// Version: 2.0.3
+// Version: 2.0.2
 // -----------------------------------------------------
 
 // TYPOGRAPHY
@@ -9,14 +9,16 @@
 @import url(https://fonts.googleapis.com/css?family=Oswald);
 @import url(https://fonts.googleapis.com/css?family=Noticia+Text);
 
-h6, legend, 
+h1, h2, h3, h4, h5, h6, legend, .navbar .brand,
+.navbar .nav > li > a,
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
-	font-family: @headingsFontFamily;
+	font-family: 'Oswald', sans-serif;
 	color: @orange;
 	text-shadow: -1px 1px 0 darken(@orange, 30%);
 }
 
-h1, h2, legend {
+h1, h2, legend, .navbar .brand,
+.navbar .nav > li > a {
 	text-shadow: -2px 2px 0 darken(@orange, 30%);
 }
 
@@ -49,116 +51,54 @@ blockquote.pull-right {
 // NAVBAR
 // --------------------------------------------------
 
-.navbar {
-	
-	.navbar-inner {
-		.box-shadow(none);
-		background-image: none;
-	}
-	
-	.brand {
-		padding: 25px 20px 15px;
-		font-family: @headingsFontFamily;
-		font-size: 30px;
-		text-shadow: -2px 2px 0 darken(@orange, 30%);
-	}
-	
-	.nav > li > a {
-		padding: 27px 20px 13px;
-		line-height: 30px;
-		font-family: @headingsFontFamily;
-		font-size: 22px;
-		text-shadow: -2px 2px 0 darken(@orange, 30%);
-	}
-	
-	.navbar-text {
-		padding: 27px 20px 13px;
-		line-height: 30px;
-		font-family: @headingsFontFamily;
-		font-size: 22px;
-		text-shadow: -2px 2px 0 @gray;
-	}
-	
-	.nav > li.active > a {
-		color: @orange;
-	}
-	
-	.brand:hover,
-	.nav > li > a:hover,
-	.nav > li.active > a:hover,
-	.nav > li.dropdown.open > a,
-	.nav > li.dropdown.open > a:hover {
-		position: relative;
-		top: 1px;
-		left: -1px;
-		color: @orange;
-		text-shadow: -1px 1px 0 darken(@orange, 30%);
-	}
-	
-	.navbar-search {
-		padding-top: 20px;
-	}
+.navbar .nav > li.active > a {
+	color: @orange;
+}
 
-	.navbar-search .search-query {
-		font-family: @baseFontFamily;
-		font-size: @baseFontSize;
-		line-height: @baseLineHeight;
-		color: @textColor;
-		background-color: @blue;
-		.box-shadow(none);
-		border: none;
-	}
+.navbar .brand:hover,
+.navbar .nav > li > a:hover,
+.navbar .nav > li.active > a:hover,
+.navbar .nav > li.dropdown.open > a,
+.navbar .nav > li.dropdown.open > a:hover {
+	position: relative;
+	top: 1px;
+	left: -1px;
+	color: @orange;
+	text-shadow: -1px 1px 0 darken(@orange, 30%);
+}
 
-	.divider-vertical {
-		height: 70px;
-	}
-	
-	.nav .dropdown-toggle .caret,
-	.nav .open.dropdown .caret {
-		border-top-color: @textColor;
-	}
-	
-	.dropdown-menu::before {
-		border: none;
-	}
+.navbar .navbar-inner {
+	.box-shadow(none);
+	background-image: none;
+}
 
-	.dropdown-menu::after {
-		left: 20px;
-		border-left: 7px solid transparent;
-		border-right: 7px solid transparent;
-		border-bottom: 7px solid lighten(@blue, 10%);
-	}
-	
-	[class^="icon-"], [class*=" icon-"] {
-		vertical-align: 20%;
-	}
+.navbar .brand {
+	padding: 25px 20px 15px;
+	font-size: 30px;
+}
 
-	.btn-navbar {
-		background-color: @blue;
-		border-color: transparent;
-	}
+.navbar .nav > li > a {
+	padding: 27px 20px 13px;
+	line-height: 30px;
+	font-size: 22px;
+}
 
-	.nav-collapse.in {
-		background-color: @blue;
-		.border-radius(4px);
+.navbar-search {
+	padding-top: 20px;
+}
 
-		li > a {
-			color: @textColor;
-		}
+.navbar-search .search-query {
+	font-family: @baseFontFamily;
+	font-size: @baseFontSize;
+	line-height: @baseLineHeight;
+	color: @textColor;
+	background-color: @blue;
+	.box-shadow(none);
+	border: none;
+}
 
-		li > a:hover {
-			color: @textColor;
-			background-color: lighten(@blue, 10%);
-		}
-	}
-
-	.nav-collapse.in > .nav > li > a {
-		color: @orange;
-
-		&:hover {
-			background-color: lighten(@blue, 10%);
-		}
-	}
+.navbar .divider-vertical {
+	height: 70px;
 }
 
 .dropdown .caret {
@@ -169,11 +109,64 @@ blockquote.pull-right {
 	border-top: 6px solid lighten(@blue, 10%);
 }
 
+.navbar .nav .dropdown-toggle .caret,
+.navbar .nav .open.dropdown .caret,
+.nav-pills .dropdown .caret,
+.nav-pills .dropdown:hover .caret {
+	border-top-color: @textColor;
+}
+
+.navbar .dropdown-menu::before {
+	border: none;
+}
+
+.navbar .dropdown-menu::after {
+	left: 20px;
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	border-bottom: 7px solid lighten(@blue, 10%);
+}
+
+.navbar [class^="icon-"], .navbar [class*=" icon-"] {
+	vertical-align: 20%;
+}
+
+.navbar .btn-navbar {
+	background-color: @blue;
+	border-color: transparent;
+}
+
+.navbar .nav-collapse.in {
+	background-color: @blue;
+	.border-radius(4px);
+	
+	li > a {
+		color: @textColor;
+	}
+	
+	li > a:hover {
+		color: @textColor;
+		background-color: lighten(@blue, 10%);
+	}
+}
+
+.navbar .nav-collapse.in > .nav > li > a {
+	color: @orange;
+	
+	&:hover {
+		background-color: lighten(@blue, 10%);
+	}
+}
+
+.subnav.subnav-fixed {
+	top: 70px;
+}
+
 div.subnav {
 	background-color: @blue;
 	background-image: none;
 	border: none;
-
+	
 	.nav > li > a,
 	.nav > li.active > a {
 		border-left: none;
@@ -185,44 +178,44 @@ div.subnav {
 	.nav > li.active > a:hover {
 		background-color: lighten(@blue, 10%);
 	}
-	
-	.nav > li + li > a {
-		border-top: 0px solid transparent;
-	}
-	
-	.nav > li:first-child > a,
-	.nav > li:first-child > a:hover,
-	.nav > li.active:first-child > a,
-	.nav > li.active:first-child > a:hover {
-		.border-radius(4px 0 0 4px);
-	}
+}
 
+div.subnav .nav > li + li > a {
+	border-top: 0px solid transparent;
+}
+
+div.subnav .nav > li:first-child > a,
+div.subnav .nav > li:first-child > a:hover,
+div.subnav .nav > li.active:first-child > a,
+div.subnav .nav > li.active:first-child > a:hover {
+	.border-radius(4px 0 0 4px);
+}
+
+div.subnav .nav > li.active > a,
+div.subnav .nav > li.active > a:hover {
+	color: @white;
+	background-color: @orange;
+	background-image: none;
+	.box-shadow(none);
+}
+
+div.subnav.subnav-fixed {
+	.box-shadow(none);
+	
+	.nav > li > a,
 	.nav > li.active > a,
+	.nav > li > a:hover,
+	.nav > li.active > a:hover {
+		border-color: transparent;
+		padding-left: 12px;
+		padding-right: 12px;
+		.border-radius(0);
+	}
+	
+
+	.nav > li > a:hover,
 	.nav > li.active > a:hover {
 		color: @white;
-		background-color: @orange;
-		background-image: none;
-		.box-shadow(none);
-	}
-
-	&.subnav-fixed {
-		top: 70px;
-		.box-shadow(none);
-
-		.nav > li > a,
-		.nav > li.active > a,
-		.nav > li > a:hover,
-		.nav > li.active > a:hover {
-			border-color: transparent;
-			padding-left: 12px;
-			padding-right: 12px;
-			.border-radius(0);
-		}
-
-		.nav > li > a:hover,
-		.nav > li.active > a:hover {
-			color: @white;
-		}
 	}
 }
 
@@ -417,11 +410,6 @@ div.subnav {
 	border-color: transparent;
 }
 
-.nav-pills .dropdown .caret,
-.nav-pills .dropdown:hover .caret {
-	border-top-color: @textColor;
-}
-
 .dropdown.open .dropdown-menu > li > a:hover,
 .dropdown.open .dropdown-menu > li.active > a:hover {
 	background-color: @orange;
@@ -509,6 +497,7 @@ label {
 }
 
 .form-actions {
+	background-color: transparent;
 	border-top: none;
 }
 

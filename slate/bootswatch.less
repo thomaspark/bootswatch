@@ -1,6 +1,6 @@
 // Bootswatch.less
 // Swatch: Slate
-// Version: 2.0.3
+// Version: 2.0.2
 // -----------------------------------------------------
 
 // SCAFFOLDING
@@ -20,17 +20,21 @@ h1, h2, h3, h4, h5, h6, body, legend, label {
 	}
 	
 	.brand {	
+		color: @grayLighter;
 		font-weight: bold;
 		text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 		border-right: 1px solid darken(@gray, 15%);	
 	}
 	
 	.nav > li > a  {
+		color: @grayLighter;
 		text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 		border-right: 1px solid darken(@gray, 15%);
 		border-left: 1px solid @gray;
 		
 		&:hover {
+			color: @grayLighter;
+			background-color: @grayDark;
 			#gradient > .directional(@grayDarker, @grayDark, 280deg);
 			border-left: 1px solid transparent;
 			border-right: 1px solid transparent;
@@ -72,7 +76,8 @@ h1, h2, h3, h4, h5, h6, body, legend, label {
 	.nav-collapse.in > .nav > li > a:hover, 
 	.nav-collapse.in > .nav > li.active > a:hover {
 		background-color: @grayDarker;
-	}	
+	}
+	
 }
 
 @media (max-width: 979px) {
@@ -80,6 +85,7 @@ h1, h2, h3, h4, h5, h6, body, legend, label {
 		border-right: none;
 	}
 }
+
 
 div.subnav {
 	#gradient > .vertical-three-colors(@gray, @grayDark, 70%, @grayDark);
@@ -100,6 +106,7 @@ div.subnav {
 			border-right: 1px solid transparent;
 		}
 	}
+
 
 	.nav > li.active > a,
 	.nav > li.active > a:hover {
@@ -124,15 +131,11 @@ div.subnav {
 		border-right: 1px solid darken(@gray, 15%);
 	}
 	
-	.open .dropdown-toggle {
-		border-right: 1px solid darken(@gray, 15%);
-		border-left: 1px solid @gray;
-	}
-	
 	&.subnav-fixed {
 		.box-shadow(none);
 	}
 }
+
 
 @media (max-width: 768px) {
 	div.subnav .nav > li + li > a {
@@ -334,6 +337,7 @@ label, input, button, select, textarea, legend {
 }
 
 .form-actions {
+	background-color: darken(@grayDarker, 3%);
 	border-top: none;
 }
 

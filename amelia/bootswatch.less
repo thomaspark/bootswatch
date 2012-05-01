@@ -1,6 +1,6 @@
 // Bootswatch.less
 // Swatch: Amelia
-// Version: 2.0.3
+// Version: 2.0.2
 // -----------------------------------------------------
 
 // TYPOGRAPHY
@@ -58,7 +58,7 @@ footer.footer {
 	}
 	
 	.brand {
-		padding: 12px 20px 14px;
+		padding-top: 12px;
 		font-size: 24px;
 		font-weight: normal;
 	}
@@ -85,6 +85,7 @@ footer.footer {
 			padding: 4px 9px;
 			.box-shadow(none);
 		}
+		
 	}
 }
 
@@ -95,7 +96,7 @@ div.subnav {
 	.border-radius(0);
 	.box-shadow(none);
 	
-	.nav > li.open > a {
+	.nav > li.dropdown.open > a {
 		border-color: transparent;
 		background-color: rgba(255, 255, 255, 0.4);
 	}
@@ -298,10 +299,12 @@ input, textarea, .search-query, .uneditable-input,
 .input-append input, .input-append .uneditable-input,
 .input-prepend input, .input-prepend .uneditable-input {
 	border-color: transparent;
+	.border-radius(0);
 	.box-shadow(none);
 }
 
 .form-actions {
+	background-color: transparent;
 	border-top: 0px solid transparent;
 }
 
@@ -394,8 +397,8 @@ input, textarea, .search-query, .uneditable-input,
 
 }
 
-.nav-tabs li.open > .dropdown-toggle,
-.nav-pills li.open > .dropdown-toggle {
+.nav-tabs .dropdown.open > .dropdown-toggle,
+.nav-pills .dropdown.open > .dropdown-toggle {
 	background-color: #8AD5DC;
 	color: @linkColor;
 	border-color: transparent;

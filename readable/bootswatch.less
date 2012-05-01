@@ -1,6 +1,6 @@
 // Bootswatch.less
 // Swatch: Readable
-// Version: 2.0.3
+// Version: 2.0.2
 // -----------------------------------------------------
 
 // TYPOGRAPHY
@@ -62,6 +62,7 @@ footer.footer {
 	}
 
 	.brand {
+		color: @linkColor;
 		font-size: @baseFontSize;
 		font-weight: bold;
 		line-height: 1em;
@@ -79,7 +80,7 @@ footer.footer {
 
 	.nav > li.active > a,
 	.nav > li:active > a,
-	.open .dropdown-toggle {
+	.dropdown.open .dropdown-toggle {
 		color: @linkColor;
 	}
 	
@@ -91,7 +92,7 @@ footer.footer {
 	}
 
 	.nav .dropdown-toggle .caret,
-	.nav .open .caret {
+	.nav .open.dropdown .caret {
 		border-top-color: @linkColor;
 		opacity: 1;
 	}
@@ -133,7 +134,6 @@ div.subnav {
 		.box-shadow(none);
 		background-color: transparent;
 	}
-	
 }
 
 div.subnav-fixed {
@@ -238,22 +238,6 @@ div.subnav-fixed {
 	li.active > a:hover {
 		color: @textColor;
 		background-color: @bodyBackground;
-	}
-	
-	.open .dropdown-toggle {
-		background-color: transparent;
-		color: @linkColor;
-		border-left: 1px solid whiteSmoke;
-		border-right: 1px solid #E5E5E5;
-	}
-	
-	
-	li.dropdown.open .dropdown-toggle .caret {
-		border-top-color: @linkColor;
-	}
-	
-	li.dropdown.open .dropdown-toggle:hover .caret {
-		border-top-color: @linkColorHover;
 	}
 }
 
@@ -363,6 +347,7 @@ select, input[type="file"] {
 }
 
 .form-actions {
+	background-color: transparent;
 	border-top: 1px solid #D4D4D4;
 	padding-top: 2em;
 }

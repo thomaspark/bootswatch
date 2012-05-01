@@ -1,6 +1,6 @@
 // Bootswatch.less
 // Swatch: Journal
-// Version: 2.0.3
+// Version: 2.0.2
 // -----------------------------------------------------
 
 // TYPOGRAPHY
@@ -8,7 +8,12 @@
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 
-h1, h2, h3, h4, h5, h6, .navbar .brand {
+h1, h2, h3, h4, h5, h6, .brand, .navbar, .subnav a, blockquote > p {
+	font-family: 'Open Sans', sans-serif;
+	color: @textColor;
+}
+
+h1, h2, h3, h4, h5, h6, .brand {
 	font-weight: 700;
 }
 
@@ -19,74 +24,70 @@ a {
 	text-decoration: underline;
 }
 
-.nav a, .navbar .brand, .subnav a, a.btn, .dropdown-menu a {
+.nav a, .navbar .brand, .subnav a, a.btn {
 	text-decoration: none;
 }
 
 // NAVBAR
 // -----------------------------------------------------
 
-.navbar {
+.navbar .brand {
+	color: @navbarLinkColor;
+	text-shadow: none;
+	font-weight: bold;
 	
-	.navbar-inner {
-		@shadow: 0 2px 4px rgba(0,0,0,.25), inset 0 -1px 0 rgba(0,0,0,.1);
-		.box-shadow(@shadow);
-		border-top: 1px solid #E5E5E5;
-		.border-radius(0);
-	}
-		
-	.brand {
-		text-shadow: none;
-
-		&:hover {
-			background-color: #EEEEEE;
-		}
-	}
-	
-	.nav > li > a {
-		text-shadow: none;		
-	}
-
-	.nav .active > a,
-	.nav .active > a:hover {
-		color: @navbarLinkColor;
-		background-color: rgba(0, 0, 0, 0);
-	}
-		
-	.nav .active > a:hover,
-	.nav > li > a:hover,
-	.nav-collapse.in .nav li > a:hover {
+	&:hover {
 		background-color: #EEEEEE;
 	}
+}
 
-	.dropdown-menu {
-		.border-radius(0);		
-	}
+.navbar-inner {
+	border-top: 1px solid #E5E5E5;
+	@shadow: 0 2px 4px rgba(0,0,0,.25), inset 0 -1px 0 rgba(0,0,0,.1);
+	.box-shadow(@shadow);
+}
 
-	.nav li.dropdown .dropdown-toggle .caret,
-	.nav .open .caret,
-	.nav .open .dropdown-toggle:hover .caret {
-		border-top-color: @black;
-		opacity: 1;
-	}
-		
-	.nav-collapse .nav li > a {
-		color: @textColor;
-		text-decoration: none;
-		font-weight: normal;	
-	}
-	
-	.nav-collapse .navbar-form,
-	.nav-collapse .navbar-search {
-		border-color: transparent;
-	}	
-	
-	.navbar-search .search-query,
-	.navbar-search .search-query:hover {
-		border: 1px solid @grayLighter;
-		color: @textColor;
-		.placeholder(@gray);
-	}
+.navbar-inner, .navbar .dropdown-menu, div.subnav, 
+div.subnav .nav > li:first-child > a, div.subnav .nav > li:first-child > a:hover {
+	.border-radius(0);
+}
+
+.navbar .nav > li > a {
+	text-shadow: none;
+}
+
+.navbar .nav .active > a,
+.navbar .nav .active > a:hover {
+	color: @navbarLinkColor;
+	background-color: rgba(0, 0, 0, 0);
+}
+
+.navbar .nav .active > a:hover,
+.navbar .nav > li > a:hover,
+.navbar .nav-collapse.in .nav li > a:hover {
+	background-color: #EEEEEE;
+}
+
+.dropdown.open .dropdown-toggle {
+	color: @textColor;
+}
+
+.navbar .nav .dropdown-toggle .caret,
+.navbar .nav .open.dropdown .caret {
+	border-top-color: @navbarLinkColor;
+	opacity: 1;
+}
+
+form.navbar-form, form.navbar-search {
+	border-top: 0px solid #eee;
+	border-bottom: 0px solid #eee;
+}
+
+.navbar-search .search-query,
+.navbar-search .search-query:hover {
+	border: 1px solid @grayLighter;
+	color: @textColor;
+	.placeholder(@gray);
 }
 
 div.subnav {
@@ -94,20 +95,15 @@ div.subnav {
 	background-image: none;
 	@shadow: 0 1px 2px rgba(0,0,0,.25);
 	.box-shadow(@shadow);
-	.border-radius(0);
-	
-	.nav > li > a:hover,
-	.nav > .active > a,
-	.nav > .active > a:hover {
-		color: @textColor;
-		text-decoration: none;
-		font-weight: normal;
-	}
+}
 
-	.nav > li:first-child > a,
-	.nav > li:first-child > a:hover {
-		.border-radius(0);
-	}	
+.navbar .nav-collapse.in .nav li > a,
+div.subnav .nav > li > a:hover,
+div.subnav .nav > .active > a,
+div.subnav .nav > .active > a:hover {
+	color: @textColor;
+	text-decoration: none;
+	font-weight: normal;
 }
 
 // BUTTONS
@@ -119,6 +115,7 @@ div.subnav {
 
 // MODALS
 // -----------------------------------------------------
+
 
 .modal {
  	.border-radius(0px);
@@ -133,6 +130,10 @@ div.subnav {
 	text-decoration: none;
 }
 
+.modal-body {
+
+}
+
 .modal-footer {
 	background: transparent;
 	.box-shadow(none);
@@ -143,7 +144,7 @@ div.subnav {
 // MISC
 // -----------------------------------------------------
 
-code, pre, pre.prettyprint, .well {
+code, pre, pre.prettyprint, .well, .form-actions {
 	background-color: @grayLighter;
 }
 

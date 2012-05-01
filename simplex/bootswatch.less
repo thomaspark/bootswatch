@@ -1,6 +1,6 @@
 // Bootswatch.less
 // Swatch: Simplex
-// Version: 2.0.3
+// Version: 2.0.2
 // -----------------------------------------------------
 
 @boxShadow: 0 1px 1px rgba(0, 0, 0, 0.3);
@@ -8,7 +8,7 @@
 // TYPOGRAPHY
 // -----------------------------------------------------
 
-h6, .hero-unit {
+h6, .hero-unit h1 {
 	color: @headingsColor;
 }
 
@@ -33,13 +33,6 @@ h6, .hero-unit {
 	font-size: 11px;
 }
 
-.navbar .navbar-text {
-	padding: 14px 10px 11px;
-	text-shadow: none;
-	font-weight: normal;
-	font-size: 11px;
-}
-
 .navbar .nav > li > a:hover {
 	text-decoration: underline;
 }
@@ -49,8 +42,8 @@ h6, .hero-unit {
 	background-color: transparent;
 }
 
-.navbar .nav li.dropdown .dropdown-toggle .caret,
-.navbar .nav li.open.dropdown .dropdown-toggle .caret {
+.navbar .nav .dropdown-toggle .caret,
+.navbar .nav .open.dropdown .caret {
 	border-top-color: @textColor;
 }
 
@@ -59,32 +52,24 @@ h6, .hero-unit {
 }
 
 div.subnav {
-	
 	background-image: none;
 	background-color: @navbarBackground;
 	border-bottom: 1px solid transparent;
 	.box-shadow(@boxShadow);
+}
+
+div.subnav.subnav-fixed {
+	.box-shadow(inset 0 5px #fff~"," @boxShadow);
+}
+
+div.subnav .nav > li > a {
+	padding-top: 12px;
+	color: @navbarText;
+	font-weight: normal;
+	font-size: 11px;
 	
-	&.subnav-fixed {
-		.box-shadow(inset 0 5px #fff~"," @boxShadow);
-	}
-	
-	.nav > li > a {
-		padding-top: 12px;
-		color: @navbarText;
-		font-weight: normal;
-		font-size: 11px;
-	
-		&:hover {
-			text-decoration: underline;
-		}
-	}
-	
-	.nav > li.open > a,
-	.nav > li.open > a:hover {
-		background-color: transparent;
-		border-left: 1px solid whiteSmoke;
-		border-right: 1px solid #E5E5E5;
+	&:hover {
+		text-decoration: underline;
 	}
 }
 
@@ -141,6 +126,7 @@ div.subnav {
 	border-bottom: 1px solid #ccc;
 }
 
+
 .nav-pills > li > a:hover {
 	background-color: transparent;
 }
@@ -150,8 +136,13 @@ div.subnav {
 	background-color: @bodyBackground;
 }
 
+
 // FORMS
 // -----------------------------------------------------
+
+input, textarea, select, .uneditable-input {
+	.border-radius(0);
+}
 
 .navbar-search .search-query {
 	border: 1px solid #CCC;
@@ -162,6 +153,22 @@ div.subnav {
 
 .help-inline, .help-block {
 	font-size: 11px;
+}
+
+.input-prepend input,
+.input-append input,
+.input-prepend select,
+.input-append select,
+.input-prepend .uneditable-input,
+.input-append .uneditable-input {
+	.border-radius(0);
+}
+
+.input-prepend .add-on,
+.input-append .add-on,
+.input-prepend .btn,
+.input-append .btn {
+	.border-radius(0);
 }
 
 // TABLES

@@ -1,6 +1,6 @@
 // Bootswatch.less
 // Swatch: Spacelab
-// Version: 2.0.3
+// Version: 2.0.2
 // -----------------------------------------------------
 
 // NAVBAR
@@ -10,118 +10,110 @@
 .navbar {
 	border-bottom: 1px solid #CACACA;
 	
-	.navbar-inner {
-		.box-shadow(0 1px 0 rgba(255,255,255,0.4)~", "0 0 10px rgba(0,0,0,0.1));
-	}
-	
 	.brand {
+		font-size: 20px;
 		font-weight: bold;
+		color: @textColor;
 	
 		&:hover {
 			color: @linkColor;
-		}
-	}
-	
-	.nav > li > a {
-		font-weight: bold;
-		text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-	}
-	
-	.nav .active > a {
-		background-color: transparent;
-		color: @textColor;
-
-		&:hover {
-			background-color: transparent;
-			color: @linkColor;
-		}
-	}
-	
-	.nav > li > a:hover,
-	.nav li.open.dropdown .dropdown-toggle {
-		color: @linkColor;
-	}
-	
-	.nav .dropdown-toggle .caret {
-		border-top-color: @textColor;
-		opacity: 1;
-	}
-	
-	.navbar-search .search-query,
-	.navbar-search .search-query:hover {
-		border: none;
-		color: @grayLight;
-		.placeholder(@grayLight);
-		.box-shadow(inset 0 1px 2px rgba(0, 0, 0, 0.5));
-
-	    &:focus,
-	    &.focused {
-			.box-shadow(inset 0 1px 2px rgba(0, 0, 0, 0.5));
-			color: @textColor;
-		}
-	}
-	
-	.nav-collapse.in .navbar-search {
-		border-top: none;
-		border-bottom: none;
-	}
-
-	.nav-collapse.in > .nav li > a {
-
-		color: @textColor;
-
-		.caret {
-			border-top-color: @grayLight;
-		}
-	}
-
-	.nav-collapse.in > .nav li > a:hover {
-		text-shadow: none;
-		color: @linkColor;
-		background-color: transparent;
-
-		.caret {
-			border-top-color: @white;
 		}
 	}
 }
 
-.nav li.open.dropdown .caret,
+.navbar .navbar-inner {
+	.box-shadow(0 1px 0 rgba(255,255,255,0.4));
+	.box-shadow(0 0 10px rgba(0,0,0,0.1));
+}
+
+.navbar .nav > li > a {
+	font-weight: bold;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.navbar .nav .active > a {
+	background-color: transparent;
+	color: @textColor;
+	
+	&:hover {
+		background-color: transparent;
+		color: @linkColor;
+	}
+}
+
+.navbar .nav > li > a:hover,
+.navbar .nav .open.dropdown .dropdown-toggle {
+	color: @linkColor !important;
+}
+
+.navbar .nav .dropdown-toggle .caret {
+	border-top-color: @textColor;
+	opacity: 1;
+}
+
+.nav .open.dropdown .caret,
 .nav .dropdown-toggle:hover .caret {
-	border-top-color: @linkColor;
+	border-top-color: @linkColor !important;
 }
 
-div.subnav {
+div.subnav .nav > li > a {
+	font-weight: bold;
+	color: #777;
 	
-	.nav > li > a {
-		font-weight: bold;
-		color: #777;
-
-		&:hover {
-			color: @linkColor;
-		}
-	}
-	
-	.nav > li.active > a {
-		color: @textColor;
-
-		&:hover {
-			color: @grayDark;
-		}
-	}
-	
-	.nav > li > .dropdown-toggle {
-		background-color: transparent;
-	}
-	
-	.nav > li.dropdown.open > .dropdown-toggle {
-		border-left: 1px solid whiteSmoke;
-		border-right: 1px solid #E5E5E5;
+	&:hover {
 		color: @linkColor;
 	}
+}
+
+div.subnav .nav > li.active > a {
+	color: @textColor;
 	
-	.nav > .open > .dropdown-toggle:hover .caret {
-		border-top-color: @linkColor;
+	&:hover {
+		color: @grayDark;
+	}
+}
+
+div.subnav .nav > li > .dropdown-toggle {
+	background-color: transparent;
+	color: @linkColor;
+}
+
+.navbar-search .search-query,
+.navbar-search .search-query:hover {
+	border: none;
+	color: @grayLight;
+	.placeholder(@grayLight);
+	.box-shadow(inset 0 1px 2px rgba(0, 0, 0, 0.5));
+	
+    &:focus,
+    &.focused {
+		.box-shadow(inset 0 1px 2px rgba(0, 0, 0, 0.5));
+		color: @textColor;
+	}
+}
+
+.navbar .nav-collapse.in .navbar-search {
+	border-top: none;
+	border-bottom: none;
+}
+
+.navbar .nav-collapse.in > .nav li > a {
+
+	color: @textColor;
+
+	.caret {
+		border-top-color: @grayLight;
+	}
+}
+
+
+.navbar .nav-collapse.in > .nav li > a:hover {
+	text-shadow: none;
+	color: @linkColor;
+	background-color: transparent;
+	
+	.caret {
+		border-top-color: @white;
 	}
 }
 
