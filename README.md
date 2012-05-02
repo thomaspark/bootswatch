@@ -24,9 +24,9 @@ A simple API is available for integrating your site or app with Bootswatch.
 
 The swatches are housed in an array called `themes`, and each swatch has the following properties:  `name`, `description`, `preview`, `thumbnail`, `css`, `css-min`, `less`, and `less-variables`.
 
-CORS and JSONP are supported. Send your request to `http://simplejsonp.nodester.com/thomaspark/bootswatch/`
+CORS and JSONP are supported. Send your request to `http://simplejsonp.nodester.com/bootswatch/`
 
-A simple demo, using mustache.js for templating: http://jsbin.com/aqagev/1/edit
+A simple demo, using mustache.js for templating: http://jsbin.com/epadoh/1/edit
 
 
 Feedback
