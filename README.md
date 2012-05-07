@@ -17,10 +17,10 @@ Each raw swatch consists of two LESS files. One is `variables.less`, which is in
 
 Check out the README in the `swatchmaker` directory for step-by-step instructions for building your own swatches.
 
-How do I plug into Bootswatch?
+How do I integrate with Bootswatch?
 -----
 
-A simple API is available for integrating your site or app with Bootswatch.
+A simple API is available for integrating your platform with Bootswatch.
 
 The swatches are housed in an array called `themes`, and each swatch has the following properties:  `name`, `description`, `preview`, `thumbnail`, `css`, `css-min`, `less`, and `less-variables`.
 
