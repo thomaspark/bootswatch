@@ -42,9 +42,9 @@ Author
 
 Thanks
 ------
-[Mark Otto](http://github.com/markdotto) and [Jacob Thornton](http://github.com/fat) for Bootstrap.
+[Mark Otto](http://github.com/markdotto) and [Jacob Thornton](http://github.com/fat) for [Bootstrap](https://github.com/twitter/bootstrap).
 
-[James Taylor](http://github.com/jostylr) for simplejsonp.
+[James Taylor](http://github.com/jostylr) for [cors-lite](https://github.com/jostylr/cors-lite).
 
 
 Copyright and License
