@@ -27,14 +27,14 @@ a {
 // -----------------------------------------------------
 
 .navbar {
-	
+
 	.navbar-inner {
 		@shadow: 0 2px 4px rgba(0,0,0,.25), inset 0 -1px 0 rgba(0,0,0,.1);
 		.box-shadow(@shadow);
 		border-top: 1px solid #E5E5E5;
 		.border-radius(0);
 	}
-		
+
 	.brand {
 		text-shadow: none;
 
@@ -42,13 +42,13 @@ a {
 			background-color: #EEEEEE;
 		}
 	}
-	
+
 	.nav > li > a {
-		text-shadow: none;		
+		text-shadow: none;
 	}
-	
+
 	.dropdown-menu {
-		.border-radius(0);		
+		.border-radius(0);
 	}
 
 	.nav li.dropdown.active > .dropdown-toggle,
@@ -66,22 +66,22 @@ a {
 		border-top-color: @black;
 		opacity: 1;
 	}
-	
+
 	.nav-collapse.in .nav li > a:hover {
 		background-color: @grayLighter;
 	}
-		
+
 	.nav-collapse .nav li > a {
 		color: @textColor;
 		text-decoration: none;
-		font-weight: normal;	
+		font-weight: normal;
 	}
-	
+
 	.nav-collapse .navbar-form,
 	.nav-collapse .navbar-search {
 		border-color: transparent;
-	}	
-	
+	}
+
 	.navbar-search .search-query,
 	.navbar-search .search-query:hover {
 		border: 1px solid @grayLighter;
@@ -96,7 +96,11 @@ div.subnav {
 	@shadow: 0 1px 2px rgba(0,0,0,.25);
 	.box-shadow(@shadow);
 	.border-radius(0);
-	
+
+	&.subnav-fixed {
+		top: @navbarHeight;
+	}
+
 	.nav > li > a:hover,
 	.nav > .active > a,
 	.nav > .active > a:hover {
@@ -108,7 +112,7 @@ div.subnav {
 	.nav > li:first-child > a,
 	.nav > li:first-child > a:hover {
 		.border-radius(0);
-	}	
+	}
 }
 
 // BUTTONS
@@ -116,6 +120,10 @@ div.subnav {
 
 .btn-primary {
   .buttonBackground(lighten(@linkColor, 5%), @linkColor);
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	vertical-align: -2px;
 }
 
 // MODALS
