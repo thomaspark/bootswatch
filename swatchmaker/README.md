@@ -11,10 +11,14 @@ Step 2
 ------
 Make your customizations to the two files found in the `swatch` directory, `variables.less` and `bootswatch.less`.
 
-Step 3a
+Step 3
 ------
 If you haven't already, install LESS to your machine via NPM. More information on that here: http://lesscss.org/#-server-side-usage
 
-Step 3b
+Step 4
 ------
 In terminal, navigate to the `swatchmaker` directory and run `make bootswatch`. The compiled CSS files will be created in the `swatch` directory.
+
+Step 5
+------
+If you want to reset `variables.less` and `bootswatch.less` to defaults, run `make default`.
