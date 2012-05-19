@@ -1,5 +1,5 @@
 var menu = '<ul class="nav"> \
-              <li><a onclick="pageTracker._link(this.href); return false;" href="http://bootswatch.tumblr.com">News</a></li> \
+              <li><a onclick="pageTracker._link(this.href); return false;" href="http://news.bootswatch.com">News</a></li> \
               <li><a id="swatch-link" href="/#gallery">Gallery</a></li> \
 			  <li class="dropdown"> \
 	         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Preview <b class="caret"></b></a> \
@@ -41,7 +41,7 @@ menu = menu + '			</ul> \
 			  			</ul>';
 
 			$('.navbar .nav-collapse').first().append(menu);
-			
+
 			$('a[rel=tooltip]').tooltip({
 				'placement': 'bottom'
 			});
@@ -53,4 +53,4 @@ taglines.push('Saving the web from default <a target="_blank" href="http://twitt
 
 var line = Math.floor((taglines.length) * Math.random());
 $('#tagline').html(taglines[line]);
-			
+
