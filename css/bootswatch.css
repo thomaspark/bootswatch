@@ -85,7 +85,6 @@ body {
 }
 
 .thumbnail img {
-  max-width: 100%;
   -webkit-border-radius: 7px;
      -moz-border-radius: 7px;
           border-radius: 7px;
@@ -93,10 +92,6 @@ body {
 
 .thumbnail .label {
 	vertical-align: top;
-}
-
-.thumbnail p {
-	max-width: 352px;
 }
 
 .thumbnail .btn-toolbar {
@@ -132,10 +127,6 @@ body {
 
 	.container {
 		padding: 20px;
-	}
-
-	.span4 {
-		width: 100%;
 	}
 
 	.hero-unit {
@@ -175,8 +166,13 @@ body {
 		padding-bottom: 80px;
 	}
 
-	.thumbnails > .span4 {
+	.thumbnails > li {
+		float: none;
 		margin-left: 0;
+	}
+
+	.thumbnail img {
+		width: 100%;
 	}
 
 }
