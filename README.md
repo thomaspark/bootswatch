@@ -1,21 +1,21 @@
 Bootswatch
 ==========
 
-Bootswatch is a collection of free themes for your [Twitter Bootstrap](http://twitter.github.com/bootstrap/) site. Check it out at [bootswatch.com](http://bootswatch.com).
+Bootswatch is a collection of free themes for [Twitter Bootstrap](http://twitter.github.com/bootstrap/). Check it out at [bootswatch.com](http://bootswatch.com).
 
 How do I use Bootswatch?
 -----
-Head over to [Bootswatch](http://bootswatch.com) and download the `bootswatch.min.css` file associated with a swatch.
+Head over to [Bootswatch](http://bootswatch.com) and download the `bootstrap.min.css` file associated with a swatch.
 
-In Bootstrap’s CSS directory, you’ll find a stylesheet in full (`bootstrap.css`) and minified (`bootstrap.min.css`) forms. Rename them or move them to a safe place. Then drop in the new CSS file and check that your HTML points to it. If you ever change your mind, simply drop in another swatch or switch back to the original.
+In Bootstrap’s CSS directory, you’ll find a stylesheet in full (`bootstrap.css`) and minified (`bootstrap.min.css`) forms. Rename them or move them to a safe place, and replace with the downloaded file. If you ever change your mind, simply drop in another swatch or switch back to the original.
 
 How do I extend Bootswatch?
 ------
 Bootswatch is an open source project, and you’re welcome to modify the swatches further or create your own. If you’re interested, fork or follow the GitHub repository. The files of interest are in the `gh-pages` branch.
 
-Each raw swatch consists of two LESS files. One is `variables.less`, which is included by default in Bootstrap and allows you to customize [these settings](http://twitter.github.com/bootstrap/less.html#variables). The other is a new file called `bootswatch.less` that introduces more extensive structural changes.
+Each raw swatch consists of two LESS files. One is `variables.less`, which is included by default in Bootstrap and allows you to customize [these settings](http://twitter.github.com/bootstrap/less.html#variables). The other is a file called `bootswatch.less` that introduces more extensive structural changes.
 
-Check out the README in the `swatchmaker` directory for step-by-step instructions for building your own swatches.
+Check out the README in the `swatchmaker` directory for step-by-step instructions on building your own swatch.
 
 How do I integrate with Bootswatch?
 -----
@@ -45,6 +45,8 @@ Thanks
 [Mark Otto](http://github.com/markdotto) and [Jacob Thornton](http://github.com/fat) for [Bootstrap](https://github.com/twitter/bootstrap).
 
 [James Taylor](http://github.com/jostylr) for [cors-lite](https://github.com/jostylr/cors-lite).
+
+[Zack Maril](http://github.com/zmaril) for [bootswatch/swatchmaker/watcher.rb](https://github.com/thomaspark/bootswatch/blob/master/swatchmaker/watcher.rb]).
 
 
 Copyright and License
