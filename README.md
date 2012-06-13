@@ -46,7 +46,7 @@ Thanks
 
 [James Taylor](http://github.com/jostylr) for [cors-lite](https://github.com/jostylr/cors-lite).
 
-[Zack Maril](http://github.com/zmaril) for [bootswatch/swatchmaker/watcher.rb](https://github.com/thomaspark/bootswatch/blob/master/swatchmaker/watcher.rb]).
+[Zack Maril](http://github.com/zmaril) for [bootswatch/swatchmaker/watcher.rb](https://github.com/thomaspark/bootswatch/blob/master/swatchmaker/watcher.rb).
 
 
 Copyright and License
