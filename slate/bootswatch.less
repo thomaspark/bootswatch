@@ -1,6 +1,6 @@
 // Bootswatch.less
 // Swatch: Slate
-// Version: 2.0.3
+// Version: 2.0.4
 // -----------------------------------------------------
 
 // SCAFFOLDING
@@ -14,29 +14,34 @@ h1, h2, h3, h4, h5, h6, body, legend, label {
 // -----------------------------------------------------
 
 .navbar {
-	
+
 	.navbar-inner {
-		#gradient > .vertical-three-colors(@gray, @grayDark, 70%, @grayDark);		
+		#gradient > .vertical-three-colors(@gray, @grayDark, 70%, @grayDark);
 	}
-	
-	.brand {	
+
+	.brand {
 		font-weight: bold;
 		text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-		border-right: 1px solid darken(@gray, 15%);	
+		border-right: 1px solid darken(@gray, 15%);
 	}
-	
+
+	.navbar-text {
+		padding: 0 10px;
+		line-height: 38px;
+	}
+
 	.nav > li > a  {
 		text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 		border-right: 1px solid darken(@gray, 15%);
 		border-left: 1px solid @gray;
-		
+
 		&:hover {
 			#gradient > .directional(@grayDarker, @grayDark, 280deg);
 			border-left: 1px solid transparent;
 			border-right: 1px solid transparent;
 		}
 	}
-	
+
 	.nav > li.active > a,
 	.nav > li.active > a:hover {
 		color: @grayLighter;
@@ -44,7 +49,7 @@ h1, h2, h3, h4, h5, h6, body, legend, label {
 		#gradient > .directional(lighten(@grayDarker, 4%), lighten(@grayDark, 4%), 280deg);
 		border-right: 1px solid darken(@gray, 15%);
 	}
-	
+
 	.navbar-search .search-query {
 		border: 1px solid darken(@gray, 15%);
 	}
@@ -53,11 +58,11 @@ h1, h2, h3, h4, h5, h6, body, legend, label {
 		background-color: transparent;
 		border-right: none;
 	}
-	
+
 	.dropdown-menu::after {
 		border-bottom: 6px solid @grayDark;
 	}
-	
+
 	.nav-collapse.in > .nav > li > a,
 	.nav-collapse.in > .nav > li.active > a,
 	.nav-collapse.in > .nav > li > a:hover,
@@ -69,10 +74,10 @@ h1, h2, h3, h4, h5, h6, body, legend, label {
 		background-image: none;
 	}
 
-	.nav-collapse.in > .nav > li > a:hover, 
+	.nav-collapse.in > .nav > li > a:hover,
 	.nav-collapse.in > .nav > li.active > a:hover {
 		background-color: @grayDarker;
-	}	
+	}
 }
 
 @media (max-width: 979px) {
@@ -85,13 +90,13 @@ div.subnav {
 	#gradient > .vertical-three-colors(@gray, @grayDark, 70%, @grayDark);
 	border: 1px solid transparent;
 	.box-shadow('0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1)');
-	
+
 	.nav > li > a {
 		color: @grayLighter;
 		text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 		border-right: 1px solid darken(@gray, 15%);
 		border-left: 1px solid @gray;
-	
+
 		&:hover {
 			color: @grayLighter;
 			background-color: @grayDark;
@@ -123,12 +128,12 @@ div.subnav {
 	.nav > li:last-child > a:hover {
 		border-right: 1px solid darken(@gray, 15%);
 	}
-	
+
 	.open .dropdown-toggle {
 		border-right: 1px solid darken(@gray, 15%);
 		border-left: 1px solid @gray;
 	}
-	
+
 	&.subnav-fixed {
 		.box-shadow(none);
 	}
@@ -202,7 +207,7 @@ div.subnav {
 .breadcrumb, .pagination > ul a, .pager a {
 	border: 1px solid transparent;
 	.box-shadow('0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1)');
-	#gradient > .vertical-three-colors(@gray, @grayDark, 70%, @grayDark);	
+	#gradient > .vertical-three-colors(@gray, @grayDark, 70%, @grayDark);
 }
 
 .breadcrumb li, .breadcrumb a, .pagination > ul a {
@@ -224,7 +229,7 @@ div.subnav {
 }
 
 .pagination li.disabled > a {
-	#gradient > .vertical-three-colors(@grayLight, @gray, 70%, @gray);	
+	#gradient > .vertical-three-colors(@grayLight, @gray, 70%, @gray);
 }
 
 .pagination > ul > li:not(.disabled) a:hover,
@@ -274,7 +279,7 @@ div.subnav {
 .nav-list {
 	background-color: @grayDark;
 	.box-shadow(1px 1px 1px rgba(0, 0, 0, 0.4));
-	
+
 	li > a {
 		background-image: none;
 		text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
@@ -314,7 +319,7 @@ div.subnav {
 
 .dropdown-menu {
 	.box-shadow(0 5px 5px rgba(0, 0, 0, 0.2));
-	
+
 	li.active a,
 	li.active a:hover {
 		background-color: @grayDark;
@@ -369,12 +374,12 @@ label, input, button, select, textarea, legend {
 
 .alert {
   background-color: @orange;
-  border-color: @orange;  
+  border-color: @orange;
 }
 
 .alert-success {
   background-color: @successText;
-  border-color: @successText;  
+  border-color: @successText;
 }
 
 .alert-error {
@@ -425,7 +430,7 @@ hr, legend, .page-header, .dropdown-menu .divider {
 
 footer.footer {
 	border-top: 1px solid darken(@grayDarker, 5%);
-	
+
 	p {
 		color: @textColor;
 	}

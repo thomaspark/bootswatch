@@ -1,6 +1,6 @@
 // Bootswatch.less
 // Swatch: Superhero
-// Version: 2.0.3
+// Version: 2.0.4
 // -----------------------------------------------------
 
 // TYPOGRAPHY
@@ -9,7 +9,7 @@
 @import url(https://fonts.googleapis.com/css?family=Oswald);
 @import url(https://fonts.googleapis.com/css?family=Noticia+Text);
 
-h6, legend, 
+h6, legend,
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 	font-family: @headingsFontFamily;
 	color: @orange;
@@ -50,19 +50,19 @@ blockquote.pull-right {
 // --------------------------------------------------
 
 .navbar {
-	
+
 	.navbar-inner {
 		.box-shadow(none);
 		background-image: none;
 	}
-	
+
 	.brand {
 		padding: 25px 20px 15px;
 		font-family: @headingsFontFamily;
 		font-size: 30px;
 		text-shadow: -2px 2px 0 darken(@orange, 30%);
 	}
-	
+
 	.nav > li > a {
 		padding: 27px 20px 13px;
 		line-height: 30px;
@@ -70,7 +70,7 @@ blockquote.pull-right {
 		font-size: 22px;
 		text-shadow: -2px 2px 0 darken(@orange, 30%);
 	}
-	
+
 	.navbar-text {
 		padding: 27px 20px 13px;
 		line-height: 30px;
@@ -78,11 +78,11 @@ blockquote.pull-right {
 		font-size: 22px;
 		text-shadow: -2px 2px 0 @gray;
 	}
-	
+
 	.nav > li.active > a {
 		color: @orange;
 	}
-	
+
 	.brand:hover,
 	.nav > li > a:hover,
 	.nav > li.active > a:hover,
@@ -94,7 +94,7 @@ blockquote.pull-right {
 		color: @orange;
 		text-shadow: -1px 1px 0 darken(@orange, 30%);
 	}
-	
+
 	.navbar-search {
 		padding-top: 20px;
 	}
@@ -112,12 +112,12 @@ blockquote.pull-right {
 	.divider-vertical {
 		height: 70px;
 	}
-	
+
 	.nav .dropdown-toggle .caret,
 	.nav .open.dropdown .caret {
 		border-top-color: @textColor;
 	}
-	
+
 	.dropdown-menu::before {
 		border: none;
 	}
@@ -128,7 +128,7 @@ blockquote.pull-right {
 		border-right: 7px solid transparent;
 		border-bottom: 7px solid lighten(@blue, 10%);
 	}
-	
+
 	[class^="icon-"], [class*=" icon-"] {
 		vertical-align: 20%;
 	}
@@ -180,16 +180,16 @@ div.subnav {
 		border-right: none;
 		color: @textColor;
 	}
-	
+
 	.nav > li > a:hover,
 	.nav > li.active > a:hover {
 		background-color: lighten(@blue, 10%);
 	}
-	
+
 	.nav > li + li > a {
 		border-top: 0px solid transparent;
 	}
-	
+
 	.nav > li:first-child > a,
 	.nav > li:first-child > a:hover,
 	.nav > li.active:first-child > a,
@@ -224,13 +224,10 @@ div.subnav {
 			color: @white;
 		}
 	}
-}
 
-.dropdown-menu {
-	
-	.divider {
-		border-bottom: none;
-		background-color: @blue;
+	.nav > .active > a .caret,
+	.nav > .active > a:hover .caret {
+		border-top-color: @textColor;
 	}
 }
 
@@ -241,14 +238,14 @@ div.subnav {
 	div.subnav .nav > li.active:first-child > a:hover {
 		.border-radius(4px 4px 0 0);
 	}
-	
+
 	div.subnav .nav > li:last-child > a,
 	div.subnav .nav > li:last-child > a:hover,
 	div.subnav .nav > li.active:last-child > a,
 	div.subnav .nav > li.active:last-child > a:hover {
 		.border-radius(0 0 4px 4px);
 	}
-	
+
 }
 
 // TABLES
@@ -379,7 +376,7 @@ div.subnav {
 	border-color: transparent;
 }
 
-.nav-tabs {	
+.nav-tabs {
 	> li > a {
 		background-color: @blue;
 		color: @textColor;
@@ -392,7 +389,7 @@ div.subnav {
 		background-color: @orange;
 		border-color: transparent;
 	}
-	
+
 	li > a:hover,
 	&.nav-stacked > li > a:hover {
 		background-color: lighten(@blue, 10%);
@@ -440,11 +437,11 @@ div.subnav {
 	background-image: none;
 	border: none;
 	.box-shadow(none);
-	
+
 	li {
 		text-shadow: none;
 	}
-	
+
 	.divider {
 		color: @textColor;
 	}
@@ -455,22 +452,22 @@ div.subnav {
 	background-color: @blue;
 	background-image: none;
 	border-color: transparent;
-	
+
 	li > a {
 		border: none;
 		color: @textColor;
 	}
-	
+
 	li.active > a,
 	li.active > a:hover {
 		background: @orange;
 		color: @white;
 	}
-	
+
 	li > a:hover {
 		background: lighten(@blue, 10%);
 	}
-	
+
 	li.disabled > a,
 	li.disabled > a:hover {
 		background: darken(@blue, 5%);
@@ -481,7 +478,7 @@ div.subnav {
 	color: @textColor;
 	background-color: @blue;
 	border-color: transparent;
-	
+
 	&:hover {
 		background: lighten(@blue, 10%);
 	}
@@ -573,7 +570,7 @@ footer.footer {
 	background-color: darken(@blueDark, 5%);
 	background-image: none;
 	.box-shadow(none);
-	
+
 	.bar {
 		.box-shadow(none);
 	}
@@ -585,7 +582,7 @@ footer.footer {
 	.border-radius(3px);
 }
 
-.label { 
+.label {
 	background-color: @blue;
   	color: @textColor;
 }
@@ -608,10 +605,10 @@ footer.footer {
 
 .alert {
   background-color: @blue;
-  border: none;  
+  border: none;
   color: @textColor;
   text-shadow: none;
-  
+
   a {
   	color: lighten(@orange, 12%);
   }

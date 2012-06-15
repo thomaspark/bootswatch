@@ -1,6 +1,6 @@
 // Bootswatch.less
 // Swatch: Cyborg
-// Version: 2.0.3
+// Version: 2.0.4
 // -----------------------------------------------------
 
 // TYPOGRAPHY
@@ -50,35 +50,39 @@ body {
 // -----------------------------------------------------
 
 .navbar {
-	
+
 	.navbar-inner {
 	  .border-radius(0);
 	  .box-shadow(none);
 	  border-bottom: 2px solid @blue
 	}
-	
+
 	.brand {
 		padding: 12px 20px 8px;
-		
+
 		&:hover {
 				border-bottom: 3px solid @blue
 		}
 	}
-	
+
+	.navbar-text {
+		line-height: 43px;
+	}
+
 	.nav li > a {
 		padding: 13px 10px 8px;
 		border-bottom: 3px solid rgba(0, 0, 0, 0);
 		border-left: 1px solid #222;
-		
+
 		&:hover {
 			border-bottom: 3px solid @blue
 		}
 	}
-	
+
 	.nav .active > a {
 		border-bottom: 3px solid @blue
 	}
-	
+
 	.search-query,
 	.search-query:focus,
 	.search-query.focused {
@@ -87,13 +91,13 @@ body {
 		background-color: #222;
 		.border-radius(1px);
 		.placeholder(@gray);
-	}	
-	
+	}
+
 	.nav li.dropdown.active.open .dropdown-toggle:hover {
 		border-bottom: 3px solid @blue;
 		border-left: 1px solid #222;
 	}
-	
+
 	.dropdown-menu::before,
 	.dropdown-menu::after {
 		display: none;
@@ -120,18 +124,13 @@ body {
 	border-bottom: 3px solid transparent;
 }
 
-.dropdown-menu .divider {
-	background-color: #222;
-	border-bottom: 0px solid white;
-}
-
 div.subnav {
 	position: static;
 	background-color: @grayDarker;
 	background-image: none;
 	border: 0;
-	
-	
+
+
 	&.subnav-fixed {
 		position: relative;
 		left: -1px;
@@ -158,14 +157,14 @@ div.subnav {
 		border-left: 1px solid #222;
 		color: @white;
 	}
-	
+
 	.nav .open .dropdown-toggle {
 		border: 0;
 		border-left: 1px solid #222;
 	    border-bottom: 2px solid @blue;
 		background-color: #060606;
 	}
-	
+
 	.nav .open .dropdown-menu {
 		background-color: @grayDarker;
 		border-left: solid 1px rgba(255, 255, 255, 0.1);
@@ -183,7 +182,7 @@ div.subnav {
 		border-top: 1px solid #222;
 		border-left: 1px solid #222;
 	}
-	
+
 	.subnav .nav > li + li > a:hover,
 	.subnav .nav > li:first-child > a:hover {
 			border-bottom: 0;
@@ -195,20 +194,20 @@ div.subnav {
 // -----------------------------------------------------
 
 .nav-list {
-	
+
 	li > a {
-		text-shadow: none;	
+		text-shadow: none;
 	}
-	
+
 	li > a:hover {
 		background-color: @blue;
-		color: @white;	
+		color: @white;
 	}
-	
+
 	.nav-header {
 		text-shadow: none;
 	}
-	
+
 	.divider {
 		background-color: transparent;
 		border-bottom: 1px solid #222;
@@ -216,9 +215,9 @@ div.subnav {
 }
 
 .nav-tabs {
-	
+
 	border-bottom: 1px solid #222;
-	
+
 	li > a:hover,
 	li.active > a,
 	li.active > a:hover {
@@ -226,12 +225,12 @@ div.subnav {
 		background-color: @blue;
 		color: @white;
 	}
-	
+
 	.open .dropdown-toggle {
 		background-color: #060606 !important;
 		border: 1px solid #222;
 	}
-	
+
 	.dropdown-menu li > a:hover {
 		border: none;
 	}
@@ -241,24 +240,24 @@ div.subnav {
 
 	li > a:hover {
 		background-color: @blue;
-		color: @white;	
+		color: @white;
 	}
-	
+
 	.open .dropdown-toggle {
 		background-color: #060606;
 	}
-			
+
 	.dropdown-menu li > a:hover {
 		border: none;
 	}
 }
 
 .nav-stacked {
-	
+
 	li > a {
-		border: 1px solid #222 !important;	
+		border: 1px solid #222 !important;
 	}
-	
+
 	li > a:hover,
 	li.active > a {
 		background-color: @blue;
@@ -279,12 +278,12 @@ div.subnav {
 	border-width: 0;
 	.box-shadow(none);
 	font-size: 14px;
-	
+
 	li > a {
 		color: @blue;
 		text-shadow: none;
 	}
-	
+
 	li.active {
 		text-shadow: none;
 	}
@@ -294,16 +293,16 @@ div.subnav {
 	ul {
 		.box-shadow(none);
 	}
-	
+
 	a {
 		border: 0;
 		font-size: 14px;
 	}
-	
+
 	a:hover, .active a {
 		background-color: @blue;
 		color: @white;
-	}	
+	}
 }
 
 // BUTTONS
@@ -314,7 +313,7 @@ div.subnav {
 	.buttonBackground(darken(@gray, 20%), darken(@gray, 30%));
 	color: @white;
 	text-shadow: none;
-	
+
 	&:hover {
 		text-shadow: none;
 	  	color: @white;
@@ -363,7 +362,7 @@ div.subnav {
 
 input, textarea, select {
 	border-width: 2px;
-} 
+}
 
 legend, label {
 	color: @textColor;
@@ -405,7 +404,7 @@ select:focus {
 
 .modal {
  	.border-radius(1px);
-	border-top: solid 1px rgba(255, 255, 255, 0.3);
+	border-top: solid 1px lighten(@grayDark, 5%);
 	background-color: @grayDark;
 }
 
@@ -433,13 +432,13 @@ code, pre {
 
 .well, .hero-unit {
 	background-color: #131517;
-	border-top: solid 1px rgba(255, 255, 255, 0.1);
+	border-top: solid 1px lighten(@grayDark, 5%);
 	.box-shadow(0 2px 4px rgba(0,0,0,.8));
 }
 
 blockquote {
 	border-left: 5px solid @blue;
-	
+
 	&.pull-right {
 		border-right: 5px solid @blue;
 	}

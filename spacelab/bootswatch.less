@@ -1,32 +1,37 @@
 // Bootswatch.less
 // Swatch: Spacelab
-// Version: 2.0.3
+// Version: 2.0.4
 // -----------------------------------------------------
 
 // NAVBAR
 // -----------------------------------------------------
 
-// navbar style
 .navbar {
+
 	border-bottom: 1px solid #CACACA;
-	
+
 	.navbar-inner {
 		.box-shadow(0 1px 0 rgba(255,255,255,0.4)~", "0 0 10px rgba(0,0,0,0.1));
 	}
-	
+
 	.brand {
 		font-weight: bold;
-	
+
 		&:hover {
 			color: @linkColor;
 		}
 	}
-	
+
+	.navbar-text {
+		line-height: 38px;
+		padding: 0 10px;
+	}
+
 	.nav > li > a {
 		font-weight: bold;
 		text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 	}
-	
+
 	.nav .active > a {
 		background-color: transparent;
 		color: @textColor;
@@ -36,17 +41,17 @@
 			color: @linkColor;
 		}
 	}
-	
+
 	.nav > li > a:hover,
 	.nav li.open.dropdown .dropdown-toggle {
 		color: @linkColor;
 	}
-	
+
 	.nav .dropdown-toggle .caret {
 		border-top-color: @textColor;
 		opacity: 1;
 	}
-	
+
 	.navbar-search .search-query,
 	.navbar-search .search-query:hover {
 		border: none;
@@ -60,7 +65,7 @@
 			color: @textColor;
 		}
 	}
-	
+
 	.nav-collapse.in .navbar-search {
 		border-top: none;
 		border-bottom: none;
@@ -92,16 +97,16 @@
 }
 
 div.subnav {
-	
+
 	.nav > li > a {
 		font-weight: bold;
-		color: #777;
+		color: @textColor;
 
 		&:hover {
 			color: @linkColor;
 		}
 	}
-	
+
 	.nav > li.active > a {
 		color: @textColor;
 
@@ -109,17 +114,17 @@ div.subnav {
 			color: @grayDark;
 		}
 	}
-	
+
 	.nav > li > .dropdown-toggle {
 		background-color: transparent;
 	}
-	
+
 	.nav > li.dropdown.open > .dropdown-toggle {
 		border-left: 1px solid whiteSmoke;
 		border-right: 1px solid #E5E5E5;
 		color: @linkColor;
 	}
-	
+
 	.nav > .open > .dropdown-toggle:hover .caret {
 		border-top-color: @linkColor;
 	}
