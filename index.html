@@ -45,7 +45,7 @@
 	            <span class="icon-bar"></span>
 			</a>
           <a class="brand" href="./">Bootswatch</a>
-          <div class="nav-collapse">
+          <div class="nav-collapse" id="main-menu">
 
           </div><!--/.nav-collapse -->
         </div>
@@ -117,13 +117,14 @@
 			    <h3>API</h3>
 			  </div>
 			  <div class="modal-body">
-				<h4>Properties</h4>
-			    <p>The swatches are housed in an array called <code>themes</code>, and each swatch has the following properties: <code>name</code>, <code>description</code>, <code>preview</code>, <code>thumbnail</code>, <code>css</code>, <code>css-min</code>, <code>less</code>, and <code>less-variables</code>.
 				<h4>Request</h4>
-			    <p>CORS and JSONP are supported. Send your request to <code>http://jsonp.jit.su/?url=http://bootswatch.com/api/themes.json</code></p>
+			    <p>Send your request to <code>http://api.bootswatch.com</code>. CORS and JSONP are supported.</p>
+				<h4>Response</h4>
+			    <p>This returns a <code>themes</code> array, and each theme has the following properties: <code>name</code>, <code>description</code>, <code>preview</code>, <code>thumbnail</code>, <code>css</code>, <code>css-min</code>, <code>less</code>, and <code>less-variables</code>.
 				<h4>Demo</h4>
-			    <p>A <a target="_blank" href="http://jsbin.com/abinec/1/edit">simple example</a>, using <a target="_blank" href="https://github.com/janl/mustache.js">mustache.js</a> for templating.</p>
-				<p>Thanks to <a target="_blank" href="http://www.aidanfeldman.com/">Aidan Feldman</a> for <a target="_blank" href="http://jsonp.jit.su/">his JSONP proxy</a>.</p>
+			    <p>A <a target="_blank" href="http://jsbin.com/asowud/1/edit">simple example</a>, using <a target="_blank" href="https://github.com/janl/mustache.js">mustache.js</a> for templating.</p>
+				<h4>Credits</h4>
+				<p>Thanks to <a target="_blank" href="http://www.jostylr.com/">James Taylor</a> for <a target="_blank" href="https://github.com/jostylr/cors-lite">cors-lite</a>.</p>
 			  </div>
 			  <div class="modal-footer">
 			    <a href="#" class="btn" data-dismiss="modal">Close</a>
@@ -705,7 +706,7 @@
 
       <footer>
 		<p class="pull-right"><a href="#">Back to top</a></p>
-		Made by <a target="_blank" href="http://thomaspark.me" onclick="pageTracker._link(this.href); return false;">Thomas Park</a>. Submissions and feedback welcome at <a href="mailto:thomas@thomaspark.me">thomas@thomaspark.me</a>.<br/>
+		Made by <a target="_blank" href="http://thomaspark.me" onclick="pageTracker._link(this.href); return false;">Thomas Park</a>. Feedback welcome at <a href="mailto:thomas@thomaspark.me">thomas@thomaspark.me</a>.<br/>
 		Code licensed under the <a target="_blank" href="http://www.apache.org/licenses/LICENSE-2.0">Apache License v2.0</a>.<br/>
 		Based on <a target="_blank" href="http://twitter.github.com/bootstrap/">Bootstrap</a>. Hosted on <a target="_blank" href="http://pages.github.com/">GitHub</a>. Icons from <a target="_blank" href="http://glyphicons.com/">Glyphicons</a>. Web fonts from <a target="_blank" href="http://www.google.com/webfonts">Google</a>.</p>
       </footer>
@@ -718,13 +719,21 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/bootstrap-dropdown.js"></script>
-		<script src="assets/js/bootstrap-tooltip.js"></script>
+	<script src="assets/js/bootstrap-tooltip.js"></script>
     <script src="assets/js/bootstrap-collapse.js"></script>
     <script src="assets/js/bootstrap-modal.js"></script>
     <script src="assets/js/bootstrap-transition.js"></script>
     <script src="js/bootswatch.js"></script>
 	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	<script>
+		var taglines = [];
+		taglines.push('Free themes for <a target="_blank" href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>');
+		taglines.push('Add color to your <a target="_blank" href="http://twitter.github.com/bootstrap/">Bootstrap</a> site without touching a color picker');
+		taglines.push('Saving the web from default <a target="_blank" href="http://twitter.github.com/bootstrap/">Bootstrap</a>');
 
+		var line = Math.floor((taglines.length) * Math.random());
+		$('#tagline').html(taglines[line]);
+	</script>
 
   </body>
 </html>
