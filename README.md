@@ -38,7 +38,6 @@ Author
 [Thomas Park](http://github.com/thomaspark)
 
 + http://thomaspark.me
-+ http://twitter.com/parqin
 
 Thanks
 ------
