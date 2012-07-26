@@ -38,7 +38,7 @@ body {
 }
 
 .twitter-follow-button {
-  width: 115px !important;
+  width: 150px !important;
 }
 
 .rss-button {
@@ -104,6 +104,14 @@ body {
  vertical-align: text-top;
 }
 
+.links {
+	margin-bottom: 20px;
+}
+
+.links > a {
+	margin-right: 10px;
+} 
+
 /* Landscape phones and down */
 @media (max-width: 480px) {
 
@@ -127,7 +135,7 @@ body {
 	}
 
 	.about {
-	  margin-top: -10px;
+	  margin-top: 0;
 	}
 
 	.about h3 {
@@ -141,6 +149,10 @@ body {
 	.hero-unit {
 		margin-top: 0;
 		padding-bottom: 60px;
+	}
+
+	.about {
+		margin-top: 0;
 	}
 }
 
