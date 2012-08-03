@@ -86,7 +86,7 @@ code, pre {
 
 	.navbar-text {
 		font-size: 20px;
-		padding-top: 12px;
+		padding: 11px 10px 0;
 	}
 
 	.navbar-search {
@@ -141,9 +141,10 @@ div.subnav {
 	font-size: 18px;
 
 	.nav > li > a {
-		color: @linkColor;
+		padding: 13px 12px 9px;
 		border-color: transparent;
 		background-color: transparent;
+		color: @linkColor;
 	}
 
 	.nav > li + li > a {
@@ -451,6 +452,7 @@ legend {
 // --------------------------------------------------
 
 .modal-header {
+	padding: 12px 15px 6px;
 	background-color: @green;
 }
 
@@ -459,6 +461,10 @@ legend {
 	background-color: @linkColor;
 	border: none;
 	.box-shadow(none);
+
+	label {
+		color: @textColor;
+	}
 }
 
 .modal-footer {
