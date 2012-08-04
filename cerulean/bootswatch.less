@@ -19,13 +19,17 @@
 		#gradient > .vertical-three-colors(@navbarBackground, @navbarBackground, 90%, @navbarBackgroundHighlight);
 	}
 
+	.brand {
+		padding: 15px 20px;
+	}
+
+	.nav > li > a {
+		padding: 16px 10px 14px;
+	}
+
 	.nav li.dropdown.active > .dropdown-toggle,
 	.nav li.dropdown.active.open > .dropdown-toggle {
 		background-color: @navbarLinkBackgroundActive;
-	}
-
-	.search-query {
-		border: 1px solid darken(@linkColor, 10%);
 	}
 
 	.nav-collapse.in > .nav > li .dropdown-menu a {
@@ -44,8 +48,19 @@
 		}
 	}
 
+	.search-query {
+		border: 1px solid darken(@linkColor, 10%);
+	}
+
 	.btn-navbar:hover {
 	    background-color: darken(@white, 20%);
+	}
+
+	.navbar-text {
+		padding: 19px 10px 18px;
+		line-height: 13px;
+		color: rgba(0, 0, 0, 0.5);
+		text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.25);
 	}
 }
 
