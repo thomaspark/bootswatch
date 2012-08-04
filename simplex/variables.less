@@ -21,42 +21,42 @@
 
 // Accent colors
 // -------------------------
-@blue:                  #15C;
+@blue:                  #029ACF;
 @blueDark:              #043755;
 @green:                 #3D9400;
 @red:                   #E32C3B;
 @yellow:                #FFCA27;
-@orange:                #FF6600;
+@orange:                #DA370F;
 @pink:                  #ED2590;
 @purple:                #9B479F;
 
 
 // Scaffolding
 // -------------------------
-@bodyBackground:        #F3F3F3;
+@bodyBackground:        #F7F7F7;
 @textColor:             @gray;
 
 
 // Links
 // -------------------------
-@linkColor:             #366DDC;
-@linkColorHover:        darken(@linkColor, 15%);
+@linkColor:             @orange;
+@linkColorHover:        @linkColor;
 
 
 // Typography
 // -------------------------
-@sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
+@sansFontFamily:        "Josefin Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 @serifFontFamily:       Georgia, "Times New Roman", Times, serif;
 @monoFontFamily:        Menlo, Monaco, Consolas, "Courier New", monospace;
 
-@baseFontSize:          13px;
+@baseFontSize:          15px;
 @baseFontFamily:        @sansFontFamily;
-@baseLineHeight:        18px;
+@baseLineHeight:        20px;
 @altFontFamily:         @serifFontFamily;
 
 @headingsFontFamily:    inherit; // empty to use BS default, @baseFontFamily
 @headingsFontWeight:    bold;    // instead of browser default, bold
-@headingsColor:         @grayDark; // empty to use BS default, @textColor
+@headingsColor:         inherit; // empty to use BS default, @textColor
 
 
 // Tables
@@ -73,20 +73,20 @@
 @btnBackgroundHighlight:            darken(@white, 10%);
 @btnBorder:                         darken(@white, 20%);
 
-@btnPrimaryBackground:              @linkColor;
-@btnPrimaryBackgroundHighlight:     spin(@btnPrimaryBackground, 15%);
+@btnPrimaryBackground:              lighten(@linkColor, 5%);
+@btnPrimaryBackgroundHighlight:     @linkColor;
 
-@btnInfoBackground:                 #5bc0de;
-@btnInfoBackgroundHighlight:        #2f96b4;
+@btnInfoBackground:                 lighten(#5bc0de, 5%);
+@btnInfoBackgroundHighlight:        #5bc0de;
 
-@btnSuccessBackground:              #62c462;
-@btnSuccessBackgroundHighlight:     #51a351;
+@btnSuccessBackground:              lighten(@green, 5%);
+@btnSuccessBackgroundHighlight:     @green;
 
-@btnWarningBackground:              lighten(@orange, 15%);
-@btnWarningBackgroundHighlight:     @orange;
+@btnWarningBackground:              lighten(@yellow, 5%);
+@btnWarningBackgroundHighlight:     @yellow;
 
-@btnDangerBackground:               #ee5f5b;
-@btnDangerBackgroundHighlight:      #bd362f;
+@btnDangerBackground:               lighten(@red, 5%);
+@btnDangerBackgroundHighlight:      @red;
 
 @btnInverseBackground:              @gray;
 @btnInverseBackgroundHighlight:     @grayDarker;
@@ -104,9 +104,9 @@
 // -------------------------
 @dropdownBackground:            @white;
 @dropdownBorder:                rgba(0,0,0,.2);
-@dropdownLinkColor:             @grayDark;
-@dropdownLinkColorHover:        @white;
-@dropdownLinkBackgroundHover:   @linkColor;
+@dropdownLinkColor:             @textColor;
+@dropdownLinkColorHover:        @linkColor;
+@dropdownLinkBackgroundHover:   #FBEBE9;
 @dropdownDividerTop:            #e5e5e5;
 @dropdownDividerBottom:         @white;
 
@@ -146,13 +146,13 @@
 // Navbar
 // -------------------------
 @navbarHeight:                    40px;
-@navbarBackground:                #F8F8F8;
+@navbarBackground:                #fefefe;
 @navbarBackgroundHighlight:       @navbarBackground;
 
 @navbarText:                      @gray;
 @navbarLinkColor:                 @gray;
-@navbarLinkColorHover:            @grayDark;
-@navbarLinkColorActive:           @navbarLinkColorHover;
+@navbarLinkColorHover:            @orange;
+@navbarLinkColorActive:           @orange;
 @navbarLinkBackgroundHover:       transparent;
 @navbarLinkBackgroundActive:      @navbarBackground;
 
