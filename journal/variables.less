@@ -12,9 +12,9 @@
 // -------------------------
 @black:                 #000;
 @grayDarker:            #222;
-@grayDark:              #333;
-@gray:                  #888;
-@grayLight:             #999;
+@grayDark:              #888;
+@gray:                  #999;
+@grayLight:             #bbb;
 @grayLighter:           #eee;
 @white:                 #fff;
 
@@ -33,37 +33,37 @@
 
 // Scaffolding
 // -------------------------
-@bodyBackground:        #FCFBFD;
-@textColor:             @grayDarker;
+@bodyBackground:        @white;
+@textColor:             @grayDark;
 
 
 // Links
 // -------------------------
 @linkColor:             @textColor;
-@linkColorHover:        @gray;
+@linkColorHover:        @linkColor;
 
 
 // Typography
 // -------------------------
-@sansFontFamily:        'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+@sansFontFamily:        "News Cycle", "Arial Narrow Bold", sans-serif;
 @serifFontFamily:       Georgia, "Times New Roman", Times, serif;
 @monoFontFamily:        Menlo, Monaco, Consolas, "Courier New", monospace;
 
-@baseFontSize:          14px;
-@baseFontFamily:        @sansFontFamily;
+@baseFontSize:          13px;
+@baseFontFamily:        @serifFontFamily;
 @baseLineHeight:        18px;
-@altFontFamily:         @serifFontFamily;
+@altFontFamily:         @sansFontFamily;
 
-@headingsFontFamily:    inherit; // empty to use BS default, @baseFontFamily
+@headingsFontFamily:    @sansFontFamily; // empty to use BS default, @baseFontFamily
 @headingsFontWeight:    bold;    // instead of browser default, bold
-@headingsColor:         inherit; // empty to use BS default, @textColor
+@headingsColor:         @black; // empty to use BS default, @textColor
 
 
 // Tables
 // -------------------------
 @tableBackground:                   transparent; // overall background-color
-@tableBackgroundAccent:             @grayLighter; // for striping
-@tableBackgroundHover:              #f5f5f5; // for hover
+@tableBackgroundAccent:             #f5f5f5; // for striping
+@tableBackgroundHover:              @grayLighter; // for hover
 @tableBorder:                       #ddd; // table and cell border
 
 
@@ -71,25 +71,25 @@
 // -------------------------
 @btnBackground:                     @white;
 @btnBackgroundHighlight:            darken(@white, 10%);
-@btnBorder:                         darken(@white, 20%);
+@btnBorder:                         darken(@white, 15%);
 
-@btnPrimaryBackground:              @linkColor;
-@btnPrimaryBackgroundHighlight:     spin(@btnPrimaryBackground, 15%);
+@btnPrimaryBackground:              lighten(@linkColor, 5%);
+@btnPrimaryBackgroundHighlight:     @linkColor;
 
-@btnInfoBackground:                 #5bc0de;
-@btnInfoBackgroundHighlight:        #2f96b4;
+@btnInfoBackground:                 lighten(@blue, 5%);
+@btnInfoBackgroundHighlight:        @blue;
 
-@btnSuccessBackground:              #62c462;
-@btnSuccessBackgroundHighlight:     #51a351;
+@btnSuccessBackground:              lighten(@green, 5%);
+@btnSuccessBackgroundHighlight:     @green;
 
 @btnWarningBackground:              lighten(@orange, 10%);
 @btnWarningBackgroundHighlight:     @orange;
 
-@btnDangerBackground:               #ee5f5b;
-@btnDangerBackgroundHighlight:      #bd362f;
+@btnDangerBackground:               lighten(@red, 10%);
+@btnDangerBackgroundHighlight:      @red;
 
-@btnInverseBackground:              @linkColor;
-@btnInverseBackgroundHighlight:     darken(@linkColor, 5%);
+@btnInverseBackground:              lighten(@grayDark, 5%);
+@btnInverseBackgroundHighlight:     @grayDark;
 
 
 // Forms
@@ -104,11 +104,11 @@
 // -------------------------
 @dropdownBackground:            @bodyBackground;
 @dropdownBorder:                rgba(0,0,0,.2);
-@dropdownLinkColor:             @textColor;
-@dropdownLinkColorHover:        @textColor;
-@dropdownLinkBackgroundHover:   #eee;
-@dropdownDividerTop:            #e5e5e5;
-@dropdownDividerBottom:         @white;
+@dropdownLinkColor:             @headingsColor;
+@dropdownLinkColorHover:        @headingsColor;
+@dropdownLinkBackgroundHover:   @grayLighter;
+@dropdownDividerTop:            @grayLighter;
+@dropdownDividerBottom:         @grayLighter;
 
 
 
@@ -145,16 +145,16 @@
 
 // Navbar
 // -------------------------
-@navbarHeight:                    70px;
+@navbarHeight:                    60px;
 @navbarBackground:                @bodyBackground;
 @navbarBackgroundHighlight:       @bodyBackground;
 
 @navbarText:                      @textColor;
-@navbarLinkColor:                 @linkColor;
-@navbarLinkColorHover:            @linkColor;
-@navbarLinkColorActive:           @navbarLinkColorHover;
-@navbarLinkBackgroundHover:       @grayLighter;
-@navbarLinkBackgroundActive:      @grayLighter;
+@navbarLinkColor:                 @headingsColor;
+@navbarLinkColorHover:            @headingsColor;
+@navbarLinkColorActive:           @headingsColor;
+@navbarLinkBackgroundHover:       transparent;
+@navbarLinkBackgroundActive:      transparent;
 
 @navbarSearchBackground:          lighten(@navbarBackground, 25%);
 @navbarSearchBackgroundFocus:     @white;
