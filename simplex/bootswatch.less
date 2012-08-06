@@ -364,6 +364,10 @@ i[class^="icon-"]{
 	vertical-align: -2px;
 }
 
+hr {
+	border-bottom: none;
+}
+
 .progress {
     #gradient > .vertical(#e0e0e0, #e8e8e8);
 }
@@ -385,6 +389,11 @@ i[class^="icon-"]{
 	.box-shadow(@boxShadow~", "-1px -1px 0 rgba(0, 0, 0, 0.1));
 	background-color: @white;
 	border: none;
+}
+
+.thumbnail {
+	padding: 10px;
+	background-color: @white;
 }
 
 .breadcrumb {
@@ -427,7 +436,7 @@ i[class^="icon-"]{
 
 	.nav-collapse.collapse .navbar-form,
 	.nav-collapse.collapse .navbar-search {
-		border-top: 1px solid @hrBorder;
-		border-bottom: 1px solid @hrBorder;
+		border-top: 1px solid @grayLighter;
+		border-bottom: 1px solid @grayLighter;
 	}
 }
