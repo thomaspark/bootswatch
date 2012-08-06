@@ -4207,6 +4207,14 @@ h5,
 h6 {
   line-height: 1.5em;
 }
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: #000000;
+}
 h1 {
   font-size: 48px;
 }
@@ -4456,6 +4464,9 @@ pre.prettyprint {
   -moz-box-shadow: none;
   box-shadow: none;
 }
+hr {
+  border-bottom: 1px solid #eeeeee;
+}
 @media (max-width: 768px) {
   div.subnav {
     height: auto;
@@ -4474,6 +4485,14 @@ pre.prettyprint {
   .nav-pills .open .dropdown-toggle,
   .nav > li.dropdown.open.active > a:hover {
     border-color: #e5e5e5;
+  }
+}
+@media (max-width: 979px) {
+  .nav-collapse .navbar-form,
+  .nav-collapse .navbar-search {
+    margin-bottom: 0;
+    border-top: 2px solid #eeeeee;
+    border-bottom: 2px solid #eeeeee;
   }
 }
 .pull-right {

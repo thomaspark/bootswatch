@@ -10,6 +10,10 @@
 
 h1, h2, h3, h4, h5, h6 {
 	line-height: 1.5em;
+
+	a {
+		color: @headingsColor;
+	}
 }
 
 h1 {
@@ -270,6 +274,10 @@ code, pre, pre.prettyprint {
 	.box-shadow(none);
 }
 
+hr {
+	border-bottom: 1px solid @grayLighter;
+}
+
 @media (max-width: 768px) {
 
 	div.subnav {
@@ -293,4 +301,15 @@ code, pre, pre.prettyprint {
 	.nav > li.dropdown.open.active > a:hover {
 		border-color: #e5e5e5;
 	}
+}
+
+@media (max-width: 979px) {
+
+	.nav-collapse .navbar-form,
+	.nav-collapse .navbar-search {
+		margin-bottom: 0;
+		border-top: 2px solid @grayLighter;
+		border-bottom: 2px solid @grayLighter;
+	} 
+
 }
