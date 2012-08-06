@@ -24,7 +24,7 @@ h6 {
 	}
 
 	.brand {
-		padding: 13px 20px 10px;
+		padding: 12px 20px 8px;
 		font-weight: bold;
 
 		&:hover {
@@ -33,13 +33,18 @@ h6 {
 	}
 
 	.navbar-text {
-		padding: 15px 20px 9px;
+		padding: 14px 15px 7px;
 		line-height: 19px;
 		color: @grayLight;
 	}
 
+	.divider-vertical {
+		height: @navbarHeight - 1;
+		background-color: @hrBorder;
+	}
+
 	.nav > li > a {
-		padding: 15px 20px 9px;
+		padding: 14px 15px 7px;
 		text-shadow: none;
 
 		&:hover {
@@ -50,6 +55,14 @@ h6 {
 	.nav .active > a,
 	.nav .active > a:hover {
 		background-color: transparent;
+	}
+
+	.navbar-search {
+		margin-top: 5px;
+
+		input[type="text"] {
+			margin-bottom: 5px;
+		}
 	}
 
 	.nav li.dropdown.open > .dropdown-toggle,
@@ -63,7 +76,7 @@ h6 {
 		opacity: 1;
 	}
 
-	.nav li.dropdown:hover .dropdown-toggle .caret,
+	.nav li.dropdown .dropdown-toggle:hover .caret,
 	.nav li.dropdown.active > .dropdown-toggle .caret, 
 	.nav li.dropdown.open .dropdown-toggle .caret {
 		border-top-color: @linkColor;
@@ -128,7 +141,7 @@ div.subnav {
 		opacity: 1;
 	}
 
-	.nav li.dropdown:hover .dropdown-toggle .caret,
+	.nav li.dropdown .dropdown-toggle:hover .caret,
 	.nav li.dropdown.active .dropdown-toggle .caret,
 	.nav li.dropdown.open .dropdown-toggle .caret {
 		border-top-color: @linkColor;
@@ -136,8 +149,8 @@ div.subnav {
 		opacity: 1;
 	}
 
-	.dropdown-menu a:hover {
-		background-color: @dropdownLinkBackgroundHover;
+	.dropdown.open:hover .dropdown-toggle {
+		background-color: transparent;
 	}
 }
 
@@ -255,7 +268,7 @@ div.subnav {
 		opacity: 1;
 	}
 
-	.dropdown:hover .dropdown-toggle .caret {
+	.dropdown .dropdown-toggle:hover .caret {
 		border-top-color: @linkColor;
 		border-bottom-color: @linkColor;
 	}
@@ -308,10 +321,6 @@ legend {
 	font-size: 13px;
 }
 
-// TABLES
-// -----------------------------------------------------
-
-
 // BUTTONS
 // -----------------------------------------------------
 
@@ -361,6 +370,9 @@ i[class^="icon-"]{
 
 .label {
 	padding: 4px 4px 3px;
+	margin-left: 1px;
+	margin-right: 1px;
+	line-height: 26px;
 	font-weight: normal;
 }
 
@@ -409,5 +421,13 @@ i[class^="icon-"]{
 		background-color: @dropdownLinkBackgroundHover;
 		color: @linkColor;
 	}
+}
 
+@media (max-width: 979px) {
+
+	.nav-collapse.collapse .navbar-form,
+	.nav-collapse.collapse .navbar-search {
+		border-top: 1px solid @hrBorder;
+		border-bottom: 1px solid @hrBorder;
+	}
 }
