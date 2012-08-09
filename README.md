@@ -3,13 +3,16 @@ Bootswatch
 
 Bootswatch is a collection of free themes for [Twitter Bootstrap](http://twitter.github.com/bootstrap/). Check it out at [bootswatch.com](http://bootswatch.com).
 
-How do I use Bootswatch?
+Usage
 -----
 Head over to [Bootswatch](http://bootswatch.com) and download the `bootstrap.min.css` file associated with a swatch.
 
 In Bootstrap’s CSS directory, you’ll find a stylesheet in full (`bootstrap.css`) and minified (`bootstrap.min.css`) forms. Rename them or move them to a safe place, and replace with the downloaded file. If you ever change your mind, simply drop in another swatch or switch back to the original.
 
-How do I extend Bootswatch?
+For use with Rails, check out [bootswatch-rails](https://github.com/maxim/bootswatch-rails) (Sass) and [twitter-bootswatch-rails](https://github.com/scottvrosenthal/twitter-bootswatch-rails) (LESS).
+
+
+Customization
 ------
 Bootswatch is an open source project, and you’re welcome to modify the swatches further or create your own. If you’re interested, fork or follow the GitHub repository. The files of interest are in the `gh-pages` branch.
 
@@ -17,7 +20,7 @@ Each raw swatch consists of two LESS files. One is `variables.less`, which is in
 
 Check out the README in the `swatchmaker` directory for step-by-step instructions on building your own swatch.
 
-How do I integrate with Bootswatch?
+API
 -----
 
 A simple API is available for integrating your platform with Bootswatch.
@@ -27,7 +30,6 @@ The swatches are housed in an array called `themes`, and each swatch has the fol
 CORS and JSONP are supported. Send your request to `http://api.bootswatch.com`.
 
 A simple demo, using mustache.js for templating: http://jsbin.com/asowud/1/edit
-
 
 Feedback
 ------
