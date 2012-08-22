@@ -549,11 +549,34 @@ input, textarea, .search-query, .uneditable-input,
 }
 
 .modal-header {
-	color: @navbarBackground;
+	background-color: @navbarBackground;
+	color: @white;
 }
 
 .modal-body {
-	color: @bodyBackground;
+	
+	color: @grayDark;
+
+	h1, h2, h3, h4, h5, h6,
+	legend {
+		color: @red;
+	}
+
+	label,
+	.input-file {
+		color: @grayDark;
+	}
+
+	.help-block,
+	.help-inline {
+		color: @grayLight;
+	}
+
+	textarea,
+	input,
+	.uneditable-input {
+		border: 1px solid @grayLight;
+	}
 }
 
 // MISCELLANEOUS
@@ -657,7 +680,7 @@ code, pre {
 }
 
 .thumbnail {
-	border: 0px solid transparent;
+	border: 0 solid transparent;
 	.border-radius(0);
 	.box-shadow(none);
 }
