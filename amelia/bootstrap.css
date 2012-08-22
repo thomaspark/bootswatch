@@ -671,7 +671,7 @@ pre {
   padding: 0 3px 2px;
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   font-size: 12px;
-  color: #333333;
+  color: #444444;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -727,7 +727,7 @@ legend {
   margin-bottom: 20px;
   font-size: 21px;
   line-height: 40px;
-  color: #333333;
+  color: #444444;
   border: 0;
   border-bottom: 1px solid #e5e5e5;
 }
@@ -2214,7 +2214,7 @@ table .span24 {
   clear: both;
   font-weight: normal;
   line-height: 20px;
-  color: #333333;
+  color: #444444;
   white-space: nowrap;
 }
 .dropdown-menu li > a:hover,
@@ -2409,7 +2409,7 @@ button.close {
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
-  color: #333333;
+  color: #444444;
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
   background-color: #dddddd;
   background-image: -moz-linear-gradient(top, #dddddd, #dddddd);
@@ -2441,7 +2441,7 @@ button.close {
 .btn.active,
 .btn.disabled,
 .btn[disabled] {
-  color: #333333;
+  color: #444444;
   background-color: #dddddd;
   *background-color: #d0d0d0;
 }
@@ -2453,7 +2453,7 @@ button.close {
   *margin-left: 0;
 }
 .btn:hover {
-  color: #333333;
+  color: #444444;
   text-decoration: none;
   background-color: #e6e6e6;
   *background-color: #d9d9d9;
@@ -3787,7 +3787,7 @@ input[type="submit"].btn.btn-mini {
 .navbar-inverse .navbar-search .search-query:focus,
 .navbar-inverse .navbar-search .search-query.focused {
   padding: 5px 15px;
-  color: #333333;
+  color: #444444;
   text-shadow: 0 1px 0 #ffffff;
   background-color: #ffffff;
   border: 0;
@@ -4185,8 +4185,8 @@ input[type="submit"].btn.btn-mini {
   font-size: 14px;
   font-weight: normal;
   line-height: 18px;
-  background-color: #f7f7f7;
-  border-bottom: 1px solid #ebebeb;
+  background-color: #ad1d28;
+  border-bottom: 1px solid #971923;
   -webkit-border-radius: 5px 5px 0 0;
   -moz-border-radius: 5px 5px 0 0;
   border-radius: 5px 5px 0 0;
@@ -4381,11 +4381,11 @@ a.badge:hover {
 }
 .label-inverse,
 .badge-inverse {
-  background-color: #333333;
+  background-color: #444444;
 }
 .label-inverse[href],
 .badge-inverse[href] {
-  background-color: #1a1a1a;
+  background-color: #2b2b2b;
 }
 .btn .label,
 .btn .badge {
@@ -4698,7 +4698,7 @@ a.badge:hover {
   right: 0;
   bottom: 0;
   padding: 15px;
-  background: #333333;
+  background: #444444;
   background: rgba(0, 0, 0, 0.75);
 }
 .carousel-caption h4,
@@ -5378,7 +5378,7 @@ textarea,
   color: #ffffff;
 }
 .modal-body {
-  color: #333333;
+  color: #444444;
 }
 .modal-body h1,
 .modal-body h2,
@@ -5391,7 +5391,7 @@ textarea,
 }
 .modal-body label,
 .modal-body .input-file {
-  color: #333333;
+  color: #444444;
 }
 .modal-body .help-block,
 .modal-body .help-inline {
@@ -5434,7 +5434,7 @@ pre {
 .label:hover {
   background-color: #dddddd;
   text-shadow: none;
-  color: #333333;
+  color: #444444;
 }
 .label-warning,
 .label-warning:hover,
@@ -5536,6 +5536,19 @@ blockquote.pull-right {
 }
 blockquote small {
   color: rgba(255, 255, 255, 0.6);
+}
+.popover {
+  padding: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  color: #444444;
+}
+.popover .popover-title {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  color: #ffffff;
 }
 .pull-right {
   float: right;
