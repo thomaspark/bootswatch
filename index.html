@@ -518,7 +518,7 @@
 
 		parseRSS('http://feeds.feedburner.com/bootswatch', function(d){
 			var h ='<strong>Recent updates:</strong> ';
-			for (var i = 0; i < 4; i++){
+			for (var i = 0; i < 3; i++){
 				h = h + '<a href="' + d.entries[i].link + '">' + d.entries[i].title + '...</a>&nbsp;&nbsp;';
 			}
 			document.getElementById('ticker').innerHTML = h;
