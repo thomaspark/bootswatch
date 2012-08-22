@@ -53,9 +53,7 @@
 
 	<div class="container">
 
-		<!-- Main hero unit for a primary marketing message or call to action -->
 		<div class="hero-unit">
-
 			<h1>Bootswatch</h1>
 			<p id="tagline">&nbsp;</p>
 
@@ -70,6 +68,14 @@
 				</div>
 				<div class="span1 rss">
 					<a class="btn rss-button" href="http://feeds.feedburner.com/bootswatch"><i class="icon-rss"></i><span>RSS</span></a>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="span12">
+				<div class="" id="ticker">
 				</div>
 			</div>
 		</div>
@@ -104,7 +110,7 @@
 			<div class="span4">
 				<img class="glyph" src="img/glyphicons_032_wifi_alt.png">
 				<h3>Stay Updated</h3>
-				<p>Be notified when new swatches are released by subscribing via <a href="http://feeds.feedburner.com/bootswatch">RSS feed</a>, <a href="http://feedburner.google.com/fb/a/mailverify?uri=bootswatch&loc=en_US">email</a>, or <a href="http://news.bootswatch.com" onclick="pageTracker._link(this.href); return false;">Tumblr</a>.</p>
+				<p>Be notified about updates by subscribing via <a href="http://feeds.feedburner.com/bootswatch">RSS feed</a>, <a href="http://feedburner.google.com/fb/a/mailverify?uri=bootswatch&loc=en_US">email</a>, or <a href="http://news.bootswatch.com" onclick="pageTracker._link(this.href); return false;">Tumblr</a>.</p>
 			</div>
 		</div>
 
@@ -266,7 +272,6 @@
 									<span class="caret"></span>
 								</a>
 								<ul class="dropdown-menu">
-									<!-- dropdown menu links -->
 									<li><a target="_blank" href="readable/bootstrap.min.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'readable', 'bootstrap.min.css']);">bootstrap.min.css</a></li>
 									<li><a target="_blank" href="readable/bootstrap.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'readable', 'bootstrap.css']);">bootstrap.css</a></li>
 									<li class="divider"></li>
@@ -639,9 +644,17 @@
 
 		var line = Math.floor((taglines.length) * Math.random());
 		$('#tagline').html(taglines[line]);
+
+		parseRSS('http://feeds.feedburner.com/bootswatch', function(d){
+			var h ='<strong>Recent updates:</strong> ';
+			for (var i = 0; i < 4; i++){
+				h = h + '<a href="' + d.entries[i].link + '">' + d.entries[i].title + '...</a>&nbsp;&nbsp;';
+			}
+			document.getElementById('ticker').innerHTML = h;
+		})
 	</script>
-	<script type="text/javascript" src="http://www.assoc-amazon.com/s/impression-counter?tag=bootswatch-20&o=1"></script>
-	<noscript><img src="http://www.assoc-amazon.com/s/noscript?tag=bootswatch-20" alt="" /></noscript>
+	<!-- <script type="text/javascript" src="http://www.assoc-amazon.com/s/impression-counter?tag=bootswatch-20&o=1"></script>
+	<noscript><img src="http://www.assoc-amazon.com/s/noscript?tag=bootswatch-20" alt="" /></noscript> -->
 
 
 </body>
