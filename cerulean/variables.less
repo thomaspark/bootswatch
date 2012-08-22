@@ -40,7 +40,7 @@
 
 // Links
 // -------------------------
-@linkColor:             #369BD7;
+@linkColor:             #2FA4E7;
 @linkColorHover:        darken(@linkColor, 15%);
 
 
@@ -50,9 +50,9 @@
 @serifFontFamily:       Georgia, "Times New Roman", Times, serif;
 @monoFontFamily:        Menlo, Monaco, Consolas, "Courier New", monospace;
 
-@baseFontSize:          13px;
+@baseFontSize:          14px;
 @baseFontFamily:        @sansFontFamily;
-@baseLineHeight:        18px;
+@baseLineHeight:        20px;
 @altFontFamily:         @monoFontFamily;
 
 @headingsFontFamily:    'Telex', sans-serif; // empty to use BS default, @baseFontFamily
@@ -164,10 +164,10 @@
 @navbarBorder:                    darken(@navbarBackground, 12%);
 
 @navbarText:                      @grayLighter;
-@navbarLinkColor:                 @grayLighter;
+@navbarLinkColor:                 @white;
 @navbarLinkColorHover:            @white;
 @navbarLinkColorActive:           @navbarLinkColorHover;
-@navbarLinkBackgroundHover:       transparent;
+@navbarLinkBackgroundHover:       rgba(0,0,0,.2);
 @navbarLinkBackgroundActive:      rgba(0,0,0,.2);
 
 @navbarBrandColor:                @navbarLinkColor;
@@ -179,10 +179,10 @@
 
 @navbarInverseText:                      @textColor;
 @navbarInverseLinkColor:                 @textColor;
-@navbarInverseLinkColorHover:            @headingsColor;
-@navbarInverseLinkColorActive:           @headingsColor;
-@navbarInverseLinkBackgroundHover:       transparent;
-@navbarInverseLinkBackgroundActive:      @navbarInverseBackground;
+@navbarInverseLinkColorHover:            @textColor;
+@navbarInverseLinkColorActive:           @textColor;
+@navbarInverseLinkBackgroundHover:       rgba(0,0,0,.05);
+@navbarInverseLinkBackgroundActive:      rgba(0,0,0,.05);
 
 @navbarInverseSearchBackground:          lighten(@navbarInverseBackground, 25%);
 @navbarInverseSearchBackgroundFocus:     @white;

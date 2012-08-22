@@ -14,10 +14,11 @@
 .navbar {
 
 	font-family: @headingsFontFamily;
+	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
 
 	.brand {
 		padding: 16px 20px 14px;
-		text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+		text-shadow: inherit;
 	}
 
 	li {
@@ -26,7 +27,7 @@
 
 	.nav > li > a {
 		padding: 16px 10px 14px;
-		text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+		text-shadow: inherit;
 	}
 
 	.search-query {
@@ -41,13 +42,8 @@
 		padding: 19px 10px 18px;
 		line-height: 13px;
 		color: rgba(0, 0, 0, 0.5);
-		text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.25);
+		text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
 	}
-
-	// .nav li.dropdown.active > .dropdown-toggle,
-	// .nav li.dropdown.active.open > .dropdown-toggle {
-	// 	background-color: @navbarLinkBackgroundActive;
-	// }
 
 	.nav-collapse.collapse {
 
@@ -82,6 +78,8 @@
 
 	&-inverse {
 
+		text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
+
 		.nav-collapse.collapse {
 
 			.nav li > a {
@@ -96,11 +94,17 @@
 				background-color: rgba(0, 0, 0, 0.1);
 			}
 		}
+
+		.navbar-search .search-query {
+			color: @textColor;
+		}
 	}
 }
 
 div.subnav {
+
 	font-family: @headingsFontFamily;
+	text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.2);
 
 	&-fixed {
 		top: @navbarHeight;
