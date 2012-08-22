@@ -1,12 +1,12 @@
 // Bootswatch.less
 // Swatch: Slate
-// Version: 2.0.4
+// Version: 2.1.0
 // -----------------------------------------------------
 
 // SCAFFOLDING
 // -----------------------------------------------------
 
-h1, h2, h3, h4, h5, h6, body, legend, label {
+h1, h2, h3, h4, h5, h6, legend, label {
 	text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
 }
 
@@ -26,14 +26,14 @@ h1, h2, h3, h4, h5, h6, body, legend, label {
 	}
 
 	.navbar-text {
-		padding: 0 10px;
-		line-height: 38px;
+		padding: 0 15px;
+		font-weight: bold;
 	}
 
 	.nav > li > a  {
 		text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-		border-right: 1px solid darken(@gray, 15%);
-		border-left: 1px solid @gray;
+		border-right: 1px solid rgba(0, 0, 0, 0.2);
+		border-left: 1px solid rgba(255, 255, 255, 0.1);
 
 		&:hover {
 			#gradient > .directional(@grayDarker, @grayDark, 280deg);
@@ -63,20 +63,51 @@ h1, h2, h3, h4, h5, h6, body, legend, label {
 		border-bottom: 6px solid @grayDark;
 	}
 
-	.nav-collapse.in > .nav > li > a,
-	.nav-collapse.in > .nav > li.active > a,
-	.nav-collapse.in > .nav > li > a:hover,
-	.nav-collapse.in > .nav > li.active > a:hover {
-		.box-shadow(none);
-		color: @grayLighter;
-		border: 1px solid transparent;
-		background-color: transparent;
-		background-image: none;
+	.nav-collapse.collapse {
+
+		.nav li > a,
+		.nav li.active > a,
+		.nav li > a:hover,
+		.nav li.active > a:hover {
+			.box-shadow(none);
+			color: @grayLighter;
+			border: 1px solid transparent;
+			background-color: transparent;
+			background-image: none;
+		}
+
+		.nav li > a:hover,
+		.nav li.active > a:hover {
+			background-color: @grayDarker;
+		}
+
+		.navbar-form,
+		.navbar-search {
+			border-color: transparent;
+			.box-shadow(none);
+		}
+
+		.nav-header {
+			color: @grayLight;
+		}
 	}
 
-	.nav-collapse.in > .nav > li > a:hover,
-	.nav-collapse.in > .nav > li.active > a:hover {
-		background-color: @grayDarker;
+	&-inverse {
+
+		.navbar-inner {
+			#gradient > .vertical-three-colors(darken(@grayDarker, 3%), darken(@grayDarker, 8%), 70%, darken(@grayDarker, 8%));
+		}
+
+		.nav li > a {
+			background-image: none;
+			background-color: transparent;
+		}
+
+		.nav li > a:hover,
+		.nav li.active > a,
+		.nav li.active > a:hover {
+			#gradient > .directional(darken(@grayDarker, 3%), @grayDarker, 280deg);
+		}
 	}
 }
 
@@ -196,10 +227,6 @@ div.subnav {
 // NAVIGATION
 // -----------------------------------------------------
 
-.pagination > ul {
-	.box-shadow(none);
-}
-
 .breadcrumb {
 	.box-shadow(none);
 }
@@ -220,35 +247,50 @@ div.subnav {
 	color: @white;
 }
 
-.pagination li > a,
-.pagination li.disabled > a {
-	border-left: 1px solid @gray;
-	border-right: 1px solid darken(@gray, 15%);
-	border-top: none;
-	border-bottom: none;
+.pagination {
+
+	& > ul {
+		.box-shadow(none);
+	}
+
+	& li > a,
+	& li.disabled > a {
+		border-left: 1px solid @gray;
+		border-right: 1px solid darken(@gray, 15%);
+		border-top: none;
+		border-bottom: none;
+	}
+
+	li.disabled > a {
+		#gradient > .vertical-three-colors(@grayLight, @gray, 70%, @gray);
+	}
+
+	& > ul > li:not(.disabled) a:hover,
+	  {
+		#gradient > .directional(@grayDarker, @grayDark, 280deg);
+		border-left: 1px solid transparent;
+	}
+
+	& > ul > li.active > a,
+	& > ul > li.active > a:hover {
+		color: @grayLighter;
+		background-color: @grayDark;
+		#gradient > .directional(lighten(@grayDarker, 4%), lighten(@grayDark, 4%), 280deg);
+		border-left: 1px solid transparent;
+	}
 }
 
-.pagination li.disabled > a {
-	#gradient > .vertical-three-colors(@grayLight, @gray, 70%, @gray);
-}
+.pager {
 
-.pagination > ul > li:not(.disabled) a:hover,
-  {
-	#gradient > .directional(@grayDarker, @grayDark, 280deg);
-	border-left: 1px solid transparent;
-}
+	a:hover {
+		#gradient > .directional(@grayDarker, @grayDark, 280deg);
+		border: 1px solid transparent;
+	}
 
-.pagination > ul > li.active > a,
-.pagination > ul > li.active > a:hover {
-	color: @grayLighter;
-	background-color: @grayDark;
-	#gradient > .directional(lighten(@grayDarker, 4%), lighten(@grayDark, 4%), 280deg);
-	border-left: 1px solid transparent;
-}
-
-.pager a:hover {
-	#gradient > .directional(@grayDarker, @grayDark, 280deg);
-	border: 1px solid transparent;
+	.disabled a,
+	.disabled a:hover {
+		background-color: transparent;
+	}
 }
 
 .nav .nav-header {
@@ -342,9 +384,9 @@ label, input, button, select, textarea, legend {
 	border-top: none;
 }
 
-.input-prepend .add-on, .input-append .add-on {
+.input-prepend .add-on,
+.input-append .add-on {
 	vertical-align: top;
-	height: 19px;
 	background-color: @gray;
 	border-top: 1px solid @grayLight;
 	border-left: 1px solid @grayLight;
@@ -353,8 +395,19 @@ label, input, button, select, textarea, legend {
 	text-shadow: none;
 }
 
-.uneditable-input, input[disabled], select[disabled], textarea[disabled], input[readonly], select[readonly], textarea[readonly] {
-	text-shadow: none;
+.input-append .btn,
+.input-prepend .btn {
+	margin-top: -1px;
+	padding: 5px 14px;
+}
+
+.uneditable-input,
+input[disabled],
+select[disabled],
+textarea[disabled],
+input[readonly],
+select[readonly],
+textarea[readonly] {
 	color: @grayLighter;
 }
 
@@ -437,11 +490,11 @@ footer.footer {
 }
 
 .well, .progress, .hero-unit {
-	background-color: darken(@grayDarker, 3%);
 	.box-shadow(inset 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 .progress {
+	background-color: darken(@grayDarker, 3%);
 	#gradient > .vertical(darken(@grayDarker, 3%), darken(@grayDarker, 3%));
 }
 

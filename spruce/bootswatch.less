@@ -1,6 +1,6 @@
 // Bootswatch.less
 // Swatch: Spruce
-// Version: 2.0.4
+// Version: 2.1.0
 // -----------------------------------------------------
 
 // TYPOGRAPHY
@@ -16,37 +16,36 @@ div.subnav li > a,
 	font-weight: @headingsFontWeight;
 }
 
+h1 { font-size: 54px; }
+h2 { font-size: 36px; }
 h3 { font-size: 20px; }
 h4 { font-size: 16px; }
 h5 { font-size: 14px; }
 
-h1, h2, h3, h4, h5, h6 {
-	color: @yellow;
-}
-
 h1 > small, h2 > small, h3 > small, h4 > small, h5 > small, h6 > small, .muted {
-	color: @linkColor;
+	color: @headingsColor;
 	font-family: @baseFontFamily;
 }
 
 .alert-heading {
 	font-family: @baseFontFamily;
+	color: inherit;
 }
 
 // SCAFFOLDING
 // --------------------------------------------------
 
 body {
-	#gradient > .vertical-three-colors (#90A38F, #AEAD8E, 60%, #90A38F);
+	// #gradient > .vertical-three-colors (#90A38F, #AEAD8E, 60%, #90A38F);
 	background-size: 100% 1400px;
 	background-repeat: repeat-y;
 }
 
 blockquote {
-	border-left: 2px solid @linkColor;
+	border-left: 2px solid @headingsColor;
 
 	&.pull-right {
-		border-right: 2px solid @linkColor;
+		border-right: 2px solid @headingsColor;
 	}
 
 	small {
@@ -56,7 +55,7 @@ blockquote {
 
 code, pre {
 	color: lighten(@blueDark, 10%);
-	background-color: @linkColor;
+	background-color: @headingsColor;
 }
 
 // NAVBAR
@@ -76,7 +75,7 @@ code, pre {
 
 	.nav > li > a {
 		font-size: 20px;
-		padding: 22px 10px 11px;
+		padding: 20px 20px 10px;
 	}
 
 	.nav .active > a,
@@ -84,9 +83,20 @@ code, pre {
 		color: @yellow;
 	}
 
+	.nav > .active > a,
+	.nav > .active > a:hover,
+	.nav > .active > a:focus {
+		.box-shadow(none);
+	}
+
 	.navbar-text {
+		margin: 19px 20px 0;
 		font-size: 20px;
-		padding: 11px 10px 0;
+		line-height: inherit;
+	}
+
+	.divider-vertical {
+		border-color: rgba(0, 0, 0, 0.2);
 	}
 
 	.navbar-search {
@@ -95,8 +105,8 @@ code, pre {
 
 	.navbar-search .search-query {
 		border-color: transparent;
-		padding: 6px 9px 2px 9px;
 		background-color: rgba(255, 255, 255, 0.4);
+		color: @white;
 	}
 
 	.nav > .open > a {
@@ -104,14 +114,14 @@ code, pre {
 	}
 
 	.nav > .open > .dropdown-menu {
-		background-color: @linkColor;
+		background-color: @headingsColor;
 		color: @textColor;
 		border-color: transparent;
 	}
 
 	.nav > .open > .dropdown-menu a:hover {
 		background-color: darken(#90A38F, 10%);
-		color: @linkColor;
+		color: @headingsColor;
 	}
 
 	.btn-navbar {
@@ -119,7 +129,7 @@ code, pre {
 	}
 
 	.nav-collapse.in .nav li > a {
-		color: @linkColor;
+		color: @headingsColor;
 
 		&:hover {
 			color: @yellow;
@@ -144,7 +154,7 @@ div.subnav {
 		padding: 13px 12px 9px;
 		border-color: transparent;
 		background-color: transparent;
-		color: @linkColor;
+		color: @headingsColor;
 	}
 
 	.nav > li + li > a {
@@ -163,18 +173,18 @@ div.subnav {
 	}
 
 	.dropdown.open > .dropdown-menu {
-		background-color: @linkColor;
+		background-color: @headingsColor;
 		color: @textColor;
 		border-color: transparent;
 	}
 
 	.dropdown.open > .dropdown-menu a:hover {
 		background-color: darken(#90A38F, 10%);
-		color: @linkColor;
+		color: @headingsColor;
 	}
 
 	&.subnav-fixed {
-		top: 54px;
+		top: @navbarHeight;
 	}
 }
 
@@ -214,7 +224,7 @@ div.subnav {
 .table th,
 .table-striped tbody tr:nth-child(odd) th {
 	background-color: darken(#90A38F, 10%);
-	color: @linkColor;
+	color: @headingsColor;
 }
 
 // BUTTONS
@@ -267,6 +277,17 @@ div.subnav {
 // NAVIGATION
 // --------------------------------------------------
 
+.nav {
+	.disabled > a {
+
+		color: #ccc;
+
+		&:hover {
+			background-color: #748C73;
+		}
+	}
+}
+
 .breadcrumb {
 	background-color: darken(#90A38F, 10%);
 	background-image: none;
@@ -278,7 +299,7 @@ div.subnav {
 		text-shadow: none;
 
 		a {
-			color: @linkColor;
+			color: @yellow;
 		}
 
 		a:hover {
@@ -286,36 +307,43 @@ div.subnav {
 		}
 
 		.divider {
-			color: @blue;
+			color: @headingsColor;
 		}
 	}
-}
 
-.pagination > ul {
-	background-color: darken(#90A38F, 10%);
-	background-image: none;
-	border-color: transparent;
-	.box-shadow(none);
-}
-
-.pagination a {
-	color: @linkColor;
-	border-color: transparent;
-
-	&:hover {
-		color: @yellow;
-		background-color: #748C73;
+	.active {
+		color: @headingsColor;
 	}
 }
 
-.pagination .active a {
-	color: @blue;
-	background-color: #A2CDB5;
-}
+.pagination {
 
-.pagination .disabled a,
-.pagination .disabled a:hover {
-	color: @blue;
+	& > ul {
+		background-color: darken(#90A38F, 10%);
+		background-image: none;
+		border-color: transparent;
+		.box-shadow(none);
+	}
+
+	a {
+		color: @yellow;
+		border-color: transparent;
+
+		&:hover {
+			color: @yellow;
+			background-color: rgba(0, 0, 0, 0.1);
+		}
+	}
+
+	.active a {
+		color: @headingsColor;
+		background-color: rgba(0, 0, 0, 0.1);
+	}
+
+	.disabled a,
+	.disabled a:hover {
+		color: @blue;
+	}
 }
 
 .nav-list {
@@ -337,7 +365,7 @@ div.subnav {
 
 	.divider {
 		background-color: transparent;
-		border-bottom: 1px solid @linkColor;
+		border-bottom: 1px solid @headingsColor;
 	}
 }
 
@@ -386,13 +414,13 @@ div.subnav {
 
 .nav-tabs .dropdown-menu,
 .nav-pills .dropdown-menu {
-	background-color: @linkColor;
+	background-color: @headingsColor;
 	color: @textColor;
 	border-color: transparent;
 
 	a:hover {
 		background-color: #A2CDB5;
-		color: @linkColor;
+		color: @headingsColor;
 	}
 }
 
@@ -410,13 +438,21 @@ div.subnav {
 	}
 }
 
-.pager a {
-	border: none;
-	background-color: #748C73;
+.pager {
 
-	&:hover {
-		background-color: transparent;
+	a {
+		border: none;
 		background-color: #748C73;
+
+		&:hover {
+			background-color: #687D67;
+		}
+	}
+
+	.disabled a,
+	.disabled a:hover {
+		background-color: #748C73;
+		color: @textColor;
 	}
 }
 
@@ -424,11 +460,11 @@ div.subnav {
 // --------------------------------------------------
 
 legend {
-	color: @yellow;
+	color: @headingsColor;
 }
 
 label, .help-block, input[type="file"] {
-	color: @linkColor;
+	color: @headingsColor;
 }
 
 input, textarea, select {
@@ -458,7 +494,7 @@ legend {
 
 .modal-body,
 .modal-footer {
-	background-color: @linkColor;
+	background-color: @headingsColor;
 	border: none;
 	.box-shadow(none);
 
@@ -479,25 +515,39 @@ legend {
 	border: none;
 }
 
+.badge,
 .label {
-	color: @linkColor;
-	opacity: 1;
+
+	background-color: @blue;
 	text-shadow: none;
+
+	&-success {
+		background-color: @successBackground;
+	}
+
+	&-warning {
+		background-color: @warningBackground;
+	}
+
+	&-important {
+		background-color: @errorBackground;
+	}
+
+	&-info {
+		background-color: @infoBackground;
+	}
+
+	&-inverse {
+		background-color: @yellow;
+	}
 }
 
 .progress {
 	background-color: darken(#90A38F, 10%);
 	background-image: none;
-	.box-shadow(none);
-
-	.bar {
-		background-image: none;
-		background-color: #A2CDB5;
-	}
 }
 
 .well {
-	background-color: darken(#90A38F, 10%);
 	border: none;
 	.box-shadow(none);
 }
@@ -513,14 +563,10 @@ legend {
 
 hr {
 	border-top: none;
-	border-bottom: 2px solid @linkColor;
+	border-bottom: 2px solid @headingsColor;
 }
 
 .page-header {
-	border-bottom: 2px solid @linkColor;
+	border-bottom: 2px solid @headingsColor;
 	padding-bottom: 5px;
-}
-
-footer.footer {
-	border-top: 2px solid @linkColor;
 }

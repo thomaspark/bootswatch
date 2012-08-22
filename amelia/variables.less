@@ -1,10 +1,11 @@
-// Variables.less
-// Variables to customize the look and feel of Bootstrap
+//
+// Variables
 // Swatch: Amelia
-// Version: 2.0.4
-// -----------------------------------------------------
+// Version: 2.1.0
+// --------------------------------------------------
 
-// GLOBAL VALUES
+
+// Global values
 // --------------------------------------------------
 
 
@@ -104,11 +105,16 @@
 // -------------------------
 @dropdownBackground:            @white;
 @dropdownBorder:                rgba(0,0,0,.2);
-@dropdownLinkColor:             @bodyBackground;
-@dropdownLinkColorHover:        @white;
-@dropdownLinkBackgroundHover:   rgba(0, 57, 59, 0.9);
 @dropdownDividerTop:            #e5e5e5;
 @dropdownDividerBottom:         @white;
+
+@dropdownLinkColor:             @grayDark;
+
+@dropdownLinkColorHover:        @white;
+@dropdownLinkBackgroundHover:   @red;
+
+@dropdownLinkColorActive:       @dropdownLinkColor;
+@dropdownLinkBackgroundActive:  @red;
 
 
 
@@ -143,11 +149,19 @@
 @hrBorder:                transparent;
 
 
+// Wells
+// -------------------------
+@wellBackground:                  #3CB9C6;
+
+
 // Navbar
 // -------------------------
+@navbarCollapseWidth:             979px;
+
 @navbarHeight:                    50px;
 @navbarBackground:                #AD1D28;
 @navbarBackgroundHighlight:       #AD1D28;
+@navbarBorder:                    darken(@navbarBackground, 12%);
 
 @navbarText:                      @white;
 @navbarLinkColor:                 @white;
@@ -156,11 +170,33 @@
 @navbarLinkBackgroundHover:       lighten(@navbarBackground, 10%);
 @navbarLinkBackgroundActive:      lighten(@navbarBackground, 10%);
 
-@navbarSearchBackground:          rgba(0, 0, 0, 0);
-@navbarSearchBackgroundFocus:     lighten(@navbarBackground, 25%);
-@navbarSearchBorder:              darken(@navbarSearchBackground, 30%);
-@navbarSearchPlaceholderColor:    @textColor;
 @navbarBrandColor:                @navbarLinkColor;
+
+// Inverted navbar
+@navbarInverseBackground:                @yellow;
+@navbarInverseBackgroundHighlight:       @yellow;
+@navbarInverseBorder:                    rgba(0, 0, 0, 0.1);
+
+@navbarInverseText:                      @white;
+@navbarInverseLinkColor:                 @white;
+@navbarInverseLinkColorHover:            @white;
+@navbarInverseLinkColorActive:           @white;
+@navbarInverseLinkBackgroundHover:       rgba(255, 255, 255, 0.2);
+@navbarInverseLinkBackgroundActive:      rgba(255, 255, 255, 0.2);
+
+@navbarInverseSearchBackground:          lighten(@navbarInverseBackground, 25%);
+@navbarInverseSearchBackgroundFocus:     @white;
+@navbarInverseSearchBorder:              @navbarInverseBackground;
+@navbarInverseSearchPlaceholderColor:    @white;
+
+@navbarInverseBrandColor:                @navbarInverseLinkColor;
+
+
+// Pagination
+// -------------------------
+@paginationBackground:                #3CB9C6;
+@paginationBorder:                    transparent;
+@paginationActiveBackground:          rgba(255, 255, 255, 0.4);
 
 
 // Hero unit
@@ -189,9 +225,27 @@
 @infoBorder:              darken(spin(@infoBackground, -10), 7%);
 
 
+// Tooltips and popovers
+// -------------------------
+@tooltipColor:            #fff;
+@tooltipBackground:       #000;
+@tooltipArrowWidth:       5px;
+@tooltipArrowColor:       @tooltipBackground;
+
+@popoverBackground:       #fff;
+@popoverArrowWidth:       10px;
+@popoverArrowColor:       #fff;
+@popoverTitleBackground:  darken(@popoverBackground, 3%);
+
+// Special enhancement for popovers
+@popoverArrowOuterWidth:  @popoverArrowWidth + 1;
+@popoverArrowOuterColor:  rgba(0,0,0,.25);
+
+
 
 // GRID
 // --------------------------------------------------
+
 
 // Default 940px grid
 // -------------------------
@@ -200,7 +254,26 @@
 @gridGutterWidth:         20px;
 @gridRowWidth:            (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
 
+// 1200px min
+@gridColumnWidth1200:     70px;
+@gridGutterWidth1200:     30px;
+@gridRowWidth1200:        (@gridColumns * @gridColumnWidth1200) + (@gridGutterWidth1200 * (@gridColumns - 1));
+
+// 768px-979px
+@gridColumnWidth768:      42px;
+@gridGutterWidth768:      20px;
+@gridRowWidth768:         (@gridColumns * @gridColumnWidth768) + (@gridGutterWidth768 * (@gridColumns - 1));
+
+
 // Fluid grid
 // -------------------------
-@fluidGridColumnWidth:    6.382978723%;
-@fluidGridGutterWidth:    2.127659574%;
+@fluidGridColumnWidth:    percentage(@gridColumnWidth/@gridRowWidth);
+@fluidGridGutterWidth:    percentage(@gridGutterWidth/@gridRowWidth);
+
+// 1200px min
+@fluidGridColumnWidth1200:     percentage(@gridColumnWidth1200/@gridRowWidth1200);
+@fluidGridGutterWidth1200:     percentage(@gridGutterWidth1200/@gridRowWidth1200);
+
+// 768px-979px
+@fluidGridColumnWidth768:      percentage(@gridColumnWidth768/@gridRowWidth768);
+@fluidGridGutterWidth768:      percentage(@gridGutterWidth768/@gridRowWidth768);

@@ -1,23 +1,12 @@
 // Bootswatch.less
 // Swatch: Cyborg
-// Version: 2.0.4
+// Version: 2.1.0
 // -----------------------------------------------------
 
 // TYPOGRAPHY
 // -----------------------------------------------------
 
 @import url('https://fonts.googleapis.com/css?family=Droid+Sans:400,700');
-
-.navbar {
-	font-size: 16px;
-}
-
-.navbar .brand,
-.navbar .nav-collapse.in .nav li > a {
-	color: @grayLighter;
-	font-weight: normal;
-	text-shadow: none;
-}
 
 label, input, button, select, textarea,
 .navbar .search-query:-moz-placeholder,
@@ -51,36 +40,60 @@ body {
 
 .navbar {
 
+	font-size: 16px;
+
 	.navbar-inner {
-	  .border-radius(0);
-	  .box-shadow(none);
-	  border-bottom: 2px solid @blue
+		.border-radius(0);
+		.box-shadow(none);
+		border-bottom: 2px solid @blue
 	}
 
 	.brand {
-		padding: 12px 20px 8px;
-
-		&:hover {
-				border-bottom: 3px solid @blue
-		}
+		padding: 12px 20px 11px;
+		color: @grayLighter;
+		font-weight: normal;
+		text-shadow: none;
 	}
 
-	.navbar-text {
-		line-height: 43px;
+	li {
+		line-height: 19px;
 	}
 
-	.nav li > a {
+	.nav > li > a {
 		padding: 13px 10px 8px;
-		border-bottom: 3px solid rgba(0, 0, 0, 0);
-		border-left: 1px solid #222;
+		border-bottom: 3px solid transparent;
+		border-left: 1px solid rgba(255, 255, 255, 0.1);
 
 		&:hover {
 			border-bottom: 3px solid @blue
 		}
 	}
 
-	.nav .active > a {
-		border-bottom: 3px solid @blue
+	.nav > .active > a {
+		border-bottom: 3px solid @blue;
+	}
+
+	.nav .active > a,
+	.nav .active > a:hover,
+	.nav .active > a:focus {
+		.box-shadow(none);
+	}
+
+	.nav > li > .dropdown-menu::before,
+	.nav > li > .dropdown-menu::after {
+		display: none;
+	}
+
+	.dropdown-menu li > a:hover,
+	.dropdown-menu li > a:focus,
+	.dropdown-submenu:hover > a {
+		background-image: none;
+	}
+
+	.navbar-text {
+		margin-left: 15px;
+		margin-right: 15px;
+		line-height: 43px;
 	}
 
 	.search-query,
@@ -93,35 +106,65 @@ body {
 		.placeholder(@gray);
 	}
 
-	.nav li.dropdown.active.open .dropdown-toggle:hover {
-		border-bottom: 3px solid @blue;
-		border-left: 1px solid #222;
+	.nav-collapse.collapse {
+
+		.nav li > a {
+			border-left: 0;
+			color: @grayLighter;
+			font-weight: normal;
+			text-shadow: none;
+
+			&:hover {
+				background-color: @blue;
+			}
+		}
+
+		.nav .active > a {
+			background-color: @blue;
+		}
+
+		.navbar-form,
+		.navbar-search {
+			border-top: none;
+			border-bottom: none;
+		}
+
+		.nav-header {
+			color: rgba(128, 128, 128, 0.6);
+		}
 	}
 
-	.dropdown-menu::before,
-	.dropdown-menu::after {
-		display: none;
-	}
+	&-inverse {
 
-	.nav-collapse.in .nav > li > a {
-		border-left: 0;
-	}
+		.navbar-inner {
+			border: none;
+			border-bottom: 3px solid @black;
+		}
 
-	.nav-collapse.in .nav a:hover {
-		background-color: @blue;
-	}
+		.brand:hover {
+			border-bottom: none;
+			background-color: @black;
+		}
 
+		.nav li > a:hover {
+			border-bottom-color: transparent;
+		}
+
+		.nav .active > a {
+			border-bottom-color: transparent;
+		}
+	}
 }
 
 .dropdown-menu {
 	background-color: #191A1A;
-	border-left: solid 1px rgba(255, 255, 255, 0.1);
+	// border-left: solid 1px rgba(255, 255, 255, 0.1);
 	.box-shadow(0 2px 4px rgba(0, 0, 0, 0.8));
 }
 
 .dropdown-menu li > a:hover {
 	background-color: @blue;
-	border-bottom: 3px solid transparent;
+	// border-bottom: 3px solid transparent;
 }
 
 div.subnav {
@@ -303,6 +346,30 @@ div.subnav {
 		background-color: @blue;
 		color: @white;
 	}
+
+	.disabled span,
+	.disabled a,
+	.disabled a:hover {
+		background-color: rgba(0, 0, 0, 0.2);
+	}
+}
+
+.pager {
+
+	a {
+		background-color: @bodyBackground;
+		border: none;
+
+		&:hover {
+			background-color: @blue;
+		}
+	}
+
+	.disabled a,
+	.disabled a:hover {
+		background-color: @bodyBackground;
+	}
+
 }
 
 // BUTTONS
@@ -422,7 +489,31 @@ select:focus {
 // MISCELLANEOUS
 // -----------------------------------------------------
 
-.table, .well, .hero-unit, .prettyprint, input, textarea, select {
+.table {
+
+	.border-radius(1px);
+
+	tbody tr.success td {
+		background-color: @green;
+		color: @white;
+	}
+
+	tbody tr.error td {
+		background-color: @red;
+		color: @white;
+	}
+
+	tbody tr.info td {
+		background-color: @blue;
+		color: @white;
+	}
+
+
+}
+
+
+
+.well, .hero-unit, .prettyprint, input, textarea, select {
 	.border-radius(1px);
 }
 
@@ -431,7 +522,6 @@ code, pre {
 }
 
 .well, .hero-unit {
-	background-color: #131517;
 	border-top: solid 1px lighten(@grayDark, 5%);
 	.box-shadow(0 2px 4px rgba(0,0,0,.8));
 }

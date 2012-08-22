@@ -1,6 +1,6 @@
 // Bootswatch.less
 // Swatch: Superhero
-// Version: 2.0.4
+// Version: 2.1.0
 // -----------------------------------------------------
 
 // TYPOGRAPHY
@@ -64,23 +64,11 @@ blockquote.pull-right {
 	}
 
 	.nav > li > a {
-		padding: 27px 20px 13px;
+		padding: 23px 20px 13px;
 		line-height: 30px;
 		font-family: @headingsFontFamily;
 		font-size: 22px;
 		text-shadow: -2px 2px 0 darken(@orange, 30%);
-	}
-
-	.navbar-text {
-		padding: 27px 20px 13px;
-		line-height: 30px;
-		font-family: @headingsFontFamily;
-		font-size: 22px;
-		text-shadow: -2px 2px 0 @gray;
-	}
-
-	.nav > li.active > a {
-		color: @orange;
 	}
 
 	.brand:hover,
@@ -95,18 +83,33 @@ blockquote.pull-right {
 		text-shadow: -1px 1px 0 darken(@orange, 30%);
 	}
 
+	.nav > .active > a,
+	.nav > .active > a:hover,
+	.nav > .active > a:focus {
+		.box-shadow(none);
+	}
+
+	.navbar-text {
+		padding: 23px 20px 13px;
+		line-height: 30px;
+		font-family: @headingsFontFamily;
+		font-size: 22px;
+		text-shadow: -2px 2px 0 @gray;
+	}
+
 	.navbar-search {
-		padding-top: 20px;
+		margin-top: 24px;
 	}
 
 	.navbar-search .search-query {
 		font-family: @baseFontFamily;
 		font-size: @baseFontSize;
 		line-height: @baseLineHeight;
-		color: @textColor;
-		background-color: @blue;
 		.box-shadow(none);
-		border: none;
+	}
+
+	&.navbar-inverse .navbar-search .search-query {
+		color: @blueDark;
 	}
 
 	.divider-vertical {
@@ -115,6 +118,7 @@ blockquote.pull-right {
 
 	.nav .dropdown-toggle .caret,
 	.nav .open.dropdown .caret {
+		margin-top: 14px;
 		border-top-color: @textColor;
 	}
 
@@ -138,25 +142,28 @@ blockquote.pull-right {
 		border-color: transparent;
 	}
 
-	.nav-collapse.in {
-		background-color: @blue;
+	.nav-collapse.collapse {
+
 		.border-radius(4px);
 
-		li > a {
+		.navbar-form,
+		.navbar-search {
+			border-top: none;
+			border-bottom: none;
+			.box-shadow(none);
+		}
+
+		.nav-header {
 			color: @textColor;
 		}
 
-		li > a:hover {
-			color: @textColor;
-			background-color: lighten(@blue, 10%);
-		}
-	}
+		.nav li > a {
+			color: @orange;
 
-	.nav-collapse.in > .nav > li > a {
-		color: @orange;
-
-		&:hover {
-			background-color: lighten(@blue, 10%);
+			&:hover {
+				background-color: lighten(@blue, 10%);
+				background-image: none;
+			}
 		}
 	}
 }
@@ -264,7 +271,7 @@ div.subnav {
 .btn:hover {
 	text-shadow: none;
 	background-image: none;
-	.box-shadow(-2px 2px 0 darken(@white, 80%));
+	.box-shadow(-2px 2px 0 rgba(0, 0, 0, 0.2));
 	border: none;
 }
 
@@ -350,8 +357,8 @@ div.subnav {
 // --------------------------------------------------
 
 .nav .nav-header {
-	color: @linkColor;
-	text-shadow:none;
+	color: @textColor;
+	text-shadow: none;
 }
 
 .nav-list {
@@ -447,11 +454,12 @@ div.subnav {
 	}
 }
 
-.pagination ul {
+.pagination {
 
-	background-color: @blue;
-	background-image: none;
-	border-color: transparent;
+	ul {
+		background-image: none;
+		border-color: transparent;
+	}
 
 	li > a {
 		border: none;
@@ -460,7 +468,7 @@ div.subnav {
 
 	li.active > a,
 	li.active > a:hover {
-		background: @orange;
+		background-color: @orange;
 		color: @white;
 	}
 
@@ -474,13 +482,21 @@ div.subnav {
 	}
 }
 
-.pager a {
-	color: @textColor;
-	background-color: @blue;
-	border-color: transparent;
+.pager {
 
-	&:hover {
-		background: lighten(@blue, 10%);
+	a {
+		color: @textColor;
+		background-color: @blue;
+		border-color: transparent;
+
+		&:hover {
+			background: lighten(@blue, 10%);
+		}
+	}
+
+	.disabled a,
+	.disabled a:hover {
+		background-color: @blue;
 	}
 }
 
@@ -521,6 +537,13 @@ label {
   .formFieldState(lighten(@successText, 10%), lighten(@successText, 10%), @successBackground);
 }
 
+.input-append .add-on,
+.input-prepend .add-on,
+.input-append .btn,
+.input-prepend .btn {
+	color: @bodyBackground;
+}
+
 // MODALS
 // --------------------------------------------------
 
@@ -551,12 +574,7 @@ label {
 	border-bottom: none;
 }
 
-footer.footer {
-	border-top: 1px solid darken(@blueDark, 5%);
-}
-
 .well, .hero-unit {
-	background-color: @blue;
 	border: none;
 	.box-shadow(none);
 }

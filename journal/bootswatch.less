@@ -1,6 +1,6 @@
 // Bootswatch.less
 // Swatch: Journal
-// Version: 2.0.4
+// Version: 2.1.0
 // -----------------------------------------------------
 
 // TYPOGRAPHY
@@ -102,6 +102,12 @@ abbr[title] {
 		padding-right: 10px;
 		font-size: 18px;
 		line-height: 18px;
+	}
+
+	.nav > .active > a,
+	.nav > .active > a:hover,
+	.nav > .active > a:focus {
+		.box-shadow(none);
 	}
 
 	.nav li.dropdown > .dropdown-toggle:hover,
@@ -207,6 +213,10 @@ div.subnav {
 	vertical-align: baseline;
 }
 
+.btn-inverse {
+	.buttonBackground(@grayDarker, @black);
+}
+
 // MODALS
 // -----------------------------------------------------
 
@@ -245,7 +255,6 @@ div.subnav {
 
 .well {
 	.border-radius(0);
-	background-color: @grayLighter;
 	.box-shadow(none);
 
 }

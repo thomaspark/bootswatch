@@ -1,6 +1,6 @@
 // Bootswatch.less
 // Swatch: Spacelab
-// Version: 2.0.4
+// Version: 2.1.0
 // -----------------------------------------------------
 
 // NAVBAR
@@ -21,33 +21,16 @@
 		}
 	}
 
-	.nav > li.active > a,
-	.nav > li.dropdown > .dropdown-toggle,
-	.nav > li.dropdown.active > .dropdown-toggle,
-	.nav > li.dropdown.open > .dropdown-toggle,
-	.nav > li.dropdown.open.active > .dropdown-toggle  {
-
-		color: @textColor;
-
-		&:hover {
-			color: @linkColor;
-		}
-
-		.caret {
-			border-top-color: @textColor;
-		}
+	.nav > li > a {
+		padding: 11px 10px 9px;
+		font-weight: bold;
+		text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 	}
 
 	.navbar-text {
 		margin-top: 2px;
 		padding: 0 10px;
 		line-height: 38px;
-	}
-
-	.nav > li > a {
-		padding: 11px 10px 9px;
-		font-weight: bold;
-		text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 	}
 
 	.navbar-search .search-query,
@@ -64,21 +47,46 @@
 		}
 	}
 
-	.nav-collapse.in .navbar-search {
-		border-top: none;
-		border-bottom: none;
+	.nav-collapse.collapse {
+
+		.navbar-search {
+			border-top: none;
+			border-bottom: none;
+		}
+
+		& > .nav li > a:hover {
+			background-color: @linkColor;
+			color: @white;
+			text-shadow: none;
+		}
+
 	}
 
-	.nav-collapse.in > .nav li > a {
+	&-inverse {
+		.brand {
+			text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
 
-		color: @textColor;
+			&:hover {
+				color: @white;
+			}
+		}
 
-	}
+		.nav > li > a {
+			text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+		}
 
-	.nav-collapse.in > .nav li > a:hover {
-		text-shadow: none;
-		color: @linkColor;
-		background-color: transparent;
+		.nav li.dropdown.open > .dropdown-toggle .caret,
+		.nav li.dropdown:hover > .dropdown-toggle .caret,
+		.nav li.dropdown.open:hover > .dropdown-toggle .caret {
+			border-top-color: @white;
+		}
+
+		.nav-collapse.collapse {
+			.nav li > a,
+			.nav-header {
+				color: @grayLighter;
+			}
+		}
 	}
 }
 
@@ -138,6 +146,17 @@ div.subnav {
 
 .btn {
 	.buttonBackground(#F4F4F4, #ECECEC);
+	color: @textColor;
+	text-shadow: none;
+
+
+	&:hover,
+	&:active,
+	&.active,
+	&.disabled,
+	&[disabled] {
+		color: @grayDark;
+	}
 }
 
 .btn-primary {
@@ -163,6 +182,7 @@ div.subnav {
 .btn-inverse {
   .buttonBackground(lighten(@purple, 5%), @purple);
 }
+
 
 // FORMS
 // -----------------------------------------------------
