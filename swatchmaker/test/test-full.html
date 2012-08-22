@@ -14,13 +14,16 @@
     <link href="docs.css" rel="stylesheet">
     <style>
 
+    @media (min-width: 980px) {
+
       body {
         padding-top: 80px;
       }
+    }
 
-      section {
-        margin-top: 80px;
-      }
+    section {
+      margin-top: 80px;
+    }
 
     </style>
 
@@ -98,6 +101,17 @@
     <h3>Modal header</h3>
   </div>
   <div class="modal-body">
+    <form>
+      <legend>Legend</legend>
+      <label>Label name</label>
+      <input type="text" placeholder="Type something">
+      <span class="help-block">Example block-level help text here.</span>
+      <label class="checkbox">
+        <input type="checkbox"> Check me out
+      </label>
+      <button type="submit" class="btn">Submit</button>
+    </form>      
+          
     <p>One fine body in paragraph tags…</p>
     And without p tags
   </div>
@@ -2295,6 +2309,15 @@
             <p><button class="close" style="float: none;">&times;</button></p>
           </div>
 
+          <div class="bs-docs-example tooltip-demo">
+            <p class="muted" style="margin-bottom: 0;">Tight pants next level keffiyeh <a href="#" rel="tooltip" data-original-title="Default tooltip">you probably</a> haven't heard of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown. Farm-to-table seitan, mcsweeney's fixie sustainable quinoa 8-bit american apparel <a href="#" rel="tooltip" title="Another tooltip">have a</a> terry richardson vinyl chambray. Beard stumptown, cardigans banh mi lomo thundercats. Tofu biodiesel williamsburg marfa, four loko mcsweeney's cleanse vegan chambray. A really ironic artisan <a href="#" rel="tooltip" title="Another one here too">whatever keytar</a>, scenester farm-to-table banksy Austin <a href="#" rel="tooltip" title="The last tip!">twitter handle</a> freegan cred raw denim single-origin coffee viral.
+            </p>
+          </div>
+
+          <div class="bs-docs-example" style="padding-bottom: 24px;">
+            <a href="#" class="btn btn-large btn-danger" rel="popover" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title">Click to toggle popover</a>
+          </div>
+
         </section>
 
 
@@ -2343,6 +2366,11 @@
     <script src="../bootstrap/docs/assets/js/bootstrap-typeahead.js"></script>
     <script src="../bootstrap/docs/assets/js/bootstrap-affix.js"></script>
     <script src="../bootstrap/docs/assets/js/application.js"></script>
+    <script>
+
+
+
+    </script>
 
 
 
