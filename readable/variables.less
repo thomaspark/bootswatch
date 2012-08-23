@@ -12,7 +12,7 @@
 // Grays
 // -------------------------
 @black:                 #000;
-@grayDarker:            #222;
+@grayDarker:            #282828;
 @grayDark:              #333;
 @gray:                  #777;
 @grayLight:             #999;
@@ -34,8 +34,8 @@
 
 // Scaffolding
 // -------------------------
-@bodyBackground:        #FDFDFC;
-@textColor:             #090000;
+@bodyBackground:        #FAFDFA;
+@textColor:             @grayDarker;
 
 
 // Links
@@ -47,12 +47,12 @@
 // Typography
 // -------------------------
 @sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
-@serifFontFamily:       Georgia, "Times New Roman", Times, serif;
+@serifFontFamily:       Palatino, Georgia, "Times New Roman", Times, serif;
 @monoFontFamily:        Menlo, Monaco, Consolas, "Courier New", monospace;
 
-@baseFontSize:          17px;
+@baseFontSize:          16px;
 @baseFontFamily:        @serifFontFamily;
-@baseLineHeight:        1.3em;
+@baseLineHeight:        1.4em;
 @altFontFamily:         @serifFontFamily;
 
 @headingsFontFamily:    inherit; // empty to use BS default, @baseFontFamily
@@ -158,13 +158,13 @@
 // -------------------------
 @navbarCollapseWidth:             979px;
 
-@navbarHeight:                    40px;
+@navbarHeight:                    50px;
 @navbarBackground:                @bodyBackground;
 @navbarBackgroundHighlight:       @bodyBackground;
 @navbarBorder:                    darken(@navbarBackground, 12%);
 
 @navbarText:                      @textColor;
-@navbarLinkColor:                 @linkColor;
+@navbarLinkColor:                 @textColor;
 @navbarLinkColorHover:            @linkColor;
 @navbarLinkColorActive:           @linkColor;
 @navbarLinkBackgroundHover:       transparent;

@@ -10,22 +10,20 @@ body {
 	word-spacing: -0.05em;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	line-height: 2em;
-	color: @textColor;
-}
-
 h1 {
-	font-size: 2em;
+	font-size: 2.5em;
 }
 
 h2 {
+	font-size: 2em;
+}
+
+h3 {
 	font-size: 1.5em;
 }
 
-h3, h4, h5, h6 {
-	font-size: 1em;
-	text-transform: none;
+h6 {
+	color: @textColor;
 }
 
 small {
@@ -51,7 +49,7 @@ small {
 	.brand {
 		font-weight: bold;
 		line-height: 1em;
-		padding: 10px 15px;
+		padding: 15px 15px 7px;
 
 		&:hover {
 			color: @linkColorHover;
@@ -60,13 +58,17 @@ small {
 
 	.nav > li > a {
 		text-shadow: none;
-		padding: 10px 15px 7px;
+		padding: 15px 15px 7px;
 	}
 
 	.nav > .active > a,
 	.nav > .active > a:hover,
 	.nav > .active > a:focus {
 		.box-shadow(none);
+	}
+
+	.navbar-search {
+		margin-top: 11px;
 	}
 
 	.search-query {
@@ -77,17 +79,13 @@ small {
 	}
 
 	.navbar-text {
-		margin: 10px 15px 0;
+		margin: 15px 15px 0;
 		line-height: @baseLineHeight;
 	}
 
 	.divider-vertical {
 		border-right: 1px solid rgba(128, 128, 128, 0.3);
 		border-left: none;
-	}
-
-	.navbar-search {
-		margin-top: 7px;
 	}
 
 	.nav-collapse.collapse {
@@ -159,9 +157,13 @@ div.subnav {
 	.nav > li > a:hover,
 	.nav > li.active > a:hover,
 	.nav > li:active > a:hover {
-		color: @linkColorHover;
-		.box-shadow(none);
 		background-color: transparent;
+		.box-shadow(none);
+		color: @linkColorHover;
+	}
+
+	&-fixed {
+		top: @navbarHeight;
 	}
 }
 
