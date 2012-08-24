@@ -9,11 +9,6 @@
 @import url('https://fonts.googleapis.com/css?family=Lobster');
 @import url('https://fonts.googleapis.com/css?family=Cabin:400,700');
 
-.navbar .brand,
-legend {
-	font-family: @headingsFontFamily;
-}
-
 h6 {
 	color: @textColor;
 }
@@ -21,6 +16,24 @@ h6 {
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 	font-family: @baseFontFamily;
 	color: @textColor;
+}
+
+code, pre {
+	background-color: rgba(255, 255, 255, 0.3);
+	padding: 2px;
+}
+
+blockquote {
+
+	border-left-color: lighten(#147E88, 12%);
+
+	&.pull-right {
+		border-right-color: lighten(#147E88, 12%);
+	}
+
+	small {
+		color: rgba(255, 255, 255, 0.6);
+	}
 }
 
 .muted {
@@ -43,14 +56,6 @@ hr {
 	border-bottom: 0px solid transparent;
 }
 
-footer.footer {
-	border-top: 1px solid rgba(255, 255, 255, 0.3);
-
-	p {
-		color: @textColor;
-	}
-}
-
 // NAVBAR
 // -----------------------------------------------------
 
@@ -62,6 +67,7 @@ footer.footer {
 
 	.brand {
 		padding: 15px 20px 14px;
+		font-family: @headingsFontFamily;
 		font-size: 24px;
 		font-weight: normal;
 	}
@@ -149,6 +155,7 @@ footer.footer {
 }
 
 div.subnav {
+
 	background-color: rgba(42, 99, 105, 0.9);
 	background-image: none;
 	border: 0px solid transparent;
@@ -189,10 +196,166 @@ div.subnav {
 		border-left-color: rgba(255, 255, 255, 0.4);
 		border-left-width: 1px;
 	}
+
+	&-fixed {
+		top: 50px;
+	}
 }
 
-div.subnav-fixed {
-	top: 50px;
+// NAV
+// -----------------------------------------------------
+
+.nav-tabs li.open > .dropdown-toggle,
+.nav-pills li.open > .dropdown-toggle {
+	background-color: #8AD5DC;
+	color: @linkColor;
+	border-color: transparent;
+}
+
+.nav-tabs, .nav-pills {
+	border-color: transparent;
+
+	li > a {
+		border-color: transparent;
+		.border-radius(0);
+		.box-shadow(0);
+	}
+
+	li.active > a,
+	li:active > a,
+	li.active > a:hover,
+	li:active > a:hover {
+		color: @textColor;
+	}
+
+	li.active > a,
+	li:active > a,
+	li > a:hover,
+	li.active > a:hover,
+	li:active > a:hover {
+		background-color: #8AD5DC;
+		border-color: transparent;
+		text-shadow: none;
+	}
+}
+
+.nav-tabs, .nav-tabs > li > a {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.nav-tabs > li > a {
+	background-color: #3CB9C6;
+}
+
+.nav-tabs.nav-stacked {
+
+	li > a:first-child,
+	li > a:last-child {
+		.border-radius(0);
+	}
+
+	li > a,
+	li > a:hover,
+	li.active > a,
+	li:active > a,
+	li.active > a:hover,
+	li:active > a:hover {
+		border-color: transparent;
+	}
+}
+
+.nav-list {
+	.nav-header {
+		text-shadow: none;
+		color: @textColor;
+	}
+
+	li > a {
+		text-shadow: none;
+	}
+
+	li.active > a,
+	li:active > a,
+	li > a:hover,
+	li.active > a:hover,
+	li:active > a:hover {
+		background-color: #8AD5DC;
+		text-shadow: none;
+	}
+
+	.divider {
+		background-color: rgba(255, 255, 255, 0.3);
+		border-bottom: none;
+	}
+}
+
+.breadcrumb, .pager > li > a {
+	border-color: transparent;
+	.border-radius(0);
+	.box-shadow(none);
+	text-shadow: none;
+}
+
+.breadcrumb {
+	background-color: #3CB9C6;
+	background-image: none;
+
+	li {
+		text-shadow: none;
+	}
+
+	.active {
+		color: @white;
+	}
+
+	.divider {
+		color: @linkColor;
+	}
+}
+
+.pagination {
+
+	ul  {
+		background-color: @paginationBackground;
+		background-image: none;
+	}
+
+	.disabled a, .disabled a:hover {
+		color: @textColor;
+	}
+
+	li a:hover {
+		background-color: rgba(255, 255, 255, 0.4);
+		color: @linkColor;
+	}
+
+	.active a, .active a:hover {
+		background-color: rgba(255, 255, 255, 0.4);
+		color: @textColor;
+	}
+
+	ul,
+	li:first-child a,
+	li:last-child a {
+		.border-radius(0);
+	}
+}
+
+.pager {
+
+	li > a {
+		background-color: #3CB9C6;
+
+		&:hover {
+			background-color: #8AD5DC;
+		}
+	}
+
+	.disabled a,
+	.disabled a:hover {
+		background-color: #3CB9C6;
+		color: @white;
+	}
 }
 
 // BUTTONS
@@ -286,7 +449,7 @@ div.subnav-fixed {
 	margin-top: 1px;
 }
 
-.add-on  [class^="icon-"] {
+.add-on [class^="icon-"] {
 	margin-left: 5px;
 }
 
@@ -319,6 +482,10 @@ div.subnav-fixed {
 
 // FORMS
 // -----------------------------------------------------
+
+legend {
+	font-family: @headingsFontFamily;
+}
 
 legend, label, .help-block, .input-file {
 	color: @textColor;
@@ -384,165 +551,119 @@ input, textarea, .search-query, .uneditable-input,
 	padding: 4px 10px;
 }
 
-// NAVIGATION
+// ALERTS, LABELS, BADGES
 // -----------------------------------------------------
 
-.breadcrumb, .pager > li > a {
+.alert, .label {
 	border-color: transparent;
 	.border-radius(0);
 	.box-shadow(none);
 	text-shadow: none;
 }
 
-.breadcrumb {
-	background-color: #3CB9C6;
-	background-image: none;
-
-	li {
-		text-shadow: none;
-	}
-
-	.active {
-		color: @white;
-	}
-
-	.divider {
-		color: @linkColor;
-	}
+.alert-heading {
+	color: @textColor;
 }
 
-.pager {
+.label, .label:hover {
+	background-color: @grayLighter;
+	text-shadow: none;
+	color: @grayDark;
+}
 
-	li > a {
-		background-color: #3CB9C6;
+.label-warning, .label-warning:hover, .alert {
+	background-color: @orange;
+	color: @textColor;
+}
 
-		&:hover {
-			background-color: #8AD5DC;
+.label-important, .label-important:hover, .alert-error {
+	background-color: darken(@yellow, 3%);
+	color: @textColor;
+}
+
+.label-success, .label-success:hover, .alert-success {
+	background-color: @green;
+	color: @textColor;
+}
+
+.label-info, .label-info:hover, .alert-info {
+	background-color: @purple;
+	color: @textColor;
+}
+
+// MISCELLANEOUS
+// -----------------------------------------------------
+
+.progress, .well, pre, code {
+	border-color: transparent;
+	.border-radius(0);
+	.box-shadow(none);
+	text-shadow: none;
+}
+
+.well {
+	background-image: none;
+}
+
+.hero-unit {
+	.border-radius(0);
+}
+
+.thumbnail {
+	border: 0 solid transparent;
+	.border-radius(0);
+	.box-shadow(none);
+}
+
+.progress {
+	background-image: none;
+	background-color: #27666D;
+
+	.bar {
+		.box-shadow(none);
+		background-image: none;
+		background-color: @yellow;
+
+		&-success {
+			background-color: @green;
+		}
+
+		&-warning {
+			background-color: @orange;
+		}
+
+		&-error {
+			background-color: @red;
 		}
 	}
-
-	.disabled a,
-	.disabled a:hover {
-		background-color: #3CB9C6;
-		color: @white;
-	}
 }
 
-.pagination {
-
-	ul  {
-		background-color: @paginationBackground;
-		background-image: none;
-	}
-
-	.disabled a, .disabled a:hover {
-		color: @textColor;
-	}
-
-	li a:hover {
-		background-color: rgba(255, 255, 255, 0.4);
-		color: @linkColor;
-	}
-
-	.active a, .active a:hover {
-		background-color: rgba(255, 255, 255, 0.4);
-		color: @textColor;
-	}
-
-	ul,
-	li:first-child a,
-	li:last-child a {
-		.border-radius(0);
-	}
-
+.progress-danger .bar {
+	background-image: none;
+	background-color: #AD1D28;
 }
 
-.nav-tabs li.open > .dropdown-toggle,
-.nav-pills li.open > .dropdown-toggle {
-	background-color: #8AD5DC;
-	color: @linkColor;
-	border-color: transparent;
+.progress-danger.progress-striped .bar {
+  #gradient > .striped(#AD1D28);
 }
 
-.nav-tabs, .nav-pills {
-	border-color: transparent;
-
-	li > a {
-		border-color: transparent;
-		.border-radius(0);
-		.box-shadow(0);
-	}
-
-	li.active > a,
-	li:active > a,
-	li.active > a:hover,
-	li:active > a:hover {
-		color: @textColor;
-	}
-
-	li.active > a,
-	li:active > a,
-	li > a:hover,
-	li.active > a:hover,
-	li:active > a:hover {
-		background-color: #8AD5DC;
-		border-color: transparent;
-		text-shadow: none;
-	}
+.progress-success .bar {
+	background-image: none;
+	background-color: @green;
 }
 
-.nav-tabs, .nav-tabs > li > a {
-	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+.progress-success.progress-striped .bar {
+  #gradient > .striped(@green);
 }
 
-.nav-tabs > li > a {
-	background-color: #3CB9C6;
+.progress-info .bar {
+	background-image: none;
+	background-color: @blue;
 }
 
-.nav-tabs.nav-stacked {
-
-	li > a:first-child,
-	li > a:last-child {
-		.border-radius(0);
-	}
-
-	li > a,
-	li > a:hover,
-	li.active > a,
-	li:active > a,
-	li.active > a:hover,
-	li:active > a:hover {
-		border-color: transparent;
-	}
+.progress-info.progress-striped .bar {
+  #gradient > .striped(@blue);
 }
-
-.nav-list {
-	.nav-header {
-		text-shadow: none;
-		color: @textColor;
-	}
-
-	li > a {
-		text-shadow: none;
-	}
-
-	li.active > a,
-	li:active > a,
-	li > a:hover,
-	li.active > a:hover,
-	li:active > a:hover {
-		background-color: #8AD5DC;
-		text-shadow: none;
-	}
-
-	.divider {
-		background-color: rgba(255, 255, 255, 0.3);
-		border-bottom: none;
-	}
-}
-
-// MODALS
-// -----------------------------------------------------
 
 .modal {
 	.border-radius(0);
@@ -576,125 +697,6 @@ input, textarea, .search-query, .uneditable-input,
 	input,
 	.uneditable-input {
 		border: 1px solid @grayLight;
-	}
-}
-
-// MISCELLANEOUS
-// -----------------------------------------------------
-
-.alert, .label, .progress, .well, pre, code {
-	border-color: transparent;
-	.border-radius(0);
-	.box-shadow(none);
-	text-shadow: none;
-}
-
-.hero-unit {
-	.border-radius(0);
-}
-
-code, pre {
-	background-color: rgba(255, 255, 255, 0.3);
-	padding: 2px;
-}
-
-.well {
-	background-image: none;
-}
-
-.label, .label:hover {
-	background-color: @grayLighter;
-	text-shadow: none;
-	color: @grayDark;
-}
-
-.label-warning, .label-warning:hover, .alert {
-	background-color: @orange;
-	color: @textColor;
-}
-
-.label-important, .label-important:hover, .alert-error {
-	background-color: darken(@yellow, 3%);
-	color: @textColor;
-}
-
-.label-success, .label-success:hover, .alert-success {
-	background-color: @green;
-	color: @textColor;
-}
-
-.label-info, .label-info:hover, .alert-info {
-	background-color: @purple;
-	color: @textColor;
-}
-
-.alert-heading {
-	color: @textColor;
-}
-
-.progress {
-	background-image: none;
-	background-color: #27666D;
-
-	.bar {
-		.box-shadow(none);
-		background-image: none;
-		background-color: @yellow;
-
-		&-success {
-			background-color: @green;
-		}
-
-		&-warning {
-			background-color: @orange;
-		}
-
-		&-error {
-			background-color: @red;
-		}
-	}
-}
-
-.progress-danger .bar {
-	background-image: none;
-	background-color: #AD1D28;
-}
-.progress-danger.progress-striped .bar {
-  #gradient > .striped(#AD1D28);
-}
-
-.progress-success .bar {
-	background-image: none;
-	background-color: @green;
-}
-.progress-success.progress-striped .bar {
-  #gradient > .striped(@green);
-}
-
-.progress-info .bar {
-	background-image: none;
-	background-color: @blue;
-}
-.progress-info.progress-striped .bar {
-  #gradient > .striped(@blue);
-}
-
-.thumbnail {
-	border: 0 solid transparent;
-	.border-radius(0);
-	.box-shadow(none);
-}
-
-blockquote {
-
-	border-left-color: lighten(#147E88, 12%);
-
-	&.pull-right {
-		border-right-color: lighten(#147E88, 12%);
-	}
-
-	small {
-		color: rgba(255, 255, 255, 0.6);
 	}
 }
 
