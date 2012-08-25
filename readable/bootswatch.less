@@ -10,24 +10,33 @@ body {
 	word-spacing: -0.05em;
 }
 
-h1 {
-	font-size: 2.5em;
-}
+h1 { font-size: 2.5em; }
 
-h2 {
-	font-size: 2em;
-}
+h2 { font-size: 2em; }
 
-h3 {
-	font-size: 1.5em;
-}
-
-h6 {
-	color: @textColor;
-}
+h3 { font-size: 1.5em; }
 
 small {
 	font-size: 13px;
+}
+
+blockquote {
+
+	border-left: 6px solid @grayLighter;
+
+	&.pull-right {
+		border-right: 6px solid @grayLighter;
+	}
+
+	p {
+		font-size: 1em;
+		line-height: 1.2em;
+	}
+}
+
+code, pre {
+	.border-radius(0);
+	background-color: @white;
 }
 
 .muted, .help-block, .uneditable-input, blockquote, small {
@@ -138,6 +147,7 @@ small {
 }
 
 div.subnav {
+
 	.box-shadow(none);
 	.border-radius(0);
 	background-color: @white;
@@ -164,16 +174,6 @@ div.subnav {
 
 	&-fixed {
 		top: @navbarHeight;
-	}
-}
-
-.dropdown-menu {
-	border: 1px solid #D4D4D4;
-	.border-radius(0);
-	.box-shadow(1px 1px 1px rgba(0, 0, 0, 0.2));
-
-	.divider {
-		margin: 5px 1px;
 	}
 }
 
@@ -345,6 +345,23 @@ div.subnav {
 	margin-top: 13px;
 }
 
+// TABLES
+// -----------------------------------------------------
+
+.table-bordered {
+	.border-radius(0);
+}
+
+.table-bordered thead:first-child tr:first-child th:first-child,
+.table-bordered tbody:first-child tr:first-child td:first-child {
+	.border-radius(0);
+}
+
+.table-bordered thead:last-child tr:last-child th:first-child,
+.table-bordered tbody:last-child tr:last-child td:first-child {
+	.border-radius(0);
+}
+
 // FORMS
 // -----------------------------------------------------
 
@@ -366,41 +383,20 @@ select, input[type="file"] {
 	padding-top: 2em;
 }
 
-// TABLES
+// DROPDOWNS
 // -----------------------------------------------------
 
-.table-bordered {
+.dropdown-menu {
+	border: 1px solid #D4D4D4;
 	.border-radius(0);
+	.box-shadow(1px 1px 1px rgba(0, 0, 0, 0.2));
+
+	.divider {
+		margin: 5px 1px;
+	}
 }
 
-.table-bordered thead:first-child tr:first-child th:first-child,
-.table-bordered tbody:first-child tr:first-child td:first-child {
-	.border-radius(0);
-}
-
-.table-bordered thead:last-child tr:last-child th:first-child,
-.table-bordered tbody:last-child tr:last-child td:first-child {
-	.border-radius(0);
-}
-
-// MODALS
-// -----------------------------------------------------
-
-.modal {
-	background-color: @white;
-	.border-radius(0);
-}
-
-.modal-header {
-	border-bottom: none;
-}
-
-.modal-footer {
-	background-color: @bodyBackground;
-}
-
-
-// MISCELLANEOUS
+// ALERTS, LABELS, BADGES
 // -----------------------------------------------------
 
 .alert,
@@ -431,35 +427,37 @@ select, input[type="file"] {
 
 .label-info, .label-info:hover { background-color: @infoBackground; }
 
+// MISC
+// -----------------------------------------------------
+
 .well, .hero-unit {
 	.box-shadow(none);
 	border: 1px solid #D4D4D4;
 	.border-radius(0);
 }
 
-blockquote {
-	border-left: 6px solid @grayLighter;
-
-	&.pull-right {
-		border-right: 6px solid @grayLighter;
-	}
-
-	p {
-		font-size: 1em;
-		line-height: 1.2em;
-	}
-}
-
 .thumbnail {
 	background-color: @white;
 }
 
-.thumbnail, .thumbnail > img {
+.thumbnail,
+.thumbnail > img {
 	.border-radius(0);
 	.box-shadow(none);
 }
 
-code, pre {
-	.border-radius(0);
+.modal {
 	background-color: @white;
+	.border-radius(0);
 }
+
+.modal-header {
+	border-bottom: none;
+}
+
+.modal-footer {
+	background-color: @bodyBackground;
+}
+
+// MEDIA QUERIES
+// -----------------------------------------------------

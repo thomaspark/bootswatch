@@ -4780,10 +4780,6 @@ h4 {
 h5 {
   font-size: 13px;
 }
-h6 {
-  color: #000000;
-  font-weight: bold;
-}
 p > a,
 address > a,
 .breadcrumb a,
@@ -4798,15 +4794,27 @@ abbr[title]:hover {
   text-decoration: none;
   border-bottom: 1px solid;
 }
+code,
+pre {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  background-color: #eeeeee;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
 .page-header {
   border-bottom: 2px solid #eeeeee;
+}
+hr {
+  border-bottom: 1px solid #eeeeee;
 }
 .navbar {
   font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
   font-weight: bold;
 }
 .navbar .navbar-inner {
-  border-top: 2px solid #eeeeee;
   border-bottom: 2px solid #eeeeee;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -4980,46 +4988,6 @@ div.subnav li.dropdown.open .dropdown-toggle:hover {
 .btn-inverse.active {
   background-color: #000000 \9;
 }
-.modal {
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  border-radius: 0px;
-  background: #ffffff;
-}
-.modal-header {
-  border-bottom: none;
-}
-.modal-footer {
-  background: transparent;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  border-top: none;
-}
-.close,
-.close:hover {
-  border-bottom: none;
-}
-.hero-unit {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-}
-.hero-unit h1 {
-  line-height: 1.5em;
-}
-.well {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-}
 .table-bordered {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -5034,25 +5002,45 @@ legend {
   font-weight: bold;
   color: #000000;
 }
-a.thumbnail:hover {
-  -webkit-box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.3);
-  border-color: #ddd;
-}
-code,
-pre,
-pre.prettyprint {
+.well {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
-  background-color: #eeeeee;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
 }
-hr {
-  border-bottom: 1px solid #eeeeee;
+.hero-unit {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.hero-unit h1 {
+  line-height: 1.5em;
+}
+.modal {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  background: #ffffff;
+}
+.modal-header {
+  border-bottom: none;
+}
+.modal-footer {
+  border-top: none;
+  background: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.close,
+.close:hover {
+  border-bottom: none;
 }
 @media (max-width: 768px) {
   div.subnav {

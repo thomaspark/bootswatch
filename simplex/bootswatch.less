@@ -3,15 +3,18 @@
 // Version: 2.1.0
 // -----------------------------------------------------
 
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700');
-
 @boxShadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 
 // TYPOGRAPHY
 // -----------------------------------------------------
 
-h6 {
-	color: @headingsColor;
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700');
+
+// SCAFFOLDING
+// -----------------------------------------------------
+
+hr {
+	border-bottom: none;
 }
 
 // NAVBAR
@@ -151,9 +154,7 @@ h6 {
 			.nav-header {
 				color: rgba(255, 255, 255, 0.7);
 			}
-
 		}
-
 	}
 }
 
@@ -359,94 +360,6 @@ div.subnav {
 	}
 }
 
-// FORMS
-// -----------------------------------------------------
-
-legend {
-	border-bottom: 1px solid #ddd;
-	font-family: @headingsFontFamily;
-}
-
-.navbar-search .search-query {
-	border: 1px solid #ddd;
-	.border-radius(0);
-	background-color: @bodyBackground;
-	color: @gray;
-}
-
-.help-inline, .help-block {
-	font-size: 13px;
-}
-
-.input-append .btn,
-.input-prepend .btn {
-	line-height: 16px;
-}
-
-// BUTTONS
-// -----------------------------------------------------
-
-.btn {
-	padding-top: .6em;
-	font-family: @headingsFontFamily;
-	font-weight: bold;
-}
-
-// MODALS
-// -----------------------------------------------------
-
-.modal-header {
-	border-bottom: none;
-}
-
-.modal-header,
-.modal-body {
-	background-color: @navbarBackground;
-}
-
-.modal-footer {
-	background-color: @bodyBackground;
-}
-
-// MISCELLANEOUS
-// -----------------------------------------------------
-
-i[class^="icon-"]{
-	opacity: 0.5;
-	vertical-align: -2px;
-}
-
-hr {
-	border-bottom: none;
-}
-
-.progress {
-    #gradient > .vertical(#e0e0e0, #e8e8e8);
-}
-
-.label {
-	padding: 4px 4px 3px;
-	margin-left: 1px;
-	margin-right: 1px;
-	line-height: 26px;
-	font-weight: normal;
-}
-
-.hero-unit {
-	background-color: @navbarBackground;
-	.box-shadow(@boxShadow~", "-1px -1px 0 rgba(0, 0, 0, 0.1));
-}
-
-.well {
-	.box-shadow(@boxShadow~", "-1px -1px 0 rgba(0, 0, 0, 0.1));
-	border: none;
-}
-
-.thumbnail {
-	padding: 10px;
-	background-color: @white;
-}
-
 .breadcrumb {
 	.box-shadow(@boxShadow~", "-1px -1px 0 rgba(0, 0, 0, 0.1));
 	border: 0px solid transparent;
@@ -482,6 +395,103 @@ hr {
 		color: @linkColor;
 	}
 }
+
+
+// BUTTONS
+// -----------------------------------------------------
+
+.btn {
+	padding-top: .6em;
+	font-family: @headingsFontFamily;
+	font-weight: bold;
+}
+
+// TABLES
+// -----------------------------------------------------
+
+// FORMS
+// -----------------------------------------------------
+
+legend {
+	border-bottom: 1px solid #ddd;
+	font-family: @headingsFontFamily;
+}
+
+.navbar-search .search-query {
+	border: 1px solid #ddd;
+	.border-radius(0);
+	background-color: @bodyBackground;
+	color: @gray;
+}
+
+.help-inline, .help-block {
+	font-size: 13px;
+}
+
+.input-append .btn,
+.input-prepend .btn {
+	line-height: 16px;
+}
+
+// DROPDOWNS
+// -----------------------------------------------------
+
+// ALERTS, LABELS, BADGES
+// -----------------------------------------------------
+
+.label {
+	padding: 4px 4px 3px;
+	margin-left: 1px;
+	margin-right: 1px;
+	line-height: 26px;
+	font-weight: normal;
+}
+
+// MISCELLANEOUS
+// -----------------------------------------------------
+
+i[class^="icon-"]{
+	opacity: 0.5;
+	vertical-align: -2px;
+}
+
+.well {
+	.box-shadow(@boxShadow~", "-1px -1px 0 rgba(0, 0, 0, 0.1));
+	border: none;
+}
+
+.hero-unit {
+	background-color: @navbarBackground;
+	.box-shadow(@boxShadow~", "-1px -1px 0 rgba(0, 0, 0, 0.1));
+}
+
+.thumbnail {
+	padding: 10px;
+	background-color: @white;
+}
+
+.progress {
+    #gradient > .vertical(#e0e0e0, #e8e8e8);
+}
+
+.modal {
+
+	&-header {
+		border-bottom: none;
+	}
+
+	&-header,
+	&-body {
+		background-color: @navbarBackground;
+	}
+
+	&-footer {
+		background-color: @bodyBackground;
+	}
+}
+
+// MEDIA QUERIES
+// -----------------------------------------------------
 
 @media (max-width: 979px) {
 

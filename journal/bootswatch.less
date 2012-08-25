@@ -9,6 +9,7 @@
 @import url('https://fonts.googleapis.com/css?family=News+Cycle:400,700');
 
 h1, h2, h3, h4, h5, h6 {
+
 	line-height: 1.5em;
 
 	a {
@@ -16,33 +17,15 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
-h1 {
-	font-size: 48px;
-}
+h1 { font-size: 48px; }
 
-h2 {
-	font-size: 36px;
-}
+h2 { font-size: 36px; }
 
-h3 {
-	font-size: 28px;
-}
+h3 { font-size: 28px; }
 
-h4 {
-	font-size: 20px;
-}
+h4 { font-size: 20px; }
 
-h5 {
-	font-size: 13px;
-}
-
-h6 {
-	color: @black;
-	font-weight: bold;
-}
-
-// SCAFFOLDING
-// -----------------------------------------------------
+h5 { font-size: 13px; }
 
 p > a,
 address > a,
@@ -57,8 +40,21 @@ abbr[title] {
 	}
 }
 
+code, pre {
+	.border-radius(0);
+	background-color: @grayLighter;
+	.box-shadow(none);
+}
+
+// SCAFFOLDING
+// -----------------------------------------------------
+
 .page-header {
 	border-bottom: 2px solid @grayLighter;
+}
+
+hr {
+	border-bottom: 1px solid @grayLighter;
 }
 
 // NAVBAR
@@ -70,7 +66,6 @@ abbr[title] {
 	font-weight: bold;
 
 	.navbar-inner {
-		border-top: 2px solid @grayLighter;
 		border-bottom: 2px solid @grayLighter;
 		.border-radius(0);
 		.box-shadow(none);
@@ -206,6 +201,9 @@ div.subnav {
 	}
 }
 
+// NAV
+// -----------------------------------------------------
+
 // BUTTONS
 // -----------------------------------------------------
 
@@ -217,8 +215,49 @@ div.subnav {
 	.buttonBackground(@grayDarker, @black);
 }
 
-// MODALS
+// TABLES
 // -----------------------------------------------------
+
+.table-bordered {
+	.border-radius(0);
+	.box-shadow(none);
+}
+
+// FORMS
+// -----------------------------------------------------
+
+legend {
+	border-bottom: 2px solid @grayLighter;
+	font-family: @headingsFontFamily;
+	font-weight: @headingsFontWeight;
+	color: @headingsColor;
+}
+
+// DROPDOWNS
+// -----------------------------------------------------
+
+// MISC
+// -----------------------------------------------------
+
+.well {
+	.border-radius(0);
+	.box-shadow(none);
+}
+
+.hero-unit {
+	border: 1px solid rgba(0,0,0,.05);
+	.border-radius(0);
+	.box-shadow(none);
+
+	h1 {
+		line-height: 1.5em;
+	}
+}
+
+// a.thumbnail:hover {
+// 	.box-shadow(0 1px 3px 1px rgba(0, 0, 0, 0.3));
+// 	border-color: #ddd;
+// }
 
 .modal {
  	.border-radius(0px);
@@ -230,9 +269,9 @@ div.subnav {
 }
 
 .modal-footer {
+	border-top: none;
 	background: transparent;
 	.box-shadow(none);
-	border-top: none;
 }
 
 .close,
@@ -240,56 +279,13 @@ div.subnav {
 	border-bottom: none;
 }
 
-// MISC
+// MEDIA QUERIES
 // -----------------------------------------------------
-
-.hero-unit {
-	.box-shadow(none);
-	border: 1px solid rgba(0,0,0,.05);
-	.border-radius(0);
-
-	h1 {
-		line-height: 1.5em;
-	}
-}
-
-.well {
-	.border-radius(0);
-	.box-shadow(none);
-
-}
-
-.table-bordered {
-	.border-radius(0);
-	.box-shadow(none);
-}
-
-
-legend {
-	border-bottom: 2px solid @grayLighter;
-	font-family: @headingsFontFamily;
-	font-weight: @headingsFontWeight;
-	color: @headingsColor;
-}
-
-a.thumbnail:hover {
-	.box-shadow(0 1px 3px 1px rgba(0, 0, 0, 0.3));
-	border-color: #ddd;
-}
-
-code, pre, pre.prettyprint {
-	.border-radius(0);
-	background-color: @grayLighter;
-	.box-shadow(none);
-}
-
-hr {
-	border-bottom: 1px solid @grayLighter;
-}
 
 @media (max-width: 768px) {
 
 	div.subnav {
+
 		height: auto;
 
 		.nav > li.active > a {

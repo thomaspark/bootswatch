@@ -15,8 +15,16 @@ label, input, button, select, textarea,
 	color: @gray;
 }
 
-.jumbotron h1 {
-	font-weight: normal !important;
+code, pre {
+	background-color: @grayLighter;
+}
+
+blockquote {
+	border-left: 5px solid @blue;
+
+	&.pull-right {
+		border-right: 5px solid @blue;
+	}
 }
 
 // SCAFFOLDING
@@ -156,17 +164,6 @@ body {
 	}
 }
 
-.dropdown-menu {
-	background-color: #191A1A;
-	// border-left: solid 1px rgba(255, 255, 255, 0.1);
-	.box-shadow(0 2px 4px rgba(0, 0, 0, 0.8));
-}
-
-.dropdown-menu li > a:hover {
-	background-color: @blue;
-	// border-bottom: 3px solid transparent;
-}
-
 div.subnav {
 	position: static;
 	background-color: @grayDarker;
@@ -219,43 +216,8 @@ div.subnav {
 	}
 }
 
-@media (max-width: 768px) {
-	div.subnav .nav > li + li > a,
-	div.subnav .nav > li:first-child > a {
-		border-top: 1px solid #222;
-		border-left: 1px solid #222;
-	}
-
-	.subnav .nav > li + li > a:hover,
-	.subnav .nav > li:first-child > a:hover {
-			border-bottom: 0;
-			background-color: @blue;
-	}
-}
-
-// NAVIGATION
+// NAV
 // -----------------------------------------------------
-
-.nav-list {
-
-	li > a {
-		text-shadow: none;
-	}
-
-	li > a:hover {
-		background-color: @blue;
-		color: @white;
-	}
-
-	.nav-header {
-		text-shadow: none;
-	}
-
-	.divider {
-		background-color: transparent;
-		border-bottom: 1px solid #222;
-	}
-}
 
 .nav-tabs {
 
@@ -292,6 +254,27 @@ div.subnav {
 
 	.dropdown-menu li > a:hover {
 		border: none;
+	}
+}
+
+.nav-list {
+
+	li > a {
+		text-shadow: none;
+	}
+
+	li > a:hover {
+		background-color: @blue;
+		color: @white;
+	}
+
+	.nav-header {
+		text-shadow: none;
+	}
+
+	.divider {
+		background-color: transparent;
+		border-bottom: 1px solid #222;
 	}
 }
 
@@ -429,6 +412,7 @@ div.subnav {
 
 input, textarea, select {
 	border-width: 2px;
+	.border-radius(1px);
 }
 
 legend, label {
@@ -466,27 +450,7 @@ select:focus {
 	border-top: 1px solid #222;
 }
 
-// MODALS
-// -----------------------------------------------------
-
-.modal {
- 	.border-radius(1px);
-	border-top: solid 1px lighten(@grayDark, 5%);
-	background-color: @grayDark;
-}
-
-.modal-header {
-	border-bottom: 1px solid #222;
-}
-
-.modal-footer {
-	background-color: @grayDark;
-	border-top: 1px solid #222;
-	.border-radius(0 0 6px 6px);
-	.box-shadow(none);
-}
-
-// MISCELLANEOUS
+// TABLES
 // -----------------------------------------------------
 
 .table {
@@ -507,67 +471,22 @@ select:focus {
 		background-color: @blue;
 		color: @white;
 	}
-
-
 }
 
+// DROPDOWNS
+// -----------------------------------------------------
 
-
-.well, .hero-unit, .prettyprint, input, textarea, select {
-	.border-radius(1px);
+.dropdown-menu {
+	background-color: #191A1A;
+	.box-shadow(0 2px 4px rgba(0, 0, 0, 0.8));
 }
 
-code, pre {
-	background-color: @grayLighter;
+.dropdown-menu li > a:hover {
+	background-color: @blue;
 }
 
-.well, .hero-unit {
-	border-top: solid 1px lighten(@grayDark, 5%);
-	.box-shadow(0 2px 4px rgba(0,0,0,.8));
-}
-
-blockquote {
-	border-left: 5px solid @blue;
-
-	&.pull-right {
-		border-right: 5px solid @blue;
-	}
-}
-
-.thumbnail {
-	border-color: #222;
-}
-
-.progress {
-	background-color: #060606;
-	background-image: none;
-	.border-radius(0);
-}
-
-.label {
-	color: @grayLighter;
-}
-
-.label, .alert { background-color: darken(@gray, 20%); }
-
-.label:hover { background-color: darken(@gray, 30%); }
-
-.label-important, .alert-danger,
-.alert-error { background-color: @red; }
-
-.label-important:hover { background-color: darken(@red, 10%); }
-
-.label-warning   { background-color: darken(@orange, 10%); }
-
-.label-warning:hover { background-color: darken(@orange, 20%); }
-
-.label-success, .alert-success { background-color: darken(@green, 3%); }
-
-.label-success:hover { background-color: darken(@green, 13%); }
-
-.label-info, .alert-info { background-color: darken(@blueDark, 10%); }
-
-.label-info:hover { background-color: darken(@blueDark, 20%); }
+// ALERTS, LABELS, BADGES
+// -----------------------------------------------------
 
 .alert,
 .alert .alert-heading,
@@ -584,6 +503,88 @@ blockquote {
   border: none;
 }
 
-footer.footer {
+.label {
+	color: @grayLighter;
+}
+
+.label, .alert { background-color: darken(@gray, 20%); }
+
+.label:hover { background-color: darken(@gray, 30%); }
+
+.label-important,
+.alert-danger,
+.alert-error { background-color: @red; }
+
+.label-important:hover { background-color: darken(@red, 10%); }
+
+.label-warning   { background-color: darken(@orange, 10%); }
+
+.label-warning:hover { background-color: darken(@orange, 20%); }
+
+.label-success, .alert-success { background-color: darken(@green, 3%); }
+
+.label-success:hover { background-color: darken(@green, 13%); }
+
+.label-info, .alert-info { background-color: darken(@blueDark, 10%); }
+
+.label-info:hover { background-color: darken(@blueDark, 20%); }
+
+// MISC
+// -----------------------------------------------------
+
+.well, .hero-unit {
+	.border-radius(1px);
+}
+
+.well, .hero-unit {
+	border-top: solid 1px lighten(@grayDark, 5%);
+	.box-shadow(0 2px 4px rgba(0,0,0,.8));
+}
+
+.thumbnail {
+	border-color: #222;
+}
+
+.progress {
+	background-color: #060606;
+	background-image: none;
+	.border-radius(0);
+}
+
+.modal {
+ 	.border-radius(1px);
+	border-top: solid 1px lighten(@grayDark, 5%);
+	background-color: @grayDark;
+}
+
+.modal-header {
+	border-bottom: 1px solid #222;
+}
+
+.modal-footer {
+	background-color: @grayDark;
 	border-top: 1px solid #222;
+	.border-radius(0 0 6px 6px);
+	.box-shadow(none);
+}
+
+.footer {
+	border-top: 1px solid #222;
+}
+
+// MEDIA QUERIES
+// -----------------------------------------------------
+
+@media (max-width: 768px) {
+	div.subnav .nav > li + li > a,
+	div.subnav .nav > li:first-child > a {
+		border-top: 1px solid #222;
+		border-left: 1px solid #222;
+	}
+
+	.subnav .nav > li + li > a:hover,
+	.subnav .nav > li:first-child > a:hover {
+			border-bottom: 0;
+			background-color: @blue;
+	}
 }

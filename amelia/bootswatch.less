@@ -616,10 +616,12 @@ input, textarea, .search-query, .uneditable-input,
 }
 
 .progress {
+
 	background-image: none;
 	background-color: #27666D;
 
 	.bar {
+
 		.box-shadow(none);
 		background-image: none;
 		background-color: @yellow;
@@ -644,7 +646,7 @@ input, textarea, .search-query, .uneditable-input,
 }
 
 .progress-danger.progress-striped .bar {
-  #gradient > .striped(#AD1D28);
+	#gradient > .striped(#AD1D28);
 }
 
 .progress-success .bar {
@@ -653,7 +655,7 @@ input, textarea, .search-query, .uneditable-input,
 }
 
 .progress-success.progress-striped .bar {
-  #gradient > .striped(@green);
+	#gradient > .striped(@green);
 }
 
 .progress-info .bar {
@@ -662,45 +664,47 @@ input, textarea, .search-query, .uneditable-input,
 }
 
 .progress-info.progress-striped .bar {
-  #gradient > .striped(@blue);
+	#gradient > .striped(@blue);
 }
 
 .modal {
+
 	.border-radius(0);
-}
 
-.modal-header {
-	background-color: @navbarBackground;
-	color: @white;
-}
-
-.modal-body {
-	
-	color: @grayDark;
-
-	h1, h2, h3, h4, h5, h6,
-	legend {
-		color: @red;
+	&-header {
+		background-color: @navbarBackground;
+		color: @white;
 	}
 
-	label,
-	.input-file {
+	&-body {
+		
 		color: @grayDark;
-	}
 
-	.help-block,
-	.help-inline {
-		color: @grayLight;
-	}
+		h1, h2, h3, h4, h5, h6,
+		legend {
+			color: @red;
+		}
 
-	textarea,
-	input,
-	.uneditable-input {
-		border: 1px solid @grayLight;
+		label,
+		.input-file {
+			color: @grayDark;
+		}
+
+		.help-block,
+		.help-inline {
+			color: @grayLight;
+		}
+
+		textarea,
+		input,
+		.uneditable-input {
+			border: 1px solid @grayLight;
+		}
 	}
 }
 
 .popover {
+	
 	padding: 0;
 	.border-radius(0);
 	color: @grayDark;
@@ -710,3 +714,6 @@ input, textarea, .search-query, .uneditable-input,
 		color: @white;
 	}
 }
+
+// MEDIA QUERIES
+// -----------------------------------------------------

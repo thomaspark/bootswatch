@@ -8,6 +8,9 @@
 
 @import url(https://fonts.googleapis.com/css?family=Ubuntu);
 
+// SCAFFOLDING
+// -----------------------------------------------------
+
 // NAVBAR
 // -----------------------------------------------------
 
@@ -69,6 +72,16 @@
 	}
 }
 
+// NAV
+// -----------------------------------------------------
+
+.nav-tabs .open .dropdown-toggle,
+.nav-pills .open .dropdown-toggle,
+.nav > li.dropdown.open.active > a:hover {
+	border-right: 1px solid #C03D14;
+	border-left: 1px solid #E6633A;
+}
+
 // BUTTONS
 // -----------------------------------------------------
 
@@ -80,23 +93,24 @@
   .buttonBackground(lighten(@yellow, 15%), @yellow);
 }
 
-// NAVIGATION
+// TABLES
 // -----------------------------------------------------
 
+// FORMS
+// -----------------------------------------------------
 
-.nav-tabs .open .dropdown-toggle,
-.nav-pills .open .dropdown-toggle,
-.nav > li.dropdown.open.active > a:hover {
-	border-right: 1px solid #C03D14;
-	border-left: 1px solid #E6633A;
-}
+// DROPDOWNS
+// -----------------------------------------------------
 
-// MISC
+// ALERTS, LABELS, BADGES
 // -----------------------------------------------------
 
 .alert {
 	text-shadow: none;
 }
+
+// MISC
+// -----------------------------------------------------
 
 .hero-unit {
     border: 1px solid rgba(0,0,0,.05);
@@ -106,3 +120,6 @@
 		line-height: 1.6em;
 	}
 }
+
+// MEDIA QUERIES
+// -----------------------------------------------------

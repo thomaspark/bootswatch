@@ -9,14 +9,13 @@
 @import url(https://fonts.googleapis.com/css?family=Oswald);
 @import url(https://fonts.googleapis.com/css?family=Noticia+Text);
 
-h6, legend,
-h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, h6 {
 	font-family: @headingsFontFamily;
 	color: @orange;
 	text-shadow: -1px 1px 0 darken(@orange, 30%);
 }
 
-h1, h2, legend {
+h1, h2 {
 	text-shadow: -2px 2px 0 darken(@orange, 30%);
 }
 
@@ -24,18 +23,17 @@ h1 {
 	line-height: 55px;
 }
 
-// SCAFFOLDING
-// --------------------------------------------------
-
 code, pre {
 	background-color: lighten(@blue, 8%);
 	border: none;
 	color: @textColor;
 }
 
-.prettyprint {
-	border: none;
-	text-decoration: none;
+// SCAFFOLDING
+// --------------------------------------------------
+
+.page-header {
+	border-bottom: none;
 }
 
 blockquote {
@@ -168,14 +166,6 @@ blockquote.pull-right {
 	}
 }
 
-.dropdown .caret {
-	margin-top: 14px;
-	opacity: 1;
-	border-left: 6px solid transparent;
-	border-right: 6px solid transparent;
-	border-top: 6px solid lighten(@blue, 10%);
-}
-
 div.subnav {
 	background-color: @blue;
 	background-image: none;
@@ -236,121 +226,6 @@ div.subnav {
 	.nav > .active > a:hover .caret {
 		border-top-color: @textColor;
 	}
-}
-
-@media (max-width: 768px) {
-	div.subnav .nav > li:first-child > a,
-	div.subnav .nav > li:first-child > a:hover,
-	div.subnav .nav > li.active:first-child > a,
-	div.subnav .nav > li.active:first-child > a:hover {
-		.border-radius(4px 4px 0 0);
-	}
-
-	div.subnav .nav > li:last-child > a,
-	div.subnav .nav > li:last-child > a:hover,
-	div.subnav .nav > li.active:last-child > a,
-	div.subnav .nav > li.active:last-child > a:hover {
-		.border-radius(0 0 4px 4px);
-	}
-
-}
-
-// TABLES
-// -----------------------------------------------------
-
-.table,
-.table-striped tbody > tr > td:first-child,
-.table-striped tbody > tr > td:last-child, {
-	.border-radius(4px);
-}
-
-// BUTTONS
-// --------------------------------------------------
-
-.btn,
-.btn:hover {
-	text-shadow: none;
-	background-image: none;
-	.box-shadow(-2px 2px 0 rgba(0, 0, 0, 0.2));
-	border: none;
-}
-
-.btn-warning {
-	background-color: @yellow;
-}
-
-.btn-primary, .btn-primary:hover {
-	.box-shadow(-2px 2px 0 darken(@btnPrimaryBackground, 30%));
-}
-
-.btn-warning, .btn-warning:hover {
-	.box-shadow(-2px 2px 0 darken(@yellow, 30%));
-}
-
-.btn-danger, .btn-danger:hover {
-	.box-shadow(-2px 2px 0 darken(#ee5f5b, 30%));
-}
-
-.btn-success, .btn-success:hover {
-	.box-shadow(-2px 2px 0 darken(#62c462, 30%));
-}
-
-.btn-info, .btn-info:hover {
-	.box-shadow(-2px 2px 0 darken(#5bc0de, 40%));
-}
-
-.btn-inverse, .btn-inverse:hover {
-	.box-shadow(-2px 2px 0 darken(#454545, 20%));
-}
-
-.btn.dropdown-toggle, .btn.dropdown-toggle:hover {
-	.box-shadow(0 2px 0 darken(@white, 80%));
-}
-
-.btn-primary.dropdown-toggle, .btn-primary.dropdown-toggle:hover {
-	.box-shadow(0 2px 0 darken(@btnPrimaryBackground, 30%));
-}
-
-.btn-warning.dropdown-toggle, .btn-warning.dropdown-toggle:hover {
-	.box-shadow(0 2px 0 darken(@yellow, 30%));
-}
-
-.btn-danger.dropdown-toggle, .btn-danger.dropdown-toggle:hover {
-	.box-shadow(0 2px 0 darken(#ee5f5b, 30%));
-}
-
-.btn-success.dropdown-toggle, .btn-success.dropdown-toggle:hover {
-	.box-shadow(0 2px 0 darken(#62c462, 30%));
-}
-
-.btn-info.dropdown-toggle, .btn-info.dropdown-toggle:hover {
-	.box-shadow(0 2px 0 darken(#5bc0de, 40%));
-}
-
-.btn-inverse.dropdown-toggle, .btn-inverse.dropdown-toggle:hover {
-	.box-shadow(0 2px 0 darken(#454545, 20%));
-}
-
-.btn.active,
-.btn:active {
-	position: relative;
-	top: 1px;
-	left: -1px;
-	.box-shadow(-1px 1px 0 darken(@white, 80%))
-}
-
-.btn.disabled,
-.btn.disabled.active,
-.btn.disabled:active,
-.btn[disabled] {
-	.box-shadow(none);
-	text-shadow: none;
-	top: 0;
-	left: 0;
-}
-
-[class^="icon-"], [class*=" icon-"] {
-	vertical-align: -13%;
 }
 
 // NAVIGATION
@@ -500,6 +375,104 @@ div.subnav {
 	}
 }
 
+// BUTTONS
+// --------------------------------------------------
+
+.btn,
+.btn:hover {
+	text-shadow: none;
+	background-image: none;
+	.box-shadow(-2px 2px 0 rgba(0, 0, 0, 0.2));
+	border: none;
+}
+
+.btn-warning {
+	background-color: @yellow;
+}
+
+.btn-primary, .btn-primary:hover {
+	.box-shadow(-2px 2px 0 darken(@btnPrimaryBackground, 30%));
+}
+
+.btn-warning, .btn-warning:hover {
+	.box-shadow(-2px 2px 0 darken(@yellow, 30%));
+}
+
+.btn-danger, .btn-danger:hover {
+	.box-shadow(-2px 2px 0 darken(#ee5f5b, 30%));
+}
+
+.btn-success, .btn-success:hover {
+	.box-shadow(-2px 2px 0 darken(#62c462, 30%));
+}
+
+.btn-info, .btn-info:hover {
+	.box-shadow(-2px 2px 0 darken(#5bc0de, 40%));
+}
+
+.btn-inverse, .btn-inverse:hover {
+	.box-shadow(-2px 2px 0 darken(#454545, 20%));
+}
+
+.btn.dropdown-toggle, .btn.dropdown-toggle:hover {
+	.box-shadow(0 2px 0 darken(@white, 80%));
+}
+
+.btn-primary.dropdown-toggle, .btn-primary.dropdown-toggle:hover {
+	.box-shadow(0 2px 0 darken(@btnPrimaryBackground, 30%));
+}
+
+.btn-warning.dropdown-toggle, .btn-warning.dropdown-toggle:hover {
+	.box-shadow(0 2px 0 darken(@yellow, 30%));
+}
+
+.btn-danger.dropdown-toggle, .btn-danger.dropdown-toggle:hover {
+	.box-shadow(0 2px 0 darken(#ee5f5b, 30%));
+}
+
+.btn-success.dropdown-toggle, .btn-success.dropdown-toggle:hover {
+	.box-shadow(0 2px 0 darken(#62c462, 30%));
+}
+
+.btn-info.dropdown-toggle, .btn-info.dropdown-toggle:hover {
+	.box-shadow(0 2px 0 darken(#5bc0de, 40%));
+}
+
+.btn-inverse.dropdown-toggle, .btn-inverse.dropdown-toggle:hover {
+	.box-shadow(0 2px 0 darken(#454545, 20%));
+}
+
+.btn.active,
+.btn:active {
+	position: relative;
+	top: 1px;
+	left: -1px;
+	.box-shadow(-1px 1px 0 darken(@white, 80%))
+}
+
+.btn.disabled,
+.btn.disabled.active,
+.btn.disabled:active,
+.btn[disabled] {
+	.box-shadow(none);
+	text-shadow: none;
+	top: 0;
+	left: 0;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	vertical-align: -13%;
+}
+
+// TABLES
+// -----------------------------------------------------
+
+.table,
+.table-striped tbody > tr > td:first-child,
+.table-striped tbody > tr > td:last-child, {
+	.border-radius(4px);
+}
+
 // FORMS
 // --------------------------------------------------
 
@@ -509,6 +482,9 @@ input, button, select, textarea {
 
 legend {
 	border-bottom: none;
+	font-family: @headingsFontFamily;
+	color: @orange;
+	text-shadow: -2px 2px 0 darken(@orange, 30%);
 }
 
 label {
@@ -544,61 +520,19 @@ label {
 	color: @bodyBackground;
 }
 
-// MODALS
+// DROPDOWNS
 // --------------------------------------------------
 
-.modal {
-	background-color: transparent;
+.dropdown .caret {
+	margin-top: 14px;
+	opacity: 1;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid lighten(@blue, 10%);
 }
 
-.modal-header,
-.modal-body,
-.modal-footer {
-	.box-shadow(none);
-	background-color: @bodyBackground;
-	border: none;
-}
-
-.modal-header {
-	.border-radius(4px 4px 0 0);
-}
-
-.modal-footer {
-	.border-radius(0 0 4px 4px);
-}
-
-// MISCELLANEOUS
+// ALERTS, LABELS, BADGES
 // --------------------------------------------------
-
-.page-header {
-	border-bottom: none;
-}
-
-.well, .hero-unit {
-	border: none;
-	.box-shadow(none);
-}
-
-.hero-unit h1 {
-	color: @orange;
-	line-height: 2em;
-}
-
-.progress {
-	background-color: darken(@blueDark, 5%);
-	background-image: none;
-	.box-shadow(none);
-
-	.bar {
-		.box-shadow(none);
-	}
-}
-
-.thumbnail {
-	border: none;
-	background: @blue;
-	.border-radius(3px);
-}
 
 .label {
 	background-color: @blue;
@@ -649,3 +583,77 @@ label {
   background-color: @infoText;
 }
 
+// MISC
+// --------------------------------------------------
+
+.well, .hero-unit {
+	border: none;
+	.box-shadow(none);
+}
+
+.hero-unit h1 {
+	color: @orange;
+	line-height: 2em;
+}
+
+.progress {
+	background-color: darken(@blueDark, 5%);
+	background-image: none;
+	.box-shadow(none);
+
+	.bar {
+		.box-shadow(none);
+	}
+}
+
+.thumbnail {
+	border: none;
+	background: @blue;
+	.border-radius(3px);
+}
+
+.modal {
+	background-color: transparent;
+
+	&-header,
+	&-body,
+	&-footer {
+		.box-shadow(none);
+		background-color: @bodyBackground;
+		border: none;
+	}
+
+	&-header {
+		.border-radius(4px 4px 0 0);
+	}
+
+	&-footer {
+		.border-radius(0 0 4px 4px);
+	}
+}
+
+// MEDIA QUERIES
+// --------------------------------------------------
+
+@media (max-width: 768px) {
+
+	div.subnav {
+
+		.nav > li {
+
+			&:first-child > a,
+			&:first-child > a:hover,
+			&.active:first-child > a,
+			&.active:first-child > a:hover {
+				.border-radius(4px 4px 0 0);
+			}
+
+			&:last-child > a,
+			&:last-child > a:hover,
+			&.active:last-child > a,
+			&.active:last-child > a:hover {
+				.border-radius(0 0 4px 4px);
+			}
+		}
+	}
+}
