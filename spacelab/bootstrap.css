@@ -3774,13 +3774,13 @@ input[type="submit"].btn.btn-mini {
   transition: none;
 }
 .navbar-inverse .navbar-search .search-query:-moz-placeholder {
-  color: #cccccc;
+  color: #eeeeee;
 }
 .navbar-inverse .navbar-search .search-query:-ms-input-placeholder {
-  color: #cccccc;
+  color: #eeeeee;
 }
 .navbar-inverse .navbar-search .search-query::-webkit-input-placeholder {
-  color: #cccccc;
+  color: #eeeeee;
 }
 .navbar-inverse .navbar-search .search-query:focus,
 .navbar-inverse .navbar-search .search-query.focused {
@@ -4773,6 +4773,7 @@ a.badge:hover {
 .navbar .navbar-search .search-query,
 .navbar .navbar-search .search-query:hover {
   margin-bottom: 0;
+  line-height: normal;
   color: #bbbbbb;
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5);
@@ -4824,6 +4825,22 @@ a.badge:hover {
 }
 .navbar-inverse .nav-collapse.collapse .nav li > a,
 .navbar-inverse .nav-collapse.collapse .nav-header {
+  color: #eeeeee;
+}
+.navbar-inverse .navbar-search .search-query,
+.navbar-inverse .navbar-search .search-query:hover {
+  color: #ffffff;
+}
+.navbar-inverse .navbar-search .search-query:-moz-placeholder,
+.navbar-inverse .navbar-search .search-query:hover:-moz-placeholder {
+  color: #eeeeee;
+}
+.navbar-inverse .navbar-search .search-query:-ms-input-placeholder,
+.navbar-inverse .navbar-search .search-query:hover:-ms-input-placeholder {
+  color: #eeeeee;
+}
+.navbar-inverse .navbar-search .search-query::-webkit-input-placeholder,
+.navbar-inverse .navbar-search .search-query:hover::-webkit-input-placeholder {
   color: #eeeeee;
 }
 div.subnav .nav > li > a {
