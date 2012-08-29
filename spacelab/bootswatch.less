@@ -157,6 +157,24 @@ div.subnav {
 // BUTTONS
 // -----------------------------------------------------
 
+.btn {
+
+
+	&-info,
+	&-info:hover,
+	&-info.disabled {
+		
+		color: @textColor;
+		text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+
+		.caret {
+			border-top-color: @textColor;
+			border-bottom-color: @textColor;
+		}
+	}
+
+}
+
 /*.btn {
 	.buttonBackground(#F4F4F4, #ECECEC);
 	color: @textColor;
