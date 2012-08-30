@@ -78,35 +78,6 @@ hr, legend, .page-header {
 		border-bottom: 6px solid @grayDark;
 	}
 
-	.nav-collapse.collapse {
-
-		.nav li > a,
-		.nav li.active > a,
-		.nav li > a:hover,
-		.nav li.active > a:hover {
-			.box-shadow(none);
-			color: @grayLighter;
-			border: 1px solid transparent;
-			background-color: transparent;
-			background-image: none;
-		}
-
-		.nav li > a:hover,
-		.nav li.active > a:hover {
-			background-color: @grayDarker;
-		}
-
-		.navbar-form,
-		.navbar-search {
-			border-color: transparent;
-			.box-shadow(none);
-		}
-
-		.nav-header {
-			color: @grayLight;
-		}
-	}
-
 	&-inverse {
 
 		.navbar-inner {
@@ -126,7 +97,48 @@ hr, legend, .page-header {
 	}
 }
 
+@media (max-width: @navbarCollapseWidth) {
+
+	.navbar .nav-collapse {
+
+		.nav li > a,
+		.nav li > a:hover,
+		.nav .active > a,
+		.nav .active > a:hover {
+			.box-shadow(none);
+			color: @grayLighter;
+			border: 1px solid transparent;
+			background-color: transparent;
+			background-image: none;
+		}
+
+		.nav li > a:hover,
+		.nav .active > a:hover {
+			background-color: @grayDarker;
+		}
+
+		.navbar-form,
+		.navbar-search {
+			border-color: transparent;
+			.box-shadow(none);
+		}
+
+		.nav-header {
+			color: @grayLight;
+		}
+	}
+
+	.navbar-inverse .nav-collapse {
+
+		.nav li > a:hover,
+		.nav .active > a:hover {
+			background-color: @grayDarker !important;
+		}
+	}
+}
+
 div.subnav {
+
 	#gradient > .vertical-three-colors(@gray, @grayDark, 70%, @grayDark);
 	border: 1px solid transparent;
 	.box-shadow('0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1)');

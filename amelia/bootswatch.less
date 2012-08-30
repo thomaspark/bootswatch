@@ -104,9 +104,23 @@ hr {
 		padding: 4px;
 	}
 
-	.nav-collapse.collapse {
+	&-inverse {
+
+		.dropdown-menu li > a:hover,
+		.dropdown-menu li > a:focus,
+		.dropdown-submenu:hover > a {
+			background-image: none;
+			background-color: @yellow;
+		}
+	}
+}
+
+@media (max-width: @navbarCollapseWidth) {
+
+	.navbar .nav-collapse {
 
 		.nav li > a {
+
 			color: @textColor;
 			.border-radius(0);
 
@@ -136,20 +150,11 @@ hr {
 		}
 	}
 
-	&-inverse {
+	.navbar-inverse .nav-collapse {
 
-		.dropdown-menu li > a:hover,
-		.dropdown-menu li > a:focus,
-		.dropdown-submenu:hover > a {
-			background-image: none;
-			background-color: @yellow;
-		}
-
-		.nav-collapse.collapse {
-
-			.nav li > a:hover {
-				background-color: lighten(@navbarInverseBackground, 10%);
-			}
+		.nav li > a:hover,
+		.dropdown-menu a:hover {
+			background-color: lighten(@navbarInverseBackground, 10%) !important;
 		}
 	}
 }

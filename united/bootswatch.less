@@ -45,8 +45,11 @@
 		margin-bottom: 3px;
 		border: 1px solid darken(@navbarBackground, 15%);
 	}
+}
 
-	.nav-collapse.collapse {
+@media (max-width: @navbarCollapseWidth) {
+
+	.navbar .nav-collapse {
 
 		.nav li > a {
 			color: @white;
@@ -54,7 +57,7 @@
 			border-right: 0px solid @orange;
 
 			&:hover {
-				background-color: rgba(0, 0, 0, 0.3);
+				background-color: rgba(0, 0, 0, 0.3) !important;
 				background-image: none;
 			}
 		}

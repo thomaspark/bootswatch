@@ -139,10 +139,22 @@ blockquote.pull-right {
 		background-color: @blue;
 		border-color: transparent;
 	}
+}
 
-	.nav-collapse.collapse {
+@media (max-width: @navbarCollapseWidth) {
+
+	.navbar .nav-collapse {
 
 		.border-radius(4px);
+
+		.nav li > a {
+			color: @orange;
+
+			&:hover {
+				background-color: lighten(@blue, 10%) !important;
+				background-image: none;
+			}
+		}
 
 		.navbar-form,
 		.navbar-search {
@@ -153,15 +165,6 @@ blockquote.pull-right {
 
 		.nav-header {
 			color: @textColor;
-		}
-
-		.nav li > a {
-			color: @orange;
-
-			&:hover {
-				background-color: lighten(@blue, 10%);
-				background-image: none;
-			}
 		}
 	}
 }

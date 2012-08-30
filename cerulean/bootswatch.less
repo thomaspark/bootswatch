@@ -16,12 +16,11 @@
 
 .navbar {
 
-	font-family: @headingsFontFamily;
-	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
 
 	.brand {
 		padding: 16px 20px 14px;
-		text-shadow: inherit;
+		font-family: @headingsFontFamily;
+		text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
 	}
 
 	li {
@@ -30,7 +29,8 @@
 
 	.nav > li > a {
 		padding: 16px 10px 14px;
-		text-shadow: inherit;
+		font-family: @headingsFontFamily;
+		text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
 	}
 
 	.search-query {
@@ -48,10 +48,24 @@
 		text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
 	}
 
-	.nav-collapse.collapse {
+	&-inverse {
+
+		.navbar-search .search-query {
+			color: @textColor;
+		}
+	}
+}
+
+@media (max-width: @navbarCollapseWidth) {
+
+	.navbar .nav-collapse {
 
 		.nav li > a {
+
+			font-family: @headingsFontFamily;
+			font-weight: normal;
 			color: @white;
+			text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
 
 			&:hover {
 				background-color: #2B7CAC;
@@ -79,27 +93,18 @@
 		}
 	}
 
-	&-inverse {
+	.navbar-inverse .nav-collapse {
 
-		text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
+		.nav li > a {
+			color: @navbarInverseLinkColor;
 
-		.nav-collapse.collapse {
-
-			.nav li > a {
-				color: @navbarInverseLinkColor;
-
-				&:hover {
-					background-color: rgba(0, 0, 0, 0.1);
-				}
-			}
-
-			.nav .active > a {
+			&:hover {
 				background-color: rgba(0, 0, 0, 0.1);
 			}
 		}
 
-		.navbar-search .search-query {
-			color: @textColor;
+		.nav .active > a {
+			background-color: rgba(0, 0, 0, 0.1);
 		}
 	}
 }

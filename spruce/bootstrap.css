@@ -4863,19 +4863,24 @@ blockquote small {
 .navbar .btn-navbar {
   margin-top: 14px;
 }
-.navbar .nav-collapse.in .nav li > a {
-  color: #f5f3dc;
-}
-.navbar .nav-collapse.in .nav li > a:hover {
-  color: #ebd90b;
-  background-color: #01584c;
-}
 .navbar .navbar-form,
 .navbar .navbar-search {
   border-color: transparent;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
+}
+@media (max-width: 979px) {
+  .navbar .nav-collapse .nav li > a {
+    color: #f5f3dc;
+  }
+  .navbar .nav-collapse .nav li > a:hover {
+    color: #ebd90b;
+    background-color: #01584c;
+  }
+  .navbar-inverse .nav-collapse .nav li > a:hover {
+    background-color: rgba(0, 0, 0, 0.06) !important;
+  }
 }
 div.subnav {
   background-color: #015b4e;

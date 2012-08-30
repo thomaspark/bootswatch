@@ -4800,15 +4800,6 @@ a.badge:hover {
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5);
   color: #2d2d2d;
 }
-.navbar .nav-collapse.collapse .navbar-search {
-  border-top: none;
-  border-bottom: none;
-}
-.navbar .nav-collapse.collapse  > .nav li > a:hover {
-  background-color: #558bc4;
-  color: #ffffff;
-  text-shadow: none;
-}
 .navbar-inverse .brand {
   text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
 }
@@ -4822,10 +4813,6 @@ a.badge:hover {
 .navbar-inverse .nav li.dropdown:hover > .dropdown-toggle .caret,
 .navbar-inverse .nav li.dropdown.open:hover > .dropdown-toggle .caret {
   border-top-color: #ffffff;
-}
-.navbar-inverse .nav-collapse.collapse .nav li > a,
-.navbar-inverse .nav-collapse.collapse .nav-header {
-  color: #eeeeee;
 }
 .navbar-inverse .navbar-search .search-query,
 .navbar-inverse .navbar-search .search-query:hover {
@@ -4842,6 +4829,26 @@ a.badge:hover {
 .navbar-inverse .navbar-search .search-query::-webkit-input-placeholder,
 .navbar-inverse .navbar-search .search-query:hover::-webkit-input-placeholder {
   color: #eeeeee;
+}
+@media (max-width: 979px) {
+  .navbar .nav-collapse .nav li > a:hover {
+    background-color: #558bc4;
+    color: #ffffff;
+    text-shadow: none;
+  }
+  .navbar .nav-collapse .navbar-search {
+    border-top: none;
+    border-bottom: none;
+  }
+  .navbar-inverse .nav-collapse .nav li > a {
+    color: #eeeeee;
+  }
+  .navbar-inverse .nav-collapse .nav li > a:hover {
+    background-color: #558bc4 !important;
+  }
+  .navbar-inverse .nav-collapse .nav-header {
+    color: #eeeeee;
+  }
 }
 div.subnav .nav > li > a {
   color: #2d2d2d;

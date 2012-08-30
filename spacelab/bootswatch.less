@@ -56,20 +56,6 @@
 		}
 	}
 
-	.nav-collapse.collapse {
-
-		.navbar-search {
-			border-top: none;
-			border-bottom: none;
-		}
-
-		& > .nav li > a:hover {
-			background-color: @linkColor;
-			color: @white;
-			text-shadow: none;
-		}
-	}
-
 	&-inverse {
 
 		.brand {
@@ -90,19 +76,44 @@
 			border-top-color: @white;
 		}
 
-		.nav-collapse.collapse {
-			.nav li > a,
-			.nav-header {
-				color: @grayLighter;
-			}
-		}
-
 		.navbar-search .search-query,
 		.navbar-search .search-query:hover {
 
 			color: @white;
 
 			.placeholder(@grayLighter);
+		}
+	}
+}
+
+@media (max-width: @navbarCollapseWidth) {
+
+	.navbar .nav-collapse {
+
+		.nav li > a:hover {
+			background-color: @linkColor;
+			color: @white;
+			text-shadow: none;
+		}
+
+		.navbar-search {
+			border-top: none;
+			border-bottom: none;
+		}
+	}
+
+	.navbar-inverse .nav-collapse {
+
+		.nav li > a {
+			color: @grayLighter;
+
+			&:hover {
+				background-color: @linkColor !important;
+			}
+		}
+
+		.nav-header {
+			color: @grayLighter;
 		}
 	}
 }

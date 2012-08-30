@@ -4836,41 +4836,44 @@ hr {
 .navbar .btn-group {
   padding: 4px;
 }
-.navbar .nav-collapse.collapse .nav li > a {
-  color: rgba(255, 255, 255, 0.9);
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-}
-.navbar .nav-collapse.collapse .nav li > a:hover {
-  background-color: #d92432;
-}
-.navbar .nav-collapse.collapse .dropdown-menu li > a:hover,
-.navbar .nav-collapse.collapse .dropdown-menu li > a:focus,
-.navbar .nav-collapse.collapse .dropdown-submenu:hover > a {
-  background-image: none;
-}
-.navbar .nav-collapse.collapse .navbar-form,
-.navbar .nav-collapse.collapse .navbar-search {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  border: none;
-}
-.navbar .nav-collapse.collapse .navbar-search .search-query {
-  border: 2px solid rgba(255, 255, 255, 0.9);
-}
-.navbar .nav-collapse.collapse .nav-header {
-  color: rgba(255, 255, 255, 0.5);
-}
 .navbar-inverse .dropdown-menu li > a:hover,
 .navbar-inverse .dropdown-menu li > a:focus,
 .navbar-inverse .dropdown-submenu:hover > a {
   background-image: none;
   background-color: #debb27;
 }
-.navbar-inverse .nav-collapse.collapse .nav li > a:hover {
-  background-color: #e5c953;
+@media (max-width: 979px) {
+  .navbar .nav-collapse .nav li > a {
+    color: rgba(255, 255, 255, 0.9);
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+  }
+  .navbar .nav-collapse .nav li > a:hover {
+    background-color: #d92432;
+  }
+  .navbar .nav-collapse .dropdown-menu li > a:hover,
+  .navbar .nav-collapse .dropdown-menu li > a:focus,
+  .navbar .nav-collapse .dropdown-submenu:hover > a {
+    background-image: none;
+  }
+  .navbar .nav-collapse .navbar-form,
+  .navbar .nav-collapse .navbar-search {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border: none;
+  }
+  .navbar .nav-collapse .navbar-search .search-query {
+    border: 2px solid rgba(255, 255, 255, 0.9);
+  }
+  .navbar .nav-collapse .nav-header {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .navbar-inverse .nav-collapse .nav li > a:hover,
+  .navbar-inverse .nav-collapse .dropdown-menu a:hover {
+    background-color: #e5c953 !important;
+  }
 }
 div.subnav {
   background-color: rgba(42, 99, 105, 0.9);

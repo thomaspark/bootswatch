@@ -97,7 +97,17 @@ code, pre {
 		border-left: none;
 	}
 
-	.nav-collapse.collapse {
+	&-inverse {
+
+		.brand:hover {
+			color: @white;
+		}
+	}
+}
+
+@media (max-width: @navbarCollapseWidth) {
+
+	.navbar .nav-collapse {
 
 		.nav li:first-child > a {
 			margin-bottom: 10px;
@@ -125,24 +135,16 @@ code, pre {
 		}
 	}
 
-	&-inverse {
+	.navbar-inverse .nav-collapse {
 
-		.brand:hover {
+		.nav li > a {
+			color: @grayLighter;
+		}
+
+		.nav li > a:hover {
+			background-color: rgba(0, 0, 0, 0.2) !important;
 			color: @white;
 		}
-
-		.nav-collapse.collapse {
-
-			.nav li > a {
-				color: @grayLighter;
-			}
-
-			.nav li > a:hover {
-				background-color: rgba(0, 0, 0, 0.2);
-				color: @white;
-			}
-		}
-
 	}
 }
 

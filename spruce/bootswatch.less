@@ -146,18 +146,32 @@ blockquote {
 		margin-top: 14px;
 	}
 
-	.nav-collapse.in .nav li > a {
-		color: @headingsColor;
-
-		&:hover {
-			color: @yellow;
-			background-color: @blue;
-		}
-	}
-
 	.navbar-form, .navbar-search {
 		border-color: transparent;
 		.box-shadow(none);
+	}
+}
+
+@media (max-width: @navbarCollapseWidth) {
+
+	.navbar .nav-collapse {
+
+		.nav li > a {
+			color: @headingsColor;
+
+			&:hover {
+				color: @yellow;
+				background-color: @blue;
+			}
+		}	
+	}
+
+	.navbar-inverse .nav-collapse {
+
+		.nav li > a:hover {
+			background-color: rgba(0, 0, 0, 0.06) !important;
+		}
+
 	}
 }
 
