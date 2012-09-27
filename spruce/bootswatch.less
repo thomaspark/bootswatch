@@ -127,21 +127,6 @@ blockquote {
 		color: @white;
 	}
 
-	.nav > .open > a {
-		color: @yellow;
-	}
-
-	.nav > .open > .dropdown-menu {
-		background-color: @headingsColor;
-		color: @textColor;
-		border-color: transparent;
-	}
-
-	.nav > .open > .dropdown-menu a:hover {
-		background-color: darken(#90A38F, 10%);
-		color: @headingsColor;
-	}
-
 	.btn-navbar {
 		margin-top: 14px;
 	}
@@ -358,14 +343,14 @@ div.subnav {
 
 .pagination {
 
-	& > ul {
+	ul {
 		background-color: darken(#90A38F, 10%);
 		background-image: none;
 		border-color: transparent;
 		.box-shadow(none);
 	}
 
-	a {
+	ul > li > a {
 		color: @yellow;
 		border-color: transparent;
 
@@ -375,13 +360,13 @@ div.subnav {
 		}
 	}
 
-	.active a {
+	ul > .active > a {
 		color: @headingsColor;
 		background-color: rgba(0, 0, 0, 0.1);
 	}
 
-	.disabled a,
-	.disabled a:hover {
+	ul > .disabled > a,
+	ul > .disabled > a:hover {
 		color: @blue;
 	}
 }
@@ -408,45 +393,15 @@ div.subnav {
 // --------------------------------------------------
 
 .btn {
-	.buttonBackground(lighten(@blueDark, 5%), @blueDark);
 	font-family: @headingsFontFamily;
 	font-weight: @headingsFontWeight;
-    color: @white;
     text-shadow: none;
 	border-color: transparent;
 	.box-shadow(none);
-
-	&:hover {
-		color: @grayLighter;
-	}
 }
 
 .btn-large {
 	font-size: 18px;
-}
-
-.btn-primary {
-	.buttonBackground(lighten(@blue, 10%), lighten(@blue, 5%));
-}
-
-.btn-warning {
-  .buttonBackground(@orange, darken(@orange, 5%));
-}
-
-.btn-danger {
-  .buttonBackground(lighten(@red, 5%), @red);
-}
-
-.btn-success {
-  .buttonBackground(#62c462, #51a351);
-}
-
-.btn-info {
-  .buttonBackground(#5bc0de, #2f96b4);
-}
-
-.btn-inverse {
-  .buttonBackground(@yellow, darken(@yellow, 5%));
 }
 
 .btn-group .dropdown-toggle {
@@ -520,6 +475,42 @@ legend {
 .form-actions {
 	border-top: none;
 	.border-radius(4px);
+}
+
+.control-group.error {
+
+	label, .help-block, .help-inline {
+		color: lighten(@red, 30%);
+	}
+
+	input, select, textarea {
+		border: 2px solid lighten(@red, 30%);
+		color: @textColor;
+	}
+}
+
+.control-group.success {
+
+	label, .help-block, .help-inline {
+		color: lighten(#24C00B, 25%);
+	}
+
+	input, select, textarea {
+		border: 2px solid lighten(#24C00B, 25%);
+		color: @textColor;
+	}
+}
+
+.control-group.warning {
+
+	label, .help-block, .help-inline {
+		color: lighten(@orange, 25%);
+	}
+
+	input, select, textarea {
+		border: 2px solid lighten(@orange, 25%);
+		color: @textColor;
+	}
 }
 
 // ALERTS, LABELS, BADGES

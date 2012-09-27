@@ -74,23 +74,23 @@
 @btnBackgroundHighlight:            darken(@white, 10%);
 @btnBorder:                         darken(@white, 20%);
 
-@btnPrimaryBackground:              @linkColor;
-@btnPrimaryBackgroundHighlight:     spin(@btnPrimaryBackground, 15%);
+@btnPrimaryBackground:              lighten(@blueDark, 10%);
+@btnPrimaryBackgroundHighlight:     lighten(@blueDark, 5%);
 
 @btnInfoBackground:                 #5bc0de;
 @btnInfoBackgroundHighlight:        #2f96b4;
 
-@btnSuccessBackground:              #62c462;
-@btnSuccessBackgroundHighlight:     #51a351;
+@btnSuccessBackground:              lighten(@blue, 10%);
+@btnSuccessBackgroundHighlight:     lighten(@blue, 5%);
 
 @btnWarningBackground:              lighten(@orange, 15%);
 @btnWarningBackgroundHighlight:     @orange;
 
-@btnDangerBackground:               #ee5f5b;
-@btnDangerBackgroundHighlight:      #bd362f;
+@btnDangerBackground:               lighten(@red, 5%);
+@btnDangerBackgroundHighlight:      @red;
 
-@btnInverseBackground:              @gray;
-@btnInverseBackgroundHighlight:     @grayDarker;
+@btnInverseBackground:              @yellow;
+@btnInverseBackgroundHighlight:     darken(@yellow, 5%);
 
 
 // Forms
@@ -103,7 +103,7 @@
 
 // Dropdowns
 // -------------------------
-@dropdownBackground:            @white;
+@dropdownBackground:            @headingsColor;
 @dropdownBorder:                rgba(0,0,0,.2);
 @dropdownDividerTop:            transparent;
 @dropdownDividerBottom:         @bodyBackground;
@@ -111,7 +111,7 @@
 @dropdownLinkColor:             @grayDark;
 
 @dropdownLinkColorHover:        @white;
-@dropdownLinkBackgroundHover:   rgba(0, 0, 0, 0.1);
+@dropdownLinkBackgroundHover:   darken(@bodyBackground, 10%);
 
 @dropdownLinkColorActive:       @dropdownLinkColorHover;
 @dropdownLinkBackgroundActive:  @dropdownLinkBackgroundHover;
@@ -151,7 +151,7 @@
 
 // Wells
 // -------------------------
-@wellBackground:                  darken(#90A38F, 10%);
+@wellBackground:                  darken(@bodyBackground, 10%);
 
 
 // Navbar
@@ -194,14 +194,14 @@
 
 // Pagination
 // -------------------------
-@paginationBackground:                darken(#90A38F, 10%);
+@paginationBackground:                darken(@bodyBackground, 10%);
 @paginationBorder:                    transparent;
 @paginationActiveBackground:          #A2CDB5;
 
 
 // Hero unit
 // -------------------------
-@heroUnitBackground:              darken(#90A38F, 10%);
+@heroUnitBackground:              darken(@bodyBackground, 10%);
 @heroUnitHeadingColor:            @headingsColor;
 @heroUnitLeadColor:               inherit;
 
