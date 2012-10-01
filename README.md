@@ -3,29 +3,31 @@ Bootswatch
 
 Bootswatch is a collection of free themes for [Twitter Bootstrap](http://twitter.github.com/bootstrap/). Check it out at [bootswatch.com](http://bootswatch.com).
 
+On GitHub, the source is located in the [gh-pages branch](https://github.com/thomaspark/bootswatch/tree/gh-pages).
+
 Usage
 -----
-Head over to [Bootswatch](http://bootswatch.com) and download the `bootstrap.min.css` file associated with a swatch.
+Head over to [Bootswatch](http://bootswatch.com) and download the `bootstrap.min.css` file associated with a theme.
 
-In Bootstrap’s CSS directory, you’ll find a stylesheet in full (`bootstrap.css`) and minified (`bootstrap.min.css`) forms. Rename them or move them to a safe place, and replace with the downloaded file. If you ever change your mind, simply drop in another swatch or switch back to the original.
+In Bootstrap’s CSS directory, you’ll find a stylesheet in full (`bootstrap.css`) and minified (`bootstrap.min.css`) forms. Rename them or move them to a safe place, and replace with the downloaded file. If you ever change your mind, simply drop in another theme or switch back to the original.
 
 For use with Rails, check out [bootswatch-rails](https://github.com/maxim/bootswatch-rails) (Sass) and [twitter-bootswatch-rails](https://github.com/scottvrosenthal/twitter-bootswatch-rails) (LESS).
 
 
 Customization
 ------
-Bootswatch is an open source project, and you’re welcome to modify the swatches further or create your own. If you’re interested, fork or follow the GitHub repository. The files of interest are in the `gh-pages` branch.
+Bootswatch is an open source project, and you’re welcome to modify the themes further. If you’re interested, fork or follow the GitHub repository. The files of interest are in the `gh-pages` branch.
 
-Each raw swatch consists of two LESS files. One is `variables.less`, which is included by default in Bootstrap and allows you to customize [these settings](http://twitter.github.com/bootstrap/less.html#variables). The other is a file called `bootswatch.less` that introduces more extensive structural changes.
+Each raw theme consists of two LESS files. One is `variables.less`, which is included by default in Bootstrap and allows you to customize [these settings](http://twitter.github.com/bootstrap/less.html#variables). The other is called `bootswatch.less` and introduces more extensive structural changes.
 
-Check out the README in the `swatchmaker` directory for step-by-step instructions on building your own swatch.
+Check out the README in the [swatchmaker directory](https://github.com/thomaspark/bootswatch/tree/master/swatchmaker) for step-by-step instructions on building your own swatch.
 
 API
 -----
 
 A simple API is available for integrating your platform with Bootswatch.
 
-The swatches are housed in an array called `themes`, and each swatch has the following properties:  `name`, `description`, `preview`, `thumbnail`, `css`, `css-min`, `less`, and `less-variables`.
+The swatch objects are housed in an array called `themes`, and each swatch has the following properties:  `name`, `description`, `preview`, `thumbnail`, `css`, `css-min`, `less`, and `less-variables`.
 
 CORS and JSONP are supported. Send your request to `http://api.bootswatch.com`.
 
