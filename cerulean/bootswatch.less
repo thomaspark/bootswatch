@@ -35,10 +35,7 @@
 
 	.search-query {
 		border: 1px solid darken(@linkColor, 10%);
-	}
-
-	.btn-navbar:hover {
-	    background-color: darken(@white, 20%);
+		line-height: normal;
 	}
 
 	.navbar-text {
@@ -103,8 +100,10 @@
 			}
 		}
 
-		.nav .active > a {
-			background-color: rgba(0, 0, 0, 0.1);
+		.nav .active > a,
+		.nav > li > a:hover,
+		.dropdown-menu a:hover {
+			background-color: rgba(0, 0, 0, 0.1) !important;
 		}
 	}
 }
