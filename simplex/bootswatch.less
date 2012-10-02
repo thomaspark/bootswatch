@@ -23,7 +23,7 @@ hr {
 .navbar {
 
 	.navbar-inner {
-		.box-shadow(inset 0 -1px #CFCACA);
+		.box-shadow(none);
 	}
 
 	.brand {
@@ -142,9 +142,10 @@ div.subnav {
 
 	.nav > li > a {
 		padding: 14px 12px 10px;
-		color: @navbarText;
 		border-left-color: transparent;
 		border-right-color: transparent;
+		color: @navbarText;
+		font-weight: bold;
 
 		&:hover {
 			background-color: transparent;
