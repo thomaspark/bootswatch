@@ -1,7 +1,9 @@
-//
 // Variables
 // Swatch: Superhero
 // Version: 2.1.1
+// --------------------------------------------------
+
+// Global values
 // --------------------------------------------------
 
 
@@ -55,14 +57,12 @@
 @headingsFontWeight:    bold;    // instead of browser default, bold
 @headingsColor:         @orange; // empty to use BS default, @textColor
 
-
 // Tables
 // -------------------------
 @tableBackground:                   darken(@blue, 3%); // overall background-color
 @tableBackgroundAccent:             @blue; // for striping
 @tableBackgroundHover:              lighten(@blue, 5%); // for hover
 @tableBorder:                       transparent; // table and cell border
-
 
 // Buttons
 // -------------------------
@@ -105,12 +105,11 @@
 @dropdownDividerBottom:         @blue;
 
 @dropdownLinkColor:             @textColor;
-
 @dropdownLinkColorHover:        @white;
-@dropdownLinkBackgroundHover:   @dropdownLinkBackgroundActive;
-
 @dropdownLinkColorActive:       @dropdownLinkColor;
+
 @dropdownLinkBackgroundActive:  @linkColor;
+@dropdownLinkBackgroundHover:   @dropdownLinkBackgroundActive;
 
 
 
@@ -145,6 +144,11 @@
 @hrBorder:                transparent;
 
 
+// Horizontal forms & lists
+// -------------------------
+@horizontalComponentOffset:       180px;
+
+
 // Wells
 // -------------------------
 @wellBackground:                  @blue;
@@ -155,8 +159,8 @@
 @navbarCollapseWidth:             979px;
 
 @navbarHeight:                    70px;
-@navbarBackground:                @blueDark;
 @navbarBackgroundHighlight:       @navbarBackground;
+@navbarBackground:                @blueDark;
 @navbarBorder:                    darken(@navbarBackground, 5%);
 
 @navbarText:                      @grayLight;
