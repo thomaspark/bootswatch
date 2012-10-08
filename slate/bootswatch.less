@@ -261,59 +261,70 @@ div.subnav {
 }
 
 .breadcrumb {
-	.box-shadow(none);
-}
-
-.breadcrumb, .pagination > ul a, .pager a {
 	border: 1px solid transparent;
-	.box-shadow('0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1)');
 	#gradient > .vertical-three-colors(@gray, @grayDark, 70%, @grayDark);
-}
+	.box-shadow('0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1)');
 
-.breadcrumb li, .breadcrumb a, .pagination > ul a {
-	color: @grayLighter;
-	font-weight: bold;
-	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-}
+	a {
+		color: @grayLighter;
+		font-weight: bold;
+	}
 
-.breadcrumb a {
-	color: @white;
+	li {
+		color: @grayLight;
+		font-weight: bold;
+		text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+	}
 }
 
 .pagination {
 
-	& > ul {
+	ul {
 		.box-shadow(none);
 	}
 
-	& li > a,
-	& li.disabled > a {
+	ul > li > a {
 		border-left: 1px solid @gray;
 		border-right: 1px solid darken(@gray, 15%);
 		border-top: none;
 		border-bottom: none;
+		#gradient > .vertical-three-colors(@gray, @grayDark, 70%, @grayDark);
+		.box-shadow('0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1)');
+		color: @grayLighter;
+		font-weight: bold;
+		text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+
+		&:hover {
+			#gradient > .directional(@grayDarker, @grayDark, 280deg);
+			border-left: 1px solid transparent;
+		}
 	}
 
-	li.disabled > a {
-		#gradient > .vertical-three-colors(@grayLight, @gray, 70%, @gray);
-	}
-
-	& > ul > li:not(.disabled) a:hover,
-	  {
-		#gradient > .directional(@grayDarker, @grayDark, 280deg);
-		border-left: 1px solid transparent;
-	}
-
-	& > ul > li.active > a,
-	& > ul > li.active > a:hover {
+	ul > li.active > a,
+	ul > li.active > a:hover {
 		color: @grayLighter;
 		background-color: @grayDark;
 		#gradient > .directional(lighten(@grayDarker, 4%), lighten(@grayDark, 4%), 280deg);
 		border-left: 1px solid transparent;
 	}
+
+	ul > li.disabled > a,
+	ul > li.disabled > a:hover {
+		border-left: 1px solid @gray;
+		border-right: 1px solid darken(@gray, 15%);
+		border-top: none;
+		border-bottom: none;
+		#gradient > .vertical-three-colors(@grayLight, @gray, 70%, @gray);
+	}
 }
 
 .pager {
+
+	a {
+		border: 1px solid transparent;
+		.box-shadow('0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1)');
+		#gradient > .vertical-three-colors(@gray, @grayDark, 70%, @grayDark);
+	}	
 
 	a:hover {
 		#gradient > .directional(@grayDarker, @grayDark, 280deg);
