@@ -5102,14 +5102,18 @@ div.subnav .nav > li.active > a:hover {
   color: #d9230f;
 }
 .breadcrumb {
+  background-color: #ffffff;
+  border: 0px solid transparent;
   -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2) ,  -1px -1px 0 rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2) ,  -1px -1px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2) ,  -1px -1px 0 rgba(0, 0, 0, 0.1);
-  border: 0px solid transparent;
 }
 .breadcrumb li {
-  padding-top: 5px;
+  padding-top: 2px;
   text-shadow: none;
+}
+.breadcrumb .active {
+  color: #555555;
 }
 .breadcrumb a {
   text-shadow: none;
@@ -5117,17 +5121,27 @@ div.subnav .nav > li.active > a:hover {
 .breadcrumb a:hover {
   text-decoration: none;
 }
-.pagination li > a {
-  padding: 4px 14px 0;
+.pagination ul > li > a,
+.pagination ul > li > span {
+  padding: 2px 14px 0;
   color: #555555;
 }
-.pagination li > a:hover {
+.pagination ul > li > a:hover,
+.pagination ul > li > span:hover {
   background-color: #fbebe9;
   color: #d9230f;
 }
-.pagination li.active > a {
+.pagination ul > .active > a,
+.pagination ul > .active > span {
   background-color: #fbebe9;
   color: #d9230f;
+}
+.pagination ul > .disabled > a,
+.pagination ul > .disabled > a:hover,
+.pagination ul > .disabled > span,
+.pagination ul > .disabled > span:hover {
+  background-color: transparent;
+  color: #555555;
 }
 .btn {
   padding-top: .6em;

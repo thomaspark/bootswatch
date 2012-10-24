@@ -283,7 +283,8 @@ div.subnav {
 		.box-shadow(none);
 	}
 
-	ul > li > a {
+	ul > li > a,
+	ul > li > span {
 		border-left: 1px solid @gray;
 		border-right: 1px solid darken(@gray, 15%);
 		border-top: none;
@@ -300,16 +301,20 @@ div.subnav {
 		}
 	}
 
-	ul > li.active > a,
-	ul > li.active > a:hover {
+	ul > .active > a,
+	ul > .active > a:hover,
+	ul > .active > span,
+	ul > .active > span:hover {
 		color: @grayLighter;
 		background-color: @grayDark;
 		#gradient > .directional(lighten(@grayDarker, 4%), lighten(@grayDark, 4%), 280deg);
 		border-left: 1px solid transparent;
 	}
 
-	ul > li.disabled > a,
-	ul > li.disabled > a:hover {
+	ul > .disabled > a,
+	ul > .disabled > a:hover,
+	ul > .disabled > span,
+	ul > .disabled > span:hover {
 		border-left: 1px solid @gray;
 		border-right: 1px solid darken(@gray, 15%);
 		border-top: none;

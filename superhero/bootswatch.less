@@ -339,23 +339,28 @@ div.subnav {
 		border-color: transparent;
 	}
 
-	li > a {
+	ul > li > a,
+	ul > li > span {
 		border: none;
 		color: @textColor;
 	}
 
-	li.active > a,
-	li.active > a:hover {
+	ul > li > a:hover {
+		background: lighten(@blue, 10%);
+	}
+
+	ul > .active > a,
+	ul > .active > a:hover,
+	ul > .active > span,
+	ul > .active > span:hover {
 		background-color: @orange;
 		color: @white;
 	}
 
-	li > a:hover {
-		background: lighten(@blue, 10%);
-	}
-
-	li.disabled > a,
-	li.disabled > a:hover {
+	ul > .disabled > a,
+	ul > .disabled > a:hover,
+	ul > .disabled > span,
+	ul > .disabled > span:hover {
 		background: darken(@blue, 5%);
 	}
 }

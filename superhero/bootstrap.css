@@ -5170,20 +5170,25 @@ div.subnav .nav > .active > a:hover .caret {
   background-image: none;
   border-color: transparent;
 }
-.pagination li > a {
+.pagination ul > li > a,
+.pagination ul > li > span {
   border: none;
   color: #ece9d7;
 }
-.pagination li.active > a,
-.pagination li.active > a:hover {
+.pagination ul > li > a:hover {
+  background: #5a6a7d;
+}
+.pagination ul > .active > a,
+.pagination ul > .active > a:hover,
+.pagination ul > .active > span,
+.pagination ul > .active > span:hover {
   background-color: #e36b23;
   color: #ffffff;
 }
-.pagination li > a:hover {
-  background: #5a6a7d;
-}
-.pagination li.disabled > a,
-.pagination li.disabled > a:hover {
+.pagination ul > .disabled > a,
+.pagination ul > .disabled > a:hover,
+.pagination ul > .disabled > span,
+.pagination ul > .disabled > span:hover {
   background: #3a4450;
 }
 .pager a {

@@ -290,27 +290,31 @@ div.subnav {
 		.box-shadow(none);
 	}
 
-	ul > li > a {
-		padding: 12px 14px 8px;
-		line-height: 1;
-	}
-
-
-	ul > li.active > a,
-	ul > li.active > a:hover {
-		color: @textColor;
-		background-color: #F5F5F5;
-	}
-
 	ul > li > a,
-	ul > li.disabled > a,
-	ul > li.disabled > a:hover {
+	ul > li > span {
+		padding: 12px 14px 8px;
 		background-color: @white;
+		line-height: 1;
 	}
 
 	ul > li:first-child > a,
 	ul > li:last-child > a {
 		.border-radius(0);
+	}
+
+	ul > .active > a,
+	ul > .active > a:hover,
+	ul > .active > span,
+	ul > .active > span:hover {
+		color: @textColor;
+		background-color: #F5F5F5;
+	}
+
+	ul > .disabled > a,
+	ul > .disabled > a:hover,
+	ul > .disabled > span,
+	ul > .disabled > span:hover {
+		background-color: @white;
 	}
 }
 

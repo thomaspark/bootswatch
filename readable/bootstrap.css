@@ -5110,25 +5110,30 @@ div.subnav-fixed {
   -moz-box-shadow: none;
   box-shadow: none;
 }
-.pagination ul > li > a {
-  padding: 12px 14px 8px;
-  line-height: 1;
-}
-.pagination ul > li.active > a,
-.pagination ul > li.active > a:hover {
-  color: #282828;
-  background-color: #F5F5F5;
-}
 .pagination ul > li > a,
-.pagination ul > li.disabled > a,
-.pagination ul > li.disabled > a:hover {
+.pagination ul > li > span {
+  padding: 12px 14px 8px;
   background-color: #ffffff;
+  line-height: 1;
 }
 .pagination ul > li:first-child > a,
 .pagination ul > li:last-child > a {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
+}
+.pagination ul > .active > a,
+.pagination ul > .active > a:hover,
+.pagination ul > .active > span,
+.pagination ul > .active > span:hover {
+  color: #282828;
+  background-color: #F5F5F5;
+}
+.pagination ul > .disabled > a,
+.pagination ul > .disabled > a:hover,
+.pagination ul > .disabled > span,
+.pagination ul > .disabled > span:hover {
+  background-color: #ffffff;
 }
 .pager a {
   -webkit-border-radius: 0;

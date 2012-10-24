@@ -306,12 +306,17 @@ div.subnav {
 }
 
 .breadcrumb {
-	.box-shadow(@boxShadow~", "-1px -1px 0 rgba(0, 0, 0, 0.1));
+	background-color: @white;
 	border: 0px solid transparent;
+	.box-shadow(@boxShadow~", "-1px -1px 0 rgba(0, 0, 0, 0.1));
 
 	li {
-		padding-top: 5px;
+		padding-top: 2px;
 		text-shadow: none;
+	}
+
+	.active {
+		color: @textColor;
 	}
 
 	a {
@@ -325,8 +330,9 @@ div.subnav {
 
 .pagination {
 
-	li > a {
-		padding: 4px 14px 0;
+	ul > li > a,
+	ul > li > span {
+		padding: 2px 14px 0;
 		color: @textColor;
 
 		&:hover {
@@ -335,9 +341,18 @@ div.subnav {
 		}
 	}
 
-	li.active > a {
+	ul > .active > a,
+	ul > .active > span {
 		background-color: @dropdownLinkBackgroundHover;
 		color: @linkColor;
+	}
+
+	ul > .disabled > a,
+	ul > .disabled > a:hover,
+	ul > .disabled > span,
+	ul > .disabled > span:hover {
+		background-color: transparent;
+		color: @textColor;
 	}
 }
 

@@ -856,11 +856,13 @@ div.subnav .nav>li.active>a,div.subnav .nav>li.active>a:hover{border-left-color:
 .nav-pills .dropdown.open .dropdown-toggle,.nav-pills .dropdown.open:hover .dropdown-toggle{background-color:#fbebe9;color:#d9230f;}.nav-pills .dropdown.open .dropdown-toggle .caret,.nav-pills .dropdown.open:hover .dropdown-toggle .caret{border-top-color:#d9230f;border-bottom-color:#d9230f;}
 .nav-list li>a{color:#555555;}.nav-list li>a:hover{background-color:#fbebe9;color:#d9230f;}
 .nav-list li.active>a,.nav-list li.active>a:hover{background-color:#fbebe9;color:#d9230f;}
-.breadcrumb{-webkit-box-shadow:1px 1px 1px rgba(0, 0, 0, 0.2) , -1px -1px 0 rgba(0, 0, 0, 0.1);-moz-box-shadow:1px 1px 1px rgba(0, 0, 0, 0.2) , -1px -1px 0 rgba(0, 0, 0, 0.1);box-shadow:1px 1px 1px rgba(0, 0, 0, 0.2) , -1px -1px 0 rgba(0, 0, 0, 0.1);border:0px solid transparent;}.breadcrumb li{padding-top:5px;text-shadow:none;}
+.breadcrumb{background-color:#ffffff;border:0px solid transparent;-webkit-box-shadow:1px 1px 1px rgba(0, 0, 0, 0.2) , -1px -1px 0 rgba(0, 0, 0, 0.1);-moz-box-shadow:1px 1px 1px rgba(0, 0, 0, 0.2) , -1px -1px 0 rgba(0, 0, 0, 0.1);box-shadow:1px 1px 1px rgba(0, 0, 0, 0.2) , -1px -1px 0 rgba(0, 0, 0, 0.1);}.breadcrumb li{padding-top:2px;text-shadow:none;}
+.breadcrumb .active{color:#555555;}
 .breadcrumb a{text-shadow:none;}
 .breadcrumb a:hover{text-decoration:none;}
-.pagination li>a{padding:4px 14px 0;color:#555555;}.pagination li>a:hover{background-color:#fbebe9;color:#d9230f;}
-.pagination li.active>a{background-color:#fbebe9;color:#d9230f;}
+.pagination ul>li>a,.pagination ul>li>span{padding:2px 14px 0;color:#555555;}.pagination ul>li>a:hover,.pagination ul>li>span:hover{background-color:#fbebe9;color:#d9230f;}
+.pagination ul>.active>a,.pagination ul>.active>span{background-color:#fbebe9;color:#d9230f;}
+.pagination ul>.disabled>a,.pagination ul>.disabled>a:hover,.pagination ul>.disabled>span,.pagination ul>.disabled>span:hover{background-color:transparent;color:#555555;}
 .btn{padding-top:.6em;font-family:"Josefin Sans","Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:bold;}
 legend{border-bottom:1px solid #ddd;font-family:"Josefin Sans","Helvetica Neue",Helvetica,Arial,sans-serif;}
 .navbar-search .search-query{border:1px solid #ddd;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;background-color:#f7f7f7;color:#555555;}

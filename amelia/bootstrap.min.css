@@ -867,11 +867,11 @@ div.subnav-fixed{top:50px;}
 .breadcrumb{background-color:#3CB9C6;background-image:none;}.breadcrumb li{text-shadow:none;}
 .breadcrumb .active{color:#ffffff;}
 .breadcrumb .divider{color:#e8d069;}
-.pagination ul{background-color:#3cb9c6;background-image:none;}
-.pagination .disabled a,.pagination .disabled a:hover{color:rgba(255, 255, 255, 0.9);}
-.pagination li a:hover{background-color:rgba(255, 255, 255, 0.4);color:#e8d069;}
-.pagination .active a,.pagination .active a:hover{background-color:rgba(255, 255, 255, 0.4);color:rgba(255, 255, 255, 0.9);}
-.pagination ul,.pagination li:first-child a,.pagination li:last-child a{-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
+.pagination ul{background-color:#3cb9c6;background-image:none;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
+.pagination ul>li>a:hover{background-color:rgba(255, 255, 255, 0.4);color:#e8d069;}
+.pagination ul>li:first-child>a,.pagination ul>li:last-child>a{-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
+.pagination ul>.disabled>a,.pagination ul>.disabled>a:hover,.pagination ul>.disabled>span,.pagination ul>.disabled>span:hover{color:rgba(255, 255, 255, 0.9);}
+.pagination ul>.active>a,.pagination ul>.active>a:hover,.pagination ul>.active>span,.pagination ul>.active>span:hover{background-color:rgba(255, 255, 255, 0.4);color:rgba(255, 255, 255, 0.9);}
 .pager li>a{background-color:#3CB9C6;}.pager li>a:hover{background-color:#8AD5DC;}
 .pager .disabled a,.pager .disabled a:hover{background-color:#3CB9C6;color:#ffffff;}
 .btn{padding:12px 16px;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;background-image:none;text-shadow:none;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;background-color:#dddddd;border-color:transparent;}.btn:hover,.btn:active,.btn.active,.btn.disabled,.btn[disabled]{background-color:#d0d0d0;text-shadow:none;}

@@ -323,26 +323,32 @@ div.subnav {
 	ul  {
 		background-color: @paginationBackground;
 		background-image: none;
+		.border-radius(0);
 	}
 
-	.disabled a, .disabled a:hover {
-		color: @textColor;
-	}
-
-	li a:hover {
+	ul > li > a:hover {
 		background-color: rgba(255, 255, 255, 0.4);
 		color: @linkColor;
 	}
 
-	.active a, .active a:hover {
-		background-color: rgba(255, 255, 255, 0.4);
+	ul > li:first-child > a,
+	ul > li:last-child > a {
+		.border-radius(0);
+	}
+
+	ul > .disabled > a,
+	ul > .disabled > a:hover,
+	ul > .disabled > span,
+	ul > .disabled > span:hover {
 		color: @textColor;
 	}
 
-	ul,
-	li:first-child a,
-	li:last-child a {
-		.border-radius(0);
+	ul > .active > a,
+	ul > .active > a:hover,
+	ul > .active > span,
+	ul > .active > span:hover {
+		background-color: rgba(255, 255, 255, 0.4);
+		color: @textColor;
 	}
 }
 

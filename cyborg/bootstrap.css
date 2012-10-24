@@ -5164,18 +5164,24 @@ div.subnav .nav .open .dropdown-menu li > a:hover {
   -moz-box-shadow: none;
   box-shadow: none;
 }
-.pagination a {
+.pagination ul > li > a,
+.pagination ul > li > span {
   border: 0;
   font-size: 14px;
 }
-.pagination a:hover,
-.pagination .active a {
+.pagination ul > li > a:hover {
   background-color: #33b5e5;
   color: #ffffff;
 }
-.pagination .disabled span,
-.pagination .disabled a,
-.pagination .disabled a:hover {
+.pagination ul > .active > a,
+.pagination ul > .active > span {
+  background-color: #33b5e5;
+  color: #ffffff;
+}
+.pagination ul > .disabled > a,
+.pagination ul > .disabled > a:hover,
+.pagination ul > .disabled > span,
+.pagination ul > .disabled > span:hover {
   background-color: rgba(0, 0, 0, 0.2);
 }
 .pager a {

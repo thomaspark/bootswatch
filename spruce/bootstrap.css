@@ -5156,20 +5156,25 @@ div.subnav.subnav-fixed {
   -moz-box-shadow: none;
   box-shadow: none;
 }
-.pagination ul > li > a {
+.pagination ul > li > a,
+.pagination ul > li > span {
   color: #ebd90b;
   border-color: transparent;
 }
-.pagination ul > li > a:hover {
+.pagination ul > li > a:hover,
+.pagination ul > li > span:hover {
   color: #ebd90b;
   background-color: rgba(0, 0, 0, 0.1);
 }
-.pagination ul > .active > a {
+.pagination ul > .active > a,
+.pagination ul > .active > span {
   color: #f5f3dc;
   background-color: rgba(0, 0, 0, 0.1);
 }
 .pagination ul > .disabled > a,
-.pagination ul > .disabled > a:hover {
+.pagination ul > .disabled > a:hover,
+.pagination ul > .disabled > span,
+.pagination ul > .disabled > span:hover {
   color: #01584c;
 }
 .pager a {

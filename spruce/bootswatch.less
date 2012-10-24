@@ -350,7 +350,8 @@ div.subnav {
 		.box-shadow(none);
 	}
 
-	ul > li > a {
+	ul > li > a,
+	ul > li > span {
 		color: @yellow;
 		border-color: transparent;
 
@@ -360,13 +361,16 @@ div.subnav {
 		}
 	}
 
-	ul > .active > a {
+	ul > .active > a,
+	ul > .active > span {
 		color: @headingsColor;
 		background-color: rgba(0, 0, 0, 0.1);
 	}
 
 	ul > .disabled > a,
-	ul > .disabled > a:hover {
+	ul > .disabled > a:hover,
+	ul > .disabled > span,
+	ul > .disabled > span:hover {
 		color: @blue;
 	}
 }

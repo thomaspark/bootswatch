@@ -5164,26 +5164,32 @@ div.subnav-fixed {
 .pagination ul {
   background-color: #3cb9c6;
   background-image: none;
-}
-.pagination .disabled a,
-.pagination .disabled a:hover {
-  color: rgba(255, 255, 255, 0.9);
-}
-.pagination li a:hover {
-  background-color: rgba(255, 255, 255, 0.4);
-  color: #e8d069;
-}
-.pagination .active a,
-.pagination .active a:hover {
-  background-color: rgba(255, 255, 255, 0.4);
-  color: rgba(255, 255, 255, 0.9);
-}
-.pagination ul,
-.pagination li:first-child a,
-.pagination li:last-child a {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
+}
+.pagination ul > li > a:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  color: #e8d069;
+}
+.pagination ul > li:first-child > a,
+.pagination ul > li:last-child > a {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.pagination ul > .disabled > a,
+.pagination ul > .disabled > a:hover,
+.pagination ul > .disabled > span,
+.pagination ul > .disabled > span:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+.pagination ul > .active > a,
+.pagination ul > .active > a:hover,
+.pagination ul > .active > span,
+.pagination ul > .active > span:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.9);
 }
 .pager li > a {
   background-color: #3CB9C6;
