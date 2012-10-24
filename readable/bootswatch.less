@@ -290,25 +290,26 @@ div.subnav {
 		.box-shadow(none);
 	}
 
-	li > a {
-		padding: 10px 14px;
+	ul > li > a {
+		padding: 12px 14px 8px;
+		line-height: 1;
 	}
 
 
-	li.active > a,
-	li.active > a:hover {
+	ul > li.active > a,
+	ul > li.active > a:hover {
 		color: @textColor;
 		background-color: #F5F5F5;
 	}
 
-	li > a,
-	li.disabled > a,
-	li.disabled > a:hover {
+	ul > li > a,
+	ul > li.disabled > a,
+	ul > li.disabled > a:hover {
 		background-color: @white;
 	}
 
-	li:first-child > a,
-	li:last-child > a {
+	ul > li:first-child > a,
+	ul > li:last-child > a {
 		.border-radius(0);
 	}
 }

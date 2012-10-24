@@ -5110,21 +5110,22 @@ div.subnav-fixed {
   -moz-box-shadow: none;
   box-shadow: none;
 }
-.pagination li > a {
-  padding: 10px 14px;
+.pagination ul > li > a {
+  padding: 12px 14px 8px;
+  line-height: 1;
 }
-.pagination li.active > a,
-.pagination li.active > a:hover {
+.pagination ul > li.active > a,
+.pagination ul > li.active > a:hover {
   color: #282828;
   background-color: #F5F5F5;
 }
-.pagination li > a,
-.pagination li.disabled > a,
-.pagination li.disabled > a:hover {
+.pagination ul > li > a,
+.pagination ul > li.disabled > a,
+.pagination ul > li.disabled > a:hover {
   background-color: #ffffff;
 }
-.pagination li:first-child > a,
-.pagination li:last-child > a {
+.pagination ul > li:first-child > a,
+.pagination ul > li:last-child > a {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
