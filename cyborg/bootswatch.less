@@ -20,10 +20,10 @@ code, pre {
 }
 
 blockquote {
-	border-left: 5px solid @blue;
+	border-left: 5px solid @grayDark;
 
 	&.pull-right {
-		border-right: 5px solid @blue;
+		border-right: 5px solid @grayDark;
 	}
 }
 
@@ -40,7 +40,11 @@ body {
 }
 
 .page-header {
-	border-bottom: 2px solid @blue
+	border-bottom: 1px solid @grayDark
+}
+
+hr {
+	border-bottom: none;
 }
 
 // NAVBAR
@@ -48,91 +52,61 @@ body {
 
 .navbar {
 
-	font-size: 16px;
-
 	.navbar-inner {
 		.border-radius(0);
 		.box-shadow(none);
-		border-bottom: 2px solid @blue
+		border-bottom: 1px solid @grayDark;
 	}
 
 	.brand {
-		padding: 12px 20px 11px;
+		padding: 15px 20px 15px;
 		color: @grayLighter;
 		font-weight: normal;
 		text-shadow: none;
 	}
 
-	li {
-		line-height: 19px;
-	}
-
 	.nav > li > a {
-		padding: 13px 10px 8px;
-		border-bottom: 3px solid transparent;
-		border-left: 1px solid rgba(255, 255, 255, 0.1);
-
-		&:hover {
-			border-bottom: 3px solid @blue
-		}
+		padding: 15px 15px 14px;
+		border-bottom: 1px solid transparent;
 	}
 
-	.nav > .active > a {
-		border-bottom: 3px solid @blue;
+	.nav > li > a:hover,
+	.nav > .active > a,
+	.nav > .active > a:hover {
+		border-bottom: 1px solid @blue;
 	}
 
-	.nav .active > a,
-	.nav .active > a:hover,
-	.nav .active > a:focus {
+	.nav > .active > a,
+	.nav > .active > a:hover,
+	.nav > .active > a:focus {
 		.box-shadow(none);
 	}
 
-	.nav > li > .dropdown-menu::before,
-	.nav > li > .dropdown-menu::after {
-		display: none;
-	}
-
-	.dropdown-menu li > a:hover,
-	.dropdown-menu li > a:focus,
-	.dropdown-submenu:hover > a {
-		background-image: none;
-	}
-
 	.navbar-text {
-		margin-left: 15px;
-		margin-right: 15px;
-		line-height: 43px;
+		margin-bottom: 1px;
+		padding: 15px 15px 14px;
+		line-height: inherit;
+	}
+
+	.divider-vertical {
+		margin: 0;
+		border-left: 1px solid @grayDark;
+		border-right-width: 0;
 	}
 
 	.search-query,
 	.search-query:focus,
 	.search-query.focused {
+		.border-radius(1px);
+		background-color: @grayDark;
+		line-height: normal;
 		color: @grayLight;
 		text-shadow: none;
-		background-color: #222;
-		.border-radius(1px);
 		.placeholder(@gray);
 	}
 
 	&-inverse {
 
-		.navbar-inner {
-			border: none;
-			border-bottom: 3px solid @black;
-		}
-
-		.brand:hover {
-			border-bottom: none;
-			background-color: @black;
-		}
-
-		.nav li > a:hover {
-			border-bottom-color: transparent;
-		}
-
-		.nav .active > a {
-			border-bottom-color: transparent;
-		}
 	}
 }
 
@@ -191,54 +165,38 @@ body {
 }
 
 div.subnav {
-	position: static;
 	background-color: @grayDarker;
 	background-image: none;
-	border: 0;
+	border: none;
+	border-bottom: 1px solid @grayDark;
 
 
 	&.subnav-fixed {
-		position: relative;
-		left: -1px;
-		top: auto;
+		top: @navbarHeight;
 	}
 
 	.nav > li > a,
-	.nav .active a {
+	.nav > li:first-child > a,
+	.nav > li:first-child > a:hover {
+		padding: 11px 12px;
+		border: none;
 		background-color: @grayDarker;
-		border-left: 1px solid #222;
-		border-right: 0;
-		color: @grayLighter;
+		color: @grayLight;
+	}
+
+	.nav > li > a:hover,
+	.nav > li.active > a,
+	.nav > li.active > a:hover,
+	.nav > li:first-child > a:hover {
+		padding: 11px 12px;
+		background: transparent;
+		border: none;
+		border-bottom: 1px solid @blue;
+		color: @white;
 	}
 
 	.nav li.nav-header {
 		text-shadow: none;
-	}
-
-	.nav > li > a:hover,
-	.nav > li.active > a:hover,
-	.nav > li:first-child > a:hover {
-		background: transparent;
-		border-bottom: 2px solid @blue;
-		border-left: 1px solid #222;
-		color: @white;
-	}
-
-	.nav .open .dropdown-toggle {
-		border: 0;
-		border-left: 1px solid #222;
-	    border-bottom: 2px solid @blue;
-		background-color: #060606;
-	}
-
-	.nav .open .dropdown-menu {
-		background-color: @grayDarker;
-		border-left: solid 1px rgba(255, 255, 255, 0.1);
-
-		li > a:hover {
-			border-bottom: 0;
-			background: @blue;
-		}
 	}
 }
 
@@ -247,23 +205,19 @@ div.subnav {
 
 .nav-tabs {
 
-	border-bottom: 1px solid #222;
+	border-bottom: 1px solid @grayDark;
 
 	li > a:hover,
 	li.active > a,
 	li.active > a:hover {
-		border: 1px solid #222;
+		border-color: transparent;
 		background-color: @blue;
 		color: @white;
 	}
 
 	.open .dropdown-toggle {
-		background-color: #060606 !important;
-		border: 1px solid #222;
-	}
-
-	.dropdown-menu li > a:hover {
-		border: none;
+		background-color: #060606;
+		border-color: transparent;
 	}
 }
 
@@ -300,14 +254,14 @@ div.subnav {
 
 	.divider {
 		background-color: transparent;
-		border-bottom: 1px solid #222;
+		border-bottom: 1px solid @grayDark;
 	}
 }
 
 .nav-stacked {
 
 	li > a {
-		border: 1px solid #222 !important;
+		border: 1px solid @grayDark !important;
 	}
 
 	li > a:hover,
@@ -320,7 +274,7 @@ div.subnav {
 .tabbable  {
 	.nav-tabs,
 	.nav-tabs li.active > a {
-		border-color: #222;
+		border-color: @grayDark;
 	}
 }
 
@@ -348,21 +302,10 @@ div.subnav {
 		.box-shadow(none);
 	}
 
-	ul > li > a,
-	ul > li > span {
-		border: 0;
-		font-size: 14px;
-	}
-
-	ul > li > a:hover {
-		background-color: @blue;
-		color: @white;
-	}
-
+	ul > li > a:hover,
 	ul > .active > a,
 	ul > .active > span {
-		background-color: @blue;
-		color: @white;	
+		// color: @white;	
 	}
 
 	ul > .disabled > a,
@@ -375,7 +318,8 @@ div.subnav {
 
 .pager {
 
-	a {
+	li > a,
+	li > span {
 		background-color: @bodyBackground;
 		border: none;
 
@@ -513,12 +457,7 @@ select:focus {
 // -----------------------------------------------------
 
 .dropdown-menu {
-	background-color: #191A1A;
 	.box-shadow(0 2px 4px rgba(0, 0, 0, 0.8));
-}
-
-.dropdown-menu li > a:hover {
-	background-color: @blue;
 }
 
 // ALERTS, LABELS, BADGES
@@ -578,7 +517,7 @@ select:focus {
 }
 
 .thumbnail {
-	border-color: #222;
+	border-color: @grayDark;
 }
 
 .progress {
@@ -594,18 +533,18 @@ select:focus {
 }
 
 .modal-header {
-	border-bottom: 1px solid #222;
+	border-bottom: 1px solid @grayDark;
 }
 
 .modal-footer {
 	background-color: @grayDark;
-	border-top: 1px solid #222;
+	border-top: 1px solid @grayDark;
 	.border-radius(0 0 6px 6px);
 	.box-shadow(none);
 }
 
 .footer {
-	border-top: 1px solid #222;
+	border-top: 1px solid @grayDark;
 }
 
 // MEDIA QUERIES
@@ -614,8 +553,8 @@ select:focus {
 @media (max-width: 768px) {
 	div.subnav .nav > li + li > a,
 	div.subnav .nav > li:first-child > a {
-		border-top: 1px solid #222;
-		border-left: 1px solid #222;
+		border-top: 1px solid @grayDark;
+		border-left: 1px solid @grayDark;
 	}
 
 	.subnav .nav > li + li > a:hover,

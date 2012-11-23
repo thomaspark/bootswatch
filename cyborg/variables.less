@@ -11,7 +11,7 @@
 // -------------------------
 @black:                 #000;
 @grayDarker:            #020202;
-@grayDark:              #282828;
+@grayDark:              #222;
 @gray:                  #999;
 @grayLight:             #ADAFAE;
 @grayLighter:           #eee;
@@ -80,7 +80,7 @@
 @tableBackground:                   transparent; // overall background-color
 @tableBackgroundAccent:             rgba(100, 100, 100, 0.1); // for striping
 @tableBackgroundHover:              @grayDark; // for hover
-@tableBorder:                       #222; // table and cell border
+@tableBorder:                       @grayDark; // table and cell border
 
 // Buttons
 // -------------------------
@@ -119,7 +119,7 @@
 
 // Dropdowns
 // -------------------------
-@dropdownBackground:            @white;
+@dropdownBackground:            #131517;
 @dropdownBorder:                rgba(0,0,0,.2);
 @dropdownDividerTop:            transparent;
 @dropdownDividerBottom:         #222;
@@ -162,7 +162,7 @@
 
 // Hr border color
 // -------------------------
-@hrBorder:                @gray;
+@hrBorder:                @grayDark;
 
 
 // Horizontal forms & lists
@@ -180,7 +180,7 @@
 @navbarCollapseWidth:             979px;
 @navbarCollapseDesktopWidth:      @navbarCollapseWidth + 1;
 
-@navbarHeight:                    40px;
+@navbarHeight:                    50px;
 @navbarBackgroundHighlight:       @grayDarker;
 @navbarBackground:                @grayDarker;
 @navbarBorder:                    darken(@navbarBackground, 12%);
@@ -199,11 +199,11 @@
 @navbarInverseBackgroundHighlight:       #252A30;
 @navbarInverseBorder:                    transparent;
 
-@navbarInverseText:                      @grayLighter;
-@navbarInverseLinkColor:                 @grayLighter;
+@navbarInverseText:                      @grayLight;
+@navbarInverseLinkColor:                 @grayLight;
 @navbarInverseLinkColorHover:            @white;
 @navbarInverseLinkColorActive:           @navbarInverseLinkColorHover;
-@navbarInverseLinkBackgroundHover:       @black;
+@navbarInverseLinkBackgroundHover:       #242A31;
 @navbarInverseLinkBackgroundActive:      @navbarInverseLinkBackgroundHover;
 
 @navbarInverseSearchBackground:          lighten(@navbarInverseBackground, 25%);
@@ -217,7 +217,7 @@
 // Pagination
 // -------------------------
 @paginationBackground:                @bodyBackground;
-@paginationBorder:                    #ddd;
+@paginationBorder:                    transparent;
 @paginationActiveBackground:          @blue;
 
 
@@ -250,14 +250,14 @@
 // Tooltips and popovers
 // -------------------------
 @tooltipColor:            #fff;
-@tooltipBackground:       #000;
+@tooltipBackground:       @heroUnitBackground;
 @tooltipArrowWidth:       5px;
 @tooltipArrowColor:       @tooltipBackground;
 
-@popoverBackground:       #fff;
+@popoverBackground:       @heroUnitBackground;
 @popoverArrowWidth:       10px;
-@popoverArrowColor:       #fff;
-@popoverTitleBackground:  darken(@popoverBackground, 3%);
+@popoverArrowColor:       @popoverBackground;
+@popoverTitleBackground:  @popoverBackground;
 
 // Special enhancement for popovers
 @popoverArrowOuterWidth:  @popoverArrowWidth + 1;
