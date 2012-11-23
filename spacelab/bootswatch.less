@@ -6,7 +6,7 @@
 // TYPOGRAPHY
 // -----------------------------------------------------
 
-@import url('http://fonts.googleapis.com/css?family=Muli');
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700');
 
 // SCAFFOLDING
 // -----------------------------------------------------
@@ -17,8 +17,7 @@
 .navbar {
 
 	.navbar-inner {
-		border-bottom: 1px solid #CACACA;
-		.box-shadow(0 1px 0 rgba(255,255,255,0.4)~", "0 0 10px rgba(0,0,0,0.1));
+		.box-shadow(0 1px 0 rgba(255,255,255,0.4)~", "0 1px 0 rgba(0,0,0,0.8));
 	}
 
 	.brand {
@@ -26,19 +25,18 @@
 		text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
 
 		&:hover {
-			color: @linkColor;
+			color: @navbarLinkColorHover;
 		}
 	}
 
 	.nav > li > a {
-		padding: 11px 10px 9px;
+		padding: 11px 10px 8px;
 		text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
 	}
 
 	.navbar-text {
-		margin-top: 2px;
-		padding: 0 10px;
-		line-height: 38px;
+		padding: 11px 10px 8px;
+		line-height: inherit;
 	}
 
 	.navbar-search .search-query,
@@ -122,10 +120,10 @@ div.subnav {
 
 	.nav > li > a {
 
-		color: @textColor;
+		color: @navbarLinkColor;
 
 		&:hover {
-			color: @linkColor;
+			color: @navbarLinkColorHover;
 		}
 	}
 
@@ -177,63 +175,6 @@ div.subnav {
 // BUTTONS
 // -----------------------------------------------------
 
-.btn {
-
-
-	&-info,
-	&-info:hover,
-	&-info.disabled {
-		
-		color: @textColor;
-		text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
-
-		.caret {
-			border-top-color: @textColor;
-			border-bottom-color: @textColor;
-		}
-	}
-
-}
-
-/*.btn {
-	.buttonBackground(#F4F4F4, #ECECEC);
-	color: @textColor;
-	text-shadow: none;
-
-
-	&:hover,
-	&:active,
-	&.active,
-	&.disabled,
-	&[disabled] {
-		color: @grayDark;
-	}
-}
-
-.btn-primary {
-	.buttonBackground(#909090, #3F3F3F);
-}
-
-.btn-warning {
-  .buttonBackground(lighten(@yellow, 15%), @yellow);
-}
-
-.btn-danger {
-  .buttonBackground(lighten(#DA2D2D, 15%), #DA2D2D);
-}
-
-.btn-success {
-  .buttonBackground(#8ADD6D, #60B044);
-}
-
-.btn-info {
-  .buttonBackground(lighten(#4488BB, 15%), #4488BB);
-}
-
-.btn-inverse {
-  .buttonBackground(lighten(@purple, 5%), @purple);
-}*/
-
 // TABLES
 // -----------------------------------------------------
 
@@ -259,8 +200,14 @@ div.subnav {
 // -----------------------------------------------------
 
 .alert {
-	color: @white;
+	
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+
+	h1, h2, h3, h4, h5, h6 {
+		color: @white;
+		font-weight: bold;
+		text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	}
 }
 
 .label, .badge {
@@ -288,12 +235,12 @@ div.subnav {
 // -----------------------------------------------------
 
 .well {
-	background-color: @grayLighter;
+	.box-shadow(inset 1px 1px 0 rgba(0,0,0,.1));
 }
 
 .hero-unit {
-    .box-shadow(inset 0 1px 1px rgba(0,0,0,.05));
-    border: 1px solid rgba(0,0,0,.05);
+	.box-shadow(inset 1px 1px 0 rgba(0,0,0,.1));
+	border: 1px solid rgba(0,0,0,.1);
 }
 
 // MEDIA QUERIES
