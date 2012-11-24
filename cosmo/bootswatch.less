@@ -122,13 +122,17 @@ div.subnav {
 		border: none;
 	}
 
-	.nav > .active > a,
-	.nav > .active > a:hover {
+	.nav > .active > a {
 		padding-left: 12px;
 		border: none;
 		background-color: transparent;
 		.box-shadow(none);
 		color: @grayDarker;
+
+		&:hover {
+			background-color: @black;
+			color: @white;
+		}
 	}
 
 	&-fixed {
