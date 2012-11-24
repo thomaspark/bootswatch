@@ -7,12 +7,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <!-- Le styles -->
     <link href="bootstrap.min.css" rel="stylesheet">
     <link href="../default/bootstrap-responsive.min.css" rel="stylesheet">
     <link href="../css/docs.css" rel="stylesheet">
@@ -117,6 +115,7 @@
       <li><a href="#navbar">Navbar</a></li>
       <li><a href="#buttons">Buttons</a></li>
       <li><a href="#forms">Forms</a></li>
+      <li><a href="#tables">Tables</a></li>
       <li><a href="#miscellaneous">Miscellaneous</a></li>
     </ul>
   </div>
@@ -166,6 +165,21 @@
       </address>
     </div>
 
+  </div>
+  
+  <div class="row">
+    <div class="span6">
+      <blockquote>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+        <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+      </blockquote>
+    </div>
+    <div class="span6">
+      <blockquote class="pull-right">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+        <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+      </blockquote>
+    </div>
   </div>
 
 </section>
@@ -590,6 +604,45 @@
 
 </section>
 
+<!-- Tables
+================================================== -->
+<section id="tables">
+  <div class="page-header">
+    <h1>Tables</h1>
+  </div>
+  
+  <table class="table table-bordered table-striped table-hover">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Username</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
 
 <!-- Miscellaneous
 ================================================== -->
@@ -599,7 +652,7 @@
   </div>
 
   <div class="row">
-    <div class="span5">
+    <div class="span4">
 
       <h3 id="breadcrumbs">Breadcrumbs</h3>
       <ul class="breadcrumb">
@@ -607,26 +660,12 @@
       </ul>
       <ul class="breadcrumb">
         <li><a href="#">Home</a> <span class="divider">/</span></li>
-        <li class="active">Library</li>
-      </ul>
-      <ul class="breadcrumb">
-        <li><a href="#">Home</a> <span class="divider">/</span></li>
         <li><a href="#">Library</a> <span class="divider">/</span></li>
         <li class="active">Data</li>
       </ul>
     </div>
-    <div class="span6 offset1">
+    <div class="span4">
       <h3 id="pagination">Pagination</h3>
-      <div class="pagination">
-        <ul>
-          <li class="disabled"><a href="#">&laquo;</a></li>
-          <li class="active"><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">&raquo;</a></li>
-        </ul>
-      </div>
       <div class="pagination">
         <ul>
           <li><a href="#">&larr;</a></li>
@@ -646,26 +685,112 @@
         </ul>
       </div>
     </div>
+    
+    <div class="span4">
+      <h3 id="pager">Pagers</h3>
+        
+        <ul class="pager">
+          <li><a href="#">Previous</a></li>
+          <li><a href="#">Next</a></li>
+        </ul>
+        
+        <ul class="pager">
+          <li class="previous disabled"><a href="#">&larr; Older</a></li>
+          <li class="next"><a href="#">Newer &rarr;</a></li>
+        </ul>
+    </div>
   </div>
 
+
+  <!-- Navs
+  ================================================== -->
+
+  <div class="row">
+    <div class="span4">
+
+      <h3 id="tabs">Tabs</h3>
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="#A" data-toggle="tab">Section 1</a></li>
+        <li><a href="#B" data-toggle="tab">Section 2</a></li>
+        <li><a href="#C" data-toggle="tab">Section 3</a></li>
+      </ul>
+      <div class="tabbable">
+        <div class="tab-content">
+          <div class="tab-pane active" id="A">
+            <p>I'm in Section A.</p>
+          </div>
+          <div class="tab-pane" id="B">
+            <p>Howdy, I'm in Section B.</p>
+          </div>
+          <div class="tab-pane" id="C">
+            <p>What up girl, this is Section C.</p>
+          </div>
+        </div>
+      </div> <!-- /tabbable -->
+      
+    </div>
+    <div class="span4">
+      <h3 id="pills">Pills</h3>
+      <ul class="nav nav-pills">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Profile</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+        <li class="disabled"><a href="#">Disabled link</a></li>
+      </ul>
+    </div>
+    
+    <div class="span4">
+      
+      <h3 id="list">Lists</h3>
+        
+      <div class="well" style="padding: 8px 0;">
+        <ul class="nav nav-list">
+          <li class="nav-header">List header</li>
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">Library</a></li>
+          <li><a href="#">Applications</a></li>
+          <li class="nav-header">Another list header</li>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Settings</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
 
 <!-- Labels
 ================================================== -->
 
   <div class="row">
-    <div class="span12">
-
+    <div class="span6">
       <h3 id="labels">Labels</h3>
-
-
       <span class="label">Default</span>
       <span class="label label-success">Success</span>
-	  <span class="label label-warning">Warning</span>
-	  <span class="label label-important">Important</span>
-	  <span class="label label-info">Info</span>
-
-	</div>
+      <span class="label label-warning">Warning</span>
+      <span class="label label-important">Important</span>
+      <span class="label label-info">Info</span>
+      <span class="label label-inverse">Inverse</span>
+    </div>
+    <div class="span6">
+      <h3 id="badges">Badges</h3>
+      <span class="badge">Default</span>
+      <span class="badge badge-success">Success</span>
+      <span class="badge badge-warning">Warning</span>
+      <span class="badge badge-important">Important</span>
+      <span class="badge badge-info">Info</span>
+      <span class="badge badge-inverse">Inverse</span>
+    </div>
   </div>
 	<br />
 
