@@ -92,12 +92,18 @@ blockquote {
 
 	&-inverse {
 
+		.brand,
+		.nav > li > a {
+			text-shadow: none;
+		}
 
+		.brand:hover,
 		.nav > .active > a,
 		.nav > .active > a:hover,
 		.nav > .active > a:focus {
-			.box-shadow(none);
 			background-color: @navbarInverseLinkBackgroundHover;
+			.box-shadow(none);
+			color: @white;
 		}
 
 		.navbar-search .search-query {
@@ -471,11 +477,11 @@ legend {
 	}
 
 	&-info {
-		background-color: @blue;
+		background-color: @purple;
 	}
 
 	&-inverse {
-		background-color: @gray;
+		background-color: @black;
 	}
 }
 
@@ -494,11 +500,11 @@ legend {
 	}
 
 	&-info {
-		background-color: @blue;
+		background-color: @purple;
 	}
 
 	&-inverse {
-		background-color: @gray;
+		background-color: @black;
 	}
 }
 
