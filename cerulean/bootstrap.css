@@ -509,10 +509,10 @@ cite {
   color: #999999;
 }
 .text-warning {
-  color: #126b9e;
+  color: #dd5600;
 }
 a.text-warning:hover {
-  color: #0d4c70;
+  color: #aa4200;
 }
 .text-error {
   color: #bd4247;
@@ -1116,19 +1116,19 @@ input[type="checkbox"][readonly] {
 .control-group.warning > label,
 .control-group.warning .help-block,
 .control-group.warning .help-inline {
-  color: #126b9e;
+  color: #dd5600;
 }
 .control-group.warning .checkbox,
 .control-group.warning .radio,
 .control-group.warning input,
 .control-group.warning select,
 .control-group.warning textarea {
-  color: #126b9e;
+  color: #dd5600;
 }
 .control-group.warning input,
 .control-group.warning select,
 .control-group.warning textarea {
-  border-color: #126b9e;
+  border-color: #dd5600;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
@@ -1136,16 +1136,16 @@ input[type="checkbox"][readonly] {
 .control-group.warning input:focus,
 .control-group.warning select:focus,
 .control-group.warning textarea:focus {
-  border-color: #0d4c70;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #2fa4e7;
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #2fa4e7;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #2fa4e7;
+  border-color: #aa4200;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ff8d44;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ff8d44;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ff8d44;
 }
 .control-group.warning .input-prepend .add-on,
 .control-group.warning .input-append .add-on {
-  color: #126b9e;
-  background-color: #8accf2;
-  border-color: #126b9e;
+  color: #dd5600;
+  background-color: #f1ceab;
+  border-color: #dd5600;
 }
 .control-group.error > label,
 .control-group.error .help-block,
@@ -1178,7 +1178,7 @@ input[type="checkbox"][readonly] {
 .control-group.error .input-prepend .add-on,
 .control-group.error .input-append .add-on {
   color: #bd4247;
-  background-color: #eddbe3;
+  background-color: #f2bdb1;
   border-color: #bd4247;
 }
 .control-group.success > label,
@@ -1212,7 +1212,7 @@ input[type="checkbox"][readonly] {
 .control-group.success .input-prepend .add-on,
 .control-group.success .input-append .add-on {
   color: #669533;
-  background-color: #ccddbb;
+  background-color: #d5ecbf;
   border-color: #669533;
 }
 .control-group.info > label,
@@ -1774,25 +1774,25 @@ table th[class*="span"],
   margin-left: 0;
 }
 .table tbody tr.success td {
-  background-color: #ccddbb;
+  background-color: #d5ecbf;
 }
 .table tbody tr.error td {
-  background-color: #eddbe3;
+  background-color: #f2bdb1;
 }
 .table tbody tr.warning td {
-  background-color: #8accf2;
+  background-color: #f1ceab;
 }
 .table tbody tr.info td {
   background-color: #a7dff1;
 }
 .table-hover tbody tr.success:hover td {
-  background-color: #bfd4aa;
+  background-color: #c8e6ab;
 }
 .table-hover tbody tr.error:hover td {
-  background-color: #e4cad6;
+  background-color: #eeab9b;
 }
 .table-hover tbody tr.warning:hover td {
-  background-color: #74c2ef;
+  background-color: #edc195;
 }
 .table-hover tbody tr.info:hover td {
   background-color: #91d7ee;
@@ -3124,12 +3124,12 @@ input[type="submit"].btn.btn-mini {
   padding: 8px 35px 8px 14px;
   margin-bottom: 20px;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-  background-color: #8accf2;
-  border: 1px solid #7dd9f0;
+  background-color: #f1ceab;
+  border: 1px solid #efb99e;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  color: #126b9e;
+  color: #dd5600;
 }
 .alert h4 {
   margin: 0;
@@ -3141,14 +3141,14 @@ input[type="submit"].btn.btn-mini {
   line-height: 20px;
 }
 .alert-success {
-  background-color: #ccddbb;
-  border-color: #c6d4aa;
+  background-color: #d5ecbf;
+  border-color: #d2e6ab;
   color: #669533;
 }
 .alert-danger,
 .alert-error {
-  background-color: #eddbe3;
-  border-color: #e8d1df;
+  background-color: #f2bdb1;
+  border-color: #f0a5a4;
   color: #bd4247;
 }
 .alert-info {
