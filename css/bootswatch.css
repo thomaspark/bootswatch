@@ -100,20 +100,35 @@ section {
 
 .hero-unit {
 	margin-bottom: 10px;
+	text-align: center;
 }
 
 .hero-unit h1,
 .hero-unit p {
-	text-align: center;
 	margin-bottom: 15px;
 }
 
 #social {
+	display: inline-block;
 	margin-top: 45px;
+	text-align: center;
+}
+
+
+#gh-star {
+	margin-right: -15px;
+}
+
+#gh-fork {
+	margin-right: 25px;
 }
 
 .twitter-follow-button {
-	width: 150px !important;
+	width: 60px !important;
+}
+
+.twitter-share-button  {
+	margin-right: 15px;
 }
 
 .rss-button {
@@ -122,7 +137,7 @@ section {
 	font-size: 11px;
 	line-height: 14px;
 	font-weight: bold;
-	margin: 0;
+	margin: 0 0 10px;
 	padding: 2px 5px 2px 4px;
 }
 
@@ -244,7 +259,7 @@ body .one .bsa_it_p {
 @media (max-width: 480px) {
 
 	.hero-unit {
-		padding: 40px 20px 10px;
+		padding: 20px 20px 0;
 		margin: 0 0 20px;
 	}
 
@@ -252,14 +267,17 @@ body .one .bsa_it_p {
 		font-size: 36px;
 	}
 
-	.hero-unit p {
-		font-size: 13px;
-		line-height: 18px;
+	.hero-unit iframe {
+		margin-right: 0 !important;
 	}
 
 	#social {
 		margin-top: 0px;
-		margin-bottom: 40px;
+		margin-bottom: 20px;
+	}
+
+	#social > span {
+		display: block;
 	}
 
 	.about {
@@ -285,7 +303,7 @@ body .one .bsa_it_p {
 
 	.hero-unit {
 		margin-top: 0;
-		padding-bottom: 60px;
+		padding: 30px;
 	}
 
 	.about {
@@ -342,8 +360,13 @@ body .one .bsa_it_p {
 		margin-top: 0;
 	}
 
+	.thumbnail p {
+		font-size: 12px;
+	}
+
 	.thumbnail .btn {
-		font-size: 11px;
+		padding: 8px 12px;
+		font-size: 12px;
 	}
 }
 
