@@ -3,8 +3,6 @@ Bootswatch
 
 Bootswatch is a collection of free themes for [Twitter Bootstrap](http://twitter.github.com/bootstrap/). Check it out at [bootswatch.com](http://bootswatch.com).
 
-On GitHub, the source is located in the [gh-pages branch](https://github.com/thomaspark/bootswatch/tree/gh-pages).
-
 Usage
 -----
 Head over to [Bootswatch](http://bootswatch.com) and download the `bootstrap.min.css` file associated with a theme.

@@ -3,7 +3,7 @@ Create your own swatch
 
 1. Download Bootstrap
 ------
-Download and unpack [swatchmaker.zip](https://github.com/thomaspark/bootswatch/blob/master/swatchmaker/swatchmaker.zip?raw=true). In terminal, navigate to `swatchmaker/` and run the command `make bootstrap` to update to the latest version of Bootstrap.
+Download and unpack [Bootswatch](https://github.com/thomaspark/bootswatch/tags). In terminal, navigate to `swatchmaker/` and run the command `make bootstrap` to update to the latest version of Bootstrap.
 
 
 2. Install LESS
