@@ -2,24 +2,24 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Bootswatch</title>
+    <title>Bootswatch: Swatch</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <!-- Le styles -->
     <link href="../swatch/bootstrap.min.css" rel="stylesheet">
     <link href="../bootstrap/docs/assets/css/bootstrap-responsive.css" rel="stylesheet">
     <link href="../bootstrap/docs/assets/js/google-code-prettify/prettify.css" rel="stylesheet">
     <link href="docs.css" rel="stylesheet">
+
   </head>
 
-  <body data-spy="scroll" data-target=".subnav" data-offset="50">
+  <body class="preview" data-spy="scroll" data-target=".subnav" data-offset="80">
+    <script src="../js/bsa.js"></script>
 
 
   <!-- Navbar
@@ -32,40 +32,45 @@
          <span class="icon-bar"></span>
          <span class="icon-bar"></span>
        </a>
-       <a class="brand" href="./test.html">Bootswatch</a>
-       <div class="nav-collapse">
-         <ul class="nav">
-           <li class="">
-             <a href="test-full.html">News</a>
-           </li>
-           <li class="">
-             <a href="test-full.html">Gallery</a>
-           </li>
-	       <li class="dropdown active">
-	         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Preview <b class="caret"></b></a>
-	         <ul class="dropdown-menu">
-	           <li><a href="../default">Default</a></li>
-	           <li class="divider"></li>
-	           <li><a href="../cerulean">Cerulean</a></li>
-	           <li><a href="../cyborg">Cyborg</a></li>
-	           <li><a href="../journal">Journal</a></li>
-	           <li><a href="../simplex">Simplex</a></li>
-	           <li><a href="../spacelab">Spacelab</a></li>
-	           <li><a href="../united">United</a></li>
-	         </ul>
-	       </li>
-         <li class="dropdown">
-           <a class="dropdown-toggle" data-toggle="dropdown" href="#">Download <b class="caret"></b></a>
-           <ul class="dropdown-menu">
-             <li><a href="../default">Default</a></li>
-           </ul>
-         </li>
-         </ul>
-         
-         <ul class="nav pull-right" id="main-menu-right">
-          <li><a rel="tooltip" target="_blank" href="http://builtwithbootstrap.com/" data-original-title="Showcase of Bootstrap sites &amp; apps">Built With Bootstrap <i class="icon-share-alt icon-white"></i></a></li>
-          <li><a rel="tooltip" target="_blank" href="https://wrapbootstrap.com/?ref=bsw" data-original-title="Marketplace for premium Bootstrap templates">WrapBootstrap <i class="icon-share-alt icon-white"></i></a></li>
-         </ul>
+       <a class="brand" href="../">Bootswatch</a>
+       <div class="nav-collapse" id="main-menu">
+        <ul class="nav" id="main-menu-left">
+          <li><a onclick="pageTracker._link(this.href); return false;" href="http://news.bootswatch.com">News</a></li>
+          <li><a id="swatch-link" href="/#gallery">Gallery</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Preview <b class="caret"></b></a>
+            <ul class="dropdown-menu" id="swatch-menu">
+              <li><a href="../default">Default</a></li>
+              <li class="divider"></li>
+              <li><a href="../amelia">Amelia</a></li>
+              <li><a href="../cerulean">Cerulean</a></li>
+              <li><a href="../cosmo">Cosmo</a></li>
+              <li><a href="../cyborg">Cyborg</a></li>
+              <li><a href="../journal">Journal</a></li>
+              <li><a href="../readable">Readable</a></li>
+              <li><a href="../simplex">Simplex</a></li>
+              <li><a href="../slate">Slate</a></li>
+              <li><a href="../spacelab">Spacelab</a></li>
+              <li><a href="../spruce">Spruce</a></li>
+              <li><a href="../superhero">Superhero</a></li>
+              <li><a href="../united">United</a></li>
+            </ul>
+          </li>
+          <li class="dropdown" id="preview-menu">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Download <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a target="_blank" href="bootstrap.min.css">bootstrap.min.css</a></li>
+              <li><a target="_blank" href="bootstrap.css">bootstrap.css</a></li>
+              <li class="divider"></li>
+              <li><a target="_blank" href="variables.less">variables.less</a></li>
+              <li><a target="_blank" href="bootswatch.less">bootswatch.less</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav pull-right" id="main-menu-right">
+          <li><a rel="tooltip" target="_blank" href="http://builtwithbootstrap.com/" title="Showcase of Bootstrap sites &amp; apps" onclick="_gaq.push(['_trackEvent', 'click', 'outbound', 'builtwithbootstrap']);">Built With Bootstrap <i class="icon-share-alt"></i></a></li>
+          <li><a rel="tooltip" target="_blank" href="https://wrapbootstrap.com/?ref=bsw" title="Marketplace for premium Bootstrap templates" onclick="_gaq.push(['_trackEvent', 'click', 'outbound', 'wrapbootstrap']);">WrapBootstrap <i class="icon-share-alt"></i></a></li>
+        </ul>
        </div>
      </div>
    </div>
@@ -77,14 +82,25 @@
 <!-- Masthead
 ================================================== -->
 <header class="jumbotron subhead" id="overview">
-  <h1>Swatch</h1>
-  <p class="lead">A preview of changes in this swatch.</p>
+  <div class="row">
+    <div class="span6">
+      <h1>Swatch</h1>
+      <p class="lead">A preview of changes in this swatch.</p>
+    </div>
+    <div class="span6">
+      <div class="bsa well">
+          <div id="bsap_1277971" class="bsarocks bsap_c466df00a3cd5ee8568b5c4983b6bb19"></div>
+          <div class="clearfix"><a href="http://adpacks.com" id="bsap_aplink">via Ad Packs</a></div>
+      </div>
+    </div>
+  </div>
   <div class="subnav">
     <ul class="nav nav-pills">
       <li><a href="#typography">Typography</a></li>
       <li><a href="#navbar">Navbar</a></li>
       <li><a href="#buttons">Buttons</a></li>
       <li><a href="#forms">Forms</a></li>
+      <li><a href="#tables">Tables</a></li>
       <li><a href="#miscellaneous">Miscellaneous</a></li>
     </ul>
   </div>
@@ -134,6 +150,21 @@
       </address>
     </div>
 
+  </div>
+  
+  <div class="row">
+    <div class="span6">
+      <blockquote>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+        <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+      </blockquote>
+    </div>
+    <div class="span6">
+      <blockquote class="pull-right">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+        <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+      </blockquote>
+    </div>
   </div>
 
 </section>
@@ -306,7 +337,7 @@
       <tr>
         <td><a class="btn btn-info" href="#">Info</a></td>
         <td><a class="btn btn-info btn-large" href="#">Info</a></td>
-        <td><a class="btn btn-info btn-mini" href="#">Info</a></td>
+        <td><a class="btn btn-info btn-small" href="#">Info</a></td>
         <td><a class="btn btn-info disabled" href="#">Info</a></td>
         <td><a class="btn btn-info" href="#"><i class="icon-exclamation-sign icon-white"></i> Info</a></td>
 		<td>
@@ -326,7 +357,7 @@
       <tr>
         <td><a class="btn btn-success" href="#">Success</a></td>
         <td><a class="btn btn-success btn-large" href="#">Success</a></td>
-        <td><a class="btn btn-success btn-mini" href="#">Micro</a></td>
+        <td><a class="btn btn-success btn-small" href="#">Success</a></td>
         <td><a class="btn btn-success disabled" href="#">Success</a></td>
         <td><a class="btn btn-success" href="#"><i class="icon-ok icon-white"></i> Success</a></td>
 		<td>
@@ -346,7 +377,7 @@
       <tr>
         <td><a class="btn btn-warning" href="#">Warning</a></td>
         <td><a class="btn btn-warning btn-large" href="#">Warning</a></td>
-        <td><a class="btn btn-warning btn-mini" href="#">Micro</a></td>
+        <td><a class="btn btn-warning btn-small" href="#">Warning</a></td>
         <td><a class="btn btn-warning disabled" href="#">Warning</a></td>
         <td><a class="btn btn-warning" href="#"><i class="icon-warning-sign icon-white"></i> Warning</a></td>
 		<td>
@@ -366,7 +397,7 @@
       <tr>
         <td><a class="btn btn-danger" href="#">Danger</a></td>
         <td><a class="btn btn-danger btn-large" href="#">Danger</a></td>
-        <td><a class="btn btn-danger btn-mini" href="#">Micro</a></td>
+        <td><a class="btn btn-danger btn-small" href="#">Danger</a></td>
         <td><a class="btn btn-danger disabled" href="#">Danger</a></td>
         <td><a class="btn btn-danger" href="#"><i class="icon-remove icon-white"></i> Danger</a></td>
 		<td>
@@ -388,20 +419,20 @@
         <td><a class="btn btn-inverse btn-large" href="#">Inverse</a></td>
         <td><a class="btn btn-inverse btn-small" href="#">Inverse</a></td>
         <td><a class="btn btn-inverse disabled" href="#">Inverse</a></td>
-        <td><a class="btn btn-inverse" href="#"><i class="icon-remove icon-white"></i> Inverse</a></td>
-    <td>
-          <div class="btn-group">
-            <a class="btn btn-inverse" href="#">Inverse</a>
-            <a class="btn btn-inverse dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-            </ul>
-          </div><!-- /btn-group -->
-    </td>
+        <td><a class="btn btn-inverse" href="#"><i class="icon-random icon-white"></i> Inverse</a></td>
+		<td>
+	        <div class="btn-group">
+	          <a class="btn btn-inverse" href="#">Inverse</a>
+	          <a class="btn btn-inverse dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+	          <ul class="dropdown-menu">
+	            <li><a href="#">Action</a></li>
+	            <li><a href="#">Another action</a></li>
+	            <li><a href="#">Something else here</a></li>
+	            <li class="divider"></li>
+	            <li><a href="#">Separated link</a></li>
+	          </ul>
+	        </div><!-- /btn-group -->
+		</td>
       </tr>
     </tbody>
   </table>
@@ -558,6 +589,45 @@
 
 </section>
 
+<!-- Tables
+================================================== -->
+<section id="tables">
+  <div class="page-header">
+    <h1>Tables</h1>
+  </div>
+  
+  <table class="table table-bordered table-striped table-hover">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Username</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
 
 <!-- Miscellaneous
 ================================================== -->
@@ -567,7 +637,7 @@
   </div>
 
   <div class="row">
-    <div class="span5">
+    <div class="span4">
 
       <h3 id="breadcrumbs">Breadcrumbs</h3>
       <ul class="breadcrumb">
@@ -575,26 +645,12 @@
       </ul>
       <ul class="breadcrumb">
         <li><a href="#">Home</a> <span class="divider">/</span></li>
-        <li class="active">Library</li>
-      </ul>
-      <ul class="breadcrumb">
-        <li><a href="#">Home</a> <span class="divider">/</span></li>
         <li><a href="#">Library</a> <span class="divider">/</span></li>
         <li class="active">Data</li>
       </ul>
     </div>
-    <div class="span6 offset1">
+    <div class="span4">
       <h3 id="pagination">Pagination</h3>
-      <div class="pagination">
-        <ul>
-          <li class="disabled"><a href="#">&laquo;</a></li>
-          <li class="active"><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">&raquo;</a></li>
-        </ul>
-      </div>
       <div class="pagination">
         <ul>
           <li><a href="#">&larr;</a></li>
@@ -614,26 +670,112 @@
         </ul>
       </div>
     </div>
+    
+    <div class="span4">
+      <h3 id="pager">Pagers</h3>
+        
+        <ul class="pager">
+          <li><a href="#">Previous</a></li>
+          <li><a href="#">Next</a></li>
+        </ul>
+        
+        <ul class="pager">
+          <li class="previous disabled"><a href="#">&larr; Older</a></li>
+          <li class="next"><a href="#">Newer &rarr;</a></li>
+        </ul>
+    </div>
   </div>
 
+
+  <!-- Navs
+  ================================================== -->
+
+  <div class="row">
+    <div class="span4">
+
+      <h3 id="tabs">Tabs</h3>
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="#A" data-toggle="tab">Section 1</a></li>
+        <li><a href="#B" data-toggle="tab">Section 2</a></li>
+        <li><a href="#C" data-toggle="tab">Section 3</a></li>
+      </ul>
+      <div class="tabbable">
+        <div class="tab-content">
+          <div class="tab-pane active" id="A">
+            <p>I'm in Section A.</p>
+          </div>
+          <div class="tab-pane" id="B">
+            <p>Howdy, I'm in Section B.</p>
+          </div>
+          <div class="tab-pane" id="C">
+            <p>What up girl, this is Section C.</p>
+          </div>
+        </div>
+      </div> <!-- /tabbable -->
+      
+    </div>
+    <div class="span4">
+      <h3 id="pills">Pills</h3>
+      <ul class="nav nav-pills">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Profile</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+        <li class="disabled"><a href="#">Disabled link</a></li>
+      </ul>
+    </div>
+    
+    <div class="span4">
+      
+      <h3 id="list">Lists</h3>
+        
+      <div class="well" style="padding: 8px 0;">
+        <ul class="nav nav-list">
+          <li class="nav-header">List header</li>
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">Library</a></li>
+          <li><a href="#">Applications</a></li>
+          <li class="nav-header">Another list header</li>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Settings</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
 
 <!-- Labels
 ================================================== -->
 
   <div class="row">
-    <div class="span12">
-
+    <div class="span6">
       <h3 id="labels">Labels</h3>
-
-
       <span class="label">Default</span>
       <span class="label label-success">Success</span>
-	  <span class="label label-warning">Warning</span>
-	  <span class="label label-important">Important</span>
-	  <span class="label label-info">Info</span>
-
-	</div>
+      <span class="label label-warning">Warning</span>
+      <span class="label label-important">Important</span>
+      <span class="label label-info">Info</span>
+      <span class="label label-inverse">Inverse</span>
+    </div>
+    <div class="span6">
+      <h3 id="badges">Badges</h3>
+      <span class="badge">Default</span>
+      <span class="badge badge-success">Success</span>
+      <span class="badge badge-warning">Warning</span>
+      <span class="badge badge-important">Important</span>
+      <span class="badge badge-info">Info</span>
+      <span class="badge badge-inverse">Inverse</span>
+    </div>
   </div>
 	<br />
 
