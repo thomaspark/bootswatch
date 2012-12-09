@@ -1,4 +1,4 @@
-// Cosmo 2.2.1
+// Cosmo 2.2.2
 // Bootswatch
 // -----------------------------------------------------
 
@@ -304,8 +304,6 @@ div.subnav {
 // -----------------------------------------------------
 
 .btn {
-
-	padding: 5px 12px;
 	background-image: none;
 	.box-shadow(none);
 	border: none;
@@ -314,14 +312,6 @@ div.subnav {
 
 	&.disabled {
 		box-shadow: inset 0 2px 4px rgba(0,0,0,.15),~" "0 1px 2px rgba(0,0,0,.05);
-	}
-
-	&-large {
-		padding: 22px 30px;
-	}
-
-	&-mini {
-		padding: 2px 6px;
 	}
 }
 
@@ -385,7 +375,7 @@ input[type="search"], input[type="tel"], input[type="color"] {
 
 	&.warning {
 
-		& > label,
+		.control-label,
 		.help-block,
 		.help-inline {
 			color: @orange;
@@ -401,7 +391,7 @@ input[type="search"], input[type="tel"], input[type="color"] {
 
 	&.error {
 
-		& > label,
+		.control-label,
 		.help-block,
 		.help-inline {
 			color: @red;
@@ -417,7 +407,7 @@ input[type="search"], input[type="tel"], input[type="color"] {
 
 	&.success {
 
-		& > label,
+		.control-label,
 		.help-block,
 		.help-inline {
 			color: @green;
