@@ -1182,7 +1182,7 @@ input[readonly],
 select[readonly],
 textarea[readonly] {
   cursor: not-allowed;
-  background-color: #eeeeee;
+  background-color: #555555;
 }
 input[type="radio"][disabled],
 input[type="checkbox"][disabled],
@@ -5626,14 +5626,22 @@ select {
   -moz-border-radius: 1px;
   border-radius: 1px;
 }
-legend,
-label {
-  color: #999999;
-  border-bottom: 0px solid #222;
-}
-input,
-textarea,
 select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
 .uneditable-input {
   color: #222222;
 }
@@ -5644,7 +5652,6 @@ input[readonly],
 select[readonly],
 textarea[readonly],
 .uneditable-input {
-  background-color: #555;
   border-color: #444;
 }
 input:focus,
@@ -5667,6 +5674,11 @@ select:focus {
   outline: thin dotted #333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
+}
+legend,
+label {
+  color: #999999;
+  border-bottom: 0px solid #222;
 }
 .form-actions {
   border-top: 1px solid #222;

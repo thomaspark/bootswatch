@@ -213,7 +213,7 @@ input.span1, textarea.span1, .uneditable-input.span1{width:46px;}
 .controls-row:after{clear:both;}
 .controls-row [class*="span"],.row-fluid .controls-row [class*="span"]{float:left;}
 .controls-row .checkbox[class*="span"],.controls-row .radio[class*="span"]{padding-top:5px;}
-input[disabled],select[disabled],textarea[disabled],input[readonly],select[readonly],textarea[readonly]{cursor:not-allowed;background-color:#eeeeee;}
+input[disabled],select[disabled],textarea[disabled],input[readonly],select[readonly],textarea[readonly]{cursor:not-allowed;background-color:#555555;}
 input[type="radio"][disabled],input[type="checkbox"][disabled],input[type="radio"][readonly],input[type="checkbox"][readonly]{background-color:transparent;}
 .control-group.warning .control-label,.control-group.warning .help-block,.control-group.warning .help-inline{color:#a47e3c;}
 .control-group.warning .checkbox,.control-group.warning .radio,.control-group.warning input,.control-group.warning select,.control-group.warning textarea{color:#a47e3c;}
@@ -910,11 +910,11 @@ div.subnav .nav li.nav-header{text-shadow:none;}
 .btn-group>.dropdown-menu>li>a:hover{border-bottom:0;}
 .btn.disabled,.btn[disabled]{background-color:#adafae;}
 input,textarea,select{border-width:2px;-webkit-border-radius:1px;-moz-border-radius:1px;border-radius:1px;}
-legend,label{color:#999999;border-bottom:0px solid #222;}
-input,textarea,select,.uneditable-input{color:#222222;}
-input[disabled],select[disabled],textarea[disabled],input[readonly],select[readonly],textarea[readonly],.uneditable-input{background-color:#555;border-color:#444;}
+select,textarea,input[type="text"],input[type="password"],input[type="datetime"],input[type="datetime-local"],input[type="date"],input[type="month"],input[type="time"],input[type="week"],input[type="number"],input[type="email"],input[type="url"],input[type="search"],input[type="tel"],input[type="color"],.uneditable-input{color:#222222;}
+input[disabled],select[disabled],textarea[disabled],input[readonly],select[readonly],textarea[readonly],.uneditable-input{border-color:#444;}
 input:focus,textarea:focus,input.focused,textarea.focused{border-color:#52a8ec;outline:0;outline:thin dotted \9;}
 input[type="file"]:focus,input[type="radio"]:focus,input[type="checkbox"]:focus,select:focus{-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;outline:thin dotted #333;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
+legend,label{color:#999999;border-bottom:0px solid #222;}
 .form-actions{border-top:1px solid #222;}
 .table{-webkit-border-radius:1px;-moz-border-radius:1px;border-radius:1px;}.table tbody tr.success td{background-color:#669900;color:#ffffff;}
 .table tbody tr.error td{background-color:#cc0000;color:#ffffff;}

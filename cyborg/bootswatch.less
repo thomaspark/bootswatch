@@ -395,17 +395,16 @@ input, textarea, select {
 	.border-radius(1px);
 }
 
-legend, label {
-	color: @textColor;
-	border-bottom: 0px solid #222;
-}
-
-input, textarea, select, .uneditable-input {
+select, textarea,
+input[type="text"], input[type="password"], input[type="datetime"],
+input[type="datetime-local"], input[type="date"], input[type="month"],
+input[type="time"], input[type="week"], input[type="number"],
+input[type="email"], input[type="url"], input[type="search"],
+input[type="tel"], input[type="color"], .uneditable-input {
 	color: @grayDark;
 }
 
 input[disabled], select[disabled], textarea[disabled], input[readonly], select[readonly], textarea[readonly], .uneditable-input {
-	background-color: #555;
 	border-color: #444;
 }
 
@@ -424,6 +423,11 @@ input[type="checkbox"]:focus,
 select:focus {
   .box-shadow(none); // override for file inputs
   .tab-focus();
+}
+
+legend, label {
+	color: @textColor;
+	border-bottom: 0px solid #222;
 }
 
 .form-actions {
