@@ -5204,7 +5204,7 @@ div.subnav {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-  border-color: transparent;
+  border: none;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
@@ -5215,17 +5215,14 @@ div.subnav .nav {
 div.subnav .nav > li > a {
   border-color: transparent;
 }
-div.subnav .nav > .active > a {
+div.subnav .nav > .active > a,
+div.subnav .nav > .active > a:hover {
   border-color: transparent;
-  background-color: transparent;
+  background-color: #000000;
+  color: #ffffff;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-  color: #080808;
-}
-div.subnav .nav > .active > a:hover {
-  background-color: #000000;
-  color: #ffffff;
 }
 div.subnav-fixed {
   top: 50px;

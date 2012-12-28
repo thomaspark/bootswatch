@@ -191,7 +191,8 @@ div.subnav {
 
 	.nav > .active > a:hover,
 	.nav > li > a:hover,
-	.nav > li.active > a:hover, {
+	.nav > .active > a,
+	.nav > .active > a:hover, {
 		border-right-color: transparent;
 		background-color: rgba(255, 255, 255, 0.4);
 		color: @textColor;
@@ -227,17 +228,13 @@ div.subnav {
 	}
 
 	li.active > a,
-	li:active > a,
-	li.active > a:hover,
-	li:active > a:hover {
+	li.active > a:hover {
 		color: @textColor;
 	}
 
 	li.active > a,
-	li:active > a,
 	li > a:hover,
-	li.active > a:hover,
-	li:active > a:hover {
+	li.active > a:hover {
 		background-color: #8AD5DC;
 		border-color: transparent;
 		text-shadow: none;
@@ -262,14 +259,13 @@ div.subnav {
 	li > a,
 	li > a:hover,
 	li.active > a,
-	li:active > a,
-	li.active > a:hover,
-	li:active > a:hover {
+	li.active > a:hover {
 		border-color: transparent;
 	}
 }
 
 .nav-list {
+
 	.nav-header {
 		text-shadow: none;
 		color: @textColor;
@@ -280,10 +276,8 @@ div.subnav {
 	}
 
 	li.active > a,
-	li:active > a,
 	li > a:hover,
-	li.active > a:hover,
-	li:active > a:hover {
+	li.active > a:hover {
 		background-color: #8AD5DC;
 		text-shadow: none;
 	}
@@ -560,6 +554,13 @@ input, textarea, .search-query, .uneditable-input,
 
 // ALERTS, LABELS, BADGES
 // -----------------------------------------------------
+
+.alert {
+
+	h1, h2, h3, h4, h5, h6 {
+		color: @textColor;
+	}
+}
 
 .alert, .label {
 	border-color: transparent;

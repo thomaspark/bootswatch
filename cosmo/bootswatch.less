@@ -117,7 +117,7 @@ div.subnav {
 	background-color: @grayLight;
 	background-image: none;
 	.box-shadow(none);
-	border-color: transparent;
+	border: none;
 	.border-radius(0);
 
 	.nav {
@@ -128,17 +128,13 @@ div.subnav {
 		border-color: transparent;
 	}
 
-	.nav > .active > a {
+	.nav > .active > a,
+	.nav > .active > a:hover {
 		border-color: transparent;
-		background-color: transparent;
+		background-color: @black;
+		color: @white;
 		// border-left-width: 2px;
 		.box-shadow(none);
-		color: @grayDarker;
-
-		&:hover {
-			background-color: @black;
-			color: @white;
-		}
 	}
 
 	&-fixed {

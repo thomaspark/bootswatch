@@ -5277,7 +5277,8 @@ div.subnav .nav > .active > a {
 }
 div.subnav .nav > .active > a:hover,
 div.subnav .nav > li > a:hover,
-div.subnav .nav > li.active > a:hover {
+div.subnav .nav > .active > a,
+div.subnav .nav > .active > a:hover {
   border-right-color: transparent;
   background-color: rgba(255, 255, 255, 0.4);
   color: rgba(255, 255, 255, 0.9);
@@ -5311,24 +5312,16 @@ div.subnav-fixed {
 }
 .nav-tabs li.active > a,
 .nav-pills li.active > a,
-.nav-tabs li:active > a,
-.nav-pills li:active > a,
 .nav-tabs li.active > a:hover,
-.nav-pills li.active > a:hover,
-.nav-tabs li:active > a:hover,
-.nav-pills li:active > a:hover {
+.nav-pills li.active > a:hover {
   color: rgba(255, 255, 255, 0.9);
 }
 .nav-tabs li.active > a,
 .nav-pills li.active > a,
-.nav-tabs li:active > a,
-.nav-pills li:active > a,
 .nav-tabs li > a:hover,
 .nav-pills li > a:hover,
 .nav-tabs li.active > a:hover,
-.nav-pills li.active > a:hover,
-.nav-tabs li:active > a:hover,
-.nav-pills li:active > a:hover {
+.nav-pills li.active > a:hover {
   background-color: #8AD5DC;
   border-color: transparent;
   text-shadow: none;
@@ -5349,9 +5342,7 @@ div.subnav-fixed {
 .nav-tabs.nav-stacked li > a,
 .nav-tabs.nav-stacked li > a:hover,
 .nav-tabs.nav-stacked li.active > a,
-.nav-tabs.nav-stacked li:active > a,
-.nav-tabs.nav-stacked li.active > a:hover,
-.nav-tabs.nav-stacked li:active > a:hover {
+.nav-tabs.nav-stacked li.active > a:hover {
   border-color: transparent;
 }
 .nav-list .nav-header {
@@ -5362,10 +5353,8 @@ div.subnav-fixed {
   text-shadow: none;
 }
 .nav-list li.active > a,
-.nav-list li:active > a,
 .nav-list li > a:hover,
-.nav-list li.active > a:hover,
-.nav-list li:active > a:hover {
+.nav-list li.active > a:hover {
   background-color: #8AD5DC;
   text-shadow: none;
 }
@@ -5748,6 +5737,14 @@ textarea,
 .input-append .btn,
 .input-prepend .btn {
   padding: 4px 10px;
+}
+.alert h1,
+.alert h2,
+.alert h3,
+.alert h4,
+.alert h5,
+.alert h6 {
+  color: rgba(255, 255, 255, 0.9);
 }
 .alert,
 .label {
