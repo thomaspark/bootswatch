@@ -5,9 +5,9 @@ Bootswatch is a collection of free themes for [Twitter Bootstrap](http://twitter
 
 Usage
 -----
-Head over to [Bootswatch](http://bootswatch.com) and download the `bootstrap.min.css` file associated with a theme.
+Head over to [Bootswatch](http://bootswatch.com) and download the `bootstrap.min.css` file associated with a theme. Replace Bootstrap's stylesheet with this file.
 
-In Bootstrap’s CSS directory, you’ll find a stylesheet in full (`bootstrap.css`) and minified (`bootstrap.min.css`) forms. Rename them or move them to a safe place, and replace with the downloaded file. If you ever change your mind, simply drop in another theme or switch back to the original.
+The themes are also hosted on [BootstrapCDN](http://www.bootstrapcdn.com/).
 
 For use with Rails, check out [bootswatch-rails](https://github.com/maxim/bootswatch-rails) (Sass) and [twitter-bootswatch-rails](https://github.com/scottvrosenthal/twitter-bootswatch-rails) (LESS).
 
