@@ -21,7 +21,7 @@ default:
 	-test -f swatch/variables.less && rm swatch/variables.less
 	-test -f swatch/bootswatch.less && rm swatch/bootswatch.less
 	curl --location -o swatch/variables.less https://raw.github.com/twitter/bootstrap/master/less/variables.less
-	curl --location -o swatch/bootswatch.less https://raw.github.com/thomaspark/bootswatch/master/swatchmaker/swatch/bootswatch.less
+	curl --location -o swatch/bootswatch.less https://raw.github.com/thomaspark/bootswatch/gh-pages/swatchmaker/swatch/bootswatch.less
 	make bootswatch
 
 .PHONY: bootswatch bootstrap default
