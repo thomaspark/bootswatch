@@ -86,11 +86,11 @@ default:
 	make bootswatch
 
 sass-default:
-	-test -f swatch/variables.less && rm swatch/variables.scss
-	-test -f swatch/bootswatch.less && rm swatch/bootswatch.scss
-	curl --location -o swatch/variables.less https://raw.github.com/jlong/sass-twitter-bootstrap/master/lib/_variables.scss
-	curl --location -o swatch/bootswatch.less https://raw.github.com/theblacksmith/sass-bootswatch/gh-pages/swatchmaker/swatch/_bootswatch.scss
-	make bootswatch
+	-test -f swatch/_variables.scss && rm swatch/_variables.scss
+	-test -f swatch/_bootswatch.scss && rm swatch/_bootswatch.scss
+	curl --location -o swatch/_variables.scss https://raw.github.com/jlong/sass-twitter-bootstrap/master/lib/_variables.scss
+	curl --location -o swatch/_bootswatch.scss https://raw.github.com/theblacksmith/sass-bootswatch/gh-pages/swatchmaker/swatch/_bootswatch.scss
+	make sass-bootswatch
 
 .PHONY: bootswatch bootstrap default
 
