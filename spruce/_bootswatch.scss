@@ -1,0 +1,651 @@
+// Spruce 2.2.2
+// Bootswatch
+// -----------------------------------------------------
+
+
+// TYPOGRAPHY
+// --------------------------------------------------
+
+@import url("//fonts.googleapis.com/css?family=Crete+Round");
+
+h1 > small,
+h2 > small,
+h3 > small,
+h4 > small,
+h5 > small,
+h6 > small,
+.muted {
+	color: $headingsColor;
+	font-family: $baseFontFamily;
+}
+
+.jumbotron h1 {
+	font-weight: normal !important;
+}
+
+// SCAFFOLDING
+// --------------------------------------------------
+
+.page-header {
+	border-bottom: none;
+	padding-bottom: 5px;
+
+	h1 {
+		margin-bottom: 0;
+	}
+}
+
+hr {
+	border-top: none;
+	border-bottom: 2px solid $headingsColor;
+}
+
+blockquote {
+	border-left: 2px solid $headingsColor;
+
+	&.pull-right {
+		border-right: 2px solid $headingsColor;
+	}
+
+	small {
+		color: $blueDark;
+	}
+}
+
+// NAVBAR
+// --------------------------------------------------
+
+.navbar {
+
+	.navbar-inner {
+		background-image: none;
+		@include box-shadow(none);
+	}
+
+	.brand {
+		padding: 18px 20px 16px;
+		font-size: 26px;
+		font-family: $headingsFontFamily;
+		font-weight: $headingsFontWeight;
+
+		&:hover {
+			background-color: $navbarLinkBackgroundHover;
+		}
+	}
+
+	.nav > li > a {
+		padding: 20px 20px 14px;
+		font-size: 20px;
+		font-family: $headingsFontFamily;
+		font-weight: $headingsFontWeight;
+		text-shadow: none;
+	}
+
+	.nav > .active > a,
+	.nav > .active > a:hover,
+	.nav > .active > a:focus {
+		@include box-shadow(none);
+	}
+
+	.navbar-text {
+		margin: 19px 20px 0;
+		font-size: 20px;
+		font-family: $headingsFontFamily;
+		font-weight: $headingsFontWeight;
+		line-height: inherit;
+	}
+
+	.divider-vertical {
+		border-color: rgba(0, 0, 0, 0.2);
+	}
+
+	.btn-navbar {
+		margin-top: 14px;
+	}
+
+	.navbar-form, .navbar-search {
+		border-color: transparent;
+		margin-top: 12px;
+		@include box-shadow(none);
+		line-height: normal;
+	}
+
+	.navbar-search .search-query {
+		border-color: transparent;
+		background-color: rgba(255, 255, 255, 0.4);
+		line-height: normal;
+		color: $white;
+	}
+
+	.dropdown-menu li > a {
+		font-family: $headingsFontFamily;
+		font-weight: $headingsFontWeight;
+	}
+
+	.nav > li > .dropdown-menu::before,
+	.nav > li > .dropdown-menu::after {
+		border-bottom: none;
+	}
+}
+
+navbar-inverse {
+
+	.dropdown-menu {
+		background-color: $navbarInverseLinkBackgroundHover;
+
+		li > a {
+			color: $headingsColor;
+
+			&:hover {
+				background-color: $navbarInverseBackground;
+			}
+		}
+
+		.divider {
+			border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+		}
+
+		.nav-header {
+			color: $headingsColor;
+		}
+	}
+
+}
+
+@media (max-width: $navbarCollapseWidth) {
+
+	.navbar .nav-collapse {
+
+		.nav li > a {
+			color: $navbarLinkColor;
+
+			&:hover {
+				background-color: $navbarLinkBackgroundHover;
+			}
+		}	
+	}
+
+	.navbar-inverse .nav-collapse {
+
+		.nav li > a:hover {
+			background-color: rgba(0, 0, 0, 0.06) !important;
+		}
+	}
+
+	.nav-collapse .navbar-form,
+	.nav-collapse .navbar-search {
+		border: none !important;
+		@include box-shadow(none !important);
+	}
+}
+
+div.subnav {
+
+	background-color: $green;
+	background-image: none;
+	border-color: transparent;
+	@include border-radius(0);
+
+	.nav > li > a {
+		padding: 12px 12px 10px;
+		border-color: transparent;
+		background-color: transparent;
+		font-family: $headingsFontFamily;
+		font-weight: $headingsFontWeight;
+		color: $navbarLinkColor;
+	}
+
+	.nav > li > a:hover,
+	.nav > .active > a,
+	.nav > .active > a:hover,
+	.dropdown.open .dropdown-toggle,
+	.dropdown.open.active .dropdown-toggle:hover {
+		background-color: $navbarLinkBackgroundHover;
+		@include box-shadow(none);
+		border-color: transparent;
+		color: $white;
+	}
+
+	&.subnav-fixed {
+		top: $navbarHeight;
+	}
+}
+
+// NAV
+// --------------------------------------------------
+
+.nav {
+
+	.nav-header {
+		color: $headingsColor;
+	}
+
+	.disabled > a,
+	.disabled > a:hover {
+		background-color: lighten($green, 10%);
+		color: $white;
+	}
+}
+
+.nav-tabs {
+	
+	border-color: transparent;
+
+	& > li > a {
+		background-color: $green;
+		color: $white;
+
+		&:hover {
+			background-color: $navbarBackground;
+			border-color: transparent;
+		}	
+	}
+
+	.active > a,
+	.active > a:hover {
+		background-color: $navbarBackground;
+		border-color: transparent;
+		color: $white;
+	}
+
+	&.nav-stacked > li > a {
+		border-color: transparent;
+
+		&:hover {
+			border-color: transparent;
+		}
+	}
+
+	.open .dropdown-toggle,
+	.active.open .dropdown-toggle {
+		background-color: $navbarBackground;
+	}
+}
+
+.nav-pills {
+
+	& > li > a {
+		background-color: $green;
+		color: $white;
+
+		&:hover {
+			background-color: $navbarBackground;
+			border-color: transparent;
+		}
+	}
+
+	.active > a,
+	.active > a:hover {
+		background-color: $navbarBackground;
+		border-color: transparent;
+		color: $white;
+	}
+
+	.open .dropdown-toggle,
+	.active.open .dropdown-toggle {
+		background-color: $navbarBackground;
+	}
+}
+
+.tabbable {
+	.nav-tabs,
+	.nav-tabs > li > a,
+	.nav-tabs > li > a:hover,
+	.nav-tabs > li.active > a,
+	.nav-tabs > li.active > a:hover  {
+		border-color: transparent;
+	}
+}
+
+.nav-list {
+
+	.nav-header,
+	li > a {
+		text-shadow: none;
+	}
+
+	li > a:hover {
+		background-color: $green;
+		color: $white;
+	}
+
+	li.active > a,
+	li.active > a:hover {
+		background-color: $navbarBackground;
+		text-shadow: none;
+	}
+
+	.divider {
+		background-color: transparent;
+		border-bottom: 1px solid $headingsColor;
+	}
+}
+
+.breadcrumb {
+
+	background-color: $green;
+	background-image: none;
+	@include box-shadow(none);
+	border-color: transparent;
+	@include border-radius(0);
+
+	li {
+		color: $white;
+		text-shadow: none;
+
+		a {
+			color: $white;
+			text-decoration: underline;
+		}
+
+		a:hover {
+			color: $white;
+		}
+
+		.divider {
+			color: $white;
+		}
+	}
+
+	.active {
+		color: $white;
+	}
+}
+
+.pagination {
+
+	ul {
+		background-color: $green;
+		background-image: none;
+		@include box-shadow(none);
+		border-color: transparent;
+		@include border-radius(0);
+	}
+
+
+	ul > li > a,
+	ul > li > span {
+		background-color: $green;
+		border-color: transparent;
+		color: $white;
+
+		&:hover {
+			background-color: $navbarBackground;
+			color: $white;
+		}
+	}
+
+	ul > .active > a,
+	ul > .active > span {
+		background-color: $navbarBackground;
+		color: $white;
+	}
+
+	ul > .disabled > a,
+	ul > .disabled > a:hover,
+	ul > .disabled > span,
+	ul > .disabled > span:hover {
+		background-color: lighten($green, 10%);
+		color: $white;
+	}
+}
+
+.pager {
+
+	li > a,
+	li > span {
+		border: none;
+		background-color: $green;
+		color: $white;
+
+		&:hover {
+			background-color: $navbarBackground;
+		}
+	}
+
+	.disabled a,
+	.disabled a:hover {
+		background-color: lighten($green, 10%);
+		color: $white;
+	}
+}
+
+// BUTTONS
+// --------------------------------------------------
+
+.btn {
+	@include border-radius(0);
+	font-family: $headingsFontFamily;
+	font-weight: $headingsFontWeight;
+    text-shadow: none;
+}
+
+.btn-large {
+	font-size: 18px;
+}
+
+.btn-group .dropdown-toggle {
+	@include box-shadow(none);
+}
+
+// TABLES
+// --------------------------------------------------
+
+.table,
+.table.table-bordered,
+.table.table-striped {
+	@include border-radius(0);
+}
+
+.table-bordered thead:first-child tr:first-child th:first-child,
+.table-bordered tbody:first-child tr:first-child td:first-child,
+.table-bordered thead:first-child tr:first-child th:last-child,
+.table-bordered tbody:first-child tr:first-child td:last-child,
+.table-bordered tbody:last-child tr:last-child td:first-child, {
+	@include border-radius(0);
+}
+
+.table thead tr th:first-child,
+.table tbody tr td:first-child {
+	// border-left: none;
+}
+
+.table th,
+.table-striped tbody tr:nth-child(odd) th {
+	background-color: $green;
+	color: $white;
+}
+
+.table {
+
+	tbody tr.success td {
+		background-color: #B5EEAA;
+	}
+
+	tbody tr.error td {
+		background-color: #EEB8B8;
+	}
+
+	tbody tr.info td {
+		background-color: #AEE2EE;
+	}
+}
+
+// FORMS
+// --------------------------------------------------
+
+legend {
+	border-bottom: none;
+	font-family: $headingsFontFamily;
+	font-weight: $headingsFontWeight;
+	color: $headingsColor;
+}
+
+label, .help-block, input[type="file"] {
+	color: $headingsColor;
+}
+
+input, textarea, select {
+	color: $textColor;
+}
+
+.uneditable-input {
+	color: $gray;
+}
+
+.form-actions {
+	border-top: none;
+	@include border-radius(4px);
+}
+
+.control-group.error {
+
+	label, .help-block, .help-inline {
+		color: $red;
+	}
+
+	input, select, textarea {
+		border: 1px solid $red;
+		color: $textColor;
+	}
+}
+
+.control-group.success {
+
+	label, .help-block, .help-inline {
+		color: $green;
+	}
+
+	input, select, textarea {
+		border: 1px solid $green;
+		color: $textColor;
+	}
+}
+
+.control-group.warning {
+
+	label, .help-block, .help-inline {
+		color: $orange;
+	}
+
+	input, select, textarea {
+		border: 1px solid $orange;
+		color: $textColor;
+	}
+}
+
+// ALERTS, LABELS, BADGES
+// --------------------------------------------------
+
+.alert {
+	text-shadow: none;
+	border: none;
+
+	h1, h2, h3, h4, h5, h6 {
+		font-weight: bold;
+		color: $white;
+	}
+}
+
+.alert-heading {
+	font-family: $baseFontFamily;
+	color: inherit;
+}
+
+.badge,
+.label {
+
+	background-color: $green;
+	text-shadow: none;
+}
+
+.badge-success, .label-success {
+	background-color: $btnSuccessBackground;
+}
+
+.badge-warning, .label-warning {
+	background-color: $btnWarningBackground;
+}
+
+.badge-important, .label-important {
+	background-color: $btnDangerBackground;
+}
+
+.badge-info, .label-info {
+	background-color: $btnInfoBackground;
+}
+
+.badge-inverse, .label-inverse {
+	background-color: $btnInverseBackground;
+}
+
+// MISC
+// --------------------------------------------------
+
+.well {
+	border: none;
+	@include border-radius(0);
+	@include box-shadow(none);
+}
+
+.hero-unit {
+	border: none;
+	@include border-radius(0);
+}
+
+.thumbnail {
+	border: none;
+	@include box-shadow(none);
+
+	img {
+		@include border-radius(4px);
+	}
+}
+
+.dropdown-menu .nav-header {
+	color: $white;
+	text-shadow: none;
+}
+
+.dropdown-menu li > a:hover,
+.dropdown-menu li > a:focus,
+.dropdown-submenu:hover > a {
+	background-image: none;
+}
+
+.progress {
+	background-color: darken($grayLighter, 10%);
+	background-image: none;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+	vertical-align: baseline;
+}
+
+.modal-header {
+	padding: 12px 15px 6px;
+	background-color: $green;
+}
+
+.modal-body,
+.modal-footer {
+	background-color: $headingsColor;
+	border: none;
+	@include box-shadow(none);
+
+	label {
+		color: $textColor;
+	}
+}
+
+.modal-footer {
+	@include border-radius(0 0 4px 4px);
+}
+
+.popover-title {
+	color: $white;
+}
+
+// MEDIA QUERIES
+// --------------------------------------------------

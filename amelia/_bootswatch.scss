@@ -1,0 +1,723 @@
+// Amelia 2.2.2
+// Bootswatch
+// -----------------------------------------------------
+
+
+// TYPOGRAPHY
+// -----------------------------------------------------
+
+@import url("//fonts.googleapis.com/css?family=Lobster|Cabin:400,700");
+
+h6 {
+	color: $textColor;
+}
+
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+	font-family: $baseFontFamily;
+	color: $textColor;
+}
+
+code, pre {
+	background-color: rgba(255, 255, 255, 0.3);
+	padding: 2px;
+}
+
+blockquote {
+
+	border-left-color: lighten(#147E88, 12%);
+
+	&.pull-right {
+		border-right-color: lighten(#147E88, 12%);
+	}
+
+	small {
+		color: rgba(255, 255, 255, 0.6);
+	}
+}
+
+.muted {
+	color: rgba(255, 255, 255, 0.5);
+}
+
+// SCAFFOLDING
+// -----------------------------------------------------
+
+body {
+	@include gradient-radial(lighten(#0F8790, 7%), #0F8790);
+}
+
+hr {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.page-header {
+	margin: 30px 0 15px;
+	border-bottom: 0px solid transparent;
+}
+
+// NAVBAR
+// -----------------------------------------------------
+
+.navbar {
+
+	.navbar-inner {
+		@include border-radius(0);
+	}
+
+	.brand {
+		padding: 15px 20px 14px;
+		font-family: $headingsFontFamily;
+		font-size: 24px;
+		font-weight: normal;
+	}
+
+	.nav > li > a {
+		padding-top: 17px;
+		padding-bottom: 14px;
+		text-shadow: none;
+	}
+
+	.nav > .active > a,
+	.nav > .active > a:hover,
+	.navbar .nav > .active > a:focus {
+		@include box-shadow(none);
+	}
+
+	.navbar-search {
+		margin-top: 10px;
+	}
+
+	.navbar-search .search-query {
+		@include border-radius(0);
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+
+	.navbar-text {
+		margin: 17px 15px 14px;
+		line-height: 20px;
+	}
+
+	.btn,
+	.btn-group {
+		padding: 4px;
+	}
+}
+
+.navbar-inverse {
+
+	.dropdown-menu li > a:hover,
+	.dropdown-menu li > a:focus,
+	.dropdown-submenu:hover > a {
+		background-image: none;
+		background-color: $yellow;
+	}
+}
+
+@media (max-width: $navbarCollapseWidth) {
+
+	.navbar .nav-collapse {
+
+		.nav li > a {
+
+			color: $textColor;
+			@include border-radius(0);
+
+			&:hover {
+				background-color: lighten($navbarBackground, 10%);
+			}
+		}
+
+		.dropdown-menu li > a:hover,
+		.dropdown-menu li > a:focus,
+		.dropdown-submenu:hover > a {
+			background-image: none;
+		}
+
+		.navbar-form,
+		.navbar-search {
+			@include box-shadow(none);
+			border: none;
+		}
+
+		.navbar-search .search-query {
+			border: 2px solid $textColor;
+		}
+
+		.nav-header {
+			color: rgba(255, 255, 255, 0.5);
+		}
+	}
+
+	.navbar-inverse .nav-collapse {
+
+		.nav li > a:hover,
+		.dropdown-menu a:hover {
+			background-color: lighten($navbarInverseBackground, 10%) !important;
+		}
+	}
+}
+
+div.subnav {
+
+	background-color: rgba(42, 99, 105, 0.9);
+	background-image: none;
+	border: 0px solid transparent;
+	@include border-radius(0);
+	@include box-shadow(none);
+
+	.nav > li.open > a {
+		border-color: transparent;
+		background-color: rgba(255, 255, 255, 0.4);
+	}
+
+	.nav > li > a {
+		color: $textColor;
+		border-color: transparent;
+	}
+
+	.nav > li:first-child > a,
+	.nav > li:first-child > a:hover {
+		@include border-radius(0);
+	}
+
+	.nav > .active > a {
+		background-color: transparent;
+		border-color: transparent;
+		color: $textColor;
+		@include box-shadow(none);
+	}
+
+	.nav > .active > a:hover,
+	.nav > li > a:hover,
+	.nav > .active > a,
+	.nav > .active > a:hover, {
+		border-right-color: transparent;
+		background-color: rgba(255, 255, 255, 0.4);
+		color: $textColor;
+	}
+
+	.nav > li:first-child > a:hover {
+		border-left-color: rgba(255, 255, 255, 0.4);
+		border-left-width: 1px;
+	}
+}
+
+div.subnav-fixed {
+	top: 50px;
+}
+
+// NAV
+// -----------------------------------------------------
+
+.nav-tabs li.open > .dropdown-toggle,
+.nav-pills li.open > .dropdown-toggle {
+	background-color: #8AD5DC;
+	color: $linkColor;
+	border-color: transparent;
+}
+
+.nav-tabs, .nav-pills {
+	border-color: transparent;
+
+	li > a {
+		border-color: transparent;
+		@include border-radius(0);
+		@include box-shadow(0);
+	}
+
+	li.active > a,
+	li.active > a:hover {
+		color: $textColor;
+	}
+
+	li.active > a,
+	li > a:hover,
+	li.active > a:hover {
+		background-color: #8AD5DC;
+		border-color: transparent;
+		text-shadow: none;
+	}
+}
+
+.nav-tabs, .nav-tabs > li > a {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.nav-tabs > li > a {
+	background-color: #3CB9C6;
+}
+
+.nav-tabs.nav-stacked {
+
+	li > a:first-child,
+	li > a:last-child {
+		@include border-radius(0);
+	}
+
+	li > a,
+	li > a:hover,
+	li.active > a,
+	li.active > a:hover {
+		border-color: transparent;
+	}
+}
+
+.nav-list {
+	.nav-header {
+		text-shadow: none;
+		color: $textColor;
+	}
+
+	li > a {
+		text-shadow: none;
+	}
+
+	li.active > a,
+	li > a:hover,
+	li.active > a:hover {
+		background-color: #8AD5DC;
+		text-shadow: none;
+	}
+
+	.divider {
+		background-color: rgba(255, 255, 255, 0.3);
+		border-bottom: none;
+	}
+}
+
+.breadcrumb, .pager > li > a {
+	border-color: transparent;
+	@include border-radius(0);
+	@include box-shadow(none);
+	text-shadow: none;
+}
+
+.breadcrumb {
+	background-color: #3CB9C6;
+	background-image: none;
+
+	li {
+		text-shadow: none;
+	}
+
+	.active {
+		color: $white;
+	}
+
+	.divider {
+		color: $linkColor;
+	}
+}
+
+.pagination {
+
+	ul  {
+		background-color: $paginationBackground;
+		background-image: none;
+		@include border-radius(0);
+	}
+
+	ul > li > a:hover {
+		background-color: rgba(255, 255, 255, 0.4);
+		color: $linkColor;
+	}
+
+	ul > li:first-child > a,
+	ul > li:last-child > a {
+		@include border-radius(0);
+	}
+
+	ul > .disabled > a,
+	ul > .disabled > a:hover,
+	ul > .disabled > span,
+	ul > .disabled > span:hover {
+		color: $textColor;
+	}
+
+	ul > .active > a,
+	ul > .active > a:hover,
+	ul > .active > span,
+	ul > .active > span:hover {
+		background-color: rgba(255, 255, 255, 0.4);
+		color: $textColor;
+	}
+}
+
+.pager {
+
+	li > a {
+		background-color: #3CB9C6;
+
+		&:hover {
+			background-color: #8AD5DC;
+		}
+	}
+
+	.disabled a,
+	.disabled a:hover {
+		background-color: #3CB9C6;
+		color: $white;
+	}
+}
+
+// BUTTONS
+// -----------------------------------------------------
+
+@mixin buttonBackgroundCustom($color) {
+
+  background-color: $color;
+  border-color: transparent;
+
+  &:hover, &:active, &.active, &.disabled, &[disabled] {
+    background-color: darken($color, 5%);
+	text-shadow: none;
+  }
+
+  &:active, &.active {
+    background-color: darken($color, 15%);
+	@include box-shadow(none);
+  }
+
+  // IE 7 + 8 can't handle box-shadow to show active, so we darken a bit ourselves
+  &:active,
+  &.active {
+    background-color: darken($color, 15%) e("\9");
+  }
+}
+
+.btn {
+ 	padding: 12px 16px;
+	@include border-radius(0);
+	background-image: none;
+	text-shadow: none;
+	@include box-shadow(none);
+	@include buttonBackgroundCustom($btnBackground)
+}
+
+.btn-group .btn:first-child {
+	margin-left: 0;
+	@include border-radius(0);
+}
+
+.btn-group .btn:last-child,
+.btn-group .dropdown-toggle {
+     @include border-radius(0);
+}
+
+.btn-group .dropdown-toggle,
+.btn-group.open .dropdown-toggle,
+.btn.open .dropdown-toggle {
+	@include box-shadow(none);
+}
+
+.btn-primary {
+  @include buttonBackgroundCustom($btnPrimaryBackground);
+}
+
+.btn-info {
+  @include buttonBackgroundCustom($btnInfoBackground);
+}
+
+.btn-success {
+  @include buttonBackgroundCustom($btnSuccessBackground);
+}
+
+.btn-warning {
+  @include buttonBackgroundCustom($btnWarningBackground);
+}
+
+.btn-danger {
+  @include buttonBackgroundCustom($btnDangerBackground);
+}
+
+.btn-inverse {
+  @include buttonBackgroundCustom($btnInverseBackground);
+}
+
+.btn-link {
+	@include buttonBackgroundCustom($btnPrimaryBackground);
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	margin-top: 2px;
+	margin-right: 8px;
+}
+
+.btn-small [class^="icon-"] {
+	margin-top: 1px;
+}
+
+.add-on [class^="icon-"] {
+	margin-left: 5px;
+}
+
+// TABLES
+// -----------------------------------------------------
+
+.table th, .table td,
+.table tbody + tbody {
+	border-top: 0px solid transparent;
+}
+
+.table-bordered {
+	@include border-radius(0);
+}
+
+.table tbody {
+
+	tr.success td {
+		background-color: $green;
+	}
+
+	tr.error td {
+		background-color: $red;
+	}
+
+	tr.info td {
+		background-color: $blue;
+	}
+}
+
+// FORMS
+// -----------------------------------------------------
+
+legend {
+	font-family: $headingsFontFamily;
+}
+
+legend, label, .help-block, .input-file {
+	color: $textColor;
+	border: 0px solid transparent;
+}
+
+input, textarea, .uneditable-input {
+	border: 0px solid transparent;
+	padding: 10px;
+}
+
+.uneditable-input {
+	padding-bottom: 30px;
+}
+
+select {
+	border: 0px solid transparent;
+}
+
+button {
+	margin-left: 12px;
+}
+
+input, textarea, .search-query, .uneditable-input,
+.input-append input, .input-append .uneditable-input,
+.input-prepend input, .input-prepend .uneditable-input {
+	border-color: transparent;
+	@include box-shadow(none);
+}
+
+.form-actions {
+	border-top: 0px solid transparent;
+}
+
+.control-group.warning > label,
+.control-group.warning .help-inline {
+	color: lighten($orange, 30%);
+}
+
+.control-group.error > label,
+.control-group.error .help-inline {
+	color: lighten($linkColor, 10%);
+}
+
+.control-group.success > label,
+.control-group.success .help-inline {
+	color: lighten($green, 20%);
+}
+
+.input-prepend .add-on,
+.input-append .add-on {
+	height: 20px;
+	padding-top: 4px;
+	background-color: $grayLighter;
+	border-color: transparent;
+	@include border-radius(0);
+	color: $gray;
+	text-shadow: none;
+}
+
+.input-append .btn,
+.input-prepend .btn {
+	padding: 4px 10px;
+}
+
+// ALERTS, LABELS, BADGES
+// -----------------------------------------------------
+
+.alert {
+
+	h1, h2, h3, h4, h5, h6 {
+		color: $textColor;
+	}
+}
+
+.alert, .label {
+	border-color: transparent;
+	@include border-radius(0);
+	@include box-shadow(none);
+	text-shadow: none;
+}
+
+.alert-heading {
+	color: $textColor;
+}
+
+.label, .label:hover {
+	background-color: $grayLighter;
+	text-shadow: none;
+	color: $grayDark;
+}
+
+.label-warning, .label-warning:hover, .alert {
+	background-color: $orange;
+	color: $textColor;
+}
+
+.label-important, .label-important:hover, .alert-error {
+	background-color: darken($yellow, 3%);
+	color: $textColor;
+}
+
+.label-success, .label-success:hover, .alert-success {
+	background-color: $green;
+	color: $textColor;
+}
+
+.label-info, .label-info:hover, .alert-info {
+	background-color: $purple;
+	color: $textColor;
+}
+
+// MISCELLANEOUS
+// -----------------------------------------------------
+
+.progress, .well, pre, code {
+	border-color: transparent;
+	@include border-radius(0);
+	@include box-shadow(none);
+	text-shadow: none;
+}
+
+.well {
+	background-image: none;
+}
+
+.hero-unit {
+	@include border-radius(0);
+}
+
+.thumbnail {
+	border: 0 solid transparent;
+	@include border-radius(0);
+	@include box-shadow(none);
+}
+
+.progress {
+
+	background-image: none;
+	background-color: #27666D;
+
+	.bar {
+
+		@include box-shadow(none);
+		background-image: none;
+		background-color: $yellow;
+	}
+
+	.bar-success {
+		background-color: $green;
+	}
+
+	.bar-warning {
+		background-color: $orange;
+	}
+
+	.bar-error {
+		background-color: $red;
+	}
+}
+
+.progress-danger .bar {
+	background-image: none;
+	background-color: #AD1D28;
+}
+
+.progress-danger.progress-striped .bar {
+	@include gradient-striped(#AD1D28);
+}
+
+.progress-success .bar {
+	background-image: none;
+	background-color: $green;
+}
+
+.progress-success.progress-striped .bar {
+	@include gradient-striped($green);
+}
+
+.progress-info .bar {
+	background-image: none;
+	background-color: $blue;
+}
+
+.progress-info.progress-striped .bar {
+	@include gradient-striped($blue);
+}
+
+.modal {
+	@include border-radius(0);
+}
+
+.modal-header {
+	background-color: $navbarBackground;
+	color: $white;
+}
+
+.modal-body {
+	color: $grayDark;
+
+	h1, h2, h3, h4, h5, h6,
+	legend {
+		color: $red;
+	}
+
+	label,
+	.input-file {
+		color: $grayDark;
+	}
+
+	.help-block,
+	.help-inline {
+		color: $grayLight;
+	}
+
+	textarea,
+	input,
+	.uneditable-input {
+		border: 1px solid $grayLight;
+	}
+}
+
+.popover {
+	
+	padding: 0;
+	@include border-radius(0);
+	color: $grayDark;
+
+	.popover-title {
+		@include border-radius(0);
+		color: $white;
+	}
+}
+
+// MEDIA QUERIES
+// -----------------------------------------------------

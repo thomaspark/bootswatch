@@ -1,0 +1,666 @@
+// Superhero 2.2.2
+// Bootswatch
+// -----------------------------------------------------
+
+
+// TYPOGRAPHY
+// --------------------------------------------------
+
+@import url("//fonts.googleapis.com/css?family=Oswald|Noticia+Text");
+
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, h6 {
+	font-family: $headingsFontFamily;
+	color: $orange;
+	text-shadow: -1px 1px 0 darken($orange, 30%);
+}
+
+h1, h2 {
+	text-shadow: -2px 2px 0 darken($orange, 30%);
+}
+
+h1 {
+	line-height: 55px;
+}
+
+code, pre {
+	background-color: lighten($blue, 8%);
+	border: none;
+	color: $textColor;
+}
+
+// SCAFFOLDING
+// --------------------------------------------------
+
+.page-header {
+	border-bottom: none;
+}
+
+blockquote {
+	border-left: 5px solid $blue;
+}
+
+blockquote.pull-right {
+	border-right: 5px solid $blue;
+}
+
+// NAVBAR
+// --------------------------------------------------
+
+.navbar {
+
+	.navbar-inner {
+		@include box-shadow(none);
+		background-image: none;
+	}
+
+	.brand {
+		padding: 25px 20px 15px;
+		font-family: $headingsFontFamily;
+		font-size: 30px;
+		text-shadow: -2px 2px 0 darken($orange, 30%);
+	}
+
+	.nav > li > a {
+		padding: 23px 20px 13px;
+		line-height: 30px;
+		font-family: $headingsFontFamily;
+		font-size: 22px;
+		text-shadow: -2px 2px 0 darken($orange, 30%);
+	}
+
+	.brand:hover,
+	.nav > li > a:hover,
+	.nav > li.active > a:hover,
+	.nav > li.dropdown.open > a,
+	.nav > li.dropdown.open > a:hover {
+		position: relative;
+		top: 1px;
+		left: -1px;
+		color: $orange;
+		text-shadow: -1px 1px 0 darken($orange, 30%);
+	}
+
+	.nav > .active > a,
+	.nav > .active > a:hover,
+	.nav > .active > a:focus {
+		@include box-shadow(none);
+	}
+
+	.navbar-text {
+		padding: 23px 20px 13px;
+		line-height: 30px;
+		font-family: $headingsFontFamily;
+		font-size: 22px;
+		text-shadow: -2px 2px 0 $gray;
+	}
+
+	.navbar-search {
+		margin-top: 24px;
+	}
+
+	.navbar-search .search-query {
+		font-family: $baseFontFamily;
+		font-size: $baseFontSize;
+		line-height: $baseLineHeight;
+		@include box-shadow(none);
+	}
+
+	&.navbar-inverse .navbar-search .search-query {
+		color: $blueDark;
+	}
+
+	.divider-vertical {
+		height: 70px;
+	}
+
+	.nav .dropdown-toggle .caret,
+	.nav .open.dropdown .caret {
+		margin-top: 14px;
+		border-top-color: $textColor;
+	}
+
+	.dropdown-menu::before {
+		border: none;
+	}
+
+	.dropdown-menu::after {
+		left: 20px;
+		border-left: 7px solid transparent;
+		border-right: 7px solid transparent;
+		border-bottom: 7px solid lighten($blue, 10%);
+	}
+
+	[class^="icon-"], [class*=" icon-"] {
+		vertical-align: 20%;
+	}
+
+	.btn-navbar {
+		background-color: $blue;
+		border-color: transparent;
+	}
+}
+
+@media (max-width: $navbarCollapseWidth) {
+
+	.navbar .nav-collapse {
+
+		@include border-radius(4px);
+
+		.nav li > a {
+			color: $orange;
+
+			&:hover {
+				background-color: lighten($blue, 10%) !important;
+				background-image: none;
+			}
+		}
+
+		.navbar-form,
+		.navbar-search {
+			border-top: none;
+			border-bottom: none;
+			@include box-shadow(none);
+		}
+
+		.nav-header {
+			color: $textColor;
+		}
+	}
+}
+
+div.subnav {
+	background-color: $blue;
+	background-image: none;
+	border: none;
+
+	.nav > li > a,
+	.nav > li.active > a {
+		border-left: none;
+		border-right: none;
+		color: $textColor;
+	}
+
+	.nav > li > a:hover,
+	.nav > li.active > a:hover {
+		background-color: lighten($blue, 10%);
+	}
+
+	.nav > li + li > a {
+		border-top: 0px solid transparent;
+	}
+
+	.nav > li:first-child > a,
+	.nav > li:first-child > a:hover,
+	.nav > li.active:first-child > a,
+	.nav > li.active:first-child > a:hover {
+		@include border-radius(4px 0 0 4px);
+	}
+
+	.nav > li.active > a,
+	.nav > li.active > a:hover {
+		color: $white;
+		background-color: $orange;
+		background-image: none;
+		@include box-shadow(none);
+	}
+
+	&.subnav-fixed {
+		top: 70px;
+		@include box-shadow(none);
+
+		.nav > li > a,
+		.nav > li.active > a,
+		.nav > li > a:hover,
+		.nav > li.active > a:hover {
+			border-color: transparent;
+			padding-left: 12px;
+			padding-right: 12px;
+			@include border-radius(0);
+		}
+
+		.nav > li > a:hover,
+		.nav > li.active > a:hover {
+			color: $white;
+		}
+	}
+
+	.nav > .active > a .caret,
+	.nav > .active > a:hover .caret {
+		border-top-color: $textColor;
+	}
+}
+
+// NAVIGATION
+// --------------------------------------------------
+
+.nav .nav-header {
+	color: $textColor;
+	text-shadow: none;
+}
+
+.nav-list {
+	padding: 0 15px;
+}
+
+.nav-list > li > a, .nav-list .nav-header {
+	text-shadow: none;
+	color: $textColor;
+}
+
+.nav-list .active > a, .nav-list .active > a:hover {
+	text-shadow: none;
+	color: $white;
+}
+
+.nav-list li > a:hover {
+	background-color: lighten($blue, 10%);
+}
+
+.nav-tabs, .nav-tabs.nav-stacked > li > a {
+	border-color: transparent;
+}
+
+.nav-tabs {
+	> li > a {
+		background-color: $blue;
+		color: $textColor;
+	}
+
+	li.active > a,
+	li.active > a:hover,
+	&.nav-stacked > li.active > a:hover {
+		color: $white;
+		background-color: $orange;
+		border-color: transparent;
+	}
+
+	li > a:hover,
+	&.nav-stacked > li > a:hover {
+		background-color: lighten($blue, 10%);
+		border-color: transparent;
+	}
+}
+
+.nav-pills > li > a {
+	color: $textColor;
+	background-color: $blue;
+}
+
+.nav-pills > li:hover > a {
+	background-color: lighten($blue, 10%);
+	border-color: transparent;
+}
+
+.nav-tabs .open .dropdown-toggle,
+.nav-pills .open .dropdown-toggle,
+.nav > .open.active > a:hover {
+	background-color: lighten($blue, 10%);
+	border-color: transparent;
+}
+
+.nav-pills .dropdown .caret,
+.nav-pills .dropdown:hover .caret {
+	border-top-color: $textColor;
+}
+
+.dropdown.open .dropdown-menu > li > a:hover,
+.dropdown.open .dropdown-menu > li.active > a:hover {
+	background-color: $orange;
+	color: $white;
+}
+
+.tabbable .nav-tabs,
+.tabbable .nav-tabs > li.active > a,
+.tabbable .nav-tabs > li > a:hover,
+.tabbable .nav-tabs > li.active > a:hover {
+	border-color: transparent;
+}
+
+.breadcrumb {
+	background-color: $blue;
+	background-image: none;
+	border: none;
+	@include box-shadow(none);
+
+	li {
+		text-shadow: none;
+	}
+
+	.divider {
+		color: $textColor;
+	}
+}
+
+.pagination {
+
+	ul {
+		background-image: none;
+		border-color: transparent;
+	}
+
+	ul > li > a,
+	ul > li > span {
+		border: none;
+		color: $textColor;
+	}
+
+	ul > li > a:hover {
+		background: lighten($blue, 10%);
+	}
+
+	ul > .active > a,
+	ul > .active > a:hover,
+	ul > .active > span,
+	ul > .active > span:hover {
+		background-color: $orange;
+		color: $white;
+	}
+
+	ul > .disabled > a,
+	ul > .disabled > a:hover,
+	ul > .disabled > span,
+	ul > .disabled > span:hover {
+		background: darken($blue, 5%);
+	}
+}
+
+.pager {
+
+	a {
+		color: $textColor;
+		background-color: $blue;
+		border-color: transparent;
+
+		&:hover {
+			background: lighten($blue, 10%);
+		}
+	}
+
+	.disabled a,
+	.disabled a:hover {
+		background-color: $blue;
+	}
+}
+
+// BUTTONS
+// --------------------------------------------------
+
+.btn,
+.btn:hover {
+	text-shadow: none;
+	background-image: none;
+	@include box-shadow(-2px 2px 0 rgba(0, 0, 0, 0.2));
+	border: none;
+}
+
+.btn-warning {
+	background-color: $yellow;
+}
+
+.btn-primary, .btn-primary:hover {
+	@include box-shadow(-2px 2px 0 darken($btnPrimaryBackground, 30%));
+}
+
+.btn-warning, .btn-warning:hover {
+	@include box-shadow(-2px 2px 0 darken($yellow, 30%));
+}
+
+.btn-danger, .btn-danger:hover {
+	@include box-shadow(-2px 2px 0 darken(#ee5f5b, 30%));
+}
+
+.btn-success, .btn-success:hover {
+	@include box-shadow(-2px 2px 0 darken(#62c462, 30%));
+}
+
+.btn-info, .btn-info:hover {
+	@include box-shadow(-2px 2px 0 darken(#5bc0de, 40%));
+}
+
+.btn-inverse, .btn-inverse:hover {
+	@include box-shadow(-2px 2px 0 darken(#454545, 20%));
+}
+
+.btn.dropdown-toggle, .btn.dropdown-toggle:hover {
+	@include box-shadow(0 2px 0 darken($white, 80%));
+}
+
+.btn-primary.dropdown-toggle, .btn-primary.dropdown-toggle:hover {
+	@include box-shadow(0 2px 0 darken($btnPrimaryBackground, 30%));
+}
+
+.btn-warning.dropdown-toggle, .btn-warning.dropdown-toggle:hover {
+	@include box-shadow(0 2px 0 darken($yellow, 30%));
+}
+
+.btn-danger.dropdown-toggle, .btn-danger.dropdown-toggle:hover {
+	@include box-shadow(0 2px 0 darken(#ee5f5b, 30%));
+}
+
+.btn-success.dropdown-toggle, .btn-success.dropdown-toggle:hover {
+	@include box-shadow(0 2px 0 darken(#62c462, 30%));
+}
+
+.btn-info.dropdown-toggle, .btn-info.dropdown-toggle:hover {
+	@include box-shadow(0 2px 0 darken(#5bc0de, 40%));
+}
+
+.btn-inverse.dropdown-toggle, .btn-inverse.dropdown-toggle:hover {
+	@include box-shadow(0 2px 0 darken(#454545, 20%));
+}
+
+.btn.active,
+.btn:active {
+	position: relative;
+	top: 1px;
+	left: -1px;
+	@include box-shadow(-1px 1px 0 darken($white, 80%))
+}
+
+.btn.disabled,
+.btn.disabled.active,
+.btn.disabled:active,
+.btn[disabled] {
+	@include box-shadow(none);
+	text-shadow: none;
+	top: 0;
+	left: 0;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	vertical-align: -13%;
+}
+
+// TABLES
+// -----------------------------------------------------
+
+.table,
+.table-striped tbody > tr > td:first-child,
+.table-striped tbody > tr > td:last-child, {
+	@include border-radius(4px);
+}
+
+// FORMS
+// --------------------------------------------------
+
+input, button, select, textarea {
+	font-family: 'Noticia Text', serif;
+}
+
+legend {
+	border-bottom: none;
+	font-family: $headingsFontFamily;
+	color: $orange;
+	text-shadow: -2px 2px 0 darken($orange, 30%);
+}
+
+label {
+	color: $textColor;
+	line-height: 15px;
+}
+
+.help-block {
+	color: $textColor;
+	opacity: 0.6;
+}
+
+.form-actions {
+	border-top: none;
+}
+
+.control-group.warning {
+  @include formFieldState(lighten($warningText, 10%), lighten($warningText, 10%), $warningBackground);
+}
+
+.control-group.error {
+  @include formFieldState(lighten($errorText, 10%), lighten($errorText, 10%), $errorBackground);
+}
+
+.control-group.success {
+  @include formFieldState(lighten($successText, 10%), lighten($successText, 10%), $successBackground);
+}
+
+.input-append .add-on,
+.input-prepend .add-on,
+.input-append .btn,
+.input-prepend .btn {
+	color: $bodyBackground;
+}
+
+// DROPDOWNS
+// --------------------------------------------------
+
+.dropdown .caret {
+	margin-top: 14px;
+	opacity: 1;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid lighten($blue, 10%);
+}
+
+// ALERTS, LABELS, BADGES
+// --------------------------------------------------
+
+.label {
+	background-color: $blue;
+  	color: $textColor;
+}
+
+.label-important {
+	background-color: $errorText;
+}
+
+.label-warning {
+	background-color: $orange;
+}
+
+.label-success {
+	background-color: $successText;
+}
+
+.label-info {
+	background-color: $infoText;
+}
+
+.alert {
+  background-color: $blue;
+  border: none;
+  color: $textColor;
+  text-shadow: none;
+
+  a {
+  	color: lighten($orange, 12%);
+  }
+}
+
+.alert .alert-heading {
+	color: $orange;
+}
+
+.alert-success {
+  background-color: $successText;
+}
+
+.alert-danger,
+.alert-error {
+  background-color: $errorText;
+}
+
+.alert-info {
+  background-color: $infoText;
+}
+
+// MISC
+// --------------------------------------------------
+
+.well, .hero-unit {
+	border: none;
+	@include box-shadow(none);
+}
+
+.hero-unit h1 {
+	color: $orange;
+	line-height: 2em;
+}
+
+.progress {
+	background-color: darken($blueDark, 5%);
+	background-image: none;
+	@include box-shadow(none);
+
+	.bar {
+		@include box-shadow(none);
+	}
+}
+
+.thumbnail {
+	border: none;
+	background: $blue;
+	@include border-radius(3px);
+}
+
+.modal {
+	background-color: transparent;
+}
+
+.modal-header,
+.modal-body,
+.modal-footer {
+	@include box-shadow(none);
+	background-color: $bodyBackground;
+	border: none;
+}
+
+.modal-header {
+	@include border-radius(4px 4px 0 0);
+}
+
+.modal-footer {
+	@include border-radius(0 0 4px 4px);
+}
+
+// MEDIA QUERIES
+// --------------------------------------------------
+
+@media (max-width: 768px) {
+
+	div.subnav {
+
+		.nav > li {
+
+			&:first-child > a,
+			&:first-child > a:hover,
+			&.active:first-child > a,
+			&.active:first-child > a:hover {
+				@include border-radius(4px 4px 0 0);
+			}
+
+			&:last-child > a,
+			&:last-child > a:hover,
+			&.active:last-child > a,
+			&.active:last-child > a:hover {
+				@include border-radius(0 0 4px 4px);
+			}
+		}
+	}
+}
