@@ -499,9 +499,22 @@ input, textarea, select {
 	.border-radius(4px);
 }
 
+.control-group {
+
+	&.warning,
+	&.error,
+	&.success {
+
+		.control-label {
+			color: @textColor;
+		}
+	}
+}
+
 .control-group.error {
 
-	label, .help-block, .help-inline {
+	.help-block,
+	.help-inline {
 		color: @red;
 	}
 
@@ -513,7 +526,8 @@ input, textarea, select {
 
 .control-group.success {
 
-	label, .help-block, .help-inline {
+	.help-block,
+	.help-inline {
 		color: @green;
 	}
 
@@ -525,7 +539,8 @@ input, textarea, select {
 
 .control-group.warning {
 
-	label, .help-block, .help-inline {
+	.help-block,
+	.help-inline {
 		color: @orange;
 	}
 

@@ -5503,7 +5503,11 @@ select {
   -moz-border-radius: 4px;
   border-radius: 4px;
 }
-.control-group.error label,
+.control-group.warning .control-label,
+.control-group.error .control-label,
+.control-group.success .control-label {
+  color: #555555;
+}
 .control-group.error .help-block,
 .control-group.error .help-inline {
   color: #d14432;
@@ -5514,7 +5518,6 @@ select {
   border: 1px solid #d14432;
   color: #555555;
 }
-.control-group.success label,
 .control-group.success .help-block,
 .control-group.success .help-inline {
   color: #015b4e;
@@ -5525,7 +5528,6 @@ select {
   border: 1px solid #015b4e;
   color: #555555;
 }
-.control-group.warning label,
 .control-group.warning .help-block,
 .control-group.warning .help-inline {
   color: #f26522;
