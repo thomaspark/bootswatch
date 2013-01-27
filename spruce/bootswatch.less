@@ -189,7 +189,6 @@ div.subnav {
 	background-color: @green;
 	background-image: none;
 	border-color: transparent;
-	.border-radius(0);
 
 	.nav > li > a {
 		padding: 12px 12px 10px;
@@ -332,7 +331,6 @@ div.subnav {
 	background-image: none;
 	.box-shadow(none);
 	border-color: transparent;
-	.border-radius(0);
 
 	li {
 		color: @white;
@@ -364,7 +362,6 @@ div.subnav {
 		background-image: none;
 		.box-shadow(none);
 		border-color: transparent;
-		.border-radius(0);
 	}
 
 
@@ -419,7 +416,6 @@ div.subnav {
 // --------------------------------------------------
 
 .btn {
-	.border-radius(0);
 	font-family: @headingsFontFamily;
 	font-weight: @headingsFontWeight;
     text-shadow: none;
@@ -435,25 +431,6 @@ div.subnav {
 
 // TABLES
 // --------------------------------------------------
-
-.table,
-.table.table-bordered,
-.table.table-striped {
-	.border-radius(0);
-}
-
-.table-bordered thead:first-child tr:first-child th:first-child,
-.table-bordered tbody:first-child tr:first-child td:first-child,
-.table-bordered thead:first-child tr:first-child th:last-child,
-.table-bordered tbody:first-child tr:first-child td:last-child,
-.table-bordered tbody:last-child tr:last-child td:first-child, {
-	.border-radius(0);
-}
-
-.table thead tr th:first-child,
-.table tbody tr td:first-child {
-	// border-left: none;
-}
 
 .table th,
 .table-striped tbody tr:nth-child(odd) th {
@@ -500,7 +477,6 @@ input, textarea, select {
 
 .form-actions {
 	border-top: none;
-	.border-radius(4px);
 }
 
 .control-group {
@@ -604,22 +580,16 @@ input, textarea, select {
 
 .well {
 	border: none;
-	.border-radius(0);
 	.box-shadow(none);
 }
 
 .hero-unit {
 	border: none;
-	.border-radius(0);
 }
 
 .thumbnail {
 	border: none;
 	.box-shadow(none);
-
-	img {
-		.border-radius(4px);
-	}
 }
 
 .dropdown-menu .nav-header {
@@ -659,10 +629,6 @@ input, textarea, select {
 		label {
 			color: @textColor;
 		}
-	}
-
-	&-footer {
-		.border-radius(0 0 4px 4px);
 	}
 }
 
