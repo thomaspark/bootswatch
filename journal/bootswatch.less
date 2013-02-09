@@ -171,9 +171,9 @@ hr {
 
 div.subnav {
 
+	margin: 0 1px;
 	height: 54px;
-	background-color: @bodyBackground;
-	background-image: none;
+	background: @bodyBackground none;
 	.box-shadow(none);
 	border: 2px solid @grayLighter;
 	border-left: none;
@@ -181,7 +181,8 @@ div.subnav {
 	.border-radius(0);
 
 	&.subnav-fixed {
-		top: @navbarHeight;
+		top: @navbarHeight + 1;
+		margin: 0;
 	}
 
 	.nav > li > a,

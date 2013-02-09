@@ -169,52 +169,39 @@ blockquote.pull-right {
 }
 
 div.subnav {
-	background-color: @blue;
-	background-image: none;
+	margin: 0 1px;
+	background: @blue none;
 	border: none;
 
 	.nav > li > a,
 	.nav > li.active > a {
-		border-left: none;
-		border-right: none;
+		border-color: transparent;
 		color: @textColor;
 	}
 
 	.nav > li > a:hover,
 	.nav > li.active > a:hover {
 		background-color: lighten(@blue, 10%);
-	}
-
-	.nav > li + li > a {
-		border-top: 0px solid transparent;
-	}
-
-	.nav > li:first-child > a,
-	.nav > li:first-child > a:hover,
-	.nav > li.active:first-child > a,
-	.nav > li.active:first-child > a:hover {
-		.border-radius(4px 0 0 4px);
+		border-color: transparent;
 	}
 
 	.nav > li.active > a,
 	.nav > li.active > a:hover {
-		color: @white;
-		background-color: @orange;
-		background-image: none;
+		background: @orange none;
 		.box-shadow(none);
+		color: @white;
 	}
 
 	&.subnav-fixed {
-		top: 70px;
+		top: @navbarHeight + 1;
+		margin: 0;
 		.box-shadow(none);
 
 		.nav > li > a,
-		.nav > li.active > a,
 		.nav > li > a:hover,
+		.nav > li.active > a,
 		.nav > li.active > a:hover {
 			border-color: transparent;
-			padding-left: 12px;
-			padding-right: 12px;
 			.border-radius(0);
 		}
 

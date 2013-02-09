@@ -160,16 +160,11 @@ hr {
 
 div.subnav {
 
-	background-color: rgba(42, 99, 105, 0.9);
-	background-image: none;
-	border: 0px solid transparent;
+	margin: 0 1px;
+	background: rgba(42, 99, 105, 0.9) none;
+	border: none;
 	.border-radius(0);
 	.box-shadow(none);
-
-	.nav > li.open > a {
-		border-color: transparent;
-		background-color: rgba(255, 255, 255, 0.4);
-	}
 
 	.nav > li > a {
 		color: @textColor;
@@ -182,28 +177,27 @@ div.subnav {
 	}
 
 	.nav > .active > a {
-		background-color: transparent;
+		background-color: rgba(255, 255, 255, 0.4);
 		border-color: transparent;
 		color: @textColor;
 		.box-shadow(none);
 	}
 
-	.nav > .active > a:hover,
 	.nav > li > a:hover,
-	.nav > .active > a,
 	.nav > .active > a:hover, {
 		border-right-color: transparent;
 		background-color: rgba(255, 255, 255, 0.4);
 		color: @textColor;
 	}
 
-	.nav > li:first-child > a:hover {
-		border-left-color: rgba(255, 255, 255, 0.4);
-		border-left-width: 1px;
+	.nav > li.open > a {
+		border-color: transparent;
+		background-color: rgba(255, 255, 255, 0.4);
 	}
 
 	&-fixed {
-		top: 50px;
+		top: @navbarHeight + 1;
+		margin: 0;
 	}
 }
 

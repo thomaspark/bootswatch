@@ -165,15 +165,12 @@ hr {
 }
 
 div.subnav {
+
+	margin: 0 1px;
 	background-color: @grayDarker;
 	background-image: none;
 	border: none;
 	border-bottom: 1px solid @grayDark;
-
-
-	&.subnav-fixed {
-		top: @navbarHeight;
-	}
 
 	.nav > li > a,
 	.nav > li:first-child > a,
@@ -197,6 +194,14 @@ div.subnav {
 
 	.nav li.nav-header {
 		text-shadow: none;
+	}
+
+
+
+
+	&-fixed {
+		top: @navbarHeight;
+		margin: 0;
 	}
 }
 

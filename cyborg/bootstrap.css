@@ -5262,13 +5262,11 @@ hr {
   }
 }
 div.subnav {
+  margin: 0 1px;
   background-color: #020202;
   background-image: none;
   border: none;
   border-bottom: 1px solid #222222;
-}
-div.subnav.subnav-fixed {
-  top: 50px;
 }
 div.subnav .nav > li > a,
 div.subnav .nav > li:first-child > a,
@@ -5290,6 +5288,10 @@ div.subnav .nav > li:first-child > a:hover {
 }
 div.subnav .nav li.nav-header {
   text-shadow: none;
+}
+div.subnav-fixed {
+  top: 50px;
+  margin: 0;
 }
 .nav-tabs {
   border-bottom: 1px solid #222222;

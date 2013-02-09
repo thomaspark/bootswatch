@@ -126,8 +126,8 @@ a.text-success:hover { color: darken(@green, 10%); }
 
 div.subnav {
 
-	background-color: @grayLight;
-	background-image: none;
+	margin: 0 1px;
+	background: @grayLight none;
 	.box-shadow(none);
 	border: none;
 	.border-radius(0);
@@ -145,12 +145,12 @@ div.subnav {
 		border-color: transparent;
 		background-color: @black;
 		color: @white;
-		// border-left-width: 2px;
 		.box-shadow(none);
 	}
 
 	&-fixed {
-		top: @navbarHeight;
+		top: @navbarHeight + 1;
+		margin: 0;
 	}
 }
 
@@ -163,7 +163,6 @@ div.subnav {
 	& > li.dropdown.open.active > a:hover {
 		color: @blue;
 	}
-
 }
 
 .nav-tabs {

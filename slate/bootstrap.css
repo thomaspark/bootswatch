@@ -5253,6 +5253,7 @@ legend,
   }
 }
 div.subnav {
+  margin: 0 1px;
   background-color: #3a3f44;
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#52575c), color-stop(70%, #3a3f44), to(#3a3f44));
   background-image: -webkit-linear-gradient(#52575c, #3a3f44 70%, #3a3f44);
@@ -5300,10 +5301,6 @@ div.subnav .nav > li:first-child > a,
 div.subnav .nav > li:first-child > a:hover {
   border-left: 1px solid transparent;
 }
-div.subnav.subnav-fixed .nav > li.active:first-child > a,
-div.subnav.subnav-fixed .nav > li:first-child > a:hover {
-  border-left: 1px solid #2e3134;
-}
 div.subnav .nav > li.active:last-child > a,
 div.subnav .nav > li:last-child > a:hover {
   border-right: 1px solid #2e3134;
@@ -5313,9 +5310,15 @@ div.subnav .open .dropdown-toggle {
   border-left: 1px solid #52575c;
 }
 div.subnav.subnav-fixed {
+  top: 40px;
+  margin: 0;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
+}
+div.subnav.subnav-fixed .nav > li.active:first-child > a,
+div.subnav.subnav-fixed .nav > li:first-child > a:hover {
+  border-left: 1px solid #2e3134;
 }
 .nav .nav-header {
   text-shadow: none;

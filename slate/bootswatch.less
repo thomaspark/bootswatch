@@ -144,6 +144,7 @@ hr, legend, .page-header {
 
 div.subnav {
 
+	margin: 0 1px;
 	#gradient > .vertical-three-colors(@gray, @grayDark, 70%, @grayDark);
 	border: 1px solid transparent;
 	.box-shadow('0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1)');
@@ -176,11 +177,6 @@ div.subnav {
 		border-left: 1px solid transparent;
 	}
 
-	&.subnav-fixed .nav > li.active:first-child > a,
-	&.subnav-fixed .nav > li:first-child > a:hover {
-		border-left: 1px solid darken(@gray, 15%);
-	}
-
 	.nav > li.active:last-child > a,
 	.nav > li:last-child > a:hover {
 		border-right: 1px solid darken(@gray, 15%);
@@ -192,7 +188,14 @@ div.subnav {
 	}
 
 	&.subnav-fixed {
+		top: @navbarHeight;
+		margin: 0;
 		.box-shadow(none);
+
+		.nav > li.active:first-child > a,
+		.nav > li:first-child > a:hover {
+			border-left: 1px solid darken(@gray, 15%);
+		}
 	}
 }
 
