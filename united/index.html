@@ -33,7 +33,7 @@
 
   </head>
 
-  <body class="preview" data-spy="scroll" data-target=".subnav" data-offset="80">
+  <body class="preview" id="top" data-spy="scroll" data-target=".subnav" data-offset="80">
     <script src="../js/bsa.js"></script>
 
 
@@ -51,7 +51,7 @@
        <div class="nav-collapse" id="main-menu">
         <ul class="nav" id="main-menu-left">
           <li><a onclick="pageTracker._link(this.href); return false;" href="http://news.bootswatch.com">News</a></li>
-          <li><a id="swatch-link" href="/#gallery">Gallery</a></li>
+          <li><a id="swatch-link" href="../#gallery">Gallery</a></li>
           <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Preview <b class="caret"></b></a>
             <ul class="dropdown-menu" id="swatch-menu">
@@ -865,7 +865,7 @@
       <hr>
 
       <footer id="footer">
-        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p class="pull-right"><a href="#top">Back to top</a></p>
         <div class="links">
           <a href="http://news.bootswatch.com" onclick="pageTracker._link(this.href); return false;">Blog</a>
           <a href="http://feeds.feedburner.com/bootswatch">RSS</a>
@@ -888,9 +888,8 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/application.js"></script>
     <script src="../js/bootswatch.js"></script>
 
 
