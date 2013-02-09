@@ -5,10 +5,10 @@
 OUTPUT_PATH = swatch
 
 bootswatch:
-	lessc swatchmaker.less > ${OUTPUT_PATH}/bootstrap.css
-	lessc --compress  swatchmaker.less > ${OUTPUT_PATH}/bootstrap.min.css
-	lessc swatchmaker-responsive.less > ${OUTPUT_PATH}/bootstrap-responsive.css
-	lessc --compress  swatchmaker-responsive.less > ${OUTPUT_PATH}/bootstrap-responsive.min.css
+	recess --compile swatchmaker.less > ${OUTPUT_PATH}/bootstrap.css
+	recess --compress swatchmaker.less > ${OUTPUT_PATH}/bootstrap.min.css
+	recess --compile swatchmaker-responsive.less > ${OUTPUT_PATH}/bootstrap-responsive.css
+	recess --compress swatchmaker-responsive.less > ${OUTPUT_PATH}/bootstrap-responsive.min.css
 
 bootstrap:
 	-test -d bootstrap && rm -r bootstrap
