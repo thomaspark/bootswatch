@@ -77,39 +77,36 @@
 		</div>
 	</div>
 
-	<div class="container">
+	<div class="hero-unit">
+		<h1>Bootswatch</h1>
+		<p id="tagline">&nbsp;</p>
 
-		<div class="row">
-			<div class="span12">
-				<div class="hero-unit">
-					<h1>Bootswatch</h1>
-					<p id="tagline">&nbsp;</p>
+		<div id="social">
+			<span>
+				<iframe id="gh-fork" src="http://ghbtns.com/github-btn.html?user=thomaspark&repo=bootswatch&type=fork" allowtransparency="true" frameborder="0" scrolling="0" width="53px" height="20px"></iframe>
+				<iframe id="gh-star" src="http://ghbtns.com/github-btn.html?user=thomaspark&repo=bootswatch&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110px" height="20px"></iframe>
+			</span>
+			<span>
+				<a href="https://twitter.com/thomashpark" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @thomashpark</a>
+				<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://bootswatch.com" data-via="thomashpark">Tweet</a>
+			</span>
+			<span>
+				<a class="btn rss-button" href="http://feeds.feedburner.com/bootswatch"><i class="icon-rss"></i><span>RSS</span></a>
+			</span>
+		</div>
 
-					<div id="social">
-						<span>
-							<iframe id="gh-fork" src="http://ghbtns.com/github-btn.html?user=thomaspark&repo=bootswatch&type=fork" allowtransparency="true" frameborder="0" scrolling="0" width="53px" height="20px"></iframe>
-							<iframe id="gh-star" src="http://ghbtns.com/github-btn.html?user=thomaspark&repo=bootswatch&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110px" height="20px"></iframe>
-						</span>
-						<span>
-							<a href="https://twitter.com/thomashpark" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @thomashpark</a>
-							<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://bootswatch.com" data-via="thomashpark">Tweet</a>
-						</span>
-						<span>
-							<a class="btn rss-button" href="http://feeds.feedburner.com/bootswatch"><i class="icon-rss"></i><span>RSS</span></a>
-						</span>
+
+		<div class="container">
+			<div class="row">
+				<div class="span12">
+					<div id="ticker">
 					</div>
 				</div>
-
 			</div>
 		</div>
+	</div>
 
-
-		<div class="row">
-			<div class="span12">
-				<div class="" id="ticker">
-				</div>
-			</div>
-		</div>
+	<div class="container">
 
 
 		<div class="row about">
@@ -147,18 +144,11 @@
 
 		<div class="row">
 			<div class="span6 offset3">
-				<h3>Sponsor</h1>
 				<div class="thumbnail"><div id="bsap_1277971" class="bsarocks bsap_c466df00a3cd5ee8568b5c4983b6bb19"></div></div>
 			</div>
 		</div>
 
-		<div class="row">
-			<div class="span12">
-				<h3 id="gallery">Gallery</h3>
-			</div>
-		</div>
-
-		<div class="row">
+		<div class="row" id="gallery">
 
 			<div class="span4">
 				<div class="thumbnail">
@@ -526,7 +516,7 @@
 		$('#tagline').html(taglines[line]);
 
 		parseRSS('http://feeds.feedburner.com/bootswatch', function(d){
-			var h ='<strong>Recent updates:</strong> ';
+			var h ='<strong>Recent news:</strong> ';
 			for (var i = 0; i < 3; i++){
 				h = h + '<a href="' + d.entries[i].link + '" onclick="pageTracker._link(this.href); return false;">' + d.entries[i].title + '...</a>&nbsp;&nbsp;';
 			}
