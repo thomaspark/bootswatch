@@ -28,7 +28,7 @@ $(document).ready(function() {
   var locationPath = filterPath(location.pathname);
   var scrollElem = scrollableElement('html', 'body');
  
-  $('a[href*=#]').each(function() {
+  $('a[href^=#]').each(function() {
     var thisPath = filterPath(this.pathname) || locationPath;
     if (  locationPath == thisPath
     && (location.hostname == this.hostname || !this.hostname)
