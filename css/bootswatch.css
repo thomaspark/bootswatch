@@ -1,8 +1,3 @@
-body {
-	padding-top: 100px;
-	padding-bottom: 20px;
-}
-
 section {
 	margin-top: 60px;
 	padding-top: 100px;
@@ -229,7 +224,6 @@ body .one .bsa_it_p {
 	}
 }
 
-/* Landscape phone to portrait tablet */
 @media (min-width: 481px) and (max-width: 767px) {
 
 	.hero-unit {
@@ -244,8 +238,9 @@ body .one .bsa_it_p {
 
 @media (max-width: 767px) {
 
-	.index {
-		padding-top: 0;
+
+	section {
+		padding-top: 20px;
 	}
 
 	.bsa {
@@ -255,16 +250,16 @@ body .one .bsa_it_p {
 
 @media (max-width: 979px) and (min-width: 768px) {
 
-	.index {
-		padding-top: 0;
-	}
-
-	.navbar-fixed-top {
+	.index .navbar {
 		margin-bottom: 0;
 	}
 
 	.hero-unit {
 		border-radius: 0;
+	}
+
+	section {
+		padding-top: 20px;
 	}
 
 	#gallery .btn {
@@ -277,6 +272,10 @@ body .one .bsa_it_p {
 
 	.index {
 		padding-top: 40px;
+	}
+
+	.preview {
+		padding-top: 100px;
 	}
 }
 
