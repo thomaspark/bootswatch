@@ -565,6 +565,7 @@
 		!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
 	</script>
 	<script type="text/javascript">
+
 		var taglines = [
 			'Free themes for <a target="_blank" href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>',
 			'Add color to your <a target="_blank" href="http://twitter.github.com/bootstrap/">Bootstrap</a> site without touching a color picker',
@@ -581,6 +582,17 @@
 			}
 			document.getElementById('ticker').innerHTML = h;
 		})
+
+		function parseRSS(url, callback) {
+		  $.ajax({
+		    url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent(url),
+		    dataType: 'json',
+		    success: function(data) {
+		      callback(data.responseData.feed);
+		    }
+		  });
+		}
+		
 	</script>
 
 </body>
