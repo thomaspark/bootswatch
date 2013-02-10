@@ -5,14 +5,6 @@ section {
 
 /* index */
 
-.navbar a > i {
-	opacity: 0.5;
-}
-
-.navbar a:hover > i {
-	opacity: 1;
-}
-
 .tooltip-inner {
 	max-width: 500px;
 }
@@ -57,12 +49,6 @@ section {
 	padding: 2px 5px 2px 4px;
 }
 
-.icon-rss {
-	background: url(../img/rss-icons.png) no-repeat 0 0;
-	opacity: .65;
-	width: 16px;
-}
-
 .index h3 {
 	text-align: center;
 	font-size: 20px;
@@ -85,14 +71,13 @@ section {
 }
 
 .about h3 {
-	margin: 0 0 0 35px;
+	margin: 0;
 	text-align: left;
 }
 
-.about img {
-	float: left;
-	margin-top: 5px;
-	opacity: 0.7;
+.about i {
+	margin-right: 8px;
+	font-size: 1.3em;
 }
 
 #gallery {
@@ -211,7 +196,7 @@ body .one .bsa_it_p {
 	}
 
 	.about h3 {
-		margin-top: 20px;
+		margin-top: 30px;
 	}
 
 	.about p {
