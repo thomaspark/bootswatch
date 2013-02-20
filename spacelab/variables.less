@@ -13,7 +13,7 @@
 @grayDarker:            #2D2D2D;
 @grayDark:              #434848;
 @gray:                  #666;
-@grayLight:             #bbb;
+@grayLight:             #ccc;
 @grayLighter:           #eee;
 @white:                 #fff;
 
@@ -121,8 +121,8 @@
 // -------------------------
 @dropdownBackground:            @white;
 @dropdownBorder:                rgba(0,0,0,.2);
-@dropdownDividerTop:            #e5e5e5;
-@dropdownDividerBottom:         @white;
+@dropdownDividerTop:            rgba(0, 0, 0, 0.1);
+@dropdownDividerBottom:         rgba(255, 255, 255, 0.5);
 
 @dropdownLinkColor:             @textColor;
 @dropdownLinkColorHover:        @white;
@@ -182,13 +182,13 @@
 
 @navbarHeight:                    40px;
 @navbarBackgroundHighlight:       @grayLighter;
-@navbarBackground:                lighten(@grayLight, 5%);
+@navbarBackground:                darken(@grayLighter, 5%);
 @navbarBorder:                    @grayLight;
 
 @navbarText:                      @textColor;
 @navbarLinkColor:                 @textColor;
-@navbarLinkColorHover:            @black;
-@navbarLinkColorActive:           @black;
+@navbarLinkColorHover:            @linkColor;
+@navbarLinkColorActive:           @linkColor;
 @navbarLinkBackgroundHover:       transparent;
 @navbarLinkBackgroundActive:      transparent;
 
@@ -196,11 +196,11 @@
 
 // Inverted navbar
 @navbarInverseBackground:                #6C737E;
-@navbarInverseBackgroundHighlight:       lighten(@navbarInverseBackground, 25%);
-@navbarInverseBorder:                    darken(@navbarInverseBackground, 5%);
+@navbarInverseBackgroundHighlight:       lighten(@navbarInverseBackground, 10%);
+@navbarInverseBorder:                    darken(@navbarInverseBackground, 3%);
 
-@navbarInverseText:                      @grayLighter;
-@navbarInverseLinkColor:                 @grayLighter;
+@navbarInverseText:                      @grayLight;
+@navbarInverseLinkColor:                 @grayLight;
 @navbarInverseLinkColorHover:            @white;
 @navbarInverseLinkColorActive:           @white;
 @navbarInverseLinkBackgroundHover:       transparent;

@@ -16,22 +16,25 @@
 
 .navbar {
 
-	.navbar-inner {
-		.box-shadow(0 1px 0 rgba(255,255,255,0.4)~", "0 1px 0 rgba(0,0,0,0.8));
-	}
-
 	.brand {
 
 		text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+		.transition(color ease-in-out .2s);
 
 		&:hover {
 			color: @navbarLinkColorHover;
+			.transition(color ease-in-out .2s);
 		}
 	}
 
 	.nav > li > a {
 		padding: 11px 10px 8px;
 		text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+		.transition(color ease-in-out .2s);
+
+		&:hover {
+			.transition(color ease-in-out .2s);
+		}
 	}
 
 	.navbar-text {
@@ -121,9 +124,12 @@ div.subnav {
 	.nav > li > a {
 
 		color: @navbarLinkColor;
+		.transition(color ease-in-out .2s);
 
 		&:hover {
+			border-left-color: @grayLight;
 			color: @navbarLinkColorHover;
+			.transition(color ease-in-out .2s);
 		}
 	}
 
@@ -159,6 +165,11 @@ div.subnav {
 // NAV
 // -----------------------------------------------------
 
+.nav > li > a:hover,
+.nav > li > a:focus {
+	background-color: rgba(0, 0, 0, 0.05);
+}
+
 .nav > li.dropdown > .dropdown-toggle,
 .nav > li.dropdown.active > .dropdown-toggle,
 .nav > li.dropdown.open > .dropdown-toggle,
@@ -176,11 +187,26 @@ div.subnav {
 	}
 }
 
+.nav-list .divider {
+	background-color: @dropdownDividerTop;
+	border-bottom-color: @dropdownDividerBottom;
+}
+
 // BUTTONS
 // -----------------------------------------------------
 
 // TABLES
 // -----------------------------------------------------
+
+.table {
+
+	tbody tr.success > td,
+	tbody tr.error > td,
+	tbody tr.info > td {
+		color: @white;
+	}
+
+}
 
 // FORMS
 // -----------------------------------------------------
@@ -216,8 +242,6 @@ div.subnav {
 
 .label, .badge {
 
-	padding-top: 4px;
-
 	&-important {
 		background-color: @red;
 	}
@@ -239,11 +263,11 @@ div.subnav {
 // -----------------------------------------------------
 
 .well {
-	.box-shadow(inset 1px 1px 0 rgba(0,0,0,.1));
+	// .box-shadow(inset 1px 1px 0 rgba(0,0,0,.1));
 }
 
 .hero-unit {
-	.box-shadow(inset 1px 1px 0 rgba(0,0,0,.1));
+	// .box-shadow(inset 1px 1px 0 rgba(0,0,0,.1));
 	border: 1px solid rgba(0,0,0,.1);
 }
 
