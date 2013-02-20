@@ -33,15 +33,15 @@
     <![endif]-->
 
     <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="assets/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="../bootstrap/docs/assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../bootstrap/docs/assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../bootstrap/docs/assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../bootstrap/docs/assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../bootstrap/docs/assets/ico/apple-touch-icon-57-precomposed.png">
 
   </head>
 
-  <body data-spy="scroll" data-target=".bs-docs-sidebar">
+  <body id="top" data-spy="scroll" data-target=".bs-docs-sidebar">
 
     <!-- Navbar
     ================================================== -->
@@ -92,35 +92,6 @@
        </div>
      </div>
 
-
-
-<!-- Modal
- ================================================== -->
-<div class="modal fade" id="myModal">
-  <div class="modal-header">
-    <a class="close" data-dismiss="modal">×</a>
-    <h3>Modal header</h3>
-  </div>
-  <div class="modal-body">
-    <form>
-      <legend>Legend</legend>
-      <label>Label name</label>
-      <input type="text" placeholder="Type something">
-      <span class="help-block">Example block-level help text here.</span>
-      <label class="checkbox">
-        <input type="checkbox"> Check me out
-      </label>
-      <button type="submit" class="btn">Submit</button>
-    </form>      
-          
-    <p>One fine body in paragraph tags…</p>
-    And without p tags
-  </div>
-  <div class="modal-footer">
-    <a href="#" class="btn">Close</a>
-    <a href="#" class="btn btn-primary">Save changes</a>
-  </div>
-</div>
 
 <!-- Subhead
 ================================================== -->
@@ -2410,7 +2381,7 @@
           </div>
 
           <div class="bs-docs-example" style="padding-bottom: 24px;">
-            <a href="#" class="btn btn-large btn-danger" rel="popover" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title">Click to toggle popover</a>
+            <a href="#" id="myPopover" class="btn btn-large btn-danger" rel="popover" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title">Click to toggle popover</a>
           </div>
 
         </section>
@@ -2428,7 +2399,7 @@
     ================================================== -->
     <footer class="footer">
       <div class="container">
-        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p class="pull-right"><a href="#top">Back to top</a></p>
         <p>Designed and built with all the love in the world <a href="http://twitter.com/twitter" target="_blank">@twitter</a> by <a href="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="http://twitter.com/fat" target="_blank">@fat</a>.</p>
         <p>Code licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>. Documentation licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
         <p>Icons from <a href="http://glyphicons.com">Glyphicons Free</a>, licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
@@ -2441,6 +2412,33 @@
     </footer>
 
 
+    <!-- Modal
+     ================================================== -->
+    <div class="modal hide fade" id="myModal">
+      <div class="modal-header">
+        <a class="close" data-dismiss="modal">×</a>
+        <h3>Modal header</h3>
+      </div>
+      <div class="modal-body">
+        <form>
+          <legend>Legend</legend>
+          <label>Label name</label>
+          <input type="text" placeholder="Type something">
+          <span class="help-block">Example block-level help text here.</span>
+          <label class="checkbox">
+            <input type="checkbox"> Check me out
+          </label>
+          <button type="submit" class="btn">Submit</button>
+        </form>      
+              
+        <p>One fine body in paragraph tags…</p>
+        And without p tags
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="btn">Close</a>
+        <a href="#" class="btn btn-primary">Save changes</a>
+      </div>
+    </div>
 
     <!-- Le javascript
     ================================================== -->
@@ -2460,13 +2458,18 @@
     <script src="../bootstrap/docs/assets/js/bootstrap-carousel.js"></script>
     <script src="../bootstrap/docs/assets/js/bootstrap-typeahead.js"></script>
     <script src="../bootstrap/docs/assets/js/bootstrap-affix.js"></script>
-    <script src="../bootstrap/docs/assets/js/application.js"></script>
+    <script src="bootswatch.js"></script>
     <script>
 
+      $(document).ready(function () {
+        $('.modal').modal('hide');
 
+        $("[rel=popover]").popover().click(function(e){ 
+          e.preventDefault(); 
+        });
+      });
 
     </script>
-
 
 
   </body>
