@@ -97,7 +97,7 @@ hr, legend, .page-header {
 		.nav li > a:hover,
 		.nav li.active > a,
 		.nav li.active > a:hover {
-			#gradient > .directional(darken(@grayDarker, 3%), @grayDarker, 280deg);
+			#gradient > .directional(darken(@grayDarker, 10%), darken(@grayDarker, 5%), 280deg);
 		}
 	}
 }
@@ -205,7 +205,7 @@ div.subnav {
 .nav {
 
 	.nav-header {
-		text-shadow: none;
+		text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
 	}
 
 	& > li > a {
