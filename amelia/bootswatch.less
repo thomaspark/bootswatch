@@ -151,6 +151,11 @@ hr {
 
 	.navbar-inverse .nav-collapse {
 
+		.nav > li > a,
+		.dropdown-menu a {
+			color: @navbarInverseLinkColor !important;
+		}
+
 		.nav li > a:hover,
 		.dropdown-menu a:hover {
 			background-color: lighten(@navbarInverseBackground, 10%) !important;
@@ -390,6 +395,18 @@ div.subnav {
 	.buttonBackgroundCustom(@btnBackground)
 }
 
+.btn-large {
+	padding: @paddingLarge;
+}
+
+.btn-small {
+	padding: @paddingSmall;
+}
+
+.btn-mini {
+	padding: @paddingMini;
+}
+
 .btn-group .btn:first-child {
 	margin-left: 0;
 	.border-radius(0);
@@ -432,11 +449,6 @@ div.subnav {
 
 .btn-link {
 	.buttonBackgroundCustom(@btnPrimaryBackground);
-}
-
-[class^="icon-"], [class*=" icon-"] {
-	margin-top: 2px;
-	margin-right: 8px;
 }
 
 .btn-small [class^="icon-"] {
@@ -514,19 +526,31 @@ input, textarea, .search-query, .uneditable-input,
 	border-top: 0px solid transparent;
 }
 
-.control-group.warning > label,
-.control-group.warning .help-inline {
-	color: lighten(@orange, 30%);
+.control-group.warning {
+
+	.control-label,
+	.help-block,
+	.help-inline {
+		color: lighten(@orange, 30%);
+	}
 }
 
-.control-group.error > label,
-.control-group.error .help-inline {
-	color: lighten(@linkColor, 10%);
+.control-group.error {
+
+	.control-label,
+	.help-block,
+	.help-inline {
+		color: lighten(@linkColor, 10%);
+	}
 }
 
-.control-group.success > label,
-.control-group.success .help-inline {
-	color: lighten(@green, 20%);
+.control-group.success {
+
+	.control-label,
+	.help-block,
+	.help-inline {
+		color: lighten(@green, 20%);
+	}
 }
 
 .input-prepend .add-on,
@@ -550,46 +574,45 @@ input, textarea, .search-query, .uneditable-input,
 
 .alert {
 
-	h1, h2, h3, h4, h5, h6 {
-		color: @textColor;
-	}
-}
-
-.alert, .label {
 	border-color: transparent;
 	.border-radius(0);
 	.box-shadow(none);
 	text-shadow: none;
+
+	h1, h2, h3, h4, h5, h6 {
+		color: @textColor;
+	}
+
+	&-heading {
+		color: @textColor;
+	}
 }
 
-.alert-heading {
-	color: @textColor;
-}
+.label,
+.badge {
 
-.label, .label:hover {
-	background-color: @grayLighter;
-	text-shadow: none;
-	color: @grayDark;
-}
+	background-color: @blue;
 
-.label-warning, .label-warning:hover, .alert {
-	background-color: @orange;
-	color: @textColor;
-}
+	&-success {
+		background-color: @green;
+	}
 
-.label-important, .label-important:hover, .alert-error {
-	background-color: darken(@yellow, 3%);
-	color: @textColor;
-}
+	&-important {
+		background-color: @red;
+	}
 
-.label-success, .label-success:hover, .alert-success {
-	background-color: @green;
-	color: @textColor;
-}
+	&-warning {
+		background-color: @orange;
+	}
 
-.label-info, .label-info:hover, .alert-info {
-	background-color: @purple;
-	color: @textColor;
+	&-info {
+		background-color: @purple;
+	}
+
+	&-inverse {
+		background-color: @btnInverseBackground;
+	}
+
 }
 
 // MISCELLANEOUS
