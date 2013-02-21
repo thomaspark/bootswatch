@@ -49,6 +49,8 @@ Thanks
 
 [Zack Maril](http://github.com/zmaril) for [bootswatch/swatchmaker/watcher.rb](https://github.com/thomaspark/bootswatch/blob/master/swatchmaker/watcher.rb).
 
+[Gerald Hiller](https://twitter.com/geraldhiller) for the favicon.
+
 
 Copyright and License
 ----
