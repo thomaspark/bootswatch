@@ -24,13 +24,12 @@ section {
 
 @media (max-width: 767px) {
 
-
 	section {
 		padding-top: 20px;
 	}
 }
 
-@media (max-width: 979px) and (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 979px) {
 
 	section {
 		padding-top: 20px;
@@ -50,6 +49,13 @@ section {
 
 .subhead > div:first-child {
 	min-height: 200px;
+}
+
+@media (min-width: 980px) {
+
+	.preview {
+		padding-top: 100px;
+	}
 }
 
 /* subnav */
