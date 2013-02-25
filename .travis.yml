@@ -1,0 +1,10 @@
+language: node_js
+ node_js:
+   - "0.8.11"
+
+ before_install:
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+  - npm install -g grunt-cli recess
+
+ script: "grunt build"
