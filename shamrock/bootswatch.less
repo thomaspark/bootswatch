@@ -1,0 +1,458 @@
+// Swatch 2.3.0
+// Shamrock
+// -----------------------------------------------------
+
+
+// TYPOGRAPHY
+// -----------------------------------------------------
+
+@import url('//fonts.googleapis.com/css?family=Marcellus');
+
+h1:before {
+	content: "\2663";
+	margin-right: 10px;
+}
+
+strong {
+	font-weight: normal;
+}
+
+blockquote {
+
+	small {
+		color: @grayLighter;
+	}
+}
+
+.muted {
+	color: @grayLighter;
+}
+
+// SCAFFOLDING
+// -----------------------------------------------------
+
+.page-header {
+	border-bottom: 5px solid @grayLighter;
+}
+
+// NAVBAR
+// -----------------------------------------------------
+
+.navbar {
+
+	.brand {
+
+		&:hover {
+			color: @navbarLinkColorHover;
+		}
+	}
+
+	&-search .search-query {
+		line-height: normal;
+	}
+}
+
+div.subnav {
+
+	background-image: none;
+	background-color: @grayLight;
+	border-color: @grayDark;
+
+	.nav > li > a {
+		border-color: transparent;
+		color: @textColor;
+
+		&:hover {
+			background-color: transparent;
+			color: @linkColor;
+		}
+	}
+
+	.nav > .active > a,
+	.nav > .active > a:hover {
+		background-color: transparent;
+		.box-shadow(none);
+		border-color: transparent;
+		color: @linkColor;
+	}
+
+	&-fixed {
+		top: @navbarHeight + 1;
+		.box-shadow(none);
+	}
+
+
+
+}
+
+// NAV
+// -----------------------------------------------------
+
+.nav {
+
+	& > .active > a,
+	& > .active > a:hover,
+	& > .active > a:focus {
+		color: @textColor;
+	}
+
+	& > .disabled > a {
+		color: @grayLighter;
+	}
+}
+
+.nav-list {
+
+	& > li > a,
+	& > .active > a,
+	& > .active > a:hover,
+	& > .active > a:focus {
+		text-shadow: none;
+
+		&:hover {
+			background-color: @grayDark;
+		}
+	}
+
+	.divider {
+		background-color: #446e2a;
+		border-color: @grayDark;
+	}
+
+	.nav-header {
+		color: @textColor;
+		text-shadow: none;
+	}
+}
+
+.nav-pills {
+
+	& > li > a:hover, {
+		background-color: @grayDark;
+	}
+
+}
+
+.nav-tabs {
+
+	border-color: @grayDark;
+
+	& > li > a:hover,
+	.open .dropdown-toggle,
+	.open .dropdown-toggle:hover {
+		background-color: @grayDark;
+		border-color: @grayDark;
+		border-bottom-color: transparent;
+	}
+
+	& > .active > a,
+	& > .active > a:hover,
+	& > .active > a:focus {
+		border-color: @grayDark;
+		border-bottom-color: transparent;
+	}
+
+	&.nav-stacked > li > a {
+		border-color: @grayDark;
+
+		&:hover,
+		&:focus {
+			border-color: @grayDark;
+		}
+	}
+}
+
+.tabs-below > .nav-tabs {
+	border-top-color: @grayDark;
+
+	& > li > a:hover {
+		background-color: @grayDark;
+		border-color: @grayDark;
+		border-top-color: transparent;
+	}
+
+	& > .active > a,
+	& > .active > a:hover,
+	& > .active > a:focus {
+		border-color: @grayDark;
+		border-top-color: transparent;
+	}
+}
+
+.tabs-left > .nav-tabs {
+	border-right-color: @grayDark;
+
+	& > li > a:hover {
+		background-color: @grayDark;
+		border-color: @grayDark;
+		border-right-color: transparent;
+	}
+
+	& > .active > a,
+	& > .active > a:hover,
+	& > .active > a:focus {
+		border-color: @grayDark;
+		border-right-color: transparent;
+	}
+}
+
+.tabs-right > .nav-tabs {
+	border-left-color: @grayDark;
+
+	& > li > a:hover {
+		background-color: @grayDark;
+		border-color: @grayDark;
+		border-left-color: transparent;
+	}
+
+	& > .active > a,
+	& > .active > a:hover,
+	& > .active > a:focus {
+		border-color: @grayDark;
+		border-left-color: transparent;
+	}
+}
+
+.breadcrumb {
+
+	background-color: @grayDark;
+
+	& > li {
+		color: @textColor;
+		text-shadow: none;
+
+		& > .divider {
+			color: @grayLighter;
+		}
+	}
+
+	& > .active {
+		color: @textColor;
+	}
+}
+
+.pagination {
+
+
+	ul > li > a {
+		background-color: @grayDark;
+		border-color: @tableBorder;
+
+		&:hover {
+			background-color: @grayLight;
+		}
+	}
+
+	ul > .active > a,
+	ul > .active > span {
+		background-color: @grayLight;
+		color: @white;
+	}
+
+	ul > .disabled > span,
+	ul > .disabled > a,
+	ul > .disabled > a:hover,
+	ul > .disabled > a:focus {
+		background-color: @grayDark;
+		color: @grayLighter;
+	}
+}
+
+.pager {
+
+	li > a,
+	li > span {
+		background-color: @grayDark;
+		border: none;
+
+		&:hover {
+			background-color: @grayLight;
+		}
+	}
+
+	.disabled > a,
+	.disabled > a:hover,
+	.disabled > a:focus,
+	.disabled > span {
+		background-color: @grayDark;
+		border: none;
+		color: @grayLighter;
+	}
+}
+
+// BUTTONS
+// -----------------------------------------------------
+
+.btn {
+	color: @textColor;
+
+	&:hover,
+	&:focus,
+	&:active,
+	&.active,
+	&.disabled,
+	&[disabled] {
+		color: @textColor;
+	}
+}
+
+// TABLES
+// -----------------------------------------------------
+
+.table {
+
+	tbody tr.success > td,
+	tbody tr.error > td,
+	tbody tr.info > td {
+		background-color: @grayLighter;
+	}
+}
+
+// FORMS
+// -----------------------------------------------------
+
+legend {
+	border-bottom: 5px solid @grayLighter;
+	color: @textColor;
+}
+
+.control-group.warning {
+
+	.control-label,
+	.help-block,
+	.help-inline {
+		color: @yellow;
+	}
+
+	input,
+	select,
+	textarea {
+		border-color: @yellow;
+	}
+}
+
+.control-group.error {
+
+	.control-label,
+	.help-block,
+	.help-inline {
+		color: @yellow;
+	}
+
+	input,
+	select,
+	textarea {
+		border-color: @yellow;
+	}
+}
+
+.control-group.success {
+
+	.control-label,
+	.help-block,
+	.help-inline {
+		color: @yellow;
+	}
+
+	input,
+	select,
+	textarea {
+		border-color: @yellow;
+	}
+}
+
+.form-actions {
+	background-color: rgba(0, 0, 0, 0.1);
+	border-top: none;
+}
+
+// DROPDOWNS
+// -----------------------------------------------------
+
+.dropdown-menu {
+
+	.divider {
+		background-color: #446e2a;
+		border-color: @grayDark;
+	}
+}
+
+// ALERTS, LABELS, BADGES
+// -----------------------------------------------------
+
+.alert {
+	background-color: @yellow;
+	border: none;
+	color: @textColor;
+	text-shadow: -1px -1px rgba(0, 0, 0, 0.1);
+
+	h1, h2, h3, h4, h5, h6 {
+		color: @textColor;
+		text-shadow: -1px -1px rgba(0, 0, 0, 0.1);
+	}
+}
+
+.label,
+.badge {
+
+	&-success {
+		background-color: @btnBackground;
+	}
+
+	&-warning {
+		background-color: @btnWarningBackground;
+	}
+
+	&-important {
+		background-color: @btnDangerBackground;
+	}
+
+	&-info {
+		background-color: @btnInfoBackground;
+	}
+
+	&-inverse {
+		background-color: @btnInverseBackground;
+	}
+}
+
+// MISC
+// -----------------------------------------------------
+
+.progress {
+	background-image: none;
+	background-color: @grayDarker;
+
+	.bar {
+		background-color: @grayLighter;
+ 		 #gradient > .vertical(@grayLighter, darken(@grayLighter, 5%));
+	}
+
+	&.progress-striped .bar {
+		background-color: @grayLighter;
+		#gradient > .striped(@grayLighter);
+	}
+}
+
+.thumbnail,
+.img-polaroid {
+	background-color: @grayDark;
+	border: none;
+}
+
+.modal {
+	background-color: @grayLight;
+
+	&-header {
+		border-bottom: none;
+	}
+
+	&-footer {
+		background-color: @grayDark;
+		border-top: none;
+		.box-shadow(none);
+	}
+}
+
+// MEDIA QUERIES
+// -----------------------------------------------------
