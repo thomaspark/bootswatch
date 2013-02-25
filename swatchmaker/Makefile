@@ -24,5 +24,11 @@ default:
 	curl --location -o ${OUTPUT_PATH}/bootswatch.less https://raw.github.com/thomaspark/bootswatch/gh-pages/swatchmaker/swatch/bootswatch.less
 	make bootswatch
 
-.PHONY: bootswatch bootstrap default
+watcher:
+	ruby watcher.rb
+
+server:
+	python -m SimpleHTTPServer
+
+.PHONY: bootswatch bootstrap default watch server
 
