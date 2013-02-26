@@ -9,6 +9,7 @@ node_js:
   - "0.8.11"
 
 before_install:
-  - npm install -g grunt-cli recess
+  - npm install -g grunt-cli recess bower
+  - bower install bootstrap
 
 script: "grunt swatch"
