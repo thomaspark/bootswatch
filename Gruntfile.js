@@ -6,6 +6,7 @@ module.exports = function (grunt) {
 	// Project configuration.
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
+		builddir: 'build',
 		meta: {
 			banner: '/**\n' +
 						' * <%= pkg.description %>\n' +
@@ -55,7 +56,7 @@ module.exports = function (grunt) {
 		var dist = {};
 		concatSrc = 'global/build.less';
 		concatDest = theme + '/build.less';
-		recessDest = theme + '/' + theme + '.css';
+		recessDest = '<%=builddir%>/' + theme + '/bootstrap.css';
 		recessSrc = [ theme + '/' + 'build.less' ];
 
 		dist = {src: concatSrc, dest: concatDest};
@@ -65,7 +66,7 @@ module.exports = function (grunt) {
 		grunt.config('recess.dist.options.compress', false);
 
 		grunt.task.run(['concat', 'recess:dist', 'clean:build',
-			compress ? 'compress:'+recessDest+':'+theme+'/'+theme+'.min.css':'none']);
+			compress ? 'compress:'+recessDest+':'+'<%=builddir%>/' + theme + '/bootstrap.min.css':'none']);
 	});
 
 	grunt.registerTask('build-responsive', 'build a responsive theme', function(theme, compress) {
@@ -80,7 +81,7 @@ module.exports = function (grunt) {
 
 		concatSrc = 'global/build-responsive.less';
 		concatDest = theme + '/build-responsive.less';
-		recessDest = theme + '/' + theme + '-responsive.css';
+		recessDest = '<%=builddir%>/' + theme + '/bootstrap-responsive.css';
 		recessSrc = [ theme + '/' + 'build-responsive.less' ];
 
 		dist = {src: concatSrc, dest: concatDest};
@@ -90,7 +91,7 @@ module.exports = function (grunt) {
 		grunt.config('recess.dist.options.compress', false);
 
 		grunt.task.run(['concat', 'recess:dist', 'clean:build',
-			compress ? 'compress:'+recessDest+':'+theme+'/'+theme+'-responsive.min.css':'none']);
+			compress ? 'compress:'+recessDest+':'+'<%=builddir%>/' + theme + '/bootstrap-responsive.min.css':'none']);
 	});
 
 	grunt.registerTask('compress', 'compress a generic css', function(fileSrc, fileDst) {
