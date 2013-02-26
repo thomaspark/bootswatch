@@ -2,11 +2,9 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-recess');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-clean');
-	// grunt.loadNpmTasks('grunt-contrib-uglify');
 
 	// Project configuration.
 	grunt.initConfig({
-		builddir: 'build',
 		pkg: grunt.file.readJSON('package.json'),
 		meta: {
 			banner: '/**\n' +
@@ -16,7 +14,7 @@ module.exports = function (grunt) {
 						' * @link <%= pkg.homepage %>\n' +
 						' * @license <%= pkg.license %>' + ' */'
 		},
-		build: {
+		swatch: {
 			amelia: {}, cerulean:{}, cosmo:{}, cyborg:{}, journal:{}, readable:{},
 			shamrock:{}, simplex:{}, slate:{}, spacelab:{}, spruce:{}, superhero:{},
 			united:{}
@@ -29,39 +27,83 @@ module.exports = function (grunt) {
 		},
 		concat: {
 			dist: {
-				src: ['global/build.less'],
+				src: [],
 				dest: ''
 			}
 		},
 		recess: {
 			dist: {
 				options: {
-					compile: true
+					compile: true,
+					compress: false
 				},
 				files: {}
-			}
-		},
-		min: {
-			build: {
-				src: ['<banner:meta.banner>', '<config:concat.build.dest>'],
-				dest: '<%= builddir %>/<%= pkg.name %>.min.js'
 			}
 		}
 	});
 
-	grunt.registerMultiTask('build', 'build a theme', function() {
-		var theme = this.target;
-		grunt.log.writeln('building theme ' + this.target);
+	grunt.registerTask('none', function() {});
 
-		var concatDest = theme + '/build.less';
+	grunt.registerTask('build', 'build a regular theme', function(theme, compress) {
+		var compress = compress == undefined ? true : compress;
 
-		var recessDest = theme + '/' + theme + '.css';
-		var recessSrc = [ theme + '/' + 'build.less' ];
+		var concatSrc;
+		var concatDest;
+		var recessDest;
+		var recessSrc;
+		var files = {};
+		var dist = {};
+		concatSrc = 'global/build.less';
+		concatDest = theme + '/build.less';
+		recessDest = theme + '/' + theme + '.css';
+		recessSrc = [ theme + '/' + 'build.less' ];
 
-		grunt.config('concat.dist.dest', concatDest);
-		var files = {}; files[recessDest] = recessSrc;
+		dist = {src: concatSrc, dest: concatDest};
+		grunt.config('concat.dist', dist);
+		files = {}; files[recessDest] = recessSrc;
 		grunt.config('recess.dist.files', files);
+		grunt.config('recess.dist.options.compress', false);
 
-		grunt.task.run(['concat', 'recess:dist', 'clean:build']);
+		grunt.task.run(['concat', 'recess:dist', 'clean:build',
+			compress ? 'compress:'+recessDest+':'+theme+'/'+theme+'.min.css':'none']);
+	});
+
+	grunt.registerTask('build-responsive', 'build a responsive theme', function(theme, compress) {
+		var compress = compress == undefined ? true : compress;
+
+		var concatSrc;
+		var concatDest;
+		var recessDest;
+		var recessSrc;
+		var files = {};
+		var dist = {};
+
+		concatSrc = 'global/build-responsive.less';
+		concatDest = theme + '/build-responsive.less';
+		recessDest = theme + '/' + theme + '-responsive.css';
+		recessSrc = [ theme + '/' + 'build-responsive.less' ];
+
+		dist = {src: concatSrc, dest: concatDest};
+		grunt.config('concat.dist', dist);
+		files = {}; files[recessDest] = recessSrc;
+		grunt.config('recess.dist.files', files);
+		grunt.config('recess.dist.options.compress', false);
+
+		grunt.task.run(['concat', 'recess:dist', 'clean:build',
+			compress ? 'compress:'+recessDest+':'+theme+'/'+theme+'-responsive.min.css':'none']);
+	});
+
+	grunt.registerTask('compress', 'compress a generic css', function(fileSrc, fileDst) {
+		var files = {}; files[fileDst] = fileSrc;
+		grunt.log.writeln('compressing file ' + fileSrc);
+
+		grunt.config('recess.dist.files', files);
+		grunt.config('recess.dist.options.compress', true);
+		grunt.task.run(['recess:dist']);
+	});
+
+	grunt.registerMultiTask('swatch', 'build a theme, both not responsive and responsive', function() {
+		var t = this.target;
+		grunt.task.run('build:'+t, 'build-responsive:'+t);
 	});
 };
