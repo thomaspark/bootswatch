@@ -28,7 +28,8 @@ watcher:
 	ruby watcher.rb
 
 server:
+	open http://localhost:8000/test/test.html
 	python -m SimpleHTTPServer
 
-.PHONY: bootswatch bootstrap default watch server
+.PHONY: bootswatch bootstrap default watcher server
 
