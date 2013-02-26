@@ -1,10 +1,15 @@
+branches:
+  only:
+    - master
+    - gh-pages
+
 language: node_js
- node_js:
-   - "0.8.11"
 
- before_install:
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
-  - npm install -g grunt-cli recess
+node_js:
+  - "0.8.11"
 
- script: "grunt build"
+before_install:
+  - npm install -g grunt-cli recess bower
+  - bower install bootstrap
+
+script: "grunt swatch"
