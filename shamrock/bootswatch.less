@@ -52,6 +52,36 @@ blockquote {
 	}
 }
 
+@media (max-width: 979px) {
+
+	.navbar,
+	.navbar.navbar-inverse {
+
+		.nav-collapse {
+
+			.nav > li > a,
+			.dropdown-menu a {
+				color: @navbarLinkColor;
+			}
+
+			.nav > li > a:hover,
+			.nav > li > a:focus,
+			.dropdown-menu a:hover,
+			.dropdown-menu a:focus {
+				background-color: rgba(0, 0, 0, 0.1);
+				color: @navbarLinkColorHover;
+			}
+
+			.navbar-form,
+			.navbar-search {
+				border-top-color: @grayLight;
+				border-bottom-color: @grayLight;
+			}
+
+		}
+	}
+}
+
 div.subnav {
 
 	background-image: none;
@@ -80,9 +110,20 @@ div.subnav {
 		top: @navbarHeight + 1;
 		.box-shadow(none);
 	}
+}
 
+@media (max-width: 767px) {
 
+	div.subnav {
 
+		.nav > li > a:hover {
+			background-color: rgba(0, 0, 0, 0.1);
+		}
+
+		.nav > li + li > a {
+			border-top: 1px solid @grayLighter;
+		}
+	}
 }
 
 // NAV

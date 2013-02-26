@@ -6188,6 +6188,33 @@ blockquote small {
   line-height: normal;
 }
 
+@media (max-width: 979px) {
+  .navbar .nav-collapse .nav > li > a,
+  .navbar.navbar-inverse .nav-collapse .nav > li > a,
+  .navbar .nav-collapse .dropdown-menu a,
+  .navbar.navbar-inverse .nav-collapse .dropdown-menu a {
+    color: #ffffff;
+  }
+  .navbar .nav-collapse .nav > li > a:hover,
+  .navbar.navbar-inverse .nav-collapse .nav > li > a:hover,
+  .navbar .nav-collapse .nav > li > a:focus,
+  .navbar.navbar-inverse .nav-collapse .nav > li > a:focus,
+  .navbar .nav-collapse .dropdown-menu a:hover,
+  .navbar.navbar-inverse .nav-collapse .dropdown-menu a:hover,
+  .navbar .nav-collapse .dropdown-menu a:focus,
+  .navbar.navbar-inverse .nav-collapse .dropdown-menu a:focus {
+    color: #f8e33c;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  .navbar .nav-collapse .navbar-form,
+  .navbar.navbar-inverse .nav-collapse .navbar-form,
+  .navbar .nav-collapse .navbar-search,
+  .navbar.navbar-inverse .nav-collapse .navbar-search {
+    border-top-color: #76a547;
+    border-bottom-color: #76a547;
+  }
+}
+
 div.subnav {
   background-color: #76a547;
   background-image: none;
@@ -6219,6 +6246,15 @@ div.subnav-fixed {
   -webkit-box-shadow: none;
      -moz-box-shadow: none;
           box-shadow: none;
+}
+
+@media (max-width: 767px) {
+  div.subnav .nav > li > a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  div.subnav .nav > li + li > a {
+    border-top: 1px solid #aecd5a;
+  }
 }
 
 .nav > .active > a,
