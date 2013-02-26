@@ -1,12 +1,14 @@
 branches:
   only:
+    - master
     - gh-pages
 
 language: node_js
- node_js:
-   - "0.8.11"
 
- before_install:
+node_js:
+  - "0.8.11"
+
+before_install:
   - npm install -g grunt-cli
 
- script: "grunt swatch"
+script: "grunt swatch"
