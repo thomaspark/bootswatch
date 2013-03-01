@@ -16,14 +16,14 @@ module.exports = function (grunt) {
 						' * @license <%= pkg.license %>' + ' */'
 		},
 		swatch: {
-			amelia: {}, cerulean:{}, cosmo:{}, cyborg:{}, journal:{}, readable:{},
+			amelia:{}, cerulean:{}, cosmo:{}, cyborg:{}, journal:{}, readable:{},
 			simplex:{}, slate:{}, spacelab:{}, spruce:{}, superhero:{}, united:{}
 		},
 		clean: {
-		   build: {
-			   src: ['*/build.less', '*/build-responsive.less',
-				   '!global/build.less', '!global/build-responsive.less']
-		   }
+			build: {
+				src: ['*/build.less', '*/build-responsive.less',
+					'!global/build.less', '!global/build-responsive.less']
+			}
 		},
 		concat: {
 			dist: {
