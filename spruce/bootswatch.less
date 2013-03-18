@@ -616,17 +616,25 @@ input, textarea, select {
 	&-header {
 		padding: 12px 15px 6px;
 		background-color: @green;
+		color: @navbarLinkColor;
+
+		h1, h2, h3, h4, h5, h6 {
+			color: @navbarLinkColor;
+		}
 	}
 
 	&-body,
 	&-footer {
-		background-color: @headingsColor;
 		border: none;
 		.box-shadow(none);
 
 		label {
 			color: @textColor;
 		}
+	}
+
+	&-footer {
+		background-color: @wellBackground;
 	}
 }
 

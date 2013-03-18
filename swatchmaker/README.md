@@ -1,28 +1,33 @@
 Create your own swatch
 ======================
 
-1. Download Bootstrap
+1. Download Bootswatch
 ------
-Download and unpack [Bootswatch](https://github.com/thomaspark/bootswatch/tags). In terminal, navigate to `swatchmaker/` and run the command `make bootstrap` to update to the latest version of Bootstrap.
+Download or clone [Bootswatch](https://github.com/thomaspark/bootswatch).
 
 
-2. Install LESS
+2. Install Bootstrap
 ------
-If you haven't already, install LESS to your machine via NPM. More information on that here: http://lesscss.org/#-server-side-usage
+In terminal, navigate to `/bootswatch/swatchmaker/` and run the command `make bootstrap` to download the latest version of Bootstrap.
 
 
-3. Customize Bootstrap
+3. Install Bootstrap Dependencies
 ------
-Make your customizations to the two files found in the `swatch` directory, `variables.less` and `bootswatch.less`.
+If you haven't before, [install npm](https://npmjs.org/). Next, navigate to `/bootswatch/swatchmaker/bootstrap/` and type `npm install` to locally install Bootstrap dependencies (uglify-js, jshint, recess, connect, hogan.js).
 
 
-4. Build Customized Bootstrap
+4. Customize Bootstrap
 ------
-In the `swatchmaker` directory, run `make bootswatch`. The compiled CSS files will be created in the `swatch` directory.
-
-You can run the watcher to automatically build Bootstrap whenever changes are saved with `ruby watcher.rb`. Requires `gem install directory_watcher`.
+Make your customizations to the two files found in `/bootswatch/swatchmaker/swatch/`: `variables.less` and `bootswatch.less`. You can also copy over the less files from an existing theme and modify them.
 
 
-5. Reset Bootstrap
+5. Build Customized Bootstrap
+------
+In `/bootswatch/swatchmaker/`, run `make bootswatch`. The compiled CSS files will be created in `/bootswatch/swatchmaker/swatch/`.
+
+You can run the watcher to automatically build Bootstrap whenever changes are saved with `make watcher` (Requires `gem install directory_watcher`).
+
+
+6. Reset Bootstrap
 ------
 If you want to reset `variables.less` and `bootswatch.less` to defaults, run `make default`.

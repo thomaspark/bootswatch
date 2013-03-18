@@ -6357,6 +6357,12 @@ div.subnav-fixed {
   margin: 0;
 }
 
+@media (max-width: 767px) {
+  div.subnav .nav > li + li > a {
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+  }
+}
+
 .nav-tabs li.open > .dropdown-toggle,
 .nav-pills li.open > .dropdown-toggle {
   color: #e8d069;

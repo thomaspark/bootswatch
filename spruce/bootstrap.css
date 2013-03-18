@@ -6725,12 +6725,21 @@ select {
 
 .modal-header {
   padding: 12px 15px 6px;
+  color: #ffffff;
   background-color: #015b4e;
+}
+
+.modal-header h1,
+.modal-header h2,
+.modal-header h3,
+.modal-header h4,
+.modal-header h5,
+.modal-header h6 {
+  color: #ffffff;
 }
 
 .modal-body,
 .modal-footer {
-  background-color: #333333;
   border: none;
   -webkit-box-shadow: none;
      -moz-box-shadow: none;
@@ -6740,6 +6749,10 @@ select {
 .modal-body label,
 .modal-footer label {
   color: #555555;
+}
+
+.modal-footer {
+  background-color: #dddddd;
 }
 
 .popover-title {
