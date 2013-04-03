@@ -9,7 +9,7 @@ Head over to [Bootswatch](http://bootswatch.com) and download the `bootstrap.min
 
 The themes are also hosted on [BootstrapCDN](http://www.bootstrapcdn.com/).
 
-For use with Rails, check out [bootswatch-rails](https://github.com/maxim/bootswatch-rails) (Sass) and [twitter-bootswatch-rails](https://github.com/scottvrosenthal/twitter-bootswatch-rails) (LESS).
+For use with Rails, check out [bootswatch-rails](https://github.com/maxim/bootswatch-rails) (Sass) and [twitter-bootswatch-rails](https://github.com/scottvrosenthal/twitter-bootswatch-rails) (LESS). For use with a Yeoman app or with Bower check out [bootswatch-scss](https://github.com/nrub/bootswatch-scss).
 
 
 Customization
