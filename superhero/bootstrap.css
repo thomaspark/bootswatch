@@ -6388,7 +6388,7 @@ div.subnav .nav > .active > a:hover .caret {
 }
 
 .nav-list > li > a,
-.nav-list .nav-header {
+.nav-list > .nav-header {
   color: #ece9d7;
   text-shadow: none;
 }
@@ -6432,9 +6432,13 @@ div.subnav .nav > .active > a:hover .caret {
   background-color: #45515f;
 }
 
-.nav-pills > li:hover > a {
+.nav-pills > li > a:hover {
   background-color: #5a6a7d;
   border-color: transparent;
+}
+
+.nav-pills > .disabled > a:hover {
+  background-color: #45515f;
 }
 
 .nav-tabs .open .dropdown-toggle,
@@ -6509,13 +6513,15 @@ div.subnav .nav > .active > a:hover .caret {
   background: #3a4450;
 }
 
-.pager a {
+.pager li > a,
+.pager li > span {
   color: #ece9d7;
   background-color: #45515f;
-  border-color: transparent;
+  border: none;
 }
 
-.pager a:hover {
+.pager li > a:hover,
+.pager li > span:hover {
   background: #5a6a7d;
 }
 
