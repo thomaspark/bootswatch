@@ -216,56 +216,69 @@ div.subnav {
 // NAV
 // -----------------------------------------------------
 
-.nav-tabs li.open > .dropdown-toggle,
-.nav-pills li.open > .dropdown-toggle {
-	background-color: #8AD5DC;
-	color: @linkColor;
-	border-color: transparent;
-}
+.nav-tabs,
+.nav-pills {
 
-.nav-tabs, .nav-pills {
 	border-color: transparent;
 
-	li > a {
+
+	& > li > a {
 		border-color: transparent;
 		.border-radius(0);
 		.box-shadow(0);
 	}
 
-	li.active > a,
-	li.active > a:hover {
-		color: @textColor;
-	}
-
-	li.active > a,
-	li > a:hover,
-	li.active > a:hover {
+	& > li > a:hover {
 		background-color: #8AD5DC;
 		border-color: transparent;
 		text-shadow: none;
 	}
-}
 
-.nav-tabs, .nav-tabs > li > a {
-	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-}
-
-.nav-tabs > li > a {
-	background-color: #3CB9C6;
-}
-
-.nav-tabs.nav-stacked {
-
-	li > a:first-child,
-	li > a:last-child {
-		.border-radius(0);
+	& > .active > a,
+	& > .active > a:hover {
+		background-color: #8AD5DC;
+		border-color: transparent;
+		color: @textColor;
+		text-shadow: none;
 	}
 
-	li > a,
-	li > a:hover,
-	li.active > a,
-	li.active > a:hover {
+	& > .disabled > a,
+	& > .disabled > a:hover {
+		background: none;
+		color: @grayLighter;
+	}
+
+	& > .open > .dropdown-toggle,
+	& > .open > .dropdown-toggle {
+		background-color: #8AD5DC;
+		color: @linkColor;
 		border-color: transparent;
+	}
+
+
+}
+
+.nav-tabs {
+
+	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+	& > li > a  {
+		background-color: #3CB9C6;
+	}
+
+	&.nav-stacked {
+
+		li > a:first-child,
+		li > a:last-child {
+			.border-radius(0);
+		}
+
+		li > a,
+		li > a:hover,
+		li.active > a,
+		li.active > a:hover {
+			border-color: transparent;
+		}
 	}
 }
 
@@ -301,6 +314,7 @@ div.subnav {
 }
 
 .breadcrumb {
+
 	background-color: #3CB9C6;
 	background-image: none;
 
@@ -312,8 +326,9 @@ div.subnav {
 		color: @white;
 	}
 
-	.divider {
-		color: @linkColor;
+	& > li > a.divider,
+	& > li > span.divider {
+		color: @grayLighter;
 	}
 }
 

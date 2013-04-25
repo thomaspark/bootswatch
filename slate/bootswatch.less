@@ -226,6 +226,11 @@ div.subnav {
 		color: @white;
 	}
 
+	& > li.disabled > a,
+	& > li.disabled > a:hover {
+		color: @gray;
+	}
+
 	li > a:hover {
 		background-color: transparent;
 		color: @grayLighter;
@@ -352,6 +357,7 @@ div.subnav {
 
 	li > a,
 	li > span {
+		
 		border: 1px solid transparent;
 		.box-shadow('0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1)');
 		#gradient > .vertical-three-colors(@gray, @grayDark, 70%, @grayDark);
@@ -365,6 +371,7 @@ div.subnav {
 	.disabled a,
 	.disabled a:hover {
 		background-color: transparent;
+		#gradient > .vertical-three-colors(@gray, @grayDark, 70%, @grayDark);
 	}
 }
 
