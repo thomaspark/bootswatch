@@ -1,4 +1,4 @@
-// Flat by Jenil(www.jgog.in)
+// Flatness by Jenil(www.jgog.in)
 // Bootswatch 2.3.1
 // -----------------------------------------------------
 
@@ -45,7 +45,12 @@ h6 {
 // NAVBAR
 // --------------------------------------------------
 
-
+.navbar-inverse .navbar-search .search-query
+{
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
 
 // NAVIGATION
 // --------------------------------------------------
@@ -55,12 +60,23 @@ h6 {
   background-image: url("../img/glyphicons-halflings-white.png");
 }
 
+.navbar .nav>.active>a, .navbar .nav>.active>a:hover, .navbar .nav>.active>a:focus
+{
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.nav>li>a{
+  text-shadow: none !important;
+  font-size: 15px;
+}
 // BUTTONS
 // --------------------------------------------------
 
 .btn {
     border: none;
-    background: #34495e;
+    background-image: none;
     color: white;
     font-size: 16.5px;
     text-decoration: none;
@@ -76,7 +92,6 @@ h6 {
 }
 .btn:hover,
 .btn:focus {
-    background-color: #4e6d8d;
     color: white;
     -webkit-transition: 0.25s;
     -moz-transition: 0.25s;
@@ -86,7 +101,6 @@ h6 {
 }
 .btn:active,
 .btn.active {
-    background-color: #2c3e50;
     color: rgba(255, 255, 255, 0.75);
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
@@ -94,38 +108,12 @@ h6 {
 }
 .btn.disabled,
 .btn[disabled] {
-    background-color: #95a5a6;
     color: white;
 }
 .btn.btn-large {
     padding-bottom: 12px;
     padding-top: 13px;
 }
-.btn.btn-primary { background-color: #1abc9c }
-.btn.btn-primary:hover,
-.btn.btn-primary:focus { background-color: #2fe2bf }
-.btn.btn-primary:active,
-.btn.btn-primary.active { background-color: #16a085 }
-.btn.btn-info { background-color: #3498db }
-.btn.btn-info:hover,
-.btn.btn-info:focus { background-color: #5dade2 }
-.btn.btn-info:active,
-.btn.btn-info.active { background-color: #2383c4 }
-.btn.btn-danger { background-color: #e74c3c }
-.btn.btn-danger:hover,
-.btn.btn-danger:focus { background-color: #ec7063 }
-.btn.btn-danger:active,
-.btn.btn-danger.active { background-color: #dc2d1b }
-.btn.btn-success { background-color: #2ecc71 }
-.btn.btn-success:hover,
-.btn.btn-success:focus { background-color: #55d98d }
-.btn.btn-success:active,
-.btn.btn-success.active { background-color: #27ad60 }
-.btn.btn-warning { background-color: #f1c40f }
-.btn.btn-warning:hover,
-.btn.btn-warning:focus { background-color: #f4d03f }
-.btn.btn-warning:active,
-.btn.btn-warning.active { background-color: #cea70c }
 .btn-toolbar .btn {
     font-size: 18px;
     padding: 10px 14px 9px;
@@ -142,8 +130,8 @@ h6 {
 }
 .btn-toolbar .btn.active { color: white }
 
-.btn [class^="icon-"], .btn  [class*=" icon-"]{
-	background-image: url("../img/glyphicons-halflings-white.png");
+.btn-small{
+  font-size: 12px;
 }
 // TABLES
 // -----------------------------------------------------
@@ -185,7 +173,9 @@ input[type="color"],
   border-radius: 6px;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
-  box-shadow: none; }
+  box-shadow: none; 
+}
+
   textarea:-moz-placeholder,
   input[type="text"]:-moz-placeholder,
   input[type="password"]:-moz-placeholder,
@@ -202,7 +192,8 @@ input[type="color"],
   input[type="tel"]:-moz-placeholder,
   input[type="color"]:-moz-placeholder,
   .uneditable-input:-moz-placeholder {
-    color: #acb6c0; }
+    color: #acb6c0; 
+  }
   textarea::-webkit-input-placeholder,
   input[type="text"]::-webkit-input-placeholder,
   input[type="password"]::-webkit-input-placeholder,
@@ -219,7 +210,8 @@ input[type="color"],
   input[type="tel"]::-webkit-input-placeholder,
   input[type="color"]::-webkit-input-placeholder,
   .uneditable-input::-webkit-input-placeholder {
-    color: #acb6c0; }
+    color: #acb6c0; 
+  }
   textarea.placeholder,
   input[type="text"].placeholder,
   input[type="password"].placeholder,
@@ -236,7 +228,8 @@ input[type="color"],
   input[type="tel"].placeholder,
   input[type="color"].placeholder,
   .uneditable-input.placeholder {
-    color: #acb6c0; }
+    color: #acb6c0; 
+  }
   textarea:focus,
   input[type="text"]:focus,
   input[type="password"]:focus,
@@ -256,7 +249,8 @@ input[type="color"],
     border-color: #1abc9c;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
-    box-shadow: none; }
+    box-shadow: none; 
+  }
   .control-group.error textarea, .control-group.error
   input[type="text"], .control-group.error
   input[type="password"], .control-group.error
@@ -277,7 +271,8 @@ input[type="color"],
     color: #e74c3c;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
-    box-shadow: none; }
+    box-shadow: none; 
+  }
     .control-group.error textarea:focus, .control-group.error
     input[type="text"]:focus, .control-group.error
     input[type="password"]:focus, .control-group.error
@@ -296,7 +291,8 @@ input[type="color"],
     .uneditable-input:focus {
       -webkit-box-shadow: none;
       -moz-box-shadow: none;
-      box-shadow: none; }
+      box-shadow: none; 
+    }
   .control-group.success textarea, .control-group.success
   input[type="text"], .control-group.success
   input[type="password"], .control-group.success
@@ -317,7 +313,8 @@ input[type="color"],
     color: #2ecc71;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
-    box-shadow: none; }
+    box-shadow: none; 
+  }
     .control-group.success textarea:focus, .control-group.success
     input[type="text"]:focus, .control-group.success
     input[type="password"]:focus, .control-group.success
@@ -336,7 +333,8 @@ input[type="color"],
     .uneditable-input:focus {
       -webkit-box-shadow: none;
       -moz-box-shadow: none;
-      box-shadow: none; }
+      box-shadow: none; 
+    }
   .control-group.warning textarea, .control-group.warning
   input[type="text"], .control-group.warning
   input[type="password"], .control-group.warning
@@ -357,7 +355,8 @@ input[type="color"],
     color: #f1c40f;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
-    box-shadow: none; }
+    box-shadow: none; 
+  }
     .control-group.warning textarea:focus, .control-group.warning
     input[type="text"]:focus, .control-group.warning
     input[type="password"]:focus, .control-group.warning
@@ -376,7 +375,8 @@ input[type="color"],
     .uneditable-input:focus {
       -webkit-box-shadow: none;
       -moz-box-shadow: none;
-      box-shadow: none; }
+      box-shadow: none; 
+    }
   .control-group.info textarea, .control-group.info
   input[type="text"], .control-group.info
   input[type="password"], .control-group.info
@@ -397,7 +397,8 @@ input[type="color"],
     color: #3498db;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
-    box-shadow: none; }
+    box-shadow: none; 
+  }
     .control-group.info textarea:focus, .control-group.info
     input[type="text"]:focus, .control-group.info
     input[type="password"]:focus, .control-group.info
@@ -416,7 +417,8 @@ input[type="color"],
     .uneditable-input:focus {
       -webkit-box-shadow: none;
       -moz-box-shadow: none;
-      box-shadow: none; }
+      box-shadow: none; 
+    }
 
 input[disabled],
 input[readonly],
@@ -435,6 +437,11 @@ input[type="file"]{
 
 .btn.dropdown-toggle .caret{
 	border-top-color: white;
+}
+
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus, .dropdown-submenu:hover>a, .dropdown-submenu:focus>a
+{
+  background-image: none;
 }
 
 
@@ -479,22 +486,22 @@ input[type="file"]{
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 
-.progress .bar-success{
+.progress-success .bar{
   background-color: #2ecc71;
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 
-.progress .bar-warning{
+.progress-warning .bar{
   background-color: #f1c40f;
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 
-.progress .bar-danger{
+.progress-danger .bar{
   background-color: #e74c3c;
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 
-.progress .bar-info{
+.progress-info .bar{
   background-color: #3498db;
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }

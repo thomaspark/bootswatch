@@ -1,4 +1,4 @@
-// Flat by Jenil(www.jgog.in)
+// Flatness by Jenil(www.jgog.in)
 // Bootswatch 2.3.1
 // --------------------------------------------------
 
@@ -47,7 +47,7 @@
 @serifFontFamily:       Georgia, "Times New Roman", Times, serif;
 @monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
 
-@baseFontSize:          14px;
+@baseFontSize:          15px;
 @baseFontFamily:        @sansFontFamily;
 @baseLineHeight:        20px;
 @altFontFamily:         @serifFontFamily;
@@ -83,18 +83,18 @@
 
 // Buttons
 // -------------------------
-@btnBackground:                     @white;
-@btnBackgroundHighlight:            darken(@white, 10%);
+@btnBackground:                     @gray;
+@btnBackgroundHighlight:            lighten(@btnBackground,10%);
 @btnBorder:                         #bbb;
 
-@btnPrimaryBackground:              @linkColor;
-@btnPrimaryBackgroundHighlight:     spin(@btnPrimaryBackground, 20%);
+@btnPrimaryBackground:              @textColor;
+@btnPrimaryBackgroundHighlight:     #4e6d8d;
 
-@btnInfoBackground:                 #5bc0de;
-@btnInfoBackgroundHighlight:        #2f96b4;
+@btnInfoBackground:                 @blue;
+@btnInfoBackgroundHighlight:        #2383c4;
 
-@btnSuccessBackground:              #62c462;
-@btnSuccessBackgroundHighlight:     #51a351;
+@btnSuccessBackground:              @green;
+@btnSuccessBackgroundHighlight:     #55d98d;
 
 @btnWarningBackground:              lighten(@orange, 15%);
 @btnWarningBackgroundHighlight:     @orange;
@@ -102,14 +102,14 @@
 @btnDangerBackground:               #ee5f5b;
 @btnDangerBackgroundHighlight:      #bd362f;
 
-@btnInverseBackground:              #444;
-@btnInverseBackgroundHighlight:     @grayDarker;
+@btnInverseBackground:              @purple;
+@btnInverseBackgroundHighlight:     #9B59B6;
 
 
 // Forms
 // -------------------------
 @inputBackground:               @white;
-@inputBorder:                   @grayLight;
+@inputBorder:                   #dce4ec;
 @inputBorderRadius:             @baseBorderRadius;
 @inputDisabledBackground:       #eaeded;
 @formActionsBackground:         #f5f5f5;
@@ -179,9 +179,9 @@
 @navbarCollapseWidth:             979px;
 @navbarCollapseDesktopWidth:      @navbarCollapseWidth + 1;
 
-@navbarHeight:                    40px;
-@navbarBackgroundHighlight:       #34495e;
-@navbarBackground:                #34495e;
+@navbarHeight:                    50px;
+@navbarBackgroundHighlight:       @textColor;
+@navbarBackground:                @textColor;
 @navbarBorder:                    darken(@navbarBackground, 12%);
 
 @navbarText:                      @white;
@@ -194,21 +194,21 @@
 @navbarBrandColor:                @navbarLinkColor;
 
 // Inverted navbar
-@navbarInverseBackground:                @red;
-@navbarInverseBackgroundHighlight:       @red;
-@navbarInverseBorder:                    #C0392B;
+@navbarInverseBackground:                @grayLighter;
+@navbarInverseBackgroundHighlight:       @grayLighter;
+@navbarInverseBorder:                    @grayLight;
 
-@navbarInverseText:                      @white;
-@navbarInverseLinkColor:                 @white;
-@navbarInverseLinkColorHover:            @white;
-@navbarInverseLinkColorActive:           @yellow;
+@navbarInverseText:                      @textColor;
+@navbarInverseLinkColor:                 @textColor;
+@navbarInverseLinkColorHover:            @linkColor;
+@navbarInverseLinkColorActive:           @linkColor;
 @navbarInverseLinkBackgroundHover:       transparent;
-@navbarInverseLinkBackgroundActive:      @navbarInverseBackground;
+@navbarInverseLinkBackgroundActive:      darken(@navbarInverseBackground, 5%);
 
 @navbarInverseSearchBackground:          lighten(@navbarInverseBackground, 25%);
 @navbarInverseSearchBackgroundFocus:     @white;
-@navbarInverseSearchBorder:              @navbarInverseBackground;
-@navbarInverseSearchPlaceholderColor:    @white;
+@navbarInverseSearchBorder:              @grayLight;
+@navbarInverseSearchPlaceholderColor:    @textColor;
 
 @navbarInverseBrandColor:                @navbarInverseLinkColor;
 
@@ -229,20 +229,20 @@
 
 // Form states and alerts
 // -------------------------
-@warningText:             darken(@yellow, 3%);
-@warningBackground:       lighten(@warningText,40%);
+@warningText:             desaturate(@yellow,10%);
+@warningBackground:       desaturate(lighten(@yellow,45%),30%);
 @warningBorder:           darken(spin(@warningBackground, -10), 3%);
 
-@errorText:               darken(@red, 3%);
-@errorBackground:         lighten(@errorText,40%);
+@errorText:               @red;
+@errorBackground:         desaturate(lighten(@red,42%),30%);
 @errorBorder:             darken(spin(@errorBackground, -10), 3%);
 
-@successText:             #27AE60;
-@successBackground:       lighten(@successText,40%);
+@successText:             desaturate(@green,20%);
+@successBackground:       desaturate(lighten(@green,45%),30%);
 @successBorder:           darken(spin(@successBackground, -10), 5%);
 
-@infoText:                darken(@blue, 3%);
-@infoBackground:          lighten(@infoText,40%);
+@infoText:                @blue;
+@infoBackground:          desaturate(lighten(@blue,43%),30%);
 @infoBorder:              darken(spin(@infoBackground, -10), 7%);
 
 
