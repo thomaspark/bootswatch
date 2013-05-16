@@ -6417,6 +6417,11 @@ div.subnav.subnav-fixed .nav > li:first-child > a:hover {
   border: none;
 }
 
+.nav > li.disabled > a,
+.nav > li.disabled > a:hover {
+  color: #52575c;
+}
+
 .nav li > a:hover {
   color: #bbbfc2;
   background-color: transparent;
@@ -6601,6 +6606,14 @@ div.subnav.subnav-fixed .nav > li:first-child > a:hover {
 .pager .disabled a,
 .pager .disabled a:hover {
   background-color: transparent;
+  background-color: #3a3f44;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#52575c), color-stop(70%, #3a3f44), to(#3a3f44));
+  background-image: -webkit-linear-gradient(#52575c, #3a3f44 70%, #3a3f44);
+  background-image: -moz-linear-gradient(top, #52575c, #3a3f44 70%, #3a3f44);
+  background-image: -o-linear-gradient(#52575c, #3a3f44 70%, #3a3f44);
+  background-image: linear-gradient(#52575c, #3a3f44 70%, #3a3f44);
+  background-repeat: no-repeat;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff52575c', endColorstr='#ff3a3f44', GradientType=0);
 }
 
 .btn {

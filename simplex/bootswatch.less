@@ -192,6 +192,11 @@ div.subnav {
 		background-color: @bodyBackground;
 	}
 
+	& > li.disabled > a:hover {
+		background-color: darken(@bodyBackground, 3%);
+		color: @grayLight;
+	}
+
 	.dropdown {
 
 		.dropdown-toggle .caret {
@@ -263,6 +268,10 @@ div.subnav {
 	li.active > a:hover {
 		background-color: @dropdownLinkBackgroundHover;
 		color: @linkColor;
+	}
+
+	& > li.disabled > a:hover {
+		color: @grayLight;
 	}
 
 	.dropdown .dropdown-toggle .caret {
@@ -401,11 +410,9 @@ legend {
 // -----------------------------------------------------
 
 .label {
-	padding: 4px 4px 3px;
+	padding: 6px 12px;
 	margin-left: 1px;
 	margin-right: 1px;
-	line-height: 26px;
-	font-weight: normal;
 }
 
 // MISCELLANEOUS

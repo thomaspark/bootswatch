@@ -226,29 +226,35 @@ div.subnav {
 }
 
 .nav-list {
+
 	padding: 0 15px;
+
+	& > li > a, 
+	& > .nav-header {
+		text-shadow: none;
+		color: @textColor;
+	}
+
+	.active > a,
+	.active > a:hover {
+		text-shadow: none;
+		color: @white;
+	}
+	
+	li > a:hover {
+		background-color: lighten(@blue, 10%);
+	}
+
 }
 
-.nav-list > li > a, .nav-list .nav-header {
-	text-shadow: none;
-	color: @textColor;
-}
-
-.nav-list .active > a, .nav-list .active > a:hover {
-	text-shadow: none;
-	color: @white;
-}
-
-.nav-list li > a:hover {
-	background-color: lighten(@blue, 10%);
-}
-
-.nav-tabs, .nav-tabs.nav-stacked > li > a {
+.nav-tabs,
+.nav-tabs.nav-stacked > li > a {
 	border-color: transparent;
 }
 
 .nav-tabs {
-	> li > a {
+
+	& > li > a {
 		background-color: @blue;
 		color: @textColor;
 	}
@@ -266,16 +272,27 @@ div.subnav {
 		background-color: lighten(@blue, 10%);
 		border-color: transparent;
 	}
+
+	li.disabled > a:hover {
+		background-color: @blue;
+	}
 }
 
-.nav-pills > li > a {
-	color: @textColor;
-	background-color: @blue;
-}
+.nav-pills {
 
-.nav-pills > li:hover > a {
-	background-color: lighten(@blue, 10%);
-	border-color: transparent;
+	& > li > a {
+		color: @textColor;
+		background-color: @blue;
+	}
+
+	& > li > a:hover {
+		background-color: lighten(@blue, 10%);
+		border-color: transparent;
+	}
+
+	& > .disabled > a:hover {
+		background-color: @blue;
+	}
 }
 
 .nav-tabs .open .dropdown-toggle,
@@ -353,10 +370,12 @@ div.subnav {
 
 .pager {
 
-	a {
-		color: @textColor;
+	li > a,
+	li > span {
+
 		background-color: @blue;
-		border-color: transparent;
+		border: none;
+		color: @textColor;
 
 		&:hover {
 			background: lighten(@blue, 10%);

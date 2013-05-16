@@ -106,7 +106,7 @@
 	.navbar-inverse .nav-collapse {
 
 		.nav li > a {
-			color: @grayLighter;
+			color: @grayLight !important;
 
 			&:hover {
 				background-color: @linkColor !important;
@@ -221,6 +221,10 @@ div.subnav {
 
 .control-group.success {
 	.formFieldState(#2BA949, #2BA949, @successBackground);
+}
+
+.control-group.info {
+	.formFieldState(@blue, @blue, @infoBackground);
 }
 
 // DROPDOWNS
