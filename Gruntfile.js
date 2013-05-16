@@ -106,4 +106,8 @@ module.exports = function (grunt) {
 		var t = this.target;
 		grunt.task.run('build:'+t, 'build-responsive:'+t);
 	});
+	
+	grunt.registerTask('default', 'build a theme, both not responsive and responsive', function() {
+		grunt.task.run('swatch');
+	});
 };
