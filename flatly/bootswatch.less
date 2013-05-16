@@ -174,8 +174,8 @@ div.subnav {
 
 		& > .active > a,
 		& > .active > a:hover {
-			background-color: @orange;
-			color: @white;
+			background-color: @paginationActiveBackground;
+			color: @textColor;
 		}
 
 		& > .disabled > a,
@@ -368,7 +368,7 @@ legend {
 // --------------------------------------------------
 
 .alert {
-	background-color: @orange;
+	background-color: lighten(@orange,15%);
 	color: @white;
 	text-shadow: none;
 
@@ -422,19 +422,19 @@ legend {
 		.box-shadow(none);
 	}
 
-	&-success .bar {
+	&-success .bar, &-success.progress-striped .bar {
 		background-color: @green;
 	}
 
-	&-warning .bar {
-		background-color: @orange;
+	&-warning .bar, &-warning.progress-striped .bar {
+		background-color: @yellow;
 	}
 
-	&-danger .bar {
-		background-color: @green;
+	&-danger .bar, &-danger.progress-striped .bar {
+		background-color: @red;
 	}
 
-	&-info .bar {
+	&-info .bar, &-info.progress-striped .bar {
 		background-color: @blue;
 	}
 }
