@@ -6644,29 +6644,49 @@ legend {
 }
 
 .progress .bar {
-  background: #2c3e50;
+  background-color: #2c3e50;
+  background-image: none;
   -webkit-box-shadow: none;
      -moz-box-shadow: none;
           box-shadow: none;
 }
 
+.progress .bar + .bar {
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+          box-shadow: none;
+}
+
+.progress-striped .bar {
+  background-color: #2c3e50;
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+
 .progress-success .bar,
-.progress-success.progress-striped .bar {
+.progress-success.progress-striped .bar,
+.progress .bar-success {
   background-color: #18bc9c;
 }
 
 .progress-warning .bar,
-.progress-warning.progress-striped .bar {
+.progress-warning.progress-striped .bar,
+.progress .bar-warning {
   background-color: #e6bb0d;
 }
 
 .progress-danger .bar,
-.progress-danger.progress-striped .bar {
+.progress-danger.progress-striped .bar,
+.progress .bar-danger {
   background-color: #e74c3c;
 }
 
 .progress-info .bar,
-.progress-info.progress-striped .bar {
+.progress-info.progress-striped .bar,
+.progress .bar-info {
   background-color: #3498db;
 }
 

@@ -422,23 +422,40 @@ legend {
 	.box-shadow(none);
 
 	.bar {
-		background: @textColor;
+		background-color: @blueDark;
+		background-image: none;
 		.box-shadow(none);
 	}
 
-	&-success .bar, &-success.progress-striped .bar {
+	.bar + .bar {
+		.box-shadow(none);
+	}
+
+	&-striped .bar {
+		#gradient > .striped(@blueDark);
+	}
+
+	&-success .bar,
+	&-success.progress-striped .bar,
+	.bar-success {
 		background-color: @green;
 	}
 
-	&-warning .bar, &-warning.progress-striped .bar {
+	&-warning .bar,
+	&-warning.progress-striped .bar,
+	.bar-warning {
 		background-color: @yellow;
 	}
 
-	&-danger .bar, &-danger.progress-striped .bar {
+	&-danger .bar,
+	&-danger.progress-striped .bar,
+	.bar-danger {
 		background-color: @red;
 	}
 
-	&-info .bar, &-info.progress-striped .bar {
+	&-info .bar,
+	&-info.progress-striped .bar,
+	.bar-info {
 		background-color: @blue;
 	}
 }
