@@ -6248,6 +6248,11 @@ p {
           box-shadow: none;
 }
 
+.navbar .btn,
+.navbar .btn-group {
+  margin-top: 6px;
+}
+
 .navbar-inverse .brand:hover {
   color: #2c3e50;
 }
@@ -6365,7 +6370,7 @@ div.subnav .nav > .active > a:hover {
 }
 
 .btn {
-  padding: 8px 20px;
+  padding: 9px 20px;
   color: #ffffff;
   text-decoration: none;
   text-shadow: none;
@@ -6516,6 +6521,73 @@ input[type="color"]:focus,
   -webkit-box-shadow: none;
      -moz-box-shadow: none;
           box-shadow: none;
+}
+
+.input-prepend .add-on:first-child,
+.input-prepend .btn:first-child {
+  -webkit-border-radius: 6px 0 0 6px;
+     -moz-border-radius: 6px 0 0 6px;
+          border-radius: 6px 0 0 6px;
+}
+
+.input-append input,
+.input-append select,
+.input-append .uneditable-input {
+  -webkit-border-radius: 6px 0 0 6px;
+     -moz-border-radius: 6px 0 0 6px;
+          border-radius: 6px 0 0 6px;
+}
+
+.input-append input + .btn-group .btn:last-child,
+.input-append select + .btn-group .btn:last-child,
+.input-append .uneditable-input + .btn-group .btn:last-child {
+  -webkit-border-radius: 0 6px 6px 0;
+     -moz-border-radius: 0 6px 6px 0;
+          border-radius: 0 6px 6px 0;
+}
+
+.input-append .add-on:last-child,
+.input-append .btn:last-child,
+.input-append .btn-group:last-child > .dropdown-toggle {
+  -webkit-border-radius: 0 6px 6px 0;
+     -moz-border-radius: 0 6px 6px 0;
+          border-radius: 0 6px 6px 0;
+}
+
+.input-prepend.input-append input,
+.input-prepend.input-append select,
+.input-prepend.input-append .uneditable-input {
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
+}
+
+.input-prepend.input-append input + .btn-group .btn,
+.input-prepend.input-append select + .btn-group .btn,
+.input-prepend.input-append .uneditable-input + .btn-group .btn {
+  -webkit-border-radius: 0 6px 6px 0;
+     -moz-border-radius: 0 6px 6px 0;
+          border-radius: 0 6px 6px 0;
+}
+
+.input-prepend.input-append .add-on:first-child,
+.input-prepend.input-append .btn:first-child {
+  -webkit-border-radius: 6px 0 0 6px;
+     -moz-border-radius: 6px 0 0 6px;
+          border-radius: 6px 0 0 6px;
+}
+
+.input-prepend.input-append .add-on:last-child,
+.input-prepend.input-append .btn:last-child {
+  -webkit-border-radius: 0 6px 6px 0;
+     -moz-border-radius: 0 6px 6px 0;
+          border-radius: 0 6px 6px 0;
+}
+
+.input-append .add-on,
+.input-prepend .add-on {
+  padding: 9px 5px;
+  text-shadow: none;
 }
 
 .control-group.error,
@@ -6710,7 +6782,7 @@ legend {
 
 .modal-footer {
   background-color: #ecf0f1;
-  border-top: 2px solid rgba(0, 0, 0, 0.2);
+  border-top: none;
   -webkit-box-shadow: none;
      -moz-box-shadow: none;
           box-shadow: none;

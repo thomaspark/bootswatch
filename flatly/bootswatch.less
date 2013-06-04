@@ -90,6 +90,10 @@ p {
 		.box-shadow(none);
 	}
 
+	.btn, .btn-group {
+		margin-top: 6px;
+	}
+
 	&-inverse {
 
 		.brand:hover {
@@ -223,7 +227,7 @@ div.subnav {
 // --------------------------------------------------
 
 .btn {
-	padding: 8px 20px;
+	padding: 9px 20px;
 	border: none;
 	background-image: none;
 	color: @white;
@@ -293,7 +297,7 @@ input[type="color"],
 	padding: 7px 6px;
 	border: 2px solid #dce4ec;
 	text-indent: 1px;
-	.border-radius(6px);
+	.border-radius(@inputBorderRadius);
 	.box-shadow(none);
 	.placeholder(#acb6c0);
 
@@ -302,7 +306,65 @@ input[type="color"],
 		.box-shadow(none);
 
 	}
+}
 
+.input-prepend {
+
+  .add-on:first-child,
+  .btn:first-child {
+    .border-radius(@inputBorderRadius 0 0 @inputBorderRadius);
+  }
+}
+
+.input-append {
+
+  input,
+  select,
+  .uneditable-input {
+
+    .border-radius(@inputBorderRadius 0 0 @inputBorderRadius);
+
+    + .btn-group .btn:last-child {
+      .border-radius(0 @inputBorderRadius @inputBorderRadius 0);
+    }
+  }
+
+  .add-on:last-child,
+  .btn:last-child,
+  .btn-group:last-child > .dropdown-toggle {
+    .border-radius(0 @inputBorderRadius @inputBorderRadius 0);
+  }
+}
+
+.input-prepend.input-append {
+
+  input,
+  select,
+  .uneditable-input {
+    .border-radius(0);
+    + .btn-group .btn {
+      .border-radius(0 @inputBorderRadius @inputBorderRadius 0);
+    }
+  }
+
+  .add-on:first-child,
+  .btn:first-child {
+    .border-radius(@inputBorderRadius 0 0 @inputBorderRadius);
+  }
+
+  .add-on:last-child,
+  .btn:last-child {
+    .border-radius(0 @inputBorderRadius @inputBorderRadius 0);
+  }
+}
+
+.input-append,
+.input-prepend {
+
+	.add-on {
+		padding: 9px 5px;
+		text-shadow: none;
+	}
 }
 
 .control-group.error,
@@ -485,7 +547,7 @@ legend {
 
 	&-footer {
 		background-color: @grayLighter;
-		border-top: 2px solid @dropdownDividerTop;
+		border-top: none;
 		.box-shadow(none);
 	}
 }
