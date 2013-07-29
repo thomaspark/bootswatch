@@ -516,13 +516,17 @@ legend {
 }
 
 legend, label, .help-block, .input-file {
-	border: 0px solid transparent;
+	border: none;
 	color: inherit;
 }
 
 input, textarea, .uneditable-input {
-	border: 0px solid transparent;
+	border: none;
 	padding: 10px;
+}
+
+.dropdown input {
+	border: 1px solid @dropdownBorder;
 }
 
 .uneditable-input {
@@ -530,7 +534,7 @@ input, textarea, .uneditable-input {
 }
 
 select {
-	border: 0px solid transparent;
+	border: none;
 }
 
 button {
