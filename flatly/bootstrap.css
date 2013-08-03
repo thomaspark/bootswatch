@@ -3,11 +3,11 @@
 /*!
  * Bootstrap v2.3.2
  *
- * Copyright 2012 Twitter, Inc
+ * Copyright 2013 Twitter, Inc
  * Licensed under the Apache License v2.0
  * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ * Designed and built with all the love in the world by @mdo and @fat.
  */
 
 .clearfix {
@@ -1491,7 +1491,7 @@ input[type="checkbox"][readonly] {
 .control-group.warning .input-prepend .add-on,
 .control-group.warning .input-append .add-on {
   color: #e6bb0d;
-  background-color: #f7f3e1;
+  background-color: #e6bb0d;
   border-color: #e6bb0d;
 }
 
@@ -1530,7 +1530,7 @@ input[type="checkbox"][readonly] {
 .control-group.error .input-prepend .add-on,
 .control-group.error .input-append .add-on {
   color: #e74c3c;
-  background-color: #ffffff;
+  background-color: #e74c3c;
   border-color: #e74c3c;
 }
 
@@ -1569,7 +1569,7 @@ input[type="checkbox"][readonly] {
 .control-group.success .input-prepend .add-on,
 .control-group.success .input-append .add-on {
   color: #18bc9c;
-  background-color: #cdede7;
+  background-color: #18bc9c;
   border-color: #18bc9c;
 }
 
@@ -1608,7 +1608,7 @@ input[type="checkbox"][readonly] {
 .control-group.info .input-prepend .add-on,
 .control-group.info .input-append .add-on {
   color: #3498db;
-  background-color: #f1f6f9;
+  background-color: #3498db;
   border-color: #3498db;
 }
 
@@ -2244,35 +2244,35 @@ table th[class*="span"],
 }
 
 .table tbody tr.success > td {
-  background-color: #cdede7;
+  background-color: #18bc9c;
 }
 
 .table tbody tr.error > td {
-  background-color: #ffffff;
+  background-color: #e74c3c;
 }
 
 .table tbody tr.warning > td {
-  background-color: #f7f3e1;
+  background-color: #e6bb0d;
 }
 
 .table tbody tr.info > td {
-  background-color: #f1f6f9;
+  background-color: #3498db;
 }
 
 .table-hover tbody tr.success:hover > td {
-  background-color: #bae6de;
+  background-color: #15a589;
 }
 
 .table-hover tbody tr.error:hover > td {
-  background-color: #f2f2f2;
+  background-color: #e43725;
 }
 
 .table-hover tbody tr.warning:hover > td {
-  background-color: #f2ebcd;
+  background-color: #cea70c;
 }
 
 .table-hover tbody tr.info:hover > td {
-  background-color: #dfeaf1;
+  background-color: #258cd1;
 }
 
 [class^="icon-"],
@@ -3879,7 +3879,7 @@ input[type="submit"].btn.btn-mini {
   padding: 8px 35px 8px 14px;
   margin-bottom: 20px;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-  background-color: #f7f3e1;
+  background-color: #e6bb0d;
   border: 1px solid transparent;
   -webkit-border-radius: 6px;
      -moz-border-radius: 6px;
@@ -3904,7 +3904,7 @@ input[type="submit"].btn.btn-mini {
 
 .alert-success {
   color: #18bc9c;
-  background-color: #cdede7;
+  background-color: #18bc9c;
   border-color: transparent;
 }
 
@@ -3915,7 +3915,7 @@ input[type="submit"].btn.btn-mini {
 .alert-danger,
 .alert-error {
   color: #e74c3c;
-  background-color: #ffffff;
+  background-color: #e74c3c;
   border-color: transparent;
 }
 
@@ -3926,7 +3926,7 @@ input[type="submit"].btn.btn-mini {
 
 .alert-info {
   color: #3498db;
-  background-color: #f1f6f9;
+  background-color: #3498db;
   border-color: transparent;
 }
 
@@ -6415,6 +6415,13 @@ div.subnav .nav > .active > a:hover {
 
 .btn-mini {
   padding: 1px 8px;
+}
+
+.table tbody tr.success > td,
+.table tbody tr.error > td,
+.table tbody tr.warning > td,
+.table tbody tr.info > td {
+  color: #ffffff;
 }
 
 textarea,
