@@ -1,0 +1,304 @@
+// Slate 3.0.0
+// Bootswatch
+// -----------------------------------------------------
+
+.btn-shadow(@color) {
+	#gradient > .vertical-three-colors(lighten(@color, 6%), @color, 60%, darken(@color, 4%));
+}
+
+.btn-shadow-inverse(@color) {
+	#gradient > .vertical-three-colors(darken(@color, 24%), darken(@color, 18%), 40%, darken(@color, 14%));
+}
+
+// Navbar =====================================================================
+
+.navbar {
+
+	.btn-shadow(@navbar-bg);
+	border: 1px solid rgba(0, 0, 0, 0.6);
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+
+	&-inverse {
+		.btn-shadow(@navbar-inverse-bg);
+	}
+
+	&-brand {
+		margin-right: 0;
+		border-right: 1px solid rgba(0, 0, 0, 0.4);
+
+		&:hover {
+			.btn-shadow-inverse(@navbar-bg);
+		}
+	}
+
+	&-nav > li > a {
+		border-right: 1px solid rgba(0, 0, 0, 0.2);
+		border-left: 1px solid rgba(255, 255, 255, 0.1);
+
+		&:hover {
+			.btn-shadow-inverse(@navbar-bg);
+			border-left-color: transparent;
+		}
+	}
+
+	&-nav > li.active > a {
+		border-left-color: transparent;
+	}
+
+	&-form {
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+}
+
+// Buttons ====================================================================
+
+.btn,
+.btn:hover {
+	border-color: rgba(0, 0, 0, 0.6);
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.btn-default {
+	.btn-shadow(@btn-default-bg);
+}
+
+.btn-primary {
+	.btn-shadow(@btn-primary-bg);
+}
+
+.btn-success {
+	.btn-shadow(@btn-success-bg);
+}
+
+.btn-info {
+	.btn-shadow(@btn-info-bg);
+}
+
+.btn-warning {
+	.btn-shadow(@btn-warning-bg);
+}
+
+.btn-danger {
+	.btn-shadow(@btn-danger-bg);
+}
+
+.btn-default:hover {
+	.btn-shadow-inverse(@btn-default-bg);
+}
+
+.btn-primary:hover {
+	.btn-shadow-inverse(@btn-primary-bg);
+}
+
+.btn-success:hover {
+	.btn-shadow-inverse(@btn-success-bg);
+}
+
+.btn-info:hover {
+	.btn-shadow-inverse(@btn-info-bg);
+}
+
+.btn-warning:hover {
+	.btn-shadow-inverse(@btn-warning-bg);
+}
+
+.btn-danger:hover {
+	.btn-shadow-inverse(@btn-danger-bg);
+}
+
+// Typography =================================================================
+
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
+}
+
+.text-primary {
+	color: @brand-primary;
+}
+
+.text-success {
+	color: @brand-success;
+}
+
+.text-danger {
+	color: @brand-danger;
+}
+
+.text-warning {
+	color: @brand-warning;
+}
+
+.text-info {
+	color: @brand-info;
+}
+
+// Tables =====================================================================
+
+.table {
+
+	tr.success,
+	tr.warning,
+	tr.danger {
+		color: #fff;
+	}
+
+	&-bordered tbody {
+
+		tr.success,
+		tr.warning,
+		tr.danger {
+
+			td,
+			&:hover td {
+				border-color: @table-border-color;
+			}
+		}
+	}
+}
+
+// Forms ======================================================================
+
+.has-warning {
+	.help-block,
+	.control-label {
+		color: @brand-warning;
+	}
+
+	.form-control,
+	.form-control:focus {
+		border-color: @brand-warning;
+	}
+}
+
+.has-error {
+	.help-block,
+	.control-label {
+		color: @brand-danger;
+	}
+
+	.form-control,
+	.form-control:focus {
+		border-color: @brand-danger;
+	}
+}
+
+.has-success {
+	.help-block,
+	.control-label {
+		color: @brand-success;
+	}
+
+	.form-control,
+	.form-control:focus {
+		border-color: @brand-success;
+	}
+}
+
+legend {
+	color: #fff;
+}
+
+.input-group-addon {
+	border-color: rgba(0, 0, 0, 0.6);
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+	.btn-shadow(@btn-default-bg);
+}
+
+// Navs =======================================================================
+
+.nav-pills {
+	& > li > a {
+		.btn-shadow(@btn-default-bg);
+		border: 1px solid rgba(0, 0, 0, 0.6);
+		text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+
+		&:hover {
+			.btn-shadow-inverse(@btn-default-bg);
+			border: 1px solid rgba(0, 0, 0, 0.6);
+		}
+	}
+
+	& > li.active > a,
+	& > li.active > a:hover {
+		bacground-color: none;
+		.btn-shadow-inverse(@btn-default-bg);
+		border: 1px solid rgba(0, 0, 0, 0.6);
+	}
+
+	& > li.disabled > a,
+	& > li.disabled > a:hover {
+		.btn-shadow(@btn-default-bg);
+	}
+}
+
+.pagination {
+
+	& > li > a {
+		text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+		.btn-shadow(@btn-default-bg);
+
+		&:hover {
+			.btn-shadow-inverse(@btn-default-bg);
+		}
+	}
+
+	& > li.active > a {
+		.btn-shadow-inverse(@btn-default-bg);
+	}
+
+	& > li.disabled > a,
+	& > li.disabled > a:hover {
+		background-color: transparent;
+		.btn-shadow(@btn-default-bg);
+	}
+}
+
+.pager {
+
+	& > li > a {
+		.btn-shadow(@btn-default-bg);
+		border: 1px solid rgba(0, 0, 0, 0.6);
+		text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+
+		&:hover {
+			.btn-shadow-inverse(@btn-default-bg);
+			border: 1px solid rgba(0, 0, 0, 0.6);
+		}
+	}
+
+	& > li.disabled > a,
+	& > li.disabled > a:hover {
+		background-color: transparent;
+		.btn-shadow(@btn-default-bg);
+	}
+}
+
+.breadcrumb {
+	border: 1px solid rgba(0, 0, 0, 0.6);
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+	.btn-shadow(@btn-default-bg);
+}
+
+// Indicators =================================================================
+
+.alert {
+
+	.alert-link,
+	a {
+		color: #fff;
+		text-decoration: underline;
+	}
+}
+
+// Progress bars ==============================================================
+
+// Containers =================================================================
+
+.jumbotron {
+	border: 1px solid rgba(0, 0, 0, 0.6);
+}
+
+.list-group-item {
+	background-color: lighten(@body-bg, 5%);
+}

@@ -1,0 +1,98 @@
+// Spacelab 3.0.0
+// Bootswatch
+// -----------------------------------------------------
+
+@import url("//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700");
+
+.btn-shadow(@color) {
+	#gradient > .vertical-three-colors(lighten(@color, 15%), @color, 50%, darken(@color, 4%));
+	border: 1px solid darken(@color, 10%);
+}
+
+// Navbar =====================================================================
+
+.navbar {
+
+	.btn-shadow(@navbar-bg);
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+
+	&-inverse {
+		.btn-shadow(@navbar-inverse-bg);
+		text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+	}
+
+	&-nav > li > a,
+	&-nav > li > a:hover {
+		padding-top: @navbar-padding-vertical + 2px;
+		padding-bottom: @navbar-padding-vertical - 2px;
+		.transition(color ease-in-out .2s);
+	}
+	
+	&-brand,
+	&-brand:hover {
+		.transition(color ease-in-out .2s);
+	}
+
+	.caret,
+	.caret:hover {
+		.transition(border-color ease-in-out .2s);
+	}
+
+	.dropdown-menu {
+		text-shadow: none;
+	}
+}
+
+// Buttons ====================================================================
+
+.btn {
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+}
+
+.btn-default,
+.btn-default:hover {
+	.btn-shadow(@btn-default-bg);
+}
+
+.btn-primary,
+.btn-primary:hover {
+	.btn-shadow(@btn-primary-bg);
+}
+
+.btn-success,
+.btn-success:hover {
+	.btn-shadow(@btn-success-bg);
+}
+
+.btn-info,
+.btn-info:hover {
+	.btn-shadow(@btn-info-bg);
+}
+
+.btn-warning,
+.btn-warning:hover {
+	.btn-shadow(@btn-warning-bg);
+}
+
+.btn-danger,
+.btn-danger:hover {
+	.btn-shadow(@btn-danger-bg);
+}
+
+// Typography =================================================================
+
+h1, h2, h3, h4, h5, h6 {
+	color: @gray-darker;
+}
+
+// Tables =====================================================================
+
+// Forms ======================================================================
+
+// Navs =======================================================================
+
+// Indicators =================================================================
+
+// Progress bars ==============================================================
+
+// Containers =================================================================

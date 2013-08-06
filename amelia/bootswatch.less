@@ -1,0 +1,135 @@
+// Amelia 3.0.0
+// Bootswatch
+// -----------------------------------------------------
+
+@import url("//fonts.googleapis.com/css?family=Lobster|Cabin:400,700");
+
+// Navbar =====================================================================
+
+.navbar {
+
+	&-brand {
+		font-family: 'Lobster', cursive;
+	}
+}
+
+// Buttons ====================================================================
+
+.btn {
+	
+	.caret {
+		border-top-color: #fff;
+	}
+}
+
+.btn-default {
+
+	&:hover {
+		color: @btn-default-color;
+	}
+
+	.caret {
+		border-top-color: @btn-default-color;
+	}
+}
+
+// Typography =================================================================
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Lobster', cursive;
+}
+
+.text-primary {
+	color: lighten(@brand-primary, 40%);
+}
+
+.text-success {
+	color: lighten(@brand-success, 20%);
+}
+
+.text-danger {
+	color: lighten(@brand-danger, 20%);
+}
+
+.text-warning {
+	color: lighten(@brand-warning, 20%);
+}
+
+.text-info {
+	color: lighten(@brand-info, 40%);
+}
+
+// Tables =====================================================================
+
+// Forms ======================================================================
+
+.has-warning {
+	.help-block,
+	.control-label {
+		color: lighten(@brand-warning, 20%);
+	}
+
+	.form-control,
+	.form-control:focus {
+		border-color: lighten(@brand-warning, 20%);
+	}
+}
+
+.has-error {
+	.help-block,
+	.control-label {
+		color: lighten(@brand-primary, 40%);
+	}
+
+	.form-control,
+	.form-control:focus {
+		border-color: lighten(@brand-primary, 40%);
+	}
+}
+
+.has-success {
+	.help-block,
+	.control-label {
+		color: lighten(@brand-success, 20%);
+	}
+
+	.form-control,
+	.form-control:focus {
+		border-color: lighten(@brand-success, 20%);
+	}
+}
+
+legend {
+	font-family: 'Lobster', cursive;
+	color: #fff;
+}
+
+.input-group-addon {
+	color: @btn-default-color;
+}
+
+// Navs =======================================================================
+
+.pagination {
+
+	a:hover {
+		color: #fff;
+	}
+}
+
+.pager {
+
+	a:hover {
+		color: #fff;
+	}
+}
+
+// Indicators =================================================================
+
+// Progress bars ==============================================================
+
+// Containers =================================================================
+
+.list-group-item {
+	background-color: lighten(@body-bg, 5%);
+}

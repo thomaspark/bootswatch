@@ -1,0 +1,133 @@
+// Flatly 3.0.0
+// Bootswatch
+// -----------------------------------------------------
+
+@import url("//fonts.googleapis.com/css?family=Lato:400,700,900,400italic");
+
+// Navbar =====================================================================
+
+// Buttons ====================================================================
+
+// Typography =================================================================
+
+.text-primary {
+	color: @brand-primary;
+}
+
+.text-success {
+	color: @brand-success;
+}
+
+.text-danger {
+	color: @brand-danger;
+}
+
+.text-warning {
+	color: @brand-warning;
+}
+
+.text-info {
+	color: @brand-info;
+}
+
+// Tables =====================================================================
+
+.table {
+
+	tr.success,
+	tr.warning,
+	tr.danger {
+		color: #fff;
+	}
+}
+
+// Forms ======================================================================
+
+.has-warning {
+	.help-block,
+	.control-label {
+		color: @brand-warning;
+	}
+
+	.form-control,
+	.form-control:focus {
+		border: 2px solid @brand-warning;
+	}
+}
+
+.has-error {
+	.help-block,
+	.control-label {
+		color: @brand-danger;
+	}
+
+	.form-control,
+	.form-control:focus {
+		border: 2px solid @brand-danger;
+	}
+}
+
+.has-success {
+	.help-block,
+	.control-label {
+		color: @brand-success;
+	}
+
+	.form-control,
+	.form-control:focus {
+		border: 2px solid @brand-success;
+	}
+}
+
+// Navs =======================================================================
+
+.pagination {
+
+	a {
+		color: #fff;
+	}
+
+	.disabled {
+		&>a,
+		&>a:hover,
+		&>a:focus,
+		&>span {
+			background-color: lighten(@brand-success, 15%);
+		}
+	}
+}
+
+.pager {
+	a {
+		color: #fff;
+	}
+
+	.disabled {
+		&>a,
+		&>a:hover,
+		&>a:focus,
+		&>span {
+			background-color: lighten(@brand-success, 15%);
+		}
+	}
+}
+
+// Indicators =================================================================
+
+.alert {
+
+	a,
+	.alert-link {
+		color: #fff;
+		text-decoration: underline;
+	}
+}
+
+// Progress bars ==============================================================
+
+.progress {
+	height: 10px;
+	.box-shadow(none);
+}
+
+// Containers =================================================================

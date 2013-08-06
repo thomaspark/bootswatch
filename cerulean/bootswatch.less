@@ -1,0 +1,146 @@
+// Cerulean 3.0.0
+// Bootswatch
+// -----------------------------------------------------
+
+.btn-shadow(@color) {
+	#gradient > .vertical-three-colors(lighten(@color, 8%), @color, 60%, darken(@color, 4%));
+	border-bottom: 1px solid darken(@color, 10%);
+}
+
+// Navbar =====================================================================
+
+.navbar {
+	.btn-shadow(@navbar-bg);
+	.box-shadow(0 1px 10px rgba(0, 0, 0, 0.1));
+
+	.navbar-nav > li > a,
+	&-brand {
+		text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+	}
+}
+
+.navbar-inverse {
+	#gradient > .vertical-three-colors(lighten(@navbar-inverse-bg, 8%), @navbar-inverse-bg, 60%, darken(@navbar-inverse-bg, 4%));
+	border-bottom: 1px solid darken(@navbar-inverse-bg, 10%);
+}
+
+// Buttons ====================================================================
+
+.btn {
+
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+
+	.caret {
+		border-top-color: #fff;
+	}
+}
+
+.btn-default {
+	
+	.btn-shadow(@btn-default-bg);
+
+	&:hover {
+		color: @btn-default-color;
+	}
+
+	.caret {
+		border-top-color: @text-color;
+	}
+}
+
+.btn-default {
+	.btn-shadow(@btn-default-bg);
+}
+
+.btn-primary {
+	.btn-shadow(@btn-primary-bg);
+}
+
+.btn-success {
+	.btn-shadow(@btn-success-bg);
+}
+
+.btn-info {
+	.btn-shadow(@btn-info-bg);
+}
+
+.btn-warning {
+	.btn-shadow(@btn-warning-bg);
+}
+
+.btn-danger {
+	.btn-shadow(@btn-danger-bg);
+}
+
+// Typography =================================================================
+
+h1, h2, h3, h4, h5, h6 {
+	color: #317EAC;
+}
+
+// Tables =====================================================================
+
+// Forms ======================================================================
+
+// Navs =======================================================================
+
+// Indicators =================================================================
+
+// Progress bars ==============================================================
+
+// Containers =================================================================
+
+.panel-primary {
+
+	.panel-title {
+		color: #fff;
+	}
+}
+
+.panel-success {
+
+	.panel-heading {
+		background-color: @brand-success;
+		color: #fff;
+	}
+	
+	.panel-title {
+		color: #fff;
+	}
+}
+
+.panel-warning {
+
+	.panel-heading {
+		background-color: @brand-warning;
+		color: #fff;
+	}
+
+	.panel-title {
+		color: #fff;
+	}
+}
+
+.panel-danger {
+
+	.panel-heading {
+		background-color: @brand-danger;
+		color: #fff;
+	}
+	
+	.panel-title {
+		color: #fff;
+	}
+}
+
+.panel-info {
+
+	.panel-heading {
+		background-color: @brand-info;
+		color: #fff;
+	}
+
+	.panel-title {
+		color: #fff;
+	}
+}
