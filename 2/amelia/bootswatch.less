@@ -39,6 +39,22 @@ blockquote {
 	color: rgba(255, 255, 255, 0.6);
 }
 
+.text-warning {
+	color: lighten(@yellow, 30%);
+}
+
+.text-error {
+	color: lighten(@orange, 30%);
+}
+
+.text-success {
+	color: lighten(@green, 30%);
+}
+
+.text-info {
+	color: lighten(@blue, 30%);
+}
+
 // SCAFFOLDING
 // -----------------------------------------------------
 
@@ -747,33 +763,13 @@ input, textarea, .search-query, .uneditable-input,
 
 	&-header {
 		background-color: @navbarBackground;
+		border-bottom: none;
 		color: @white;
 	}
 
 	&-body {
 		
-		color: @grayDark;
-
-		h1, h2, h3, h4, h5, h6,
-		legend {
-			color: @red;
-		}
-
-		label,
-		.input-file {
-			color: @grayDark;
-		}
-
-		.help-block,
-		.help-inline {
-			color: @grayLight;
-		}
-
-		textarea,
-		input,
-		.uneditable-input {
-			border: 1px solid @grayLight;
-		}
+		background-color: @wellBackground;
 	}
 }
 

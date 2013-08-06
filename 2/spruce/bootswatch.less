@@ -24,6 +24,22 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: normal !important;
 }
 
+.text-warning {
+	color: @orange;
+}
+
+.text-error {
+	color: @red;
+}
+
+.text-success {
+	color: @green;
+}
+
+.text-info {
+	color: @blue;
+}
+
 // SCAFFOLDING
 // --------------------------------------------------
 
@@ -482,7 +498,8 @@ input, textarea, select {
 
 	&.warning,
 	&.error,
-	&.success {
+	&.success,
+	&.info {
 
 		.control-label {
 			color: @textColor;
@@ -525,6 +542,19 @@ input, textarea, select {
 
 	input, select, textarea {
 		border: 1px solid @orange;
+		color: @textColor;
+	}
+}
+
+.control-group.info {
+
+	.help-block,
+	.help-inline {
+		color: #2f96b4;
+	}
+
+	input, select, textarea {
+		border: 1px solid #2f96b4;
 		color: @textColor;
 	}
 }

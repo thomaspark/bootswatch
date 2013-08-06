@@ -3,11 +3,11 @@
 /*!
  * Bootstrap v2.3.2
  *
- * Copyright 2012 Twitter, Inc
+ * Copyright 2013 Twitter, Inc
  * Licensed under the Apache License v2.0
  * http://www.apache.org/licenses/LICENSE-2.0
  *
- * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ * Designed and built with all the love in the world by @mdo and @fat.
  */
 
 .clearfix {
@@ -6186,6 +6186,22 @@ h6 small {
   font-weight: normal !important;
 }
 
+.text-warning {
+  color: #f26522;
+}
+
+.text-error {
+  color: #d14432;
+}
+
+.text-success {
+  color: #015b4e;
+}
+
+.text-info {
+  color: #004e8b;
+}
+
 .page-header {
   padding-bottom: 5px;
   border-bottom: none;
@@ -6605,7 +6621,8 @@ select {
 
 .control-group.warning .control-label,
 .control-group.error .control-label,
-.control-group.success .control-label {
+.control-group.success .control-label,
+.control-group.info .control-label {
   color: #555555;
 }
 
@@ -6643,6 +6660,18 @@ select {
 .control-group.warning textarea {
   color: #555555;
   border: 1px solid #f26522;
+}
+
+.control-group.info .help-block,
+.control-group.info .help-inline {
+  color: #2f96b4;
+}
+
+.control-group.info input,
+.control-group.info select,
+.control-group.info textarea {
+  color: #555555;
+  border: 1px solid #2f96b4;
 }
 
 .alert {
