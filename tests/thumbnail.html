@@ -4,7 +4,7 @@
     <title>Bootswatch: Default Bootstrap</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../united/bootstrap.min.css" media="screen">
+    <link rel="stylesheet" href="../amelia/bootstrap.min.css" media="screen" id="stylesheet">
     <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="../assets/css/bootswatch.min.css">
     <style>
@@ -88,8 +88,8 @@
       <div class="row">
         <div class="col-12">
           <div class="page-header">
-            <h1>United</h1>
-            <p class="lead">Ubuntu orange and unique font</p>
+            <h1 id="theme">Amelia</h1>
+            <p id="description" class="lead">Sweet and cheery</p>
             <div class="bs-example">
               <button type="button" class="btn btn-default">Default</button>
               <button type="button" class="btn btn-primary">Primary</button>
@@ -103,6 +103,35 @@
       </div>
 
     </div>
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+    <script>
+
+      $.get("http://api.bootswatch.com", function (data) {
+
+           var t_menu = "<div id='menu' style='position:fixed;top:10px;right:10px;'><select>{{#.}}<option data-description='{{description}}'>{{name}}</option>{{/.}}</select></div>";
+           var t_previews = "{{#.}}<div class='preview hidden' id='{{name}}'><h1>{{name}}: {{description}}</h1><p><a href='{{preview}}'><img src='{{thumbnail}}'></a></p></div>{{/.}}";
+                
+           var o_menu = Mustache.render(t_menu, data.themes);
+           var o_previews = Mustache.render(t_previews, data.themes);         
+
+          $('body').append(o_menu);
+                        
+          $('#menu').change(function(){
+
+            var theme = $('#menu :selected');
+            $('#theme').text(theme.text());
+            $('#description').text(theme.data('description'));
+
+            theme = '../' + theme.text().toLowerCase() + '/bootstrap.min.css';
+            $('#stylesheet').attr('href', theme);
+          });
+            
+      }, "json");
+
+    </script>
 
   </body>
 </html>
