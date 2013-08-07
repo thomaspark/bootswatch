@@ -14,11 +14,11 @@ For use with Rails, check out [bootswatch-rails](https://github.com/maxim/bootsw
 
 Customization
 ------
-Bootswatch is an open source project, and you’re welcome to modify the themes further. If you’re interested, fork or follow the GitHub repository. The files of interest are in the `gh-pages` branch.
+Bootswatch is an open source project, and you’re welcome to modify the themes further. If you’re interested, fork or follow the GitHub repository.
 
 Each raw theme consists of two LESS files. One is `variables.less`, which is included by default in Bootstrap and allows you to customize [these settings](http://twitter.github.io/bootstrap/customize.html#variables). The other is called `bootswatch.less` and introduces more extensive structural changes.
 
-Check out the README in the [swatchmaker directory](https://github.com/thomaspark/bootswatch/tree/master/swatchmaker) for step-by-step instructions on building your own swatch.
+Check out the [Help page](https://bootswatch.com/help/) for more details on building your own theme.
 
 API
 -----
@@ -29,11 +29,7 @@ The swatch objects are housed in an array called `themes`, and each swatch has t
 
 CORS and JSONP are supported. Send your request to `http://api.bootswatch.com`.
 
-A simple demo, using mustache.js for templating: http://jsbin.com/asowud/1/edit
-
-Feedback
-------
-Please send feedback to thomas@thomaspark.me. For more information, visit http://thomaspark.me/2012/02/introducing-bootswatch/.
+A simple demo, using mustache.js for templating: http://jsbin.com/asowud/1029/edit
 
 Author
 ------
@@ -54,7 +50,7 @@ Thanks
 
 Copyright and License
 ----
-Copyright 2012 Thomas Park
+Copyright 2013 Thomas Park
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
