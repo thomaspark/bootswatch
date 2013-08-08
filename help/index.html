@@ -9,9 +9,13 @@
     <link rel="stylesheet" href="../assets/css/bootswatch.min.css">
     <style>
 
+      h1 {
+        margin-top: 2em;
+      }
+
       code {
-        background-color: #1B2532;
-        color: #fff;
+        background-color: #eee;
+        color: inherit;
       }
 
     </style>
@@ -82,32 +86,28 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-9">
-          
-            <div class="page-header">
-              <h1>Help</h1>
-            </div>
 
-            <h1>Quick Start</h1>
+            <h1 id="quickstart">Quick Start</h1>
             <p>Using a theme is as easy as downloading a CSS file and replacing the one that comes with <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>.</p>
 
-            <h1>Customization</h1> 
+            <h1 id="customization">Customization</h1> 
             <p>To modify a theme or create your own, follow the steps below.</p>
             <ol>
               <li><p><code>git clone git@github.com:thomaspark/bootswatch.git</code></p></li>
-
               <li><p><code>npm install</code></p></li>
-
               <li><p><code>bower install</code></p></li>
-
               <li>
                 <p>Edit <code>variables.less</code> and <code>bootswatch.less</code> in one of the theme directories, or create your own in <code>/custom</code>.</p>
               </li>
-
               <li><p>Type <code>grunt swatch:[theme]</code> to build the CSS for a theme, e.g., <code>grunt swatch:amelia</code> for Amelia. Or type <code>grunt swatch</code> to build them all at once.</p></li>
-
             </ol>
-
             <p>Here are additional tips for <a href="http://coding.smashingmagazine.com/2013/03/12/customizing-bootstrap/" target="_blank">customizing Bootstrap</a>.</p>
+
+            <h1 id="api">API</h1>
+            <p>You can use the API to integrate the themes with your platform. Send your request to:</p>
+            <p><a href="http://api.bootswatch.com/3/">http://api.bootswatch.com/3/</a></p>
+            <p>This returns the <code>version</code> and a <code>themes</code> array with the following properties: <code>name</code>, <code>description</code>, <code>preview</code>, <code>thumbnail</code>, <code>css</code>, <code>cssMin</code>, <code>less</code>, and <code>lessVariables</code>.</p>
+            <p>Here's a <a href="http://jsbin.com/oqubil/1/edit" target="_blank">demo</a> with mustache.js templating.</p>
 
         </div>
       </div>
