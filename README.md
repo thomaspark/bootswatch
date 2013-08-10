@@ -14,22 +14,22 @@ For use with Rails, check out [bootswatch-rails](https://github.com/maxim/bootsw
 
 Customization
 ------
-Bootswatch is an open source project, and you’re welcome to modify the themes further. If you’re interested, fork or follow the GitHub repository.
+Bootswatch is an open source project, and you’re welcome to fork and modify the themes.
 
 Each raw theme consists of two LESS files. One is `variables.less`, which is included by default in Bootstrap and allows you to customize [these settings](http://twitter.github.io/bootstrap/customize.html#variables). The other is called `bootswatch.less` and introduces more extensive structural changes.
 
-Check out the [Help page](https://bootswatch.com/help/) for more details on building your own theme.
+Check out the [Help page](http://bootswatch.com/help/) for more details on building your own theme.
 
 API
 -----
 
 A simple API is available for integrating your platform with Bootswatch.
 
-The swatch objects are housed in an array called `themes`, and each swatch has the following properties:  `name`, `description`, `preview`, `thumbnail`, `css`, `css-min`, `less`, and `less-variables`.
+The swatch objects are housed in an array called `themes`, and each swatch has the following properties:  `name`, `description`, `preview`, `thumbnail`, `css`, `cssMin`, `less`, and `lessVariables`.
 
-CORS and JSONP are supported. Send your request to `http://api.bootswatch.com`.
+CORS and JSONP are supported. Send your request to `http://api.bootswatch.com/3/`.
 
-A simple demo, using mustache.js for templating: http://jsbin.com/asowud/1029/edit
+More info at http://bootswatch.com/help/#api
 
 Author
 ------
