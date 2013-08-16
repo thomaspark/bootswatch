@@ -19,7 +19,7 @@
     > a {
       position: relative;
       display: block;
-      padding: 10px 15px;
+      padding: @nav-link-padding;
       &:hover,
       &:focus {
         text-decoration: none;
@@ -39,44 +39,30 @@
         cursor: not-allowed;
       }
     }
-
-    // Space the headers out when they follow another list item (link)
-    + .nav-header {
-      margin-top: 9px;
-    }
   }
 
   // Open dropdowns
-  &.open > a {
+  .open > a {
     &,
     &:hover,
     &:focus {
-      color: @nav-open-link-hover-color;
-      background-color: @link-color;
+      background-color: @nav-link-hover-bg;
       border-color: @link-color;
-      .caret {
-        border-top-color: @nav-open-caret-border-color;
-        border-bottom-color: @nav-open-caret-border-color;
-      }
     }
-  }
-
-  // Redeclare pull classes because of specificity
-  // Todo: consider making these utilities !important to avoid this bullshit
-  > .pull-right {
-    float: right;
   }
 
   // Dividers (basically an hr) within the dropdown
   .nav-divider {
     .nav-divider();
   }
+
+  // Prevent IE8 from misplacing imgs
+  // See https://github.com/h5bp/html5-boilerplate/issues/984#issuecomment-3985989
+  > li > a > img {
+    max-width: none;
+  }
 }
 
-
-
-// Nav variations
-// --------------------------------------------------
 
 // Tabs
 // -------------------------
@@ -96,7 +82,7 @@
       border: 1px solid transparent;
       border-radius: @border-radius-base @border-radius-base 0 0;
       &:hover {
-        border-color: @nav-tabs-link-hover-border-color;
+        border-color: @nav-tabs-link-hover-border-color @nav-tabs-link-hover-border-color @nav-tabs-border-color;
       }
     }
 
@@ -153,25 +139,33 @@
   > li {
     float: none;
     + li {
-      > a {
-        margin-top: 2px;
-        margin-left: 0; // no need for this gap between nav items
-      }
+      margin-top: 2px;
+      margin-left: 0; // no need for this gap between nav items
     }
   }
 }
+
+
+// Nav variations
+// --------------------------------------------------
 
 // Justified nav links
 // -------------------------
 
 .nav-justified {
   width: 100%;
+
   > li {
     float: none;
-    display: table-cell;
-    width: 1%;
-    > a {
+     > a {
       text-align: center;
+    }
+  }
+
+  @media (min-width: @screen-small) {
+    > li {
+      display: table-cell;
+      width: 1%;
     }
   }
 }
@@ -188,9 +182,7 @@
   > .active > a {
     border-bottom-color: @nav-tabs-justified-active-link-border-color;
   }
-
 }
-
 
 
 // Tabbable tabs

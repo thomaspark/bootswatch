@@ -20,10 +20,25 @@ body {
   border-color: #e5e5e5;
 }
 .btn-bs:hover,
+.btn-bs:focus,
 .btn-bs:active {
   color: #fff;
   background-color: #563d7c;
   border-color: #563d7c;
+}
+
+/* Homepage button */
+.btn-outline {
+  color: #fff;
+  background-color: transparent;
+  border-color: #cdbfe3;
+}
+.btn-outline:hover,
+.btn-outline:focus,
+.btn-outline:active {
+  color: #563d7c;
+  background-color: #fff;
+  border-color: #fff;
 }
 
 /* Temp CSS until RC2 */
@@ -40,6 +55,10 @@ body {
 
 .bs-docs-nav {
   background-color: #563d7c;
+  border-color: #463265;
+}
+.bs-docs-nav .navbar-collapse {
+  border-color: #463265;
 }
 .bs-docs-nav .navbar-brand {
   color: #fff;
@@ -74,8 +93,21 @@ body {
   color: #555;
 }
 .bs-docs-home .bs-old-docs {
+  padding-top: 0;
+  padding-bottom: 0;
   text-align: center;
-  border-top: 1px solid #e5e5e5;
+  color: inherit;
+  background-color: transparent;
+  border-color: transparent;
+}
+.bs-docs-home .bs-old-docs a {
+  color: #fff;
+}
+
+/* Homepage */
+.bs-docs-home {
+  color: #cdbfe3;
+  background-color: #563d7c;
 }
 
 
@@ -90,12 +122,13 @@ body {
 .bs-masthead h1 {
   font-size: 50px;
   line-height: 1;
+  color: #fff;
 }
 
 /* Download button */
-.bs-masthead .btn-bs {
-  margin-top: 5px;
-  margin-bottom: 5px;
+.bs-masthead .btn-outline {
+  margin-top: 20px;
+  margin-bottom: 20px;
   padding: 18px 24px;
   font-size: 21px;
 }
@@ -108,7 +141,7 @@ body {
 .bs-masthead-links {
   margin-top: 20px;
   margin-bottom: 20px;
-  padding-left: 0;
+  padding: 0 15px;
   list-style: none;
   text-align: center;
 }
@@ -118,6 +151,9 @@ body {
 }
 .bs-masthead-links li + li {
   margin-left: 20px;
+}
+.bs-masthead-links a {
+  color: #fff;
 }
 
 
@@ -142,6 +178,7 @@ body {
   margin-top: 15px;
 }
 .bs-customizer input[type="text"] {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   background-color: #fafafa;
 }
 .bs-customizer .help-block {
@@ -150,6 +187,10 @@ body {
 
 .bs-customize-download {
   text-align: center;
+}
+
+#less-section label {
+  font-weight: normal;
 }
 
 
@@ -177,7 +218,7 @@ body {
 }
 
 .bs-docs-section + .bs-docs-section {
-  margin-top: 80px;
+  padding-top: 80px;
 }
 
 /* Ads in page headers */
@@ -260,11 +301,8 @@ body {
 
 /* Nav: second level (shown on .active) */
 .bs-sidebar .nav .nav {
-  display: none;
+  display: none; /* Hide by default, but at >768px, show it */
   margin-bottom: 8px;
-}
-.bs-sidebar .nav > .active > ul {
-  display: block;
 }
 .bs-sidebar .nav .nav > li > a {
   padding-top:    3px;
@@ -310,6 +348,17 @@ body {
 }
 
 
+/* Examples grid
+-------------------------------------------------- */
+
+.bs-examples h4 {
+  margin-bottom: 5px;
+}
+.bs-examples p {
+  margin-bottom: 20px;
+}
+
+
 
 /* Special grid styles
 -------------------------------------------------- */
@@ -335,7 +384,7 @@ body {
 .bs-example {
   position: relative;
   padding: 45px 15px 15px;
-  margin: 0 -15px -1px;
+  margin: 0 -15px 15px;
   background-color: #fafafa;
   box-shadow: inset 0 3px 6px rgba(0,0,0,.05);
   border-color: #e5e5e5 #eee #eee;
@@ -356,11 +405,10 @@ body {
 }
 
 /* Tweak display of the examples */
-.bs-example + .prettyprint,
 .bs-example + .highlight {
-  margin-top: 0;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+  margin: -15px -15px 15px;
+  border-radius: 0;
+  border-width: 0 0 1px;
 }
 
 /* Tweak content of examples for optimum awesome */
@@ -368,16 +416,15 @@ body {
 .bs-example > ul:last-child,
 .bs-example > ol:last-child,
 .bs-example > blockquote:last-child,
-.bs-example > input:last-child,
-.bs-example > select:last-child,
-.bs-example > textarea:last-child,
+.bs-example > .form-control:last-child,
 .bs-example > .table:last-child,
-.bs-example > .navbar:last-child
+.bs-example > .navbar:last-child,
 .bs-example > .jumbotron:last-child,
 .bs-example > .alert:last-child,
 .bs-example > .panel:last-child,
 .bs-example > .list-group:last-child,
-.bs-example > .well:last-child {
+.bs-example > .well:last-child,
+.bs-example > .progress:last-child {
   margin-bottom: 0;
 }
 .bs-example > p > .close {
@@ -385,18 +432,15 @@ body {
 }
 
 /* Typography */
-.bs-example-type .table td {
+.bs-example-type .table td:last-child {
   color: #999;
   vertical-align: middle;
-  border-color: ;
 }
-.bs-example-type .table td,
-.bs-example-type .table th {
+.bs-example-type .table td {
   padding: 15px 0;
   border-color: #eee;
 }
-.bs-example-type .table tr:first-child td,
-.bs-example-type .table tr:first-child th {
+.bs-example-type .table tr:first-child td {
   border-top: 0;
 }
 .bs-example-type h1,
@@ -408,18 +452,33 @@ body {
   margin: 0;
 }
 
-/* Forms */
-.bs-example.form-inline select,
-.bs-example.form-inline input[type="text"],
-.bs-example.form-inline input[type="password"] {
-  width: 180px;
+/* Images */
+.bs-example > .img-circle,
+.bs-example > .img-rounded,
+.bs-example > .img-thumbnail {
+  margin: 5px;
 }
+
+/* Buttons */
+.bs-example > .btn,
+.bs-example > .btn-group {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.bs-example > .btn-toolbar + .btn-toolbar {
+  margin-top: 10px;
+}
+
+/* Forms */
 .bs-example-control-sizing select,
 .bs-example-control-sizing input[type="text"] + input[type="text"] {
   margin-top: 10px;
 }
 .bs-example-form .input-group {
   margin-bottom: 10px;
+}
+.bs-example > textarea.form-control {
+  resize: vertical;
 }
 
 /* List groups */
@@ -435,7 +494,6 @@ body {
 .bs-navbar-bottom-example {
   z-index: 1;
   padding: 0;
-  min-height: 110px;
   overflow: hidden; /* cut the drop shadows off */
 }
 .bs-navbar-top-example .navbar-fixed-top,
@@ -444,31 +502,39 @@ body {
   margin-left: 0;
   margin-right: 0;
 }
-.bs-navbar-top-example .navbar-fixed-top {
-  top: -1px;
-}
-.bs-navbar-bottom-example .navbar-fixed-bottom {
-  bottom: -1px;
-}
 .bs-navbar-top-example {
-  -webkit-border-radius: 0 0 4px 4px;
-     -moz-border-radius: 0 0 4px 4px;
-          border-radius: 0 0 4px 4px;
+  padding-bottom: 45px;
 }
 .bs-navbar-top-example:after {
   top: auto;
   bottom: 15px;
-  -webkit-border-radius: 0 4px 0 4px;
-     -moz-border-radius: 0 4px 0 4px;
-          border-radius: 0 4px 0 4px;
+}
+.bs-navbar-top-example .navbar-fixed-top {
+  top: -1px;
 }
 .bs-navbar-bottom-example {
-  -webkit-border-radius: 4px 4px 0 0;
-     -moz-border-radius: 4px 4px 0 0;
-          border-radius: 4px 4px 0 0;
+  padding-top: 45px;
+}
+.bs-navbar-bottom-example .navbar-fixed-bottom {
+  bottom: -1px;
 }
 .bs-navbar-bottom-example .navbar {
   margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .bs-navbar-top-example {
+    border-radius: 0 0 4px 4px;
+  }
+  .bs-navbar-bottom-example {
+    border-radius: 4px 4px 0 0;
+  }
+}
+
+/* Pagination */
+.bs-example .pagination {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 /* Example modals */
@@ -491,18 +557,10 @@ body {
 }
 
 /* Example dropdowns */
-.bs-example > .dropdown > .dropdown-menu,
-.bs-example-submenu > .pull-left > .dropup > .dropdown-menu,
-.bs-example-submenu > .pull-left > .dropdown > .dropdown-menu {
+.bs-example > .dropdown > .dropdown-menu {
   position: static;
   display: block;
   margin-bottom: 5px;
-}
-.bs-example-submenu {
-  min-height: 230px;
-}
-.bs-example-submenu > .pull-left + .pull-left {
-  margin-left: 20px;
 }
 
 /* Example tabbable tabs */
@@ -513,6 +571,10 @@ body {
 /* Tooltips */
 .bs-example-tooltips {
   text-align: center;
+}
+.bs-example-tooltips > .btn {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 /* Popovers */
@@ -527,19 +589,6 @@ body {
   width: 260px;
   margin: 20px;
 }
-
-
-
-/* Example templates
--------------------------------------------------- */
-
-.bs-examples h4 {
-  margin-bottom: 5px;
-}
-.bs-examples p {
-  margin-bottom: 20px;
-}
-
 
 
 /* Responsive docs
@@ -575,6 +624,10 @@ body {
     border-bottom: 0;
   }
 }
+.bs-table-scrollable .highlight pre {
+  white-space: normal;
+}
+
 
 /* Related: responsive utilities tables */
 .table code {
@@ -609,17 +662,9 @@ body {
 ------------------------- */
 .responsive-utilities-test {
   margin-top: 5px;
-  padding-left: 0;
-  list-style: none;
-  overflow: hidden; /* clear floats */
 }
-.responsive-utilities-test li {
-  position: relative;
-  float: left;
-  width: 25%;
-}
-.responsive-utilities-test li + li {
-  margin-left: 10px;
+.responsive-utilities-test .col-xs-6 {
+  margin-bottom: 10px;
 }
 .responsive-utilities-test span {
   padding: 15px 10px;
@@ -629,13 +674,25 @@ body {
   text-align: center;
   border-radius: 4px;
 }
-.responsive-utilities-test.visible-on [class*="hidden"],
-.responsive-utilities-test.hidden-on [class*="visible"] {
+.visible-on .col-xs-6 .hidden-xs,
+.visible-on .col-xs-6 .hidden-sm,
+.visible-on .col-xs-6 .hidden-md,
+.visible-on .col-xs-6 .hidden-lg,
+.hidden-on .col-xs-6 .visible-xs,
+.hidden-on .col-xs-6 .visible-sm,
+.hidden-on .col-xs-6 .visible-md,
+.hidden-on .col-xs-6 .visible-lg {
   color: #999;
   border: 1px solid #ddd;
 }
-.responsive-utilities-test.visible-on [class*="visible"],
-.responsive-utilities-test.hidden-on [class*="hidden"] {
+.visible-on .col-xs-6 .visible-xs,
+.visible-on .col-xs-6 .visible-sm,
+.visible-on .col-xs-6 .visible-md,
+.visible-on .col-xs-6 .visible-lg,
+.hidden-on .col-xs-6 .hidden-xs,
+.hidden-on .col-xs-6 .hidden-sm,
+.hidden-on .col-xs-6 .hidden-md,
+.hidden-on .col-xs-6 .hidden-lg {
   color: #468847;
   background-color: #dff0d8;
   border: 1px solid #d6e9c6;
@@ -682,15 +739,18 @@ body {
 .bs-social-buttons li {
   display: inline-block;
   line-height: 1;
-}
-.bs-social-buttons li + li {
-  margin-left: 15px;
+  padding: 5px 8px;
 }
 .bs-social-buttons .twitter-follow-button {
   width: 225px !important;
 }
 .bs-social-buttons .twitter-share-button {
   width: 98px !important;
+}
+/* Style the GitHub buttons via CSS instead of inline attributes */
+.github-btn {
+  border: 0;
+  overflow: hidden;
 }
 
 
@@ -699,7 +759,7 @@ body {
 -------------------------------------------------- */
 
 /* Pseudo :focus state for showing how it looks in the docs */
-input.focused {
+#focusedInput {
   border-color: rgba(82,168,236,.8);
   outline: 0;
   outline: thin dotted \9; /* IE6-9 */
@@ -749,11 +809,6 @@ input.focused {
   margin-bottom: 5px;
 }
 
-/* Hide the top link initially */
-.bs-top {
-  display: none;
-}
-
 
 /* Responsive variations
 -------------------------------------------------- */
@@ -768,26 +823,6 @@ input.focused {
 /* Tablets and up */
 @media screen and (min-width: 768px) {
 
-  /* Back to top link */
-  .bs-top {
-    display: block; /* Unhide */
-    float: left;
-    padding: 7px 15px;
-    font-weight: 500;
-    color: #999;
-    background-color: #eee;
-    border-radius: 4px;
-  }
-  .bs-top:hover {
-    color: #fff;
-    text-decoration: none;
-    background-color: #999;
-  }
-  .bs-top.affix {
-    position: fixed;
-    right:  15px;
-    bottom: 15px;
-  }
   .bs-header {
     font-size: 21px;
     text-align: left;
@@ -806,6 +841,19 @@ input.focused {
     border-radius: 4px 4px 0 0;
     box-shadow: none;
   }
+  .bs-example + .prettyprint,
+  .bs-example + .highlight {
+    margin-top: -16px;
+    margin-left: 0;
+    margin-right: 0;
+    border-width: 1px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+
+  .bs-masthead-links {
+    padding: 0;
+  }
 
   .carbonad {
     margin: 0 !important;
@@ -820,13 +868,13 @@ input.focused {
 
   /* Tweak display of docs jumbotrons */
   .bs-masthead {
-    padding-top:    100px;
-    padding-bottom: 100px;
+    padding-top:    140px;
+    padding-bottom: 140px;
   }
   .bs-masthead h1 {
     font-size: 100px;
   }
-  .bs-masthead p {
+  .bs-masthead .lead {
     margin-left: 15%;
     margin-right: 15%;
     font-size: 30px;
@@ -841,7 +889,23 @@ input.focused {
 
 /* Tablets/desktops and up */
 @media screen and (min-width: 992px) {
+  .bs-header h1,
+  .bs-header p {
+    margin-right: 380px;
+  }
+  .carbonad {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    padding: 15px !important;
+    width: 330px !important;
+    min-height: 132px;
+  }
 
+  /* Show the hidden subnavs when space allows it */
+  .bs-sidebar .nav > .active > ul {
+    display: block;
+  }
   /* Widen the fixed sidebar */
   .bs-sidebar.affix,
   .bs-sidebar.affix-bottom {
@@ -859,19 +923,6 @@ input.focused {
     margin-top: 0;
     margin-bottom: 0;
   }
-  .bs-header h1,
-  .bs-header p {
-    margin-right: 380px;
-  }
-  .carbonad {
-    position: absolute;
-    top: 20px;
-    right: 0;
-    padding: 15px !important;
-    width: 330px !important;
-    min-height: 132px;
-  }
-
 }
 
 /* Large desktops and up */
@@ -880,7 +931,7 @@ input.focused {
   /* Widen the fixed sidebar again */
   .bs-sidebar.affix-bottom,
   .bs-sidebar.affix {
-    width: 270px;
+    width: 263px;
   }
 
 }
