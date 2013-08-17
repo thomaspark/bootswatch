@@ -28,13 +28,15 @@
 
     <div class="navbar navbar-fixed-top">
       <div class="container">
-        <a href="../" class="navbar-brand">Bootswatch</a>
-        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <div class="nav-collapse collapse" id="navbar-main">
+        <div class="navbar-header">
+          <a href="../" class="navbar-brand">Bootswatch</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
           <ul class="nav navbar-nav">
             <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Themes <span class="caret"></span></a>
@@ -70,7 +72,7 @@
             </li>
           </ul>
 
-          <ul class="nav navbar-nav pull-right">
+          <ul class="nav navbar-nav navbar-right">
             <li><a href="http://builtwithbootstrap.com/" target="_blank">Built With Bootstrap</a></li>
             <li><a href="https://wrapbootstrap.com/?ref=bsw" target="_blank">WrapBootstrap</a></li>
           </ul>
@@ -108,13 +110,15 @@
             <div class="bs-example">
               <div class="navbar">
                 <div class="container">
-                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                  </button>
-                  <a class="navbar-brand" href="#">Brand</a>
-                  <div class="nav-collapse collapse navbar-responsive-collapse">
+                  <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Brand</a>
+                  </div>
+                  <div class="navbar-collapse collapse navbar-responsive-collapse">
                     <ul class="nav navbar-nav">
                       <li class="active"><a href="#">Active</a></li>
                       <li><a href="#">Link</a></li>
@@ -131,10 +135,10 @@
                         </ul>
                       </li>
                     </ul>
-                    <form class="navbar-form pull-left">
+                    <form class="navbar-form navbar-left">
                       <input type="text" class="form-control col-lg-8" placeholder="Search">
                     </form>
-                    <ul class="nav navbar-nav pull-right">
+                    <ul class="nav navbar-nav navbar-right">
                       <li><a href="#">Link</a></li>
                       <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
@@ -154,13 +158,15 @@
 
               <div class="navbar navbar-inverse">
                 <div class="container">
-                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                  </button>
-                  <a class="navbar-brand" href="#">Brand</a>
-                  <div class="nav-collapse collapse navbar-inverse-collapse">
+                  <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Brand</a>
+                  </div>
+                  <div class="navbar-collapse collapse navbar-inverse-collapse">
                     <ul class="nav navbar-nav">
                       <li class="active"><a href="#">Active</a></li>
                       <li><a href="#">Link</a></li>
@@ -177,10 +183,10 @@
                         </ul>
                       </li>
                     </ul>
-                    <form class="navbar-form pull-left">
+                    <form class="navbar-form navbar-left">
                       <input type="text" class="form-control col-lg-8" placeholder="Search">
                     </form>
-                    <ul class="nav navbar-nav pull-right">
+                    <ul class="nav navbar-nav navbar-right">
                       <li><a href="#">Link</a></li>
                       <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
@@ -304,10 +310,10 @@
 
             <div class="bs-example">
               <p>
-                <button type="button" class="btn btn-primary btn-large">Large button</button>
+                <button type="button" class="btn btn-primary btn-lg">Large button</button>
                 <button type="button" class="btn btn-primary">Default button</button>
-                <button type="button" class="btn btn-primary btn-small">Small button</button>
-                <button type="button" class="btn btn-primary btn-mini">Mini button</button>
+                <button type="button" class="btn btn-primary btn-sm">Small button</button>
+                <button type="button" class="btn btn-primary btn-xs">Mini button</button>
               </p>
             </div>
             
@@ -632,7 +638,7 @@
                 </div>
                 <div class="form-group">
                   <label class="control-label" for="inputLarge">Large input</label>
-                  <input class="form-control input-large" type="text" id="inputLarge">
+                  <input class="form-control input-lg" type="text" id="inputLarge">
                 </div>
                 <div class="form-group">
                   <label class="control-label" for="inputDefault">Default input</label>
@@ -640,7 +646,7 @@
                 </div>
                 <div class="form-group">
                   <label class="control-label" for="inputSmall">Small input</label>
-                  <input class="form-control input-small" type="text" id="inputSmall">
+                  <input class="form-control input-sm" type="text" id="inputSmall">
                 </div>
                 <div class="form-group">
                   <label class="control-label">Input addons</label>
@@ -837,7 +843,7 @@
           <div class="col-lg-12">
             <h2>Alerts</h2>
             <div class="bs-example">
-              <div class="alert alert-block">
+              <div class="alert alert-dismissable">
                 <button type="button" class="close" data-dismiss="alert">&times;</button>
                 <h4>Warning!</h4>
                 <p>Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, <a href="#" class="alert-link">vel scelerisque nisl consectetur et</a>.</p>
@@ -847,19 +853,19 @@
         </div>
         <div class="row">
           <div class="col-lg-4">
-            <div class="alert alert-danger">
+            <div class="alert alert-dismissable alert-danger">
               <button type="button" class="close" data-dismiss="alert">&times;</button>
               <strong>Oh snap!</strong> <a href="#" class="alert-link">Change a few things up</a> and try submitting again.
             </div>
           </div>
           <div class="col-lg-4">
-            <div class="alert alert-success">
+            <div class="alert alert-dismissable alert-success">
               <button type="button" class="close" data-dismiss="alert">&times;</button>
               <strong>Well done!</strong> You successfully read <a href="#" class="alert-link">this important alert message</a>.
             </div>
           </div>
           <div class="col-lg-4">
-            <div class="alert alert-info">
+            <div class="alert alert-dismissable alert-info">
               <button type="button" class="close" data-dismiss="alert">&times;</button>
               <strong>Heads up!</strong> This <a href="#" class="alert-link">alert needs your attention</a>, but it's not super important.
             </div>
@@ -869,7 +875,7 @@
           <div class="col-lg-4">
             <h2>Labels</h2>
             <div class="bs-example" style="margin-bottom: 40px;">
-              <span class="label">Default</span>
+              <span class="label label-default">Default</span>
               <span class="label label-success">Success</span>
               <span class="label label-warning">Warning</span>
               <span class="label label-danger">Danger</span>
@@ -1040,14 +1046,20 @@
         <div class="row">
           <div class="col-lg-4">        
             <div class="panel">
-              Basic panel
+              <div class="panel-body">
+                Basic panel
+              </div>
             </div>
             <div class="panel">
               <div class="panel-heading">Panel heading</div>
-              Panel content
+              <div class="panel-body">
+                Panel content
+              </div>
             </div>
             <div class="panel">
-              Panel content
+              <div class="panel-body">
+                Panel content
+              </div>
               <div class="panel-footer">Panel footer</div>
             </div>
           </div>
@@ -1056,13 +1068,17 @@
               <div class="panel-heading">
                 <h3 class="panel-title">Panel primary</h3>
               </div>
-              Panel content
+              <div class="panel-body">
+                Panel content
+              </div>
             </div>
             <div class="panel panel-success">
               <div class="panel-heading">
                 <h3 class="panel-title">Panel success</h3>
               </div>
-              Panel content
+              <div class="panel-body">
+                Panel content
+              </div>
             </div>
             <div class="panel panel-warning">
               <div class="panel-heading">
@@ -1076,13 +1092,17 @@
               <div class="panel-heading">
                 <h3 class="panel-title">Panel danger</h3>
               </div>
-              Panel content
+              <div class="panel-body">
+                Panel content
+              </div>
             </div>
             <div class="panel panel-info">
               <div class="panel-heading">
                 <h3 class="panel-title">Panel info</h3>
               </div>
-              Panel content
+              <div class="panel-body">
+                Panel content
+              </div>
             </div>
           </div>
         </div>
