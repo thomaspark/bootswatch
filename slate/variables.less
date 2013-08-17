@@ -419,12 +419,12 @@
 @modal-title-padding:         15px;
 @modal-title-line-height:     @line-height-base;
 
-@modal-content-bg:                             #fff;
+@modal-content-bg:                             lighten(@body-bg, 3%);
 @modal-content-border-color:                   rgba(0,0,0,.2);
 @modal-content-fallback-border-color:          #999;
 
 @modal-backdrop-bg:           #000;
-@modal-header-border-color:   #e5e5e5;
+@modal-header-border-color:   darken(@gray-darker, 5%);
 @modal-footer-border-color:   @modal-header-border-color;
 
 
@@ -480,7 +480,7 @@
 
 // Panels
 // -------------------------
-@panel-bg:                    lighten(@body-bg, 5%);
+@panel-bg:                    lighten(@body-bg, 3%);
 @panel-border:                rgba(0, 0, 0, 0.6);
 @panel-border-radius:         @border-radius-base;
 @panel-heading-bg:            lighten(@body-bg, 10%);
