@@ -3591,7 +3591,7 @@ button.close {
 .navbar-brand:focus {
   color: #c8c8c8;
   text-decoration: none;
-  background-color: #272b2e;
+  background-color: none;
 }
 
 .navbar-toggle {
@@ -6108,20 +6108,6 @@ td.visible-print {
   background-image: linear-gradient(#8a9196, #7a8288 60%, #70787d);
   background-repeat: no-repeat;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff8a9196', endColorstr='#ff70787d', GradientType=0);
-}
-
-.navbar-brand {
-  margin-right: 0;
-  border-right: 1px solid rgba(0, 0, 0, 0.4);
-}
-
-.navbar-brand:hover {
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#020202), color-stop(40%, #101112), to(#191b1d));
-  background-image: -webkit-linear-gradient(#020202, #101112 40%, #191b1d);
-  background-image: -moz-linear-gradient(top, #020202, #101112 40%, #191b1d);
-  background-image: linear-gradient(#020202, #101112 40%, #191b1d);
-  background-repeat: no-repeat;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff020202', endColorstr='#ff191b1d', GradientType=0);
 }
 
 .navbar-nav > li > a {
