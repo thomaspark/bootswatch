@@ -202,7 +202,18 @@ legend {
 
 // Navs =======================================================================
 
+.nav {
+
+	.open > a,
+	.open > a:hover,
+	.open > a:focus {
+		border-color: rgba(0, 0, 0, 0.6);
+	}
+
+}
+
 .nav-pills {
+
 	& > li > a {
 		.btn-shadow(@btn-default-bg);
 		border: 1px solid rgba(0, 0, 0, 0.6);
@@ -216,7 +227,7 @@ legend {
 
 	& > li.active > a,
 	& > li.active > a:hover {
-		bacground-color: none;
+		background-color: none;
 		.btn-shadow-inverse(@btn-default-bg);
 		border: 1px solid rgba(0, 0, 0, 0.6);
 	}
@@ -240,6 +251,7 @@ legend {
 
 	& > li.active > a {
 		.btn-shadow-inverse(@btn-default-bg);
+		border-color: rgba(0, 0, 0, 0.6);
 	}
 
 	& > li.disabled > a,
@@ -296,4 +308,15 @@ legend {
 
 .list-group-item {
 	background-color: lighten(@body-bg, 5%);
+}
+
+.panel-primary,
+.panel-success,
+.panel-danger,
+.panel-warning,
+.panel-info {
+
+	.panel-heading {
+		border-color: #000;
+	}
 }

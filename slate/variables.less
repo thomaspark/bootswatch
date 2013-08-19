@@ -76,7 +76,7 @@
 @border-radius-large:            6px;
 @border-radius-small:            3px;
 
-@component-active-bg:            @brand-primary;
+@component-active-bg:            transparent;
 
 @caret-width-base:               4px;
 @caret-width-large:              5px;
@@ -133,7 +133,7 @@
 @input-bg:                       #fff;
 @input-bg-disabled:              @gray-lighter;
 
-@input-color:                    @text-color;
+@input-color:                    @gray-darker;
 @input-border:                   #ccc;
 @input-border-radius:            @border-radius-base;
 @input-border-focus:             #66afe9;
@@ -145,7 +145,7 @@
 @input-height-small:             (ceil(@font-size-small * @line-height-base) + (@padding-small-vertical * 2) + 2);
 
 @legend-color:                   @text-color;
-@legend-border-color:            #e5e5e5;
+@legend-border-color:            darken(@gray-darker, 5%);
 
 @input-group-addon-bg:           @gray-lighter;
 @input-group-addon-border-color: @input-border;
@@ -160,7 +160,7 @@
 @dropdown-divider-bg:            @gray-darker;
 
 @dropdown-link-active-color:     #fff;
-@dropdown-link-active-bg:        @component-active-bg;
+@dropdown-link-active-bg:        @gray-darker;
 
 @dropdown-link-color:            @text-color;
 @dropdown-link-hover-color:      #fff;
@@ -328,7 +328,7 @@
 @pagination-bg:                        @btn-default-bg;
 @pagination-border:                    rgba(0, 0, 0, 0.6);
 
-@pagination-hover-bg:                  @gray-lighter;
+@pagination-hover-bg:                  transparent;
 
 @pagination-active-bg:                 darken(@pagination-bg, 10%);
 @pagination-active-color:              #fff;
@@ -487,23 +487,23 @@
 @panel-footer-bg:             @panel-heading-bg;
 
 @panel-primary-text:          #fff;
-@panel-primary-border:        @brand-primary;
+@panel-primary-border:        @panel-border;
 @panel-primary-heading-bg:    @brand-primary;
 
 @panel-success-text:          @state-success-text;
-@panel-success-border:        @state-success-border;
+@panel-success-border:        @panel-border;
 @panel-success-heading-bg:    @state-success-bg;
 
 @panel-warning-text:          @state-warning-text;
-@panel-warning-border:        @state-warning-border;
+@panel-warning-border:        @panel-border;
 @panel-warning-heading-bg:    @state-warning-bg;
 
 @panel-danger-text:           @state-danger-text;
-@panel-danger-border:         @state-danger-border;
+@panel-danger-border:         @panel-border;
 @panel-danger-heading-bg:     @state-danger-bg;
 
 @panel-info-text:             @state-info-text;
-@panel-info-border:           @state-info-border;
+@panel-info-border:           @panel-border;
 @panel-info-heading-bg:       @state-info-bg;
 
 
@@ -539,7 +539,7 @@
 
 // Breadcrumbs
 // -------------------------
-@breadcrumb-bg:               #f5f5f5;
+@breadcrumb-bg:               transparent;
 @breadcrumb-color:            #ccc;
 @breadcrumb-active-color:     @gray-light;
 
