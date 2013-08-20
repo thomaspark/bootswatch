@@ -55,6 +55,12 @@
 @headings-font-weight:    500;
 @headings-line-height:    1.1;
 
+// Iconography
+// -------------------------
+
+@icon-font-path:          "../fonts/";
+@icon-font-name:          "glyphicons-halflings-regular";
+
 
 // Components
 // -------------------------
@@ -98,7 +104,7 @@
 // Buttons
 // -------------------------
 
-@btn-font-weight:                bold;
+@btn-font-weight:                normal;
 
 @btn-default-color:              #fff;
 @btn-default-bg:                 lighten(@gray-dark, 10%);
@@ -182,6 +188,7 @@
 // Used for a bird's eye view of components dependent on the z-axis
 // Try to avoid customizing these :)
 
+@zindex-navbar:            1000;
 @zindex-dropdown:          1000;
 @zindex-popover:           1010;
 @zindex-tooltip:           1030;
@@ -193,26 +200,25 @@
 // --------------------------------------------------
 
 // Extra small screen / phone
-@screen-xsmall:              480px;
-@screen-phone:               @screen-xsmall;
+@screen-xs:                  480px;
+@screen-phone:               @screen-xs;
 
 // Small screen / tablet
-@screen-small:               768px;
-@screen-tablet:              @screen-small;
+@screen-sm:                  768px;
+@screen-tablet:              @screen-sm;
 
 // Medium screen / desktop
-@screen-medium:              992px;
-@screen-desktop:             @screen-medium;
+@screen-md:                  992px;
+@screen-desktop:             @screen-md;
 
 // Large screen / wide desktop
-@screen-large:               1200px;
-@screen-large-desktop:       @screen-large;
+@screen-lg:                  1200px;
+@screen-lg-desktop:          @screen-lg;
 
 // So media queries don't overlap when required, provide a maximum
-@screen-phone-max:           (@screen-small - 1);
-@screen-small-max:           (@screen-medium - 1);
-@screen-tablet-max:          (@screen-desktop - 1);
-@screen-desktop-max:         (@screen-large-desktop - 1);
+@screen-xs-max:              (@screen-sm - 1);
+@screen-sm-max:              (@screen-md - 1);
+@screen-md-max:              (@screen-lg - 1);
 
 
 // Grid system
@@ -232,31 +238,31 @@
 // Basics of a navbar
 @navbar-height:                    50px;
 @navbar-margin-bottom:             @line-height-computed;
-@navbar-color:                     @text-color;
-@navbar-bg:                        @body-bg;
-@navbar-border:                    darken(@navbar-bg, 6.5%);
+@navbar-default-color:             @text-color;
+@navbar-default-bg:                @body-bg;
+@navbar-default-border:            darken(@navbar-default-bg, 6.5%);
 @navbar-border-radius:             @border-radius-base;
-@navbar-padding-horizontal:        floor(@grid-gutter-width / 2);  // ~15px
+@navbar-padding-horizontal:        floor(@grid-gutter-width / 2);
 @navbar-padding-vertical:          ((@navbar-height - @line-height-computed) / 2);
 
 // Navbar links
-@navbar-link-color:                @text-color;
-@navbar-link-hover-color:          #fff;
-@navbar-link-hover-bg:             transparent;
-@navbar-link-active-color:         #fff;
-@navbar-link-active-bg:            transparent;
-@navbar-link-disabled-color:       @gray-light;
-@navbar-link-disabled-bg:          transparent;
+@navbar-default-link-color:                @text-color;
+@navbar-default-link-hover-color:          #fff;
+@navbar-default-link-hover-bg:             transparent;
+@navbar-default-link-active-color:         #fff;
+@navbar-default-link-active-bg:            transparent;
+@navbar-default-link-disabled-color:       @gray-light;
+@navbar-default-link-disabled-bg:          transparent;
 
 // Navbar brand label
-@navbar-brand-color:               #fff;
-@navbar-brand-hover-color:         #fff;
-@navbar-brand-hover-bg:            transparent;
+@navbar-default-brand-color:               #fff;
+@navbar-default-brand-hover-color:         #fff;
+@navbar-default-brand-hover-bg:            transparent;
 
 // Navbar toggle
-@navbar-toggle-hover-bg:           @gray-dark;
-@navbar-toggle-icon-bar-bg:        #ccc;
-@navbar-toggle-border-color:       @gray;
+@navbar-default-toggle-hover-bg:           @gray-dark;
+@navbar-default-toggle-icon-bar-bg:        #ccc;
+@navbar-default-toggle-border-color:       @gray;
 
 
 // Inverted navbar
@@ -346,9 +352,11 @@
 // Jumbotron
 // -------------------------
 
+@jumbotron-padding:              30px;
+@jumbotron-color:           inherit;
 @jumbotron-bg:                   darken(@gray-darker, 5%);
+
 @jumbotron-heading-color:        inherit;
-@jumbotron-lead-color:           inherit;
 
 
 // Form states and alerts
@@ -434,21 +442,21 @@
 @alert-border-radius:         @border-radius-base;
 @alert-link-font-weight:      bold;
 
-@alert-bg:                    @state-warning-bg;
-@alert-text:                  @state-warning-text;
-@alert-border:                @state-warning-border;
-
 @alert-success-bg:            @state-success-bg;
 @alert-success-text:          @state-success-text;
 @alert-success-border:        @state-success-border;
 
-@alert-danger-bg:             @state-danger-bg;
-@alert-danger-text:           @state-danger-text;
-@alert-danger-border:         @state-danger-border;
-
 @alert-info-bg:               @state-info-bg;
 @alert-info-text:             @state-info-text;
 @alert-info-border:           @state-info-border;
+
+@alert-warning-bg:            @state-warning-bg;
+@alert-warning-text:          @state-warning-text;
+@alert-warning-border:        @state-warning-border;
+
+@alert-danger-bg:             @state-danger-bg;
+@alert-danger-text:           @state-danger-text;
+@alert-danger-border:         @state-danger-border;
 
 
 // Progress bars
@@ -481,10 +489,13 @@
 // Panels
 // -------------------------
 @panel-bg:                    @gray-darker;
-@panel-border:                @gray-dark;
+@panel-inner-border:          @gray-dark;
 @panel-border-radius:         @border-radius-base;
-@panel-heading-bg:            lighten(@gray-darker, 10%);
-@panel-footer-bg:             @panel-heading-bg;
+@panel-footer-bg:             @panel-default-heading-bg;
+
+@panel-default-text:          @gray-dark;
+@panel-default-border:        @panel-inner-border;
+@panel-default-heading-bg:    lighten(@gray-darker, 10%);
 
 @panel-primary-text:          #fff;
 @panel-primary-border:        @brand-primary;
@@ -600,10 +611,10 @@
 // --------------------------------------------------
 
 // Small screen / tablet
-@container-tablet:          728px;
+@container-tablet:            ((720px + @grid-gutter-width));
 
 // Medium screen / desktop
-@container-desktop:         940px;
+@container-desktop:           ((940px + @grid-gutter-width));
 
 // Large screen / wide desktop
-@container-large-desktop:   1170px;
+@container-lg-desktop:        ((1140px + @grid-gutter-width));
