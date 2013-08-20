@@ -8,6 +8,14 @@
 
 // Buttons ====================================================================
 
+.btn:active {
+	.box-shadow(none);
+}
+
+.btn-group.open .dropdown-toggle {
+	.box-shadow(none);
+}
+
 // Typography =================================================================
 
 .text-primary {
@@ -42,6 +50,30 @@
 }
 
 // Forms ======================================================================
+
+.form-control,textarea.form-control,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+	border-width: 2px;
+	.box-shadow(none);
+
+	&:focus {
+		.box-shadow(none);
+	}
+}
 
 .has-warning {
 	.help-block,
@@ -82,9 +114,13 @@
 // Navs =======================================================================
 
 .pagination {
-
+	
 	a {
 		color: #fff;
+
+		&:hover {
+			color: @text-color;
+		}
 	}
 
 	.disabled {
@@ -100,6 +136,9 @@
 .pager {
 	a {
 		color: #fff;
+		&:hover {
+			color: @text-color;
+		}
 	}
 
 	.disabled {
@@ -131,3 +170,8 @@
 }
 
 // Containers =================================================================
+
+.well {
+	.box-shadow(none);
+	border-width: 0;
+}
