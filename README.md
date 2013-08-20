@@ -41,9 +41,9 @@ Thanks
 ------
 [Mark Otto](http://github.com/markdotto) and [Jacob Thornton](http://github.com/fat) for [Bootstrap](https://github.com/twitter/bootstrap).
 
-[James Taylor](http://github.com/jostylr) for [cors-lite](https://github.com/jostylr/cors-lite).
+[Jenil Gogari](http://www.jgog.in/) for his contributions to the Flatly theme.
 
-[Zack Maril](http://github.com/zmaril) for [bootswatch/swatchmaker/watcher.rb](https://github.com/thomaspark/bootswatch/blob/master/swatchmaker/watcher.rb).
+[James Taylor](http://github.com/jostylr) for [cors-lite](https://github.com/jostylr/cors-lite).
 
 [Gerald Hiller](https://twitter.com/geraldhiller) for the favicon.
 
