@@ -1,7 +1,7 @@
 Bootswatch
 ==========
 
-Bootswatch is a collection of free themes for [Twitter Bootstrap](http://twitter.github.com/bootstrap/). Check it out at [bootswatch.com](http://bootswatch.com).
+Bootswatch is a collection of free themes for [Twitter Bootstrap](http://getbootstrap.com/). Check it out at [bootswatch.com](http://bootswatch.com).
 
 Usage
 -----
@@ -16,7 +16,7 @@ Customization
 ------
 Bootswatch is an open source project, and you’re welcome to fork and modify the themes.
 
-Each raw theme consists of two LESS files. One is `variables.less`, which is included by default in Bootstrap and allows you to customize [these settings](http://twitter.github.io/bootstrap/customize.html#variables). The other is called `bootswatch.less` and introduces more extensive structural changes.
+Each raw theme consists of two LESS files. One is `variables.less`, which is included by default in Bootstrap and allows you to customize [these settings](http://getbootstrap.com/customize/#less-variables). The other is called `bootswatch.less` and introduces more extensive structural changes.
 
 Check out the [Help page](http://bootswatch.com/help/) for more details on building your own theme.
 
