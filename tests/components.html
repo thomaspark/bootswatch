@@ -1592,7 +1592,7 @@
         <h2 id="navbar-basic">Basic navbar</h2>
         <p>To start, navbars are static (not fixed to the top) and include support for a project name and basic navigation. Place one anywhere within a <code>.container</code>, which sets the width of your site and content.</p>
         <div class="bs-example">
-          <div class="navbar">
+          <div class="navbar navbar-default">
               <div class="navbar-header">
                 <a class="navbar-brand" href="#">Title</a>
               </div>
@@ -1609,7 +1609,7 @@
         <h3 id="navbar-brand">Brand</h3>
         <p>A simple link to show your brand or project name only requires an anchor tag.</p>
         <div class="bs-example">
-          <div class="navbar">
+          <div class="navbar navbar-default">
               <div class="navbar-header">
                 <a class="navbar-brand" href="#">Title</a>
               </div>
@@ -1619,7 +1619,7 @@
         <h3 id="navbar-nav">Nav links</h3>
         <p>Nav items are simple to add via unordered lists.</p>
         <div class="bs-example">
-          <div class="navbar">
+          <div class="navbar navbar-default">
             <ul class="nav navbar-nav">
               <li class="active"><a href="#">Home</a></li>
               <li><a href="#">Link</a></li>
@@ -1632,14 +1632,14 @@
         <p>To properly style and position a form within the navbar, add the appropriate classes as shown below. For a default form, include <code>.navbar-form</code> and either <code>.pull-left</code> or <code>.pull-right</code> to properly align it.</p>
         <div class="bs-example">
 
-          <div class="navbar">
+          <div class="navbar navbar-default">
             <form class="navbar-form navbar-left">
               <input type="text" class="form-control" style="width: 200px;">
               <button type="submit" class="btn btn-default">Submit</button>
             </form>
           </div>
 
-          <div class="navbar">
+          <div class="navbar navbar-default">
             <form class="navbar-form navbar-left">
               <select name="" class="form-control" style="width: 200px;">
                 <option value="1">1</option>
@@ -1651,7 +1651,7 @@
             </form>
           </div>
 
-          <div class="navbar">
+          <div class="navbar navbar-default">
             <form class="navbar-form navbar-left">
               <input type="text" class="form-control" style="width: 200px;">
               <input type="checkbox">
@@ -1659,7 +1659,7 @@
             </form>
           </div>
 
-          <div class="navbar">
+          <div class="navbar navbar-default">
             <form class="navbar-form navbar-left">
               <input type="text" class="form-control" style="width: 200px;">
               <label class="checkbox-inline">
@@ -1674,7 +1674,7 @@
         <h3 id="navbar-buttons">Buttons</h3>
         <p>For buttons not residing in a <code>&lt;form&gt;</code>, add this class to vertically center buttons within a navbar.</p>
         <div class="bs-example">
-          <div class="navbar">
+          <div class="navbar navbar-default">
               <div class="navbar-header">
                 <a class="navbar-brand" href="#">Brand</a>
               </div>
@@ -1685,7 +1685,7 @@
         <h3 id="navbar-text">Text</h3>
         <p>Wrap strings of text in an element with <code>.navbar-text</code>, usually on a <code>&lt;p&gt;</code> tag for proper leading and color.</p>
         <div class="bs-example">
-          <div class="navbar">
+          <div class="navbar navbar-default">
               <div class="navbar-header">
                 <a class="navbar-brand" href="#">Brand</a>
               </div>
@@ -1696,7 +1696,7 @@
         <h3 id="navbar-links">Links</h3>
         <p>For folks using standard links that are not within the regular navbar navigation component, use the <code>.navbar-link</code> class to add the proper colors for the default and inverse navbar options.</p>
         <div class="bs-example">
-          <div class="navbar">
+          <div class="navbar navbar-default">
               <div class="navbar-header">
                 <a class="navbar-brand" href="#">Brand</a>
               </div>
@@ -1728,52 +1728,50 @@
         <h2 id="navbar-responsive">Responsive navbar</h2>
         <p>To implement a collapsing responsive navbar, wrap your navbar content in a containing div, <code>.navbar-collapse.collapse</code>, and add the navbar toggle button, <code>.navbar-toggle</code>.</p>
         <div class="bs-example">
-          <div class="navbar">
-            <div class="container">
-              <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Title</a>
-              </div>
-              <div class="navbar-collapse collapse navbar-responsive-collapse">
-                <ul class="nav navbar-nav">
-                  <li class="active"><a href="#">Home</a></li>
-                  <li><a href="#">Link</a></li>
-                  <li><a href="#">Link</a></li>
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Action</a></li>
-                      <li><a href="#">Another action</a></li>
-                      <li><a href="#">Something else here</a></li>
-                      <li class="divider"></li>
-                      <li class="dropdown-header">Dropdown header</li>
-                      <li><a href="#">Separated link</a></li>
-                      <li><a href="#">One more separated link</a></li>
-                    </ul>
-                  </li>
-                </ul>
-                <form class="navbar-form navbar-left">
-                  <input type="text" class="form-control col-lg-8" placeholder="Search">
-                </form>
-                <ul class="nav navbar-nav navbar-right">
-                  <li><a href="#">Link</a></li>
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Action</a></li>
-                      <li><a href="#">Another action</a></li>
-                      <li><a href="#">Something else here</a></li>
-                      <li class="divider"></li>
-                      <li><a href="#">Separated link</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </div><!-- /.navbar-collapse -->
-            </div><!-- /.container -->
+          <div class="navbar navbar-default">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Title</a>
+            </div>
+            <div class="navbar-collapse collapse navbar-responsive-collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li class="dropdown-header">Dropdown header</li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <form class="navbar-form navbar-left">
+                <input type="text" class="form-control col-lg-8" placeholder="Search">
+              </form>
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Link</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
           </div><!-- /.navbar -->
         </div><!-- /example -->
 
@@ -1787,51 +1785,49 @@
         <p>Modify the look of the navbar by adding <code>.navbar-inverse</code>.</p>
         <div class="bs-example">
           <div class="navbar navbar-inverse">
-            <div class="container">
-              <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Title</a>
-              </div>
-              <div class="navbar-collapse collapse navbar-inverse-collapse">
-                <ul class="nav navbar-nav">
-                  <li class="active"><a href="#">Home</a></li>
-                  <li><a href="#">Link</a></li>
-                  <li><a href="#">Link</a></li>
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Action</a></li>
-                      <li><a href="#">Another action</a></li>
-                      <li><a href="#">Something else here</a></li>
-                      <li class="divider"></li>
-                      <li class="dropdown-header">Dropdown header</li>
-                      <li><a href="#">Separated link</a></li>
-                      <li><a href="#">One more separated link</a></li>
-                    </ul>
-                  </li>
-                </ul>
-                <form class="navbar-form navbar-left">
-                  <input type="text" class="form-control col-lg-8" placeholder="Search">
-                </form>
-                <ul class="nav navbar-nav navbar-right">
-                  <li><a href="#">Link</a></li>
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Action</a></li>
-                      <li><a href="#">Another action</a></li>
-                      <li><a href="#">Something else here</a></li>
-                      <li class="divider"></li>
-                      <li><a href="#">Separated link</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </div><!-- /.navbar-collapse -->
-            </div><!-- /.container -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Title</a>
+            </div>
+            <div class="navbar-collapse collapse navbar-inverse-collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li class="dropdown-header">Dropdown header</li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <form class="navbar-form navbar-left">
+                <input type="text" class="form-control col-lg-8" placeholder="Search">
+              </form>
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Link</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
           </div><!-- /.navbar -->
         </div><!-- /example -->
 
