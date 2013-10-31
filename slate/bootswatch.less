@@ -4,10 +4,12 @@
 
 .btn-shadow(@color) {
 	#gradient > .vertical-three-colors(lighten(@color, 6%), @color, 60%, darken(@color, 4%));
+	filter: none;
 }
 
 .btn-shadow-inverse(@color) {
 	#gradient > .vertical-three-colors(darken(@color, 24%), darken(@color, 18%), 40%, darken(@color, 14%));
+	filter: none;
 }
 
 // Navbar =====================================================================
@@ -15,13 +17,11 @@
 .navbar {
 
 	.btn-shadow(@navbar-default-bg);
-	filter: none;
 	border: 1px solid rgba(0, 0, 0, 0.6);
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 
 	&-inverse {
 		.btn-shadow(@navbar-inverse-bg);
-		filter: none;
 	}
 
 	&-nav > li > a {
