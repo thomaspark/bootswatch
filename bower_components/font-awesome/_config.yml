@@ -11,7 +11,7 @@ pygments:         true
 permalink:        pretty
 
 # ensures SCSS files are compiled
-include:          [_bootstrap.scss, _core.scss, _extras.scss, _icons.scss, _mixins.scss, _path.scss, _variables.scss]
+include:          [_bordered-pulled.scss, _core.scss, _fixed-width.scss, _icons.scss, _larger.scss, _list.scss, _mixins.scss, _path.scss, _rotated-flipped.scss, _spinning.scss, _stacked.scss, _variables.scss]
 
 # used in building icon pages
 icon_meta:        src/icons.yml
@@ -19,17 +19,18 @@ icon_layout:      icon.html    # Relative to _layouts directory
 icon_destination: icon         # Relative to destination
 
 fontawesome:
-  version:        3.2.1
-  minor_version:  3.2
+  version:        4.0.3
+  minor_version:  4.0
   url:            http://fontawesome.io
   legacy_url:     http://fortawesome.github.com/Font-Awesome/
   blog_url:       http://blog.fontawesome.io
   twitter:        fontawesome
   tagline:        The iconic font designed for Bootstrap
+  css_prefix:     fa
   author:
     name:         Dave Gandy
     email:        dave@fontawesome.io
-    twitter:      byscuits
+    twitter:      davegandy
     work:
       name:       Kyruus
       url:        http://kyruus.com
@@ -50,5 +51,8 @@ fontawesome:
       url:          http://creativecommons.org/licenses/by/3.0/
 
 bootstrap:
-  version:        2.3.2
+  version:        3.0.0
   url:            http://getbootstrap.com
+
+jquery:
+  version:        1.10.2

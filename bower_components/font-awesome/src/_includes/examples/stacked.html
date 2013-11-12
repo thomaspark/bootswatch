@@ -1,54 +1,58 @@
 <section id="stacked">
   <h2 class="page-header">Stacked Icons</h2>
   <div class="row">
-    <div class="span3">
-      A method for easily stacking multiple icons. Use the <code>icon-stack</code> class on the parent and
-      <code>icon-stack-base</code> for the bottom icon.
-    </div>
-    <div class="span9">
-      <div class="well well-large well-transparent lead">
-        <span class="icon-stack">
-          <i class="icon-check-empty icon-stack-base"></i>
-          <i class="icon-twitter"></i>
+    <div class="col-md-3 col-sm-4">
+      <div class="margin-bottom">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-square-o fa-stack-2x"></i>
+          <i class="fa fa-twitter fa-stack-1x"></i>
         </span>
-        icon-twitter on icon-check-empty<br>
-        <span class="icon-stack">
-          <i class="icon-circle icon-stack-base"></i>
-          <i class="icon-flag icon-light"></i>
+        fa-twitter on fa-square-o<br>
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-flag fa-stack-1x fa-inverse"></i>
         </span>
-        icon-flag on icon-circle<br>
-        <span class="icon-stack">
-          <i class="icon-sign-blank icon-stack-base"></i>
-          <i class="icon-terminal icon-light"></i>
+        fa-flag on fa-circle<br>
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-square fa-stack-2x"></i>
+          <i class="fa fa-terminal fa-stack-1x fa-inverse"></i>
         </span>
-        icon-terminal on icon-sign-blank<br>
-        <span class="icon-stack">
-          <i class="icon-camera"></i>
-          <i class="icon-ban-circle icon-stack-base text-error"></i>
+        fa-terminal on fa-square<br>
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-camera fa-stack-1x"></i>
+          <i class="fa fa-ban fa-stack-2x text-danger"></i>
         </span>
-        icon-camera on icon-ban-circle
+        fa-ban on fa-camera
       </div>
+    </div>
+    <div class="col-md-9 col-sm-8">
+      <p>
+        To stack multiple icons, use the <code>fa-stack</code> class on the parent, the <code>fa-stack-1x</code>
+        for the regularly sized icon, and <code>fa-stack-2x</code> for the larger icon. <code>fa-inverse</code>
+        can be used as an alternative icon color. You can even throw <a href="#larger">larger icon</a> classes on the parent
+        to get further control of sizing.
+      </p>
 {% highlight html %}
-<span class="icon-stack">
-  <i class="icon-check-empty icon-stack-base"></i>
-  <i class="icon-twitter"></i>
+<span class="fa-stack fa-lg">
+  <i class="fa fa-square-o fa-stack-2x"></i>
+  <i class="fa fa-twitter fa-stack-1x"></i>
 </span>
-icon-twitter on icon-check-empty<br>
-<span class="icon-stack">
-  <i class="icon-circle icon-stack-base"></i>
-  <i class="icon-flag icon-light"></i>
+fa-twitter on fa-square-o<br>
+<span class="fa-stack fa-lg">
+  <i class="fa fa-circle fa-stack-2x"></i>
+  <i class="fa fa-flag fa-stack-1x fa-inverse"></i>
 </span>
-icon-flag on icon-circle<br>
-<span class="icon-stack">
-  <i class="icon-sign-blank icon-stack-base"></i>
-  <i class="icon-terminal icon-light"></i>
+fa-flag on fa-circle<br>
+<span class="fa-stack fa-lg">
+  <i class="fa fa-square fa-stack-2x"></i>
+  <i class="fa fa-terminal fa-stack-1x fa-inverse"></i>
 </span>
-icon-terminal on icon-sign-blank<br>
-<span class="icon-stack">
-  <i class="icon-camera"></i>
-  <i class="icon-ban-circle icon-stack-base text-error"></i>
+fa-terminal on fa-square<br>
+<span class="fa-stack fa-lg">
+  <i class="fa fa-camera fa-stack-1x"></i>
+  <i class="fa fa-ban fa-stack-2x text-danger"></i>
 </span>
-icon-camera on icon-ban-circle
+fa-ban on fa-camera
 {% endhighlight %}
     </div>
   </div>
