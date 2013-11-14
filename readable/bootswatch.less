@@ -2,21 +2,20 @@
 // Bootswatch
 // -----------------------------------------------------
 
-@import url("//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic");
-
-.btn-shadow(@color) {
-	#gradient > .vertical-three-colors(lighten(@color, 10%), @color, 6%, darken(@color, 4%));
-	filter: none;
-	border: 1px solid darken(@color, 10%);
-}
+@import url("//fonts.googleapis.com/css?family=Raleway:700");
 
 // Navbar =====================================================================
 
 .navbar {
-	.box-shadow(0 1px 4px rgba(0, 0, 0, 0.2));
+	font-family: @headings-font-family;
+	text-transform: uppercase;
 
 	&-nav > li > a {
 		padding-top: @navbar-padding-vertical + 6px;
+	}
+
+	&-nav > li > a:hover {
+		text-decoration: underline;
 	}
 
 	&-brand {
@@ -26,37 +25,20 @@
 
 // Buttons ====================================================================
 
-.btn-default,
-.btn-default:hover {
-	.btn-shadow(@btn-default-bg);
-}
-
-.btn-primary,
-.btn-primary:hover {
-	.btn-shadow(@btn-primary-bg);
-}
-
-.btn-success,
-.btn-success:hover {
-	.btn-shadow(@btn-success-bg);
-}
-
-.btn-info,
-.btn-info:hover {
-	.btn-shadow(@btn-info-bg);
-}
-
-.btn-warning,
-.btn-warning:hover {
-	.btn-shadow(@btn-warning-bg);
-}
-
-.btn-danger,
-.btn-danger:hover {
-	.btn-shadow(@btn-danger-bg);
+.btn {
+	font-family: @headings-font-family;
+	text-transform: uppercase;
 }
 
 // Typography =================================================================
+
+h1, h2, h3, h4, h5, h6 {
+	text-transform: uppercase;
+}
+
+p {
+	margin-bottom: 1.4em;
+}
 
 // Tables =====================================================================
 

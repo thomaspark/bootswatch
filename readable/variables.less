@@ -18,7 +18,7 @@
 // Brand colors
 // -------------------------
 
-@brand-primary:         #428bca;
+@brand-primary:         #4582EC;
 @brand-success:         #5cb85c;
 @brand-warning:         #f0ad4e;
 @brand-danger:          #d9534f;
@@ -27,24 +27,24 @@
 // Scaffolding
 // -------------------------
 
-@body-bg:               #f9f9f9;
+@body-bg:               #fcfcfc;
 @text-color:            @gray-dark;
 
 // Links
 // -------------------------
 
 @link-color:            @brand-primary;
-@link-hover-color:      @link-color;
+@link-hover-color:      darken(@link-color, 20%);
 
 // Typography
 // -------------------------
 
-@font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
-@font-family-serif:       "Lora", Georgia, "Times New Roman", Times, serif;
+@font-family-sans-serif:  "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-serif:       Georgia, "Times New Roman", Times, serif;
 @font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace;
 @font-family-base:        @font-family-serif;
 
-@font-size-base:          17px;
+@font-size-base:          16px;
 @font-size-large:         ceil(@font-size-base * 1.25); // ~18px
 @font-size-small:         ceil(@font-size-base * 0.85); // ~12px
 
@@ -58,7 +58,7 @@
 @line-height-base:        1.428571429; // 20/14
 @line-height-computed:    floor(@font-size-base * @line-height-base); // ~20px
 
-@headings-font-family:    @font-family-base;
+@headings-font-family:    @font-family-sans-serif;
 @headings-font-weight:    bold;
 @headings-line-height:    1.1;
 @headings-color:          inherit;
@@ -260,16 +260,16 @@
 @navbar-padding-horizontal:        floor(@grid-gutter-width / 2);
 @navbar-padding-vertical:          ((@navbar-height - @line-height-computed) / 2);
 
-@navbar-default-color:             @gray;
+@navbar-default-color:             @text-color;
 @navbar-default-bg:                @body-bg;
-@navbar-default-border:            darken(@navbar-default-bg, 6.5%);
+@navbar-default-border:            transparent;
 
 // Navbar links
-@navbar-default-link-color:                @navbar-default-color;
-@navbar-default-link-hover-color:          @gray-dark;
+@navbar-default-link-color:                @link-color;
+@navbar-default-link-hover-color:          @link-hover-color;
 @navbar-default-link-hover-bg:             transparent;
-@navbar-default-link-active-color:         @navbar-default-link-hover-color;
-@navbar-default-link-active-bg:            darken(@navbar-default-bg, 10%);
+@navbar-default-link-active-color:         @navbar-default-link-color;
+@navbar-default-link-active-bg:            transparent;
 @navbar-default-link-disabled-color:       #333;
 @navbar-default-link-disabled-bg:          transparent;
 
@@ -289,14 +289,14 @@
 // Reset inverted navbar basics
 @navbar-inverse-color:                      @gray-light;
 @navbar-inverse-bg:                         @text-color;
-@navbar-inverse-border:                     darken(@navbar-inverse-bg, 10%);
+@navbar-inverse-border:                     transparent;
 
 // Inverted navbar links
 @navbar-inverse-link-color:                 @gray-light;
 @navbar-inverse-link-hover-color:           #fff;
 @navbar-inverse-link-hover-bg:              transparent;
-@navbar-inverse-link-active-color:          @navbar-inverse-link-hover-color;
-@navbar-inverse-link-active-bg:             darken(@navbar-inverse-bg, 10%);
+@navbar-inverse-link-active-color:          @navbar-inverse-link-color;
+@navbar-inverse-link-active-bg:             transparent;
 @navbar-inverse-link-disabled-color:        #ccc;
 @navbar-inverse-link-disabled-bg:           transparent;
 
