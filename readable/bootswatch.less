@@ -14,10 +14,6 @@
 		padding-top: @navbar-padding-vertical + 6px;
 	}
 
-	&-nav > li > a:hover {
-		text-decoration: underline;
-	}
-
 	&-brand {
 		padding-top: @navbar-padding-vertical + 5px;
 	}
@@ -52,10 +48,36 @@ p {
 	.active > a:hover {
 		border-color: #ddd;
 	}
+
+	&-lg > li > a,
+	&-lg > li > span {
+		padding: 14px 24px;
+	}
 }
 
 // Indicators =================================================================
 
+.alert {
+	a,
+	.alert-link {
+		color: @alert-success-text;
+		text-decoration: underline;
+	}
+}
+
 // Progress bars ==============================================================
 
 // Containers =================================================================
+
+.panel {
+
+	&-primary,
+	&-success,
+	&-warning,
+	&-danger,
+	&-info {
+		.panel-heading {
+			color: #fff;
+		}
+	}
+}

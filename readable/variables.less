@@ -12,7 +12,7 @@
 @gray-darker:            lighten(#000, 13.5%); // #222
 @gray-dark:              lighten(#000, 20%);   // #333
 @gray:                   lighten(#000, 33.5%); // #555
-@gray-light:             lighten(#000, 60%);   // #999
+@gray-light:             lighten(#000, 70%);   // #999
 @gray-lighter:           lighten(#000, 93.5%); // #eee
 
 // Brand colors
@@ -27,7 +27,7 @@
 // Scaffolding
 // -------------------------
 
-@body-bg:               #fcfcfc;
+@body-bg:               #fff;
 @text-color:            @gray-dark;
 
 // Links
@@ -375,21 +375,21 @@
 // Form states and alerts
 // -------------------------
 
-@state-success-text:             #468847;
+@state-success-text:             @brand-success;
 @state-success-bg:               #dff0d8;
-@state-success-border:           darken(spin(@state-success-bg, -10), 5%);
+@state-success-border:           @brand-success;
 
-@state-info-text:                #3a87ad;
+@state-info-text:                @brand-info;
 @state-info-bg:                  #d9edf7;
-@state-info-border:              darken(spin(@state-info-bg, -10), 7%);
+@state-info-border:              @brand-info;
 
-@state-warning-text:             #c09853;
+@state-warning-text:             @brand-warning;
 @state-warning-bg:               #fcf8e3;
-@state-warning-border:           darken(spin(@state-warning-bg, -10), 3%);
+@state-warning-border:           @brand-warning;
 
-@state-danger-text:              #b94a48;
+@state-danger-text:              @brand-danger;
 @state-danger-bg:                #f2dede;
-@state-danger-border:            darken(spin(@state-danger-bg, -10), 3%);
+@state-danger-border:            @brand-danger;
 
 
 // Tooltips
@@ -455,20 +455,20 @@
 @alert-border-radius:         @border-radius-base;
 @alert-link-font-weight:      bold;
 
-@alert-success-bg:            @state-success-bg;
-@alert-success-text:          @state-success-text;
+@alert-success-bg:            @state-success-border;
+@alert-success-text:          #fff;
 @alert-success-border:        @state-success-border;
 
-@alert-info-bg:               @state-info-bg;
-@alert-info-text:             @state-info-text;
+@alert-info-bg:               @state-info-border;
+@alert-info-text:             #fff;
 @alert-info-border:           @state-info-border;
 
-@alert-warning-bg:            @state-warning-bg;
-@alert-warning-text:          @state-warning-text;
+@alert-warning-bg:            @state-warning-border;
+@alert-warning-text:          #fff;
 @alert-warning-border:        @state-warning-border;
 
-@alert-danger-bg:             @state-danger-bg;
-@alert-danger-text:           @state-danger-text;
+@alert-danger-bg:             @state-danger-border;
+@alert-danger-text:           #fff;
 @alert-danger-border:         @state-danger-border;
 
 
@@ -516,19 +516,19 @@
 
 @panel-success-text:          @state-success-text;
 @panel-success-border:        @state-success-border;
-@panel-success-heading-bg:    @state-success-bg;
+@panel-success-heading-bg:    @state-success-border;
 
 @panel-warning-text:          @state-warning-text;
 @panel-warning-border:        @state-warning-border;
-@panel-warning-heading-bg:    @state-warning-bg;
+@panel-warning-heading-bg:    @state-warning-border;
 
 @panel-danger-text:           @state-danger-text;
 @panel-danger-border:         @state-danger-border;
-@panel-danger-heading-bg:     @state-danger-bg;
+@panel-danger-heading-bg:     @state-danger-border;
 
 @panel-info-text:             @state-info-text;
 @panel-info-border:           @state-info-border;
-@panel-info-heading-bg:       @state-info-bg;
+@panel-info-heading-bg:       @state-info-border;
 
 
 // Thumbnails
