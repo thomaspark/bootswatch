@@ -21,6 +21,7 @@
 	}
 
 	.dropdown-menu {
+		padding: 0;
 		border: none;
 		background-color: @navbar-default-bg;
 
@@ -29,10 +30,12 @@
 			font-size: 13px;
 			font-weight: 300;
 			color: @navbar-default-color;
+		}
 
-			&:hover {
-				background-color: @navbar-default-link-hover-bg;
-			}
+		> li > a:hover,
+		> .active > a,
+		> .active > a:hover {
+			background-color: @navbar-default-link-hover-bg;
 		}
 	}
 }

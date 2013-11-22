@@ -7502,6 +7502,7 @@ td.visible-print {
 }
 
 .navbar .dropdown-menu {
+  padding: 0;
   background-color: #333333;
   border: none;
 }
@@ -7513,7 +7514,9 @@ td.visible-print {
   color: #ffffff;
 }
 
-.navbar .dropdown-menu > li > a:hover {
+.navbar .dropdown-menu > li > a:hover,
+.navbar .dropdown-menu > .active > a,
+.navbar .dropdown-menu > .active > a:hover {
   background-color: #272727;
 }
 
