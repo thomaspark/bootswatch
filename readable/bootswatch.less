@@ -14,6 +14,19 @@
 		padding-top: @navbar-padding-vertical + 6px;
 	}
 
+	&-nav > .active > a,
+	&-nav > .active > a:hover {
+		text-decoration: underline;
+	}
+
+	&-default .navbar-nav > .active > a:hover {
+		color: @navbar-default-link-hover-color;
+	}
+
+	&-inverse .navbar-nav > .active > a:hover {
+		color: @navbar-inverse-link-hover-color;
+	}
+
 	&-brand {
 		padding-top: @navbar-padding-vertical + 5px;
 	}
