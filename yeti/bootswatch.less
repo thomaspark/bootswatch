@@ -20,24 +20,60 @@
 		.box-shadow(none);
 	}
 
-	.dropdown-menu {
-		padding: 0;
-		border: none;
-		background-color: @navbar-default-bg;
+	.dropdown {
 
-		> li > a,
-		> li > a:focus {
-			padding: 12px 15px;
-			background-color: transparent;
-			font-size: 13px;
-			font-weight: 300;
-			color: @navbar-default-color;
+		&-menu {
+			padding: 0;
+			border: none;
+
+			> li > a,
+			> li > a:focus {
+				padding: 12px 15px;
+				background-color: transparent;
+				font-size: 13px;
+				font-weight: 300;
+			}
 		}
 
-		> li > a:hover,
-		> .active > a,
-		> .active > a:hover {
-			background-color: @navbar-default-link-hover-bg;
+		&-header {
+			color: rgba(255, 255, 255, 0.5);
+		}
+
+	}
+
+	&-default {
+
+		.dropdown-menu {
+			background-color: @navbar-default-bg;
+
+			> li > a,
+			> li > a:focus {
+				color: @navbar-default-color;
+			}
+
+			> li > a:hover,
+			> .active > a,
+			> .active > a:hover {
+				background-color: @navbar-default-link-hover-bg;
+			}
+		}
+	}
+
+	&-inverse {
+
+		.dropdown-menu {
+			background-color: @navbar-inverse-bg;
+
+			> li > a,
+			> li > a:focus {
+				color: @navbar-inverse-color;
+			}
+
+			> li > a:hover,
+			> .active > a,
+			> .active > a:hover {
+				background-color: @navbar-inverse-link-hover-bg;
+			}
 		}
 	}
 }
@@ -225,8 +261,19 @@ label,
 
 // Containers =================================================================
 
-.dropdown-menu {
-	font-size: @font-size-small;
+.dropdown {
+
+	&-menu {
+		margin-top: 0;
+		font-size: @font-size-small;
+	}
+
+	&-header {
+		padding-left: 15px;
+		padding-right: 15px;
+		font-size: 9px;
+		text-transform: uppercase;
+	}
 }
 
 .popover {

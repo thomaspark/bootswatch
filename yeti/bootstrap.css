@@ -5099,7 +5099,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-inverse .navbar-text {
-  color: #999999;
+  color: #ffffff;
 }
 
 .navbar-inverse .navbar-nav > li > a {
@@ -7503,7 +7503,6 @@ td.visible-print {
 
 .navbar .dropdown-menu {
   padding: 0;
-  background-color: #333333;
   border: none;
 }
 
@@ -7512,14 +7511,41 @@ td.visible-print {
   padding: 12px 15px;
   font-size: 13px;
   font-weight: 300;
-  color: #ffffff;
   background-color: transparent;
 }
 
-.navbar .dropdown-menu > li > a:hover,
-.navbar .dropdown-menu > .active > a,
-.navbar .dropdown-menu > .active > a:hover {
+.navbar .dropdown-header {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-default .dropdown-menu {
+  background-color: #333333;
+}
+
+.navbar-default .dropdown-menu > li > a,
+.navbar-default .dropdown-menu > li > a:focus {
+  color: #ffffff;
+}
+
+.navbar-default .dropdown-menu > li > a:hover,
+.navbar-default .dropdown-menu > .active > a,
+.navbar-default .dropdown-menu > .active > a:hover {
   background-color: #272727;
+}
+
+.navbar-inverse .dropdown-menu {
+  background-color: #008cba;
+}
+
+.navbar-inverse .dropdown-menu > li > a,
+.navbar-inverse .dropdown-menu > li > a:focus {
+  color: #ffffff;
+}
+
+.navbar-inverse .dropdown-menu > li > a:hover,
+.navbar-inverse .dropdown-menu > .active > a,
+.navbar-inverse .dropdown-menu > .active > a:hover {
+  background-color: #006687;
 }
 
 .btn {
@@ -7690,7 +7716,15 @@ label,
 }
 
 .dropdown-menu {
+  margin-top: 0;
   font-size: 12px;
+}
+
+.dropdown-header {
+  padding-right: 15px;
+  padding-left: 15px;
+  font-size: 9px;
+  text-transform: uppercase;
 }
 
 .popover {
