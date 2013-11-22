@@ -7619,7 +7619,14 @@ label,
   color: #999999;
 }
 
-.pagination > li > a {
+.pagination > li > a,
+.pagination > li > a,
+.pagination > li:first-child > a,
+.pagination > li:last-child > a,
+.pagination > li > span,
+.pagination > li > span,
+.pagination > li:first-child > span,
+.pagination > li:last-child > span {
   margin-left: 4px;
   color: #999999;
   border-radius: 3px;

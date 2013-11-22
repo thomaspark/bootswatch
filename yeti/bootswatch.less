@@ -150,10 +150,16 @@ label,
 	font-weight: 300;
 	color: @gray-light;
 
-	> li > a {
-		margin-left: 4px;
-		border-radius: 3px;
-		color: @gray-light;
+	> li,
+	> li,
+	> li:first-child,
+	> li:last-child {
+		> a,
+		> span {
+			margin-left: 4px;
+			border-radius: 3px;
+			color: @gray-light;
+		}
 	}
 
 	&-lg > li > a {
