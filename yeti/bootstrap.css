@@ -7507,11 +7507,13 @@ td.visible-print {
   border: none;
 }
 
-.navbar .dropdown-menu > li > a {
+.navbar .dropdown-menu > li > a,
+.navbar .dropdown-menu > li > a:focus {
   padding: 12px 15px;
   font-size: 13px;
   font-weight: 300;
   color: #ffffff;
+  background-color: transparent;
 }
 
 .navbar .dropdown-menu > li > a:hover,
