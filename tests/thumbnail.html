@@ -93,29 +93,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
     <script>
 
-      $.get("http://api.bootswatch.com", function (data) {
+      $.get("http://api.bootswatch.com/3/", function (data) {
+          var menuTemplate = "<div id='menu' style='position:fixed;top:10px;right:10px;'><select>{{#.}}<option data-description='{{description}}'>{{name}}</option>{{/.}}</select></div>",
+              menuHTML = Mustache.render(menuTemplate, data.themes);     
 
-           var t_menu = "<div id='menu' style='position:fixed;top:10px;right:10px;'><select>{{#.}}<option data-description='{{description}}'>{{name}}</option>{{/.}}</select></div>";
-           var t_previews = "{{#.}}<div class='preview hidden' id='{{name}}'><h1>{{name}}: {{description}}</h1><p><a href='{{preview}}'><img src='{{thumbnail}}'></a></p></div>{{/.}}";
-                
-           var o_menu = Mustache.render(t_menu, data.themes);
-           var o_previews = Mustache.render(t_previews, data.themes);         
-
-          $('body').append(o_menu);
+          $('body').append(menuHTML);
                         
           $('#menu').change(function(){
-
             var theme = $('#menu :selected');
             $('#theme').text(theme.text());
             $('#description').text(theme.data('description'));
-
             theme = '../' + theme.text().toLowerCase() + '/bootstrap.min.css';
             $('#stylesheet').attr('href', theme);
           });
-            
       }, "json");
 
     </script>
-
   </body>
 </html>
