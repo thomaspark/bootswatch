@@ -4,7 +4,7 @@
     <title>Bootswatch: Components</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css" media="screen" id="stylesheet">
+    <link rel="stylesheet" href="../amelia/bootstrap.css" media="screen" id="stylesheet">
     <link rel="stylesheet" href="../assets/css/bootswatch.min.css">
     <style>
 
@@ -87,8 +87,8 @@
     <div class="container">
 
       <div class="page-header">
-        <h1 id="theme">Bootstrap</h1>
-        <p id="description" class="lead">The original</p>
+        <h1 id="theme">Amelia</h1>
+        <p id="description" class="lead">Sweet and cheery</p>
       </div>
 
 
@@ -2745,11 +2745,16 @@
           $('body').append(menuHTML);
                         
           $('#menu').change(function(){
-            var theme = $('#menu :selected');
-            $('#theme').text(theme.text());
-            $('#description').text(theme.data('description'));
-            theme = '../' + theme.text().toLowerCase() + '/bootstrap.min.css';
-            $('#stylesheet').attr('href', theme);
+            var $theme = $('#menu :selected'),
+                theme = $theme.text(),
+                description = $theme.data('description'),
+                date = new Date(),
+                time = date.getTime()
+                url = '../' + theme.toLowerCase() + '/bootstrap.css?' + time;
+
+            $('#theme').text(theme);
+            $('#description').text(description);
+            $('#stylesheet').attr('href', url);
           });
       }, "json");
 
