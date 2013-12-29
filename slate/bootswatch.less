@@ -58,50 +58,55 @@
 
 .btn-default {
 	.btn-shadow(@btn-default-bg);
+
+	&:hover {
+		.btn-shadow-inverse(@btn-default-bg);
+	}
 }
 
 .btn-primary {
 	.btn-shadow(@btn-primary-bg);
+
+	&:hover {
+		.btn-shadow-inverse(@btn-primary-bg);
+	}
 }
 
 .btn-success {
 	.btn-shadow(@btn-success-bg);
+
+	&:hover {
+		.btn-shadow-inverse(@btn-success-bg);
+	}
 }
 
 .btn-info {
 	.btn-shadow(@btn-info-bg);
+
+	&:hover {
+		.btn-shadow-inverse(@btn-info-bg);
+	}
 }
 
 .btn-warning {
 	.btn-shadow(@btn-warning-bg);
+
+	&:hover {
+		.btn-shadow-inverse(@btn-warning-bg);
+	}
 }
 
 .btn-danger {
 	.btn-shadow(@btn-danger-bg);
+
+	&:hover {
+		.btn-shadow-inverse(@btn-danger-bg);
+	}
 }
 
-.btn-default:hover {
-	.btn-shadow-inverse(@btn-default-bg);
-}
-
-.btn-primary:hover {
-	.btn-shadow-inverse(@btn-primary-bg);
-}
-
-.btn-success:hover {
-	.btn-shadow-inverse(@btn-success-bg);
-}
-
-.btn-info:hover {
-	.btn-shadow-inverse(@btn-info-bg);
-}
-
-.btn-warning:hover {
-	.btn-shadow-inverse(@btn-warning-bg);
-}
-
-.btn-danger:hover {
-	.btn-shadow-inverse(@btn-danger-bg);
+.btn-link,
+.btn-link:hover {
+	border-color: transparent;
 }
 
 // Typography =================================================================
