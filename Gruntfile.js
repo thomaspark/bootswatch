@@ -8,17 +8,16 @@ module.exports = function (grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		builddir: '.',
-		meta: {
-			banner: '/**\n' +
-						' * <%= pkg.description %>\n' +
-						' * @version v<%= pkg.version %> - ' +
-						'<%= grunt.template.today("yyyy-mm-dd") %>\n' +
-						' * @link <%= pkg.homepage %>\n' +
-						' * @license <%= pkg.license %>' + ' */'
-		},
+		banner: '/*!\n' +
+						' * <%= pkg.name %> v<%= pkg.version %>\n' +
+						' * Homepage: <%= pkg.homepage %>\n' +
+						' * Copyright 2012-<%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
+						' * Licensed under <%= pkg.license %>\n' +
+						' * Based on Bootstrap\n' +
+						'*/\n',
 		swatch: {
 			amelia:{}, cerulean:{}, cosmo:{}, cyborg:{}, flatly:{}, journal:{},
-			readable:{}, simplex:{}, slate:{}, spacelab:{}, united:{}, yeti: {},
+			readable:{}, simplex:{}, slate:{}, spacelab:{}, united:{}, yeti:{},
 			custom:{}
 		},
 		clean: {
@@ -27,6 +26,10 @@ module.exports = function (grunt) {
 			}
 		},
 		concat: {
+			options: {
+				banner: '<%= banner %>',
+				stripBanners: false
+			},
 			dist: {
 				src: [],
 				dest: ''
