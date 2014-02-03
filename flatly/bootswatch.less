@@ -1,4 +1,4 @@
-// Flatly 3.0.3
+// Flatly 3.1.0
 // Bootswatch
 // -----------------------------------------------------
 
@@ -126,23 +126,6 @@ input[type="color"],
 	}
 }
 
-.pagination {
-	
-	a,
-	a:hover {
-		color: #fff;
-	}
-
-	.disabled {
-		&>a,
-		&>a:hover,
-		&>a:focus,
-		&>span {
-			background-color: lighten(@brand-success, 15%);
-		}
-	}
-}
-
 .pager {
 	a,
 	a:hover {
@@ -154,7 +137,7 @@ input[type="color"],
 		&>a:hover,
 		&>a:focus,
 		&>span {
-			background-color: lighten(@brand-success, 15%);
+			background-color: @pagination-disabled-bg;
 		}
 	}
 }
@@ -181,5 +164,4 @@ input[type="color"],
 
 .well {
 	.box-shadow(none);
-	border-width: 0;
 }
