@@ -47,11 +47,29 @@
 
 .table {
 
-	tr.success,
-	tr.warning,
-	tr.danger {
-		color: #fff;
-	}
+  tr.success,
+  tr.warning,
+  tr.danger {
+    color: #fff;
+  }
+
+  > thead > tr > th,
+  > tbody > tr > th,
+  > tfoot > tr > th,
+  > thead > tr > td,
+  > tbody > tr > td,
+  > tfoot > tr > td {
+    border: none;
+  }
+
+  &-bordered > thead > tr > th,
+  &-bordered > tbody > tr > th,
+  &-bordered > tfoot > tr > th,
+  &-bordered > thead > tr > td,
+  &-bordered > tbody > tr > td,
+  &-bordered > tfoot > tr > td {
+    border: 1px solid @table-border-color;
+  }
 }
 
 // Forms ======================================================================
