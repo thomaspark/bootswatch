@@ -1,0 +1,320 @@
+// Lumen 3.1.0
+// Bootswatch
+// -----------------------------------------------------
+
+@import url("//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic");
+
+.shadow (@width: 4px) {
+  border-width: 0 1px @width 1px;
+}
+
+// Navbar =====================================================================
+
+.navbar  {
+  .shadow();
+}
+
+// Buttons ====================================================================
+
+.btn {
+  .shadow();
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  &:hover {
+    margin-top: 1px;
+    border-bottom-width: 3px;
+  }
+
+  &:active {
+    margin-top: 2px;
+    border-bottom-width: 2px;
+    .box-shadow(none);
+  }
+
+  &-default:hover,
+  &-default:focus,
+  &-group.open .dropdown-toggle.btn-default {
+    background-color: @btn-default-bg;
+    border-color: @btn-default-border;
+  }
+
+  &-primary:hover,
+  &-primary:focus,
+  &-group.open .dropdown-toggle.btn-primary {
+    background-color: @btn-primary-bg;
+    border-color: @btn-primary-border;
+  }
+
+  &-success:hover,
+  &-success:focus,
+  &-group.open .dropdown-toggle.btn-success {
+    background-color: @btn-success-bg;
+    border-color: @btn-success-border;
+  }
+
+  &-info:hover,
+  &-info:focus,
+  &-group.open .dropdown-toggle.btn-info {
+    background-color: @btn-info-bg;
+    border-color: @btn-info-border;
+  }
+
+  &-warning:hover,
+  &-warning:focus,
+  &-group.open .dropdown-toggle.btn-warning {
+    background-color: @btn-warning-bg;
+    border-color: @btn-warning-border;
+  }
+
+  &-danger:hover,
+  &-danger:focus,
+  &-group.open .dropdown-toggle.btn-danger {
+    background-color: @btn-danger-bg;
+    border-color: @btn-danger-border;
+  }
+
+  &-group.open .dropdown-toggle {
+    .box-shadow(none);
+  }
+}
+
+// Typography =================================================================
+
+.text-primary,
+.text-primary:hover {
+  color: @brand-primary;
+}
+
+.text-success,
+.text-success:hover {
+  color: @brand-success;
+}
+
+.text-danger,
+.text-danger:hover {
+  color: @brand-danger;
+}
+
+.text-warning,
+.text-warning:hover {
+  color: @brand-warning;
+}
+
+.text-info,
+.text-info:hover {
+  color: @brand-info;
+}
+
+// Tables =====================================================================
+
+table,
+.table {
+
+  tr.success,
+  tr.warning,
+  tr.danger {
+    color: #fff;
+  }
+
+  > thead > tr > th,
+  > tbody > tr > th,
+  > tfoot > tr > th,
+  > thead > tr > td,
+  > tbody > tr > td,
+  > tfoot > tr > td {
+    border-color: transparent;
+  }
+}
+
+// Forms ======================================================================
+
+.form-control {
+  .box-shadow(inset 0 2px 0 rgba(0, 0, 0, 0.075));
+}
+
+label {
+  font-weight: normal;
+}
+
+.has-warning {
+  .help-block,
+  .control-label {
+    color: @brand-warning;
+  }
+
+  .form-control,
+  .form-control:focus {
+    border: 1px solid @brand-warning;
+    .box-shadow(inset 0 2px 0 rgba(0, 0, 0, 0.075));
+  }
+}
+
+.has-error {
+  .help-block,
+  .control-label {
+    color: @brand-danger;
+  }
+
+  .form-control,
+  .form-control:focus {
+    border: 1px solid @brand-danger;
+    .box-shadow(inset 0 2px 0 rgba(0, 0, 0, 0.075));
+  }
+}
+
+.has-success {
+  .help-block,
+  .control-label {
+    color: @brand-success;
+  }
+
+  .form-control,
+  .form-control:focus {
+    border: 1px solid @brand-success;
+    .box-shadow(inset 0 2px 0 rgba(0, 0, 0, 0.075));
+  }
+}
+
+// Navs =======================================================================
+
+.nav {
+  .open > a,
+  .open > a:hover,
+  .open > a:focus {
+    border-color: transparent;
+  }
+}
+
+.nav-tabs {
+
+  > li > a {
+    margin-top: 6px;
+    border-color: @navbar-default-border;
+    color: @gray-dark;
+    .transition(all 0.2s ease-in-out);
+  }
+
+  > li > a:hover,
+  > li > a:focus,
+  > li.active > a,
+  > li.active > a:hover,
+  > li.active > a:focus,
+  .open > a,
+  .open > a:hover,
+  .open > a:focus {
+    padding-top: @padding-large-vertical + 3px;
+    padding-bottom: @padding-large-vertical + 3px;
+    margin-top: 0;
+  }
+
+  .open > a,
+  .open > a:hover,
+  .open > a:focus {
+    border-color: @navbar-default-border;
+  }
+
+  > li.disabled > a:hover,
+  > li.disabled > a:focus {
+    padding-top: @padding-large-vertical;
+    padding-bottom: @padding-large-vertical;
+    margin-top: 6px;
+  }
+}
+
+.dropdown-menu {
+  margin-top: 0;
+  .shadow();
+  border-top-width: 1px;
+  .box-shadow(none);
+}
+
+.breadcrumb {
+  border-color: darken(@breadcrumb-bg, 5%);
+  border-style: solid;
+  .shadow();
+}
+
+.pagination,
+.pager {
+  > li > a,
+  > li > span {
+    .shadow();
+    color: @pagination-color;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    &:hover {
+      margin-top: 1px;
+      border-bottom-width: 3px;
+    }
+
+    &:active {
+      margin-top: 2px;
+      border-bottom-width: 2px;
+    }
+  }
+
+
+  > .disabled > a,
+  > .disabled > span {
+
+    &:hover {
+      margin-top: 0;
+      .shadow();
+    }
+
+    &:active {
+      margin-top: 0;
+      .shadow();
+    }
+  }
+}
+
+// Indicators =================================================================
+
+.alert {
+  .shadow();
+
+  a,
+  .alert-link {
+    font-weight: normal;
+    color: #fff;
+    text-decoration: underline;
+  }
+}
+
+.label {
+  font-weight: normal;
+}
+
+// Progress bars ==============================================================
+
+.progress {
+  border: 1px solid @navbar-default-border;
+  .box-shadow(inset 0 2px 0 rgba(0, 0, 0, 0.1));
+
+  &-bar {
+    .box-shadow(inset 0 -4px 0 rgba(0, 0, 0, 0.15));
+  }
+}
+
+// Containers =================================================================
+
+.well {
+  border: 1px solid @navbar-default-border;
+  .box-shadow(inset 0 2px 0 rgba(0, 0, 0, 0.05));
+}
+
+.jumbotron {
+  border: 1px solid @navbar-default-border;
+  .box-shadow(inset 0 2px 0 rgba(0, 0, 0, 0.05));
+}
+
+.panel {
+  border: 1px solid @navbar-default-border;
+  .box-shadow(0 4px 0 rgba(0, 0, 0, 0.15));
+
+}

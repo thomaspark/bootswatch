@@ -1,0 +1,236 @@
+// Superhero 3.1.0
+// Bootswatch
+// -----------------------------------------------------
+
+@import url("//fonts.googleapis.com/css?family=Lato:300,400,700");
+
+// Navbar =====================================================================
+
+.navbar {
+  .box-shadow(none);
+  border: none;
+  font-size: 12px;
+
+  &-default .navbar-nav {
+
+  }
+}
+
+// Buttons ====================================================================
+
+.btn {
+
+  font-weight: 300;
+
+  &-default {
+    &:hover {
+      background-color: darken(@btn-default-bg, 3%);
+    }
+  }
+
+  &-sm,
+  &-xs {
+    font-size: 12px;
+  }
+}
+
+// Typography =================================================================
+
+body {
+  font-weight: 300;
+}
+
+.text-primary,
+.text-primary:hover {
+  color: @brand-primary;
+}
+
+.text-success,
+.text-success:hover {
+  color: @brand-success;
+}
+
+.text-danger,
+.text-danger:hover {
+  color: @brand-danger;
+}
+
+.text-warning,
+.text-warning:hover {
+  color: @brand-warning;
+}
+
+.text-info,
+.text-info:hover {
+  color: @brand-info;
+}
+
+.page-header {
+  border-bottom-color: @table-border-color;
+}
+
+.dropdown-menu {
+
+  border: none;
+  margin: 0;
+  .box-shadow(none);
+
+  > li > a {
+    font-size: 12px;
+    font-weight: 300;
+  }
+}
+
+.btn-group.open .dropdown-toggle {
+  .box-shadow(none);
+}
+
+.dropdown-header {
+  font-size: 12px;
+}
+
+// Tables =====================================================================
+
+table,
+.table {
+  font-size: 12px;
+
+  > thead > tr > th,
+  > tbody > tr > th,
+  > tfoot > tr > th,
+  > thead > tr > td,
+  > tbody > tr > td,
+  > tfoot > tr > td {
+    border-color: transparent;
+  }
+ }
+
+// Forms ======================================================================
+
+label,
+.radio label,
+.checkbox label,
+.help-block {
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.input-addon,
+.input-group-addon {
+  color: @text-color;
+}
+
+.has-warning {
+  .help-block,
+  .control-label {
+    color: @brand-warning;
+  }
+}
+
+.has-error {
+  .help-block,
+  .control-label {
+    color: @brand-danger;
+  }
+}
+
+.has-success {
+  .help-block,
+  .control-label {
+    color: @brand-success;
+  }
+}
+
+.form-control:focus {
+  .box-shadow(none);
+}
+
+.has-warning,
+.has-error,
+.has-success {
+  .form-control:focus {
+    .box-shadow(none);
+  }
+}
+
+// Navs =======================================================================
+
+.nav {
+  .open > a,
+  .open > a:hover,
+  .open > a:focus {
+    border-color: transparent;
+  }
+}
+
+.nav-tabs {
+  > li > a {
+    color: @text-color;
+  }
+}
+
+.nav-pills {
+  > li > a {
+    color: @text-color;
+  }
+}
+
+.pager {
+  a {
+    color: @text-color;
+  }
+}
+
+// Indicators =================================================================
+
+.label {
+  font-weight: 300;
+}
+
+.alert {
+  color: #fff;
+
+  a,
+  .alert-link {
+    color: #fff;
+  }
+}
+
+// Progress bars ==============================================================
+
+// Containers =================================================================
+
+.well {
+  .box-shadow(none);
+}
+
+.panel {
+  border: none;
+
+  &-default > .panel-heading {
+    background-color: @table-bg-hover;
+    color: @text-color;
+  }
+}
+
+.thumbnail {
+  background-color: @well-bg;
+  border: none;
+}
+
+.modal {
+  padding: 0;
+
+  &-header,
+  &-footer {
+    background-color: @table-bg-hover;
+    border: none;
+    border-radius: 0;
+  }
+}
+
+.popover {
+  &-title {
+    border: none;
+  }
+}
