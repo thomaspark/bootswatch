@@ -10,11 +10,11 @@
 @gray-darker:            lighten(#000, 13.5%); // #222
 @gray-dark:              lighten(#000, 20%);   // #333
 @gray:                   lighten(#000, 33.5%); // #555
-@gray-light:             lighten(#000, 60%);   // #999
-@gray-lighter:           lighten(#000, 93.5%); // #eee
+@gray-light:             #808080;   // #999
+@gray-lighter:           #ddd; // #eee
 
 @brand-primary:         #D9230F;
-@brand-success:         #3D9400;
+@brand-success:         #469408;
 @brand-info:            #029ACF;
 @brand-warning:         #9B479F;
 @brand-danger:          #D9831F;
@@ -25,9 +25,9 @@
 // ## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-@body-bg:               #F7F7F7;
+@body-bg:               #FCFCFC;
 //** Global text color on `<body>`.
-@text-color:            @gray-dark;
+@text-color:            @gray-light;
 
 //** Global textual link color.
 @link-color:            @brand-primary;
@@ -45,7 +45,7 @@
 @font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
 @font-family-base:        @font-family-sans-serif;
 
-@font-size-base:          13px;
+@font-size-base:          14px;
 @font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
 @font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
 
@@ -62,10 +62,10 @@
 @line-height-computed:    floor((@font-size-base * @line-height-base)); // ~20px
 
 //** By default, this inherits from the `<body>`.
-@headings-font-family:    "Josefin Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-@headings-font-weight:    500;
+@headings-font-family:    @font-family-sans-serif;
+@headings-font-weight:    300;
 @headings-line-height:    1.1;
-@headings-color:          inherit;
+@headings-color:          @gray-dark;
 
 
 //-- Iconography
@@ -176,7 +176,7 @@
 //** Text color for `<input>`s
 @input-color:                    @text-color;
 //** `<input>` border color
-@input-border:                   #ccc;
+@input-border:                   #ddd;
 //** `<input>` border radius
 @input-border-radius:            @border-radius-base;
 //** Border color for inputs on focus
@@ -313,12 +313,12 @@
 @navbar-padding-vertical:          ((@navbar-height - @line-height-computed) / 2);
 @navbar-collapse-max-height:       340px;
 
-@navbar-default-color:             @gray-dark;
+@navbar-default-color:             @text-color;
 @navbar-default-bg:                #fff;
 @navbar-default-border:            darken(@navbar-default-bg, 6.5%);
 
 // Navbar links
-@navbar-default-link-color:                @gray-dark;
+@navbar-default-link-color:                @headings-color;
 @navbar-default-link-hover-color:          @brand-primary;
 @navbar-default-link-hover-bg:             transparent;
 @navbar-default-link-active-color:         @navbar-default-link-hover-color;
@@ -398,19 +398,19 @@
 //
 //##
 
-@pagination-color:                     @link-color;
+@pagination-color:                     @headings-color;
 @pagination-bg:                        #fff;
 @pagination-border:                    #ddd;
 
-@pagination-hover-color:               @link-hover-color;
-@pagination-hover-bg:                  @gray-lighter;
-@pagination-hover-border:              #ddd;
+@pagination-hover-color:               #fff;
+@pagination-hover-bg:                  @brand-primary;
+@pagination-hover-border:              @brand-primary;
 
-@pagination-active-color:              @gray-light;
-@pagination-active-bg:                 #f5f5f5;
-@pagination-active-border:             #ddd;
+@pagination-active-color:              #fff;
+@pagination-active-bg:                 @brand-primary;
+@pagination-active-border:             @brand-primary;
 
-@pagination-disabled-color:            @gray-light;
+@pagination-disabled-color:            @gray-lighter;
 @pagination-disabled-bg:               #fff;
 @pagination-disabled-border:           #ddd;
 
@@ -423,12 +423,12 @@
 @pager-border:                         @pagination-border;
 @pager-border-radius:                  15px;
 
-@pager-hover-bg:                       @pagination-hover-bg;
+@pager-hover-bg:                       @brand-primary;
 
-@pager-active-bg:                      @pagination-active-bg;
-@pager-active-color:                   @pagination-active-color;
+@pager-active-bg:                      @brand-primary;
+@pager-active-color:                   #fff;
 
-@pager-disabled-color:                 @gray-light;
+@pager-disabled-color:                 @gray-lighter;
 
 
 //== Jumbotron
@@ -657,21 +657,21 @@
 @panel-primary-border:        @brand-primary;
 @panel-primary-heading-bg:    @brand-primary;
 
-@panel-success-text:          @state-success-text;
-@panel-success-border:        @state-success-border;
-@panel-success-heading-bg:    @state-success-bg;
+@panel-success-text:          #fff;
+@panel-success-border:        @brand-success;
+@panel-success-heading-bg:    @brand-success;
 
-@panel-info-text:             @state-info-text;
-@panel-info-border:           @state-info-border;
-@panel-info-heading-bg:       @state-info-bg;
+@panel-info-text:             #fff;
+@panel-info-border:           @brand-info;
+@panel-info-heading-bg:       @brand-info;
 
-@panel-warning-text:          @state-warning-text;
-@panel-warning-border:        @state-warning-border;
-@panel-warning-heading-bg:    @state-warning-bg;
+@panel-warning-text:          #fff;
+@panel-warning-border:        @brand-warning;
+@panel-warning-heading-bg:    @brand-warning;
 
-@panel-danger-text:           @state-danger-text;
-@panel-danger-border:         @state-danger-border;
-@panel-danger-heading-bg:     @state-danger-bg;
+@panel-danger-text:           #fff;
+@panel-danger-border:         @brand-danger;
+@panel-danger-heading-bg:     @brand-danger;
 
 
 //== Thumbnails

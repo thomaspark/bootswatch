@@ -2,109 +2,121 @@
 // Bootswatch
 // -----------------------------------------------------
 
-@import url("//fonts.googleapis.com/css?family=Josefin+Sans:300,400,700");
-
 .btn-shadow(@color) {
-	#gradient > .vertical-three-colors(lighten(@color, 15%), @color, 6%, darken(@color, 4%));
-	filter: none;
-	border: 1px solid darken(@color, 10%);
+  #gradient > .vertical-three-colors(lighten(@color, 3%), @color, 6%, darken(@color, 3%));
+  filter: none;
+  border: 1px solid darken(@color, 10%);
 }
 
 // Navbar =====================================================================
 
-.navbar {
-	border-bottom: 1px solid #dfdfdf;
-	font-family: @headings-font-family;
-
-	&-nav > li > a {
-		padding-top: @navbar-padding-vertical + 2px;
-		padding-bottom: @navbar-padding-vertical - 2px;
-	}
-
-	&-brand {
-		padding: 14px 15px 8px;
-	}
-}
-
 // Buttons ====================================================================
 
 .btn {
-	font-family: @headings-font-family;
+  font-family: @headings-font-family;
 }
 
 .btn-default,
 .btn-default:hover {
-	.btn-shadow(@btn-default-bg);
+  .btn-shadow(@btn-default-bg);
 }
 
 .btn-primary,
 .btn-primary:hover {
-	.btn-shadow(@btn-primary-bg);
+  .btn-shadow(@btn-primary-bg);
 }
 
 .btn-success,
 .btn-success:hover {
-	.btn-shadow(@btn-success-bg);
+  .btn-shadow(@btn-success-bg);
 }
 
 .btn-info,
 .btn-info:hover {
-	.btn-shadow(@btn-info-bg);
+  .btn-shadow(@btn-info-bg);
 }
 
 .btn-warning,
 .btn-warning:hover {
-	.btn-shadow(@btn-warning-bg);
+  .btn-shadow(@btn-warning-bg);
 }
 
 .btn-danger,
 .btn-danger:hover {
-	.btn-shadow(@btn-danger-bg);
+  .btn-shadow(@btn-danger-bg);
 }
 
 // Typography =================================================================
 
+body {
+  font-weight: 200;
+}
+
 // Tables =====================================================================
+
+th {
+  color: @headings-color;
+}
 
 // Forms ======================================================================
 
-.has-warning {
-	.help-block,
-	.control-label {
-		color: @brand-danger;
-	}
+legend {
+  color: @headings-color;
+}
 
-	.form-control,
-	.form-control:focus {
-		border-color: @brand-danger;
-	}
+.has-warning {
+  .help-block,
+  .control-label {
+    color: @brand-danger;
+  }
+
+  .form-control,
+  .form-control:focus {
+    border-color: @brand-danger;
+  }
 }
 
 .has-error {
-	.help-block,
-	.control-label {
-		color: @brand-primary;
-	}
+  .help-block,
+  .control-label {
+    color: @brand-primary;
+  }
 
-	.form-control,
-	.form-control:focus {
-		border-color: @brand-primary;
-	}
+  .form-control,
+  .form-control:focus {
+    border-color: @brand-primary;
+  }
 }
 
 .has-success {
-	.help-block,
-	.control-label {
-		color: @brand-success;
-	}
+  .help-block,
+  .control-label {
+    color: @brand-success;
+  }
 
-	.form-control,
-	.form-control:focus {
-		border-color: @brand-success;
-	}
+  .form-control,
+  .form-control:focus {
+    border-color: @brand-success;
+  }
 }
 
 // Navs =======================================================================
+
+.pager {
+  a {
+    color: @headings-color;
+  }
+
+  a:hover,
+  .active > a, {
+    border-color: @brand-primary;
+    color: #fff;
+  }
+
+  .disabled > a {
+    border-color: @pager-border;
+  }
+}
 
 // Indicators =================================================================
 
