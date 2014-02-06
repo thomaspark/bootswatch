@@ -3,76 +3,76 @@
 // -----------------------------------------------------
 
 .btn-shadow(@color) {
-	#gradient > .vertical-three-colors(lighten(@color, 8%), @color, 60%, darken(@color, 4%));
-	filter: none;
-	border-bottom: 1px solid darken(@color, 10%);
+  #gradient > .vertical-three-colors(lighten(@color, 8%), @color, 60%, darken(@color, 4%));
+  filter: none;
+  border-bottom: 1px solid darken(@color, 10%);
 }
 
 // Navbar =====================================================================
 
 .navbar {
-	.btn-shadow(@navbar-default-bg);
-	filter: none;
-	.box-shadow(0 1px 10px rgba(0, 0, 0, 0.1));
+  .btn-shadow(@navbar-default-bg);
+  filter: none;
+  .box-shadow(0 1px 10px rgba(0, 0, 0, 0.1));
 
-	.navbar-nav > li > a,
-	&-brand {
-		text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
-	}
+  .navbar-nav > li > a,
+  &-brand {
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  }
 }
 
 .navbar-inverse {
-	#gradient > .vertical-three-colors(lighten(@navbar-inverse-bg, 8%), lighten(@navbar-inverse-bg, 4%), 60%, darken(@navbar-inverse-bg, 2%));
-	filter: none;
-	border-bottom: 1px solid darken(@navbar-inverse-bg, 10%);
+  #gradient > .vertical-three-colors(lighten(@navbar-inverse-bg, 8%), lighten(@navbar-inverse-bg, 4%), 60%, darken(@navbar-inverse-bg, 2%));
+  filter: none;
+  border-bottom: 1px solid darken(@navbar-inverse-bg, 10%);
 }
 
 // Buttons ====================================================================
 
 .btn {
 
-	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
 
-	.caret {
-		border-top-color: #fff;
-	}
+  .caret {
+    border-top-color: #fff;
+  }
 }
 
 .btn-default {
-	
-	.btn-shadow(@btn-default-bg);
+  
+  .btn-shadow(@btn-default-bg);
 
-	&:hover {
-		color: @btn-default-color;
-	}
+  &:hover {
+    color: @btn-default-color;
+  }
 
-	.caret {
-		border-top-color: @text-color;
-	}
+  .caret {
+    border-top-color: @text-color;
+  }
 }
 
 .btn-default {
-	.btn-shadow(@btn-default-bg);
+  .btn-shadow(@btn-default-bg);
 }
 
 .btn-primary {
-	.btn-shadow(@btn-primary-bg);
+  .btn-shadow(@btn-primary-bg);
 }
 
 .btn-success {
-	.btn-shadow(@btn-success-bg);
+  .btn-shadow(@btn-success-bg);
 }
 
 .btn-info {
-	.btn-shadow(@btn-info-bg);
+  .btn-shadow(@btn-info-bg);
 }
 
 .btn-warning {
-	.btn-shadow(@btn-warning-bg);
+  .btn-shadow(@btn-warning-bg);
 }
 
 .btn-danger {
-	.btn-shadow(@btn-danger-bg);
+  .btn-shadow(@btn-danger-bg);
 }
 
 // Typography =================================================================
@@ -95,8 +95,8 @@
 .panel-danger,
 .panel-info {
 
-	.panel-heading,
-	.panel-title {
-		color: #fff;
-	}
+  .panel-heading,
+  .panel-title {
+    color: #fff;
+  }
 }
