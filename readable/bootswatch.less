@@ -2,75 +2,124 @@
 // Bootswatch
 // -----------------------------------------------------
 
-@import url("//fonts.googleapis.com/css?family=Raleway:700");
+@import url("//fonts.googleapis.com/css?family=Raleway:400,700");
 
 // Navbar =====================================================================
 
 .navbar {
-	font-family: @headings-font-family;
-	text-transform: uppercase;
+  font-family: @headings-font-family;
 
-	&-nav > li > a {
-		padding-top: @navbar-padding-vertical + 6px;
-	}
+  &-nav > li > a {
+    padding: @padding-base-vertical @padding-base-horizontal;
+    margin: 12px 6px;
+    border: 1px solid transparent;
+    border-radius: @border-radius-base;
 
-	&-nav > .active > a,
-	&-nav > .active > a:hover {
-		text-decoration: underline;
-	}
+    &:hover {
+      border: 1px solid #ddd;
+    }
+  }
 
-	&-default .navbar-nav > .active > a:hover {
-		color: @navbar-default-link-hover-color;
-	}
+  &-nav > .active > a,
+  &-nav > .active > a:hover {
+    border: 1px solid #ddd;
+  }
 
-	&-inverse .navbar-nav > .active > a:hover {
-		color: @navbar-inverse-link-hover-color;
-	}
+  &-default .navbar-nav > .active > a:hover {
+    color: @navbar-default-link-hover-color;
+  }
 
-	&-brand {
-		padding-top: @navbar-padding-vertical + 5px;
-	}
+  &-inverse .navbar-nav > .active > a:hover {
+    color: @navbar-inverse-link-hover-color;
+  }
+
+  &-brand {
+    margin-top: 6px;
+  }
 }
 
 // Buttons ====================================================================
 
 .btn {
-	font-family: @headings-font-family;
-	text-transform: uppercase;
+  font-family: @headings-font-family;
 }
 
 // Typography =================================================================
-
-h1, h2, h3, h4, h5, h6 {
-	text-transform: uppercase;
-}
-
-p {
-	margin-bottom: 1.4em;
-}
 
 // Tables =====================================================================
 
 // Forms ======================================================================
 
+legend {
+  font-family: @headings-font-family;
+}
+
+.input-group-addon {
+  font-family: @font-family-sans-serif;
+}
+
 // Navs =======================================================================
+
+.nav {
+  .open > a,
+  .open > a:hover,
+  .open > a:focus {
+    border: 1px solid #ddd;
+  }
+}
 
 .pagination {
 
-	&-lg > li > a,
-	&-lg > li > span {
-		padding: 14px 24px;
-	}
+  font-family: @headings-font-family;
+
+  &-lg > li > a,
+  &-lg > li > span {
+    padding: 14px 24px;
+  }
+}
+
+.pager {
+
+  font-family: @headings-font-family;
+
+  a {
+    color: @text-color;
+  }
+
+  a:hover {
+    border-color: transparent;
+    color: #fff;
+  }
+
+  .disabled a {
+    border-color: @pager-border;
+  }
 }
 
 // Indicators =================================================================
 
 .alert {
-	a,
-	.alert-link {
-		color: @alert-success-text;
-		text-decoration: underline;
-	}
+  a,
+  .alert-link {
+    color: @alert-success-text;
+    text-decoration: underline;
+  }
+}
+
+.label {
+  font-family: @headings-font-family;
+  font-weight: normal;
+
+  &-default {
+    border: 1px solid #ddd;
+    color: @text-color;
+  }
+
+}
+
+.badge {
+  font-family: @headings-font-family;
+  font-weight: normal;
 }
 
 // Progress bars ==============================================================
@@ -79,13 +128,28 @@ p {
 
 .panel {
 
-	&-primary,
-	&-success,
-	&-warning,
-	&-danger,
-	&-info {
-		.panel-heading {
-			color: #fff;
-		}
-	}
+  .box-shadow(none);
+
+  &-default .panel-heading,
+  &-default .panel-footer {
+    background-color: #fff;
+    font-family: @headings-font-family;
+    font-weight: bold;
+  }
+
+  &-primary,
+  &-success,
+  &-warning,
+  &-danger,
+  &-info {
+    .panel-heading {
+      color: #fff;
+    }
+
+    .panel-body {
+      border: 1px solid #ddd;
+      border-top-width: 0;
+      border-radius: 0 0 @border-radius-base @border-radius-base;
+    }
+  }
 }
