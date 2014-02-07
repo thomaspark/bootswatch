@@ -48,37 +48,63 @@
 
 .btn {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+
+  &-default {
+    .btn-shadow(@btn-default-bg);
+
+    &:hover {
+      .btn-shadow(darken(@btn-default-bg, 4%));
+    }
+  }
+
+  &-primary {
+    .btn-shadow(@btn-primary-bg);
+
+    &:hover {
+      .btn-shadow(darken(@btn-primary-bg, 4%));
+    }
+  }
+
+  &-success {
+    .btn-shadow(@btn-success-bg);
+
+    &:hover {
+      .btn-shadow(darken(@btn-success-bg, 4%));
+    }
+  }
+
+  &-info {
+    .btn-shadow(@btn-info-bg);
+
+    &:hover {
+      .btn-shadow(darken(@btn-info-bg, 4%));
+    }
+  }
+
+  &-warning {
+    .btn-shadow(@btn-warning-bg);
+
+    &:hover {
+      .btn-shadow(darken(@btn-warning-bg, 4%));
+    }
+  }
+
+  &-danger {
+    .btn-shadow(@btn-danger-bg);
+
+    &:hover {
+      .btn-shadow(darken(@btn-danger-bg, 4%));
+    }
+  }
+
+  &:active,
+  &.active {
+    background-image: none;
+    .box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
+  }
 }
 
-.btn-default,
-.btn-default:hover {
-  .btn-shadow(@btn-default-bg);
-}
 
-.btn-primary,
-.btn-primary:hover {
-  .btn-shadow(@btn-primary-bg);
-}
-
-.btn-success,
-.btn-success:hover {
-  .btn-shadow(@btn-success-bg);
-}
-
-.btn-info,
-.btn-info:hover {
-  .btn-shadow(@btn-info-bg);
-}
-
-.btn-warning,
-.btn-warning:hover {
-  .btn-shadow(@btn-warning-bg);
-}
-
-.btn-danger,
-.btn-danger:hover {
-  .btn-shadow(@btn-danger-bg);
-}
 
 // Typography =================================================================
 
