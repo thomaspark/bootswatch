@@ -84,7 +84,7 @@ module.exports = function (grunt) {
     var t = this.target;
     grunt.task.run('build:'+t);
   });
-  
+
   grunt.registerTask('default', 'build a theme', function() {
     grunt.task.run('swatch');
   });
