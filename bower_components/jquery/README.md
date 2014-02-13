@@ -1,7 +1,7 @@
 jQuery Component
 ================
 
-Shim repository for the [jQuery](http://jquery.com).
+Shim [repository](https://github.com/components/jquery) for the [jQuery](http://jquery.com).
 
 Package Managers
 ----------------
