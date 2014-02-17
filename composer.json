@@ -7,5 +7,19 @@
             "name": "thomaspark",
             "email": "hello@thomaspark.me"
         }
-    ]
+    ],
+    "type": "component",
+    "require": {
+        "robloach/component-installer": "0.0.*"
+    },
+    "extra": {
+        "component": {
+            "name": "bootswatch",
+            "files": [
+                "*",
+                "*/*",
+                "*/*/*"
+            ]
+        }
+    }
 }
