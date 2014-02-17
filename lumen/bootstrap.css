@@ -5778,6 +5778,10 @@ button.close {
 .text-info:hover {
   color: #75caeb;
 }
+table a,
+.table a {
+  text-decoration: underline;
+}
 table tr.success,
 .table tr.success,
 table tr.warning,
@@ -5786,6 +5790,16 @@ table tr.danger,
 .table tr.danger,
 table tr.info,
 .table tr.info {
+  color: #fff;
+}
+table tr.success a,
+.table tr.success a,
+table tr.warning a,
+.table tr.warning a,
+table tr.danger a,
+.table tr.danger a,
+table tr.info a,
+.table tr.info a {
   color: #fff;
 }
 table > thead > tr > th,
