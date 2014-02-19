@@ -1,0 +1,1 @@
+twttr.setFriendshipExists(false);
