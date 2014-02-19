@@ -17,6 +17,7 @@ module.exports = function (grunt) {
 						' * @license <%= pkg.license %>' + ' */'
 		},
 		swatch: {
+      centrio: {},
 			amelia:{}, cerulean:{}, cosmo:{}, cyborg:{}, flatly:{}, journal:{},
 			readable:{}, simplex:{}, slate:{}, spacelab:{}, united:{}, yeti: {},
 			custom:{}
@@ -40,8 +41,14 @@ module.exports = function (grunt) {
 				},
 				files: {}
 			}
-		}
-	});
+		},
+    watch: {
+      centrio: {
+        files: 'centrio/*',
+        tasks: [ 'swatch:centrio' ]
+      }
+	  }
+  });
 
 	grunt.registerTask('none', function() {});
 
@@ -82,7 +89,7 @@ module.exports = function (grunt) {
 		var t = this.target;
 		grunt.task.run('build:'+t);
 	});
-	
+
 	grunt.registerTask('default', 'build a theme', function() {
 		grunt.task.run('swatch');
 	});
