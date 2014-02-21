@@ -1,144 +1,185 @@
-// Amelia 3.0.3
+// Flatly 3.0.3
 // Bootswatch
 // -----------------------------------------------------
 
-@import url("//fonts.googleapis.com/css?family=Lobster|Cabin:400,700");
+@import url("//fonts.googleapis.com/css?family=Lato:400,700,900,400italic");
 
 // Navbar =====================================================================
 
-.navbar {
-
-	&-brand {
-		font-family: 'Lobster', cursive;
-	}
-}
-
 // Buttons ====================================================================
 
-.btn {
-	
-	.caret {
-		border-top-color: #fff;
-	}
+.btn:active {
+	.box-shadow(none);
 }
 
-.btn-default {
-
-	&:hover {
-		color: @btn-default-color;
-	}
-
-	.caret {
-		border-top-color: @btn-default-color;
-	}
+.btn-group.open .dropdown-toggle {
+	.box-shadow(none);
 }
 
 // Typography =================================================================
 
 .text-primary,
 .text-primary:hover {
-	color: lighten(@brand-primary, 40%);
+	color: @brand-primary;
 }
 
 .text-success,
 .text-success:hover {
-	color: lighten(@brand-success, 20%);
+	color: @brand-success;
 }
 
 .text-danger,
 .text-danger:hover {
-	color: lighten(@brand-danger, 20%);
+	color: @brand-danger;
 }
 
 .text-warning,
 .text-warning:hover {
-	color: lighten(@brand-warning, 20%);
+	color: @brand-warning;
 }
 
 .text-info,
 .text-info:hover {
-	color: lighten(@brand-info, 40%);
+	color: @brand-info;
 }
 
 // Tables =====================================================================
 
-.table-responsive > .table {
-	background-color: @table-bg;
+.table {
+
+	tr.success,
+	tr.warning,
+	tr.danger {
+		color: #fff;
+	}
 }
 
 // Forms ======================================================================
 
+.form-control,textarea.form-control,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+	border-width: 2px;
+	.box-shadow(none);
+
+	&:focus {
+		.box-shadow(none);
+	}
+}
+
 .has-warning {
 	.help-block,
 	.control-label {
-		color: lighten(@brand-warning, 20%);
+		color: @brand-warning;
 	}
 
 	.form-control,
 	.form-control:focus {
-		border-color: lighten(@brand-warning, 20%);
+		border: 2px solid @brand-warning;
 	}
 }
 
 .has-error {
 	.help-block,
 	.control-label {
-		color: lighten(@brand-primary, 40%);
+		color: @brand-danger;
 	}
 
 	.form-control,
 	.form-control:focus {
-		border-color: lighten(@brand-primary, 40%);
+		border: 2px solid @brand-danger;
 	}
 }
 
 .has-success {
 	.help-block,
 	.control-label {
-		color: lighten(@brand-success, 20%);
+		color: @brand-success;
 	}
 
 	.form-control,
 	.form-control:focus {
-		border-color: lighten(@brand-success, 20%);
+		border: 2px solid @brand-success;
 	}
-}
-
-legend {
-	font-family: 'Lobster', cursive;
-	color: #fff;
-}
-
-.input-group-addon {
-	color: @btn-default-color;
 }
 
 // Navs =======================================================================
 
-.pagination {
+.nav {
+	.open > a,
+	.open > a:hover,
+	.open > a:focus {
+		border-color: transparent;
+	}
+}
 
+.pagination {
+	
+	a,
 	a:hover {
 		color: #fff;
+	}
+
+	.disabled {
+		&>a,
+		&>a:hover,
+		&>a:focus,
+		&>span {
+			background-color: lighten(@brand-success, 15%);
+		}
 	}
 }
 
 .pager {
-
+	a,
 	a:hover {
 		color: #fff;
+	}
+
+	.disabled {
+		&>a,
+		&>a:hover,
+		&>a:focus,
+		&>span {
+			background-color: lighten(@brand-success, 15%);
+		}
 	}
 }
 
 // Indicators =================================================================
 
+.alert {
+
+	a,
+	.alert-link {
+		color: #fff;
+		text-decoration: underline;
+	}
+}
+
 // Progress bars ==============================================================
+
+.progress {
+	height: 10px;
+	.box-shadow(none);
+}
 
 // Containers =================================================================
 
-.list-group-item {
-	background-color: lighten(@body-bg, 5%);
-}
-
-.popover {
-	color: @gray-dark;
+.well {
+	.box-shadow(none);
+	border-width: 0;
 }
