@@ -82,11 +82,29 @@ body {
 // Tables =====================================================================
 
 .table {
+	border-spacing: @table-border-spacing-dim 0;
+	border-width: 0;
 
-	tr.success,
-	tr.warning,
-	tr.danger {
-		color: #fff;
+	th {
+		font-size: 9px !important;
+		text-transform: uppercase;
+		color: rgb(155,155,155);
+		letter-spacing: 1px;
+	}
+	td, th {
+	  overflow: hidden;
+	  white-space: nowrap;
+	  font-size: 12px;
+	  text-align: right;
+	  
+	  //override bootstrap mixins
+	  border-style: dotted !important;
+	  border-width: 0 0 1px 0 !important;
+	  padding: 0 7px 0 40px !important;
+	  line-height: 24px !important;
+	}
+	tr:last-child td {
+	  border-bottom: 1px dotted @table-border-color;
 	}
 }
 

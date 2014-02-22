@@ -1737,12 +1737,12 @@ th {
   padding: 8px;
   line-height: 1.428571429;
   vertical-align: top;
-  border-top: 1px solid #ecf0f1;
+  border-top: 1px solid #d0d5d9;
 }
 
 .table > thead > tr > th {
   vertical-align: bottom;
-  border-bottom: 2px solid #ecf0f1;
+  border-bottom: 2px solid #d0d5d9;
 }
 
 .table > caption + thead > tr:first-child > th,
@@ -1755,7 +1755,7 @@ th {
 }
 
 .table > tbody + tbody {
-  border-top: 2px solid #ecf0f1;
+  border-top: 2px solid #d0d5d9;
 }
 
 .table .table {
@@ -1772,7 +1772,7 @@ th {
 }
 
 .table-bordered {
-  border: 1px solid #ecf0f1;
+  border: 1px solid #d0d5d9;
 }
 
 .table-bordered > thead > tr > th,
@@ -1781,7 +1781,7 @@ th {
 .table-bordered > thead > tr > td,
 .table-bordered > tbody > tr > td,
 .table-bordered > tfoot > tr > td {
-  border: 1px solid #ecf0f1;
+  border: 1px solid #d0d5d9;
 }
 
 .table-bordered > thead > tr > th,
@@ -1796,7 +1796,7 @@ th {
 
 .table-hover > tbody > tr:hover > td,
 .table-hover > tbody > tr:hover > th {
-  background-color: #ecf0f1;
+  background-color: #4a8ad4;
 }
 
 table col[class*="col-"] {
@@ -1820,13 +1820,13 @@ table th[class*="col-"] {
 .table > thead > .active > th,
 .table > tbody > .active > th,
 .table > tfoot > .active > th {
-  background-color: #ecf0f1;
+  background-color: #4a8ad4;
 }
 
 .table-hover > tbody > tr > .active:hover,
 .table-hover > tbody > .active:hover > td,
 .table-hover > tbody > .active:hover > th {
-  background-color: #dde4e6;
+  background-color: #357dcf;
 }
 
 .table > thead > tr > .success,
@@ -1889,7 +1889,7 @@ table th[class*="col-"] {
     margin-bottom: 13.5px;
     overflow-x: scroll;
     overflow-y: hidden;
-    border: 1px solid #ecf0f1;
+    border: 1px solid #d0d5d9;
     -ms-overflow-style: -ms-autohiding-scrollbar;
     -webkit-overflow-scrolling: touch;
   }
@@ -6002,7 +6002,7 @@ a.list-group-item.active:focus .list-group-item-text {
 
 .panel > .panel-body + .table,
 .panel > .panel-body + .table-responsive {
-  border-top: 1px solid #ecf0f1;
+  border-top: 1px solid #d0d5d9;
 }
 
 .panel > .table > tbody:first-child th,
@@ -7620,10 +7620,32 @@ body {
   color: #4a8ad4;
 }
 
-.table tr.success,
-.table tr.warning,
-.table tr.danger {
-  color: #fff;
+.table {
+  border-spacing: 20px 0;
+  border-width: 0;
+}
+
+.table th {
+  font-size: 9px !important;
+  letter-spacing: 1px;
+  color: #9b9b9b;
+  text-transform: uppercase;
+}
+
+.table td,
+.table th {
+  padding: 0 7px 0 40px !important;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 24px !important;
+  text-align: right;
+  white-space: nowrap;
+  border-style: dotted !important;
+  border-width: 0 0 1px 0 !important;
+}
+
+.table tr:last-child td {
+  border-bottom: 1px dotted #d0d5d9;
 }
 
 .form-control,
