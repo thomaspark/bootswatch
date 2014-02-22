@@ -3,9 +3,28 @@
 // -----------------------------------------------------
 
 
-@import url("//fonts.googleapis.com/css?family=Lato:400,700,900,400italic");
+//@import url("//fonts.googleapis.com/css?family=Lato:400,700,900,400italic");
+@import url("//cloud.typography.com/6916252/607584/css/fonts.css");
 
 // Navbar =====================================================================
+.navbar .search-bar {
+  width: 240px;
+  border: 0;
+  background-color: rgba(255,255,255,0.65);
+  .placeholder(rgb(75,75,75));
+
+  &:active, &:focus {
+    background-color: white;
+    .placeholder(rgb(175,175,175));
+  }
+}
+.navbar.navbar-inverse .search-bar {
+	border: 1px solid @navbar-inverse-border;
+
+	&:focus {
+		border-color: @brand-info;	
+	}
+}
 @media (min-width: 768px) {
 	.navbar-nav.navbar-right:last-child {
 		margin-right: 0;
@@ -199,4 +218,10 @@ input[type="color"],
 .well {
 	.box-shadow(none);
 	border-width: 0;
+}
+
+// Dropdowns =================================================================
+
+.dropdown-header {
+	text-transform: uppercase;
 }

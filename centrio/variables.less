@@ -39,7 +39,7 @@
 // Typography
 // -------------------------
 
-@font-family-sans-serif:  "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-sans-serif:  'Whitney SSm A', 'Whitney SSm B', "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
 @font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace;
 @font-family-base:        @font-family-sans-serif;
@@ -125,7 +125,7 @@
 
 @btn-primary-color:              @btn-default-color;
 @btn-primary-bg:                 rgb(215,61,50);
-@btn-primary-border:             @btn-primary-bg;
+@btn-primary-border:             darken(@btn-primary-bg, 5%);
 
 @btn-success-color:              @btn-default-color;
 @btn-success-bg:                 @brand-success;
@@ -155,7 +155,7 @@
 
 @input-color:                    @text-color;
 @input-border:                   #dce4ec;
-@input-border-radius:            @border-radius-base;
+@input-border-radius:            @border-radius-small;
 @input-border-focus:             #1abc9c;
 
 @input-color-placeholder:        #acb6c0;
@@ -291,17 +291,17 @@
 // Inverted navbar
 //
 // Reset inverted navbar basics
-@navbar-inverse-color:                      #fff;
-@navbar-inverse-bg:                         @brand-success;
+@navbar-inverse-color:                      black;
+@navbar-inverse-bg:                         white;
 @navbar-inverse-border:                     darken(@navbar-inverse-bg, 10%);
 
 // Inverted navbar links
-@navbar-inverse-link-color:                 #fff;
-@navbar-inverse-link-hover-color:           @brand-primary;
+@navbar-inverse-link-color:                 rgb(125,125,125);
+@navbar-inverse-link-hover-color:           darken(@navbar-inverse-link-color, 35%);
 @navbar-inverse-link-hover-bg:              transparent;
-@navbar-inverse-link-active-color:          #fff;
-@navbar-inverse-link-active-bg:             darken(@navbar-inverse-bg, 5%);
-@navbar-inverse-link-disabled-color:        #ccc;
+@navbar-inverse-link-active-color:          darken(@navbar-inverse-link-color, 35%);
+@navbar-inverse-link-active-bg:             darken(@navbar-inverse-bg, 3%);
+@navbar-inverse-link-disabled-color:        lighten(@navbar-inverse-link-color, 75%);
 @navbar-inverse-link-disabled-bg:           transparent;
 
 // Inverted navbar brand label
