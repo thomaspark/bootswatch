@@ -14,6 +14,17 @@
 
 // Buttons ====================================================================
 
+.btn-warning {
+	//Overwriter bootstrap mixin defaults so no bg/border onLoad, no darken bg/border onHover
+	border-color: transparent;
+	background-color: transparent;
+	&:hover {
+		color: @btn-primary-bg;
+		border-color: @btn-warning-border;
+		background-color: @btn-warning-bg;
+	}
+}
+
 .btn:active {
 	.box-shadow(none);
 }
