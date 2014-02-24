@@ -7513,25 +7513,25 @@ body {
 
 .navbar .search-bar {
   width: 240px;
-  background-color: rgba(255, 255, 255, 0.65);
+  background-color: rgba(255, 255, 255, 0.35);
   border: 0;
 }
 
 .navbar .search-bar:-moz-placeholder {
-  color: #4b4b4b;
+  color: #414141;
 }
 
 .navbar .search-bar::-moz-placeholder {
-  color: #4b4b4b;
+  color: #414141;
   opacity: 1;
 }
 
 .navbar .search-bar:-ms-input-placeholder {
-  color: #4b4b4b;
+  color: #414141;
 }
 
 .navbar .search-bar::-webkit-input-placeholder {
-  color: #4b4b4b;
+  color: #414141;
 }
 
 .navbar .search-bar:active,
@@ -7643,6 +7643,11 @@ body {
   border-color: #d0d5d9 !important;
   border-style: dotted !important;
   border-width: 0 0 1px 0 !important;
+}
+
+.table td:first-child,
+.table th:first-child {
+  position: absolute;
 }
 
 .table tr:last-child td {

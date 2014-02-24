@@ -10,8 +10,8 @@ body {
 .navbar .search-bar {
   width: 240px;
   border: 0;
-  background-color: rgba(255,255,255,0.65);
-  .placeholder(rgb(75,75,75));
+  background-color: rgba(255,255,255,0.35);
+  .placeholder(rgb(65,65,65));
 
   &:active, &:focus {
     background-color: white;
@@ -103,6 +103,10 @@ body {
 	  border-color: @table-border-color !important;
 	  padding: 0 7px 0 40px !important;
 	  line-height: 24px !important;
+
+	  &:first-child {
+	  	position: absolute;
+	  }
 	}
 	tr:last-child td {
 	  border-bottom: 1px dotted @table-border-color;
