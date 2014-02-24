@@ -7770,7 +7770,26 @@ input[type="color"]:focus,
           box-shadow: none;
 }
 
-.dropdown-header {
+.dropdown-menu .dropdown-header,
+.dropdown-menu > li > a {
+  padding: 0 15px;
+}
+
+.dropdown-menu > li > a {
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  line-height: 26px !important;
+}
+
+.dropdown-menu > li > a i {
+  margin-right: 7px;
+}
+
+.dropdown-menu .dropdown-header {
+  font-weight: 800;
+  line-height: 30px;
+  letter-spacing: 1px;
+  color: #9b9b9b;
   text-transform: uppercase;
 }
 

@@ -241,6 +241,25 @@ input[type="color"],
 
 // Dropdowns =================================================================
 
-.dropdown-header {
-	text-transform: uppercase;
+.dropdown-menu .dropdown-header, .dropdown-menu > li > a {
+	padding: 0px 15px;
+}
+.dropdown-menu {
+  > li > a {
+    line-height: 26px !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+
+    i {
+      margin-right: 7px;
+    }
+  }
+
+  .dropdown-header {
+  	text-transform: uppercase;
+    color: rgb(155,155,155);
+    letter-spacing: 1px;
+    font-weight: 800;
+    line-height: 30px;
+  }
 }
