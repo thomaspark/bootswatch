@@ -266,8 +266,33 @@ input[type="color"],
 
 // Modals =================================================================
 
-@media screen and (min-width: @screen-sm-min) {
+.modal-header {
+  .flexbox();
+  border: 0;
+  padding: 15px 25px;
+  h3 {
+    .flex(1);
+    font-size: 16px;
+    line-height: 30px;
+    margin: 0;
+  }
+  button {
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+  }
+}
+.modal-body {
+  background-color: @gray-lighter;
+  padding: 35px 25px;
+  .form-group { margin-bottom: 8px; }
+  .btn { width: 100%; }
+  input {
+    .placeholder(rgba(51,51,51,0.6));
+  }
+}
 
+@media screen and (min-width: @screen-sm-min) {
   .modal-dialog {
     width: 400px;
     margin: 100px auto;
