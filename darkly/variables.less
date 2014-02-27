@@ -8,7 +8,7 @@
 //## Gray and brand colors for use across Bootstrap.
 
 @gray-darker:            lighten(#000, 13.5%); // #222
-@gray-dark:              #7b8a8b;   // #333
+@gray-dark:              #7f8c8d;   // #333
 @gray:                   #95a5a6; // #555
 @gray-light:             #b4bcc2;   // #999
 @gray-lighter:           #ecf0f1; // #eee
@@ -27,7 +27,7 @@
 //** Background color for `<body>`.
 @body-bg:               #111;
 //** Global text color on `<body>`.
-@text-color:            #7f8c8d;
+@text-color:            @gray-dark;
 
 //** Global textual link color.
 @link-color:            @brand-primary;
@@ -171,7 +171,7 @@
 //** `<input>` background color
 @input-bg:                       #0a0a0a;
 //** `<input disabled>` background color
-@input-bg-disabled:              @gray-lighter;
+@input-bg-disabled:              @body-bg;
 
 //** Text color for `<input>`s
 @input-color:                    @text-color;
@@ -183,7 +183,7 @@
 @input-border-focus:             @brand-primary;//#1abc9c;
 
 //** Placeholder text color
-@input-color-placeholder:        #acb6c0;
+@input-color-placeholder:        @gray-darker;
 
 //** Default `.form-control` height
 @input-height-base:              (@line-height-computed + (@padding-base-vertical * 2) + 2);
@@ -431,8 +431,8 @@
 @pagination-active-bg:                 @brand-primary;
 @pagination-active-border:             transparent;
 
-@pagination-disabled-color:            @gray-lighter;
-@pagination-disabled-bg:               @gray-darker;
+@pagination-disabled-color:            @gray-dark;
+@pagination-disabled-bg:               #0a0a0a;
 @pagination-disabled-border:           transparent;
 
 
@@ -449,7 +449,7 @@
 @pager-active-bg:                      @pagination-active-bg;
 @pager-active-color:                   @pagination-active-color;
 
-@pager-disabled-color:                 #fff;
+@pager-disabled-color:                 @pagination-disabled-color;
 
 
 //== Jumbotron
@@ -549,7 +549,7 @@
 @label-danger-bg:             @brand-danger;
 
 //** Default label text color
-@label-color:                 #fff;
+@label-color:                 @text-color;
 //** Default text color of a linked label
 @label-link-hover-color:      #fff;
 
