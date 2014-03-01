@@ -1,0 +1,74 @@
+// Shamrock 3.1.1
+// Bootswatch
+// -----------------------------------------------------
+
+@import url('//fonts.googleapis.com/css?family=Marcellus');
+
+// Navbar =====================================================================
+
+// Buttons ====================================================================
+
+// Typography =================================================================
+
+h1:before {
+  content: "\2663";
+  margin-right: 10px;
+}
+
+.page-header {
+  border-bottom-width: 5px;
+}
+
+// Tables =====================================================================
+
+// Forms ======================================================================
+
+legend {
+  border-bottom-width: 5px;
+}
+
+// Navs =======================================================================
+
+.nav {
+  .open > a,
+  .open > a:hover,
+  .open > a:focus {
+    border-color: transparent;
+  }
+}
+
+// Indicators =================================================================
+
+.alert {
+  .alert-link {
+    color: @link-color
+  }
+}
+
+// Progress bars ==============================================================
+
+// Containers =================================================================
+
+.panel-default {
+  border-color: darken(@panel-footer-bg, 5%);
+
+  .panel-heading {
+    background-color: @panel-footer-bg;
+    border-color: darken(@panel-footer-bg, 5%);
+    color: #fff;
+  }
+}
+
+.modal {
+  background-color: @gray-light;
+
+  &-header {
+    border-bottom: none;
+  }
+
+  &-footer {
+    background-color: @gray-dark;
+    border-top: none;
+    .box-shadow(none);
+  }
+}

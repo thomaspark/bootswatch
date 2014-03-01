@@ -17,8 +17,9 @@ module.exports = function (grunt) {
             '*/\n',
     swatch: {
       amelia:{}, cerulean:{}, cosmo:{}, cyborg:{}, flatly:{},
-      journal:{}, lumen:{}, readable:{}, simplex:{}, slate:{},
-      spacelab:{}, superhero:{}, united:{}, yeti:{}, custom:{}
+      journal:{}, lumen:{}, readable:{}, shamrock:{}, simplex:{},
+      slate:{}, spacelab:{}, superhero:{}, united:{}, yeti:{},
+      custom:{}
     },
     clean: {
       build: {
