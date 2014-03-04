@@ -5703,6 +5703,7 @@ button.close {
   border-width: 0 1px 4px 1px;
 }
 .btn {
+  padding: 8px 12px 7px;
   border-width: 0 1px 4px 1px;
   font-size: 12px;
   font-weight: bold;
@@ -5717,6 +5718,19 @@ button.close {
   border-bottom-width: 2px;
   -webkit-box-shadow: none;
   box-shadow: none;
+}
+.btn-lg,
+.btn-group-lg > .btn {
+  padding: 14px 16px 13px;
+  line-height: 15px;
+}
+.btn-sm,
+.btn-group-sm > .btn {
+  padding: 4px 10px;
+}
+.btn-xs,
+.btn-group-xs > .btn {
+  padding: 1px 5px;
 }
 .btn-default:hover,
 .btn-default:focus,

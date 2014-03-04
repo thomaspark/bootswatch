@@ -17,6 +17,7 @@
 // Buttons ====================================================================
 
 .btn {
+  padding: 8px @padding-base-horizontal 7px;
   .shadow();
   font-size: 12px;
   font-weight: bold;
@@ -31,6 +32,22 @@
     margin-top: 2px;
     border-bottom-width: 2px;
     .box-shadow(none);
+  }
+
+  &-lg,
+  &-group-lg > .btn {
+    padding: 14px @padding-large-horizontal 13px;
+    line-height: 15px;
+  }
+
+  &-sm,
+  &-group-sm > .btn {
+    padding: 4px @padding-small-horizontal;
+  }
+
+  &-xs,
+  &-group-xs > .btn {
+    padding: @padding-xs-vertical @padding-xs-horizontal;
   }
 
   &-default:hover,
