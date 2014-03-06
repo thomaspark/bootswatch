@@ -3090,7 +3090,7 @@ input[type="button"].btn-block {
   padding: 3px 20px;
   font-size: 13px;
   line-height: 1.42857143;
-  color: #b4bcc2;
+  color: #ffffff;
 }
 .dropdown-backdrop {
   position: fixed;
@@ -5701,6 +5701,17 @@ button.close {
 }
 .navbar-brand {
   padding: 18.5px 15px 20.5px;
+}
+.navbar-collapse,
+.navbar-form {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.navbar-default .divider {
+  background-color: #202d3b;
+}
+.navbar-inverse .divider {
+  background-color: #128f76;
 }
 .btn:active {
   -webkit-box-shadow: none;
