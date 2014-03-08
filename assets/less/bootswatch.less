@@ -19,6 +19,27 @@ body {
 
 .bs-component {
   position: relative;
+
+  .modal {
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
+    bottom: auto;
+    z-index: 1;
+    display: block;
+
+    &-dialog {
+      width: 90%;
+    }
+  }
+
+  .popover {
+    position: relative;
+    display: inline-block;
+    width: 220px;
+    margin: 20px;
+  }
 }
 
 #source-button {
