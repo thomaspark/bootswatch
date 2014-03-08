@@ -5784,11 +5784,18 @@ table .info a,
   text-decoration: underline;
   color: #fff;
 }
+.alert .close {
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.4;
+}
+.alert .close:hover,
+.alert .close:focus {
+  color: #fff;
+  opacity: 1;
+}
 .label {
   border-radius: 0;
-}
-.close {
-  opacity: 1;
 }
 .progress {
   height: 8px;

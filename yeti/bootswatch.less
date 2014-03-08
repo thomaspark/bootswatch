@@ -333,6 +333,15 @@ label,
 
 // Indicators =================================================================
 
+.close {
+  opacity: 0.4;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+}
+
 .alert {
   font-size: @font-size-small;
   font-weight: 300;
@@ -342,6 +351,16 @@ label,
     font-weight: normal;
     color: #fff;
     text-decoration: underline;
+  }
+
+  .close {
+    color: #fff;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+    }
   }
 }
 

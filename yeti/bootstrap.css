@@ -5932,6 +5932,13 @@ label,
   font-size: 12px;
   font-weight: 300;
 }
+.close {
+  opacity: 0.4;
+}
+.close:hover,
+.close:focus {
+  opacity: 1;
+}
 .alert {
   font-size: 12px;
   font-weight: 300;
@@ -5941,6 +5948,14 @@ label,
   font-weight: normal;
   color: #fff;
   text-decoration: underline;
+}
+.alert .close {
+  color: #fff;
+  text-decoration: none;
+}
+.alert .close:hover,
+.alert .close:focus {
+  color: #fff;
 }
 .label {
   padding-left: 1em;
