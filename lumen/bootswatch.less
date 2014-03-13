@@ -267,6 +267,8 @@ label {
 
   > li > a,
   > li > span {
+    position: relative;
+    top: 0;
     .shadow();
     color: @pagination-color;
     font-size: 12px;
@@ -274,12 +276,12 @@ label {
     text-transform: uppercase;
 
     &:hover {
-      margin-top: 1px;
+      top: 1px;
       border-bottom-width: 3px;
     }
 
     &:active {
-      margin-top: 2px;
+      top: 2px;
       border-bottom-width: 2px;
     }
   }
@@ -288,13 +290,29 @@ label {
   > .disabled > span {
 
     &:hover {
-      margin-top: 0;
+      top: 0;
       .shadow();
     }
 
     &:active {
-      margin-top: 0;
+      top: 0;
       .shadow();
+    }
+  }
+}
+
+.pager {
+
+  > li > a,
+  > li > span,
+  > .disabled > a,
+  > .disabled > span {
+
+    &,
+    &:hover,
+    &:active {
+      border-left-width: 2px;
+      border-right-width: 2px;
     }
   }
 }
