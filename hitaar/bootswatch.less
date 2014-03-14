@@ -1,14 +1,14 @@
 // Hitaar 3.1.1
 // Bootswatch
 // -----------------------------------------------------
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600);
+@import url(//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600);
 
 // Navbar =====================================================================
 .navbar-form {
 	.form-control {
-		background-color: @gray;
+		background-color: white;
 		&:focus {
-			border-color: darken(@brand-primary, 10%);
+			border-color: white;
 		}
 	}
 }
@@ -27,7 +27,7 @@
 
 .text-primary,
 .text-primary:hover {
-  color: @brand-primary;
+  color: lighten(@brand-primary, 10%);
 }
 
 .text-success,
@@ -168,7 +168,8 @@ input[type="color"],
   }
 }
 
-.nav-tabs > li > a, .nav-pills > li > a {
+.nav-tabs > li > a,
+.nav-pills > li > a {
 	color: #fff;
 }
 
@@ -212,10 +213,15 @@ input[type="color"],
   .box-shadow(none);
 }
 
-.popover, .modal, .list-group-item, .panel {
+.popover,
+.modal {
 	color: @gray-dark;
 }
 
 .breadcrumb a {
 	color: #fff;
+}
+
+.panel-default > .panel-heading {
+  background-color: @panel-footer-bg;
 }
