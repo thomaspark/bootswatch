@@ -39,7 +39,7 @@
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-@font-family-sans-serif:  "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-sans-serif:  "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 @font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
@@ -63,7 +63,7 @@
 
 //** By default, this inherits from the `<body>`.
 @headings-font-family:    @font-family-base;
-@headings-font-weight:    300;
+@headings-font-weight:    400;
 @headings-line-height:    1.1;
 @headings-color:          inherit;
 
@@ -193,7 +193,7 @@
 @input-height-small:             (floor(@font-size-small * @line-height-small) + (@padding-small-vertical * 2) + 2);
 
 @legend-color:                   @text-color;
-@legend-border-color:            #e5e5e5;
+@legend-border-color:            transparent;
 
 //** Background color for textual input addons
 @input-group-addon-bg:           @gray-dark;
@@ -334,12 +334,12 @@
 @navbar-collapse-max-height:       340px;
 
 @navbar-default-color:             #777;
-@navbar-default-bg:                @brand-success;
-@navbar-default-border:            darken(@navbar-default-bg, 6.5%);
+@navbar-default-bg:                @brand-primary;
+@navbar-default-border:            transparent;
 
 // Navbar links
 @navbar-default-link-color:                #fff;
-@navbar-default-link-hover-color:          darken(@navbar-default-bg, 20%);
+@navbar-default-link-hover-color:          @brand-success;
 @navbar-default-link-hover-bg:             transparent;
 @navbar-default-link-active-color:         #fff;
 @navbar-default-link-active-bg:            darken(@navbar-default-bg, 10%);
@@ -360,12 +360,12 @@
 // Inverted navbar
 // Reset inverted navbar basics
 @navbar-inverse-color:                      #fff;
-@navbar-inverse-bg:                         @brand-primary;
-@navbar-inverse-border:                     darken(@navbar-inverse-bg, 10%);
+@navbar-inverse-bg:                         @brand-success;
+@navbar-inverse-border:                     transparent;
 
 // Inverted navbar links
 @navbar-inverse-link-color:                 @navbar-inverse-color;
-@navbar-inverse-link-hover-color:           @brand-success;
+@navbar-inverse-link-hover-color:           @brand-primary;
 @navbar-inverse-link-hover-bg:              transparent;
 @navbar-inverse-link-active-color:          @navbar-inverse-color;
 @navbar-inverse-link-active-bg:             darken(@navbar-inverse-bg, 5%);
@@ -506,13 +506,13 @@
 //##
 
 //** Popover body background color
-@popover-bg:                          #fff;
+@popover-bg:                          @gray-dark;
 //** Popover maximum width
 @popover-max-width:                   276px;
 //** Popover border color
 @popover-border-color:                rgba(0,0,0,.2);
 //** Popover fallback border color
-@popover-fallback-border-color:       #ccc;
+@popover-fallback-border-color:       #999;
 
 //** Popover title background color
 @popover-title-bg:                    darken(@popover-bg, 3%);
@@ -520,7 +520,7 @@
 //** Popover arrow width
 @popover-arrow-width:                 10px;
 //** Popover arrow color
-@popover-arrow-color:                 #fff;
+@popover-arrow-color:                 @popover-bg;
 
 //** Popover outer arrow width
 @popover-arrow-outer-width:           (@popover-arrow-width + 1);
@@ -566,9 +566,9 @@
 @modal-title-line-height:     @line-height-base;
 
 //** Background color of modal content area
-@modal-content-bg:                             #fff;
+@modal-content-bg:                             @gray-dark;
 //** Modal content border color
-@modal-content-border-color:                   rgba(0,0,0,.8);
+@modal-content-border-color:                   rgba(0,0,0,.2);
 //** Modal content border color **for IE8**
 @modal-content-fallback-border-color:          #999;
 
@@ -779,7 +779,7 @@
 
 @close-font-weight:           bold;
 @close-color:                 #000;
-@close-text-shadow:           0 1px 0 #fff;
+@close-text-shadow:           none;
 
 
 //== Code
@@ -815,7 +815,7 @@
 //** Blockquote border color
 @blockquote-border-color:     @gray;
 //** Page header border color
-@page-header-border-color:    @gray;
+@page-header-border-color:    transparent;
 
 
 //== Miscellaneous
