@@ -1,6 +1,6 @@
 @import url("//fonts.googleapis.com/css?family=News+Cycle:400,700");
 /*!
- * Bootswatch v3.1.1
+ * Bootswatch v3.1.1+1
  * Homepage: http://bootswatch.com
  * Copyright 2012-2014 Thomas Park
  * Licensed under MIT
@@ -4334,7 +4334,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   vertical-align: baseline;
   white-space: nowrap;
   text-align: center;
-  background-color: #999999;
+  background-color: #eb6864;
   border-radius: 10px;
 }
 .badge:empty {
@@ -5785,6 +5785,14 @@ button.close {
   font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
   font-weight: 700;
 }
+.navbar-default .badge {
+  background-color: #000;
+  color: #fff;
+}
+.navbar-inverse .badge {
+  background-color: #fff;
+  color: #eb6864;
+}
 .navbar-brand {
   font-size: 18px;
   font-weight: 700;
@@ -5813,6 +5821,11 @@ button.close {
 .has-success .form-control,
 .has-success .form-control:focus {
   border-color: #22b24c;
+}
+.badge {
+  padding-bottom: 4px;
+  vertical-align: 3px;
+  font-size: 10px;
 }
 .jumbotron h1,
 .jumbotron h2,

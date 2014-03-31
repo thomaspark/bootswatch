@@ -1,6 +1,6 @@
 @import url("//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700");
 /*!
- * Bootswatch v3.1.1
+ * Bootswatch v3.1.1+1
  * Homepage: http://bootswatch.com
  * Copyright 2012-2014 Thomas Park
  * Licensed under MIT
@@ -4334,7 +4334,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   vertical-align: baseline;
   white-space: nowrap;
   text-align: center;
-  background-color: #999999;
+  background-color: #3399f3;
   border-radius: 10px;
 }
 .badge:empty {
@@ -5797,6 +5797,13 @@ button.close {
   filter: none;
   border: 1px solid #345578;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+}
+.navbar-inverse .badge {
+  background-color: #fff;
+  color: #446e9b;
+}
+.navbar .badge {
+  text-shadow: none;
 }
 .navbar-nav > li > a,
 .navbar-nav > li > a:hover {
