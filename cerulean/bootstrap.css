@@ -5793,6 +5793,14 @@ button.close {
   background-color: #fff;
   color: #2fa4e7;
 }
+.navbar-inverse {
+  background-image: -webkit-linear-gradient(#04519b, #044687 60%, #033769);
+  background-image: linear-gradient(#04519b, #044687 60%, #033769);
+  background-repeat: no-repeat;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff04519b', endColorstr='#ff033769', GradientType=0);
+  filter: none;
+  border-bottom: 1px solid #022241;
+}
 .navbar-inverse .badge {
   background-color: #fff;
   color: #033c73;
@@ -5801,16 +5809,10 @@ button.close {
 .navbar-brand {
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
 }
-.navbar .dropdown-header {
-  color: #fff;
-}
-.navbar-inverse {
-  background-image: -webkit-linear-gradient(#04519b, #044687 60%, #033769);
-  background-image: linear-gradient(#04519b, #044687 60%, #033769);
-  background-repeat: no-repeat;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff04519b', endColorstr='#ff033769', GradientType=0);
-  filter: none;
-  border-bottom: 1px solid #022241;
+@media (max-width: 767px) {
+  .navbar .dropdown-header {
+    color: #fff;
+  }
 }
 .btn {
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);

@@ -24,6 +24,9 @@
   }
 
   &-inverse {
+    #gradient > .vertical-three-colors(lighten(@navbar-inverse-bg, 8%), lighten(@navbar-inverse-bg, 4%), 60%, darken(@navbar-inverse-bg, 2%));
+    filter: none;
+    border-bottom: 1px solid darken(@navbar-inverse-bg, 10%);
 
     .badge {
       background-color: #fff;
@@ -35,16 +38,16 @@
   &-brand {
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
   }
-
-  .dropdown-header {
-    color: #fff;
-  }
 }
 
-.navbar-inverse {
-  #gradient > .vertical-three-colors(lighten(@navbar-inverse-bg, 8%), lighten(@navbar-inverse-bg, 4%), 60%, darken(@navbar-inverse-bg, 2%));
-  filter: none;
-  border-bottom: 1px solid darken(@navbar-inverse-bg, 10%);
+@media (max-width: @grid-float-breakpoint-max) {
+
+  .navbar {
+
+    .dropdown-header {
+      color: #fff;
+    }
+  }
 }
 
 // Buttons ====================================================================
