@@ -5880,14 +5880,20 @@ table-bordered > tfoot > tr > td,
 .table-bordered > tfoot > tr > td {
   border: 1px solid #464545;
 }
+input,
+textarea {
+  color: #464545;
+}
 .form-control,
-input {
+input,
+textarea {
   border: none;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
 .form-control:focus,
-input:focus {
+input:focus,
+textarea:focus {
   -webkit-box-shadow: none;
   box-shadow: none;
 }

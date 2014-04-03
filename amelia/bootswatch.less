@@ -84,6 +84,16 @@ table,
 
 // Forms ======================================================================
 
+input,
+textarea {
+  color: @input-color;
+}
+
+legend {
+  font-family: 'Lobster', cursive;
+  color: #fff;
+}
+
 .has-warning {
   .help-block,
   .control-label {
@@ -118,11 +128,6 @@ table,
   .form-control:focus {
     border-color: lighten(@brand-success, 20%);
   }
-}
-
-legend {
-  font-family: 'Lobster', cursive;
-  color: #fff;
 }
 
 .input-group-addon {
