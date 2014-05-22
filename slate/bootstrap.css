@@ -321,8 +321,8 @@ img {
 .img-thumbnail {
   padding: 4px;
   line-height: 1.42857143;
-  background-color: #272b30;
-  border: 1px solid #dddddd;
+  background-color: #1c1e22;
+  border: 1px solid #0c0d0e;
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -4401,8 +4401,8 @@ a.list-group-item.active > .badge,
   padding: 4px;
   margin-bottom: 20px;
   line-height: 1.42857143;
-  background-color: #272b30;
-  border: 1px solid #dddddd;
+  background-color: #1c1e22;
+  border: 1px solid #0c0d0e;
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -6117,6 +6117,11 @@ legend {
 .alert .close {
   color: #000000;
   text-decoration: none;
+}
+a.thumbnail:hover,
+a.thumbnail:focus,
+a.thumbnail.active {
+  border-color: #0c0d0e;
 }
 .jumbotron {
   border: 1px solid rgba(0, 0, 0, 0.6);

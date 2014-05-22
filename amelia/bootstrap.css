@@ -322,8 +322,8 @@ img {
 .img-thumbnail {
   padding: 4px;
   line-height: 1.42857143;
-  background-color: #108a93;
-  border: 1px solid #dddddd;
+  background-color: #0d747c;
+  border: 1px solid #0d747c;
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -4402,8 +4402,8 @@ a.list-group-item.active > .badge,
   padding: 4px;
   margin-bottom: 20px;
   line-height: 1.42857143;
-  background-color: #108a93;
-  border: 1px solid #dddddd;
+  background-color: #0d747c;
+  border: 1px solid #0d747c;
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -5878,6 +5878,11 @@ legend {
 .close:hover,
 .close:focus {
   opacity: 1;
+}
+a.thumbnail:hover,
+a.thumbnail:focus,
+a.thumbnail.active {
+  border-color: #0d747c;
 }
 .popover {
   color: #444444;
