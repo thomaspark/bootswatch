@@ -5836,6 +5836,9 @@ legend {
   font-family: 'Lobster', cursive;
   color: #fff;
 }
+.input-group-addon {
+  color: #444444;
+}
 .has-warning .help-block,
 .has-warning .control-label,
 .has-warning .form-control-feedback {
@@ -5844,6 +5847,9 @@ legend {
 .has-warning .form-control,
 .has-warning .form-control:focus {
   border-color: #ecd77f;
+}
+.has-warning .input-group-addon {
+  border: none;
 }
 .has-error .help-block,
 .has-error .control-label,
@@ -5854,6 +5860,9 @@ legend {
 .has-error .form-control:focus {
   border-color: #f0a6ac;
 }
+.has-error .input-group-addon {
+  border: none;
+}
 .has-success .help-block,
 .has-success .control-label,
 .has-success .form-control-feedback {
@@ -5863,8 +5872,8 @@ legend {
 .has-success .form-control:focus {
   border-color: #93e08b;
 }
-.input-group-addon {
-  color: #444444;
+.has-success .input-group-addon {
+  border: none;
 }
 .pagination a:hover {
   color: #fff;
