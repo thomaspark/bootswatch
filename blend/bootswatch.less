@@ -11,7 +11,6 @@ body {
 .navbar .search-bar {
   width: 240px;
   border: 0;
-  background-color: rgba(255,255,255,0.35);
   .placeholder(rgb(65,65,65));
 
   &:active, &:focus {
@@ -35,17 +34,6 @@ body {
 
 // Buttons ====================================================================
 
-.btn-warning {
-	//Overwriter bootstrap mixin defaults so no bg/border onLoad, no darken bg/border onHover
-	border-color: transparent;
-	background-color: transparent;
-	&:hover {
-		color: @btn-info-bg;
-		border-color: @btn-warning-border;
-		background-color: @btn-warning-bg;
-	}
-}
-
 .btn:active {
 	.box-shadow(none);
 }
@@ -56,10 +44,6 @@ body {
 
 
 // Typography =================================================================
-// .Whitney() {
-//   font-family: 'Whitney SSm A', 'Whitney SSm B', "Lucida Grande", "Lucida Sans", Verdana, Helvetica, Arial, sans-serif;
-//   -webkit-font-smoothing: antialiased;
-// }
 
 .text-primary,
 .text-primary:hover {

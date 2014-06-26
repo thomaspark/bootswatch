@@ -2,6 +2,13 @@
 // Variables
 // --------------------------------------------------
 
+@gray-blue: #475155;
+@app-green: #4E9159;
+@app-seafoam: #8DB0AC;
+@app-blue: #1A2D37;
+@app-yellow: #E7BE52;
+@app-red:  #D52227;
+
 
 // Global values
 // --------------------------------------------------
@@ -9,20 +16,20 @@
 // Grays
 // -------------------------
 
-@gray-darker:            lighten(#000, 13.5%); // #222
-@gray-dark:              #7b8a8b;
-@gray:                   #95a5a6;
-@gray-light:             #b4bcc2;
+@gray-darker:            @gray-blue;
+@gray-dark:              #C8CACB;
+@gray:                   #EDEDED;
+@gray-light:             #F7F7F7;
 @gray-lighter:           #ecf0f1;
 
 // Brand colors
 // -------------------------
 
-@brand-primary:         rgb(35,35,35);
-@brand-success:         rgb(102,191,34);
-@brand-warning:         #F39C12;
-@brand-danger:          #E74C3C;
-@brand-info:            rgb(74,138,212);
+@brand-primary:         @app-blue;
+@brand-success:         @app-green;
+@brand-warning:         @app-yellow;
+@brand-danger:          @app-red;
+@brand-info:            @gray-blue;
 
 // Scaffolding
 // -------------------------
@@ -33,7 +40,7 @@
 // Links
 // -------------------------
 
-@link-color:            @brand-info;
+@link-color:            @brand-success;
 @link-hover-color:      @link-color;
 
 // Typography
@@ -125,17 +132,17 @@
 @btn-default-border:             @btn-default-bg;
 
 @btn-primary-color:              @btn-default-color;
-@btn-primary-bg:                 rgb(215,61,50);
-@btn-primary-border:             darken(@btn-primary-bg, 5%);
+@btn-primary-bg:                 @brand-success;
+@btn-primary-border:             @btn-primary-bg;
 
 @btn-success-color:              @btn-default-color;
 @btn-success-bg:                 @brand-success;
 @btn-success-border:             @btn-success-bg;
 
 //Special 
-@btn-warning-color:              rgb(172,172,172);
-@btn-warning-bg:                 rgb(242,242,242);
-@btn-warning-border:             rgb(196,196,196);
+@btn-warning-color:              @btn-default-color;
+@btn-warning-bg:                 @brand-warning;
+@btn-warning-border:             @btn-warning-bg;
 
 @btn-danger-color:               @btn-default-color;
 @btn-danger-bg:                  @brand-danger;
