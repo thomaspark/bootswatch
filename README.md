@@ -3,6 +3,16 @@ Bootswatch
 
 Bootswatch is a collection of free themes for [Bootstrap](http://getbootstrap.com/). Check it out at [bootswatch.com](http://bootswatch.com).
 
+
+Blend Usage
+-----
+Modify the boostrap styles in variables.less and bootswatch.less.
+Import via bower in your project.
+To update, run:
+```
+cd client; bower update bootswatch
+```
+
 Usage
 -----
 Head over to [Bootswatch](http://bootswatch.com) and download the `bootstrap.min.css` file associated with a theme. Replace Bootstrap's stylesheet with this file.
