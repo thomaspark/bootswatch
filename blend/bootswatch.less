@@ -1,0 +1,315 @@
+// Flatly 3.0.3
+// Bootswatch
+// -----------------------------------------------------
+@import url("//cloud.typography.com/6916252/625682/css/fonts.css");
+body {
+	-webkit-font-smoothing: antialiased;
+}
+
+
+// Navbar =====================================================================
+.navbar .search-bar {
+  width: 240px;
+  border: 0;
+  background-color: rgba(255,255,255,0.35);
+  .placeholder(rgb(65,65,65));
+
+  &:active, &:focus {
+    background-color: white;
+    .placeholder(rgb(175,175,175));
+  }
+}
+.navbar.navbar-inverse .search-bar {
+	border: 1px solid @navbar-inverse-border;
+
+	&:focus {
+		border-color: @brand-info;	
+	}
+}
+@media (min-width: 768px) {
+	.navbar-nav.navbar-right:last-child {
+		margin-right: 0;
+	}
+}
+
+
+// Buttons ====================================================================
+
+.btn-warning {
+	//Overwriter bootstrap mixin defaults so no bg/border onLoad, no darken bg/border onHover
+	border-color: transparent;
+	background-color: transparent;
+	&:hover {
+		color: @btn-info-bg;
+		border-color: @btn-warning-border;
+		background-color: @btn-warning-bg;
+	}
+}
+
+.btn:active {
+	.box-shadow(none);
+}
+
+.btn-group.open .dropdown-toggle {
+	.box-shadow(none);
+}
+
+
+// Typography =================================================================
+// .Whitney() {
+//   font-family: 'Whitney SSm A', 'Whitney SSm B', "Lucida Grande", "Lucida Sans", Verdana, Helvetica, Arial, sans-serif;
+//   -webkit-font-smoothing: antialiased;
+// }
+
+.text-primary,
+.text-primary:hover {
+	color: @brand-primary;
+}
+
+.text-success,
+.text-success:hover {
+	color: @brand-success;
+}
+
+.text-danger,
+.text-danger:hover {
+	color: @brand-danger;
+}
+
+.text-warning,
+.text-warning:hover {
+	color: @brand-warning;
+}
+
+.text-info,
+.text-info:hover {
+	color: @brand-info;
+}
+
+
+// Tables =====================================================================
+
+.table {
+	border-spacing: @table-border-spacing-dim 0;
+	border-width: 0;
+
+	th {
+		font-size: 9px !important;
+		text-transform: uppercase;
+		color: rgb(155,155,155);
+		letter-spacing: 1px;
+	}
+	td, th {
+	  overflow: hidden;
+	  white-space: nowrap;
+	  font-size: 12px;
+	  text-align: right;
+	  
+	  //override bootstrap mixins
+	  border-style: dotted !important;
+	  border-width: 0 0 1px 0 !important;
+	  border-color: @table-border-color !important;
+	  padding: 0 7px 0 40px !important;
+	  line-height: 24px !important;
+	}
+	tr:last-child td {
+	  border-bottom: 1px dotted @table-border-color;
+	}
+}
+
+
+// Forms ======================================================================
+
+.form-control,textarea.form-control,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+	border-width: 1px;
+	.box-shadow(none);
+
+	&:focus {
+		.box-shadow(none);
+	}
+}
+
+.has-warning {
+	.help-block,
+	.control-label {
+		color: @brand-warning;
+	}
+
+	.form-control,
+	.form-control:focus {
+		border: 2px solid @brand-warning;
+	}
+}
+
+.has-error {
+	.help-block,
+	.control-label {
+		color: @brand-danger;
+	}
+
+	.form-control,
+	.form-control:focus {
+		border: 2px solid @brand-danger;
+	}
+}
+
+.has-success {
+	.help-block,
+	.control-label {
+		color: @brand-success;
+	}
+
+	.form-control,
+	.form-control:focus {
+		border: 2px solid @brand-success;
+	}
+}
+
+
+// Navs =======================================================================
+
+.nav {
+	.open > a,
+	.open > a:hover,
+	.open > a:focus {
+		border-color: transparent;
+	}
+}
+
+.pagination {
+
+	a,
+	a:hover {
+		color: #fff;
+	}
+
+	.disabled {
+		&>a,
+		&>a:hover,
+		&>a:focus,
+		&>span {
+			background-color: lighten(@brand-success, 15%);
+		}
+	}
+}
+
+.pager {
+	a,
+	a:hover {
+		color: #fff;
+	}
+
+	.disabled {
+		&>a,
+		&>a:hover,
+		&>a:focus,
+		&>span {
+			background-color: lighten(@brand-success, 15%);
+		}
+	}
+}
+
+
+// Indicators =================================================================
+
+.alert {
+
+	a,
+	.alert-link {
+		color: #fff;
+		text-decoration: underline;
+	}
+}
+
+
+// Progress bars ==============================================================
+
+.progress {
+	height: 10px;
+	.box-shadow(none);
+}
+
+
+// Containers =================================================================
+
+.well {
+	.box-shadow(none);
+	border-width: 0;
+}
+
+
+// Dropdowns =================================================================
+
+.dropdown-menu .dropdown-header, .dropdown-menu > li > a {
+	padding: 0px 15px;
+}
+.dropdown-menu {
+  > li > a {
+    line-height: 26px !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+
+    i {
+      margin-right: 7px;
+    }
+  }
+
+  .dropdown-header {
+  	text-transform: uppercase;
+    color: rgb(155,155,155);
+    letter-spacing: 1px;
+    font-weight: 800;
+    line-height: 30px;
+  }
+}
+
+
+// Modals =================================================================
+
+.modal-header {
+  .flexbox();
+  border: 0;
+  padding: 15px 25px;
+  h3 {
+    .flex(1);
+    font-size: 16px;
+    line-height: 30px;
+    margin: 0;
+  }
+  .btn, .btn:hover, .btn:active, .btn:focus {
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+  }
+}
+.modal-body {
+  background-color: @gray-lighter;
+  padding: 35px 25px;
+  .form-group { margin-bottom: 8px; }
+  .btn { width: 100%; }
+  input {
+    .placeholder(rgba(51,51,51,0.6));
+  }
+}
+
+@media screen and (min-width: @screen-sm-min) {
+  .modal-dialog {
+    width: 400px;
+    margin: 100px auto;
+  }
+}
