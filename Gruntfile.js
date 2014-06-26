@@ -17,8 +17,7 @@ module.exports = function (grunt) {
 						' * @license <%= pkg.license %>' + ' */'
 		},
 		swatch: {
-			blend: {},
-      centrio: {},
+			blend: {}, centrio: {},
 			amelia:{}, cerulean:{}, cosmo:{}, cyborg:{}, flatly:{}, journal:{},
 			readable:{}, simplex:{}, slate:{}, spacelab:{}, united:{}, yeti: {},
 			custom:{}
@@ -44,9 +43,13 @@ module.exports = function (grunt) {
 			}
 		},
     watch: {
-      centrio: {
+      blend: {
         files: 'blend/*',
         tasks: [ 'swatch:blend' ]
+      },
+      centrio: {
+        files: 'centrio/*',
+        tasks: [ 'swatch:centrio' ]
       }
 	  }
   });
