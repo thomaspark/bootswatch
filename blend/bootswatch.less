@@ -2,8 +2,9 @@
 // Bootswatch
 // -----------------------------------------------------
 @import url("//cloud.typography.com/6916252/625682/css/fonts.css");
-body {
-	-webkit-font-smoothing: antialiased;
+
+body, nav {
+  min-width: 1024px;  //constrain app size
 }
 
 
@@ -33,7 +34,9 @@ body {
 
 
 // Buttons ====================================================================
-
+.btn {
+  font-weight: 600;
+}
 .btn:active {
 	.box-shadow(none);
 }
@@ -44,6 +47,20 @@ body {
 
 
 // Typography =================================================================
+
+.Whitney() {
+  font-family: 'Whitney SSm A', 'Whitney SSm B', "Lucida Grande", "Lucida Sans", Verdana, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.Gotham() {
+  font-family: 'Gotham SSm A', 'Gotham SSm B', "Lucida Grande", "Lucida Sans", Verdana, Helvetica, Arial, sans-serif;
+  letter-spacing: -0.025em;
+  -webkit-font-smoothing: antialiased;
+}
+
+*, html, div, span, iframe, h1, h2, h3, h4, h5, h6, p, ul, ol, li, fieldset, form, label, header, section, *, input, textarea, button, .btn {
+  .Gotham();
+}
 
 .text-primary,
 .text-primary:hover {
@@ -74,30 +91,24 @@ body {
 // Tables =====================================================================
 
 .table {
-	border-spacing: @table-border-spacing-dim 0;
-	border-width: 0;
 
 	th {
-		font-size: 9px !important;
+		font-size: 11px !important;
 		text-transform: uppercase;
-		color: rgb(155,155,155);
-		letter-spacing: 1px;
+    font-weight: 700;
+		color: darken(@gray-dark, 10%);
+    text-align: left;
+    border-width: 1px !important;  //override
 	}
 	td, th {
 	  overflow: hidden;
 	  white-space: nowrap;
 	  font-size: 12px;
-	  text-align: right;
-	  
-	  //override bootstrap mixins
-	  border-style: dotted !important;
-	  border-width: 0 0 1px 0 !important;
-	  border-color: @table-border-color !important;
-	  padding: 0 7px 0 40px !important;
-	  line-height: 24px !important;
+	  padding: 0 30px 0 15px !important;
+	  line-height: 37px !important;
 	}
 	tr:last-child td {
-	  border-bottom: 1px dotted @table-border-color;
+	  border-bottom: 1px solid @table-border-color;
 	}
 }
 
