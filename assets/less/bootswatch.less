@@ -3,6 +3,7 @@ body {
 }
 
 #banner {
+  min-height: 300px;
   border-bottom: none;
 }
 
@@ -163,8 +164,10 @@ footer {
 
 .sponsor {
 
+  text-align: center;
+
   img {
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 4px;
   }
 
@@ -173,27 +176,11 @@ footer {
   }
 }
 
-.bsa {
-  padding: 0;
+@media (max-width: 767px) {
 
-  .one {
-
-    .bsa_it_ad {
-      border: none !important;
-      background-color: transparent !important;
-
-      .bsa_it_t,
-      .bsa_it_d {
-        color: inherit !important;
-      }
-
-      .bsa_it_i {
-        margin-bottom: 0 !important;
-      }
-    }
-
-    .bsa_it_p {
-      display: none;
-    }
+  #banner {
+    margin-bottom: 2em;
+    text-align: center
   }
+
 }
