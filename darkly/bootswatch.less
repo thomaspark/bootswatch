@@ -8,34 +8,32 @@
 
 .navbar {
   border-width: 0;
+}
 
-  &-default {
-
-    .badge {
-      background-color: #fff;
-      color: @navbar-default-bg;
-    }
+.navbar-default {
+  .badge {
+    background-color: #fff;
+    color: @navbar-default-bg;
   }
+}
 
-  &-inverse {
-
-    .badge {
-      background-color: #fff;
-      color: @navbar-inverse-bg;
-    }
+.navbar-inverse {
+  .badge {
+    background-color: #fff;
+    color: @navbar-inverse-bg;
   }
+}
 
-  &-brand {
-    padding: 18.5px 15px 20.5px;
-  }
+.navbar-brand {
+  padding: 18.5px 15px 20.5px;
+}
 
-  &-form {
-    .form-control {
-      background-color: white;
+.navbar-form {
+  .form-control {
+    background-color: white;
 
-      &:focus {
-        border-color: white;
-      }
+    &:focus {
+      border-color: white;
     }
   }
 }
@@ -105,13 +103,15 @@ table,
   > tfoot > tr > td {
     border: none;
   }
+}
 
-  &-bordered > thead > tr > th,
-  &-bordered > tbody > tr > th,
-  &-bordered > tfoot > tr > th,
-  &-bordered > thead > tr > td,
-  &-bordered > tbody > tr > td,
-  &-bordered > tfoot > tr > td {
+.table-bordered {
+  > thead > tr > th,
+  > tbody > tr > th,
+  > tfoot > tr > th,
+  > thead > tr > td,
+  > tbody > tr > td,
+  > tfoot > tr > td {
     border: 1px solid @table-border-color;
   }
 }
@@ -275,10 +275,10 @@ textarea {
 
 .modal {
   color: @text-color;
+}
 
-  &-header {
-    background-color: @navbar-default-bg;
-  }
+.modal-header {
+  background-color: @navbar-default-bg;
 }
 
 .popover {

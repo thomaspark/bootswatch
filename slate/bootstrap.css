@@ -6180,6 +6180,9 @@ button.close {
   border: 1px solid rgba(0, 0, 0, 0.6);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
+.navbar .nav .open > a {
+  border-color: transparent;
+}
 .navbar-inverse {
   background-image: -webkit-linear-gradient(#8a9196, #7a8288 60%, #70787d);
   background-image: -o-linear-gradient(#8a9196, #7a8288 60%, #70787d);
@@ -6203,9 +6206,6 @@ button.close {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff020202', endColorstr='#ff191b1d', GradientType=0);
   filter: none;
   border-left-color: transparent;
-}
-.navbar .nav .open > a {
-  border-color: transparent;
 }
 .navbar-nav > li.active > a {
   border-left-color: transparent;

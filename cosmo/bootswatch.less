@@ -6,14 +6,10 @@
 
 // Navbar =====================================================================
 
-.navbar {
-
-  &-inverse {
-
-    .badge {
-      background-color: #fff;
-      color: @brand-primary;
-    }
+.navbar-inverse {
+  .badge {
+    background-color: #fff;
+    color: @brand-primary;
   }
 }
 
@@ -172,36 +168,31 @@ table,
 
 // Containers =================================================================
 
-.panel {
-  &-heading,
-  &-footer {
-    border-top-right-radius: 0;
-    border-top-left-radius: 0;
-  }
+.panel-heading,
+.panel-footer {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
 
-  &-default {
-    .close {
-      color: @text-color;
-    }
+.panel-default {
+  .close {
+    color: @text-color;
   }
 }
 
-.modal {
+.modal-content {
+  border: none;
+}
 
-  &-content {
-    border: none;
-  }
+.modal-header {
+  background-color: @navbar-default-bg;
+  color: #fff;
+}
 
-  &-header {
-    background-color: @navbar-default-bg;
-    color: #fff;
-  }
-
-  &-body,
-  &-footer {
-    .close {
-      color: @text-color;
-    }
+.modal-body,
+.modal-footer {
+  .close {
+    color: @text-color;
   }
 }
 

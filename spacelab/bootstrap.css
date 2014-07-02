@@ -6181,6 +6181,18 @@ button.close {
   border: 1px solid #d5d5d5;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
 }
+.navbar .badge {
+  text-shadow: none;
+}
+.navbar .caret,
+.navbar .caret:hover {
+  -webkit-transition: border-color ease-in-out 0.2s;
+  -o-transition: border-color ease-in-out 0.2s;
+  transition: border-color ease-in-out 0.2s;
+}
+.navbar .dropdown-menu {
+  text-shadow: none;
+}
 .navbar-inverse {
   background-image: -webkit-linear-gradient(#6d94bf, #446e9b 50%, #3e648d);
   background-image: -o-linear-gradient(#6d94bf, #446e9b 50%, #3e648d);
@@ -6194,9 +6206,6 @@ button.close {
 .navbar-inverse .badge {
   background-color: #fff;
   color: #446e9b;
-}
-.navbar .badge {
-  text-shadow: none;
 }
 .navbar-nav > li > a,
 .navbar-nav > li > a:hover {
@@ -6212,17 +6221,14 @@ button.close {
   -o-transition: color ease-in-out 0.2s;
   transition: color ease-in-out 0.2s;
 }
-.navbar .caret,
-.navbar .caret:hover {
-  -webkit-transition: border-color ease-in-out 0.2s;
-  -o-transition: border-color ease-in-out 0.2s;
-  transition: border-color ease-in-out 0.2s;
-}
-.navbar .dropdown-menu {
-  text-shadow: none;
-}
 .btn {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+}
+.btn:active,
+.btn.active {
+  background-image: none;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 .btn-default {
   background-image: -webkit-linear-gradient(#6d7070, #474949 50%, #3d3f3f);
@@ -6331,12 +6337,6 @@ button.close {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffff0906', endColorstr='#ffa40200', GradientType=0);
   filter: none;
   border: 1px solid #860100;
-}
-.btn:active,
-.btn.active {
-  background-image: none;
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 .panel-primary .panel-title {
   color: #fff;

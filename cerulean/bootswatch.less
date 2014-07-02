@@ -14,30 +14,29 @@
   .btn-shadow(@navbar-default-bg);
   filter: none;
   .box-shadow(0 1px 10px rgba(0, 0, 0, 0.1));
+}
 
-  &-default {
-
-    .badge {
-      background-color: #fff;
-      color: @navbar-default-bg;
-    }
+.navbar-default {
+  .badge {
+    background-color: #fff;
+    color: @navbar-default-bg;
   }
+}
 
-  &-inverse {
-    #gradient > .vertical-three-colors(lighten(@navbar-inverse-bg, 8%), lighten(@navbar-inverse-bg, 4%), 60%, darken(@navbar-inverse-bg, 2%));
-    filter: none;
-    border-bottom: 1px solid darken(@navbar-inverse-bg, 10%);
+.navbar-inverse {
+  #gradient > .vertical-three-colors(lighten(@navbar-inverse-bg, 8%), lighten(@navbar-inverse-bg, 4%), 60%, darken(@navbar-inverse-bg, 2%));
+  filter: none;
+  border-bottom: 1px solid darken(@navbar-inverse-bg, 10%);
 
-    .badge {
-      background-color: #fff;
-      color: @navbar-inverse-bg;
-    }
+  .badge {
+    background-color: #fff;
+    color: @navbar-inverse-bg;
   }
+}
 
-  .navbar-nav > li > a,
-  &-brand {
-    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
-  }
+.navbar-brand,
+.navbar-nav > li > a {
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: @grid-float-breakpoint-max) {
@@ -62,7 +61,7 @@
 }
 
 .btn-default {
-  
+
   .btn-shadow(@btn-default-bg);
 
   &:hover {

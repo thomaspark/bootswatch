@@ -10,40 +10,37 @@
   .box-shadow(none);
   border: none;
   font-size: 12px;
+}
 
-  &-default {
-
-    .badge {
-      background-color: #fff;
-      color: @navbar-default-bg;
-    }
+.navbar-default {
+  .badge {
+    background-color: #fff;
+    color: @navbar-default-bg;
   }
+}
 
-  &-inverse {
-
-    .badge {
-      background-color: #fff;
-      color: @navbar-inverse-bg;
-    }
+.navbar-inverse {
+  .badge {
+    background-color: #fff;
+    color: @navbar-inverse-bg;
   }
 }
 
 // Buttons ====================================================================
 
 .btn {
-
   font-weight: 300;
+}
 
-  &-default {
-    &:hover {
-      background-color: darken(@btn-default-bg, 3%);
-    }
+.btn-default {
+  &:hover {
+    background-color: darken(@btn-default-bg, 3%);
   }
+}
 
-  &-sm,
-  &-xs {
-    font-size: 12px;
-  }
+.btn-sm,
+.btn-xs {
+  font-size: 12px;
 }
 
 // Typography =================================================================
@@ -256,11 +253,11 @@ label,
 
 .panel {
   border: none;
+}
 
-  &-default > .panel-heading {
-    background-color: @table-bg-hover;
-    color: @text-color;
-  }
+.panel-default > .panel-heading {
+  background-color: @table-bg-hover;
+  color: @text-color;
 }
 
 .thumbnail {
@@ -270,17 +267,15 @@ label,
 
 .modal {
   padding: 0;
-
-  &-header,
-  &-footer {
-    background-color: @table-bg-hover;
-    border: none;
-    border-radius: 0;
-  }
 }
 
-.popover {
-  &-title {
-    border: none;
-  }
+.modal-header,
+.modal-footer {
+  background-color: @table-bg-hover;
+  border: none;
+  border-radius: 0;
+}
+
+.popover-title {
+  border: none;
 }

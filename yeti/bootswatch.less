@@ -15,68 +15,62 @@
     background-color: #b3b3b3;
   }
 
-  &-collapse {
-    border-top-color: @dropdown-divider-bg;
-    .box-shadow(none);
-  }
-
   .btn {
     padding-top: 6px;
     padding-bottom: 6px;
   }
 
-  .dropdown {
+  .dropdown-menu {
+    border: none;
 
-    &-menu {
-      border: none;
-
-      > li > a,
-      > li > a:focus {
-        background-color: transparent;
-        font-size: 13px;
-        font-weight: 300;
-      }
-    }
-
-    &-header {
-      color: rgba(255, 255, 255, 0.5);
-    }
-
-  }
-
-  &-default {
-
-    .dropdown-menu {
-      background-color: @navbar-default-bg;
-
-      > li > a,
-      > li > a:focus {
-        color: @navbar-default-color;
-      }
-
-      > li > a:hover,
-      > .active > a,
-      > .active > a:hover {
-        background-color: @navbar-default-link-hover-bg;
-      }
+    > li > a,
+    > li > a:focus {
+      background-color: transparent;
+      font-size: 13px;
+      font-weight: 300;
     }
   }
 
-  &-inverse {
+  .dropdown-header {
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
 
-    .dropdown-menu {
-      background-color: @navbar-inverse-bg;
+.navbar-collapse {
+  border-top-color: @dropdown-divider-bg;
+  .box-shadow(none);
+}
 
-      > li > a,
-      > li > a:focus {
-        color: @navbar-inverse-color;
-      }
+.navbar-default {
+  .dropdown-menu {
+    background-color: @navbar-default-bg;
 
-      > li > a:hover,
-      > .active > a,
-      > .active > a:hover {
-        background-color: @navbar-inverse-link-hover-bg;
-      }
+    > li > a,
+    > li > a:focus {
+      color: @navbar-default-color;
+    }
+
+    > li > a:hover,
+    > .active > a,
+    > .active > a:hover {
+      background-color: @navbar-default-link-hover-bg;
+    }
+  }
+}
+
+.navbar-inverse {
+  .dropdown-menu {
+    background-color: @navbar-inverse-bg;
+
+    > li > a,
+    > li > a:focus {
+      color: @navbar-inverse-color;
+    }
+
+    > li > a:hover,
+    > .active > a,
+    > .active > a:hover {
+      background-color: @navbar-inverse-link-hover-bg;
     }
   }
 }
@@ -85,22 +79,21 @@
 
 .btn {
   padding: 14px 28px;
+}
 
-  &-lg {
-    padding: 16px 32px;
-  }
+.btn-lg {
+  padding: 16px 32px;
+}
 
-  &-sm {
-    padding: 8px 16px;
-  }
+.btn-sm {
+  padding: 8px 16px;
+}
 
-  &-xs {
-    padding: 4px 8px;
-  }
+.btn-xs {
+  padding: 4px 8px;
 }
 
 .btn-group {
-
   .btn ~ .dropdown-toggle {
     padding-left: 16px;
     padding-right: 16px;
@@ -117,7 +110,6 @@
   }
 
   .dropdown-toggle {
-
     &.btn-default ~ .dropdown-menu {
       background-color: @btn-default-bg;
       border-color: @btn-default-border;
@@ -312,15 +304,15 @@ label,
       border-radius: 3px;
     }
   }
+}
 
-  &-lg > li > a {
-    padding-left: 22px;
-    padding-right: 22px;
-  }
+.pagination-lg > li > a {
+  padding-left: 22px;
+  padding-right: 22px;
+}
 
-  &-sm > li > a {
-    padding: 0 5px;
-  }
+.pagination-sm > li > a {
+  padding: 0 5px;
 }
 
 .pager {
@@ -363,11 +355,11 @@ label,
   padding-right: 1em;
   border-radius: 0;
   font-weight: 300;
+}
 
-  &-default {
-    background-color: @btn-default-bg;
-    color: @btn-default-color;
-  }
+.label-default {
+  background-color: @btn-default-bg;
+  color: @btn-default-color;
 }
 
 .badge {
@@ -386,24 +378,21 @@ label,
 
 // Containers =================================================================
 
-.dropdown {
+.dropdown-menu {
+  padding: 0;
+  margin-top: 0;
+  font-size: @font-size-small;
 
-  &-menu {
-    padding: 0;
-    margin-top: 0;
-    font-size: @font-size-small;
-
-    > li > a {
-      padding: 12px 15px;
-    }
+  > li > a {
+    padding: 12px 15px;
   }
+}
 
-  &-header {
-    padding-left: 15px;
-    padding-right: 15px;
-    font-size: 9px;
-    text-transform: uppercase;
-  }
+.dropdown-header {
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 9px;
+  text-transform: uppercase;
 }
 
 .popover {
@@ -412,34 +401,30 @@ label,
   font-weight: 300;
 }
 
-.panel {
-  &-heading,
-  &-footer {
-    border-top-right-radius: 0;
-    border-top-left-radius: 0;
-  }
+.panel-heading,
+.panel-footer {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
 
-  &-default {
-    .close {
-      color: @text-color;
-    }
+.panel-default {
+  .close {
+    color: @text-color;
   }
 }
 
-.modal {
-  &-content {
-    border: none;
-  }
+.modal-content {
+  border: none;
+}
 
-  &-header {
-    background-color: @navbar-default-bg;
-    color: #fff;
-  }
+.modal-header {
+  background-color: @navbar-default-bg;
+  color: #fff;
+}
 
-  &-body,
-  &-footer {
-    .close {
-      color: @text-color;
-    }
+.modal-body,
+.modal-footer {
+  .close {
+    color: @text-color;
   }
 }
