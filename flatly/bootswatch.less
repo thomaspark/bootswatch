@@ -8,26 +8,24 @@
 
 .navbar {
   border-width: 0;
+}
 
-  &-default {
-
-    .badge {
-      background-color: #fff;
-      color: @navbar-default-bg;
-    }
+.navbar-default {
+  .badge {
+    background-color: #fff;
+    color: @navbar-default-bg;
   }
+}
 
-  &-inverse {
-
-    .badge {
-      background-color: #fff;
-      color: @navbar-inverse-bg;
-    }
+.navbar-inverse {
+  .badge {
+    background-color: #fff;
+    color: @navbar-inverse-bg;
   }
+}
 
-  &-brand {
-    padding: 18.5px 15px 20.5px;
-  }
+.navbar-brand {
+  padding: 18.5px 15px 20.5px;
 }
 
 // Buttons ====================================================================
@@ -95,13 +93,15 @@ table,
   > tfoot > tr > td {
     border: none;
   }
+}
 
-  &-bordered > thead > tr > th,
-  &-bordered > tbody > tr > th,
-  &-bordered > tfoot > tr > th,
-  &-bordered > thead > tr > td,
-  &-bordered > tbody > tr > td,
-  &-bordered > tfoot > tr > td {
+.table-bordered {
+  > thead > tr > th,
+  > tbody > tr > th,
+  > tfoot > tr > th,
+  > thead > tr > td,
+  > tbody > tr > td,
+  > tfoot > tr > td {
     border: 1px solid @table-border-color;
   }
 }
@@ -246,25 +246,21 @@ input, {
   .box-shadow(none);
 }
 
-.panel {
-  &-default {
-    .close {
-      color: @text-color;
-    }
+.panel-default {
+  .close {
+    color: @text-color;
   }
 }
 
-.modal {
-  &-header {
-    background-color: @navbar-default-bg;
-    color: #fff;
-  }
+.modal-header {
+  background-color: @navbar-default-bg;
+  color: #fff;
+}
 
-  &-body,
-  &-footer {
-    .close {
-      color: @text-color;
-    }
+.modal-body,
+.modal-footer {
+  .close {
+    color: @text-color;
   }
 }
 

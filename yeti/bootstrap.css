@@ -6179,11 +6179,6 @@ button.close {
 .navbar .navbar-toggle:hover .icon-bar {
   background-color: #b3b3b3;
 }
-.navbar-collapse {
-  border-top-color: rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
 .navbar .btn {
   padding-top: 6px;
   padding-bottom: 6px;
@@ -6199,6 +6194,11 @@ button.close {
 }
 .navbar .dropdown-header {
   color: rgba(255, 255, 255, 0.5);
+}
+.navbar-collapse {
+  border-top-color: rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 .navbar-default .dropdown-menu {
   background-color: #333333;
@@ -6227,13 +6227,16 @@ button.close {
 .btn {
   padding: 14px 28px;
 }
-.btn-lg {
+.btn-lg,
+.btn-group-lg > .btn {
   padding: 16px 32px;
 }
-.btn-sm {
+.btn-sm,
+.btn-group-sm > .btn {
   padding: 8px 16px;
 }
-.btn-xs {
+.btn-xs,
+.btn-group-xs > .btn {
   padding: 4px 8px;
 }
 .btn-group .btn ~ .dropdown-toggle {

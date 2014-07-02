@@ -8,8 +8,10 @@
 
 .navbar {
   font-family: @headings-font-family;
+}
 
-  &-nav > li > a {
+.navbar-nav {
+  > li > a {
     padding: @padding-base-vertical @padding-base-horizontal;
     margin: 12px 6px;
     border: 1px solid transparent;
@@ -20,26 +22,29 @@
     }
   }
 
-  &-nav > .active > a,
-  &-nav > .active > a:hover {
-    border: 1px solid #ddd;
+  > .active > a {
+    &,
+    &:hover {
+      border: 1px solid #ddd;
+    }
   }
+}
 
-  &-default .navbar-nav > .active > a:hover {
-    color: @navbar-default-link-hover-color;
-  }
 
-  &-inverse .navbar-nav > .active > a:hover {
-    color: @navbar-inverse-link-hover-color;
-  }
+.navbar-default .navbar-nav > .active > a:hover {
+  color: @navbar-default-link-hover-color;
+}
 
-  &-brand {
-    margin-top: 6px;
-  }
+.navbar-inverse .navbar-nav > .active > a:hover {
+  color: @navbar-inverse-link-hover-color;
+}
 
-  &-form {
-    margin-top: 12px;
-  }
+.navbar-brand {
+  margin-top: 6px;
+}
+
+.navbar-form {
+  margin-top: 12px;
 }
 
 // Buttons ====================================================================
@@ -73,17 +78,17 @@ legend {
 }
 
 .pagination {
-
   font-family: @headings-font-family;
+}
 
-  &-lg > li > a,
-  &-lg > li > span {
+.pagination-lg > li {
+  > a,
+  > span {
     padding: 14px 24px;
   }
 }
 
 .pager {
-
   font-family: @headings-font-family;
 
   a {
@@ -125,12 +130,11 @@ legend {
 .label {
   font-family: @headings-font-family;
   font-weight: normal;
+}
 
-  &-default {
-    border: 1px solid #ddd;
-    color: @text-color;
-  }
-
+.label-default {
+  border: 1px solid #ddd;
+  color: @text-color;
 }
 
 .badge {
@@ -146,27 +150,27 @@ legend {
 
 .panel {
   .box-shadow(none);
+}
 
-  &-default {
-    .close {
-      color: @text-color;
-    }
+.panel-default {
+  .close {
+    color: @text-color;
+  }
+}
+
+.panel-primary,
+.panel-success,
+.panel-warning,
+.panel-danger,
+.panel-info {
+  .panel-heading {
+    color: #fff;
   }
 
-  &-primary,
-  &-success,
-  &-warning,
-  &-danger,
-  &-info {
-    .panel-heading {
-      color: #fff;
-    }
-
-    .panel-body {
-      border: 1px solid #ddd;
-      border-top-width: 0;
-      border-radius: 0 0 @border-radius-base @border-radius-base;
-    }
+  .panel-body {
+    border: 1px solid #ddd;
+    border-top-width: 0;
+    border-radius: 0 0 @border-radius-base @border-radius-base;
   }
 }
 

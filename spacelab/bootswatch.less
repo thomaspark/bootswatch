@@ -13,43 +13,48 @@
 // Navbar =====================================================================
 
 .navbar {
-
   .btn-shadow(@navbar-default-bg);
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
-
-  &-inverse {
-    .btn-shadow(@navbar-inverse-bg);
-    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
-
-    .badge {
-      background-color: #fff;
-      color: @navbar-inverse-bg;
-    }
-  }
 
   .badge {
     text-shadow: none;
   }
 
-  &-nav > li > a,
-  &-nav > li > a:hover {
-    padding-top: @navbar-padding-vertical + 2px;
-    padding-bottom: @navbar-padding-vertical - 2px;
-    .transition(color ease-in-out .2s);
-  }
-  
-  &-brand,
-  &-brand:hover {
-    .transition(color ease-in-out .2s);
-  }
-
-  .caret,
-  .caret:hover {
-    .transition(border-color ease-in-out .2s);
+  .caret {
+    &,
+    &:hover {
+      .transition(border-color ease-in-out .2s);
+    }
   }
 
   .dropdown-menu {
     text-shadow: none;
+  }
+}
+
+.navbar-inverse {
+  .btn-shadow(@navbar-inverse-bg);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+
+  .badge {
+    background-color: #fff;
+    color: @navbar-inverse-bg;
+  }
+}
+
+.navbar-nav > li > a {
+  &,
+  &:hover {
+    padding-top: @navbar-padding-vertical + 2px;
+    padding-bottom: @navbar-padding-vertical - 2px;
+    .transition(color ease-in-out .2s);
+  }
+}
+
+.navbar-brand {
+  &,
+  &:hover {
+    .transition(color ease-in-out .2s);
   }
 }
 
@@ -58,54 +63,6 @@
 .btn {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
 
-  &-default {
-    .btn-shadow(@btn-default-bg);
-
-    &:hover {
-      .btn-shadow(darken(@btn-default-bg, 4%));
-    }
-  }
-
-  &-primary {
-    .btn-shadow(@btn-primary-bg);
-
-    &:hover {
-      .btn-shadow(darken(@btn-primary-bg, 4%));
-    }
-  }
-
-  &-success {
-    .btn-shadow(@btn-success-bg);
-
-    &:hover {
-      .btn-shadow(darken(@btn-success-bg, 4%));
-    }
-  }
-
-  &-info {
-    .btn-shadow(@btn-info-bg);
-
-    &:hover {
-      .btn-shadow(darken(@btn-info-bg, 4%));
-    }
-  }
-
-  &-warning {
-    .btn-shadow(@btn-warning-bg);
-
-    &:hover {
-      .btn-shadow(darken(@btn-warning-bg, 4%));
-    }
-  }
-
-  &-danger {
-    .btn-shadow(@btn-danger-bg);
-
-    &:hover {
-      .btn-shadow(darken(@btn-danger-bg, 4%));
-    }
-  }
-
   &:active,
   &.active {
     background-image: none;
@@ -113,7 +70,53 @@
   }
 }
 
+.btn-default {
+  .btn-shadow(@btn-default-bg);
 
+  &:hover {
+    .btn-shadow(darken(@btn-default-bg, 4%));
+  }
+}
+
+.btn-primary {
+  .btn-shadow(@btn-primary-bg);
+
+  &:hover {
+    .btn-shadow(darken(@btn-primary-bg, 4%));
+  }
+}
+
+.btn-success {
+  .btn-shadow(@btn-success-bg);
+
+  &:hover {
+    .btn-shadow(darken(@btn-success-bg, 4%));
+  }
+}
+
+.btn-info {
+  .btn-shadow(@btn-info-bg);
+
+  &:hover {
+    .btn-shadow(darken(@btn-info-bg, 4%));
+  }
+}
+
+.btn-warning {
+  .btn-shadow(@btn-warning-bg);
+
+  &:hover {
+    .btn-shadow(darken(@btn-warning-bg, 4%));
+  }
+}
+
+.btn-danger {
+  .btn-shadow(@btn-danger-bg);
+
+  &:hover {
+    .btn-shadow(darken(@btn-danger-bg, 4%));
+  }
+}
 
 // Typography =================================================================
 
@@ -129,11 +132,8 @@
 
 // Containers =================================================================
 
-.panel {
-
-  &-primary {
-    .panel-title {
-      color: #fff;
-    }
+.panel-primary {
+  .panel-title {
+    color: #fff;
   }
 }
