@@ -6282,8 +6282,8 @@ button.close {
 .text-info:hover {
   color: #75caeb;
 }
-table a,
-.table a {
+table a:not(.btn),
+.table a:not(.btn) {
   text-decoration: underline;
 }
 table .success,
@@ -6296,14 +6296,14 @@ table .info,
 .table .info {
   color: #fff;
 }
-table .success a,
-.table .success a,
-table .warning a,
-.table .warning a,
-table .danger a,
-.table .danger a,
-table .info a,
-.table .info a {
+table .success a:not(.btn),
+.table .success a:not(.btn),
+table .warning a:not(.btn),
+.table .warning a:not(.btn),
+table .danger a:not(.btn),
+.table .danger a:not(.btn),
+table .info a:not(.btn),
+.table .info a:not(.btn) {
   color: #fff;
 }
 table > thead > tr > th,
