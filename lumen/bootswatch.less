@@ -364,21 +364,6 @@ label {
 
 // Indicators =================================================================
 
-.alert {
-  .shadow();
-
-  a,
-  .alert-link {
-    font-weight: normal;
-    color: #fff;
-    text-decoration: underline;
-  }
-
-  .close {
-    text-decoration: none;
-  }
-}
-
 .close {
   color: #fff;
   text-decoration: none;
@@ -388,6 +373,16 @@ label {
   &:focus {
     color: #fff;
     opacity: 1;
+  }
+}
+
+.alert {
+  .shadow();
+
+  .alert-link {
+    font-weight: normal;
+    color: #fff;
+    text-decoration: underline;
   }
 }
 
@@ -421,4 +416,16 @@ label {
 .panel {
   border: 1px solid @navbar-default-border;
   .shadow();
+
+  &-default {
+    .close {
+      color: @text-color;
+    }
+  }
+}
+
+.modal {
+  .close {
+    color: @text-color;
+  }
 }

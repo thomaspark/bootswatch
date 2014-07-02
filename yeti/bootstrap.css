@@ -6408,6 +6408,8 @@ label,
 }
 .close {
   opacity: 0.4;
+  text-decoration: none;
+  text-shadow: none;
 }
 .close:hover,
 .close:focus {
@@ -6417,19 +6419,10 @@ label,
   font-size: 12px;
   font-weight: 300;
 }
-.alert a,
 .alert .alert-link {
   font-weight: normal;
   color: #fff;
   text-decoration: underline;
-}
-.alert .close {
-  color: #fff;
-  text-decoration: none;
-}
-.alert .close:hover,
-.alert .close:focus {
-  color: #fff;
 }
 .label {
   padding-left: 1em;
@@ -6475,4 +6468,18 @@ label,
 .panel-footer {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
+}
+.panel-default .close {
+  color: #222222;
+}
+.modal-content {
+  border: none;
+}
+.modal-header {
+  background-color: #333333;
+  color: #fff;
+}
+.modal-body .close,
+.modal-footer .close {
+  color: #222222;
 }

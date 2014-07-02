@@ -238,16 +238,21 @@ textarea {
 
 // Indicators =================================================================
 
-.alert {
+.close {
+  text-decoration: none;
+  text-shadow: none;
+  opacity: 0.4;
 
-  a,
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+}
+
+.alert {
   .alert-link {
     color: #fff;
     text-decoration: underline;
-  }
-
-  .close {
-    text-decoration: none;
   }
 }
 
@@ -268,8 +273,15 @@ textarea {
   .box-shadow(none);
 }
 
-.popover,
 .modal {
+  color: @text-color;
+
+  &-header {
+    background-color: @navbar-default-bg;
+  }
+}
+
+.popover {
   color: @text-color;
 }
 

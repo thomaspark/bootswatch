@@ -5329,14 +5329,14 @@ a.list-group-item-danger.active:focus {
   font-size: 22.5px;
   font-weight: bold;
   line-height: 1;
-  color: #000000;
+  color: #ffffff;
   text-shadow: 0 1px 0 #ffffff;
   opacity: 0.2;
   filter: alpha(opacity=20);
 }
 .close:hover,
 .close:focus {
-  color: #000000;
+  color: #ffffff;
   text-decoration: none;
   cursor: pointer;
   opacity: 0.5;
@@ -5389,7 +5389,7 @@ button.close {
   position: relative;
   background-color: #ffffff;
   border: 1px solid #999999;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid transparent;
   border-radius: 0;
   -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
@@ -6260,22 +6260,21 @@ table .info a,
 .dropdown-menu > li > a:focus {
   background-image: none;
 }
+.close {
+  text-decoration: none;
+  text-shadow: none;
+  opacity: 0.4;
+}
+.close:hover,
+.close:focus {
+  opacity: 1;
+}
 .alert {
   border: none;
 }
 .alert .alert-link {
   text-decoration: underline;
   color: #fff;
-}
-.close {
-  color: #fff;
-  text-decoration: none;
-  opacity: 0.4;
-}
-.close:hover,
-.close:focus {
-  color: #fff;
-  opacity: 1;
 }
 .label {
   border-radius: 0;
@@ -6293,4 +6292,18 @@ table .info a,
 .panel-footer {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
+}
+.panel-default .close {
+  color: #333333;
+}
+.modal-content {
+  border: none;
+}
+.modal-header {
+  background-color: #222222;
+  color: #fff;
+}
+.modal-body .close,
+.modal-footer .close {
+  color: #333333;
 }

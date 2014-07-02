@@ -6339,14 +6339,6 @@ input:focus {
 .pager .disabled > span {
   background-color: #3be6c4;
 }
-.alert a,
-.alert .alert-link {
-  color: #fff;
-  text-decoration: underline;
-}
-.alert .close {
-  text-decoration: none;
-}
 .close {
   color: #fff;
   text-decoration: none;
@@ -6356,6 +6348,10 @@ input:focus {
 .close:focus {
   color: #fff;
   opacity: 1;
+}
+.alert .alert-link {
+  color: #fff;
+  text-decoration: underline;
 }
 .progress {
   height: 10px;
@@ -6369,4 +6365,15 @@ input:focus {
 .well {
   -webkit-box-shadow: none;
   box-shadow: none;
+}
+.panel-default .close {
+  color: #2c3e50;
+}
+.modal-header {
+  background-color: #2c3e50;
+  color: #fff;
+}
+.modal-body .close,
+.modal-footer .close {
+  color: #2c3e50;
 }

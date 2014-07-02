@@ -102,28 +102,23 @@ legend {
 
 // Indicators =================================================================
 
-.alert {
-  a,
-  .alert-link {
-    color: @alert-success-text;
-    text-decoration: underline;
-  }
-
-  .close {
-    text-decoration: none;
-  }
-}
-
-
 .close {
   color: #fff;
   text-decoration: none;
+  text-shadow: none;
   opacity: 0.4;
 
   &:hover,
   &:focus {
     color: #fff;
     opacity: 1;
+  }
+}
+
+.alert {
+  .alert-link {
+    color: @alert-success-text;
+    text-decoration: underline;
   }
 }
 
@@ -150,14 +145,12 @@ legend {
 // Containers =================================================================
 
 .panel {
-
   .box-shadow(none);
 
-  &-default .panel-heading,
-  &-default .panel-footer {
-    background-color: #fff;
-    font-family: @headings-font-family;
-    font-weight: bold;
+  &-default {
+    .close {
+      color: @text-color;
+    }
   }
 
   &-primary,
@@ -174,5 +167,11 @@ legend {
       border-top-width: 0;
       border-radius: 0 0 @border-radius-base @border-radius-base;
     }
+  }
+}
+
+.modal {
+  .close {
+    color: @text-color;
   }
 }

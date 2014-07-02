@@ -5329,14 +5329,14 @@ a.list-group-item-danger.active:focus {
   font-size: 24px;
   font-weight: bold;
   line-height: 1;
-  color: #000000;
+  color: #ffffff;
   text-shadow: 0 1px 0 #ffffff;
   opacity: 0.2;
   filter: alpha(opacity=20);
 }
 .close:hover,
 .close:focus {
-  color: #000000;
+  color: #ffffff;
   text-decoration: none;
   cursor: pointer;
   opacity: 0.5;
@@ -6233,23 +6233,20 @@ legend {
 .pager .disabled a {
   border-color: #dddddd;
 }
-.alert a,
-.alert .alert-link {
-  color: #ffffff;
-  text-decoration: underline;
-}
-.alert .close {
-  text-decoration: none;
-}
 .close {
   color: #fff;
   text-decoration: none;
+  text-shadow: none;
   opacity: 0.4;
 }
 .close:hover,
 .close:focus {
   color: #fff;
   opacity: 1;
+}
+.alert .alert-link {
+  color: #ffffff;
+  text-decoration: underline;
 }
 .label {
   font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -6269,11 +6266,8 @@ legend {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.panel-default .panel-heading,
-.panel-default .panel-footer {
-  background-color: #fff;
-  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: bold;
+.panel-default .close {
+  color: #333333;
 }
 .panel-primary .panel-heading,
 .panel-success .panel-heading,
@@ -6290,4 +6284,7 @@ legend {
   border: 1px solid #ddd;
   border-top-width: 0;
   border-radius: 0 0 4px 4px;
+}
+.modal .close {
+  color: #333333;
 }

@@ -5329,14 +5329,14 @@ a.list-group-item-danger.active:focus {
   font-size: 21px;
   font-weight: bold;
   line-height: 1;
-  color: #000000;
+  color: #ffffff;
   text-shadow: 0 1px 0 #ffffff;
   opacity: 0.2;
   filter: alpha(opacity=20);
 }
 .close:hover,
 .close:focus {
-  color: #000000;
+  color: #ffffff;
   text-decoration: none;
   cursor: pointer;
   opacity: 0.5;
@@ -6472,18 +6472,6 @@ label {
   border-left-width: 2px;
   border-right-width: 2px;
 }
-.alert {
-  border-width: 0 1px 4px 1px;
-}
-.alert a,
-.alert .alert-link {
-  font-weight: normal;
-  color: #fff;
-  text-decoration: underline;
-}
-.alert .close {
-  text-decoration: none;
-}
 .close {
   color: #fff;
   text-decoration: none;
@@ -6493,6 +6481,14 @@ label {
 .close:focus {
   color: #fff;
   opacity: 1;
+}
+.alert {
+  border-width: 0 1px 4px 1px;
+}
+.alert .alert-link {
+  font-weight: normal;
+  color: #fff;
+  text-decoration: underline;
 }
 .label {
   font-weight: normal;
@@ -6519,4 +6515,10 @@ label {
 .panel {
   border: 1px solid #e7e7e7;
   border-width: 0 1px 4px 1px;
+}
+.panel-default .close {
+  color: #555555;
+}
+.modal .close {
+  color: #555555;
 }

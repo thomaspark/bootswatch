@@ -338,6 +338,8 @@ label,
 
 .close {
   opacity: 0.4;
+  text-decoration: none;
+  text-shadow: none;
 
   &:hover,
   &:focus {
@@ -349,21 +351,10 @@ label,
   font-size: @font-size-small;
   font-weight: 300;
 
-  a,
   .alert-link {
     font-weight: normal;
     color: #fff;
     text-decoration: underline;
-  }
-
-  .close {
-    color: #fff;
-    text-decoration: none;
-
-    &:hover,
-    &:focus {
-      color: #fff;
-    }
   }
 }
 
@@ -426,5 +417,29 @@ label,
   &-footer {
     border-top-right-radius: 0;
     border-top-left-radius: 0;
+  }
+
+  &-default {
+    .close {
+      color: @text-color;
+    }
+  }
+}
+
+.modal {
+  &-content {
+    border: none;
+  }
+
+  &-header {
+    background-color: @navbar-default-bg;
+    color: #fff;
+  }
+
+  &-body,
+  &-footer {
+    .close {
+      color: @text-color;
+    }
   }
 }
