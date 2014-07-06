@@ -5,16 +5,16 @@ var grunt = require('grunt');
 module.exports = function () {
   return grunt.file.expand(
     { filter: 'isDirectory' },
-    "*",
-    "!2",
-    "!api",
-    "!assets",
-    "!bower_components",
-    "!default",
-    "!fonts",
-    "!global",
-    "!help",
-    "!node_modules",
-    "!tests"
+    '*',
+    '!2',
+    '!api',
+    '!assets',
+    '!bower_components',
+    '!default',
+    '!fonts',
+    '!global',
+    '!help',
+    '!node_modules',
+    '!tests'
   );
 };
