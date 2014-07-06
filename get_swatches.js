@@ -1,12 +1,4 @@
-var fs = require('fs');
-
-// Returns an Array of all directories in the current directory, excluding
-// hidden directories.
-function getDirs() {
-  return fs.readdirSync('.').filter(function (file) {
-    return file[0] !== "." && fs.statSync(file).isDirectory();
-  });
-}
+var grunt = require('grunt');
 
 // Returns a copy of the given Array with all elements of the blacklist Array
 // removed.
@@ -19,7 +11,9 @@ function removeBlacklisted(array, blacklist) {
 // Returns an Array of the names of all Bootswatch themes in the current
 // directory.
 module.exports = function () {
-  return removeBlacklisted(getDirs(), [
+  var dirs = grunt.file.expand({ filter: 'isDirectory' }, '*');
+
+  return removeBlacklisted(dirs, [
     "2",
     "api",
     "assets",
