@@ -4,6 +4,11 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
+  var swatchConfig = swatches.reduce(function (memo, swatch) {
+    memo[swatch] = {};
+    return memo;
+  }, {});
+
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -16,12 +21,7 @@ module.exports = function (grunt) {
             ' * Licensed under <%= pkg.license %>\n' +
             ' * Based on Bootstrap\n' +
             '*/\n',
-    swatch: {
-      amelia:{}, cerulean:{}, cosmo:{}, cyborg:{}, darkly:{},
-      flatly:{}, journal:{}, lumen:{}, readable:{}, simplex:{},
-      slate:{}, spacelab:{}, superhero:{}, united:{}, yeti:{},
-      custom:{}
-    },
+    swatch: swatchConfig,
     clean: {
       build: {
         src: ['*/build.less', '!global/build.less']
