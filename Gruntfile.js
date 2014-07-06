@@ -1,3 +1,5 @@
+var getSwatches = require('./get_swatches');
+
 module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-concat');
@@ -84,6 +86,12 @@ module.exports = function (grunt) {
   grunt.registerMultiTask('swatch', 'build a theme', function() {
     var t = this.target;
     grunt.task.run('build:'+t);
+  });
+
+  grunt.registerTask('swatches', 'list all themes', function() {
+    getSwatches().forEach(function (swatch) {
+      grunt.log.writeln(swatch);
+    });
   });
 
   grunt.registerTask('default', 'build a theme', function() {
