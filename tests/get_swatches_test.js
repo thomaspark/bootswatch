@@ -1,5 +1,5 @@
 var assert = require('assert');
-var getSwatches = require('./get_swatches');
+var getSwatches = require('../get_swatches');
 
 assert.deepEqual(getSwatches().sort(), [
   "amelia",
