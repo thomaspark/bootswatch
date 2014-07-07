@@ -383,8 +383,9 @@ input[type="checkbox"]:checked + label:after {
       border: 1px solid #DBDBDB;
       text-indent: 15px;
       padding: 0;
-      &:not(:last-child) {
-        border-bottom-width: 0;
+      border-bottom-width: 0;
+      &:last-child {
+        border-bottom-width: 1px;
       }
       @radius: 2px;
       &:first-child {
