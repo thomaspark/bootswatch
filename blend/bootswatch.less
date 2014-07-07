@@ -35,29 +35,32 @@ body, nav {
 
 // Buttons ====================================================================
 .btn {
-  font-weight: 600;
+  //font-weight: 600;
   &:focus {
     outline: none;
   }
   &:active {
     .box-shadow(none);
     &.btn-default {
-      background-color: lighten(@btn-default-bg, 2%);
+      background-color: @clay-minus-2;
     }
     &.btn-primary {
-      background-color: lighten(@btn-primary-bg, 2%);
+      background-color: @mint-minus-2;
     }
     &.btn-success {
-      background-color: lighten(@btn-success-bg, 2%);
+      background-color: @mint-minus-2;
     }
     &.btn-warning {
-      background-color: lighten(@btn-warning-bg, 2%);
+      background-color: @gold-minus-2;
     }
     &.btn-danger {
-      background-color: lighten(@btn-danger-bg, 2%);
+      background-color: @brick-minus-2;
     }
     &.btn-info {
-      background-color: lighten(@btn-info-bg, 2%);
+      background-color: @sky-minus-2;
+    }
+    &.btn-link {
+      color: @night-minus-4;
     }
   }
 }
@@ -208,7 +211,6 @@ input[type="color"],
 //Custom Checkbox
 input[type="checkbox"] {
   display: none;
-
 }
 input[type="checkbox"] + label {
     display:inline-block;
@@ -341,7 +343,7 @@ input[type="checkbox"]:checked + label:after {
       line-height: 17px;
       text-transform: uppercase;
       font-weight: 600;
-      color: @app-blue;
+      color: @night;
       color: rgb(140,140,140);
       letter-spacing: 0.5px;
     }
@@ -356,7 +358,7 @@ input[type="checkbox"]:checked + label:after {
     .btn[data-dismiss="modal"] {
       float: left;
       padding-left: 0;
-      color: @app-green;
+      color: @mint;
     }
   }
 }

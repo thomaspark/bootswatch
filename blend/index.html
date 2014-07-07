@@ -1296,5 +1296,12 @@
     <script src="../bower_components/jquery/jquery.min.js"></script>
     <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="../assets/js/bootswatch.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $(".btn").mouseup(function(){
+            $(this).blur();
+        })
+      });
+    </script>
   </body>
 </html>
