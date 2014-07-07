@@ -8,6 +8,7 @@ module.exports = function (grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     builddir: '.',
+    buildtheme: '',
     banner: '/*!\n' +
             ' * <%= pkg.name %> v<%= pkg.version %>\n' +
             ' * Homepage: <%= pkg.homepage %>\n' +
@@ -43,12 +44,20 @@ module.exports = function (grunt) {
         },
         files: {}
       }
+    },
+    watch: {
+      files: ['*/variables.less', '*/bootswatch.less'],
+      tasks: 'build',
+      options: {
+        nospawn: true
+      }
     }
   });
 
   grunt.registerTask('none', function() {});
 
   grunt.registerTask('build', 'build a regular theme', function(theme, compress) {
+    var theme = theme == undefined ? grunt.config('buildtheme') : theme;
     var compress = compress == undefined ? true : compress;
 
     var concatSrc;
@@ -88,5 +97,11 @@ module.exports = function (grunt) {
 
   grunt.registerTask('default', 'build a theme', function() {
     grunt.task.run('swatch');
+  });
+
+  grunt.event.on('watch', function(action, filepath) {
+    var path = require('path');
+    var theme = path.dirname(filepath);
+    grunt.config('buildtheme', theme);
   });
 };
