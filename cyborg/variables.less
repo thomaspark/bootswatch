@@ -39,7 +39,7 @@
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-@font-family-sans-serif:  "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-sans-serif:  "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 @font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
@@ -49,12 +49,12 @@
 @font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
 @font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
 
-@font-size-h1:            floor((@font-size-base * 2.6)); // ~36px
-@font-size-h2:            floor((@font-size-base * 2.15)); // ~30px
-@font-size-h3:            ceil((@font-size-base * 1.7)); // ~24px
-@font-size-h4:            ceil((@font-size-base * 1.25)); // ~18px
-@font-size-h5:            @font-size-base;
-@font-size-h6:            ceil((@font-size-base * 0.85)); // ~12px
+@font-size-h1:            56px;
+@font-size-h2:            45px;
+@font-size-h3:            34px;
+@font-size-h4:            24px;
+@font-size-h5:            20px;
+@font-size-h6:            16px;
 
 //** Unit-less `line-height` for use in components like buttons.
 @line-height-base:        1.428571429; // 20/14
@@ -344,7 +344,7 @@
 
 @navbar-default-color:             @text-color;
 @navbar-default-bg:                @body-bg;
-@navbar-default-border:            darken(@navbar-default-bg, 6.5%);
+@navbar-default-border:            @gray-dark;
 
 // Navbar links
 @navbar-default-link-color:                @text-color;
