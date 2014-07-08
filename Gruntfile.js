@@ -49,6 +49,7 @@ module.exports = function (grunt) {
       files: ['*/variables.less', '*/bootswatch.less'],
       tasks: 'build',
       options: {
+        livereload: true,
         nospawn: true
       }
     }
