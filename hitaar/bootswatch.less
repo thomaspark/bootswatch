@@ -1,0 +1,376 @@
+// Hitaar 3.2.0
+// Bootswatch
+// -----------------------------------------------------
+
+.navbar, .form-control, .btn {
+ border-width: 2px;
+}
+
+// Navbar =====================================================================
+.navbar-default .navbar-nav li.active {
+  border-left: 2px solid @navbar-default-border;
+  border-right: 2px solid @navbar-default-border;
+}
+.navbar-inverse .navbar-nav li.active {
+  border-left: 2px solid @navbar-inverse-border;
+  border-right: 2px solid @navbar-inverse-border;
+}
+.navbar-form .form-control {
+	border-color: inherit;
+}
+.navbar-inverse {
+	.navbar-form .form-control {
+		border-color: @navbar-inverse-border;
+	}
+	.navbar-toggle:hover .icon-bar{
+		background-color: #fff;
+	}
+}
+.navbar-toggle {
+	border-width: 2px;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu {
+	border-color: @navbar-default-border;
+	li > a {
+		color: @navbar-default-link-color;
+		&:hover {
+			background-color: @navbar-default-link-hover-bg;
+			color: @navbar-default-link-hover-color;
+		}
+	}
+	.divider {
+		background-color: @navbar-default-border;
+	}
+}
+.navbar-fixed-top {
+	border-width:  0 0 2px 0;
+}
+
+// Buttons ====================================================================
+.btn, a{
+-webkit-transition:all 200ms;
+   -moz-transition:all 200ms;
+     -o-transition:all 200ms;
+        transition:all 200ms;
+}
+
+.btn.btn-default:hover, .btn.btn-default:focus {
+	background-color: @btn-default-color;
+	border-color: @btn-default-color;
+	color: #fff;
+}
+.btn.btn-primary:hover, .btn.btn-primary:focus {
+	background-color: @btn-primary-color;
+	border-color: @btn-primary-color;
+	color: #fff;
+}
+.btn.btn-success:hover, .btn.btn-success:focus {
+	background-color: @btn-success-color;
+	border-color: @btn-success-color;
+	color: #fff;
+}
+.btn.btn-info:hover, .btn.btn-info:focus {
+	background-color: @btn-info-color;
+	border-color: @btn-info-color;
+	color: #fff;
+}
+.btn.btn-warning:hover, .btn.btn-warning:focus {
+	background-color: @btn-warning-color;
+	border-color: @btn-warning-color;
+	color: #fff;
+}
+.btn.btn-danger:hover, .btn.btn-danger:focus {
+	background-color: @btn-danger-color;
+	border-color: @btn-danger-color;
+	color: #fff;
+}
+.btn-group > .btn {
+	border-right-width: 0;
+	&:last-child:not(:first-child), &.dropdown-toggle:not(:first-child) {
+		border-width: 2px;
+	}
+}
+.btn-group > .btn-group:last-child > .btn:first-child {
+	border-width: 2px;
+}
+.btn-group-vertical > .btn {
+	border-bottom-width: 0;
+	&:last-child {
+		border-width: 2px;
+	}
+}
+// Typography =================================================================
+.text-primary,
+.text-primary:hover {
+  color: @brand-primary;
+}
+
+.text-success,
+.text-success:hover {
+  color: @brand-success;
+}
+
+.text-danger,
+.text-danger:hover {
+  color: @brand-danger;
+}
+
+.text-warning,
+.text-warning:hover {
+  color: @brand-warning;
+}
+
+.text-info,
+.text-info:hover {
+  color: @brand-info;
+}
+
+// Tables =====================================================================
+table.table {
+	tbody, thead, tfoot {
+		tr td,th {
+			border-width: 2px !important;
+			-webkit-transition:background-color 200ms;
+			   -moz-transition:background-color 200ms;
+			     -o-transition:background-color 200ms;
+			        transition:background-color 200ms;
+		}
+	}
+	&-bordered thead:first-child {
+		tr:first-child {
+			th,td {
+				border-top: 2px solid @table-border-color !important;
+			}
+		}
+	}
+	.success,
+	.warning,
+	.danger,
+	.info {
+	    color: #fff;
+
+	    a {
+	      color: #fff;
+	    }
+	}
+  tr td .btn {
+  		background-color: rgba(255, 255, 255, 0.75);
+		&.btn-default {
+			color: @gray;
+		}
+		&.btn-primary {
+			color: @brand-primary;
+		}
+		&.btn-success {
+			color: @brand-success;
+		}
+		&.btn-danger {
+			color: @brand-danger;
+		}
+		&.btn-warning {
+			color: @brand-warning;
+		}
+		&:hover {
+			color: #fff;
+		}
+  }
+}
+
+// Forms ======================================================================
+.form-control,
+input, {
+  .box-shadow(none);
+
+  &:focus {
+    .box-shadow(none);
+  }
+}
+.input-group-addon {
+	border-width: 2px;
+}
+.has-warning {
+  .help-block,
+  .control-label,
+  .radio,
+  .checkbox,
+  .radio-inline,
+  .checkbox-inline,
+  .form-control-feedback {
+    color: @brand-warning;
+  }
+
+  .form-control,
+  .form-control:focus {
+    border: 2px solid @brand-warning;
+    .box-shadow(none);
+  }
+
+  .input-group-addon {
+    border-color: @brand-warning;
+  }
+}
+
+.has-error {
+  .help-block,
+  .control-label,
+  .radio,
+  .checkbox,
+  .radio-inline,
+  .checkbox-inline,
+  .form-control-feedback {
+    color: @brand-danger;
+  }
+
+  .form-control,
+  .form-control:focus {
+    border: 2px solid @brand-danger;
+    .box-shadow(none);
+  }
+
+  .input-group-addon {
+    border-color: @brand-danger;
+  }
+}
+
+.has-success {
+  .help-block,
+  .control-label,
+  .radio,
+  .checkbox,
+  .radio-inline,
+  .checkbox-inline,
+  .form-control-feedback {
+    color: @brand-success;
+  }
+
+  .form-control,
+  .form-control:focus {
+    border: 2px solid @brand-success;
+    .box-shadow(none);
+  }
+
+  .input-group-addon {
+    border-color: @brand-success;
+  }
+}
+// Navs =======================================================================
+.dropdown-menu {
+	border-width: 2px;
+	li > a {
+		padding: @padding-base-vertical @padding-base-horizontal;
+	}
+	.divider {
+		height: 2px;
+	}
+}
+.nav.nav-tabs {
+	border-bottom-width: 2px;
+	> li {
+		margin-bottom: -2px;
+		> a {
+			border: 2px solid transparent;
+		}
+		> a:hover {
+			border: 2px solid @nav-tabs-border-color;
+		}
+		&.active > a, &.active a:hover {
+			border-width: 2px;
+			border-color: @nav-tabs-border-color;
+			border-bottom-color: transparent;
+		}
+	}
+}
+.nav.nav-pills {
+	> li {
+		&.active > a, &.active a:hover {
+			border: 2px solid @gray;
+			color: @text-color;
+			background-color: #fff;
+		}
+		> a {
+			border: 2px solid transparent;
+		}
+		> a:hover {
+			border: 2px solid @nav-tabs-border-color;
+		}
+	}
+}
+.pagination > li > a {
+	border-width: 2px;
+	margin-left: -2px;
+}
+.pager > li > a {
+	border-width: 2px;
+	&:hover {
+		color: #fff;
+		background-color: @pager-border;
+	}
+}
+// Indicators =================================================================
+.label-default {
+	color: @gray;
+	border: 2px solid @gray;
+}
+.label-primary {
+	color: @brand-primary;
+	border: 2px solid @brand-primary;
+}
+.label-success {
+	color: @brand-success;
+	border: 2px solid @brand-success;
+}
+.label-danger {
+	color: @brand-danger;
+	border: 2px solid @brand-danger;
+}
+.label-warning {
+	color: @brand-warning;
+	border: 2px solid @brand-warning;
+}
+
+
+// Progress bars ==============================================================
+.progress {
+	.box-shadow(none);
+	height: 8px;
+}
+
+// Containers =================================================================
+.popover {
+	border-width: 1px;
+}
+.modal{
+ .modal-content {
+		border-width: 2px;
+	}
+	.modal-header {
+		border-bottom-width: 2px;
+	}
+	.modal-footer {
+		border-top-width: 2px;
+	}
+}
+.alert {
+	border-width: 2px;
+}
+.list-group-item {
+	border-width: 2px;
+	margin-bottom: -2px;
+}
+.panel {
+	border-width: 2px;
+}
+.well {
+	border-width: 2px;
+	.box-shadow(none);
+}
+pre {
+	border-width: 2px;
+}
+.img-thumbnail {
+	border-width: 2px;
+}
+.badge {
+	background-color: @gray-lighter !important;
+}
+
