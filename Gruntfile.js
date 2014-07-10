@@ -46,7 +46,7 @@ module.exports = function (grunt) {
       }
     },
     watch: {
-      files: ['*/variables.less', '*/bootswatch.less', '*/index.html'],
+      files: ['*/variables.less', '*/bootswatch.less', '*/index.html', '!help/index.html'],
       tasks: 'build',
       options: {
         nospawn: true,
