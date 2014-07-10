@@ -46,10 +46,11 @@ module.exports = function (grunt) {
       }
     },
     watch: {
-      files: ['*/variables.less', '*/bootswatch.less'],
+      files: ['*/variables.less', '*/bootswatch.less', '*/index.html'],
       tasks: 'build',
       options: {
-        nospawn: true
+        nospawn: true,
+        livereload: true
       }
     }
   });
