@@ -1,8 +1,15 @@
+var getSwatches = require('./get_swatches');
+
 module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-watch');
+
+  var swatchConfig = getSwatches().reduce(function (memo, swatch) {
+    memo[swatch] = {};
+    return memo;
+  }, {});
 
   // Project configuration.
   grunt.initConfig({
@@ -16,12 +23,7 @@ module.exports = function (grunt) {
             ' * Licensed under <%= pkg.license %>\n' +
             ' * Based on Bootstrap\n' +
             '*/\n',
-    swatch: {
-      amelia:{}, cerulean:{}, cosmo:{}, cyborg:{}, darkly:{},
-      flatly:{}, journal:{}, lumen:{}, readable:{}, simplex:{},
-      slate:{}, spacelab:{}, superhero:{}, united:{}, yeti:{},
-      custom:{}
-    },
+    swatch: swatchConfig,
     clean: {
       build: {
         src: ['*/build.less', '!global/build.less']
@@ -93,6 +95,12 @@ module.exports = function (grunt) {
   grunt.registerMultiTask('swatch', 'build a theme', function() {
     var t = this.target;
     grunt.task.run('build:'+t);
+  });
+
+  grunt.registerTask('swatches', 'list all themes', function() {
+    getSwatches().forEach(function (swatch) {
+      grunt.log.writeln(swatch);
+    });
   });
 
   grunt.registerTask('default', 'build a theme', function() {
