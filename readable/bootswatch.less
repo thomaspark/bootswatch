@@ -9,6 +9,12 @@
 .navbar {
   font-family: @headings-font-family;
 
+  &-nav,
+  &-form {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   &-nav > li > a {
     padding: @padding-base-vertical @padding-base-horizontal;
     margin: 12px 6px;
@@ -34,11 +40,15 @@
   }
 
   &-brand {
-    margin-top: 6px;
+    padding-top: 20px;
   }
+}
 
-  &-form {
-    margin-top: 12px;
+@media (max-width: @grid-float-breakpoint) {
+  .navbar {
+    .navbar-nav > li > a {
+      margin: 0;
+    }
   }
 }
 
