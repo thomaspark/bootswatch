@@ -3,6 +3,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-connect');
 
   // Project configuration.
   grunt.initConfig({
@@ -51,6 +52,15 @@ module.exports = function (grunt) {
       options: {
         livereload: true,
         nospawn: true
+      }
+    },
+    connect: {
+      all: {
+        options: {
+          port: 3000,
+          keepalive: true,
+          livereload: true
+        }
       }
     }
   });
