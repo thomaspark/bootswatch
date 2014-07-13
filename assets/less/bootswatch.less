@@ -113,8 +113,7 @@ footer {
 
 .section-tout {
   padding: 4em 0 3em;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   background-color: #eaf1f1;
 
   .fa {
@@ -133,11 +132,25 @@ footer {
 
     margin-bottom: 4em;
     background-color: #eaf1f1;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    .image {
+      position: relative;
+    }
+
+    .image:before {
+      box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: "";
+    }
 
     .options {
       padding: 1em 2em 2em;
-      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      border-top: none;
       text-align: center;
 
       p {
