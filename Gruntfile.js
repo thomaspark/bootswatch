@@ -3,6 +3,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-connect');
 
   // Project configuration.
   grunt.initConfig({
@@ -46,10 +47,20 @@ module.exports = function (grunt) {
       }
     },
     watch: {
-      files: ['*/variables.less', '*/bootswatch.less'],
+      files: ['*/variables.less', '*/bootswatch.less', '*/index.html'],
       tasks: 'build',
       options: {
+        livereload: true,
         nospawn: true
+      }
+    },
+    connect: {
+      all: {
+        options: {
+          port: 3000,
+          keepalive: true,
+          livereload: true
+        }
       }
     }
   });
@@ -59,6 +70,14 @@ module.exports = function (grunt) {
   grunt.registerTask('build', 'build a regular theme', function(theme, compress) {
     var theme = theme == undefined ? grunt.config('buildtheme') : theme;
     var compress = compress == undefined ? true : compress;
+
+    var isValidTheme = grunt.file.exists(theme, 'variables.less') &&
+                       grunt.file.exists(theme, 'bootswatch.less');
+
+    // Cancel the build (without failing) if this directory is not a valid theme
+    if (!isValidTheme) {
+      return;
+    }
 
     var concatSrc;
     var concatDest;
