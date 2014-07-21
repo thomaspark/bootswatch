@@ -368,6 +368,29 @@ input[type="checkbox"]:checked + label:after {
       color: @mint;
     }
   }
+  .error-message {
+    font-size: 12px;
+    color: red;
+    height: 0;
+    opacity: 0;
+    .transition(0.2s);
+
+    &.show-error {
+      height: auto;
+      opacity: 1;
+      padding-bottom: 15px;
+    }
+  }
+  img.loading-indicator {
+    position: absolute;
+    right: 30px;
+    bottom: 26px;
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
 }
 
 .modal.modal-form {
@@ -401,6 +424,10 @@ input[type="checkbox"]:checked + label:after {
       }
     }
   }
+}
+
+.modal-backdrop.fade.in {
+  opacity: 0.9;
 }
 
 @media screen and (min-width: @screen-sm-min) {
@@ -578,4 +605,13 @@ input[type="checkbox"]:checked + label:after {
 .tightText(@size) {
   font-size: @size;
   line-height: @size;
+}
+
+.blur-contents(@size, 2px) {
+  .transition(0.05s) !important;
+  filter: blur(@size);
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-filter: blur(@size);
+  -moz-filter: blur(@size);
+  filter: url('/media/blur.svg#blur'); /* for Firefox */
 }
