@@ -8112,6 +8112,10 @@ input[type="checkbox"]:checked + label:after {
           transition: 0.05s !important;
 }
 
+.modal .modal-content {
+  background-color: #ededed;
+}
+
 .modal .modal-header {
   display: -webkit-box;
   display: -moz-box;
@@ -8149,6 +8153,32 @@ input[type="checkbox"]:checked + label:after {
   color: #69b275;
 }
 
+.modal .error-message {
+  height: 0;
+  font-size: 12px;
+  color: red;
+  opacity: 0;
+  -webkit-transition: 0.2s;
+          transition: 0.2s;
+}
+
+.modal .error-message.show-error {
+  height: auto;
+  padding-bottom: 15px;
+  opacity: 1;
+}
+
+.modal img.loading-indicator {
+  position: absolute;
+  right: 30px;
+  bottom: 26px;
+  display: none;
+}
+
+.modal img.loading-indicator.active {
+  display: block;
+}
+
 .modal.modal-form .modal-header {
   padding: 20px 30px 15px 30px;
 }
@@ -8168,10 +8198,11 @@ input[type="checkbox"]:checked + label:after {
   padding: 0;
   text-indent: 15px;
   border: 1px solid #DBDBDB;
+  border-bottom-width: 0;
 }
 
-.modal.modal-form .modal-body input:not(:last-child) {
-  border-bottom-width: 0;
+.modal.modal-form .modal-body input.last-form-elem {
+  border-bottom-width: 1px;
 }
 
 .modal.modal-form .modal-body input:first-child {
@@ -8182,6 +8213,10 @@ input[type="checkbox"]:checked + label:after {
 .modal.modal-form .modal-body input:last-child {
   border-bottom-right-radius: 2px;
   border-bottom-left-radius: 2px;
+}
+
+.modal-backdrop.fade.in {
+  opacity: 0.9;
 }
 
 @media screen and (min-width: 768px) {
