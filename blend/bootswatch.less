@@ -413,23 +413,15 @@ input[type="checkbox"]:checked + label:after {
     padding-top: 0;
     padding-bottom: 0;
     input {
+      display: block;
       width: 100%;
       height: 40px;
-      border: 1px solid #DBDBDB;
+      border: 1px solid transparent;
       text-indent: 15px;
       padding: 0;
-      border-bottom-width: 0;
-      &.last-form-elem {
-        border-bottom-width: 1px;
-      }
-      @radius: 2px;
-      &:first-child {
-        border-top-left-radius: @radius;
-        border-top-right-radius: @radius;
-      }
-      &:last-child {
-        border-bottom-left-radius: @radius;
-        border-bottom-right-radius: @radius;
+      .radius(2px);
+      &:not(:last-child) {
+        margin-bottom: 2px;
       }
     }
   }
