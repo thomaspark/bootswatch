@@ -355,7 +355,6 @@ input[type="checkbox"]:checked + label:after {
       text-transform: uppercase;
       font-weight: 600;
       color: @night;
-      color: rgb(140,140,140);
       letter-spacing: 0.5px;
     }
   }
@@ -369,12 +368,12 @@ input[type="checkbox"]:checked + label:after {
     .btn[data-dismiss="modal"] {
       float: left;
       padding-left: 0;
-      color: @mint;
+      color: @clay-plus-two;
     }
   }
   .error-message {
     font-size: 12px;
-    color: red;
+    .text-danger();
     height: 0;
     opacity: 0;
     .transition(0.2s);
