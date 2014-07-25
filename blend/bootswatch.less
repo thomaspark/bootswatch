@@ -419,7 +419,15 @@ input[type="checkbox"]:checked + label:after {
       border: 1px solid transparent;
       text-indent: 15px;
       padding: 0;
-      .radius(2px);
+      @radius: 2px;
+      &:first-child {
+        border-top-left-radius: @radius;
+        border-top-right-radius: @radius;
+      }
+      &:last-child {
+        border-bottom-left-radius: @radius;
+        border-bottom-right-radius: @radius;
+      }
       &:not(:last-child) {
         margin-bottom: 2px;
       }
