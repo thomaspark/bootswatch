@@ -358,6 +358,20 @@ input[type="checkbox"]:checked + label:after {
       font-weight: 600;
       color: @night;
       letter-spacing: 0.5px;
+
+      &.dialog-title {
+        width: 100%;
+        font-size: 14px;
+        line-height: 18px;
+        text-transform: none;
+        font-weight: 400;
+        color: #1a2d37;
+        letter-spacing: 0.5px;
+
+        > span {
+          font-weight: 500;
+        }
+      }
     }
   }
   .modal-body {
