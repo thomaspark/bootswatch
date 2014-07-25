@@ -372,17 +372,19 @@ input[type="checkbox"]:checked + label:after {
     }
   }
   .error-message {
-    font-size: 12px;
+    .transition(0.2s);
     .text-danger();
+    font-size: 12px;
+    white-space: normal;
+    line-height: 1.4;
     height: 0;
     opacity: 0;
-    .transition(0.2s);
+    pointer-events: none;
 
     &.show-error {
       height: auto;
       opacity: 1;
       padding-bottom: 15px;
-      line-height: 1.4;
       text-align: center;
     }
   }
