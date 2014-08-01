@@ -1,6 +1,7 @@
 module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
@@ -46,10 +47,28 @@ module.exports = function (grunt) {
       }
     },
     watch: {
-      files: ['*/variables.less', '*/bootswatch.less'],
+      files: ['*/variables.less', '*/bootswatch.less', '*/index.html'],
       tasks: 'build',
       options: {
+        livereload: true,
         nospawn: true
+      }
+    },
+    connect: {
+      base: {
+        options: {
+          port: 3000,
+          livereload: true,
+          open: true
+        }
+      },
+      keepalive: {
+        options: {
+          port: 3000,
+          livereload: true,
+          keepalive: true,
+          open: true
+        }
       }
     }
   });
@@ -59,6 +78,13 @@ module.exports = function (grunt) {
   grunt.registerTask('build', 'build a regular theme', function(theme, compress) {
     var theme = theme == undefined ? grunt.config('buildtheme') : theme;
     var compress = compress == undefined ? true : compress;
+
+    var isValidTheme = grunt.file.exists(theme, 'variables.less') && grunt.file.exists(theme, 'bootswatch.less');
+ 
+     // cancel the build (without failing) if this directory is not a valid theme
+    if (!isValidTheme) {
+      return;
+    }
 
     var concatSrc;
     var concatDest;
@@ -95,13 +121,13 @@ module.exports = function (grunt) {
     grunt.task.run('build:'+t);
   });
 
-  grunt.registerTask('default', 'build a theme', function() {
-    grunt.task.run('swatch');
-  });
-
   grunt.event.on('watch', function(action, filepath) {
     var path = require('path');
     var theme = path.dirname(filepath);
     grunt.config('buildtheme', theme);
   });
+
+  grunt.registerTask('server', 'connect:keepalive')
+
+  grunt.registerTask('default', ['connect:base', 'watch']);
 };
