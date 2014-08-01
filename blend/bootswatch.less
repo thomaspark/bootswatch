@@ -614,6 +614,13 @@ input[type="checkbox"]:checked + label:after {
   transition: @property @duration @ease;
 }
 
+// Transformations
+.transform(@transformation) {
+  -webkit-transform: @transformation;
+      -ms-transform: @transformation; // IE9+
+          transform: @transformation;
+}
+
 //FROM BOOTSTRAP
 .vertical-three-colors(@startColor: #00b3ee, @midColor: #7a43b6, @colorStop: 50%, @endColor: #c3325f, @bgC: rgba(0,0,0,0.25)) {
   background-color: @bgC;
