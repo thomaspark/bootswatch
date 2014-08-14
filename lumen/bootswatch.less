@@ -17,7 +17,7 @@
 // Buttons ====================================================================
 
 .btn {
-  padding: 8px @padding-base-horizontal 7px;
+  padding: @padding-base-vertical+2 @padding-base-horizontal @padding-base-vertical;
   .shadow();
   font-size: 12px;
   font-weight: bold;
@@ -36,18 +36,18 @@
 
   &-lg,
   &-group-lg > .btn {
-    padding: 14px @padding-large-horizontal 13px;
+    padding: @padding-large-vertical+2 @padding-large-horizontal @padding-large-vertical;
     line-height: 15px;
   }
 
   &-sm,
   &-group-sm > .btn {
-    padding: 4px @padding-small-horizontal;
+    padding: @padding-small-vertical+2 @padding-small-horizontal @padding-small-vertical;
   }
 
   &-xs,
   &-group-xs > .btn {
-    padding: @padding-xs-vertical @padding-xs-horizontal;
+    padding: @padding-xs-vertical+2 @padding-xs-horizontal @padding-xs-vertical;
   }
 
   &-default:hover,
