@@ -1,4 +1,4 @@
-// Darkly 3.1.1
+// Darkly 3.2.0
 // Bootswatch
 // -----------------------------------------------------
 
@@ -82,7 +82,7 @@
 table,
 .table {
 
-  a {
+  a:not(.btn) {
     text-decoration: underline;
   }
 
@@ -238,16 +238,21 @@ textarea {
 
 // Indicators =================================================================
 
-.alert {
+.close {
+  text-decoration: none;
+  text-shadow: none;
+  opacity: 0.4;
 
-  a,
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+}
+
+.alert {
   .alert-link {
     color: #fff;
     text-decoration: underline;
-  }
-
-  .close {
-    text-decoration: none;
   }
 }
 
@@ -268,8 +273,7 @@ textarea {
   .box-shadow(none);
 }
 
-.popover,
-.modal {
+.popover {
   color: @text-color;
 }
 

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Bootswatch: Components</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../amelia/bootstrap.css" media="screen" id="stylesheet">
+    <link rel="stylesheet" href="../default/bootstrap.css" media="screen" id="stylesheet">
     <link rel="stylesheet" href="../assets/css/bootswatch.min.css">
     <style>
 
@@ -582,9 +582,9 @@
               </tr>
               <tr class="danger">
                 <td>3</td>
-                <td>Column content</td>
-                <td>Column content</td>
-                <td><a href="#">Column content</a></td>
+                <td><a class="btn btn-default">Default</button></td>
+                <td><a class="btn btn-primary">Primary</button></td>
+                <td><a class="btn btn-primary">Primary</button></td>
               </tr>
               <tr class="warning">
                 <td>5</td>
@@ -2727,11 +2727,12 @@
                 <h4 class="modal-title" id="myModalLabel">Modal Heading</h4>
               </div>
               <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                 <h4>Text in a modal</h4>
                 <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
 
                 <h4>Popover in a modal</h4>
-                <p>This <a href="#" role="button" class="btn btn-default popover-test" title="" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title">button</a> should trigger a popover on click.</p>
+                <p>This <a role="button" class="btn btn-default popover-test" title="" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title">button</a> should trigger a popover on click.</p>
 
                 <h4>Tooltips in a modal</h4>
                 <p><a href="#" class="tooltip-test" title="" data-original-title="Tooltip">This link</a> and <a href="#" class="tooltip-test" title="" data-original-title="Tooltip">that link</a> should have tooltips on hover.</p>
@@ -2769,6 +2770,16 @@
         <div class="bs-example" style="padding-bottom: 24px;">
           <a class="btn btn-lg btn-danger" data-toggle="popover" title="" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title">Click to toggle popover</a>
         </div>
+        <table class="table">
+            <tbody>
+                <tr class="success">
+                    <td>success</td>
+                    <td><span class="test">span</span></td>
+                    <td><div class="test">div</div></td>
+                    <td><a class="btn btn-lg btn-danger" data-toggle="popover" title="" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title">Click to toggle popover</a></td>
+                </tr>
+            </tbody>
+        </table>
       </div>
 
     </div>
@@ -2780,7 +2791,9 @@
     <script src="../assets/js/bootswatch.js"></script>
     <script>
 
-      $('[data-toggle=popover]').popover();
+      $('[data-toggle=popover], .popover-test').popover();
+
+      $('.tooltip-test').tooltip();
 
       $.get("http://api.bootswatch.com/3/", function (data) {
           var menuTemplate = "<div id='menu'><select>{{#.}}<option data-description='{{description}}'>{{name}}</option>{{/.}}</select></div>",
