@@ -6280,7 +6280,8 @@ body {
 p {
   margin: 0 0 1em;
 }
-input {
+input,
+button {
   -webkit-font-smoothing: antialiased;
   letter-spacing: .1px;
   text-rendering: optimizeLegibility;
@@ -6413,7 +6414,7 @@ select.form-control {
 .alert-danger {
   background-color: #e51c23;
 }
-.alert a,
+.alert a:not(.close),
 .alert .alert-link {
   color: #fff;
   font-weight: bold;
@@ -6465,6 +6466,7 @@ select.form-control {
 .close {
   font-size: 34px;
   font-weight: 300;
+  line-height: 24px;
   opacity: 0.6;
 }
 .close:hover {
