@@ -3665,11 +3665,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-tabs.nav-justified > .active > a,
 .nav-tabs.nav-justified > .active > a:hover,
 .nav-tabs.nav-justified > .active > a:focus {
-  border: 1px solid #dddddd;
+  border: 1px solid transparent;
 }
 @media (min-width: 768px) {
   .nav-tabs.nav-justified > li > a {
-    border-bottom: 1px solid #dddddd;
+    border-bottom: 1px solid transparent;
     border-radius: 3px 3px 0 0;
   }
   .nav-tabs.nav-justified > .active > a,
@@ -3733,11 +3733,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-tabs-justified > .active > a,
 .nav-tabs-justified > .active > a:hover,
 .nav-tabs-justified > .active > a:focus {
-  border: 1px solid #dddddd;
+  border: 1px solid transparent;
 }
 @media (min-width: 768px) {
   .nav-tabs-justified > li > a {
-    border-bottom: 1px solid #dddddd;
+    border-bottom: 1px solid transparent;
     border-radius: 3px 3px 0 0;
   }
   .nav-tabs-justified > .active > a,
@@ -6385,10 +6385,17 @@ select.form-control {
 }
 .nav-tabs > li.active > a:hover {
   border: none;
+  color: #2196f3;
 }
 .nav-tabs > li.disabled > a {
   -webkit-box-shadow: inset 0 -1px 0 #dddddd;
   box-shadow: inset 0 -1px 0 #dddddd;
+}
+.nav-tabs.nav-justified > li > a,
+.nav-tabs.nav-justified > li > a:hover,
+.nav-tabs.nav-justified > .active > a,
+.nav-tabs.nav-justified > .active > a:hover {
+  border: none;
 }
 .nav-tabs .dropdown-menu {
   margin-top: 0;

@@ -189,11 +189,22 @@ select.form-control {
 
     &:hover {
       border: none;
+      color: @brand-primary;
     }
   }
 
   & > li.disabled > a {
     .box-shadow(inset 0 -1px 0 #ddd);
+  }
+
+  &.nav-justified {
+
+    & > li > a,
+    & > li > a:hover,
+    & > .active > a,
+    & > .active > a:hover {
+      border: none;
+    }
   }
 
   .dropdown-menu {
