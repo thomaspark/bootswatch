@@ -75,13 +75,17 @@ footer {
 }
 
 .splash {
-  padding: 4em 0 0;
+  padding: 5em 0 0;
   background-color: #141d27;
   color: #fff;
   text-align: center;
 
+  .logo {
+    width: 160px;
+  }
+
   h1 {
-    font-size: 4em;
+    font-size: 3em;
   }
 
   #social {
@@ -168,6 +172,19 @@ footer {
 }
 
 @media (max-width: 767px) {
+
+  .splash {
+
+    padding-top: 4em;
+
+    .logo {
+      width: 100px;
+    }
+
+    h1 {
+      font-size: 2em;
+    }
+  }
 
   #banner {
     margin-bottom: 2em;
