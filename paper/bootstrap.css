@@ -6291,13 +6291,14 @@ a {
   -o-transition: all 0.2s;
   transition: all 0.2s;
 }
+textarea,
+textarea.form-control,
 input[type=text],
 input[type=password],
 input[type=email],
-textarea,
+input[type=number],
 [type=text].form-control,
-[type=password].form-control,
-textarea.form-control {
+[type=password].form-control {
   padding: 0;
   border: none;
   border-radius: 0;
@@ -6305,30 +6306,33 @@ textarea.form-control {
   box-shadow: inset 0 -1px 0 #dddddd;
   font-size: 16px;
 }
+textarea:focus,
+textarea.form-control:focus,
 input[type=text]:focus,
 input[type=password]:focus,
 input[type=email]:focus,
-textarea:focus,
+input[type=number]:focus,
 [type=text].form-control:focus,
-[type=password].form-control:focus,
-textarea.form-control:focus {
+[type=password].form-control:focus {
   -webkit-box-shadow: inset 0 -2px 0 #2196f3;
   box-shadow: inset 0 -2px 0 #2196f3;
 }
+textarea[disabled],
+textarea.form-control[disabled],
 input[type=text][disabled],
 input[type=password][disabled],
 input[type=email][disabled],
-textarea[disabled],
+input[type=number][disabled],
 [type=text].form-control[disabled],
 [type=password].form-control[disabled],
-textarea.form-control[disabled],
+textarea[readonly],
+textarea.form-control[readonly],
 input[type=text][readonly],
 input[type=password][readonly],
 input[type=email][readonly],
-textarea[readonly],
+input[type=number][readonly],
 [type=text].form-control[readonly],
-[type=password].form-control[readonly],
-textarea.form-control[readonly] {
+[type=password].form-control[readonly] {
   -webkit-box-shadow: none;
   box-shadow: none;
   border-bottom: 1px dotted #ddd;
