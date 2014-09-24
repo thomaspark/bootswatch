@@ -11,30 +11,6 @@ body, nav {
 // Navbar =====================================================================
 @import "./components/navbar.less";
 
-.navbar .search-bar {
-  width: 240px;
-  border: 0;
-  .placeholder(rgb(65,65,65));
-
-  &:active, &:focus {
-    background-color: white;
-    .placeholder(rgb(175,175,175));
-  }
-}
-.navbar.navbar-inverse .search-bar {
-	border: 1px solid @navbar-inverse-border;
-
-	&:focus {
-		border-color: @brand-info;	
-	}
-}
-@media (min-width: 768px) {
-	.navbar-nav.navbar-right:last-child {
-		margin-right: 0;
-	}
-}
-
-
 // Buttons ====================================================================
 .btn {
   line-height: 12px;
@@ -222,26 +198,30 @@ input[type="color"],
 }
 
 //Custom Checkbox
-input[type="checkbox"] {
-  display: none;
-}
-input[type="checkbox"] + label {
-    display:inline-block;
-    width:16px;
-    height:16px;
-    margin:-1px 4px 0 0;
-    vertical-align:middle;
-    background-color: white;
-    border: 1px solid #d8d8d8;
-    .radius(3px);
-    cursor:pointer;
-}
-input[type="checkbox"]:checked + label:after {
-  content: '';
-  width: 17px;
-  height: 13px;
-  display: block;
-  background-image: url('../img/checkmark.png');
+// Note (il): Wrapped in class to avoid overzealous removal of necessary checkboxes `
+.blend-checkbox {
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  input[type="checkbox"] + label {
+      display:inline-block;
+      width:16px;
+      height:16px;
+      margin:-1px 4px 0 0;
+      vertical-align:middle;
+      background-color: white;
+      border: 1px solid #d8d8d8;
+      .radius(3px);
+      cursor:pointer;
+  }
+  input[type="checkbox"]:checked + label:after {
+    content: '';
+    width: 17px;
+    height: 13px;
+    display: block;
+    background-image: url('../img/checkmark.png');
+  }
 }
 
 
