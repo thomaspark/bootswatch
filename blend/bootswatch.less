@@ -11,22 +11,57 @@ body, nav {
 // Navbar =====================================================================
 @import "./navbar.less";
 
+
+// Modals =================================================================
+@import "./modals.less";
+
+// Mixins =================================================================
+@import "./mixins.less";
+
 // Buttons ====================================================================
+
+.remove-bootstrap-defaults() {
+  background-image: none !important;
+  text-shadow: none !important;
+}
+
 .btn {
   line-height: 12px;
 }
-.btn {
+button.btn {
+  padding: 8px 16px;
   font-weight: 600;
+  color: #fff;
+  border: none;
+  filter: none !important; // so IE9 doesn't show them as grey in inappropriate states
+  margin-left: 5px;
+  font-size: 13px;
+  line-height: 13px;
+  .Gotham();
+  .radius(2px);
+  .remove-bootstrap-defaults();
+
+  &:first-child {
+    margin-left: 0;
+  }
+
   &:focus {
     outline: none;
   }
   &:active {
     .box-shadow(none);
     &.btn-default {
-      background-color: @clay-minus-2;
+      background-color: @clay;
     }
     &.btn-primary {
-      background-color: @mint-minus-2;
+      background-color: @mint;
+      &:hover {
+        background-color: @mint-plus-2 !important;
+        border: none !important;
+      }
+      &:active {
+        background-color: @mint;
+      }
     }
     &.btn-success {
       background-color: @mint-minus-2;
@@ -45,6 +80,7 @@ body, nav {
     }
   }
 }
+
 .btn-link {
   font-weight: 500;
 }
@@ -53,8 +89,9 @@ body, nav {
 }
 
 .btn-group.open .dropdown-toggle {
-	.box-shadow(none);
+  .box-shadow(none);
 }
+
 
 // Typography =================================================================
 
@@ -74,27 +111,27 @@ body, nav {
 
 .text-primary,
 .text-primary:hover {
-	color: @brand-primary;
+  color: @brand-primary;
 }
 
 .text-success,
 .text-success:hover {
-	color: @brand-success;
+  color: @brand-success;
 }
 
 .text-danger,
 .text-danger:hover {
-	color: @brand-danger;
+  color: @brand-danger;
 }
 
 .text-warning,
 .text-warning:hover {
-	color: @brand-warning;
+  color: @brand-warning;
 }
 
 .text-info,
 .text-info:hover {
-	color: @brand-info;
+  color: @brand-info;
 }
 
 h1 {
@@ -110,24 +147,24 @@ h1 {
 
 .table {
 
-	th {
-		font-size: 11px !important;
-		text-transform: uppercase;
+  th {
+    font-size: 11px !important;
+    text-transform: uppercase;
     font-weight: 700;
-		color: darken(@gray-dark, 10%);
+    color: darken(@gray-dark, 10%);
     text-align: left;
     border-width: 1px !important;  //override
-	}
-	td, th {
-	  overflow: hidden;
-	  white-space: nowrap;
-	  font-size: 12px;
-	  padding: 0 30px 0 15px !important;
-	  line-height: 37px !important;
-	}
-	tr:last-child td {
-	  border-bottom: 1px solid @table-border-color;
-	}
+  }
+  td, th {
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 12px;
+    padding: 0 30px 0 15px !important;
+    line-height: 37px !important;
+  }
+  tr:last-child td {
+    border-bottom: 1px solid @table-border-color;
+  }
 }
 
 
@@ -149,51 +186,51 @@ input[type="search"],
 input[type="tel"],
 input[type="color"],
 .uneditable-input {
-	border-width: 1px;
-	.box-shadow(none);
+  border-width: 1px;
+  .box-shadow(none);
   outline: none;
 
-	&:focus {
-		.box-shadow(none);
+  &:focus {
+    .box-shadow(none);
 
     .placeholder(rgba(0,0,0,0.2));
-	}
+  }
 }
 
 .has-warning {
-	.help-block,
-	.control-label {
-		color: @brand-warning;
-	}
+  .help-block,
+  .control-label {
+    color: @brand-warning;
+  }
 
-	.form-control,
-	.form-control:focus {
-		border: 2px solid @brand-warning;
-	}
+  .form-control,
+  .form-control:focus {
+    border: 2px solid @brand-warning;
+  }
 }
 
 .has-error {
-	.help-block,
-	.control-label {
-		color: @brand-danger;
-	}
+  .help-block,
+  .control-label {
+    color: @brand-danger;
+  }
 
-	.form-control,
-	.form-control:focus {
-		border: 2px solid @brand-danger;
-	}
+  .form-control,
+  .form-control:focus {
+    border: 2px solid @brand-danger;
+  }
 }
 
 .has-success {
-	.help-block,
-	.control-label {
-		color: @brand-success;
-	}
+  .help-block,
+  .control-label {
+    color: @brand-success;
+  }
 
-	.form-control,
-	.form-control:focus {
-		border: 2px solid @brand-success;
-	}
+  .form-control,
+  .form-control:focus {
+    border: 2px solid @brand-success;
+  }
 }
 
 //Custom Checkbox
@@ -204,15 +241,15 @@ input[type="color"],
   }
 
   input[type="checkbox"] + label {
-      display:inline-block;
-      width:16px;
-      height:16px;
-      margin:-1px 4px 0 0;
-      vertical-align:middle;
-      background-color: white;
-      border: 1px solid #d8d8d8;
-      .radius(3px);
-      cursor:pointer;
+    display:inline-block;
+    width:16px;
+    height:16px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    background-color: white;
+    border: 1px solid #d8d8d8;
+    .radius(3px);
+    cursor:pointer;
   }
   input[type="checkbox"]:checked + label:after {
     content: '';
@@ -227,44 +264,44 @@ input[type="color"],
 // Navs =======================================================================
 
 .nav {
-	.open > a,
-	.open > a:hover,
-	.open > a:focus {
-		border-color: transparent;
-	}
+  .open > a,
+  .open > a:hover,
+  .open > a:focus {
+    border-color: transparent;
+  }
 }
 
 .pagination {
 
-	a,
-	a:hover {
-		color: #fff;
-	}
+  a,
+  a:hover {
+    color: #fff;
+  }
 
-	.disabled {
-		&>a,
-		&>a:hover,
-		&>a:focus,
-		&>span {
-			background-color: lighten(@brand-success, 15%);
-		}
-	}
+  .disabled {
+    &>a,
+    &>a:hover,
+    &>a:focus,
+    &>span {
+      background-color: lighten(@brand-success, 15%);
+    }
+  }
 }
 
 .pager {
-	a,
-	a:hover {
-		color: #fff;
-	}
+  a,
+  a:hover {
+    color: #fff;
+  }
 
-	.disabled {
-		&>a,
-		&>a:hover,
-		&>a:focus,
-		&>span {
-			background-color: lighten(@brand-success, 15%);
-		}
-	}
+  .disabled {
+    &>a,
+    &>a:hover,
+    &>a:focus,
+    &>span {
+      background-color: lighten(@brand-success, 15%);
+    }
+  }
 }
 
 
@@ -272,34 +309,34 @@ input[type="color"],
 
 .alert {
 
-	a,
-	.alert-link {
-		color: #fff;
-		text-decoration: underline;
-	}
+  a,
+  .alert-link {
+    color: #fff;
+    text-decoration: underline;
+  }
 }
 
 
 // Progress bars ==============================================================
 
 .progress {
-	height: 10px;
-	.box-shadow(none);
+  height: 10px;
+  .box-shadow(none);
 }
 
 
 // Containers =================================================================
 
 .well {
-	.box-shadow(none);
-	border-width: 0;
+  .box-shadow(none);
+  border-width: 0;
 }
 
 
 // Dropdowns =================================================================
 
 .dropdown-menu .dropdown-header, .dropdown-menu > li > a {
-	padding: 0px 15px;
+  padding: 0px 15px;
 }
 .dropdown-menu {
   > li > a {
@@ -313,21 +350,13 @@ input[type="color"],
   }
 
   .dropdown-header {
-  	text-transform: uppercase;
+    text-transform: uppercase;
     color: rgb(155,155,155);
     letter-spacing: 1px;
     font-weight: 800;
     line-height: 30px;
   }
 }
-
-
-// Modals =================================================================
-@import "./modals.less";
-
-
-// Mixins =================================================================
-@import "./mixins.less";
 
 
 // Placeholder text
@@ -340,7 +369,7 @@ input[type="color"],
 }
 
 .placeholder-multi-edit(@font-size, @font-weight, @color) {
-  &:-moz-placeholder { 
+  &:-moz-placeholder {
     font-size: @font-size;
     font-weight: @font-weight;
     color: @color;
@@ -420,8 +449,8 @@ input[type="color"],
 // Transformations
 .transform(@transformation) {
   -webkit-transform: @transformation;
-      -ms-transform: @transformation; // IE9+
-          transform: @transformation;
+  -ms-transform: @transformation; // IE9+
+  transform: @transformation;
 }
 
 //FROM BOOTSTRAP
