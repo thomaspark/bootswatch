@@ -1,0 +1,382 @@
+.modal-backdrop {
+  @modalBackgroundC: rgba(26 ,45 ,55, 0.8);
+  background-color: @modalBackgroundC !important;
+}
+
+.modal {
+  @modalW: 500px;
+  @modalPadX: 25px;
+  @modalHeaderBg: rgb(240,240,240);
+  @modalHeaderPadY: 7px;
+  @modalHeaderBorderC: rgb(214,214,214);
+  @modalHeaderTextS: 24px;
+  @modalHeaderTextC: rgba(0,0,0,0.5);
+  @modalErrorTextC: red;
+  @modalBodyPadY: 20px;
+  @modalFooterPadY: @modalBodyPadY;
+  @modalFooterBg: transparent;
+  @modalButtonBg: rgb(240,242,245);
+  @modalButtonBorderC: rgb(215,220,229);
+  @modalButtonTextC: rgba(0,0,0,0.6);
+  @modalButtonTextS: 11px;
+  @modalSectionLabelC: rgb(68,68,68);
+  @modalSectionLabelS: 15px;
+  @modalSectionLabelMarginB: 10px;
+  @modalSectionMarginB: 30px;
+  @modalTextareaTextS: 13px;
+  @modalTextareaTextC: rgb(96,96,96);
+  @modalPlaceholderC: rgba(96,96,96,0.5);
+  @modalInputPadX: 6px;
+  @modalInputPadY: 3px;
+  .radius(0);
+  .box-shadow(0 1px 5px 0 rgba(0,0,0,0.5));
+  width: @modalW;
+
+
+  .modal-header, .modal-body, .modal-footer {
+    padding-left: @modalPadX !important;
+    padding-right: @modalPadX !important;
+  }
+
+  //Header Styling
+  .modal-header {
+    background-color: @modalHeaderBg;
+    border-bottom: 1px solid @modalHeaderBorderC;
+    padding-top: @modalHeaderPadY !important;
+    padding-bottom: @modalHeaderPadY !important;
+    font-weight: 500;
+    font-size: 18px !important;
+    color: rgba(0,0,0,0.5) !important;
+
+    h1 {
+      font-size: @modalHeaderTextS !important;
+      color: @modalHeaderTextC;
+      font-weight: 300 !important;
+      * {
+        .Whitney()
+      }
+    }
+  }
+
+  //Error styling
+  .modal-error {
+    color: @modalErrorTextC;
+    padding-left: @modalPadX;
+    padding-right: @modalPadX;
+    padding-top: 8px;
+    display: inline-block;
+  }
+
+  //Body contents
+  .modal-body {
+    overflow: hidden;
+    width: 100%;
+    overflow-y: scroll;
+    padding-top: @modalBodyPadY;
+    > section:not(:last-child), form > section:not(:last-child) { margin-bottom: @modalSectionMarginB - 10px; }
+    > section:last-child, form > section:last-child { margin-bottom: @modalSectionMarginB; }
+    margin-top: 10px;
+    .import-details {
+      display: -webkit-flex;
+
+      .form-stuff {
+        .flex(1);
+      }
+
+      .spec {
+        width: 200px;
+        background-color: rgb(245,245,245);
+        padding: 10px 10px;
+        border: 1px solid rgb(225,225,225);
+
+        apply-analytics-instructions {
+          font-size: 12px;
+
+          > p { font-size: 14px; }
+          > ul { margin-top: 10px; }
+        }
+      }
+    }
+
+    section > label {
+      color: @modalSectionLabelC;
+      font-size: @modalSectionLabelS;
+      font-weight: bold;
+      &:after { content: ':'; }
+      margin-bottom: @modalSectionLabelMarginB;
+    }
+
+    section input, section textarea, section > div.icons {
+      width: 100%;
+      border: 1px solid @modalButtonBorderC;
+      background-color: @modalButtonBg;
+      font-size: @modalTextareaTextS;
+      color: @modalTextareaTextC;
+      .placeholder(@modalPlaceholderC);
+      font-weight: 500;
+      .radius(0);
+      box-shadow: inset 0 0 0 rgba(0,0,0,0.5);
+      &:focus { outline: none !important; }
+      margin-bottom: 0 !important;
+    }
+    input {
+      padding: @modalInputPadY @modalInputPadX;
+      min-height: 26px;
+    }
+    textarea { resize: none; }
+    section > div.icons {
+      padding: 6px;
+      overflow-y: scroll;
+      max-height: 300px;
+      li {
+        @iconPadX: 10px;
+        @iconPadY: 7px;
+        @iconMarginX: 2px;
+        @iconMarginY: 0;
+        @iconS: 24px;
+        @iconHoverBg: darken(@modalButtonBg, 3%);
+        @iconSelectedBg: rgb(200,200,200);
+        display: inline;
+        color: black;
+        padding: @iconPadY @iconPadX;
+        margin: @iconMarginY @iconMarginX;
+        font-size: @iconS;
+        line-height: @iconS+2*@iconPadX;
+
+        &:hover {
+          background-color: @iconHoverBg;
+          cursor: pointer;
+        }
+        &.selected { background-color: @iconSelectedBg; }
+      }
+    }
+  }
+
+  //NEW POST
+  message-input .modal-body { overflow: visible !important; }
+
+  //REQUEST SHARE CONTENTS
+  ul.request-recipients {
+    @facetBarHeight: 20px;
+    @facetMarginB: 4px;
+    @facetBarC: rgb(242,242,242);
+    @facetLabelTextS: 13px;
+    @facetLabelTextC: rgb(120,120,120);
+    @facetLabelPadX: 7px;
+    @facetValueTextS: 11px;
+    @facetValueTextC: rgb(103,103,103);
+    @facetValuePadX: 10px;
+
+    li {
+      padding: 2px 0;
+      margin-bottom: @facetMarginB;
+      &.selected, &:hover {
+        background-color: darken(@facetBarC, 3%);
+        label { padding-left: @facetLabelPadX; }
+        .value {
+          background-color: transparent;
+          position: relative;
+          .text { display: none; }
+          .userMsg {
+            position: absolute;
+            right: 0;
+          }
+        }
+      }
+      &:hover {
+        span, label { cursor: pointer; }
+        .value:after {
+          content: 'Click to select';
+        }
+      }
+      &.selected:hover .value:after { content: 'Click to remove'; }
+
+      > div {
+        width:100%;
+        position:relative;
+        .flexbox();
+
+        label {
+          .flex(1);
+          font-size: @facetLabelTextS;
+          color: @facetLabelTextC;
+          .transition(0.2s);
+        }
+
+        //Align vertically
+        label, .value {
+          line-height: @facetBarHeight;
+          vertical-align: middle;
+          display:inline;
+        }
+
+        span.value {
+          position: absolute;
+          right: 0;
+          height: @facetBarHeight;
+          text-align: right;
+          background-color: @facetBarC;
+          .text, .userMsg, &:after {
+            position: absolute;
+            right: 0;
+            font-size: @facetValueTextS;
+            color: @facetValueTextC;
+            padding-right: @facetValuePadX;
+            font-weight: 500;
+            vertical-align: top;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
+
+  //Footer Styling
+  .modal-footer {
+    background-color: @modalFooterBg;
+    border-top: 0 !important;
+    box-shadow: 0 0 0 transparent !important;
+    padding-top: 0 !important;
+    padding-bottom: @modalFooterPadY;
+
+    button {
+      background-color: @modalButtonBg;
+      border: 1px solid @modalButtonBorderC;
+      color: @modalButtonTextC  !important;
+      font-size: @modalButtonTextS  !important;
+      font-weight: 500 !important;
+      //OVERRIDE
+      .gradient(@modalButtonBg, @modalButtonBg, @modalButtonBg);
+      text-shadow: 0 0 0 transparent !important;
+      .box-shadow(0 0 0 transparent);
+      .radius(0);
+      min-width: 80px;
+      &:hover {
+        background-color: darken(@modalButtonBg, 7%);
+        border-color: darken(@modalButtonBorderC, 7%);
+      }
+    }
+  }
+}
+
+// TODO (il) by 10/24/14: Temporarily retained for reference, should be rm'd
+//.modal {
+//  .transition(0.05s) !important;  //speed up entrance transition
+//  overflow: hidden;
+//  .modal-content {
+//    background-color: @clay-minus-3;
+//    .shadow(0 5px 15px rgba(0, 0, 0, 0.35)) !important;
+//  }
+//  .modal-header {
+//    .flexbox();
+//    border: 0;
+//    padding: 30px 30px 20px 30px;
+//    .modal-title {
+//      width: 100%;
+//      font-size: 12px;
+//      line-height: 17px;
+//      text-transform: uppercase;
+//      font-weight: 600;
+//      color: @night;
+//      letter-spacing: 0.5px;
+//
+//      &.dialog-title {
+//        width: 100%;
+//        font-size: 14px;
+//        line-height: 18px;
+//        text-transform: none;
+//        font-weight: 400;
+//        color: #1a2d37;
+//        letter-spacing: 0.5px;
+//
+//        > span {
+//          font-weight: 500;
+//        }
+//      }
+//    }
+//  }
+//  .modal-body {
+//    padding: 15px 30px;
+//    font-size: 13px;
+//  }
+//  .modal-footer {
+//    padding: 20px 30px;
+//    margin: 0;
+//    .btn[data-dismiss="modal"] {
+//      float: left;
+//      padding-left: 0;
+//      color: @clay-plus-2;
+//    }
+//  }
+//  .error-message {
+//    .transition(0.2s);
+//    .text-danger();
+//    font-size: 12px;
+//    white-space: normal;
+//    line-height: 1.4;
+//    height: 0;
+//    opacity: 0;
+//    pointer-events: none;
+//
+//    &.show-error {
+//      height: auto;
+//      opacity: 1;
+//      padding-bottom: 15px;
+//      text-align: center;
+//    }
+//  }
+//  img.loading-indicator {
+//    position: absolute;
+//    right: 30px;
+//    bottom: 26px;
+//    display: none;
+//
+//    &.active {
+//      display: block;
+//    }
+//  }
+//}
+//
+//.modal.modal-form {
+//  .modal-header {
+//    padding: 20px 30px 15px 30px;
+//    .modal-title {
+//      text-align: center;
+//    }
+//  }
+//  .modal-body {
+//    padding-top: 0;
+//    padding-bottom: 0;
+//    input {
+//      display: block;
+//      width: 100%;
+//      height: 40px;
+//      border: 1px solid transparent;
+//      text-indent: 15px;
+//      padding: 0;
+//      @radius: 2px;
+//      &:first-child {
+//        border-top-left-radius: @radius;
+//        border-top-right-radius: @radius;
+//      }
+//      &:last-child {
+//        border-bottom-left-radius: @radius;
+//        border-bottom-right-radius: @radius;
+//      }
+//      &:not(:last-child) {
+//        margin-bottom: 1px;
+//      }
+//    }
+//  }
+//}
+//
+//.modal-backdrop.fade.in {
+//  opacity: 0.93;
+//}
+//
+//@media screen and (min-width: @screen-sm-min) {
+//  .modal-dialog {
+//    width: 400px;
+//    margin: 100px auto;
+//  }
+//}

@@ -1,0 +1,202 @@
+/* NAV VARIABLES */
+@navH: 44px;
+@navBg: rgb(26,26,26);
+@navPadY: @headerPadYTop - 5px;
+
+.nav-vars{
+  @queryHeight: 31px;
+  @navButtonC: white;
+  @navButtonMarginB: 10px;
+  @navButtonS: 24px;
+  @loggedOutLogoWidth: 160px;
+  @navPadX: 23px;
+}
+
+@searchBarW: 350px;
+
+nav.navbar-inverse {
+  .nav-vars();
+  z-index: 99;
+  filter: e(%("progid:DXImageTransform.Microsoft.gradient(enabled = false)")) !important; //ie9 hack to make dropdown-menu background color visible
+
+  .navbar-inner {
+    background-color: rgb(20,20,20);
+    background-image: none;
+    border: 0;
+    padding-left: 25px;
+    padding-right: 25px;
+    //override
+    min-height: 37px !important;
+    box-shadow: inset 0 0 0 transparent, 0 0 0 transparent;
+  }
+
+  //Logo
+  a.brand {
+    text-shadow: none;
+    padding-top: 8px;
+    vertical-align: middle;
+    line-height: 18px;
+    img { height: 20px; }
+  }
+
+  //Search Bar
+  .navbar-search { margin-top: 6px } //override Centrio-UI defaults, correct vertical alignment
+  .navbar-search input.search-query {
+    width: @searchBarW;
+    height: 27px;
+    .Whitney();
+    font-weight: 500;
+    padding: 3px 8px;
+    font-size: 12px;
+    line-height: 18px;
+    vertical-align: middle;
+    .radius(1px);
+    text-shadow: none;
+    background-color: rgba(81,81,81,0.5);
+    border: 0px solid transparent;
+    box-shadow: inset 0 0 0 transparent, 0 0 0 transparent;
+    color: rgb(35,35,35);
+
+    &::-webkit-input-placeholder {
+      color: rgba(255,255,255,0.5);
+    }
+    &:active, &:focus {
+      background-color: rgba(255,255,255, 0.93);
+
+      &::-webkit-input-placeholder {
+        color: rgb(68,68,68);
+      }
+    }
+  }
+
+  li.toggle-apps {
+    width: 44px;
+    height: 38px;
+    margin-right: 20px;
+    svg {
+      fill: white;
+      height: 20px;
+      width: 20px;
+    }
+    a.dropdown-toggle {
+      cursor: pointer;
+    }
+    ul.dropdown-menu {
+      font-size: 12px;
+      z-index: 150;
+    }
+  }
+
+  a.brand {
+    text-shadow: none;
+
+    img {
+      height: 20px;
+    }
+  }
+
+  //Login/Logout
+  .nav > li > a {
+    padding: 9px 6px;
+    text-shadow: none;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(125,125,125);
+    i {
+      color: rgb(125,125,125);
+    }
+
+    &:hover, &:hover i {
+      color: white;
+    }
+    &:hover b.caret {
+      //highlight the caret, overwrite bootstrap
+      border-top-color: white;
+      border-bottom-color: white;
+    }
+  }
+  .nav > li.dropdown {
+    &.open a {
+      background-color: transparent;
+      color: white;
+    }
+    &.open b.caret {
+      border-top-color: white;
+      border-bottom-color: white;
+    }
+  }
+  .nav > li.dropdown > a {
+    padding-right: 0;
+    padding-left: 12px;
+    .Whitney();
+    font-size: 12px;
+    font-weight: 500;
+
+    b.caret {
+      margin-top: 9px;
+      border-width: 3px;
+    }
+  }
+  ul.dropdown-menu {
+    border-radius: 1px;
+  }
+  .nav > .dropdown.open ul.dropdown-menu a {
+    color: rgb(50,50,50);
+    font-size: 12px;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  .notification-title {
+    a {
+      opacity: 1;
+
+      b {
+        font-size: 9px;
+        font-weight: bold;
+        color: white;
+        background-color: #1D71B8;
+        border-radius: 8px;
+        padding: 3px 6px;
+        margin-top: 3px;
+        display: block;
+        line-height: 9px;
+      }
+    }
+  }
+
+  ol li.pin {
+    position: relative;
+    span.remove {
+      position: absolute;
+      right: 5px;
+      top: -7px;
+      z-index: 10;
+      color: white;
+      opacity: 0;
+      font-size: 13px;
+    }
+    &:hover span.remove {
+      opacity: 0.4;
+      &:hover {
+        opacity: 0.8;
+        cursor: pointer;
+      }
+    }
+  }
+
+  button {
+    .resetButton();
+    margin: 0 auto;
+  }
+
+  li[title="Search"] button {
+    @paddingBottom: 20px;
+    border-bottom: 2px dotted rgba(255,255,255,0.25);
+    padding-bottom: @paddingBottom;
+    margin-bottom: @paddingBottom - 2px;
+  }
+}

@@ -1,0 +1,63 @@
+.box-shadow-both(@innerArgs, @outerArgs) {
+  -webkit-box-shadow: @innerArgs, @outerArgs;
+  -moz-box-shadow: @innerArgs, @outerArgs;
+  box-shadow: @innerArgs, @outerArgs;
+}
+
+.align-items(@a) {
+  -webkit-align-items: @a;
+  -moz-align-items: @a;
+  align-items: @a;
+}
+
+.align-self(@a) {
+  -webkit-align-self: @a;
+  -moz-align-self: @a;
+  align-self: @a;
+}
+
+.justify-content(@a) {
+  -webkit-justify-content: @a;
+  -moz-justify-content: @a;
+  justify-content: @a;
+}
+
+
+.linkify(@linkColor) {
+  color: @linkColor;
+  text-decoration: none;
+
+  &:hover {
+    color: @linkColor;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+.colorGray(@val) {
+  color: rgb(@val, @val, @val);
+}
+
+.flexbox {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.flex(@a) {
+  -webkit-box-flex: @a;
+  -moz-box-flex: @a;
+  -webkit-flex: @a;
+  -moz-flex: @a;
+  -ms-flex: @a;
+  flex: @a;
+}
+
+.flow(@a) {
+  -webkit-flex-flow: @a;
+  -moz-flex-flow: @a;
+  -ms-flex-flow: @a;
+  flex-flow: @a;
+}
