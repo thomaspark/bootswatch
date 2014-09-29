@@ -225,12 +225,11 @@ titlebar {
   .title-container {
     background-color: @headerBackgroundC;
     box-shadow: @bottomShadowStyle;
-    padding: 0px 15px;
+    padding: 0px 25px;
 
     .title-bar {
-      margin: @titleBarMarginY 0;
-      padding: 0 25px;
-      height: @titleBarH;
+      padding: 10px 0;
+      height: @titleBarH + (@titleBarMarginY * 2);
 
       h1 {
         @headerColor: @night-plus-1;
