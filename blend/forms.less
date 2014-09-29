@@ -1,0 +1,89 @@
+.form-control,textarea.form-control,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  border-width: 1px;
+  .box-shadow(none);
+  outline: none;
+
+  &:focus {
+    .box-shadow(none);
+
+    .placeholder(rgba(0,0,0,0.2));
+  }
+}
+
+.has-warning {
+  .help-block,
+  .control-label {
+    color: @brand-warning;
+  }
+
+  .form-control,
+  .form-control:focus {
+    border: 2px solid @brand-warning;
+  }
+}
+
+.has-error {
+  .help-block,
+  .control-label {
+    color: @brand-danger;
+  }
+
+  .form-control,
+  .form-control:focus {
+    border: 2px solid @brand-danger;
+  }
+}
+
+.has-success {
+  .help-block,
+  .control-label {
+    color: @brand-success;
+  }
+
+  .form-control,
+  .form-control:focus {
+    border: 2px solid @brand-success;
+  }
+}
+
+//Custom Checkbox
+// Note (il): Wrapped in class to avoid overzealous removal of necessary checkboxes
+.blend-checkbox {
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  input[type="checkbox"] + label {
+    display:inline-block;
+    width:16px;
+    height:16px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    background-color: white;
+    border: 1px solid #d8d8d8;
+    .radius(3px);
+    cursor:pointer;
+  }
+  input[type="checkbox"]:checked + label:after {
+    content: '';
+    width: 17px;
+    height: 13px;
+    display: block;
+    background-image: url('../img/checkmark.png');
+  }
+}
