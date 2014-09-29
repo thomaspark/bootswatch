@@ -29,14 +29,14 @@ body, nav {
   line-height: 12px;
 }
 button.btn {
-  padding: 8px 16px;
+  padding: 6px 16px;
   font-weight: 600;
   color: #fff;
   border: none;
   filter: none !important; // so IE9 doesn't show them as grey in inappropriate states
   margin-left: 5px;
-  font-size: 13px;
-  line-height: 13px;
+  font-size: 12px;
+  line-height: 16px;
   .Gotham();
   .radius(2px);
   .remove-bootstrap-defaults();
@@ -62,6 +62,12 @@ button.btn {
       &:active {
         background-color: @mint;
       }
+    }
+    &.btn-simple {
+      background: transparent;
+      font-weight: 400;
+      color: @night;
+      box-shadow: none;
     }
     &.btn-success {
       background-color: @mint-minus-2;
