@@ -48,6 +48,15 @@ button.btn {
   &:focus {
     outline: none;
   }
+
+  &.btn-simple {
+    background: transparent;
+    font-weight: 400;
+    color: @night;
+    box-shadow: none;
+    line-height:14px; // to account for the icons
+  }
+
   &:active {
     .box-shadow(none);
     &.btn-default {
@@ -62,12 +71,6 @@ button.btn {
       &:active {
         background-color: @mint;
       }
-    }
-    &.btn-simple {
-      background: transparent;
-      font-weight: 400;
-      color: @night;
-      box-shadow: none;
     }
     &.btn-success {
       background-color: @mint-minus-2;
@@ -232,6 +235,8 @@ titlebar {
     background-color: @headerBackgroundC;
     box-shadow: @bottomShadowStyle;
     padding: 0px 25px;
+    position: relative;
+    z-index: 90;
 
     .title-bar {
       padding: 10px 0;
@@ -295,11 +300,6 @@ titlebar {
         label.placeholder {
           z-index: 97 !important;
         }
-
-        .btn {
-          margin-top: 1px;
-        }
-
       }
     }
   }
