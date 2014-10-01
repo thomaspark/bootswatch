@@ -89,3 +89,125 @@ button.btn {
 .btn-group.open .dropdown-toggle {
   .box-shadow(none);
 }
+
+
+// Legacy Centrio-UI buttons
+
+//Red Action Button
+.button1 {
+  @buttonBgC: rgb(215, 61, 50);
+  background-color: @buttonBgC !important;
+  border: 0;
+  color: white;
+  .Whitney();
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 13px;
+  padding: 9px 13px;
+  letter-spacing: -0.25px;
+  @radius: 3px;
+  &:not(:focus) {
+    outline: none;
+  }
+
+  &:hover {
+    background-color: darken(@buttonBgC, 5%) !important;
+  }
+  &:active {
+    background-color: lighten(@buttonBgC, 3%) !important;
+  }
+}
+
+//Yellow Action Button
+.button2 {
+  @buttonBgC: rgb(250, 220, 55);
+  @radius: 2px;
+  background-color: @buttonBgC;
+  border: 0;
+  color: black;
+  .Whitney();
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 13px;
+  padding: 7px 14px;
+  letter-spacing: -0.25px;
+  .radius(@radius);
+
+  &:hover {
+    background-color: darken(@buttonBgC, 12%);
+  }
+}
+
+//Gray Supporting Action Button
+.button3 {
+  @buttonBgC: rgb(212,212,212);
+  @radius: 2px;
+  background-color: @buttonBgC;
+  border: 0;
+  color: rgba(0,0,0,0.5);
+  .Whitney();
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 13px;
+  padding: 7px 14px;
+  letter-spacing: -0.25px;
+  .radius(@radius);
+
+  &:hover {
+    background-color: darken(@buttonBgC, 5%);
+    color: rgba(0,0,0,0.7);
+  }
+}
+
+//Wizard Subnav Button
+.button4 {
+  //@buttonBgC: rgba(0,0,0,0.16);  //old semi-dark color
+  @buttonBgC: transparent;
+  @radius: 3px;
+  background-color: @buttonBgC !important;
+  border: 0;
+  color: rgba(255,255,255,0.5);
+  font-size: 13px;
+  line-height: 13px;
+  padding: 7px 10px;
+  height: 25px;
+  background-image: none;
+
+  &:hover, &:active {
+    background-color: rgba(0,0,0,0.24) !important;
+    color: rgba(255,255,255,0.7) !important;
+  }
+  &[disabled] {
+    background-color: rgba(0,0,0,0.08) !important;
+    color: rgba(255,255,255,0.3) !important;
+    &:hover {
+      background-color: rgba(0,0,0,0.08) !important;
+      cursor: auto;
+    }
+  }
+}
+
+//Red Action Button
+.button5 {
+  @buttonBgC: rgba(255,255,255,0.12);
+  background-color: @buttonBgC !important;
+  border: 0;
+  color: white;
+  .Whitney();
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 13px;
+  padding: 9px 13px;
+  letter-spacing: -0.25px;
+  @radius: 3px;
+  &:not(:focus) {
+    outline: none;
+  }
+
+  &:hover {
+    background-color: darken(@buttonBgC, 5%) !important;
+  }
+  &:active {
+    background-color: lighten(@buttonBgC, 3%) !important;
+  }
+}
