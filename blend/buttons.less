@@ -1,96 +1,98 @@
 .remove-hover-if-disabled(@bgColor) {
   &[disabled]:hover {
-    background-color: @bgColor !important;
+    background-color: @bgColor;
   }
 }
 
 .btn {
   line-height: 12px;
 }
-button.btn {
-  padding: 6px 10px;
-  font-weight: 600;
-  color: #fff;
-  border: none;
-  filter: none !important; // so IE9 doesn't show them as grey in inappropriate states
-  margin-left: 5px;
-  font-size: 12px;
-  line-height: 14px;
-  .Gotham();
-  .radius(2px);
-  .remove-bootstrap-defaults();
-
-  &[disabled="disabled"], &[disabled] {
-    opacity: .5 !important;
-  }
-
-  &:first-child {
-    margin-left: 0;
-  }
-
-  &:focus {
-    outline: none;
-  }
-
-  &.btn-simple {
-    background: transparent;
-    font-weight: 400;
-    color: @night;
-    box-shadow: none;
-    line-height:14px; // to account for the icons
-
-    // Note (il): Because they have no edges, these buttons need less spacing and the last one should be
-    // right-aligned with the element above it, so no right padding
-    padding: 2px 12px;
-    &:last-child {
-      padding-right: 0;
-    }
-  }
-  .box-shadow(none);
-  &.btn-default {
-    background-color: @clay;
-  }
-  &.btn-primary {
-    @btnColor: @mint;
-    background-color: @btnColor;
+button, input {
+  .btn {
+    padding: 6px 10px;
+    font-weight: 600;
     color: #fff;
-    .radius(2px);
-    &:hover {
-      background-color: @mint-plus-2;
-      border: none;
-    }
-    &:active {
-      background-color: @btnColor;
-    }
-    .remove-hover-if-disabled(@btnColor);
-  }
-  &.btn-success {
-    background-color: @mint-minus-2;
-  }
-  &.btn-warning {
-    background-color: @gold-minus-2;
-  }
-  &.btn-danger {
-    background-color: @brick-minus-2;
-  }
-  &.btn-info {
-    background-color: @sky-minus-2;
-  }
-  &.btn-link {
-    color: @night-minus-4;
-  }
-  &.btn-default {
-    @btnColor: @night;
-    color: @btnColor;
-    .remove-hover-if-disabled(@btnColor);
-  }
-  &.btn-close {
-    background-color: transparent;
-    color: @clay-plus-2;
     border: none;
-    &:hover {
-      color: @clay;
-      background-color: transparent !important;
+    filter: none !important; // so IE9 doesn't show them as grey in inappropriate states
+    margin-left: 5px;
+    font-size: 12px;
+    line-height: 14px;
+    .Gotham();
+    .radius(2px);
+    .remove-bootstrap-defaults();
+
+    &[disabled="disabled"], &[disabled] {
+      opacity: .5 !important;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &.btn-simple {
+      background: transparent;
+      font-weight: 400;
+      color: @night;
+      box-shadow: none;
+      line-height:14px; // to account for the icons
+
+      // Note (il): Because they have no edges, these buttons need less spacing and the last one should be
+      // right-aligned with the element above it, so no right padding
+      padding: 2px 12px;
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+    .box-shadow(none);
+    &.btn-default {
+      background-color: @clay;
+    }
+    &.btn-primary {
+      @btnColor: @mint;
+      background-color: @btnColor;
+      color: #fff;
+      .radius(2px);
+      &:hover {
+        background-color: @mint-plus-1;
+        border: none;
+      }
+      &:active {
+        background-color: @btnColor;
+      }
+      .remove-hover-if-disabled(@btnColor);
+    }
+    &.btn-success {
+      background-color: @mint-minus-2;
+    }
+    &.btn-warning {
+      background-color: @gold-minus-2;
+    }
+    &.btn-danger {
+      background-color: @brick-minus-2;
+    }
+    &.btn-info {
+      background-color: @sky-minus-2;
+    }
+    &.btn-link {
+      color: @night-minus-4;
+    }
+    &.btn-default {
+      @btnColor: @night;
+      color: @btnColor;
+      .remove-hover-if-disabled(@btnColor);
+    }
+    &.btn-close {
+      background-color: transparent;
+      color: @clay-plus-2;
+      border: none;
+      &:hover {
+        background-color: transparent !important;
+        text-decoration: underline;
+      }
     }
   }
 }
