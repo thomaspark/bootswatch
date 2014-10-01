@@ -26,6 +26,7 @@ body, nav {
 .remove-bootstrap-defaults() {
   background-image: none !important;
   text-shadow: none !important;
+  box-shadow: none !important;
 }
 
 .btn {
@@ -58,6 +59,13 @@ button.btn {
     color: @night;
     box-shadow: none;
     line-height:14px; // to account for the icons
+
+    // Note (il): Because they have no edges, these buttons need less spacing and the last one should be
+    // right-aligned with the element above it, so no right padding
+    padding: 6px 12px;
+    &:last-child {
+      padding-right: none;
+    }
   }
 
   &:active {
