@@ -4,6 +4,12 @@
   box-shadow: none !important;
 }
 
+.remove-hover-if-disabled(@bgColor) {
+  &[disabled]:hover {
+    background-color: @bgColor;
+  }
+}
+
 .btn {
   line-height: 12px;
 }
@@ -19,6 +25,10 @@ button.btn {
   .Gotham();
   .radius(2px);
   .remove-bootstrap-defaults();
+
+  &[disabled="disabled"], &[disabled] {
+    .opacity(0.5);
+  }
 
   &:first-child {
     margin-left: 0;
@@ -47,14 +57,16 @@ button.btn {
     background-color: @clay;
   }
   &.btn-primary {
-    background-color: @mint;
+    @btnColor: @mint;
+    background-color: @btnColor;
     &:hover {
       background-color: @mint-plus-2 !important;
       border: none !important;
     }
     &:active {
-      background-color: @mint;
+      background-color: @btnColor;
     }
+    .remove-hover-if-disabled(@btnColor);
   }
   &.btn-success {
     background-color: @mint-minus-2;
@@ -72,7 +84,9 @@ button.btn {
     color: @night-minus-4;
   }
   &.btn-default {
-    color: @night;
+    @btnColor: @night;
+    color: @btnColor;
+    .remove-hover-if-disabled(@btnColor);
   }
   &.btn-close {
     background-color: transparent;
