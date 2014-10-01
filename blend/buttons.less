@@ -42,40 +42,37 @@ button.btn {
       padding-right: none;
     }
   }
-
-  &:active {
-    .box-shadow(none);
-    &.btn-default {
-      background-color: @clay;
+  .box-shadow(none);
+  &.btn-default {
+    background-color: @clay;
+  }
+  &.btn-primary {
+    background-color: @mint;
+    &:hover {
+      background-color: @mint-plus-2 !important;
+      border: none !important;
     }
-    &.btn-primary {
+    &:active {
       background-color: @mint;
-      &:hover {
-        background-color: @mint-plus-2 !important;
-        border: none !important;
-      }
-      &:active {
-        background-color: @mint;
-      }
     }
-    &.btn-success {
-      background-color: @mint-minus-2;
-    }
-    &.btn-warning {
-      background-color: @gold-minus-2;
-    }
-    &.btn-danger {
-      background-color: @brick-minus-2;
-    }
-    &.btn-info {
-      background-color: @sky-minus-2;
-    }
-    &.btn-link {
-      color: @night-minus-4;
-    }
-    &.btn-default {
-      color: @night;
-    }
+  }
+  &.btn-success {
+    background-color: @mint-minus-2;
+  }
+  &.btn-warning {
+    background-color: @gold-minus-2;
+  }
+  &.btn-danger {
+    background-color: @brick-minus-2;
+  }
+  &.btn-info {
+    background-color: @sky-minus-2;
+  }
+  &.btn-link {
+    color: @night-minus-4;
+  }
+  &.btn-default {
+    color: @night;
   }
 }
 
