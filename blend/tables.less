@@ -1,0 +1,21 @@
+.table {
+
+  th {
+    font-size: 11px !important;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: darken(@gray-dark, 10%);
+    text-align: left;
+    border-width: 1px !important;  //override
+  }
+  td, th {
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 12px;
+    padding: 0 30px 0 15px !important;
+    line-height: 37px !important;
+  }
+  tr:last-child td {
+    border-bottom: 1px solid @table-border-color;
+  }
+}

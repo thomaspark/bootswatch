@@ -1,0 +1,91 @@
+.remove-bootstrap-defaults() {
+  background-image: none !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.btn {
+  line-height: 12px;
+}
+button.btn {
+  padding: 6px 16px;
+  font-weight: 600;
+  color: #fff;
+  border: none;
+  filter: none !important; // so IE9 doesn't show them as grey in inappropriate states
+  margin-left: 5px;
+  font-size: 12px;
+  line-height: 16px;
+  .Gotham();
+  .radius(2px);
+  .remove-bootstrap-defaults();
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &.btn-simple {
+    background: transparent;
+    font-weight: 400;
+    color: @night;
+    box-shadow: none;
+    line-height:14px; // to account for the icons
+
+    // Note (il): Because they have no edges, these buttons need less spacing and the last one should be
+    // right-aligned with the element above it, so no right padding
+    padding: 6px 12px;
+    &:last-child {
+      padding-right: none;
+    }
+  }
+
+  &:active {
+    .box-shadow(none);
+    &.btn-default {
+      background-color: @clay;
+    }
+    &.btn-primary {
+      background-color: @mint;
+      &:hover {
+        background-color: @mint-plus-2 !important;
+        border: none !important;
+      }
+      &:active {
+        background-color: @mint;
+      }
+    }
+    &.btn-success {
+      background-color: @mint-minus-2;
+    }
+    &.btn-warning {
+      background-color: @gold-minus-2;
+    }
+    &.btn-danger {
+      background-color: @brick-minus-2;
+    }
+    &.btn-info {
+      background-color: @sky-minus-2;
+    }
+    &.btn-link {
+      color: @night-minus-4;
+    }
+    &.btn-default {
+      color: @night;
+    }
+  }
+}
+
+.btn-link {
+  font-weight: 500;
+}
+.btn-lg {
+  min-width: 80px; //so buttons all about same size
+}
+
+.btn-group.open .dropdown-toggle {
+  .box-shadow(none);
+}

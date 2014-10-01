@@ -1,3 +1,5 @@
+// Note (il): Mixins come first, so should have no deps on other variables (colors, etc)
+
 .box-shadow-both(@innerArgs, @outerArgs) {
   -webkit-box-shadow: @innerArgs, @outerArgs;
   -moz-box-shadow: @innerArgs, @outerArgs;
@@ -60,4 +62,97 @@
   -moz-flex-flow: @a;
   -ms-flex-flow: @a;
   flex-flow: @a;
+}
+
+.lineH(@size, @multiple) {
+  line-height: @size*@multiple;
+}
+
+.shadow(@arguments) {
+  -webkit-box-shadow: @arguments;
+  -moz-box-shadow: @arguments;
+  box-shadow: @arguments;
+}
+
+.radius(@radius) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius:    @radius;
+  border-radius:         @radius;
+
+  border-top-right-radius: @radius;
+  border-top-left-radius: @radius;
+  border-bottom-right-radius: @radius;
+  border-bottom-left-radius: @radius;
+  -webkit-border-top-right-radius: @radius;
+  -webkit-border-top-left-radius: @radius;
+  -webkit-border-bottom-right-radius: @radius;
+  -webkit-border-bottom-left-radius: @radius;
+  -moz-border-top-right-radius: @radius;
+  -moz-border-top-left-radius: @radius;
+  -moz-border-bottom-right-radius: @radius;
+  -moz-border-bottom-left-radius: @radius;
+}
+
+.photoBg(@url, @bg-color) {
+  background-image: @url;
+  background-color:  @bg-color;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.colorOverlay(@color) {
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: @color;
+  }
+}
+
+.transitionProperty(@property: all, @duration:0.2s, @ease:ease) {
+  -webkit-transition: @property @duration @ease;
+  -moz-transition: @property @duration @ease;
+  transition: @property @duration @ease;
+}
+
+// Transformations
+.transform(@transformation) {
+  -webkit-transform: @transformation;
+  -ms-transform: @transformation; // IE9+
+  transform: @transformation;
+}
+
+//FROM BOOTSTRAP
+.vertical-three-colors(@startColor: #00b3ee, @midColor: #7a43b6, @colorStop: 50%, @endColor: #c3325f, @bgC: rgba(0,0,0,0.25)) {
+  background-color: @bgC;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), color-stop(@colorStop, @midColor), to(@endColor));
+  background-image: -webkit-linear-gradient(@startColor, @midColor @colorStop, @endColor);
+  background-image: -moz-linear-gradient(top, @startColor, @midColor @colorStop, @endColor);
+  background-image: -o-linear-gradient(@startColor, @midColor @colorStop, @endColor);
+  background-image: linear-gradient(@startColor, @midColor @colorStop, @endColor);
+  background-repeat: no-repeat;
+}
+
+.tightText(@size) {
+  font-size: @size;
+  line-height: @size;
+}
+
+.blur-contents(@size, 2px) {
+  .transition(0.05s) !important;
+  filter: blur(@size);
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-filter: blur(@size);
+  -moz-filter: blur(@size);
+  filter: url('/media/blur.svg#blur'); /* for Firefox */
+}
+
+.ellipsis-overflow {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
