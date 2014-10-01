@@ -1,3 +1,4 @@
+.form-control,
 textarea,
 input[type="text"],
 input[type="password"],
@@ -12,7 +13,8 @@ input[type="email"],
 input[type="url"],
 input[type="search"],
 input[type="tel"],
-input[type="color"] {
+input[type="color"],
+.uneditable-content {
   color: @night;
   border: solid @clay-plus-2 1px;
   background-color: white;
@@ -22,6 +24,12 @@ input[type="color"] {
   .placeholder();
   height: 26px;
   .radius(2px);
+  .box-shadow(none);
+  outline: none;
+  &:focus {
+    .box-shadow(none);
+    .placeholder(rgba(0,0,0,0.2));
+  }
 }
 
 //select {
