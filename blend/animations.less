@@ -1,0 +1,15 @@
+@popoverAnimationDim: 20px;
+
+.dropdown-menu:not(.ng-valid-date, .typeahead) {
+  display: block;
+  pointer-events: none;
+  opacity: 0;
+  .transition(0.1s);
+  .translate(0, 1*@popoverAnimationDim);
+}
+
+.open .dropdown-menu:not(.ng-valid-date, .typeahead) {
+  pointer-events: auto;
+  opacity: 1;
+  .translate(0, 5px);
+}
