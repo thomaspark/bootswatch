@@ -5,8 +5,8 @@
 @headerBackgroundC: white;
 @borderStyle: solid 1px @clay-minus-2;
 @bottomShadowStyle: 0px 1px 2px 2px rgba(0,0,0,0.1);
-@titleBarH: 30px;
-@titleBarMarginY: 10px;
+@titleBarH: 40px;
+@titleBarMarginY: 7px;
 
 .nav-vars{
   @queryHeight: 31px;
@@ -284,8 +284,8 @@ titlebar {
 
       h1 {
         @headerColor: @night-plus-1;
-        font-size: 20px;
-        line-height: @titleBarH;
+        font-size: 18px;
+        line-height: @titleBarH - (@titleBarMarginY * 2);
         color: @headerColor !important; // override link color
         white-space: nowrap;
         font-weight: 300;
