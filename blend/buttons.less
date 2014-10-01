@@ -6,7 +6,7 @@
 
 .remove-hover-if-disabled(@bgColor) {
   &[disabled]:hover {
-    background-color: @bgColor;
+    background-color: @bgColor !important;
   }
 }
 
@@ -27,7 +27,7 @@ button.btn {
   .remove-bootstrap-defaults();
 
   &[disabled="disabled"], &[disabled] {
-    .opacity(50);
+    opacity: .5 !important;
   }
 
   &:first-child {
@@ -60,8 +60,8 @@ button.btn {
     @btnColor: @mint;
     background-color: @btnColor;
     &:hover {
-      background-color: @mint-plus-2 !important;
-      border: none !important;
+      background-color: @mint-plus-2;
+      border: none;
     }
     &:active {
       background-color: @btnColor;
