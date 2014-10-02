@@ -14,8 +14,7 @@ input[type="url"],
 input[type="search"],
 input[type="tel"],
 input[type="color"],
-.uneditable-content,
-.select2-container {
+.uneditable-content {
   color: @night;
   border: solid @clay 1px;
   background-color: white;
@@ -33,12 +32,9 @@ input[type="color"],
     .box-shadow(none);
     .placeholder(rgba(0,0,0,0.2));
   }
-  &[disabled], &.select2-container-disabled {
+  &[disabled] {
     color: @gray-darker;
     border-color: @gray-darker;
   }
 }
 
-//select {
-//
-//}
