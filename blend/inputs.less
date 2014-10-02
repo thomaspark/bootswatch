@@ -14,7 +14,8 @@ input[type="url"],
 input[type="search"],
 input[type="tel"],
 input[type="color"],
-.uneditable-content {
+.uneditable-content,
+.select2-container {
   color: @night;
   border: solid @clay 1px;
   background-color: white;
@@ -26,11 +27,16 @@ input[type="color"],
   .radius(2px);
   .box-shadow(none);
   outline: none;
+  margin-bottom: 0;
+
   &:focus {
     .box-shadow(none);
     .placeholder(rgba(0,0,0,0.2));
   }
-  margin-bottom: 0;
+  &[disabled], &.select2-container-disabled {
+    color: @gray-darker;
+    border-color: @gray-darker;
+  }
 }
 
 //select {
