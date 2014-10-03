@@ -1,3 +1,10 @@
+.inputs-style {
+  border: solid @clay 1px;
+  background-color: #fff;
+}
+
+
+
 .form-control,
 textarea,
 input[type="text"],
@@ -16,8 +23,7 @@ input[type="tel"],
 input[type="color"],
 .uneditable-content {
   color: @night;
-  border: solid @clay 1px;
-  background-color: white;
+  .inputs-style();
   .Gotham();
   font-weight: 400;
   font-size: 12px;
@@ -36,5 +42,10 @@ input[type="color"],
     color: @gray-darker;
     border-color: @gray-darker;
   }
+}
+
+// SELECT2 INPUTS
+.select2-container, .select2-search {
+  .inputs-style();
 }
 
