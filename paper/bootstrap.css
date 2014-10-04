@@ -6298,7 +6298,9 @@ input[type=password],
 input[type=email],
 input[type=number],
 [type=text].form-control,
-[type=password].form-control {
+[type=password].form-control,
+[type=email].form-control,
+[type=tel].form-control {
   padding: 0;
   border: none;
   border-radius: 0;
@@ -6313,7 +6315,9 @@ input[type=password]:focus,
 input[type=email]:focus,
 input[type=number]:focus,
 [type=text].form-control:focus,
-[type=password].form-control:focus {
+[type=password].form-control:focus,
+[type=email].form-control:focus,
+[type=tel].form-control:focus {
   -webkit-box-shadow: inset 0 -2px 0 #2196f3;
   box-shadow: inset 0 -2px 0 #2196f3;
 }
