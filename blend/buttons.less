@@ -231,7 +231,7 @@ button, input {
 }
 
 // spinner button
-.button-wrapper {
+.spinner-button {
   display: inline-block;
   text-align: center;
 
@@ -239,7 +239,11 @@ button, input {
     &.transparent {
       background-color: transparent !important;
       .button-text {
-        display: none;
+        visibility: hidden;
+      }
+      .loading-spinner {
+        position:relative;
+        right: 50%;
       }
     }
   }
