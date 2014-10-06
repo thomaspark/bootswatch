@@ -44,25 +44,53 @@ input[type="color"],
   }
 }
 
-// SELECT2 INPUTS
-.select2-container, .select2-search {
-  .inputs-style();
-  .select2-choice {
-    box-shadow: none;
-    border: none;
-  }
-}
 
-// DISABLED SELECT2 INPUTS
-.select2-container.select2-container-disabled {
-  .inputs-style();
-  border-color: @clay-plus-2;
-  .select2-choice {
-    box-shadow: none;
-    border: none;
+
+// This is namespaced to avoid hitting issues with legacy select2 boxes
+.select2-blend-wrapper {
+
+  // SELECT2 INPUTS STYLING
+  .select2-container, .select2-search {
+    .inputs-style();
+    .select2-choice {
+      box-shadow: none;
+      border: none;
+    }
+  }
+
+  // DISABLED SELECT2 INPUTS
+  .select2-container.select2-container-disabled {
+    .inputs-style();
+    border-color: @clay-plus-2;
+    .select2-choice {
+      box-shadow: none;
+      border: none;
+
+      .select2-arrow {
+        background-color: transparent;
+      }
+    }
+  }
+
+  // GENERIC SELECT2 SIZING AND OVERRIDES
+  .select2-container {
+    box-shadow: none !important;
+    width: 100%;
+    height: 40px;
+
+    .select2-choice {
+      height: 40px;
+      padding-top: 7px;
+      background: transparent;
+    }
 
     .select2-arrow {
-      background-color: transparent;
+      background: transparent;
+      border-left: none;
+
+      b {
+        background-position-y: 7px;
+      }
     }
   }
 }
