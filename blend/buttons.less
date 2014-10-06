@@ -235,7 +235,12 @@ button, input {
   display: inline-block;
   text-align: center;
 
-  img.loading-spinner {
-    margin: 7px 10px;
+  button {
+    &.transparent {
+      background-color: transparent !important;
+      .button-text {
+        display: none;
+      }
+    }
   }
 }
