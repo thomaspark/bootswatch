@@ -1,6 +1,7 @@
 .inputs-style {
   border: solid @clay 1px;
   background-color: #fff;
+  .radius(2px);
 }
 
 
@@ -29,7 +30,6 @@ input[type="color"],
   font-size: 12px;
   .placeholder();
   height: 26px;
-  .radius(2px);
   .box-shadow(none);
   outline: none;
   margin-bottom: 0;
@@ -47,5 +47,9 @@ input[type="color"],
 // SELECT2 INPUTS
 .select2-container, .select2-search {
   .inputs-style();
+  .select2-choice {
+    box-shadow: none;
+    border: none;
+  }
 }
 
