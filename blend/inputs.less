@@ -56,9 +56,14 @@ input[type="color"],
 // DISABLED SELECT2 INPUTS
 .select2-container.select2-container-disabled {
   .inputs-style();
+  border-color: @clay-plus-2;
   .select2-choice {
     box-shadow: none;
     border: none;
+
+    .select2-arrow {
+      background-color: transparent;
+    }
   }
 }
 
