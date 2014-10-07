@@ -38,24 +38,24 @@
 
 
   .modal-header, .modal-body, .modal-footer {
-    padding-left: @modalPadX !important;
-    padding-right: @modalPadX !important;
+    padding-left: @modalPadX;
+    padding-right: @modalPadX;
   }
 
   //Header Styling
   .modal-header {
     background-color: @modalHeaderBg;
     border-bottom: 1px solid @modalHeaderBorderC;
-    padding-top: @modalHeaderPadY !important;
-    padding-bottom: @modalHeaderPadY !important;
+    padding-top: @modalHeaderPadY;
+    padding-bottom: @modalHeaderPadY;
     font-weight: 500;
-    font-size: 18px !important;
+    font-size: 18px;
     color: rgba(0,0,0,0.5);
 
     h1 {
-      font-size: @modalHeaderTextS !important;
+      font-size: @modalHeaderTextS;
       color: @modalHeaderTextC;
-      font-weight: 300 !important;
+      font-weight: 300;
       * {
         .Whitney()
       }
@@ -262,9 +262,11 @@
 }
 
 .new-modal {
-  border-radius: 3px;
+  .radius(3px);
   background-color: @clay-minus-4;
 
+  // Other modal dialog classes.
+  // TODO (il): Document these.
   &.loan-reassign {
     select {
       width: 100%;
@@ -319,10 +321,24 @@
     }
   }
 
+  &.dialog {
+    .modal-header {
+      text-align: left;
+      font-size: 16px;
+      font-weight: 400 !important;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      line-height: 1.5em;
+    }
+
+  }
+
   .modal-header {
     border: none;
     background-color: transparent;
     text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
 
     h1 {
       .Gotham();
@@ -330,8 +346,11 @@
       font-weight: 600 !important;
       text-transform: uppercase;
       color: @night;
+      line-height: 1.5em;
     }
   }
+
+
 
   .modal-body {
     overflow-y: auto;
