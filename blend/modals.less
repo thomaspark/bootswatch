@@ -324,13 +324,15 @@
   &.dialog {
     .modal-header {
       text-align: left;
-      font-size: 16px;
-      font-weight: 400 !important;
       padding-top: 20px;
       padding-bottom: 20px;
-      line-height: 1.5em;
+      h1 {
+        font-size: 16px;
+        font-weight: 400 !important;
+        line-height: 1.5em;
+        text-transform: none;
+      }
     }
-
   }
 
   .modal-header {
@@ -342,8 +344,8 @@
 
     h1 {
       .Gotham();
-      font-size: 12px !important;
-      font-weight: 600 !important;
+      font-size: 12px;
+      font-weight: 600;
       text-transform: uppercase;
       color: @night;
       line-height: 1.5em;
@@ -374,16 +376,12 @@
   .modal-footer {
     display: table;
     width: 100%;
+
     a {
       text-align: left;
       vertical-align: middle;
       color: @clay !important;
       font-weight: 600;
-    }
-
-    * {
-      display: table-cell;
-      text-align: center;
     }
 
     button.btn {
