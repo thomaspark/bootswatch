@@ -29,7 +29,6 @@ input[type="color"],
   font-weight: 400;
   font-size: 12px;
   .placeholder();
-  height: 26px;
   .box-shadow(none);
   outline: none;
   margin-bottom: 0;
@@ -42,8 +41,31 @@ input[type="color"],
     color: @gray-darker;
     border-color: @gray-darker;
   }
+
+  &.search {
+    background-image: url('/assets/images/icon-search.svg');
+    background-position: 98% 6px;
+    background-repeat: no-repeat;
+    background-size: 18px;
+  }
 }
 
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+  height: 26px;
+}
 
 
 // This is namespaced to avoid hitting issues with legacy select2 boxes

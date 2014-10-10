@@ -294,7 +294,7 @@
     }
   }
 
-  &.user-filter {
+  &.filter-modal {
     @borderStyle: solid 1px @clay-minus-2;
     @genSpacing: 15px;
     .existing-filters {
@@ -305,6 +305,15 @@
         padding-bottom: 15px;
         border-bottom: @borderStyle;
         margin-bottom: @genSpacing;
+
+        .filter-dropdown {
+          width: 25%;
+        }
+
+        .filter-text {
+          width: 70%;
+          float: right;
+        }
 
         &:last-child {
           margin-bottom: 5px;
@@ -319,6 +328,46 @@
       width: 65%;
       margin-left: 4%;
     }
+  }
+
+  &.select-column-modal {
+
+    input.search {
+      width: 100%;
+      background-position: 2% 6px;
+      padding-left: 35px;
+      margin-bottom: 8px;
+      height: 32px;
+    }
+
+    .column-container {
+      padding: 15px;
+      border: solid @clay 1px;
+      .radius(2px);
+      font-size: 12px;
+      height: 300px;
+      overflow: auto;
+      background-color: white;
+
+      .column-selection-container {
+        margin-bottom: 25px;
+        &:last-child {
+          margin-bottom: none;
+        }
+
+        .row-header {
+          text-transform: uppercase;
+          font-weight: 600;
+        }
+
+        .column {
+          .bl-icon.icon-check {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
   }
 
   &.dialog {
