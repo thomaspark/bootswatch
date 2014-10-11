@@ -6202,51 +6202,129 @@ button.close {
 .navbar-nav > li > .dropdown-menu {
   margin-top: 2px;
 }
+.btn-default {
+  background-image: -webkit-radial-gradient(circle, #ffffff 80%, #f0f0f0 81%);
+  background-image: radial-gradient(circle, #ffffff 80%, #f0f0f0 81%);
+  background-repeat: no-repeat;
+  background-size: 200%;
+  background-position: 50%;
+  transition: background-size 2s;
+}
 .btn-default:hover {
-  background-color: #f7f7f7;
+  background-size: 100%;
+  border-color: #f0f0f0;
 }
 .btn-default:active {
   background-color: #f0f0f0;
+  background-image: -webkit-radial-gradient(circle, #f0f0f0 10%, #ffffff 11%);
+  background-image: radial-gradient(circle, #f0f0f0 10%, #ffffff 11%);
+  background-repeat: no-repeat;
+  background-size: 1000%;
   -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
+.btn-primary {
+  background-image: -webkit-radial-gradient(circle, #2196f3 80%, #0d87e9 81%);
+  background-image: radial-gradient(circle, #2196f3 80%, #0d87e9 81%);
+  background-repeat: no-repeat;
+  background-size: 200%;
+  background-position: 50%;
+  transition: background-size 2s;
+}
 .btn-primary:hover {
-  background-color: #128ff2;
+  background-size: 100%;
+  border-color: #0d87e9;
 }
 .btn-primary:active {
   background-color: #0d87e9;
+  background-image: -webkit-radial-gradient(circle, #0d87e9 10%, #2196f3 11%);
+  background-image: radial-gradient(circle, #0d87e9 10%, #2196f3 11%);
+  background-repeat: no-repeat;
+  background-size: 1000%;
   -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
+.btn-success {
+  background-image: -webkit-radial-gradient(circle, #4caf50 80%, #439a46 81%);
+  background-image: radial-gradient(circle, #4caf50 80%, #439a46 81%);
+  background-repeat: no-repeat;
+  background-size: 200%;
+  background-position: 50%;
+  transition: background-size 2s;
+}
 .btn-success:hover {
-  background-color: #47a44b;
+  background-size: 100%;
+  border-color: #439a46;
 }
 .btn-success:active {
   background-color: #439a46;
+  background-image: -webkit-radial-gradient(circle, #439a46 10%, #4caf50 11%);
+  background-image: radial-gradient(circle, #439a46 10%, #4caf50 11%);
+  background-repeat: no-repeat;
+  background-size: 1000%;
   -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
+.btn-info {
+  background-image: -webkit-radial-gradient(circle, #9c27b0 80%, #862197 81%);
+  background-image: radial-gradient(circle, #9c27b0 80%, #862197 81%);
+  background-repeat: no-repeat;
+  background-size: 200%;
+  background-position: 50%;
+  transition: background-size 2s;
+}
 .btn-info:hover {
-  background-color: #9124a3;
+  background-size: 100%;
+  border-color: #862197;
 }
 .btn-info:active {
   background-color: #862197;
+  background-image: -webkit-radial-gradient(circle, #862197 10%, #9c27b0 11%);
+  background-image: radial-gradient(circle, #862197 10%, #9c27b0 11%);
+  background-repeat: no-repeat;
+  background-size: 1000%;
   -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
+.btn-warning {
+  background-image: -webkit-radial-gradient(circle, #ff9800 80%, #e08600 81%);
+  background-image: radial-gradient(circle, #ff9800 80%, #e08600 81%);
+  background-repeat: no-repeat;
+  background-size: 200%;
+  background-position: 50%;
+  transition: background-size 2s;
+}
 .btn-warning:hover {
-  background-color: #f08f00;
+  background-size: 100%;
+  border-color: #e08600;
 }
 .btn-warning:active {
   background-color: #e08600;
+  background-image: -webkit-radial-gradient(circle, #e08600 10%, #ff9800 11%);
+  background-image: radial-gradient(circle, #e08600 10%, #ff9800 11%);
+  background-repeat: no-repeat;
+  background-size: 1000%;
   -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
+.btn-danger {
+  background-image: -webkit-radial-gradient(circle, #e51c23 80%, #cb171e 81%);
+  background-image: radial-gradient(circle, #e51c23 80%, #cb171e 81%);
+  background-repeat: no-repeat;
+  background-size: 200%;
+  background-position: 50%;
+  transition: background-size 2s;
+}
 .btn-danger:hover {
-  background-color: #d91920;
+  background-size: 100%;
+  border-color: #cb171e;
 }
 .btn-danger:active {
   background-color: #cb171e;
+  background-image: -webkit-radial-gradient(circle, #cb171e 10%, #e51c23 11%);
+  background-image: radial-gradient(circle, #cb171e 10%, #e51c23 11%);
+  background-repeat: no-repeat;
+  background-size: 1000%;
   -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
 }

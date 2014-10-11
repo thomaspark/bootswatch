@@ -39,13 +39,20 @@
 #btn(@class) {
   .btn-@{class} {
     @bg: "btn-@{class}-bg";
+    #gradient > .radial(@@bg 80%, darken(@@bg, 6%) 81%);
+    background-size: 200%;
+    background-position: 50%;
+    transition: background-size 2s;
 
     &:hover {
-      background-color: darken(@@bg, 3%);
+      background-size: 100%;
+      border-color: darken(@@bg, 6%);
     }
 
     &:active {
       background-color: darken(@@bg, 6%);
+      #gradient > .radial(darken(@@bg, 6%) 10%, @@bg 11%);
+      background-size: 1000%;
       .box-shadow(2px 2px 2px rgba(0,0,0,.3));
     }
   }
