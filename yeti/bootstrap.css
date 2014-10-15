@@ -1,6 +1,6 @@
 @import url("//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
 /*!
- * Bootswatch v3.2.0
+ * bootswatch v3.2.0
  * Homepage: http://bootswatch.com
  * Copyright 2012-2014 Thomas Park
  * Licensed under MIT
@@ -891,7 +891,7 @@ html {
 body {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 15px;
-  line-height: 1.42857143;
+  line-height: 1.4;
   color: #222222;
   background-color: #ffffff;
 }
@@ -938,7 +938,7 @@ img {
 }
 .img-thumbnail {
   padding: 4px;
-  line-height: 1.42857143;
+  line-height: 1.4;
   background-color: #ffffff;
   border: 1px solid #dddddd;
   border-radius: 0;
@@ -1243,7 +1243,7 @@ dl {
 }
 dt,
 dd {
-  line-height: 1.42857143;
+  line-height: 1.4;
 }
 dt {
   font-weight: bold;
@@ -1290,7 +1290,7 @@ blockquote small,
 blockquote .small {
   display: block;
   font-size: 80%;
-  line-height: 1.42857143;
+  line-height: 1.4;
   color: #6f6f6f;
 }
 blockquote footer:before,
@@ -1329,7 +1329,7 @@ blockquote:after {
 address {
   margin-bottom: 21px;
   font-style: normal;
-  line-height: 1.42857143;
+  line-height: 1.4;
 }
 code,
 kbd,
@@ -1362,7 +1362,7 @@ pre {
   padding: 10px;
   margin: 0 0 10.5px;
   font-size: 14px;
-  line-height: 1.42857143;
+  line-height: 1.4;
   word-break: break-all;
   word-wrap: break-word;
   color: #333333;
@@ -2067,7 +2067,7 @@ th {
 .table > tbody > tr > td,
 .table > tfoot > tr > td {
   padding: 8px;
-  line-height: 1.42857143;
+  line-height: 1.4;
   vertical-align: top;
   border-top: 1px solid #dddddd;
 }
@@ -2337,18 +2337,18 @@ input[type="checkbox"]:focus {
 }
 output {
   display: block;
-  padding-top: 7px;
+  padding-top: 9px;
   font-size: 15px;
-  line-height: 1.42857143;
+  line-height: 1.4;
   color: #6f6f6f;
 }
 .form-control {
   display: block;
   width: 100%;
-  height: 35px;
-  padding: 6px 12px;
+  height: 39px;
+  padding: 8px 12px;
   font-size: 15px;
-  line-height: 1.42857143;
+  line-height: 1.4;
   color: #6f6f6f;
   background-color: #ffffff;
   background-image: none;
@@ -2393,20 +2393,20 @@ input[type="date"],
 input[type="time"],
 input[type="datetime-local"],
 input[type="month"] {
-  line-height: 35px;
-  line-height: 1.42857143 \0;
+  line-height: 39px;
+  line-height: 1.4 \0;
 }
 input[type="date"].input-sm,
 input[type="time"].input-sm,
 input[type="datetime-local"].input-sm,
 input[type="month"].input-sm {
-  line-height: 30px;
+  line-height: 36px;
 }
 input[type="date"].input-lg,
 input[type="time"].input-lg,
 input[type="datetime-local"].input-lg,
 input[type="month"].input-lg {
-  line-height: 48px;
+  line-height: 60px;
 }
 .form-group {
   margin-bottom: 15px;
@@ -2473,8 +2473,8 @@ fieldset[disabled] .checkbox label {
   cursor: not-allowed;
 }
 .form-control-static {
-  padding-top: 7px;
-  padding-bottom: 7px;
+  padding-top: 9px;
+  padding-bottom: 9px;
   margin-bottom: 0;
 }
 .form-control-static.input-lg,
@@ -2484,15 +2484,15 @@ fieldset[disabled] .checkbox label {
 }
 .input-sm,
 .form-horizontal .form-group-sm .form-control {
-  height: 30px;
-  padding: 5px 10px;
+  height: 36px;
+  padding: 8px 12px;
   font-size: 12px;
   line-height: 1.5;
   border-radius: 0;
 }
 select.input-sm {
-  height: 30px;
-  line-height: 30px;
+  height: 36px;
+  line-height: 36px;
 }
 textarea.input-sm,
 select[multiple].input-sm {
@@ -2500,15 +2500,15 @@ select[multiple].input-sm {
 }
 .input-lg,
 .form-horizontal .form-group-lg .form-control {
-  height: 48px;
-  padding: 10px 16px;
+  height: 60px;
+  padding: 16px 20px;
   font-size: 19px;
   line-height: 1.33;
   border-radius: 0;
 }
 select.input-lg {
-  height: 48px;
-  line-height: 48px;
+  height: 60px;
+  line-height: 60px;
 }
 textarea.input-lg,
 select[multiple].input-lg {
@@ -2518,7 +2518,7 @@ select[multiple].input-lg {
   position: relative;
 }
 .has-feedback .form-control {
-  padding-right: 43.75px;
+  padding-right: 48.75px;
 }
 .form-control-feedback {
   position: absolute;
@@ -2526,20 +2526,20 @@ select[multiple].input-lg {
   right: 0;
   z-index: 2;
   display: block;
-  width: 35px;
-  height: 35px;
-  line-height: 35px;
+  width: 39px;
+  height: 39px;
+  line-height: 39px;
   text-align: center;
 }
 .input-lg + .form-control-feedback {
-  width: 48px;
-  height: 48px;
-  line-height: 48px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
 }
 .input-sm + .form-control-feedback {
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
 }
 .has-success .help-block,
 .has-success .control-label,
@@ -2681,11 +2681,11 @@ select[multiple].input-lg {
 .form-horizontal .checkbox-inline {
   margin-top: 0;
   margin-bottom: 0;
-  padding-top: 7px;
+  padding-top: 9px;
 }
 .form-horizontal .radio,
 .form-horizontal .checkbox {
-  min-height: 28px;
+  min-height: 30px;
 }
 .form-horizontal .form-group {
   margin-left: -15px;
@@ -2695,7 +2695,7 @@ select[multiple].input-lg {
   .form-horizontal .control-label {
     text-align: right;
     margin-bottom: 0;
-    padding-top: 7px;
+    padding-top: 9px;
   }
 }
 .form-horizontal .has-feedback .form-control-feedback {
@@ -2704,12 +2704,12 @@ select[multiple].input-lg {
 }
 @media (min-width: 768px) {
   .form-horizontal .form-group-lg .control-label {
-    padding-top: 14.3px;
+    padding-top: 22.28px;
   }
 }
 @media (min-width: 768px) {
   .form-horizontal .form-group-sm .control-label {
-    padding-top: 6px;
+    padding-top: 9px;
   }
 }
 .btn {
@@ -2722,9 +2722,9 @@ select[multiple].input-lg {
   background-image: none;
   border: 1px solid transparent;
   white-space: nowrap;
-  padding: 6px 12px;
+  padding: 8px 12px;
   font-size: 15px;
-  line-height: 1.42857143;
+  line-height: 1.4;
   border-radius: 0;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -2763,7 +2763,7 @@ fieldset[disabled] .btn {
 .btn-default {
   color: #333333;
   background-color: #e7e7e7;
-  border-color: #dadada;
+  border-color: #cccccc;
 }
 .btn-default:hover,
 .btn-default:focus,
@@ -2772,7 +2772,7 @@ fieldset[disabled] .btn {
 .open > .dropdown-toggle.btn-default {
   color: #333333;
   background-color: #cecece;
-  border-color: #bbbbbb;
+  border-color: #adadad;
 }
 .btn-default:active,
 .btn-default.active,
@@ -2795,7 +2795,7 @@ fieldset[disabled] .btn-default:active,
 .btn-default[disabled].active,
 fieldset[disabled] .btn-default.active {
   background-color: #e7e7e7;
-  border-color: #dadada;
+  border-color: #cccccc;
 }
 .btn-default .badge {
   color: #e7e7e7;
@@ -3041,21 +3041,21 @@ fieldset[disabled] .btn-link:focus {
 }
 .btn-lg,
 .btn-group-lg > .btn {
-  padding: 10px 16px;
+  padding: 16px 20px;
   font-size: 19px;
   line-height: 1.33;
   border-radius: 0;
 }
 .btn-sm,
 .btn-group-sm > .btn {
-  padding: 5px 10px;
+  padding: 8px 12px;
   font-size: 12px;
   line-height: 1.5;
   border-radius: 0;
 }
 .btn-xs,
 .btn-group-xs > .btn {
-  padding: 1px 5px;
+  padding: 4px 6px;
   font-size: 12px;
   line-height: 1.5;
   border-radius: 0;
@@ -3153,7 +3153,7 @@ tbody.collapse.in {
   padding: 3px 20px;
   clear: both;
   font-weight: normal;
-  line-height: 1.42857143;
+  line-height: 1.4;
   color: #555555;
   white-space: nowrap;
 }
@@ -3202,7 +3202,7 @@ tbody.collapse.in {
   display: block;
   padding: 3px 20px;
   font-size: 12px;
-  line-height: 1.42857143;
+  line-height: 1.4;
   color: #999999;
   white-space: nowrap;
 }
@@ -3431,8 +3431,8 @@ tbody.collapse.in {
 .input-group-lg > .form-control,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn {
-  height: 48px;
-  padding: 10px 16px;
+  height: 60px;
+  padding: 16px 20px;
   font-size: 19px;
   line-height: 1.33;
   border-radius: 0;
@@ -3440,8 +3440,8 @@ tbody.collapse.in {
 select.input-group-lg > .form-control,
 select.input-group-lg > .input-group-addon,
 select.input-group-lg > .input-group-btn > .btn {
-  height: 48px;
-  line-height: 48px;
+  height: 60px;
+  line-height: 60px;
 }
 textarea.input-group-lg > .form-control,
 textarea.input-group-lg > .input-group-addon,
@@ -3454,8 +3454,8 @@ select[multiple].input-group-lg > .input-group-btn > .btn {
 .input-group-sm > .form-control,
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .btn {
-  height: 30px;
-  padding: 5px 10px;
+  height: 36px;
+  padding: 8px 12px;
   font-size: 12px;
   line-height: 1.5;
   border-radius: 0;
@@ -3463,8 +3463,8 @@ select[multiple].input-group-lg > .input-group-btn > .btn {
 select.input-group-sm > .form-control,
 select.input-group-sm > .input-group-addon,
 select.input-group-sm > .input-group-btn > .btn {
-  height: 30px;
-  line-height: 30px;
+  height: 36px;
+  line-height: 36px;
 }
 textarea.input-group-sm > .form-control,
 textarea.input-group-sm > .input-group-addon,
@@ -3491,7 +3491,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   vertical-align: middle;
 }
 .input-group-addon {
-  padding: 6px 12px;
+  padding: 8px 12px;
   font-size: 15px;
   font-weight: normal;
   line-height: 1;
@@ -3502,12 +3502,12 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-radius: 0;
 }
 .input-group-addon.input-sm {
-  padding: 5px 10px;
+  padding: 8px 12px;
   font-size: 12px;
   border-radius: 0;
 }
 .input-group-addon.input-lg {
-  padding: 10px 16px;
+  padding: 16px 20px;
   font-size: 19px;
   border-radius: 0;
 }
@@ -3618,7 +3618,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .nav-tabs > li > a {
   margin-right: 2px;
-  line-height: 1.42857143;
+  line-height: 1.4;
   border: 1px solid transparent;
   border-radius: 0 0 0 0;
 }
@@ -3973,8 +3973,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-bottom: 1px solid transparent;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 3px;
+  margin-bottom: 3px;
 }
 @media (min-width: 768px) {
   .navbar-form .form-group {
@@ -4053,12 +4053,12 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-bottom-left-radius: 0;
 }
 .navbar-btn {
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 3px;
+  margin-bottom: 3px;
 }
 .navbar-btn.btn-sm {
-  margin-top: 7.5px;
-  margin-bottom: 7.5px;
+  margin-top: 4.5px;
+  margin-bottom: 4.5px;
 }
 .navbar-btn.btn-xs {
   margin-top: 11.5px;
@@ -4307,8 +4307,8 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination > li > span {
   position: relative;
   float: left;
-  padding: 6px 12px;
-  line-height: 1.42857143;
+  padding: 8px 12px;
+  line-height: 1.4;
   text-decoration: none;
   color: #008cba;
   background-color: transparent;
@@ -4359,7 +4359,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 }
 .pagination-lg > li > a,
 .pagination-lg > li > span {
-  padding: 10px 16px;
+  padding: 16px 20px;
   font-size: 19px;
 }
 .pagination-lg > li:first-child > a,
@@ -4374,7 +4374,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 }
 .pagination-sm > li > a,
 .pagination-sm > li > span {
-  padding: 5px 10px;
+  padding: 8px 12px;
   font-size: 12px;
 }
 .pagination-sm > li:first-child > a,
@@ -4573,7 +4573,7 @@ a.list-group-item.active > .badge,
   display: block;
   padding: 4px;
   margin-bottom: 21px;
-  line-height: 1.42857143;
+  line-height: 1.4;
   background-color: #ffffff;
   border: 1px solid #dddddd;
   border-radius: 0;
@@ -5416,14 +5416,14 @@ button.close {
 .modal-header {
   padding: 15px;
   border-bottom: 1px solid #e5e5e5;
-  min-height: 16.42857143px;
+  min-height: 16.4px;
 }
 .modal-header .close {
   margin-top: -2px;
 }
 .modal-title {
   margin: 0;
-  line-height: 1.42857143;
+  line-height: 1.4;
 }
 .modal-body {
   position: relative;
@@ -6188,6 +6188,14 @@ button.close {
   padding-top: 6px;
   padding-bottom: 6px;
 }
+.navbar-form {
+  margin-top: 7px;
+  margin-bottom: 5px;
+}
+.navbar-form .form-control {
+  height: auto;
+  padding: 4px 6px;
+}
 .navbar .dropdown-menu {
   border: none;
 }
@@ -6225,16 +6233,16 @@ button.close {
   background-color: #006687;
 }
 .btn {
-  padding: 14px 28px;
+  padding: 8px 12px;
 }
 .btn-lg {
-  padding: 16px 32px;
+  padding: 16px 20px;
 }
 .btn-sm {
-  padding: 8px 16px;
+  padding: 8px 12px;
 }
 .btn-xs {
-  padding: 4px 8px;
+  padding: 4px 6px;
 }
 .btn-group .btn ~ .dropdown-toggle {
   padding-left: 16px;
@@ -6250,7 +6258,7 @@ button.close {
 }
 .btn-group .dropdown-toggle.btn-default ~ .dropdown-menu {
   background-color: #e7e7e7;
-  border-color: #dadada;
+  border-color: #cccccc;
 }
 .btn-group .dropdown-toggle.btn-default ~ .dropdown-menu > li > a {
   color: #333333;
@@ -6328,9 +6336,6 @@ blockquote small {
 table {
   font-size: 12px;
 }
-input {
-  padding: 7px;
-}
 label,
 .control-label,
 .help-block,
@@ -6338,11 +6343,6 @@ label,
 .radio {
   font-size: 12px;
   font-weight: normal;
-}
-.input-group-addon,
-.input-group-btn .btn {
-  padding: 8px 14px;
-  font-size: 12px;
 }
 .nav .open > a,
 .nav .open > a:hover,

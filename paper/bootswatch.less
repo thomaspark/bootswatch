@@ -1,0 +1,398 @@
+// Paper 3.2.0
+// Bootswatch
+// -----------------------------------------------------
+
+@import url("//fonts.googleapis.com/css?family=Roboto:300,400,500");
+
+// Navbar =====================================================================
+
+.navbar {
+  border: none;
+  .box-shadow(0 1px 2px rgba(0,0,0,.3));
+
+  &-brand {
+    font-size: 24px;
+  }
+
+  &-inverse {
+    .form-control {
+      color: #fff;
+      .placeholder(@navbar-inverse-link-color);
+
+      &[type=text] {
+        .box-shadow(inset 0 -1px 0 @navbar-inverse-link-color);
+
+        &:focus {
+          .box-shadow(inset 0 -2px 0 #fff);
+        }
+      }
+    }
+  }
+
+  &-nav > li > .dropdown-menu {
+    margin-top: 2px;
+  }
+}
+
+// Buttons ====================================================================
+
+#btn(@class) {
+  .btn-@{class} {
+    @bg: "btn-@{class}-bg";
+    #gradient > .radial(@@bg 80%, darken(@@bg, 6%) 81%);
+    background-size: 200%;
+    background-position: 50%;
+    transition: background-size 2s;
+
+    &:hover {
+      background-size: 100%;
+      border-color: darken(@@bg, 6%);
+    }
+
+    &:active {
+      background-color: darken(@@bg, 6%);
+      #gradient > .radial(darken(@@bg, 6%) 10%, @@bg 11%);
+      background-size: 1000%;
+      .box-shadow(2px 2px 2px rgba(0,0,0,.3));
+    }
+  }
+}
+
+#btn(default);
+#btn(primary);
+#btn(success);
+#btn(info);
+#btn(warning);
+#btn(danger);
+
+.btn {
+  text-transform: uppercase;
+  border-right: none;
+  border-bottom: none;
+  .box-shadow(1px 1px 2px rgba(0,0,0,.3));
+  .transition(all 0.2s);
+
+  &-link {
+    .box-shadow(none);
+
+    &:hover,
+    &:focus {
+      color: @brand-primary;
+      text-decoration: none;
+    }
+  }
+
+  &-default.disabled {
+    border: 1px solid @btn-default-border;
+  }
+}
+
+// Typography =================================================================
+
+body {
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: .1px;
+  text-rendering: optimizeLegibility;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+input,
+button {
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: .1px;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  .transition(all 0.2s);
+}
+
+// Tables =====================================================================
+
+// Forms ======================================================================
+
+textarea,
+textarea.form-control,
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=number],
+[type=text].form-control,
+[type=password].form-control {
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  .box-shadow(inset 0 -1px 0 #ddd);
+  font-size: 16px;
+
+  &:focus {
+    .box-shadow(inset 0 -2px 0 @brand-primary);
+  }
+
+  &[disabled],
+  &[readonly] {
+    .box-shadow(none);
+    border-bottom: 1px dotted #ddd;
+  }
+}
+
+select,
+select.form-control {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  .box-shadow(none);
+}
+
+.has-warning {
+  input,
+  .form-control,
+  input:focus,
+  .form-control:focus {
+    .box-shadow(inset 0 -2px 0 @brand-warning);
+  }
+}
+
+.has-error {
+  input,
+  .form-control,
+  input:focus,
+  .form-control:focus {
+    .box-shadow(inset 0 -2px 0 @brand-danger);
+  }
+}
+
+.has-success {
+  input,
+  .form-control,
+  input:focus,
+  .form-control:focus {
+    .box-shadow(inset 0 -2px 0 @brand-success);
+  }
+}
+
+// Navs =======================================================================
+
+.nav-tabs {
+  & > li > a {
+    border: none;
+    margin-right: 0;
+    color: @navbar-default-link-color;
+    .box-shadow(inset 0 -1px 0 #ddd);
+    .transition(all 0.2s);
+
+    &:hover {
+      background-color: transparent;
+      .box-shadow(inset 0 -2px 0 @brand-primary);
+      color: @brand-primary;
+    }
+  }
+
+  & > li.active > a {
+    border: none;
+    .box-shadow(inset 0 -2px 0 @brand-primary);
+    color: @brand-primary;
+
+    &:hover {
+      border: none;
+      color: @brand-primary;
+    }
+  }
+
+  & > li.disabled > a {
+    .box-shadow(inset 0 -1px 0 #ddd);
+  }
+
+  &.nav-justified {
+
+    & > li > a,
+    & > li > a:hover,
+    & > .active > a,
+    & > .active > a:hover {
+      border: none;
+    }
+  }
+
+  .dropdown-menu {
+    margin-top: 0;
+  }
+}
+
+.dropdown-menu {
+  border: none;
+  .box-shadow(0 1px 4px rgba(0,0,0,.3));
+}
+
+// Indicators =================================================================
+
+.alert {
+  border: none;
+  color: #fff;
+
+  &-success {
+    background-color: @brand-success;
+  }
+
+  &-info {
+    background-color: @brand-info;
+  }
+
+  &-warning {
+    background-color: @brand-warning;
+  }
+
+  &-danger {
+    background-color: @brand-danger;
+  }
+
+  a:not(.close),
+  .alert-link {
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .close {
+    color: #fff;
+  }
+}
+
+.badge {
+  padding: 3px 6px 5px;
+}
+
+.progress {
+  position: relative;
+  z-index: 1;
+  height: 6px;
+  border-radius: 0;
+
+  .box-shadow(none);
+
+  &-bar {
+    .box-shadow(none);
+
+    &:last-child {
+      border-radius: 0 3px 3px 0;
+    }
+
+    &:last-child&:before {
+      display: block;
+      content: 'div::before';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      right: 0;
+      z-index: -1;
+      background-color: lighten(@progress-bar-bg, 35%);
+    }
+
+    &-success:last-child&:before {
+      background-color: lighten(@brand-success, 35%);
+    }
+
+    &-info:last-child&:before {
+      background-color: lighten(@brand-info, 45%);
+    }
+
+    &-warning:last-child&:before {
+      background-color: lighten(@brand-warning, 35%);
+    }
+
+    &-danger:last-child&:before {
+      background-color: lighten(@brand-danger, 25%);
+    }
+  }
+}
+
+// Progress bars ==============================================================
+
+// Containers =================================================================
+
+.close {
+  font-size: 34px;
+  font-weight: 300;
+  line-height: 24px;
+  opacity: 0.6;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.list-group {
+
+  &-item {
+    padding: 15px;
+  }
+
+  &-item-text {
+    color: @gray-light;
+  }
+}
+
+.well {
+  border-radius: 0;
+  .box-shadow(none);
+}
+
+.panel {
+  border: none;
+  border-radius: 2px;
+  .box-shadow(0 1px 4px rgba(0,0,0,.3));
+
+  &-heading {
+    border-bottom: none;
+  }
+
+  &-footer {
+    border-top: none;
+  }
+
+  &-success {
+    .panel-heading {
+      background-color: @brand-success;
+    }
+
+    .panel-title {
+      color: #fff;
+    }
+  }
+
+  &-info {
+    .panel-heading {
+      background-color: @brand-info;
+    }
+
+    .panel-title {
+      color: #fff;
+    }
+  }
+
+  &-warning {
+    .panel-heading {
+      background-color: @brand-warning;
+    }
+
+    .panel-title {
+      color: #fff;
+    }
+  }
+
+  &-danger {
+    .panel-heading {
+      background-color: @brand-danger;
+    }
+
+    .panel-title {
+      color: #fff;
+    }
+  }
+}
+
+.popover {
+  border: none;
+  .box-shadow(0 1px 4px rgba(0,0,0,.3));
+}

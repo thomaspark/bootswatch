@@ -1,5 +1,5 @@
 /*!
- * Bootswatch v3.2.0
+ * bootswatch v3.2.0
  * Homepage: http://bootswatch.com
  * Copyright 2012-2014 Thomas Park
  * Licensed under MIT
@@ -6347,9 +6347,6 @@ h6 {
 .text-info:hover {
   color: #5bc0de;
 }
-.table a:not(.btn) {
-  text-decoration: underline;
-}
 .table .success,
 .table .warning,
 .table .danger,
@@ -6468,7 +6465,8 @@ legend {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff484e55', endColorstr='#ff313539', GradientType=0);
   filter: none;
 }
-.pagination > li > a {
+.pagination > li > a,
+.pagination > li > span {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   background-image: -webkit-linear-gradient(#484e55, #3a3f44 60%, #313539);
   background-image: -o-linear-gradient(#484e55, #3a3f44 60%, #313539);
@@ -6477,7 +6475,8 @@ legend {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff484e55', endColorstr='#ff313539', GradientType=0);
   filter: none;
 }
-.pagination > li > a:hover {
+.pagination > li > a:hover,
+.pagination > li > span:hover {
   background-image: -webkit-linear-gradient(#020202, #101112 40%, #191b1d);
   background-image: -o-linear-gradient(#020202, #101112 40%, #191b1d);
   background-image: linear-gradient(#020202, #101112 40%, #191b1d);
@@ -6485,7 +6484,8 @@ legend {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff020202', endColorstr='#ff191b1d', GradientType=0);
   filter: none;
 }
-.pagination > li.active > a {
+.pagination > li.active > a,
+.pagination > li.active > span {
   background-image: -webkit-linear-gradient(#020202, #101112 40%, #191b1d);
   background-image: -o-linear-gradient(#020202, #101112 40%, #191b1d);
   background-image: linear-gradient(#020202, #101112 40%, #191b1d);
@@ -6494,7 +6494,9 @@ legend {
   filter: none;
 }
 .pagination > li.disabled > a,
-.pagination > li.disabled > a:hover {
+.pagination > li.disabled > a:hover,
+.pagination > li.disabled > span,
+.pagination > li.disabled > span:hover {
   background-color: transparent;
   background-image: -webkit-linear-gradient(#484e55, #3a3f44 60%, #313539);
   background-image: -o-linear-gradient(#484e55, #3a3f44 60%, #313539);

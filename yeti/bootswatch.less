@@ -25,6 +25,16 @@
     padding-bottom: 6px;
   }
 
+  &-form {
+    margin-top: 7px;
+    margin-bottom: 5px;
+
+    .form-control {
+      height: auto;
+      padding: @padding-xs-vertical @padding-xs-horizontal;
+    }
+  }
+
   .dropdown {
 
     &-menu {
@@ -84,18 +94,18 @@
 // Buttons ====================================================================
 
 .btn {
-  padding: 14px 28px;
+  padding: @padding-base-vertical @padding-base-horizontal;
 
   &-lg {
-    padding: 16px 32px;
+    padding: @padding-large-vertical @padding-large-horizontal;
   }
 
   &-sm {
-    padding: 8px 16px;
+    padding: @padding-small-vertical @padding-small-horizontal;
   }
 
   &-xs {
-    padding: 4px 8px;
+    padding: @padding-xs-vertical @padding-xs-horizontal;
   }
 }
 
@@ -230,10 +240,6 @@ table {
 
 // Forms ======================================================================
 
-input {
-  padding: 7px;
-}
-
 label,
 .control-label,
 .help-block,
@@ -241,12 +247,6 @@ label,
 .radio {
   font-size: @font-size-small;
   font-weight: normal;
-}
-
-.input-group-addon,
-.input-group-btn .btn {
-  padding: 8px 14px;
-  font-size: @font-size-small;
 }
 
 // Navs =======================================================================

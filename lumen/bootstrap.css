@@ -1,6 +1,6 @@
 @import url("//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic");
 /*!
- * Bootswatch v3.2.0
+ * bootswatch v3.2.0
  * Homepage: http://bootswatch.com
  * Copyright 2012-2014 Thomas Park
  * Licensed under MIT
@@ -2337,7 +2337,7 @@ input[type="checkbox"]:focus {
 }
 output {
   display: block;
-  padding-top: 7px;
+  padding-top: 8px;
   font-size: 14px;
   line-height: 1.42857143;
   color: #555555;
@@ -2345,8 +2345,8 @@ output {
 .form-control {
   display: block;
   width: 100%;
-  height: 36px;
-  padding: 6px 12px;
+  height: 38px;
+  padding: 7px 12px;
   font-size: 14px;
   line-height: 1.42857143;
   color: #555555;
@@ -2393,20 +2393,20 @@ input[type="date"],
 input[type="time"],
 input[type="datetime-local"],
 input[type="month"] {
-  line-height: 36px;
+  line-height: 38px;
   line-height: 1.42857143 \0;
 }
 input[type="date"].input-sm,
 input[type="time"].input-sm,
 input[type="datetime-local"].input-sm,
 input[type="month"].input-sm {
-  line-height: 30px;
+  line-height: 28px;
 }
 input[type="date"].input-lg,
 input[type="time"].input-lg,
 input[type="datetime-local"].input-lg,
 input[type="month"].input-lg {
-  line-height: 46px;
+  line-height: 52px;
 }
 .form-group {
   margin-bottom: 15px;
@@ -2473,8 +2473,8 @@ fieldset[disabled] .checkbox label {
   cursor: not-allowed;
 }
 .form-control-static {
-  padding-top: 7px;
-  padding-bottom: 7px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   margin-bottom: 0;
 }
 .form-control-static.input-lg,
@@ -2484,15 +2484,15 @@ fieldset[disabled] .checkbox label {
 }
 .input-sm,
 .form-horizontal .form-group-sm .form-control {
-  height: 30px;
-  padding: 5px 10px;
+  height: 28px;
+  padding: 4px 10px;
   font-size: 12px;
   line-height: 1.5;
   border-radius: 2px;
 }
 select.input-sm {
-  height: 30px;
-  line-height: 30px;
+  height: 28px;
+  line-height: 28px;
 }
 textarea.input-sm,
 select[multiple].input-sm {
@@ -2500,15 +2500,15 @@ select[multiple].input-sm {
 }
 .input-lg,
 .form-horizontal .form-group-lg .form-control {
-  height: 46px;
-  padding: 10px 16px;
+  height: 52px;
+  padding: 13px 16px;
   font-size: 18px;
   line-height: 1.33;
   border-radius: 5px;
 }
 select.input-lg {
-  height: 46px;
-  line-height: 46px;
+  height: 52px;
+  line-height: 52px;
 }
 textarea.input-lg,
 select[multiple].input-lg {
@@ -2518,7 +2518,7 @@ select[multiple].input-lg {
   position: relative;
 }
 .has-feedback .form-control {
-  padding-right: 45px;
+  padding-right: 47.5px;
 }
 .form-control-feedback {
   position: absolute;
@@ -2526,20 +2526,20 @@ select[multiple].input-lg {
   right: 0;
   z-index: 2;
   display: block;
-  width: 36px;
-  height: 36px;
-  line-height: 36px;
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
   text-align: center;
 }
 .input-lg + .form-control-feedback {
-  width: 46px;
-  height: 46px;
-  line-height: 46px;
+  width: 52px;
+  height: 52px;
+  line-height: 52px;
 }
 .input-sm + .form-control-feedback {
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
 }
 .has-success .help-block,
 .has-success .control-label,
@@ -2681,11 +2681,11 @@ select[multiple].input-lg {
 .form-horizontal .checkbox-inline {
   margin-top: 0;
   margin-bottom: 0;
-  padding-top: 7px;
+  padding-top: 8px;
 }
 .form-horizontal .radio,
 .form-horizontal .checkbox {
-  min-height: 27px;
+  min-height: 28px;
 }
 .form-horizontal .form-group {
   margin-left: -15px;
@@ -2695,7 +2695,7 @@ select[multiple].input-lg {
   .form-horizontal .control-label {
     text-align: right;
     margin-bottom: 0;
-    padding-top: 7px;
+    padding-top: 8px;
   }
 }
 .form-horizontal .has-feedback .form-control-feedback {
@@ -2704,12 +2704,12 @@ select[multiple].input-lg {
 }
 @media (min-width: 768px) {
   .form-horizontal .form-group-lg .control-label {
-    padding-top: 14.3px;
+    padding-top: 18.29px;
   }
 }
 @media (min-width: 768px) {
   .form-horizontal .form-group-sm .control-label {
-    padding-top: 6px;
+    padding-top: 5px;
   }
 }
 .btn {
@@ -2722,7 +2722,7 @@ select[multiple].input-lg {
   background-image: none;
   border: 1px solid transparent;
   white-space: nowrap;
-  padding: 6px 12px;
+  padding: 7px 12px;
   font-size: 14px;
   line-height: 1.42857143;
   border-radius: 4px;
@@ -3041,14 +3041,14 @@ fieldset[disabled] .btn-link:focus {
 }
 .btn-lg,
 .btn-group-lg > .btn {
-  padding: 10px 16px;
+  padding: 13px 16px;
   font-size: 18px;
   line-height: 1.33;
   border-radius: 5px;
 }
 .btn-sm,
 .btn-group-sm > .btn {
-  padding: 5px 10px;
+  padding: 4px 10px;
   font-size: 12px;
   line-height: 1.5;
   border-radius: 2px;
@@ -3431,8 +3431,8 @@ tbody.collapse.in {
 .input-group-lg > .form-control,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn {
-  height: 46px;
-  padding: 10px 16px;
+  height: 52px;
+  padding: 13px 16px;
   font-size: 18px;
   line-height: 1.33;
   border-radius: 5px;
@@ -3440,8 +3440,8 @@ tbody.collapse.in {
 select.input-group-lg > .form-control,
 select.input-group-lg > .input-group-addon,
 select.input-group-lg > .input-group-btn > .btn {
-  height: 46px;
-  line-height: 46px;
+  height: 52px;
+  line-height: 52px;
 }
 textarea.input-group-lg > .form-control,
 textarea.input-group-lg > .input-group-addon,
@@ -3454,8 +3454,8 @@ select[multiple].input-group-lg > .input-group-btn > .btn {
 .input-group-sm > .form-control,
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .btn {
-  height: 30px;
-  padding: 5px 10px;
+  height: 28px;
+  padding: 4px 10px;
   font-size: 12px;
   line-height: 1.5;
   border-radius: 2px;
@@ -3463,8 +3463,8 @@ select[multiple].input-group-lg > .input-group-btn > .btn {
 select.input-group-sm > .form-control,
 select.input-group-sm > .input-group-addon,
 select.input-group-sm > .input-group-btn > .btn {
-  height: 30px;
-  line-height: 30px;
+  height: 28px;
+  line-height: 28px;
 }
 textarea.input-group-sm > .form-control,
 textarea.input-group-sm > .input-group-addon,
@@ -3491,7 +3491,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   vertical-align: middle;
 }
 .input-group-addon {
-  padding: 6px 12px;
+  padding: 7px 12px;
   font-size: 14px;
   font-weight: normal;
   line-height: 1;
@@ -3502,12 +3502,12 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-radius: 4px;
 }
 .input-group-addon.input-sm {
-  padding: 5px 10px;
+  padding: 4px 10px;
   font-size: 12px;
   border-radius: 2px;
 }
 .input-group-addon.input-lg {
-  padding: 10px 16px;
+  padding: 13px 16px;
   font-size: 18px;
   border-radius: 5px;
 }
@@ -3973,8 +3973,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-bottom: 1px solid transparent;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
-  margin-top: 7px;
-  margin-bottom: 7px;
+  margin-top: 6px;
+  margin-bottom: 6px;
 }
 @media (min-width: 768px) {
   .navbar-form .form-group {
@@ -4053,12 +4053,12 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-bottom-left-radius: 0;
 }
 .navbar-btn {
-  margin-top: 7px;
-  margin-bottom: 7px;
+  margin-top: 6px;
+  margin-bottom: 6px;
 }
 .navbar-btn.btn-sm {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 11px;
+  margin-bottom: 11px;
 }
 .navbar-btn.btn-xs {
   margin-top: 14px;
@@ -4307,7 +4307,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination > li > span {
   position: relative;
   float: left;
-  padding: 6px 12px;
+  padding: 7px 12px;
   line-height: 1.42857143;
   text-decoration: none;
   color: #555555;
@@ -4359,7 +4359,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 }
 .pagination-lg > li > a,
 .pagination-lg > li > span {
-  padding: 10px 16px;
+  padding: 13px 16px;
   font-size: 18px;
 }
 .pagination-lg > li:first-child > a,
@@ -4374,7 +4374,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 }
 .pagination-sm > li > a,
 .pagination-sm > li > span {
-  padding: 5px 10px;
+  padding: 4px 10px;
   font-size: 12px;
 }
 .pagination-sm > li:first-child > a,
@@ -6175,7 +6175,7 @@ button.close {
   border-width: 0 1px 4px 1px;
 }
 .btn {
-  padding: 8px 12px 7px;
+  padding: 9px 12px 7px;
   border-width: 0 1px 4px 1px;
   font-size: 12px;
   font-weight: bold;
@@ -6193,16 +6193,16 @@ button.close {
 }
 .btn-lg,
 .btn-group-lg > .btn {
-  padding: 14px 16px 13px;
+  padding: 15px 16px 13px;
   line-height: 15px;
 }
 .btn-sm,
 .btn-group-sm > .btn {
-  padding: 4px 10px;
+  padding: 6px 10px 4px;
 }
 .btn-xs,
 .btn-group-xs > .btn {
-  padding: 1px 5px;
+  padding: 3px 5px 1px;
 }
 .btn-default:hover,
 .btn-default:focus,
@@ -6390,8 +6390,8 @@ label {
 .nav-tabs .open > a,
 .nav-tabs .open > a:hover,
 .nav-tabs .open > a:focus {
-  padding-top: 13px;
-  padding-bottom: 13px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   margin-top: 0;
 }
 .nav-tabs .open > a,
@@ -6401,8 +6401,8 @@ label {
 }
 .nav-tabs > li.disabled > a:hover,
 .nav-tabs > li.disabled > a:focus {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 13px;
+  padding-bottom: 13px;
   margin-top: 6px;
 }
 .dropdown-menu {
