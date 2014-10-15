@@ -352,7 +352,7 @@
       .column-selection-container {
         margin-bottom: 25px;
         &:last-child {
-          margin-bottom: none;
+          margin-bottom: 0;
         }
 
         .row-header {
@@ -362,6 +362,11 @@
 
         .column {
           cursor: pointer;
+
+          .title {
+            max-width: 80%
+          }
+
           .bl-icon.icon-check {
             font-size: 16px;
           }
