@@ -66,11 +66,15 @@ button, input {
       .remove-hover-if-disabled(@btnColor);
     }
     &.btn-titletab {
-      color: @night;
+      color: @clay-plus-2;
       background: none;
-      border-bottom: solid @night 3px !important;
+      border-bottom: solid @clay-plus-2 3px !important;
       border-radius: 0;
       padding-bottom: 10px;
+      &.active {
+        color: @night;
+        border-bottom-color: @night;
+      }
     }
     &.btn-success {
       background-color: @mint-minus-2;
