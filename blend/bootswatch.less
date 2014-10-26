@@ -51,15 +51,19 @@ body, nav {
 
 // Dropdowns =================================================================
 
-.dropdown-menu > li > a {
-  padding: 3px 15px;
-  font-size: 12px;
-  color: @night;
+.dropdown-menu {
   .radius(2px);
-  &:hover {
-    // overriding bootstrap styles
-    background-image: none !important;
-    background-color: @night !important;
+
+  &> li > a {
+    padding: 3px 15px;
+    font-size: 12px;
+    color: @night;
+
+    &:hover {
+      // overriding bootstrap styles
+      background-image: none !important;
+      background-color: @night !important;
+    }
   }
 }
 
