@@ -350,7 +350,6 @@
     }
 
     .column-container {
-      padding: 15px;
       border: solid @clay 1px;
       .radius(2px);
       font-size: 12px;
@@ -367,10 +366,16 @@
         .row-header {
           text-transform: uppercase;
           font-weight: 600;
+          padding: 0 15px;
         }
 
         .column {
           cursor: pointer;
+          padding: 3px 15px;
+          &:hover {
+            background-color: @night;
+            color: white;
+          }
 
           .title {
             max-width: 80%
