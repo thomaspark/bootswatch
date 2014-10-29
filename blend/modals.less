@@ -310,18 +310,27 @@
       border-top: @borderStyle;
       padding-top: @genSpacing;
       .filter {
-        text-align: right;
+        text-align: left;
         padding-bottom: 15px;
         border-bottom: @borderStyle;
         margin-bottom: @genSpacing;
 
         .filter-dropdown {
-          width: 25%;
+          width: 27%;
         }
 
         .filter-text {
-          width: 70%;
-          float: right;
+          width: 61%;
+          display: inline-block;
+        }
+
+        .delete-filter {
+          font-size: 18px;
+          display: inline-block;
+          width: 6%;
+          text-align: right;
+          height: 25px;
+          vertical-align: middle;
         }
 
         &:last-child {
