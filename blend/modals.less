@@ -325,12 +325,18 @@
         }
 
         .delete-filter {
-          font-size: 18px;
+          font-size: 22px;
           display: inline-block;
-          width: 6%;
+          width: 5%;
           text-align: right;
-          height: 25px;
+          height: 23px;
           vertical-align: middle;
+          cursor: pointer;
+
+          &.disabled {
+            cursor: default;
+            color: @clay;
+          }
         }
 
         &:last-child {
