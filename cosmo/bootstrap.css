@@ -4950,7 +4950,7 @@ a.list-group-item:focus {
   z-index: 2;
   color: #ffffff;
   background-color: #2780e3;
-  border-color: #2780e3;
+  border-color: #dddddd;
 }
 .list-group-item.active .list-group-item-heading,
 .list-group-item.active:hover .list-group-item-heading,
@@ -6346,9 +6346,13 @@ body {
 .text-info:hover {
   color: #9954bb;
 }
-table a:not(.btn):not(bd > a),
-.table a:not(.btn):not(bd > a) {
+table a:not(.btn),
+.table a:not(.btn) {
   text-decoration: underline;
+}
+table .dropdown-menu a,
+.table .dropdown-menu a {
+  text-decoration: none;
 }
 table .success,
 .table .success,
