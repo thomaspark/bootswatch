@@ -6704,6 +6704,32 @@ a.thumbnail:focus,
 a.thumbnail.active {
   border-color: #0c0d0e;
 }
+a.list-group-item.active,
+a.list-group-item.active:hover,
+a.list-group-item.active:focus {
+  border-color: rgba(0, 0, 0, 0.6);
+}
+a.list-group-item-success.active {
+  background-color: #62c462;
+}
+a.list-group-item-success.active:hover,
+a.list-group-item-success.active:focus {
+  background-color: #4fbd4f;
+}
+a.list-group-item-warning.active {
+  background-color: #f89406;
+}
+a.list-group-item-warning.active:hover,
+a.list-group-item-warning.active:focus {
+  background-color: #df8505;
+}
+a.list-group-item-danger.active {
+  background-color: #ee5f5b;
+}
+a.list-group-item-danger.active:hover,
+a.list-group-item-danger.active:focus {
+  background-color: #ec4844;
+}
 .jumbotron {
   border: 1px solid rgba(0, 0, 0, 0.6);
 }

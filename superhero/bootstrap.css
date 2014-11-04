@@ -6494,6 +6494,32 @@ label,
   -webkit-box-shadow: none;
   box-shadow: none;
 }
+a.list-group-item.active,
+a.list-group-item.active:hover,
+a.list-group-item.active:focus {
+  border: none;
+}
+a.list-group-item-success.active {
+  background-color: #5cb85c;
+}
+a.list-group-item-success.active:hover,
+a.list-group-item-success.active:focus {
+  background-color: #4cae4c;
+}
+a.list-group-item-warning.active {
+  background-color: #f0ad4e;
+}
+a.list-group-item-warning.active:hover,
+a.list-group-item-warning.active:focus {
+  background-color: #eea236;
+}
+a.list-group-item-danger.active {
+  background-color: #d9534f;
+}
+a.list-group-item-danger.active:hover,
+a.list-group-item-danger.active:focus {
+  background-color: #d43f3a;
+}
 .panel {
   border: none;
 }

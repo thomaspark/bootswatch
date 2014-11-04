@@ -6542,6 +6542,32 @@ textarea:focus {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
+a.list-group-item.active,
+a.list-group-item.active:hover,
+a.list-group-item.active:focus {
+  border-color: #464545;
+}
+a.list-group-item-success.active {
+  background-color: #00bc8c;
+}
+a.list-group-item-success.active:hover,
+a.list-group-item-success.active:focus {
+  background-color: #00a379;
+}
+a.list-group-item-warning.active {
+  background-color: #f39c12;
+}
+a.list-group-item-warning.active:hover,
+a.list-group-item-warning.active:focus {
+  background-color: #e08e0b;
+}
+a.list-group-item-danger.active {
+  background-color: #e74c3c;
+}
+a.list-group-item-danger.active:hover,
+a.list-group-item-danger.active:focus {
+  background-color: #e43725;
+}
 .popover {
   color: #ffffff;
 }
