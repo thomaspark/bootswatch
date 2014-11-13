@@ -1,9 +1,12 @@
 module.exports = function (grunt) {
+  grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-watch');
+
+  var configBridge = grunt.file.readJSON('./bower_components/bootstrap/grunt/configBridge.json', { encoding: 'utf8' });
 
   // Project configuration.
   grunt.initConfig({
@@ -44,6 +47,14 @@ module.exports = function (grunt) {
           compress: false
         },
         files: {}
+      }
+    },
+    autoprefixer: {
+      options: {
+        browsers: configBridge.config.autoprefixerBrowsers
+      },
+      dist: {
+        src: ['*/bootstrap.css', '*/bootstra.min.css']
       }
     },
     watch: {
@@ -103,8 +114,13 @@ module.exports = function (grunt) {
     grunt.config('less.dist.files', files);
     grunt.config('less.dist.options.compress', false);
 
-    grunt.task.run(['concat', 'less:dist', 'clean:build',
+    grunt.task.run(['concat', 'less:dist', 'prefix:' + lessDest, 'clean:build',
       compress ? 'compress:'+lessDest+':'+'<%=builddir%>/' + theme + '/bootstrap.min.css':'none']);
+  });
+
+  grunt.registerTask('prefix', 'autoprefix a generic css', function(fileSrc) {
+    grunt.config('autoprefixer.dist.src', fileSrc);
+    grunt.task.run('autoprefixer');
   });
 
   grunt.registerTask('compress', 'compress a generic css', function(fileSrc, fileDst) {
