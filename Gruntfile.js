@@ -54,7 +54,7 @@ module.exports = function (grunt) {
         browsers: configBridge.config.autoprefixerBrowsers
       },
       dist: {
-        src: ['*/bootstrap.css', '*/bootstra.min.css']
+        src: '*/bootstrap.css'
       }
     },
     watch: {
