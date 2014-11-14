@@ -183,7 +183,7 @@
 //** Text color for `<input>`s
 @input-color:                    @gray;
 //** `<input>` border color
-@input-border:                   @navbar-default-border;
+@input-border:                   darken(#f8f8f8, 6.5%);
 
 // TODO: Rename `@input-border-radius` to `@input-border-radius-base` in v4
 //** Default `.form-control` border radius
@@ -225,7 +225,7 @@
 //** Background for the dropdown menu.
 @dropdown-bg:                    #fff;
 //** Dropdown menu `border-color`.
-@dropdown-border:                @navbar-default-border;
+@dropdown-border:                @input-border;
 //** Dropdown menu `border-color` **for IE8**.
 @dropdown-fallback-border:       #ccc;
 //** Divider color for between dropdown items.
@@ -356,7 +356,7 @@
 
 @navbar-default-color:             @text-color;
 @navbar-default-bg:                #f8f8f8;
-@navbar-default-border:            darken(@navbar-default-bg, 6.5%);
+@navbar-default-border:            @input-border;
 
 // Navbar links
 @navbar-default-link-color:                @gray-light;
@@ -476,7 +476,7 @@
 
 @jumbotron-padding:              30px;
 @jumbotron-color:                inherit;
-@jumbotron-bg:                   @well-bg;
+@jumbotron-bg:                   #fafafa;
 @jumbotron-heading-color:        inherit;
 @jumbotron-font-size:            ceil((@font-size-base * 1.5));
 
@@ -635,7 +635,7 @@
 //##
 
 //** Background color of the whole progress component
-@progress-bg:                 #fafafa;
+@progress-bg:                 @jumbotron-bg;
 //** Progress bar text color
 @progress-bar-color:          #fff;
 //** Variable for setting rounded corners on progress bar.
@@ -749,7 +749,7 @@
 //
 //##
 
-@well-bg:                     #fafafa;
+@well-bg:                     @jumbotron-bg;
 @well-border:                 darken(@well-bg, 7%);
 
 
