@@ -129,13 +129,13 @@
 //** Default background color used for all tables.
 @table-bg:                      transparent;
 //** Background color used for `.table-striped`.
-@table-bg-accent:               @well-bg;
+@table-bg-accent:               @gray-light;
 //** Background color used for `.table-hover`.
-@table-bg-hover:                darken(@well-bg, 3%);
+@table-bg-hover:                darken(@gray-light, 3%);
 @table-bg-active:               @table-bg-hover;
 
 //** Border color for table and cell borders.
-@table-border-color:            @navbar-default-bg;
+@table-border-color:            @gray-light;  
 
 
 //== Buttons
@@ -145,7 +145,7 @@
 @btn-font-weight:                normal;
 
 @btn-default-color:              #fff;
-@btn-default-bg:                 @navbar-default-bg;
+@btn-default-bg:                 @gray-light;
 @btn-default-border:             transparent;
 
 @btn-primary-color:              #fff;
@@ -207,7 +207,7 @@
 @input-height-small:             (floor(@font-size-small * @line-height-small) + (@padding-small-vertical * 2) + 2);
 
 @legend-color:                   @text-color;
-@legend-border-color:            @table-border-color;
+@legend-border-color:            @gray-light;
 
 //** Background color for textual input addons
 @input-group-addon-bg:           @btn-default-bg;
@@ -223,7 +223,7 @@
 //## Dropdown menu container and contents.
 
 //** Background for the dropdown menu.
-@dropdown-bg:                    @well-bg;
+@dropdown-bg:                    @gray-light;
 //** Dropdown menu `border-color`.
 @dropdown-border:                transparent;
 //** Dropdown menu `border-color` **for IE8**.
@@ -236,7 +236,7 @@
 //** Hover color for dropdown links.
 @dropdown-link-hover-color:      @text-color;
 //** Hover background for dropdown links.
-@dropdown-link-hover-bg:         @navbar-default-link-hover-bg;
+@dropdown-link-hover-bg:         darken(@gray-light, 3%);
 
 //** Active dropdown menu item text color.
 @dropdown-link-active-color:     @component-active-color;
@@ -355,15 +355,15 @@
 @navbar-collapse-max-height:       340px;
 
 @navbar-default-color:             @text-color;
-@navbar-default-bg:                #4E5D6C;
+@navbar-default-bg:                @gray-light;
 @navbar-default-border:            transparent;
 
 // Navbar links
 @navbar-default-link-color:                @text-color;
 @navbar-default-link-hover-color:          @navbar-default-link-color;
-@navbar-default-link-hover-bg:             darken(@navbar-default-bg, 3%);
+@navbar-default-link-hover-bg:             @dropdown-link-hover-bg;
 @navbar-default-link-active-color:         @navbar-default-link-color;
-@navbar-default-link-active-bg:            darken(@navbar-default-bg, 3%);
+@navbar-default-link-active-bg:            @dropdown-link-hover-bg;
 @navbar-default-link-disabled-color:       #ccc;
 @navbar-default-link-disabled-bg:          transparent;
 
@@ -410,22 +410,22 @@
 
 //=== Shared nav styles
 @nav-link-padding:                          10px 15px;
-@nav-link-hover-bg:                         @well-bg;
+@nav-link-hover-bg:                         @gray-light;
 
-@nav-disabled-link-color:                   @well-bg;
-@nav-disabled-link-hover-color:             @well-bg;
+@nav-disabled-link-color:                   @gray-light;
+@nav-disabled-link-hover-color:             @gray-light;
 
 //== Tabs
 @nav-tabs-border-color:                     transparent;
 
-@nav-tabs-link-hover-border-color:          @table-border-color;
+@nav-tabs-link-hover-border-color:          @gray-light;
 
 @nav-tabs-active-link-hover-bg:             @body-bg;
 @nav-tabs-active-link-hover-color:          @text-color;
-@nav-tabs-active-link-hover-border-color:   @table-border-color;
+@nav-tabs-active-link-hover-border-color:   @gray-light;
 
-@nav-tabs-justified-link-border-color:            @table-border-color;
-@nav-tabs-justified-active-link-border-color:     @table-border-color;
+@nav-tabs-justified-link-border-color:            @gray-light;
+@nav-tabs-justified-active-link-border-color:     @gray-light;
 
 //== Pills
 @nav-pills-border-radius:                   @border-radius-base;
@@ -438,7 +438,7 @@
 //##
 
 @pagination-color:                     @text-color;
-@pagination-bg:                        @well-bg;
+@pagination-bg:                        @gray-light;
 @pagination-border:                    transparent;
 
 @pagination-hover-color:               @text-color;
@@ -450,7 +450,7 @@
 @pagination-active-border:             transparent;
 
 @pagination-disabled-color:            darken(@table-bg-hover, 10%);
-@pagination-disabled-bg:               @well-bg;
+@pagination-disabled-bg:               @gray-light;
 @pagination-disabled-border:           transparent;
 
 
@@ -476,7 +476,7 @@
 
 @jumbotron-padding:              30px;
 @jumbotron-color:                inherit;
-@jumbotron-bg:                   @well-bg;
+@jumbotron-bg:                   @gray-light;
 @jumbotron-heading-color:        inherit;
 @jumbotron-font-size:            ceil((@font-size-base * 1.5));
 
@@ -525,7 +525,7 @@
 //##
 
 //** Popover body background color
-@popover-bg:                          @well-bg;
+@popover-bg:                          @gray-light;
 //** Popover maximum width
 @popover-max-width:                   276px;
 //** Popover border color
@@ -585,7 +585,7 @@
 @modal-title-line-height:     @line-height-base;
 
 //** Background color of modal content area
-@modal-content-bg:                             @well-bg;
+@modal-content-bg:                             @gray-light;
 //** Modal content border color
 @modal-content-border-color:                   transparent;
 //** Modal content border color **for IE8**
@@ -635,7 +635,7 @@
 //##
 
 //** Background color of the whole progress component
-@progress-bg:                 @well-bg;
+@progress-bg:                 @gray-light;
 //** Progress bar text color
 @progress-bar-color:          #fff;
 //** Variable for setting rounded corners on progress bar.
@@ -658,7 +658,7 @@
 //##
 
 //** Background color on `.list-group-item`
-@list-group-bg:                 @well-bg;
+@list-group-bg:                 @gray-light;
 //** `.list-group-item` border color
 @list-group-border:             transparent;
 //** List group border radius
@@ -691,7 +691,7 @@
 //
 //##
 
-@panel-bg:                    @well-bg;
+@panel-bg:                    @gray-light;
 @panel-body-padding:          15px;
 @panel-heading-padding:       10px 15px;
 @panel-footer-padding:        @panel-heading-padding;
@@ -747,9 +747,9 @@
 
 //== Wells
 //
-//##
+//## 
 
-@well-bg:                     @table-border-color;
+@well-bg:                     @gray-light;
 @well-border:                 transparent;
 
 
@@ -779,7 +779,7 @@
 @breadcrumb-padding-vertical:   8px;
 @breadcrumb-padding-horizontal: 15px;
 //** Breadcrumb background color
-@breadcrumb-bg:                 @well-bg;
+@breadcrumb-bg:                 @gray-light;
 //** Breadcrumb text color
 @breadcrumb-color:              @text-color;
 //** Text color of current page in the breadcrumb
@@ -837,9 +837,9 @@
 //** Horizontal offset for forms and lists.
 @component-offset-horizontal: 180px;
 //** Text muted color
-@text-muted:                  @table-border-color;
+@text-muted:                  @gray-light;
 //** Abbreviations and acronyms border color
-@abbr-border-color:           @table-border-color;
+@abbr-border-color:           @gray-light;
 //** Headings small color
 @headings-small-color:        @text-color;
 //** Blockquote small color
@@ -847,10 +847,10 @@
 //** Blockquote font size
 @blockquote-font-size:        (@font-size-base * 1.25);
 //** Blockquote border color
-@blockquote-border-color:     @table-border-color;
+@blockquote-border-color:     @gray-light;
 //** Page header border color
 @page-header-border-color:    @gray-lighter;
 //** Width of horizontal description list titles
 @dl-horizontal-offset:        @component-offset-horizontal;
 //** Horizontal line color.
-@hr-border:                   @table-border-color;
+@hr-border:                   @gray-light;
