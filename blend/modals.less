@@ -1,9 +1,6 @@
-.modal-backdrop {
-  @modalBackgroundC: rgba(26 ,45 ,55, 0.8);
-  background-color: @modalBackgroundC !important;
-}
 
 .modal {
+  @modalBackgroundC: rgba(26 ,45 ,55, 0.8);
   @modalW: 500px;
   @modalPadX: 25px;
   @modalHeaderBg: rgb(240,240,240);
@@ -29,12 +26,7 @@
   @modalInputPadX: 6px;
   @modalInputPadY: 3px;
   .radius(0);
-  .box-shadow(0 1px 5px 0 rgba(0,0,0,0.5));
-  width: @modalW;
-
-  &.fade {
-    top: 30%;
-  }
+  background-color: @modalBackgroundC;
 
 
   .modal-header, .modal-body, .modal-footer {
@@ -272,9 +264,6 @@
 }
 
 .blend-modal {
-  .radius(3px);
-  background-color: @clay-minus-4;
-
   // Other modal dialog classes.
   // TODO (il): Document these.
   &.loan-reassign {
@@ -284,9 +273,11 @@
   }
 
   &.small {
-    @width: 350px;
-    width: @width;
-    margin-left: -(@width / 2);
+    .modal-dialog {
+      @width: 350px;
+      width: @width;
+      margin-left: -(@width / 2);
+    }
   }
 
   .input-wrapper {
