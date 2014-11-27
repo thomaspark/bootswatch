@@ -1,5 +1,10 @@
 body {
-  padding-top: 50px;
+  > .navbar-transparent {
+    background-color: transparent;
+    .navbar-nav > .open > a {
+      background-color: transparent !important;
+    }
+  }
 }
 
 #banner {
@@ -75,8 +80,11 @@ footer {
 }
 
 .splash {
-  padding: 5em 0 2em;
+  padding: 9em 0 2em;
   background-color: #141d27;
+  background-image: url(../img/bg.png);
+  background-size: cover;
+  background-attachment: fixed;
   color: #fff;
   text-align: center;
 
