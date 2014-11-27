@@ -1,4 +1,14 @@
 (function(){
+  $(window).scroll(function () {
+      var top = $('body').scrollTop();
+      $('.splash').css({
+        'background-position': '0px -'+top/3+'px'
+      });
+      if(top > 50)
+        $('body > .navbar').removeClass('navbar-transparent');
+      else
+        $('body > .navbar').addClass('navbar-transparent');
+  });
 
   var $button = $("<div id='source-button' class='btn btn-primary btn-xs'>&lt; &gt;</div>").click(function(){
     var html = $(this).parent().html();
