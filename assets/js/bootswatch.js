@@ -1,6 +1,6 @@
 (function(){
   $(window).scroll(function () {
-      var top = $('body').scrollTop();
+      var top = $(document).scrollTop();
       $('.splash').css({
         'background-position': '0px -'+top/3+'px'
       });
