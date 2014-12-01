@@ -97,19 +97,22 @@
 @font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace;
 @font-family-base:        @font-family-sans-serif;
 
-@font-size-base:          12px;
-@font-size-large:         ceil(@font-size-base * 1.15); // ~18px
-@font-size-small:         ceil(@font-size-base * 0.75); // ~12px
+// Need to wrap the interior calcs in the floor and ceil functions in an extra set of parens
+// so they're eval'd to numbers before running through the function
 
-@font-size-h1:            floor(@font-size-base * 2.6); // ~36px
-@font-size-h2:            floor(@font-size-base * 2.15); // ~30px
-@font-size-h3:            ceil(@font-size-base * 1.7); // ~24px
-@font-size-h4:            ceil(@font-size-base * 1.25); // ~18px
+@font-size-base:          12px;
+@font-size-large:         ceil((@font-size-base * 1.15)); // ~18px
+@font-size-small:         ceil((@font-size-base * 0.75)); // ~12px
+
+@font-size-h1:            floor((@font-size-base * 2.6)); // ~36px
+@font-size-h2:            floor((@font-size-base * 2.15)); // ~30px
+@font-size-h3:            ceil((@font-size-base * 1.7)); // ~24px
+@font-size-h4:            ceil((@font-size-base * 1.25)); // ~18px
 @font-size-h5:            @font-size-base;
-@font-size-h6:            ceil(@font-size-base * 0.85); // ~12px
+@font-size-h6:            ceil((@font-size-base * 0.85)); // ~12px
 
 @line-height-base:        1.428571429; // 20/14
-@line-height-computed:    floor(@font-size-base * @line-height-base); // ~20px
+@line-height-computed:    floor((@font-size-base * @line-height-base)); // ~20px
 
 @headings-font-family:    @font-family-base;
 @headings-font-weight:    500;
@@ -185,7 +188,7 @@
 @btn-success-bg:                 @brand-success;
 @btn-success-border:             rgba(0,0,0,0);
 
-//Special 
+//Special
 @btn-warning-color:              @btn-default-color;
 @btn-warning-bg:                 @brand-warning;
 @btn-warning-border:             rgba(0,0,0,0);
@@ -215,8 +218,8 @@
 @input-color-placeholder:        @clay-plus-2;
 
 @input-height-base:              (@line-height-computed + (@padding-base-vertical * 2) + 2);
-@input-height-large:             (ceil(@font-size-large * @line-height-base) + (@padding-large-vertical * 2) + 2);
-@input-height-small:             (ceil(@font-size-small * @line-height-base) + (@padding-small-vertical * 2) + 2);
+@input-height-large:             (ceil((@font-size-large * @line-height-base)) + (@padding-large-vertical * 2) + 2);
+@input-height-small:             (ceil((@font-size-small * @line-height-base)) + (@padding-small-vertical * 2) + 2);
 
 @legend-color:                   @text-color;
 @legend-border-color:            #e5e5e5;
@@ -315,7 +318,7 @@
 @navbar-height:                    50px;
 @navbar-margin-bottom:             @line-height-computed;
 @navbar-border-radius:             @border-radius-base;
-@navbar-padding-horizontal:        floor(@grid-gutter-width / 2);  // ~15px
+@navbar-padding-horizontal:        floor((@grid-gutter-width / 2));  // ~15px
 @navbar-padding-vertical:          ((@navbar-height - @line-height-computed) / 2);
 
 @navbar-default-color:             #777;
@@ -427,7 +430,7 @@
 @jumbotron-color:                inherit;
 @jumbotron-bg:                   @gray-lighter;
 @jumbotron-heading-color:        inherit;
-@jumbotron-font-size:            ceil(@font-size-base * 1.5);
+@jumbotron-font-size:            ceil((@font-size-base * 1.5));
 
 
 // Form states and alerts
