@@ -165,16 +165,21 @@ nav.navbar-inverse {
   }
   .nav > li.dropdown > a {
     .Whitney();
+    @bgColor: #47606B;
     font-size: 12px;
     width: 30px;
     height: 30px;
-    background-color: #47606B;
+    background-color: @bgColor;
     font-weight: bold;
     letter-spacing: 0px;
     border-radius: 3px;
     text-align: center;
     padding: 6px 0 0 0;
     color: @clay-plus-2;
+
+    &:hover {
+      background-color: lighten(@bgColor, 10%);
+    }
 
     b.caret {
       margin-top: 9px;
