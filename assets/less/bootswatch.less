@@ -1,5 +1,27 @@
 body {
-  padding-top: 50px;
+    padding-top: 50px;
+  > .navbar {
+    -webkit-transition: background-color 300ms ease-in;
+    transition: background-color 300ms ease-in;
+  }
+  > .navbar-transparent {
+    background-color: transparent;
+    .navbar-nav > .open > a {
+      background-color: transparent !important;
+    }
+  }
+}
+
+#home {
+  padding-top: 0px;
+  .navbar-brand {
+    padding: 13.5px 15px 12.5px;
+    > img {
+      display: inline;
+      margin: 0 10px;
+      height: 100%;
+    }
+  }
 }
 
 #banner {
@@ -75,8 +97,11 @@ footer {
 }
 
 .splash {
-  padding: 5em 0 2em;
+  padding: 9em 0 2em;
   background-color: #141d27;
+  background-image: url(../img/bg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
   color: #fff;
   text-align: center;
 
