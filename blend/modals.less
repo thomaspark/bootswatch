@@ -28,6 +28,15 @@
   .radius(0);
   background-color: @modalBackgroundC;
 
+
+  // modal-small should be applied through the windowClass param of the
+  // modal config object
+  &.modal-small {
+    .modal-dialog {
+      width: 400px;
+    }
+  }
+
   .modal-dialog {
     top: 120px;
 
