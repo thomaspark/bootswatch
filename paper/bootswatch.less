@@ -139,6 +139,16 @@ input[type=number],
     .box-shadow(none);
     border-bottom: 1px dotted #ddd;
   }
+
+  &.input {
+    &-sm {
+      font-size: @font-size-small;
+    }
+
+    &-lg {
+      font-size: @font-size-large;
+    }
+  }
 }
 
 select,
@@ -156,9 +166,20 @@ select.form-control {
   background-position: right center;
   .box-shadow(inset 0 -1px 0 #ddd);
   font-size: 16px;
+  line-height: 1.5;
 
   &::-ms-expand {
     display: none;
+  }
+
+  &.input {
+    &-sm {
+      font-size: @font-size-small;
+    }
+
+    &-lg {
+      font-size: @font-size-large;
+    }
   }
 
   &:focus {
