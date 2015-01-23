@@ -2,7 +2,7 @@
 /*!
  * bootswatch v3.3.1+2
  * Homepage: http://bootswatch.com
- * Copyright 2012-2014 Thomas Park
+ * Copyright 2012-2015 Thomas Park
  * Licensed under MIT
  * Based on Bootstrap
 */
@@ -6336,14 +6336,14 @@ button.close {
 }
 .navbar-nav > li > a {
   padding: 8px 12px;
-  margin: 12px 6px;
+  margin: 12.5px 6px;
   border: 1px solid transparent;
   border-radius: 4px;
 }
 .navbar-nav > li > a:hover {
   border: 1px solid #ddd;
 }
-.navbar-nav > .active > a,
+p .navbar-nav > .active > a,
 .navbar-nav > .active > a:hover {
   border: 1px solid #ddd;
 }
@@ -6354,7 +6354,9 @@ button.close {
   color: #333333;
 }
 .navbar-brand {
-  padding-top: 20px;
+  padding-top: 12.5px;
+  padding-bottom: 12.5px;
+  line-height: 1.9;
 }
 @media (max-width: 768px) {
   .navbar .navbar-nav > li > a {

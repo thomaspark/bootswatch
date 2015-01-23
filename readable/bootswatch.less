@@ -16,8 +16,9 @@
   }
 
   &-nav > li > a {
+    @margin-vertical: (@navbar-height - 2*@padding-base-vertical - @line-height-computed - 2px) / 2;
     padding: @padding-base-vertical @padding-base-horizontal;
-    margin: 12px 6px;
+    margin: @margin-vertical 6px;
     border: 1px solid transparent;
     border-radius: @border-radius-base;
 
@@ -25,7 +26,7 @@
       border: 1px solid #ddd;
     }
   }
-
+p
   &-nav > .active > a,
   &-nav > .active > a:hover {
     border: 1px solid #ddd;
@@ -40,7 +41,9 @@
   }
 
   &-brand {
-    padding-top: 20px;
+    padding-top: (@navbar-height - 2*@font-size-large) / 2;
+    padding-bottom: (@navbar-height - 2*@font-size-large) / 2;
+    line-height: 1.9;
   }
 }
 
