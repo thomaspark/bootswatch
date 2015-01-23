@@ -26,7 +26,10 @@
 // Visibility utilities
 // Note: Deprecated .visible-xs, .visible-sm, .visible-md, and .visible-lg as of v3.2.0
 
-@include responsive-invisibility('.visible-xs, .visible-sm, .visible-md, .visible-lg');
+@include responsive-invisibility('.visible-xs');
+@include responsive-invisibility('.visible-sm');
+@include responsive-invisibility('.visible-md');
+@include responsive-invisibility('.visible-lg');
 
 .visible-xs-block,
 .visible-xs-inline,

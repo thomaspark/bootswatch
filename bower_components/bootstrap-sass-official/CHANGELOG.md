@@ -1,5 +1,28 @@
 # Changelog
 
+## 3.3.3
+
+This is a re-packaged release of 3.3.2.1 (v3.3.2+1).
+
+Versions are now strictly semver.
+The PATCH version may be ahead of the upstream.
+
+Framework version: Bootstrap **v3.3.2**.
+
+## 3.3.2.1
+
+* Fix glyphicons regression (revert 443d5b49eac84aec1cb2f8ea173554327bfc8c14)
+
+## 3.3.2.0
+
+* Autoprefixer is now required, and `autoprefixer-rails` is now a dependency for the ruby gem. [#824](https://github.com/twbs/bootstrap-sass/issues/824)
+* Minimum precision reduced from 10 to 8 [#821](https://github.com/twbs/bootstrap-sass/issues/821)
+* Requiring bootstrap JS from npm now works [#812](https://github.com/twbs/bootstrap-sass/issues/812)
+* Fix Sass 3.4.x + IE10 compatibility issue [#803](https://github.com/twbs/bootstrap-sass/issues/803)
+* Provide minified JS bundle [#777](https://github.com/twbs/bootstrap-sass/issues/777)
+* Bower package is now at bootstrap-sass [#813](https://github.com/twbs/bootstrap-sass/issues/813)
+
+
 ## 3.3.1.0
 
 * Variables override template at templates/project/_bootstrap-variables.sass

@@ -15,3 +15,5 @@
 @function twbs-image-path($file) {
   @return "<%- asset_path('#{$file}') %>";
 }
+
+$bootstrap-sass-asset-helper: true;

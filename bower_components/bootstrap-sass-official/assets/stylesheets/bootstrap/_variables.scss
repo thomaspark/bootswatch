@@ -1,8 +1,4 @@
-// When true, asset path helpers are used, otherwise the regular CSS `url()` is used.
-// When there no function is defined, `fn('')` is parsed as string that equals the right hand side
-// NB: in Sass 3.3 there is a native function: function-exists(twbs-font-path)
-$bootstrap-sass-asset-helper: (twbs-font-path("") != unquote('twbs-font-path("")')) !default;
-
+$bootstrap-sass-asset-helper: false !default;
 //
 // Variables
 // --------------------------------------------------
@@ -19,7 +15,7 @@ $gray:                   lighten($gray-base, 33.5%) !default; // #555
 $gray-light:             lighten($gray-base, 46.7%) !default; // #777
 $gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
 
-$brand-primary:         darken(#428bca, 6.5%) !default;
+$brand-primary:         darken(#428bca, 6.5%) !default; // #337ab7
 $brand-success:         #5cb85c !default;
 $brand-info:            #5bc0de !default;
 $brand-warning:         #f0ad4e !default;
@@ -82,7 +78,8 @@ $headings-color:          inherit !default;
 
 //** Load fonts from this directory.
 
-// [converter] Asset helpers such as Sprockets and Node.js Mincer do not resolve relative paths
+// [converter] If $bootstrap-sass-asset-helper if used, provide path relative to the assets load path.
+// [converter] This is because some asset helpers, such as Sprockets, do not work with file-relative paths.
 $icon-font-path: if($bootstrap-sass-asset-helper, "bootstrap/", "../fonts/bootstrap/") !default;
 
 //** File name for all font files.
@@ -107,7 +104,7 @@ $padding-small-horizontal:  10px !default;
 $padding-xs-vertical:       1px !default;
 $padding-xs-horizontal:     5px !default;
 
-$line-height-large:         1.33 !default;
+$line-height-large:         1.3333333 !default; // extra decimals for Win 8.1 Chrome
 $line-height-small:         1.5 !default;
 
 $border-radius-base:        4px !default;
@@ -195,6 +192,7 @@ $input-border:                   #ccc !default;
 
 // TODO: Rename `$input-border-radius` to `$input-border-radius-base` in v4
 //** Default `.form-control` border radius
+// This has no effect on `<select>`s in some browsers, due to the limited stylability of `<select>`s in CSS.
 $input-border-radius:            $border-radius-base !default;
 //** Large `.form-control` border radius
 $input-border-radius-large:      $border-radius-large !default;
