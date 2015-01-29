@@ -7096,9 +7096,11 @@ input[type="checkbox"]:disabled:checked:after,
   -webkit-box-shadow: inset 0 -2px 0 #4caf50;
   box-shadow: inset 0 -2px 0 #4caf50;
 }
-.nav-tabs > li > a {
-  border: none;
+.nav-tabs > li > a,
+.nav-tabs > li > a:focus {
   margin-right: 0;
+  background-color: transparent;
+  border: none;
   color: #666666;
   -webkit-box-shadow: inset 0 -1px 0 #dddddd;
   box-shadow: inset 0 -1px 0 #dddddd;
@@ -7106,19 +7108,22 @@ input[type="checkbox"]:disabled:checked:after,
   -o-transition: all 0.2s;
   transition: all 0.2s;
 }
-.nav-tabs > li > a:hover {
+.nav-tabs > li > a:hover,
+.nav-tabs > li > a:focus:hover {
   background-color: transparent;
   -webkit-box-shadow: inset 0 -2px 0 #2196f3;
   box-shadow: inset 0 -2px 0 #2196f3;
   color: #2196f3;
 }
-.nav-tabs > li.active > a {
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus {
   border: none;
   -webkit-box-shadow: inset 0 -2px 0 #2196f3;
   box-shadow: inset 0 -2px 0 #2196f3;
   color: #2196f3;
 }
-.nav-tabs > li.active > a:hover {
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus:hover {
   border: none;
   color: #2196f3;
 }

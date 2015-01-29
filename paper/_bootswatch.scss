@@ -341,9 +341,11 @@ input[type="checkbox"],
 // Navs =======================================================================
 
 .nav-tabs {
-  & > li > a {
-    border: none;
+  > li > a,
+  > li > a:focus {
     margin-right: 0;
+    background-color: transparent;
+    border: none;
     color: $navbar-default-link-color;
     @include box-shadow(inset 0 -1px 0 #ddd);
     @include transition(all 0.2s);
@@ -355,7 +357,8 @@ input[type="checkbox"],
     }
   }
 
-  & > li.active > a {
+  & > li.active > a,
+  & > li.active > a:focus {
     border: none;
     @include box-shadow(inset 0 -2px 0 $brand-primary);
     color: $brand-primary;
