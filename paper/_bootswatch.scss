@@ -226,6 +226,7 @@ input[type="radio"],
     margin-top: -3px;
     border-radius: 50%;
     @include transition(240ms);
+    cursor: pointer;
   }
 
   &:before {
@@ -270,8 +271,13 @@ input[type="checkbox"],
     outline: none;
   }
 
+  &:before,
   &:after {
     content: "";
+    cursor: pointer;
+  }
+
+  &:after {
     display: block;
     width: 18px;
     height: 18px;
@@ -283,7 +289,6 @@ input[type="checkbox"],
   }
 
   &:checked:before {
-    content: "";
     position: absolute;
     top: 0;
     left: 6px;
@@ -446,17 +451,17 @@ input[type="checkbox"],
     }
 
     &:last-child {
-        &:before {
-          display: block;
-          content: 'div::before';
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          left: 0;
-          right: 0;
-          z-index: -1;
-          background-color: lighten($progress-bar-bg, 35%);
-        }
+      &:before {
+        display: block;
+        content: 'div::before';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        background-color: lighten($progress-bar-bg, 35%);
+      }
     }
     
     &-success:last-child.progress-bar:before {
