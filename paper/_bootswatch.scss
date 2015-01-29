@@ -212,6 +212,7 @@ input[type="radio"],
   background-color: transparent;
   -webkit-appearance: none;
   appearance: none;
+  cursor: pointer;
 
   &:focus {
     outline: none;
@@ -226,7 +227,6 @@ input[type="radio"],
     margin-top: -3px;
     border-radius: 50%;
     @include transition(240ms);
-    cursor: pointer;
   }
 
   &:before {
@@ -266,18 +266,14 @@ input[type="checkbox"],
   border: none;
   -webkit-appearance: none;
   appearance: none;
+  cursor: pointer;
 
   &:focus {
     outline: none;
   }
 
-  &:before,
   &:after {
     content: "";
-    cursor: pointer;
-  }
-
-  &:after {
     display: block;
     width: 18px;
     height: 18px;
@@ -289,6 +285,7 @@ input[type="checkbox"],
   }
 
   &:checked:before {
+    content: "";
     position: absolute;
     top: 0;
     left: 6px;
