@@ -194,6 +194,123 @@ select.form-control {
   }
 }
 
+.radio,
+.radio-inline,
+.checkbox,
+.checkbox-inline {
+  label {
+    padding-left: 25px;
+  }
+}
+
+input[type="radio"],
+.radio input[type="radio"],
+.radio-inline input[type="radio"] {
+  margin-top: 5px;
+  margin-left: -25px;
+  border: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    width: 18px;
+    height: 18px;
+    margin-top: -3px;
+    border-radius: 50%;
+    .transition(240ms);
+  }
+
+  &:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: @brand-primary;
+    .scale(0);
+  }
+
+  &:after {
+    border: 2px solid @gray;
+  }
+
+  &:checked:before {
+    .scale(0.5);
+  }
+
+  &:disabled:checked:before {
+    background-color: @gray-light;
+  }
+
+  &:checked:after {
+    border-color: @brand-primary;
+  }
+
+  &:disabled:after,
+  &:disabled:checked:after {
+    border-color: @gray-light;
+  }
+}
+
+input[type="checkbox"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+  margin-left: -25px;
+  border: none;
+  -webkit-appearance: none;
+  appearance: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    width: 18px;
+    height: 18px;
+    margin-top: -2px;
+    margin-right: 5px;
+    border: 2px solid @gray;
+    border-radius: 2px;
+    .transition(240ms);
+  }
+
+  &:checked:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 6px;
+    display: table;
+    width: 6px;
+    height: 12px;
+    border: 2px solid #fff;
+    border-top-width: 0;
+    border-left-width: 0;
+    .rotate(45deg);
+  }
+
+  &:checked:after {
+    background-color: @brand-primary;
+    border-color: @brand-primary;
+  }
+
+  &:disabled:after {
+    border-color: @gray-light;
+  }
+
+  &:disabled:checked:after {
+    background-color: @gray-light;
+    border-color: transparent;
+  }
+}
+
 .has-warning {
   input,
   .form-control,
