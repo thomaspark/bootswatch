@@ -6781,6 +6781,18 @@ button.close {
 .btn-default.disabled {
   border: 1px solid #eeeeee;
 }
+.btn-group .btn + .btn,
+.btn-group .btn + .btn-group,
+.btn-group .btn-group + .btn,
+.btn-group .btn-group + .btn-group {
+  margin-left: 0;
+}
+.btn-group-vertical > .btn + .btn,
+.btn-group-vertical > .btn + .btn-group,
+.btn-group-vertical > .btn-group + .btn,
+.btn-group-vertical > .btn-group + .btn-group {
+  margin-top: 0;
+}
 body {
   -webkit-font-smoothing: antialiased;
   letter-spacing: .1px;
