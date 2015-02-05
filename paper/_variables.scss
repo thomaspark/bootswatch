@@ -150,23 +150,23 @@ $btn-default-border:             #eee;
 
 $btn-primary-color:              #fff;
 $btn-primary-bg:                 $brand-primary;
-$btn-primary-border:             transparent;
+$btn-primary-border:             fade_in($brand-primary, 0);
 
 $btn-success-color:              #fff;
 $btn-success-bg:                 $brand-success;
-$btn-success-border:             transparent;
+$btn-success-border:             fade_in($brand-success, 0);
 
 $btn-info-color:                 #fff;
 $btn-info-bg:                    $brand-info;
-$btn-info-border:                transparent;
+$btn-info-border:                fade_in($brand-info, 0);
 
 $btn-warning-color:              #fff;
 $btn-warning-bg:                 $brand-warning;
-$btn-warning-border:             transparent;
+$btn-warning-border:             fade_in($brand-warning, 0);
 
 $btn-danger-color:               #fff;
 $btn-danger-bg:                  $brand-danger;
-$btn-danger-border:              transparent;
+$btn-danger-border:              fade_in($brand-danger, 0);
 
 $btn-link-disabled-color:        $gray-light;
 
@@ -545,9 +545,9 @@ $popover-arrow-color:                 $popover-bg;
 //** Popover outer arrow width
 $popover-arrow-outer-width:           ($popover-arrow-width + 1);
 //** Popover outer arrow color
-$popover-arrow-outer-color:           fadein($popover-border-color, 7.5%);
+$popover-arrow-outer-color:           transparent;
 //** Popover outer arrow fallback color
-$popover-arrow-outer-fallback-color:  darken($popover-fallback-border-color, 20%);
+$popover-arrow-outer-fallback-color:  transparent;
 
 
 //== Labels
