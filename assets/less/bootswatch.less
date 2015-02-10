@@ -1,13 +1,20 @@
 body {
-    padding-top: 50px;
+  padding-top: 50px;
+
   > .navbar {
     -webkit-transition: background-color 300ms ease-in;
     transition: background-color 300ms ease-in;
   }
-  > .navbar-transparent {
-    background-color: transparent;
-    .navbar-nav > .open > a {
-      background-color: transparent !important;
+}
+
+@media (min-width: 768px) {
+  body {
+    > .navbar-transparent {
+      background-color: transparent;
+
+      .navbar-nav > .open > a {
+        background-color: transparent !important;
+      }
     }
   }
 }
