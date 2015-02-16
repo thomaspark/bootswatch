@@ -127,6 +127,18 @@
   }
 }
 
+.btn-group-vertical {
+  .btn + .btn {
+    &:hover {
+      border-top-width: 1px;
+    }
+
+    &:active {
+      border-top-width: 2px;
+    }
+  }
+}
+
 // Typography =================================================================
 
 .text-primary,
