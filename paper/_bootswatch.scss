@@ -336,27 +336,27 @@ input[type="checkbox"],
 }
 
 .has-warning {
-  input,
+  input:not([type=checkbox]),
   .form-control,
-  input:focus,
+  input:not([type=checkbox]):focus,
   .form-control:focus {
     @include box-shadow(inset 0 -2px 0 $brand-warning);
   }
 }
 
 .has-error {
-  input,
+  input:not([type=checkbox]),
   .form-control,
-  input:focus,
+  input:not([type=checkbox]):focus,
   .form-control:focus {
     @include box-shadow(inset 0 -2px 0 $brand-danger);
   }
 }
 
 .has-success {
-  input,
+  input:not([type=checkbox]),
   .form-control,
-  input:focus,
+  input:not([type=checkbox]):focus,
   .form-control:focus {
     @include box-shadow(inset 0 -2px 0 $brand-success);
   }
