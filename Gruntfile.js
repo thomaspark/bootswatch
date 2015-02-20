@@ -45,7 +45,8 @@ module.exports = function (grunt) {
     less: {
       dist: {
         options: {
-          compress: false
+          compress: false,
+          strictMath: true
         },
         files: {}
       }
