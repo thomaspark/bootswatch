@@ -17,7 +17,7 @@
 // Buttons ====================================================================
 
 .btn {
-  padding: $padding-base-vertical+2 $padding-base-horizontal $padding-base-vertical;
+  padding: ($padding-base-vertical + 2) $padding-base-horizontal $padding-base-vertical;
   @include shadow();
   font-size: 12px;
   font-weight: bold;
@@ -36,18 +36,18 @@
 
   &-lg,
   &-group-lg > .btn {
-    padding: $padding-large-vertical+2 $padding-large-horizontal $padding-large-vertical;
+    padding: ($padding-large-vertical + 2) $padding-large-horizontal $padding-large-vertical;
     line-height: 15px;
   }
 
   &-sm,
   &-group-sm > .btn {
-    padding: $padding-small-vertical+2 $padding-small-horizontal $padding-small-vertical;
+    padding: ($padding-small-vertical + 2) $padding-small-horizontal $padding-small-vertical;
   }
 
   &-xs,
   &-group-xs > .btn {
-    padding: $padding-xs-vertical+2 $padding-xs-horizontal $padding-xs-vertical;
+    padding: ($padding-xs-vertical + 2) $padding-xs-horizontal $padding-xs-vertical;
   }
 
   &-default:hover,
@@ -291,7 +291,7 @@ label {
   .open > a,
   .open > a:hover,
   .open > a:focus {
-    padding-bottom: $padding-large-vertical + 3;
+    padding-bottom: ($padding-large-vertical + 3);
     margin-top: 0;
   }
 
