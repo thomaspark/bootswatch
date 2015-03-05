@@ -175,10 +175,13 @@ input,
   @include box-shadow(none);
 
   .panel-heading,
-  .panel-title,
-  .panel-footer {
+  .panel-title {
     @extend .sandstone;
     color: #fff;
+  }
+
+  .panel-footer {
+    @extend .sandstone;
   }
 
   &-default {
