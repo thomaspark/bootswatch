@@ -6953,11 +6953,23 @@ select.form-control[multiple] {
 .checkbox-inline label {
   padding-left: 25px;
 }
+.radio input[type="radio"],
+.radio-inline input[type="radio"],
+.checkbox input[type="radio"],
+.checkbox-inline input[type="radio"],
+.radio input[type="checkbox"],
+.radio-inline input[type="checkbox"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+  margin-left: -25px;
+}
 input[type="radio"],
 .radio input[type="radio"],
 .radio-inline input[type="radio"] {
+  position: relative;
   margin-top: 5px;
-  margin-left: -25px;
+  margin-right: 4px;
+  vertical-align: -4px;
   border: none;
   background-color: transparent;
   -webkit-appearance: none;
@@ -7031,7 +7043,8 @@ input[type="radio"]:disabled:checked:after,
 input[type="checkbox"],
 .checkbox input[type="checkbox"],
 .checkbox-inline input[type="checkbox"] {
-  margin-left: -25px;
+  position: relative;
+  vertical-align: -4px;
   border: none;
   -webkit-appearance: none;
   appearance: none;

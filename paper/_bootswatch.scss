@@ -223,13 +223,20 @@ select.form-control {
   label {
     padding-left: 25px;
   }
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    margin-left: -25px;
+  }
 }
 
 input[type="radio"],
 .radio input[type="radio"],
 .radio-inline input[type="radio"] {
+  position: relative;
   margin-top: 5px;
-  margin-left: -25px;
+  margin-right: 4px;
+  vertical-align: -4px;
   border: none;
   background-color: transparent;
   -webkit-appearance: none;
@@ -284,7 +291,8 @@ input[type="radio"],
 input[type="checkbox"],
 .checkbox input[type="checkbox"],
 .checkbox-inline input[type="checkbox"] {
-  margin-left: -25px;
+  position: relative;
+  vertical-align: -4px;
   border: none;
   -webkit-appearance: none;
   appearance: none;
