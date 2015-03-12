@@ -4,11 +4,101 @@
 
 @import url("//fonts.googleapis.com/css?family=Roboto:400,700");
 
+// Colors =====================================================================
+
+.square {
+  width: 100px;
+  height: 100px;
+  border: 1px solid lighten(@gray-dark, 5%);
+}
+
+.color1 { background-color: @gray-base; }
+.color2 { background-color: @gray-darker; }
+.color3 { background-color: @gray-dark; }
+.color4 { background-color: @gray; }
+.color5 { background-color: @gray-light; }
+.color6 { background-color: @gray-lighter; }
+
+.color7 { background-color: @brand-primary; }
+.color8 { background-color: @brand-success; }
+.color9 { background-color: @brand-info; }
+.color10 { background-color: @brand-warning; }
+.color11 { background-color: @brand-danger; }
+
+
 // Navbar =====================================================================
+
+.navbar {
+  border-color: #444448;
+  border-style: solid;
+  border-width: 0px 0px 1px 0px;
+  border-radius: 0px;
+}
+
+.navbar-default .navbar-nav > li > a {
+  font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: #FFFFFF;
+}
+
 
 // Buttons ====================================================================
 
+.btn {
+  padding: 6px 12px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  list-style: none;
+  font-size: 16px;
+  text-align: left;
+  background-color: darken(@gray-darker, 5%);
+  border: 1px solid darken(@gray-darker, 5%);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.175);
+  -webkit-background-clip: padding-box;
+          background-clip: padding-box;
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default.focus,
+.btn-default:active,
+.btn-default.active,
+.open > .dropdown-toggle.btn-default {
+  color: #ffffff;
+  background-color: darken(@gray-darker, 5%);
+  border-color: darken(@gray-darker, 5%);
+}
+
+.input-group-btn .btn {
+  border: 1px solid @gray-dark;
+}
+
+.btn-group .btn {
+  border: 1px solid @body-bg;
+}
+
 // Typography =================================================================
+
+p {
+  line-height: 26px;
+}
 
 .text-primary,
 .text-primary:hover {
@@ -39,7 +129,7 @@
 
 table,
 .table {
-  color: #fff;
+  color: @gray-lighter;
 
   a:not(.btn) {
     color: #fff;
@@ -59,7 +149,58 @@ table,
   background-color: @table-bg;
 }
 
+.table > thead > tr > th {
+  font-size: 12px;
+  font-family: "Gibson Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  color: @gray;
+}
+
 // Forms ======================================================================
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: 36px;
+  padding: 6px 12px;
+  font-size: 16px;
+  line-height: 1.42857143;
+  color: @gray-light;
+  background-color: lighten(@gray-darker,2%);
+  background-image: none;
+  border: 1px solid @gray-dark;
+  border-radius: 2px;
+  -webkit-transition: border-color ease-in-out .25s, -webkit-box-shadow ease-in-out .25s;
+  -o-transition: border-color ease-in-out .25s, box-shadow ease-in-out .25s;
+  transition: border-color ease-in-out .25s, box-shadow ease-in-out .25s;
+}
+.form-control:focus {
+  background-color: @gray-darker;
+  border-color: @gray-lighter;
+  color: @gray-lighter;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 3px rgba(0, 183, 240, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 3px rgba(0, 183, 240, 0.6);
+}
+
+.form-control[disabled],
+.form-control[readonly],
+fieldset[disabled] .form-control {
+  cursor: not-allowed;
+  background-color: darken(#444448, 10%);
+  opacity: .25;
+}
+
+  .form-custom .control-label {
+    display: block;
+    text-align: right;
+    margin-bottom: 0;
+    padding-top: 9px;
+
+  }
+  input .form-custom{
+    display: block;
+  }
 
 .has-warning {
   .help-block,
@@ -103,38 +244,101 @@ table,
   }
 }
 
-legend {
-  color: #fff;
+.help-block {
+  color: #878690;
+  font-size: 12px;
+  font-style: italic;
 }
 
 .input-group-addon {
   background-color: @btn-default-bg;
 }
 
+input::-webkit-input-placeholder {
+  font-style: italic;
+}
+
+input::-moz-placeholder {
+  font-style: italic;
+}
+
+input:-moz-placeholder {   /* Older versions of Firefox */
+  font-style: italic;
+}
+
+input:-ms-input-placeholder { 
+  font-style: italic;
+}
+
+label {
+  margin-bottom: 0px;
+  font-weight: normal;
+  font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+legend {
+  font-size: 12px;
+  font-family: "Gibson Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  border: 0px;
+}
+
+
+
 // Navs =======================================================================
 
-.nav-tabs,
-.nav-pills,
-.breadcrumb,
-.pager {
+
+
+.breadcrumb {
 
   a {
     color: #fff;
   }
 }
 
+.nav-tabs,
+.nav-pills {
+
+  a {
+    color: #fff;
+  }
+
+  a:hover {
+    color: @gray-lighter;
+  }
+}
+
+.pager {
+
+  a {
+    color: #fff;
+  }
+
+  a:hover {
+    color: @gray-lighter;
+  }
+}
+
+
+
 // Indicators =================================================================
 
+
 .alert {
+  border-radius: 2px;
 
   .alert-link,
   a {
-    color: @alert-warning-text;
     text-decoration: underline;
   }
 
   .close {
     text-decoration: none;
+    text-shadow: 0 1px 0 #000;
+    opacity: .5;
+    filter: alpha(opacity=50);
   }
 }
 
@@ -150,7 +354,30 @@ legend {
   }
 }
 
+.label {
+  display: inline;
+  padding: .25em 1em;
+  font-size: 75%;
+  font-weight: normal;
+  line-height: 1;
+  color: #ffffff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 10em;
+}
+
 // Progress bars ==============================================================
+
+.progress {
+  height: 10px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.progress .progress-bar {
+  font-size: 10px;
+  line-height: 10px;
+}
 
 // Containers =================================================================
 
@@ -208,3 +435,16 @@ a.list-group-item {
     color: #fff;
   }
 }
+
+// Dialogs =================================================================
+
+.popover {
+  border-radius: 2px;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  background-color: darken(@gray-darker,5%);
+}
+
