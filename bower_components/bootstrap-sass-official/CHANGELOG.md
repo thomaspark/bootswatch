@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.3.4
+
+No Sass-specific changes.
+
+Framework version: Bootstrap **v3.3.4**
+
 ## 3.3.3
 
 This is a re-packaged release of 3.3.2.1 (v3.3.2+1).
