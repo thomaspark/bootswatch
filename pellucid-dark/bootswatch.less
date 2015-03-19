@@ -66,7 +66,7 @@
   list-style: none;
   font-size: 16px;
   text-align: left;
-  background-color: darken(@gray-darker, 5%);
+  background-color: lighten(@gray-darker, 5%);
   border: 1px solid darken(@gray-darker, 5%);
   border-radius: 4px;
   -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.175);
@@ -75,16 +75,6 @@
           background-clip: padding-box;
 }
 
-.btn-default:hover,
-.btn-default:focus,
-.btn-default.focus,
-.btn-default:active,
-.btn-default.active,
-.open > .dropdown-toggle.btn-default {
-  color: #ffffff;
-  background-color: darken(@gray-darker, 5%);
-  border-color: darken(@gray-darker, 5%);
-}
 
 .input-group-btn .btn {
   border: 1px solid @gray-dark;
@@ -174,6 +164,7 @@ table,
   -o-transition: border-color ease-in-out .25s, box-shadow ease-in-out .25s;
   transition: border-color ease-in-out .25s, box-shadow ease-in-out .25s;
 }
+
 .form-control:focus {
   background-color: @gray-darker;
   border-color: @gray-lighter;
@@ -384,7 +375,7 @@ legend {
 a.thumbnail:hover,
 a.thumbnail:focus,
 a.thumbnail.active {
-  border-color: @thumbnail-border;
+  border-color: @gray-light;
 }
 
 a.list-group-item {
@@ -447,4 +438,24 @@ a.list-group-item {
 .modal-header {
   background-color: darken(@gray-darker,5%);
 }
+
+// Custom =====================================================================
+
+.small-label {
+  font-family: "Gibson Semibold";
+  font-size: 12px;
+  color: @gray-light;
+  text-transform: uppercase;
+}
+
+a.small-label:hover,
+a.small-label:focus {
+  text-decoration: underline;
+}
+
+a.small-label.active {
+  color: @white;
+}
+
+
 

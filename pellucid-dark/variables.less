@@ -7,11 +7,12 @@
 //## Gray and brand colors for use across Bootstrap.
 
 @gray-base:              #000000;
-@gray-darker:            #222228; // #222
-@gray-dark:              #444448;   // #333
-@gray:                   #66656C; // #555
-@gray-light:             #BDBDC1;   // #999
-@gray-lighter:           #F3F3F3; // #eee
+@gray-darker:            #222228;
+@gray-dark:              #444448;   
+@gray:                   #66656C; 
+@gray-light:             #878690;  
+@gray-lighter:           #BDBDC1; 
+@white:                  #F1F1F1; 
 
 @brand-primary:         #00B7F0;
 @brand-success:         #46B771;
@@ -27,7 +28,7 @@
 //** Background color for `<body>`.
 @body-bg:               #222228;
 //** Global text color on `<body>`.
-@text-color:            @gray-light;
+@text-color:            @gray-lighter;
 
 //** Global textual link color.
 @link-color:            @brand-primary;
@@ -67,7 +68,7 @@
 @headings-font-family:    @font-family-base;
 @headings-font-weight:    normal;
 @headings-line-height:    1.1;
-@headings-color:          @gray-lighter;
+@headings-color:          #FFFFFF;
 
 
 //== Iconography
@@ -101,7 +102,7 @@
 @line-height-large:         1.3333333; // extra decimals for Win 8.1 Chrome
 @line-height-small:         1.5;
 
-@border-radius-base:        4px;
+@border-radius-base:        2px;
 @border-radius-large:       6px;
 @border-radius-small:       3px;
 
@@ -143,7 +144,7 @@
 
 @btn-font-weight:                normal;
 
-@btn-default-color:              @gray-lighter;
+@btn-default-color:              @white;
 @btn-default-bg:                 lighten(@gray-darker, 5%);
 @btn-default-border:             lighten(@gray-darker, 5%);
 
@@ -175,9 +176,9 @@
 //##
 
 //** `<input>` background color
-@input-bg:                       #fff;
+@input-bg:                       lighten(@gray-darker,2%);
 //** `<input disabled>` background color
-@input-bg-disabled:              @gray-lighter;
+@input-bg-disabled:              @white;
 
 //** Text color for `<input>`s
 @input-color:                    @text-color;
@@ -194,7 +195,7 @@
 @input-border-radius-small:      @border-radius-small;
 
 //** Border color for inputs on focus
-@input-border-focus:             @gray-lighter;
+@input-border-focus:             @white;
 
 //** Placeholder text color
 @input-color-placeholder:        @gray;
@@ -210,7 +211,7 @@
 @legend-border-color:            @gray-dark;
 
 //** Background color for textual input addons
-@input-group-addon-bg:           @gray-lighter;
+@input-group-addon-bg:           @white;
 //** Border color for textual input addons
 @input-group-addon-border-color: @input-border;
 
@@ -421,7 +422,7 @@
 @nav-tabs-link-hover-border-color:          transparent;
 
 @nav-tabs-active-link-hover-bg:             @body-bg;
-@nav-tabs-active-link-hover-color:          @gray-lighter;
+@nav-tabs-active-link-hover-color:          @white;
 @nav-tabs-active-link-hover-border-color:   @gray-dark;
 
 @nav-tabs-justified-link-border-color:            #ddd;
@@ -509,7 +510,7 @@
 //** Tooltip max width
 @tooltip-max-width:           200px;
 //** Tooltip text color
-@tooltip-color:               @gray-lighter;
+@tooltip-color:               @white;
 //** Tooltip background color
 @tooltip-bg:                  @gray-base;
 @tooltip-opacity:             .9;
@@ -567,9 +568,9 @@
 @label-danger-bg:             @brand-danger;
 
 //** Default label text color
-@label-color:                 #fff;
+@label-color:                 @white;
 //** Default text color of a linked label
-@label-link-hover-color:      #fff;
+@label-link-hover-color:      @white;
 
 
 //== Modals
@@ -658,33 +659,33 @@
 //##
 
 //** Background color on `.list-group-item`
-@list-group-bg:                 @gray-darker;
+@list-group-bg:                 lighten(@gray-darker,2%);
 //** `.list-group-item` border color
 @list-group-border:             @gray-dark;
 //** List group border radius
 @list-group-border-radius:      @border-radius-base;
 
 //** Background color of single list items on hover
-@list-group-hover-bg:           darken(@gray-darker, 5%);
+@list-group-hover-bg:           darken(@gray-darker, 2%);
 //** Text color of active list items
 @list-group-active-color:       @component-active-color;
 //** Background color of active list items
-@list-group-active-bg:          @component-active-bg;
+@list-group-active-bg:          @list-group-bg; //changed form @component-active-bg;
 //** Border color of active list elements
-@list-group-active-border:      @list-group-active-bg;
+@list-group-active-border:      @list-group-border; //changed from @list-group-active-bg;
 //** Text color for content within active list items
 @list-group-active-text-color:  lighten(@list-group-active-bg, 40%);
 
 //** Text color of disabled list items
 @list-group-disabled-color:      @gray-light;
 //** Background color of disabled list items
-@list-group-disabled-bg:         @gray-lighter;
+@list-group-disabled-bg:         @white;
 //** Text color for content within disabled list items
 @list-group-disabled-text-color: @list-group-disabled-color;
 
 @list-group-link-color:         @text-color;
 @list-group-link-hover-color:   @list-group-link-color;
-@list-group-link-heading-color: #fff;
+@list-group-link-heading-color: @white;
 
 
 //== Panels
@@ -733,7 +734,7 @@
 //** Padding around the thumbnail image
 @thumbnail-padding:           4px;
 //** Thumbnail background color
-@thumbnail-bg:                @gray-dark;
+@thumbnail-bg:                lighten(@gray-darker,2%);
 //** Thumbnail border color
 @thumbnail-border:            @gray-dark;
 //** Thumbnail border radius
@@ -765,7 +766,7 @@
 //** Badge text color in active nav link
 @badge-active-color:          @gray-darker;
 //** Badge background color in active nav link
-@badge-active-bg:             @gray-lighter;
+@badge-active-bg:             @white;
 
 @badge-font-weight:           normal;
 @badge-line-height:           1;
@@ -837,11 +838,11 @@
 //** Horizontal offset for forms and lists.
 @component-offset-horizontal: 180px;
 //** Text muted color
-@text-muted:                  @gray-light;
+@text-muted:                  @gray-lighter;
 //** Abbreviations and acronyms border color
-@abbr-border-color:           @gray-light;
+@abbr-border-color:           @gray-lighter;
 //** Headings small color
-@headings-small-color:        @gray-light;
+@headings-small-color:        @gray-lighter;
 //** Blockquote small color
 @blockquote-small-color:      @gray;
 //** Blockquote font size
