@@ -465,9 +465,8 @@ a.small-label.active {
   }
 
   .panel-title {
-    font-family: "Gibson Semibold";
+    font-family: "Gibson Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 12px;
-    color: @gray-light;
     text-transform: uppercase;
     display: block;
   }
@@ -513,3 +512,26 @@ a.small-label.active {
       color: @gray-light;
   }
 }
+
+// Tag Label
+
+.tag-label {
+  background-color: @gray-darker;
+  border: 1px solid @gray-dark;
+  font-size: 16px;
+}
+
+.tag-label:after {
+      font-family: 'FontAwesome';  
+      content: "\f057";       
+      color: @gray-dark;
+      margin-left: 12px;
+}
+
+a .tag-label:hover {
+  background-color: lighten(@gray-darker, 2%);
+  border: 1px solid @gray-dark;
+  font-size: 16px;
+  text-decoration: none;
+}
+

@@ -5537,7 +5537,7 @@ a.list-group-item-danger.active:focus {
   border-color: #00b7f0;
 }
 .panel-primary > .panel-heading {
-  color: #bdbdc1;
+  color: #f1f1f1;
   background-color: #00b7f0;
   border-color: #00b7f0;
 }
@@ -5546,7 +5546,7 @@ a.list-group-item-danger.active:focus {
 }
 .panel-primary > .panel-heading .badge {
   color: #00b7f0;
-  background-color: #bdbdc1;
+  background-color: #f1f1f1;
 }
 .panel-primary > .panel-footer + .panel-collapse > .panel-body {
   border-bottom-color: #00b7f0;
@@ -6921,9 +6921,8 @@ a.small-label.active {
   background-color: #27272e;
 }
 .tag-filter .panel-title {
-  font-family: "Gibson Semibold";
+  font-family: "Gibson Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
-  color: #878690;
   text-transform: uppercase;
   display: block;
 }
@@ -6960,4 +6959,21 @@ a.small-label.active {
   /* symbol for "collapsed" panels */
   content: "\f0da";
   color: #878690;
+}
+.tag-label {
+  background-color: #222228;
+  border: 1px solid #444448;
+  font-size: 16px;
+}
+.tag-label:after {
+  font-family: 'FontAwesome';
+  content: "\f057";
+  color: #444448;
+  margin-left: 12px;
+}
+a .tag-label:hover {
+  background-color: #27272e;
+  border: 1px solid #444448;
+  font-size: 16px;
+  text-decoration: none;
 }
