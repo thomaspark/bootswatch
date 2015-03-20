@@ -457,5 +457,59 @@ a.small-label.active {
   color: @white;
 }
 
+// Super Fun Tag Filter Panel
 
+.tag-filter {
+  .panel-heading {
+    background-color: lighten(@gray-darker,2%);
+  }
 
+  .panel-title {
+    font-family: "Gibson Semibold";
+    font-size: 12px;
+    color: @gray-light;
+    text-transform: uppercase;
+    display: block;
+  }
+
+  a.panel-heading:hover {
+    color: @white;
+    text-decoration: none;
+  }
+
+  .list-group-item,
+  .list-group-item:first-child {
+    border-color: fadeout(@gray-dark, 50%);
+    color: @gray-light;
+  }
+
+  .list-group-item:hover {
+    color: @white;
+    text-decoration: none; 
+  }
+
+  .accordion-toggle {     
+      color: @white;
+      text-decoration: none;      
+  }
+
+  .accordion-toggle.collapsed {     
+      color: @gray-light;
+      text-decoration: none;    
+  }
+
+  .panel-heading .accordion-toggle:after {
+      /* symbol for "open" panels */
+      font-family: 'FontAwesome';  
+      content: "\f0d7";    
+      float: right;       
+      color: @white;
+      padding-top: 2px;       
+  }
+
+  .panel-heading .accordion-toggle.collapsed:after {
+      /* symbol for "collapsed" panels */
+      content: "\f0da";  
+      color: @gray-light;
+  }
+}

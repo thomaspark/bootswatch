@@ -5537,7 +5537,7 @@ a.list-group-item-danger.active:focus {
   border-color: #00b7f0;
 }
 .panel-primary > .panel-heading {
-  color: #ffffff;
+  color: #bdbdc1;
   background-color: #00b7f0;
   border-color: #00b7f0;
 }
@@ -5546,7 +5546,7 @@ a.list-group-item-danger.active:focus {
 }
 .panel-primary > .panel-heading .badge {
   color: #00b7f0;
-  background-color: #ffffff;
+  background-color: #bdbdc1;
 }
 .panel-primary > .panel-footer + .panel-collapse > .panel-body {
   border-bottom-color: #00b7f0;
@@ -6916,4 +6916,48 @@ a.small-label:focus {
 }
 a.small-label.active {
   color: #f1f1f1;
+}
+.tag-filter .panel-heading {
+  background-color: #27272e;
+}
+.tag-filter .panel-title {
+  font-family: "Gibson Semibold";
+  font-size: 12px;
+  color: #878690;
+  text-transform: uppercase;
+  display: block;
+}
+.tag-filter a.panel-heading:hover {
+  color: #f1f1f1;
+  text-decoration: none;
+}
+.tag-filter .list-group-item,
+.tag-filter .list-group-item:first-child {
+  border-color: rgba(68, 68, 72, 0.5);
+  color: #878690;
+}
+.tag-filter .list-group-item:hover {
+  color: #f1f1f1;
+  text-decoration: none;
+}
+.tag-filter .accordion-toggle {
+  color: #f1f1f1;
+  text-decoration: none;
+}
+.tag-filter .accordion-toggle.collapsed {
+  color: #878690;
+  text-decoration: none;
+}
+.tag-filter .panel-heading .accordion-toggle:after {
+  /* symbol for "open" panels */
+  font-family: 'FontAwesome';
+  content: "\f0d7";
+  float: right;
+  color: #f1f1f1;
+  padding-top: 2px;
+}
+.tag-filter .panel-heading .accordion-toggle.collapsed:after {
+  /* symbol for "collapsed" panels */
+  content: "\f0da";
+  color: #878690;
 }
