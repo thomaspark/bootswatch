@@ -36,7 +36,7 @@ Author
 Thomas Park
 
 + http://github.com/thomaspark
-+ http://thomaspark.me
++ http://thomaspark.co
 
 Thanks
 ------
