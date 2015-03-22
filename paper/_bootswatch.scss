@@ -38,14 +38,13 @@
 
 @mixin btn($class,$bg){
   .btn-#{$class} {
-    @include gradient-radial($bg 80%, darken($bg, 6%) 81%);
     background-size: 200%;
     background-position: 50%;
-    transition: background-size 2s;
 
-    &:hover {
-      background-size: 100%;
-      border-color: darken($bg, 6%);
+    &:hover,
+    &:active:hover,
+    &:focus {
+      background-color: darken($bg, 6%);
     }
 
     &:active {
