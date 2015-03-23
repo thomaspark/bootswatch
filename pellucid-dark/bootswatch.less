@@ -515,23 +515,43 @@ a.small-label.active {
 
 // Tag Label
 
-.tag-label {
+.label-tag {
   background-color: @gray-darker;
   border: 1px solid @gray-dark;
   font-size: 16px;
+  color: @gray-light;
+  text-decoration: none;
 }
 
-.tag-label:after {
+.label-tag:after {
       font-family: 'FontAwesome';  
       content: "\f057";       
       color: @gray-dark;
       margin-left: 12px;
+      margin-right: -8px;
+      vertical-align: -1px;
 }
 
-a .tag-label:hover {
+.label-tag:hover,
+.label-tag:focus {
   background-color: lighten(@gray-darker, 2%);
-  border: 1px solid @gray-dark;
+  border: 1px solid @gray-light;
+  color: @white;
   font-size: 16px;
+  text-decoration: none;
+}
+
+.label-tag a{ 
+  &:focus, &:hover {
+  text-decoration: none;
+  }
+}
+
+.label-tag:hover:after {   
+      color: @gray-light;
+}
+
+a.no-underline {
   text-decoration: none;
 }
 

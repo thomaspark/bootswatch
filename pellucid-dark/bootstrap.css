@@ -6960,20 +6960,36 @@ a.small-label.active {
   content: "\f0da";
   color: #878690;
 }
-.tag-label {
+.label-tag {
   background-color: #222228;
   border: 1px solid #444448;
   font-size: 16px;
+  color: #878690;
+  text-decoration: none;
 }
-.tag-label:after {
+.label-tag:after {
   font-family: 'FontAwesome';
   content: "\f057";
   color: #444448;
   margin-left: 12px;
+  margin-right: -8px;
+  vertical-align: -1px;
 }
-a .tag-label:hover {
+.label-tag:hover,
+.label-tag:focus {
   background-color: #27272e;
-  border: 1px solid #444448;
+  border: 1px solid #878690;
+  color: #f1f1f1;
   font-size: 16px;
+  text-decoration: none;
+}
+.label-tag a:focus,
+.label-tag a:hover {
+  text-decoration: none;
+}
+.label-tag:hover:after {
+  color: #878690;
+}
+a.no-underline {
   text-decoration: none;
 }
