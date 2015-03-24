@@ -140,10 +140,11 @@ table,
 }
 
 .table > thead > tr > th {
-  font-size: 12px;
-  font-family: "Gibson Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
   color: @gray;
+  font-size: 12px;
+  font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
 }
 
 // Forms ======================================================================
@@ -174,6 +175,17 @@ table,
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 3px rgba(0, 183, 240, 0.6);
 }
 
+.control-label {
+  display: block;
+  text-align: left;
+  margin-bottom: 0;
+  padding-top: 9px;
+}
+
+.control-label:first-letter {
+  text-transform: capitalize;
+}
+
 .form-control[disabled],
 .form-control[readonly],
 fieldset[disabled] .form-control {
@@ -187,8 +199,12 @@ fieldset[disabled] .form-control {
     text-align: right;
     margin-bottom: 0;
     padding-top: 9px;
-
   }
+
+  .form-custom .control-label:first-letter {
+  text-transform: capitalize;
+  }
+
   input .form-custom{
     display: block;
   }
@@ -266,12 +282,12 @@ label {
   font-weight: normal;
   font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
-  color: #ffffff;
+  color: @white;
 }
 
 legend {
   font-size: 12px;
-  font-family: "Gibson Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   border: 0px;
 }
@@ -284,8 +300,10 @@ legend {
 
 .breadcrumb {
 
+  padding-left: 0px;
+
   a {
-    color: #fff;
+    color: @white;
   }
 }
 
@@ -293,7 +311,7 @@ legend {
 .nav-pills {
 
   a {
-    color: #fff;
+    color: @white;
   }
 
   a:hover {
@@ -304,7 +322,7 @@ legend {
 .pager {
 
   a {
-    color: #fff;
+    color: @white;
   }
 
   a:hover {
@@ -351,7 +369,7 @@ legend {
   font-size: 75%;
   font-weight: normal;
   line-height: 1;
-  color: #ffffff;
+  color: @white;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
@@ -376,6 +394,7 @@ a.thumbnail:hover,
 a.thumbnail:focus,
 a.thumbnail.active {
   border-color: @gray-light;
+  background-color: @body-bg;
 }
 
 a.list-group-item {
@@ -427,6 +446,10 @@ a.list-group-item {
   }
 }
 
+.badge {
+  padding: 3px 5px;
+}
+
 // Dialogs =================================================================
 
 .popover {
@@ -439,10 +462,46 @@ a.list-group-item {
   background-color: darken(@gray-darker,5%);
 }
 
+// Wells =====================================================================
+
+.well {
+  min-height: 20px;
+  padding: 0px;
+  margin-bottom: 20px;
+  background-color: #222228;
+  border: 0px solid #222228;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0);
+  box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0);
+}
+.well blockquote {
+  border-color: @body-bg;
+  border-color: rgba(0, 0, 0, 0);
+}
+.well-lg {
+  padding: 0px;
+  border-radius: 0px;
+}
+.well-sm {
+  padding: 0px;
+  border-radius: 0px;
+}
+
+.well h3 > span {
+  color: @gray-light;
+  font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 0px;
+  margin-bottom: 15px;
+}
+
 // Custom =====================================================================
 
 .small-label {
-  font-family: "Gibson Semibold";
+  font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
   color: @gray-light;
   text-transform: uppercase;
@@ -465,10 +524,11 @@ a.small-label.active {
   }
 
   .panel-title {
-    font-family: "Gibson Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 12px;
     text-transform: uppercase;
     display: block;
+    letter-spacing: 1px;
   }
 
   a.panel-heading:hover {
@@ -555,3 +615,49 @@ a.no-underline {
   text-decoration: none;
 }
 
+.clear-all {
+  text-decoration: none;
+}
+
+// Results
+
+.results {
+  font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  display: block;
+  color: @gray-light;
+}
+
+// Product Detail
+
+.product-description h6 {
+  color: @gray-light;
+  font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+// Checkout Panels
+
+.panel-default .product-name a {
+  text-decoration: none;
+  color: @gray-light;
+}
+
+.panel-default .product-name a:hover {
+  text-decoration: none;
+  color: @white;
+}
+
+.expand-order-line .fa {
+  color: @gray;
+}
+
+.expand-order-line .fa:hover {
+  color: @white;
+}

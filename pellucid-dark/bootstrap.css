@@ -1174,7 +1174,7 @@ h6,
   font-family: "Gibson Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   line-height: 1.1;
-  color: #ffffff;
+  color: #f1f1f1;
 }
 h1 small,
 h2 small,
@@ -1252,15 +1252,15 @@ h6 .small,
 }
 h1,
 .h1 {
-  font-size: 32px;
+  font-size: 36px;
 }
 h2,
 .h2 {
-  font-size: 28px;
+  font-size: 32px;
 }
 h3,
 .h3 {
-  font-size: 24px;
+  font-size: 28px;
 }
 h4,
 .h4 {
@@ -4587,10 +4587,10 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .breadcrumb > li + li:before {
   content: "/\00a0";
   padding: 0 5px;
-  color: #ffffff;
+  color: #444448;
 }
 .breadcrumb > .active {
-  color: #bdbdc1;
+  color: #66656c;
 }
 .pagination {
   display: inline-block;
@@ -5653,8 +5653,8 @@ a.list-group-item-danger.active:focus {
   min-height: 20px;
   padding: 19px;
   margin-bottom: 20px;
-  background-color: #202025;
-  border: 1px solid #141417;
+  background-color: #222228;
+  border: 1px solid #222228;
   border-radius: 2px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
@@ -6132,7 +6132,7 @@ button.close {
   opacity: 0.5;
   filter: alpha(opacity=50);
   font-size: 20px;
-  color: #ffffff;
+  color: #f1f1f1;
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
@@ -6157,7 +6157,7 @@ button.close {
 .carousel-control:hover,
 .carousel-control:focus {
   outline: 0;
-  color: #ffffff;
+  color: #f1f1f1;
   text-decoration: none;
   opacity: 0.9;
   filter: alpha(opacity=90);
@@ -6212,7 +6212,7 @@ button.close {
   height: 10px;
   margin: 1px;
   text-indent: -999px;
-  border: 1px solid #ffffff;
+  border: 1px solid #f1f1f1;
   border-radius: 10px;
   cursor: pointer;
   background-color: #000 \9;
@@ -6222,7 +6222,7 @@ button.close {
   margin: 0;
   width: 12px;
   height: 12px;
-  background-color: #ffffff;
+  background-color: #f1f1f1;
 }
 .carousel-caption {
   position: absolute;
@@ -6232,7 +6232,7 @@ button.close {
   z-index: 10;
   padding-top: 20px;
   padding-bottom: 20px;
-  color: #ffffff;
+  color: #f1f1f1;
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
@@ -6687,10 +6687,11 @@ table .text-muted,
   background-color: #222228;
 }
 .table > thead > tr > th {
-  font-size: 12px;
-  font-family: "Gibson Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
   color: #66656c;
+  font-size: 12px;
+  font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
 }
 .form-control {
   display: block;
@@ -6716,6 +6717,15 @@ table .text-muted,
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 3px rgba(0, 183, 240, 0.6);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 3px rgba(0, 183, 240, 0.6);
 }
+.control-label {
+  display: block;
+  text-align: left;
+  margin-bottom: 0;
+  padding-top: 9px;
+}
+.control-label:first-letter {
+  text-transform: capitalize;
+}
 .form-control[disabled],
 .form-control[readonly],
 fieldset[disabled] .form-control {
@@ -6728,6 +6738,9 @@ fieldset[disabled] .form-control {
   text-align: right;
   margin-bottom: 0;
   padding-top: 9px;
+}
+.form-custom .control-label:first-letter {
+  text-transform: capitalize;
 }
 input .form-custom {
   display: block;
@@ -6788,27 +6801,30 @@ label {
   font-weight: normal;
   font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
-  color: #ffffff;
+  color: #f1f1f1;
 }
 legend {
   font-size: 12px;
-  font-family: "Gibson Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   border: 0px;
 }
+.breadcrumb {
+  padding-left: 0px;
+}
 .breadcrumb a {
-  color: #fff;
+  color: #f1f1f1;
 }
 .nav-tabs a,
 .nav-pills a {
-  color: #fff;
+  color: #f1f1f1;
 }
 .nav-tabs a:hover,
 .nav-pills a:hover {
   color: #bdbdc1;
 }
 .pager a {
-  color: #fff;
+  color: #f1f1f1;
 }
 .pager a:hover {
   color: #bdbdc1;
@@ -6842,7 +6858,7 @@ legend {
   font-size: 75%;
   font-weight: normal;
   line-height: 1;
-  color: #ffffff;
+  color: #f1f1f1;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
@@ -6861,6 +6877,7 @@ a.thumbnail:hover,
 a.thumbnail:focus,
 a.thumbnail.active {
   border-color: #878690;
+  background-color: #222228;
 }
 a.list-group-item.active,
 a.list-group-item.active:hover,
@@ -6896,6 +6913,9 @@ a.list-group-item-danger.active:focus {
 .jumbotron h6 {
   color: #fff;
 }
+.badge {
+  padding: 3px 5px;
+}
 .popover {
   border-radius: 2px;
   -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -6904,8 +6924,40 @@ a.list-group-item-danger.active:focus {
 .modal-header {
   background-color: #16161a;
 }
+.well {
+  min-height: 20px;
+  padding: 0px;
+  margin-bottom: 20px;
+  background-color: #222228;
+  border: 0px solid #222228;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0);
+  box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0);
+}
+.well blockquote {
+  border-color: #222228;
+  border-color: rgba(0, 0, 0, 0);
+}
+.well-lg {
+  padding: 0px;
+  border-radius: 0px;
+}
+.well-sm {
+  padding: 0px;
+  border-radius: 0px;
+}
+.well h3 > span {
+  color: #878690;
+  font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 0px;
+  margin-bottom: 15px;
+}
 .small-label {
-  font-family: "Gibson Semibold";
+  font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
   color: #878690;
   text-transform: uppercase;
@@ -6921,10 +6973,11 @@ a.small-label.active {
   background-color: #27272e;
 }
 .tag-filter .panel-title {
-  font-family: "Gibson Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
   text-transform: uppercase;
   display: block;
+  letter-spacing: 1px;
 }
 .tag-filter a.panel-heading:hover {
   color: #f1f1f1;
@@ -6992,4 +7045,38 @@ a.small-label.active {
 }
 a.no-underline {
   text-decoration: none;
+}
+.clear-all {
+  text-decoration: none;
+}
+.results {
+  font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  display: block;
+  color: #878690;
+}
+.product-description h6 {
+  color: #878690;
+  font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.panel-default .product-name a {
+  text-decoration: none;
+  color: #878690;
+}
+.panel-default .product-name a:hover {
+  text-decoration: none;
+  color: #f1f1f1;
+}
+.expand-order-line .fa {
+  color: #66656c;
+}
+.expand-order-line .fa:hover {
+  color: #f1f1f1;
 }

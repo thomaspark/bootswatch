@@ -52,9 +52,9 @@
 @font-size-large:         ceil((@font-size-base * 1.25)); // ~20px
 @font-size-small:         ceil((@font-size-base * 0.85)); // ~14px
 
-@font-size-h1:            32px;
-@font-size-h2:            28px;
-@font-size-h3:            24px;
+@font-size-h1:            36px;
+@font-size-h2:            32px;
+@font-size-h3:            28px;
 @font-size-h4:            20px;
 @font-size-h5:            16px;
 @font-size-h6:            14px;
@@ -68,7 +68,7 @@
 @headings-font-family:    @font-family-base;
 @headings-font-weight:    normal;
 @headings-line-height:    1.1;
-@headings-color:          #FFFFFF;
+@headings-color:          @white;
 
 
 //== Iconography
@@ -692,7 +692,7 @@
 //
 //##
 
-@panel-bg:                    @gray-darker;
+@panel-bg:                    @body-bg;
 @panel-body-padding:          15px;
 @panel-heading-padding:       10px 15px;
 @panel-footer-padding:        @panel-heading-padding;
@@ -750,8 +750,8 @@
 //
 //##
 
-@well-bg:                     darken(@gray-darker, 1%);
-@well-border:                 darken(@well-bg, 5%);
+@well-bg:                     @body-bg; // previously darken(@gray-darker, 1%)
+@well-border:                 @body-bg; // previously darken(@well-bg, 5%)
 
 
 //== Badges
@@ -780,11 +780,11 @@
 @breadcrumb-padding-vertical:   8px;
 @breadcrumb-padding-horizontal: 15px;
 //** Breadcrumb background color
-@breadcrumb-bg:                 @gray-darker;
+@breadcrumb-bg:                 @body-bg;
 //** Breadcrumb text color
-@breadcrumb-color:              #fff;
+@breadcrumb-color:              @gray-dark;
 //** Text color of current page in the breadcrumb
-@breadcrumb-active-color:       @text-color;
+@breadcrumb-active-color:       @gray;
 //** Textual separator for between breadcrumb elements
 @breadcrumb-separator:          "/";
 
@@ -795,15 +795,15 @@
 
 @carousel-text-shadow:                        0 1px 2px rgba(0,0,0,.6);
 
-@carousel-control-color:                      #fff;
+@carousel-control-color:                      @white;
 @carousel-control-width:                      15%;
 @carousel-control-opacity:                    .5;
 @carousel-control-font-size:                  20px;
 
-@carousel-indicator-active-bg:                #fff;
-@carousel-indicator-border-color:             #fff;
+@carousel-indicator-active-bg:                @white;
+@carousel-indicator-border-color:             @white;
 
-@carousel-caption-color:                      #fff;
+@carousel-caption-color:                      @white;
 
 
 //== Close
