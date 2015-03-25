@@ -273,7 +273,7 @@ input:-moz-placeholder {   /* Older versions of Firefox */
   font-style: italic;
 }
 
-input:-ms-input-placeholder { 
+input:-ms-input-placeholder {
   font-style: italic;
 }
 
@@ -420,7 +420,7 @@ a.list-group-item {
     &.active {
       background-color: @state-warning-bg;
     }
-    
+
     &.active:hover,
     &.active:focus {
       background-color: darken(@state-warning-bg, 5%);
@@ -431,7 +431,7 @@ a.list-group-item {
     &.active {
       background-color: @state-danger-bg;
     }
-    
+
     &.active:hover,
     &.active:focus {
       background-color: darken(@state-danger-bg, 5%);
@@ -527,13 +527,7 @@ a.small-label.active {
     font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 12px;
     text-transform: uppercase;
-    display: block;
     letter-spacing: 1px;
-  }
-
-  a.panel-heading:hover {
-    color: @white;
-    text-decoration: none;
   }
 
   .list-group-item,
@@ -544,34 +538,51 @@ a.small-label.active {
 
   .list-group-item:hover {
     color: @white;
-    text-decoration: none; 
+    text-decoration: none;
   }
+}
 
-  .accordion-toggle {     
+// General Accordion Stuff
+
+.accordion {
+  // inside an accordion, move padding from heading to toggle link
+  .panel-heading {
+    padding: 0;
+  }
+  .accordion-toggle {
+    color: @white;
+    display: block;
+    padding: 10px 15px; // instead of padding in the panel-heading
+    text-decoration: none;
+    transition: color .25s ease-in-out;
+
+    &:hover, &:focus {
       color: @white;
-      text-decoration: none;      
+      text-decoration: none;
+    }
   }
 
-  .accordion-toggle.collapsed {     
-      color: @gray-light;
-      text-decoration: none;    
+  .accordion-toggle.collapsed {
+    color: @gray-light;
+    text-decoration: none;
   }
 
   .panel-heading .accordion-toggle:after {
-      /* symbol for "open" panels */
-      font-family: 'FontAwesome';  
-      content: "\f0d7";    
-      float: right;       
-      color: @white;
-      padding-top: 2px;       
+    /* symbol for "open" panels */
+    font-family: 'FontAwesome';
+    content: "\f0d7";
+    float: right;
+    color: @white;
+    padding-top: 2px;
   }
 
   .panel-heading .accordion-toggle.collapsed:after {
-      /* symbol for "collapsed" panels */
-      content: "\f0da";  
-      color: @gray-light;
+    /* symbol for "collapsed" panels */
+    content: "\f0da";
+    color: @gray-light;
   }
 }
+
 
 // Tag Label
 
@@ -584,8 +595,8 @@ a.small-label.active {
 }
 
 .label-tag:after {
-      font-family: 'FontAwesome';  
-      content: "\f057";       
+      font-family: 'FontAwesome';
+      content: "\f057";
       color: @gray-dark;
       margin-left: 12px;
       margin-right: -8px;
@@ -601,13 +612,13 @@ a.small-label.active {
   text-decoration: none;
 }
 
-.label-tag a{ 
+.label-tag a{
   &:focus, &:hover {
   text-decoration: none;
   }
 }
 
-.label-tag:hover:after {   
+.label-tag:hover:after {
       color: @gray-light;
 }
 

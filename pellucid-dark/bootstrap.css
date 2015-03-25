@@ -6976,12 +6976,7 @@ a.small-label.active {
   font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
   text-transform: uppercase;
-  display: block;
   letter-spacing: 1px;
-}
-.tag-filter a.panel-heading:hover {
-  color: #f1f1f1;
-  text-decoration: none;
 }
 .tag-filter .list-group-item,
 .tag-filter .list-group-item:first-child {
@@ -6992,15 +6987,28 @@ a.small-label.active {
   color: #f1f1f1;
   text-decoration: none;
 }
-.tag-filter .accordion-toggle {
+.accordion .panel-heading {
+  padding: 0;
+}
+.accordion .accordion-toggle {
+  color: #f1f1f1;
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  -webkit-transition: color 0.25s ease-in-out;
+       -o-transition: color 0.25s ease-in-out;
+          transition: color 0.25s ease-in-out;
+}
+.accordion .accordion-toggle:hover,
+.accordion .accordion-toggle:focus {
   color: #f1f1f1;
   text-decoration: none;
 }
-.tag-filter .accordion-toggle.collapsed {
+.accordion .accordion-toggle.collapsed {
   color: #878690;
   text-decoration: none;
 }
-.tag-filter .panel-heading .accordion-toggle:after {
+.accordion .panel-heading .accordion-toggle:after {
   /* symbol for "open" panels */
   font-family: 'FontAwesome';
   content: "\f0d7";
@@ -7008,7 +7016,7 @@ a.small-label.active {
   color: #f1f1f1;
   padding-top: 2px;
 }
-.tag-filter .panel-heading .accordion-toggle.collapsed:after {
+.accordion .panel-heading .accordion-toggle.collapsed:after {
   /* symbol for "collapsed" panels */
   content: "\f0da";
   color: #878690;
