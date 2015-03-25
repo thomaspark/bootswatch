@@ -7021,12 +7021,34 @@ a.small-label.active {
   content: "\f0da";
   color: #878690;
 }
+.accordion .tag-name {
+  font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.accordion .tag-icon {
+  font-size: 1em;
+  line-height: 1em;
+}
 .label-tag {
   background-color: #222228;
   border: 1px solid #444448;
-  font-size: 16px;
   color: #878690;
+  font-size: 90%;
+  font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-decoration: none;
+  -webkit-transition: border 0.2s ease-in-out;
+  -o-transition: border 0.2s ease-in-out;
+  transition: border 0.2s ease-in-out;
+}
+.breadcrumb .breadcrumb-tag-link-name {
+  color: #878690;
+  font-size: 14px;
+  -webkit-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+.breadcrumb li:hover a span,
+.breadcrumb li:focus a span {
+  color: #f1f1f1;
 }
 .label-tag:after {
   font-family: 'FontAwesome';
@@ -7035,13 +7057,16 @@ a.small-label.active {
   margin-left: 12px;
   margin-right: -8px;
   vertical-align: -1px;
+  -webkit-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 .label-tag:hover,
 .label-tag:focus {
   background-color: #27272e;
-  border: 1px solid #878690;
+  border: 1px solid #f1f1f1;
   color: #f1f1f1;
-  font-size: 16px;
+  font-size: 90%;
   text-decoration: none;
 }
 .label-tag a:focus,
@@ -7049,7 +7074,10 @@ a.small-label.active {
   text-decoration: none;
 }
 .label-tag:hover:after {
-  color: #878690;
+  color: #f1f1f1;
+}
+.label-tag:hover:after {
+  color: #f1f1f1;
 }
 a.no-underline {
   text-decoration: none;
