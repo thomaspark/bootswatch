@@ -6698,9 +6698,10 @@ table .text-muted,
   width: 100%;
   height: 36px;
   padding: 6px 12px;
+  margin-left: 0px;
   font-size: 16px;
   line-height: 1.42857143;
-  color: #878690;
+  color: #bdbdc1;
   background-color: #27272e;
   background-image: none;
   border: 1px solid #444448;
@@ -6712,10 +6713,10 @@ table .text-muted,
 .form-control:focus {
   background-color: #222228;
   border-color: #bdbdc1;
-  color: #bdbdc1;
+  color: #f1f1f1;
   outline: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 3px rgba(0, 183, 240, 0.6);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 3px rgba(0, 183, 240, 0.6);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 3px rgba(225, 225, 225, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 3px rgba(225, 225, 225, 0.6);
 }
 .control-label {
   display: block;
@@ -6724,6 +6725,9 @@ table .text-muted,
   padding-top: 9px;
 }
 .control-label:first-letter {
+  text-transform: capitalize;
+}
+.well > label:first-letter {
   text-transform: capitalize;
 }
 .form-control[disabled],
