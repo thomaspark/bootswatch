@@ -571,6 +571,15 @@ a.small-label.active {
       content: "\f0da";  
       color: @gray-light;
   }
+
+  .tag-name {
+    font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+  }
+
+  .tag-icon {
+    font-size: 1em;
+    line-height: 1em;
+  }
 }
 
 // Tag Label
@@ -578,26 +587,48 @@ a.small-label.active {
 .label-tag {
   background-color: @gray-darker;
   border: 1px solid @gray-dark;
-  font-size: 16px;
   color: @gray-light;
+  font-size: 90%;
+  font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-decoration: none;
+  -webkit-transition: border 0.2s ease-in-out;
+  -o-transition: border 0.2s ease-in-out;
+  transition: border 0.2s ease-in-out;
+}
+
+// breadcrumb fix
+    
+.breadcrumb .breadcrumb-tag-link-name {
+  color: @gray-light;
+  font-size: 90%;
+  -webkit-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.breadcrumb li:hover a span, 
+.breadcrumb li:focus a span { 
+  color: @white;
 }
 
 .label-tag:after {
-      font-family: 'FontAwesome';  
-      content: "\f057";       
-      color: @gray-dark;
-      margin-left: 12px;
-      margin-right: -8px;
-      vertical-align: -1px;
+  font-family: 'FontAwesome';  
+  content: "\f057";       
+  color: @gray-dark;
+  margin-left: 12px;
+  margin-right: -8px;
+  vertical-align: -1px;
+  -webkit-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .label-tag:hover,
 .label-tag:focus {
   background-color: lighten(@gray-darker, 2%);
-  border: 1px solid @gray-light;
+  border: 1px solid @white;
   color: @white;
-  font-size: 16px;
+  font-size: 90%;
   text-decoration: none;
 }
 
@@ -608,7 +639,7 @@ a.small-label.active {
 }
 
 .label-tag:hover:after {   
-      color: @gray-light;
+      color: @white;
 }
 
 a.no-underline {
