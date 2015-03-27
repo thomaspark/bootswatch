@@ -46,12 +46,33 @@
   color: #FFFFFF;
 }
 
+a.navbar-brand {
+  -webkit-transition: opacity ease-in-out .2s;
+  -o-transition: opacity ease-in-out .2s;
+  transition: opacity ease-in-out .2s;
+}
+
+a.navbar-brand:hover{
+  opacity: 0.75;
+}
+
 
 // Buttons ====================================================================
 
 .btn {
   padding: 6px 12px;
 }
+
+// button.btn.btn-primary.btn-block.add-to-cart {
+//  transition: all 0.3s ease 0s;
+//}
+
+//button.btn.btn-primary.btn-block.add-to-cart:hover {
+//  background-color: @body-bg;
+//  color: @brand-primary;
+//  border: 1px solid @brand-primary;
+//}
+
 
 .dropdown-menu {
   position: absolute;
@@ -75,13 +96,52 @@
           background-clip: padding-box;
 }
 
-
 .input-group-btn .btn {
   border: 1px solid @gray-dark;
 }
 
 .btn-group .btn {
   border: 1px solid @body-bg;
+}
+
+// Navbar User Menu
+
+.navbar  {
+  .dropdown-menu {
+    position: absolute;
+    top: 80%;
+    left: -11px;
+    z-index: 1030;
+    float: left;
+    min-width: 160px;
+    padding: 10px 0px;
+    margin: 5px;
+    list-style: none;
+    font-size: 12px;
+    font-family: "Gibson";
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: left;
+    background-color: @gray-base;
+    border: 1px solid @gray-darker;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.175);
+    -webkit-background-clip: padding-box;
+            background-clip: padding-box;
+  }
+
+  .dropdown-menu > li a {
+    color: @gray-lighter;
+  }
+
+  .dropdown-menu > li a:hover {
+    background-color: lighten(@gray-base, 10%);
+    color: @white;
+  }
+  .dropdown-menu .divider {
+  background-color: @gray-darker;
+  }
 }
 
 // Typography =================================================================
@@ -150,15 +210,15 @@ table,
 // Forms ======================================================================
 
 .form-control {
-  display: block;
-  width: 100%;
-  height: 36px;
-  padding: 6px 12px;
-  margin-left: 0px;
+  display: block !important;
+  width: 100% !important;
+  height: 36px !important;
+  padding: 6px 12px !important;
+  margin-left: 0px !important;
   font-size: 16px;
   line-height: 1.42857143;
   color: @gray-lighter;
-  background-color: lighten(@gray-darker,2%);
+  background-color: lighten(@gray-darker,2%) !important;
   background-image: none;
   border: 1px solid @gray-dark;
   border-radius: 2px;
@@ -187,8 +247,8 @@ table,
   text-transform: capitalize;
 }
 
-.well > label:first-letter {
-  text-transform: capitalize;
+.well label:first-letter {
+  text-transform: capitalize !important;
 }
 
 .form-control[disabled],
@@ -297,7 +357,23 @@ legend {
   border: 0px;
 }
 
+// JSON Editor Fields =========================================================
 
+.container-startDate {
+  width: 50% !important;
+}
+
+.container-endDate {
+  width: 50% !important;
+}
+
+.container-customEndDate {
+  width: 50% !important; 
+}
+
+textarea.form-control {
+  height: 108px !important;
+}
 
 // Navs =======================================================================
 
@@ -472,7 +548,7 @@ a.list-group-item {
 .well {
   min-height: 20px;
   padding: 0px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   background-color: #222228;
   border: 0px solid #222228;
   border-radius: 2px;
@@ -607,9 +683,9 @@ a.small-label.active {
   font-size: 90%;
   font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-decoration: none;
-  -webkit-transition: border 0.2s ease-in-out;
-  -o-transition: border 0.2s ease-in-out;
-  transition: border 0.2s ease-in-out;
+  -webkit-transition: border 0.25s ease-in-out;
+  -o-transition: border 0.25s ease-in-out;
+  transition: border 0.25s ease-in-out;
 }
 
 // breadcrumb fix

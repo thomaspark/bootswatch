@@ -6613,6 +6613,14 @@ button.close {
 .navbar-default .navbar-nav > li > a:hover {
   color: #FFFFFF;
 }
+a.navbar-brand {
+  -webkit-transition: opacity ease-in-out 0.2s;
+  -o-transition: opacity ease-in-out 0.2s;
+  transition: opacity ease-in-out 0.2s;
+}
+a.navbar-brand:hover {
+  opacity: 0.75;
+}
 .btn {
   padding: 6px 12px;
 }
@@ -6642,6 +6650,39 @@ button.close {
 }
 .btn-group .btn {
   border: 1px solid #222228;
+}
+.navbar .dropdown-menu {
+  position: absolute;
+  top: 80%;
+  left: -11px;
+  z-index: 1030;
+  float: left;
+  min-width: 160px;
+  padding: 10px 0px;
+  margin: 5px;
+  list-style: none;
+  font-size: 12px;
+  font-family: "Gibson";
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: left;
+  background-color: #000000;
+  border: 1px solid #222228;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.175);
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.navbar .dropdown-menu > li a {
+  color: #bdbdc1;
+}
+.navbar .dropdown-menu > li a:hover {
+  background-color: #1a1a1a;
+  color: #f1f1f1;
+}
+.navbar .dropdown-menu .divider {
+  background-color: #222228;
 }
 p {
   line-height: 26px;
@@ -6694,15 +6735,15 @@ table .text-muted,
   text-transform: uppercase;
 }
 .form-control {
-  display: block;
-  width: 100%;
-  height: 36px;
-  padding: 6px 12px;
-  margin-left: 0px;
+  display: block !important;
+  width: 100% !important;
+  height: 36px !important;
+  padding: 6px 12px !important;
+  margin-left: 0px !important;
   font-size: 16px;
   line-height: 1.42857143;
   color: #bdbdc1;
-  background-color: #27272e;
+  background-color: #27272e !important;
   background-image: none;
   border: 1px solid #444448;
   border-radius: 2px;
@@ -6727,8 +6768,8 @@ table .text-muted,
 .control-label:first-letter {
   text-transform: capitalize;
 }
-.well > label:first-letter {
-  text-transform: capitalize;
+.well label:first-letter {
+  text-transform: capitalize !important;
 }
 .form-control[disabled],
 .form-control[readonly],
@@ -6812,6 +6853,18 @@ legend {
   font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   border: 0px;
+}
+.container-startDate {
+  width: 50% !important;
+}
+.container-endDate {
+  width: 50% !important;
+}
+.container-customEndDate {
+  width: 50% !important;
+}
+textarea.form-control {
+  height: 108px !important;
 }
 .breadcrumb {
   padding-left: 0px;
@@ -6931,7 +6984,7 @@ a.list-group-item-danger.active:focus {
 .well {
   min-height: 20px;
   padding: 0px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   background-color: #222228;
   border: 0px solid #222228;
   border-radius: 2px;
@@ -7039,9 +7092,9 @@ a.small-label.active {
   font-size: 90%;
   font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-decoration: none;
-  -webkit-transition: border 0.2s ease-in-out;
-  -o-transition: border 0.2s ease-in-out;
-  transition: border 0.2s ease-in-out;
+  -webkit-transition: border 0.25s ease-in-out;
+  -o-transition: border 0.25s ease-in-out;
+  transition: border 0.25s ease-in-out;
 }
 .breadcrumb .breadcrumb-tag-link-name {
   color: #878690;
