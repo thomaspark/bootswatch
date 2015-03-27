@@ -6,11 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css" media="screen" id="stylesheet">
-    <link rel="stylesheet" href="../assets/css/bootswatch.min.css">
     <style>
 
       body {
         margin-bottom: 3em;
+      }
+
+      #theme {
+        margin-top: 2em;
+        font-size: 4em;
       }
 
       #menu {
@@ -2903,24 +2907,32 @@
 
       $('.tooltip-test').tooltip();
 
-      $.get("http://api.bootswatch.com/3/", function (data) {
-          var menuTemplate = "<div id='menu'><select>{{#.}}<option data-description='{{description}}'>{{name}}</option>{{/.}}</select></div>",
+      $.get("https://bootswatch.aws.af.cm/3/", function (data) {
+          var menuTemplate = "<select id='menu'>{{#.}}<option value='{{name}}' data-description='{{description}}'>{{name}}</option>{{/.}}</select>",
               menuHTML = Mustache.render(menuTemplate, data.themes);
 
           $('body').append(menuHTML);
 
           $('#menu').change(function(){
-            var $theme = $('#menu :selected'),
-                theme = $theme.text(),
-                description = $theme.data('description'),
-                date = new Date(),
-                time = date.getTime()
-                url = '../' + theme.toLowerCase() + '/bootstrap.css?' + time;
+            var theme = $('#menu :selected'),
+                text = theme.text(),
+                description = theme.data('description'),
+                time = new Date().getTime()
+                url = '../' + text.toLowerCase() + '/bootstrap.css?' + time;
 
-            $('#theme').text(theme);
+            $('#theme').text(text);
             $('#description').text(description);
             $('#stylesheet').attr('href', url);
+
+            localStorage.setItem("theme", text);
+            console.log(localStorage.theme);
           });
+
+          if (localStorage.theme) {
+            var theme = localStorage.theme;
+            $("#menu").val(theme).change();
+            console.log(theme);
+          }
       }, "json");
 
     </script>
