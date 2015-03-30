@@ -5319,7 +5319,7 @@ a.list-group-item-danger.active:focus {
 }
 .panel-footer {
   padding: 10px 15px;
-  background-color: #444448;
+  background-color: #27272e;
   border-top: 1px solid #444448;
   border-bottom-right-radius: 1px;
   border-bottom-left-radius: 1px;
@@ -5520,14 +5520,14 @@ a.list-group-item-danger.active:focus {
 }
 .panel-default > .panel-heading {
   color: #bdbdc1;
-  background-color: #444448;
+  background-color: #27272e;
   border-color: #444448;
 }
 .panel-default > .panel-heading + .panel-collapse > .panel-body {
   border-top-color: #444448;
 }
 .panel-default > .panel-heading .badge {
-  color: #444448;
+  color: #27272e;
   background-color: #bdbdc1;
 }
 .panel-default > .panel-footer + .panel-collapse > .panel-body {
@@ -6560,6 +6560,12 @@ button.close {
     display: none !important;
   }
 }
+.well :focus {
+  outline-width: 0px;
+  color: #f1f1f1;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 3px rgba(225, 225, 225, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 3px rgba(225, 225, 225, 0.6);
+}
 .square {
   width: 100px;
   height: 100px;
@@ -6605,7 +6611,7 @@ button.close {
   border-radius: 0px;
 }
 .navbar-default .navbar-nav > li > a {
-  font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -6707,6 +6713,9 @@ p {
 .text-info:hover {
   color: #5360aa;
 }
+.product-description ul li {
+  padding-bottom: 15px;
+}
 table,
 .table {
   color: #bdbdc1;
@@ -6734,13 +6743,20 @@ table .text-muted,
   font-weight: normal;
   text-transform: uppercase;
 }
+td.product-name,
+td.order-line-expand {
+  -webkit-transition: color 0.25s ease-in-out;
+       -o-transition: color 0.25s ease-in-out;
+          transition: color 0.25s ease-in-out;
+}
 .form-control {
-  display: block !important;
+  display: block;
   width: 100% !important;
   height: 36px !important;
   padding: 6px 12px !important;
   margin-left: 0px !important;
   font-size: 16px;
+  font-style: normal !important;
   line-height: 1.42857143;
   color: #bdbdc1;
   background-color: #27272e !important;
@@ -6756,6 +6772,7 @@ table .text-muted,
   border-color: #bdbdc1;
   color: #f1f1f1;
   outline: 0;
+  border-radius: 2px !important;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 3px rgba(225, 225, 225, 0.6);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 3px rgba(225, 225, 225, 0.6);
 }
@@ -6858,13 +6875,19 @@ legend {
   width: 50% !important;
 }
 .container-endDate {
-  width: 50% !important;
+  width: 100% !important;
 }
-.container-customEndDate {
+.container-customEndDate .form-control {
   width: 50% !important;
 }
 textarea.form-control {
   height: 108px !important;
+}
+textarea.form-control:focus {
+  background-color: #222228 !important;
+}
+span.select2.select2-container.select2-container--default {
+  width: 100% !important;
 }
 .breadcrumb {
   padding-left: 0px;
@@ -7142,13 +7165,6 @@ a.no-underline {
 .clear-all {
   text-decoration: none;
 }
-.results {
-  font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 12px;
-  text-transform: uppercase;
-  display: block;
-  color: #878690;
-}
 .product-description h6 {
   color: #878690;
   font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -7158,6 +7174,55 @@ a.no-underline {
   letter-spacing: 1px;
   margin-top: 0px;
   margin-bottom: 0px;
+}
+.select2-dropdown {
+  background-color: #27272e !important;
+  border: 1px solid #444448 !important;
+  border-radius: 2px !important;
+  color: #bdbdc1;
+}
+.select2-container--default .select2-search--dropdown .select2-search__field {
+  border: 1px solid #444448 !important;
+  background-color: #f1f1f1 !important;
+  color: #222228 !important;
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  background-color: #16161a !important;
+  color: #f1f1f1 !important;
+}
+.select2-container--default .select2-results__option[aria-selected=true] {
+  background-color: #27272e !important;
+  color: rgba(241, 241, 241, 0.25) !important;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  background-color: #27272e !important;
+  border: 1px solid #444448 !important;
+  border-radius: 2px !important;
+  color: #bdbdc1 !important;
+  line-height: 36px !important;
+}
+.select2-container--default .select2-selection--single {
+  background-color: #27272e !important;
+  border: 0px solid #444448 !important;
+  border-radius: 2px !important;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 36px !important;
+  right: 6px !important;
+}
+.select2-container .select2-selection--single {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  cursor: pointer;
+  display: block;
+  height: 36px !important;
+}
+.panel {
+  background-color: #27272e;
+}
+tr.order-line-details.expanded {
+  background-color: #27272e;
 }
 .panel-default .product-name a {
   text-decoration: none;
@@ -7172,4 +7237,10 @@ a.no-underline {
 }
 .expand-order-line .fa:hover {
   color: #f1f1f1;
+}
+.change-password .form-control {
+  width: 300px !important;
+}
+.change-password button.btn.btn-primary.btn.btn-block {
+  width: inherit;
 }
