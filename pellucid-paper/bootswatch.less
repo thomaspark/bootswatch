@@ -8,7 +8,6 @@
 
 .navbar {
   border: none;
-  .box-shadow(0 1px 2px rgba(0,0,0,.3));
 
   &-brand {
     font-size: 24px;
@@ -131,8 +130,20 @@ a {
 
 .sheet {
   background: #fff;
-  .box-shadow(0 1px 4px rgba(0,0,0,.3));
+  .box-shadow(0 1px 4px rgba(0,0,0,0.3));
   padding: 14px 20px;
+}
+
+// Jumbotron ==================================================================
+.jumbotron-inverse {
+  background-color: @brand-primary-light;
+  .box-shadow(0 1px 4px rgba(0,0,0,0.3));
+  color: #fff;
+
+  // stupid specificity
+  h1, h2, h3, h4, h5, h6 {
+    color: #fff;
+  }
 }
 
 // Tables =====================================================================
@@ -540,7 +551,6 @@ input[type="checkbox"],
 }
 
 .list-group {
-  .box-shadow(0 1px 4px rgba(0,0,0,.3));
 
   &-item {
     padding: 15px;

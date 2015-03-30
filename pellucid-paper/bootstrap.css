@@ -5124,7 +5124,7 @@ a.thumbnail.active {
   padding: 10px 15px;
   margin-bottom: -1px;
   background-color: #ffffff;
-  border: 1px solid #dddddd;
+  border: 1px solid #f1f1f1;
 }
 .list-group-item:first-child {
   border-top-right-radius: 3px;
@@ -6561,8 +6561,6 @@ button.close {
 }
 .navbar {
   border: none;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 .navbar-brand {
   font-size: 24px;
@@ -6817,6 +6815,20 @@ a {
   -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
   padding: 14px 20px;
+}
+.jumbotron-inverse {
+  background-color: #77d4ff;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+.jumbotron-inverse h1,
+.jumbotron-inverse h2,
+.jumbotron-inverse h3,
+.jumbotron-inverse h4,
+.jumbotron-inverse h5,
+.jumbotron-inverse h6 {
+  color: #fff;
 }
 label {
   font-weight: normal;
@@ -7257,10 +7269,6 @@ input[type="checkbox"]:disabled:checked:after,
 }
 .close:hover {
   opacity: 1;
-}
-.list-group {
-  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 }
 .list-group-item {
   padding: 15px;
