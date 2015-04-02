@@ -375,6 +375,35 @@ legend {
   border: 0px;
 }
 
+// Checkbox ===
+
+input[type=checkbox] { display:none; } /* hide default checkbox */
+
+.custom-checkbox {
+
+  label {
+    padding-left: 0px;
+    vertical-align: middle;
+  }
+
+  input[type=checkbox] + label:before {
+    font-family: 'FontAwesome';
+    display: inline-block;
+    content: "\f096";
+    font-size: 16px;
+    vertical-align: middle;
+    padding-bottom: 5px;
+    margin-left: 0px;
+    margin-right: 10px;
+  }
+
+  input[type=checkbox]:checked + label:before { 
+    content: "\f14a";
+    font-size: 16px;
+    margin-right: 9px;
+  } 
+}
+
 // JSON Editor Fields =========================================================
 
 textarea.form-control {
@@ -409,15 +438,26 @@ select[size] {
 
 // Comps List
 
+.container-comps {
+
+  table .table .table-bordered {
+    width: 100% !important;
+  }
+
+}
+
 [data-schematype="array"] thead {
   display: none;
 }
+
 [data-schematype="array"] .table {
   border: none !important;
 }
+
 [data-schematype="array"] table.table.table-bordered {
   margin-bottom: 5px;
 }
+
 [data-schematype="array"] .table-bordered > thead > tr > th,
 [data-schematype="array"] .table-bordered > tbody > tr > th,
 [data-schematype="array"] .table-bordered > tfoot > tr > th,
@@ -426,6 +466,7 @@ select[size] {
 [data-schematype="array"] .table-bordered > tfoot > tr > td {
   border: none;
 }
+
 [data-schematype="array"] .table > thead > tr > th,
 [data-schematype="array"] .table > tbody > tr > th,
 [data-schematype="array"] .table > tfoot > tr > th,
@@ -451,6 +492,8 @@ select[size] {
 .col-md-12.container-comps {
   margin: 20px 0px;
 }
+
+
 
 // Time Frame
 
@@ -1043,5 +1086,7 @@ tr.order-line-details.expanded {
 
 #imagelightbox {
   -webkit-box-shadow: 0 0 0.125em rgba(0, 0, 0, 0.5);
-          box-shadow: 0 0 0.125em rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 0.125em rgba(0, 0, 0, 0.5);
 }
+
+

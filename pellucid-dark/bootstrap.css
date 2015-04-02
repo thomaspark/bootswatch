@@ -6941,6 +6941,29 @@ legend {
   text-transform: uppercase;
   border: 0px;
 }
+input[type=checkbox] {
+  display: none;
+}
+/* hide default checkbox */
+.custom-checkbox label {
+  padding-left: 0px;
+  vertical-align: middle;
+}
+.custom-checkbox input[type=checkbox] + label:before {
+  font-family: 'FontAwesome';
+  display: inline-block;
+  content: "\f096";
+  font-size: 16px;
+  vertical-align: middle;
+  padding-bottom: 5px;
+  margin-left: 0px;
+  margin-right: 10px;
+}
+.custom-checkbox input[type=checkbox]:checked + label:before {
+  content: "\f14a";
+  font-size: 16px;
+  margin-right: 9px;
+}
 textarea.form-control {
   height: 108px !important;
 }
@@ -6965,6 +6988,9 @@ span.select2.select2-container.select2-container--default {
 select[multiple],
 select[size] {
   height: auto !important;
+}
+.container-comps table .table .table-bordered {
+  width: 100% !important;
 }
 [data-schematype="array"] thead {
   display: none;
