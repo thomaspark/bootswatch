@@ -6991,6 +6991,7 @@ select[size] {
 }
 .container-comps table .table .table-bordered {
   width: 100% !important;
+  max-width: 100% !important;
 }
 [data-schematype="array"] thead {
   display: none;
@@ -7017,6 +7018,25 @@ select[size] {
 [data-schematype="array"] .table > tfoot > tr > td {
   padding: 5px 10px 5px 0px;
   border-top: none;
+  max-width: 320px;
+}
+[data-schematype="array"] .table > thead > tr > th,
+[data-schematype="array"] .table > tbody > tr > th,
+[data-schematype="array"] .table > tfoot > tr > th,
+[data-schematype="array"] .table > thead > tr > td,
+[data-schematype="array"] .table > tbody > tr > td,
+[data-schematype="array"] .table > tfoot > tr > td {
+  /* Small devices (tablets, 768px and up) */
+}
+@media (min-width: 768px) {
+  [data-schematype="array"] .table > thead > tr > th,
+  [data-schematype="array"] .table > tbody > tr > th,
+  [data-schematype="array"] .table > tfoot > tr > th,
+  [data-schematype="array"] .table > thead > tr > td,
+  [data-schematype="array"] .table > tbody > tr > td,
+  [data-schematype="array"] .table > tfoot > tr > td {
+    max-width: 220px;
+  }
 }
 [data-schematype="array"] [title="Delete Last Comp"] {
   display: none;
@@ -7070,6 +7090,10 @@ select[size] {
   float: left;
   margin-top: 20px;
   height: 36px !important;
+}
+.btn-group .json-editor-btn-add .fa-plus:before {
+  font-size: 14px;
+  margin-right: 5px;
 }
 .breadcrumb {
   padding-left: 0px;

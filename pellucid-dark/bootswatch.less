@@ -375,7 +375,7 @@ legend {
   border: 0px;
 }
 
-// Checkbox ===
+// Checkbox =========================================================
 
 input[type=checkbox] { display:none; } /* hide default checkbox */
 
@@ -442,6 +442,7 @@ select[size] {
 
   table .table .table-bordered {
     width: 100% !important;
+    max-width: 100% !important;
   }
 
 }
@@ -475,6 +476,21 @@ select[size] {
 [data-schematype="array"] .table > tfoot > tr > td {
   padding: 5px 10px 5px 0px;
   border-top: none;
+  max-width: 320px;
+}
+
+[data-schematype="array"] .table > thead > tr > th,
+[data-schematype="array"] .table > tbody > tr > th,
+[data-schematype="array"] .table > tfoot > tr > th,
+[data-schematype="array"] .table > thead > tr > td,
+[data-schematype="array"] .table > tbody > tr > td,
+[data-schematype="array"] .table > tfoot > tr > td {
+
+  /* Small devices (tablets, 768px and up) */
+  @media (min-width: @screen-sm-min) { 
+  max-width: 220px;
+  }
+
 }
 
 [data-schematype="array"] [title="Delete Last Comp"] {
@@ -492,7 +508,6 @@ select[size] {
 .col-md-12.container-comps {
   margin: 20px 0px;
 }
-
 
 
 // Time Frame
@@ -544,6 +559,22 @@ select[size] {
   float: left;
   margin-top: 20px;
   height: 36px !important;
+}
+
+
+// Button groups
+
+.btn-group {
+
+  .json-editor-btn-add {
+
+    .fa-plus:before {
+      font-size: 14px; 
+      margin-right: 5px;
+    } 
+
+  }
+
 }
 
 
