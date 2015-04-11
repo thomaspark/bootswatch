@@ -17,8 +17,8 @@
 
   &-nav > li > a {
     $margin-vertical: (($navbar-height - 2*$padding-base-vertical - $line-height-computed - 2px) / 2);
-    padding: $padding-base-vertical $padding-base-horizontal;
     margin: $margin-vertical 6px;
+    padding: $padding-base-vertical $padding-base-horizontal;
     border: 1px solid transparent;
     border-radius: $border-radius-base;
 
@@ -47,7 +47,15 @@
   }
 }
 
-@media (max-width: $grid-float-breakpoint) {
+@media (min-width: $grid-float-breakpoint) {
+  .navbar {
+    .navbar-nav > li > a {
+      padding: $padding-base-vertical $padding-base-horizontal;
+    }
+  }
+}
+
+@media (max-width: $grid-float-breakpoint - 1) {
   .navbar {
     .navbar-nav > li > a {
       margin: 0;
