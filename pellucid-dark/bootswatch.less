@@ -44,9 +44,7 @@
 
 .navbar-default .navbar-nav > li > a {
   font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  font-size: 14px;
 }
 
 .navbar-default .navbar-nav > li > a:hover {
@@ -124,10 +122,8 @@ a.navbar-brand:hover{
     padding: 10px 0px;
     margin: 5px;
     list-style: none;
-    font-size: 12px;
+    font-size: 14px;
     font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    letter-spacing: 1px;
-    text-transform: uppercase;
     text-align: left;
     background-color: @gray-base;
     border: 1px solid @gray-darker;
@@ -146,8 +142,22 @@ a.navbar-brand:hover{
     background-color: lighten(@gray-base, 10%);
     color: @white;
   }
+
   .dropdown-menu .divider {
   background-color: @gray-darker;
+  }
+
+  .user-menu:hover {
+    color: @white !important;
+  }
+
+  .user-menu .caret {
+    margin-left: 10px;
+    font-size: 10px;
+  }
+
+  .cart-link .cart-container:hover {
+  color: @white !important;
   }
 }
 
@@ -182,8 +192,28 @@ p {
   color: @brand-info;
 }
 
-.product-description ul li {
-  padding-bottom: 15px; 
+.product-description {
+
+  ul li:first-child{
+    padding-top: 23px;
+  }
+
+  #description {
+    margin-bottom: 23px;
+  }
+
+  a {
+    color: @gray-lighter;
+    border-bottom: 1px dotted @gray;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: @white;
+    border-bottom: 1px dotted @white;
+    text-decoration: none;
+  }
+
 }
 
 // Tables =====================================================================
@@ -418,14 +448,20 @@ span.select2.select2-container.select2-container--default {
   width: 100% !important;
 }
 
-.col-md-12.container-startDateCustomDuration:after,
-.col-md-12.container-customEndDate:after {
+.select2-container--default .select2-selection--single .select2-selection__placeholder {
+  color: @gray;
+}
+
+.container-startDateCustomDuration:after,
+.container-customEndDate:after {
   content: "Format: DD MMM YYYY";
   padding-bottom: 15px;
   font-size: 12px;
   font-style: italic;
-  color: #66656C;
+  color: @gray-light;
+  font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
 .container-startDateCustomDuration .form-group,
 .container-customEndDate .form-group {
   margin-bottom: 0px !important;
@@ -436,6 +472,16 @@ select[size] {
   height: auto !important;
 }
 
+.container-customize label:after {
+  content: "If you have additional specifications, please enter them here. Our team of experts will tailor the content to meet your needs.";
+  padding-bottom: 5px;
+  font-size: 14px;
+  color: @gray-light;
+  display: block;
+  font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 14px;
+}
+
 // Comps List
 
 .container-comps {
@@ -443,6 +489,14 @@ select[size] {
   table .table .table-bordered {
     width: 100% !important;
     max-width: 100% !important;
+  } 
+
+  .table td{
+    width: 30%;
+  }
+
+  .table td:first-child {
+    width: 70%;
   }
 
 }
@@ -474,23 +528,9 @@ select[size] {
 [data-schematype="array"] .table > thead > tr > td,
 [data-schematype="array"] .table > tbody > tr > td,
 [data-schematype="array"] .table > tfoot > tr > td {
-  padding: 5px 10px 5px 0px;
-  border-top: none;
-  max-width: 320px;
-}
 
-[data-schematype="array"] .table > thead > tr > th,
-[data-schematype="array"] .table > tbody > tr > th,
-[data-schematype="array"] .table > tfoot > tr > th,
-[data-schematype="array"] .table > thead > tr > td,
-[data-schematype="array"] .table > tbody > tr > td,
-[data-schematype="array"] .table > tfoot > tr > td {
-
-  /* Small devices (tablets, 768px and up) */
-  @media (min-width: @screen-sm-min) { 
-  max-width: 220px;
-  }
-
+    padding: 5px 10px 0px 0px;
+    border-top: none;
 }
 
 [data-schematype="array"] [title="Delete Last Comp"] {
@@ -508,7 +548,6 @@ select[size] {
 .col-md-12.container-comps {
   margin: 20px 0px;
 }
-
 
 // Time Frame
 
@@ -919,10 +958,7 @@ a.small-label.active {
 
 .label-tag:hover,
 .label-tag:focus {
-  background-color: lighten(@gray-darker, 2%);
-  border: 1px solid @white;
   color: @white;
-  font-size: 90%;
   text-decoration: none;
 }
 
@@ -946,6 +982,9 @@ a.no-underline {
 
 .clear-all {
   text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 // Product Detail 
@@ -1044,7 +1083,30 @@ tr.order-line-details.expanded {
   color: @white;
 }
 
-// Change Password
+// Checkout area
+
+.container-order-info {
+
+  .row-order-summary .panel-default {
+    border: none;
+    background-color: @body-bg;
+  }
+
+  .table>tbody>tr>td, 
+  .table>tfoot>tr>td {
+    border-top: 0px;
+  }
+
+  .row-order-form p {
+    font-size: 14px;
+    color: @gray-light;
+    font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-bottom: 0px;
+  }
+
+}
+
+// Change Password  =====================================================================
 
 .change-password {
 
@@ -1058,8 +1120,7 @@ tr.order-line-details.expanded {
 
 }
 
-
-// Lightbox
+// Lightbox =====================================================================
 
  #imagelightbox-close {
   background-color: rgba(225, 225, 225, 0);
@@ -1120,4 +1181,24 @@ tr.order-line-details.expanded {
   box-shadow: 0 0 0.125em rgba(0, 0, 0, 0.5);
 }
 
+// Product image
 
+.product-page .product-page-left .carousel img:hover {
+  opacity: .90;
+  transition: opactiy ease-in-out;
+}
+
+
+// Password reset
+
+.login-block {
+  i .fa .fa-lock .password-reset,
+  i .fa .fa-unlock-alt .password-reset {
+    font-size: 50px;
+    width: 50px;
+    display: block;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

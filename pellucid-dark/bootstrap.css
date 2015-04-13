@@ -6682,9 +6682,7 @@ button.close {
 }
 .navbar-default .navbar-nav > li > a {
   font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  font-size: 14px;
 }
 .navbar-default .navbar-nav > li > a:hover {
   color: #FFFFFF;
@@ -6737,10 +6735,8 @@ a.navbar-brand:hover {
   padding: 10px 0px;
   margin: 5px;
   list-style: none;
-  font-size: 12px;
+  font-size: 14px;
   font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  letter-spacing: 1px;
-  text-transform: uppercase;
   text-align: left;
   background-color: #000000;
   border: 1px solid #222228;
@@ -6759,6 +6755,16 @@ a.navbar-brand:hover {
 }
 .navbar .dropdown-menu .divider {
   background-color: #222228;
+}
+.navbar .user-menu:hover {
+  color: #f1f1f1 !important;
+}
+.navbar .user-menu .caret {
+  margin-left: 10px;
+  font-size: 10px;
+}
+.navbar .cart-link .cart-container:hover {
+  color: #f1f1f1 !important;
 }
 p {
   line-height: 26px;
@@ -6783,8 +6789,21 @@ p {
 .text-info:hover {
   color: #5360aa;
 }
-.product-description ul li {
-  padding-bottom: 15px;
+.product-description ul li:first-child {
+  padding-top: 23px;
+}
+.product-description #description {
+  margin-bottom: 23px;
+}
+.product-description a {
+  color: #bdbdc1;
+  border-bottom: 1px dotted #66656c;
+  text-decoration: none;
+}
+.product-description a:hover {
+  color: #f1f1f1;
+  border-bottom: 1px dotted #f1f1f1;
+  text-decoration: none;
 }
 table,
 .table {
@@ -6973,13 +6992,17 @@ textarea.form-control:focus {
 span.select2.select2-container.select2-container--default {
   width: 100% !important;
 }
-.col-md-12.container-startDateCustomDuration:after,
-.col-md-12.container-customEndDate:after {
+.select2-container--default .select2-selection--single .select2-selection__placeholder {
+  color: #66656c;
+}
+.container-startDateCustomDuration:after,
+.container-customEndDate:after {
   content: "Format: DD MMM YYYY";
   padding-bottom: 15px;
   font-size: 12px;
   font-style: italic;
-  color: #66656C;
+  color: #878690;
+  font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .container-startDateCustomDuration .form-group,
 .container-customEndDate .form-group {
@@ -6989,9 +7012,24 @@ select[multiple],
 select[size] {
   height: auto !important;
 }
+.container-customize label:after {
+  content: "If you have additional specifications, please enter them here. Our team of experts will tailor the content to meet your needs.";
+  padding-bottom: 5px;
+  font-size: 14px;
+  color: #878690;
+  display: block;
+  font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 14px;
+}
 .container-comps table .table .table-bordered {
   width: 100% !important;
   max-width: 100% !important;
+}
+.container-comps .table td {
+  width: 30%;
+}
+.container-comps .table td:first-child {
+  width: 70%;
 }
 [data-schematype="array"] thead {
   display: none;
@@ -7016,27 +7054,8 @@ select[size] {
 [data-schematype="array"] .table > thead > tr > td,
 [data-schematype="array"] .table > tbody > tr > td,
 [data-schematype="array"] .table > tfoot > tr > td {
-  padding: 5px 10px 5px 0px;
+  padding: 5px 10px 0px 0px;
   border-top: none;
-  max-width: 320px;
-}
-[data-schematype="array"] .table > thead > tr > th,
-[data-schematype="array"] .table > tbody > tr > th,
-[data-schematype="array"] .table > tfoot > tr > th,
-[data-schematype="array"] .table > thead > tr > td,
-[data-schematype="array"] .table > tbody > tr > td,
-[data-schematype="array"] .table > tfoot > tr > td {
-  /* Small devices (tablets, 768px and up) */
-}
-@media (min-width: 768px) {
-  [data-schematype="array"] .table > thead > tr > th,
-  [data-schematype="array"] .table > tbody > tr > th,
-  [data-schematype="array"] .table > tfoot > tr > th,
-  [data-schematype="array"] .table > thead > tr > td,
-  [data-schematype="array"] .table > tbody > tr > td,
-  [data-schematype="array"] .table > tfoot > tr > td {
-    max-width: 220px;
-  }
 }
 [data-schematype="array"] [title="Delete Last Comp"] {
   display: none;
@@ -7349,10 +7368,7 @@ a.small-label.active {
 }
 .label-tag:hover,
 .label-tag:focus {
-  background-color: #27272e;
-  border: 1px solid #f1f1f1;
   color: #f1f1f1;
-  font-size: 90%;
   text-decoration: none;
 }
 .label-tag a:focus,
@@ -7370,6 +7386,9 @@ a.no-underline {
 }
 .clear-all {
   text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .product-description h6 {
   color: #878690;
@@ -7447,6 +7466,20 @@ tr.order-line-details.expanded {
 .expand-order-line .fa:hover {
   color: #f1f1f1;
 }
+.container-order-info .row-order-summary .panel-default {
+  border: none;
+  background-color: #222228;
+}
+.container-order-info .table > tbody > tr > td,
+.container-order-info .table > tfoot > tr > td {
+  border-top: 0px;
+}
+.container-order-info .row-order-form p {
+  font-size: 14px;
+  color: #878690;
+  font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-bottom: 0px;
+}
 .change-password .form-control {
   width: 300px !important;
 }
@@ -7506,4 +7539,19 @@ tr.order-line-details.expanded {
 #imagelightbox {
   -webkit-box-shadow: 0 0 0.125em rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 0.125em rgba(0, 0, 0, 0.5);
+}
+.product-page .product-page-left .carousel img:hover {
+  opacity: .90;
+  -webkit-transition: opactiy ease-in-out;
+       -o-transition: opactiy ease-in-out;
+          transition: opactiy ease-in-out;
+}
+.login-block i .fa .fa-lock .password-reset,
+.login-block i .fa .fa-unlock-alt .password-reset {
+  font-size: 50px;
+  width: 50px;
+  display: block;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
 }
