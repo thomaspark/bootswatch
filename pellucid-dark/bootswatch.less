@@ -520,6 +520,12 @@ select[size] {
     width: 70%;
   }
 
+  @media screen and (max-width: 1200px) {
+    .table td:first-child {
+    width: 50%;
+    }
+  }
+
 }
 
 [data-schematype="array"] thead {
@@ -1213,6 +1219,7 @@ tr.order-line-details.expanded {
 // Password reset
 
 .login-block {
+
   i .fa .fa-lock .password-reset,
   i .fa .fa-unlock-alt .password-reset {
     font-size: 50px;

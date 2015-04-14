@@ -7048,6 +7048,11 @@ select[size] {
 .container-comps .table td:first-child {
   width: 70%;
 }
+@media screen and (max-width: 1200px) {
+  .container-comps .table td:first-child {
+    width: 50%;
+  }
+}
 [data-schematype="array"] thead {
   display: none;
 }
