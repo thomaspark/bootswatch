@@ -410,6 +410,8 @@ legend {
 // Firefox and Safari fixes
 
 select {
+  // "!important" to override bootstrap's "!important" :(
+  background: url("/assets/sort.png") no-repeat 98% center !important;
   -moz-appearance: none;
   text-indent: 0.01px;
   text-overflow: '';
@@ -438,11 +440,11 @@ input[type=checkbox] { display:none; } /* hide default checkbox */
     margin-right: 10px;
   }
 
-  input[type=checkbox]:checked + label:before { 
+  input[type=checkbox]:checked + label:before {
     content: "\f14a";
     font-size: 16px;
     margin-right: 9px;
-  } 
+  }
 }
 
 // JSON Editor Fields =========================================================
@@ -510,7 +512,7 @@ select[size] {
   table .table .table-bordered {
     width: 100% !important;
     max-width: 100% !important;
-  } 
+  }
 
   .table td{
     width: 30%;
@@ -635,9 +637,9 @@ select[size] {
   .json-editor-btn-add {
 
     .fa-plus:before {
-      font-size: 14px; 
+      font-size: 14px;
       margin-right: 5px;
-    } 
+    }
 
   }
 
@@ -932,7 +934,7 @@ a.small-label.active {
   }
 
   .tag-name {
-    font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+    font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
 
   .tag-icon {
@@ -956,8 +958,8 @@ a.small-label.active {
   transition: border 0.25s ease-in-out;
 }
 
-// Breadcrumb fix 
-    
+// Breadcrumb fix
+
 .breadcrumb .breadcrumb-tag-link-name {
   color: @gray-light;
   font-size: 14px;
@@ -966,14 +968,14 @@ a.small-label.active {
   transition: 0.2s ease-in-out;
 }
 
-.breadcrumb li:hover a span, 
-.breadcrumb li:focus a span { 
+.breadcrumb li:hover a span,
+.breadcrumb li:focus a span {
   color: @white;
 }
 
 .label-tag:after {
-  font-family: 'FontAwesome';  
-  content: "\f057";       
+  font-family: 'FontAwesome';
+  content: "\f057";
   color: @gray-dark;
   margin-left: 12px;
   margin-right: -8px;
@@ -995,7 +997,7 @@ a.small-label.active {
   }
 }
 
-.label-tag:hover:after {   
+.label-tag:hover:after {
   color: @white;
 }
 
@@ -1014,7 +1016,7 @@ a.no-underline {
   font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-// Product Detail 
+// Product Detail
 
 .product-description h6 {
   color: @gray-light;
@@ -1064,7 +1066,7 @@ a.no-underline {
     background-color: lighten(@gray-darker,2%) !important;
     border: 0px solid @gray-dark !important;
     border-radius: 2px !important;
-  } 
+  }
 
   .select2-container--default .select2-selection--single .select2-selection__arrow {
     height: 36px !important;
@@ -1119,7 +1121,7 @@ tr.order-line-details.expanded {
     background-color: @body-bg;
   }
 
-  .table>tbody>tr>td, 
+  .table>tbody>tr>td,
   .table>tfoot>tr>td {
     border-top: 0px;
   }
@@ -1142,7 +1144,7 @@ tr.order-line-details.expanded {
   }
 
   button.btn.btn-primary.btn.btn-block {
-    width: inherit; 
+    width: inherit;
   }
 
 }
