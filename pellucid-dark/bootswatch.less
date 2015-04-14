@@ -272,6 +272,7 @@ td.order-line-expand {
   -webkit-transition: border-color ease-in-out .25s, -webkit-box-shadow ease-in-out .25s;
   -o-transition: border-color ease-in-out .25s, box-shadow ease-in-out .25s;
   transition: border-color ease-in-out .25s, box-shadow ease-in-out .25s;
+  -webkit-appearance: none;
 }
 
 .form-control:focus {
@@ -282,6 +283,7 @@ td.order-line-expand {
   border-radius: 2px !important;
   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 3px rgba(225, 225, 225, 0.6);
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 3px rgba(225, 225, 225, 0.6);
+  -webkit-appearance: none;
 }
 
 .control-label {
@@ -405,6 +407,15 @@ legend {
   border: 0px;
 }
 
+// Firefox and Safari fixes
+
+select {
+  -moz-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: '';
+  -webkit-appearance: none;
+}
+
 // Checkbox =========================================================
 
 input[type=checkbox] { display:none; } /* hide default checkbox */
@@ -455,11 +466,11 @@ span.select2.select2-container.select2-container--default {
 .container-startDateCustomDuration:after,
 .container-customEndDate:after {
   content: "Format: DD MMM YYYY";
-  padding-bottom: 15px;
+  color: @gray-light;
   font-size: 12px;
   font-style: italic;
-  color: @gray-light;
   font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding-bottom: 15px;
 }
 
 .container-startDateCustomDuration .form-group,
@@ -474,13 +485,23 @@ select[size] {
 
 .container-customize label:after {
   content: "If you have additional specifications, please enter them here. Our team of experts will tailor the content to meet your needs.";
-  padding-bottom: 5px;
-  font-size: 14px;
   color: @gray-light;
   display: block;
   font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
   line-height: 14px;
+  padding-bottom: 5px;
 }
+
+/* .container-duration select:after {
+  color: @gray-light;
+  content: "Will be provided with latest available data";
+  display: block;
+  font-size: 12px;
+  font-style: italic;
+  font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding-bottom: 0px;
+} */
 
 // Comps List
 
