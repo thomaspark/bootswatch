@@ -42,6 +42,10 @@
 
 // Buttons ====================================================================
 
+.btn {
+  border-width: 2px;
+}
+
 .btn:active {
   @include box-shadow(none);
 }
@@ -132,7 +136,7 @@ textarea {
 .form-control,
 input,
 textarea {
-  border: none;
+  border: 2px hidden transparent;
   @include box-shadow(none);
 
   &:focus {
