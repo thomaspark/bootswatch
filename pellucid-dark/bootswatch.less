@@ -495,15 +495,15 @@ select[size] {
   padding-bottom: 5px;
 }
 
-/* .container-duration select:after {
+.container-duration > label:after {
+  content: "Provided with latest available data unless custom date range is specified";
   color: @gray-light;
-  content: "Will be provided with latest available data";
   display: block;
-  font-size: 12px;
-  font-style: italic;
   font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 14px;
   padding-bottom: 0px;
-} */
+} 
 
 // Comps List
 
@@ -1221,8 +1221,9 @@ tr.order-line-details.expanded {
 // Password reset
 
 .login-block {
-  i.fa.fa-lock.password-reset,
-  i.fa.fa-unlock-alt.password-reset {
+
+  i .fa .fa-lock .password-reset,
+  i .fa .fa-unlock-alt .password-reset {
     font-size: 50px;
     width: 50px;
     display: block;
@@ -1230,4 +1231,5 @@ tr.order-line-details.expanded {
     margin-left: auto;
     margin-right: auto;
   }
+
 }

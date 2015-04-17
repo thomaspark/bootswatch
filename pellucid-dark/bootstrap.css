@@ -7030,15 +7030,15 @@ select[size] {
   line-height: 14px;
   padding-bottom: 5px;
 }
-/* .container-duration select:after {
-  color: @gray-light;
-  content: "Will be provided with latest available data";
+.container-duration > label:after {
+  content: "Provided with latest available data unless custom date range is specified";
+  color: #878690;
   display: block;
-  font-size: 12px;
-  font-style: italic;
   font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 14px;
   padding-bottom: 0px;
-} */
+}
 .container-comps table .table .table-bordered {
   width: 100% !important;
   max-width: 100% !important;
@@ -7569,8 +7569,8 @@ tr.order-line-details.expanded {
        -o-transition: opactiy ease-in-out;
           transition: opactiy ease-in-out;
 }
-.login-block i.fa.fa-lock.password-reset,
-.login-block i.fa.fa-unlock-alt.password-reset {
+.login-block i .fa .fa-lock .password-reset,
+.login-block i .fa .fa-unlock-alt .password-reset {
   font-size: 50px;
   width: 50px;
   display: block;
