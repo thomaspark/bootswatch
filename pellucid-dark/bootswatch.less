@@ -1216,11 +1216,19 @@ tr.order-line-details.expanded {
 
 // Product image
 
-.product-page .product-page-left .carousel img:hover {
-  opacity: .90;
-  transition: opactiy ease-in-out;
-}
+.product-page .product-page-left {
 
+  .carousel img {
+    opacity: 1;
+  }
+
+ .carousel img:hover {
+    opacity: .9;
+    transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -webkit-transition: opacity .5s ease-in-out;
+  }
+}
 
 // Password reset
 
