@@ -60,13 +60,18 @@ module.exports = function (grunt) {
       }
     },
     watch: {
-      files: ['*/variables.less', '*/bootswatch.less', '*/index.html'],
-      tasks: 'build',
       options: {
         livereload: true,
         nospawn: true
-      }
-    },
+      },
+      less: {
+        files: ['*/variables.less', '*/bootswatch.less', '*/index.html'],
+        tasks: 'build'
+      },
+      scss: {
+        files: ['*/_variables.scss', '*/_bootswatch.scss', '*/index.html'],
+        tasks: 'build_scss'
+      },
     connect: {
       base: {
         options: {
@@ -93,7 +98,7 @@ module.exports = function (grunt) {
     var compress = compress == undefined ? true : compress;
 
     var isValidTheme = grunt.file.exists(theme, 'variables.less') && grunt.file.exists(theme, 'bootswatch.less');
- 
+
      // cancel the build (without failing) if this directory is not a valid theme
     if (!isValidTheme) {
       return;
@@ -149,11 +154,11 @@ grunt.registerTask('build_scss', 'build a regular theme from scss', function(the
     grunt.config('sass.dist.options.style', 'expanded');
     grunt.config('sass.dist.options.precision', 8);
     grunt.config('sass.dist.options.unix-newlines', true);
- 
+
     grunt.task.run(['concat', 'sass:dist', 'prefix:' + scssDest, 'clean:build',
         compress ? 'compress_scss:' + scssDest + ':' + '<%=builddir%>/' + theme + '/bootstrap.min.css' : 'none']);
   });
-  
+
   grunt.registerTask('prefix', 'autoprefix a generic css', function(fileSrc) {
     grunt.config('autoprefixer.dist.src', fileSrc);
     grunt.task.run('autoprefixer');
@@ -223,7 +228,7 @@ grunt.registerTask('build_scss', 'build a regular theme from scss', function(the
                 .replace(/(\.(?![0-9])([\w\-]+);)/g, '@extend $1')
                 // 7.  replace string literals
                 .replace(/~"(.*)"/g, '#{"$1"}')
-                // 8.  replace interpolation  ${var} > #{$var} 
+                // 8.  replace interpolation  ${var} > #{$var}
                 .replace(/\$\{(.*)\}/g, '#{$$$1}')
                 // 9.  replace spin to adjust-hue (function name diff)
                 .replace(/spin\(/g, 'adjust-hue(')
@@ -241,5 +246,7 @@ grunt.registerTask('build_scss', 'build a regular theme from scss', function(the
 
   grunt.registerTask('server', 'connect:keepalive');
 
-  grunt.registerTask('default', ['connect:base', 'watch']);
+  grunt.registerTask('dev_scss', ['connect:base', 'watch:scss']);
+
+  grunt.registerTask('default', ['connect:base', 'watch:less']);
 };
