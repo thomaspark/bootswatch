@@ -28,10 +28,6 @@
       }
     }
   }
-
-  &-nav > li > .dropdown-menu {
-    margin-top: 2px;
-  }
 }
 
 // Buttons ====================================================================
@@ -422,6 +418,7 @@ input[type="checkbox"],
 }
 
 .dropdown-menu {
+  margin-top: 0;
   border: none;
   @include box-shadow(0 1px 4px rgba(0,0,0,.3));
 }
