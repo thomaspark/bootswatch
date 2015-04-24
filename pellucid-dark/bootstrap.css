@@ -7154,6 +7154,23 @@ select[size] {
 .nav-pills a:hover {
   color: #bdbdc1;
 }
+.nav-tabs > li > a {
+  color: #878690;
+}
+.nav-tabs > li.active > a {
+  color: #f1f1f1;
+  border-color: transparent;
+  border-bottom-color: #00b7f0;
+  -webkit-transition: all 400ms;
+       -o-transition: all 400ms;
+          transition: all 400ms;
+}
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  background-color: #222228;
+  border-color: transparent;
+  border-bottom-color: #00b7f0;
+}
 .pager a {
   color: #f1f1f1;
 }

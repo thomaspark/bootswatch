@@ -664,13 +664,36 @@ select[size] {
 
 .nav-tabs,
 .nav-pills {
-
   a {
     color: @white;
   }
 
   a:hover {
     color: @gray-lighter;
+  }
+}
+
+.nav-tabs {
+  & > li {
+    & > a {
+      color: @gray-light;
+    }
+
+    &.active {
+      & > a {
+        color: @white;
+        border-color: transparent;
+        border-bottom-color: @brand-primary;
+        transition: all 400ms;
+
+        &:hover,
+        &:focus {
+          background-color: @gray-darker;
+          border-color: transparent;
+          border-bottom-color: @brand-primary;
+        }
+      }
+    }
   }
 }
 
