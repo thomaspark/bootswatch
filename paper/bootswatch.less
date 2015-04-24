@@ -124,6 +124,14 @@ a {
 
 // Tables =====================================================================
 
+.table-hover {
+  > tbody > tr:hover,
+  > tbody > tr:hover > th,
+  > tbody > tr:hover > td {
+    .transition(all 0.2s);
+  }
+}
+
 // Forms ======================================================================
 
 label {
@@ -488,18 +496,18 @@ input[type="checkbox"],
         background-color: lighten(@progress-bar-bg, 35%);
       }
     }
-    
+
     &-success:last-child.progress-bar:before {
       background-color: lighten(@brand-success, 35%);
     }
-    
+
     &-info:last-child.progress-bar:before {
       background-color: lighten(@brand-info, 45%);
     }
     &-warning:last-child.progress-bar:before {
       background-color: lighten(@brand-warning, 35%);
     }
-    
+
     &-danger:last-child.progress-bar:before {
       background-color: lighten(@brand-danger, 25%);
     }

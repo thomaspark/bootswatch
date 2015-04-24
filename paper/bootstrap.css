@@ -6785,6 +6785,13 @@ a {
   -o-transition: all 0.2s;
   transition: all 0.2s;
 }
+.table-hover > tbody > tr:hover,
+.table-hover > tbody > tr:hover > th,
+.table-hover > tbody > tr:hover > td {
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
 label {
   font-weight: normal;
 }
