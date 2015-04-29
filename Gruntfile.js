@@ -71,7 +71,8 @@ module.exports = function (grunt) {
       scss: {
         files: ['*/_variables.scss', '*/_bootswatch.scss', '*/index.html'],
         tasks: 'build_scss'
-      },
+      }
+    },
     connect: {
       base: {
         options: {
