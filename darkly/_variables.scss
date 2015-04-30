@@ -109,7 +109,7 @@ $border-radius-small:       3px;
 //** Global color for active items (e.g., navs or dropdowns).
 $component-active-color:    #fff;
 //** Global background color for active items (e.g., navs or dropdowns).
-$component-active-bg:       $brand-success;
+$component-active-bg:       $brand-primary;
 
 //** Width of the `border` for generating carets that indicator dropdowns.
 $caret-width-base:          4px;
@@ -227,16 +227,16 @@ $cursor-disabled:                not-allowed;
 //## Dropdown menu container and contents.
 
 //** Background for the dropdown menu.
-$dropdown-bg:                    #fff;
+$dropdown-bg:                    $gray-dark;
 //** Dropdown menu `border-color`.
 $dropdown-border:                rgba(0,0,0,.15);
 //** Dropdown menu `border-color` **for IE8**.
 $dropdown-fallback-border:       #ccc;
 //** Divider color for between dropdown items.
-$dropdown-divider-bg:            #e5e5e5;
+$dropdown-divider-bg:            $gray;
 
 //** Dropdown link text color.
-$dropdown-link-color:            $brand-primary;
+$dropdown-link-color:            $gray-lighter;
 //** Hover color for dropdown links.
 $dropdown-link-hover-color:      #fff;
 //** Hover background for dropdown links.
