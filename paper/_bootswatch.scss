@@ -125,9 +125,9 @@ a {
 // Tables =====================================================================
 
 .table-hover {
-  > tbody > tr:hover,
-  > tbody > tr:hover > th,
-  > tbody > tr:hover > td {
+  > tbody > tr,
+  > tbody > tr > th,
+  > tbody > tr > td {
     @include transition(all 0.2s);
   }
 }
