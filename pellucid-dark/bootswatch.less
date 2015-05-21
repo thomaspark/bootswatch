@@ -246,12 +246,55 @@ table,
   font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   text-transform: uppercase;
+  border-bottom: 1px solid @gray-dark;
 }
 
 td.product-name,
 td.order-line-expand {
   transition: color .25s ease-in-out;
 }
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+.table>thead>tr>th, 
+.table>tbody>tr>th, 
+.table>tfoot>tr>th, 
+.table>thead>tr>td, 
+.table>tbody>tr>td, 
+.table>tfoot>tr>td {
+  padding: 10px;
+}
+
+.tabpanel input:hover{
+  color: @white;
+}
+
+tr.body {
+  transition: all .2s;
+}
+
+.orders-page,
+.order-page {
+  .table > thead > tr > th {
+    border-bottom: 1px solid @gray-dark;
+  }
+  .table {
+    border-bottom: 1px solid @gray-dark2;
+  }
+  .table>thead>tr>th, 
+  .table>tbody>tr>th, 
+  .table>tfoot>tr>th, 
+  .table>thead>tr>td, 
+  .table>tbody>tr>td, 
+  .table>tfoot>tr>td {
+    padding: 10px 15px;
+  }
+}
+
 
 // Forms ======================================================================
 
@@ -276,7 +319,7 @@ td.order-line-expand {
 }
 
 .form-control:focus {
-  background-color: @gray-darker;
+  background-color: @gray-darker !important;
   border-color: @gray-lighter;
   color: @white;
   outline: 0;
@@ -378,18 +421,22 @@ fieldset[disabled] .form-control {
 
 input::-webkit-input-placeholder {
   font-style: italic;
+  color: @gray;
 }
 
 input::-moz-placeholder {
   font-style: italic;
+  color: @gray;
 }
 
 input:-moz-placeholder {   /* Older versions of Firefox */
   font-style: italic;
+  color: @gray;
 }
 
 input:-ms-input-placeholder {
   font-style: italic;
+  color: @gray;
 }
 
 label {
@@ -561,18 +608,16 @@ select[size] {
 [data-schematype="array"] .table > thead > tr > td,
 [data-schematype="array"] .table > tbody > tr > td,
 [data-schematype="array"] .table > tfoot > tr > td {
-
-    padding: 5px 10px 0px 0px;
-    border-top: none;
+  padding: 5px 10px 0px 0px;
+  border-top: none;
 }
 
-[data-schematype="array"] [title="Delete Last Comp"] {
-  display: none;
-}
-
+[data-schematype="array"] [title="Delete Last Comp"],
+[data-schematype="array"] [title="Delete Last Group"],
 [data-schematype="array"] [title="Delete All"] {
   display: none;
 }
+
 [data-schematype="array"] h3 {
   font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -581,6 +626,73 @@ select[size] {
 .col-md-12.container-comps {
   margin: 20px 0px;
 }
+
+// Comps groups
+
+.container-compsGroups {
+
+  [data-schemapath="root.entities.compsGroups.0"],
+  [data-schemapath="root.entities.compsGroups.1"],
+  [data-schemapath="root.entities.compsGroups.2"],
+  [data-schemapath="root.entities.compsGroups.3"],
+  [data-schemapath="root.entities.compsGroups.4"],
+  [data-schemapath="root.entities.compsGroups.5"], {
+    border-bottom: 0px solid @gray-dark;
+    border-top: 1px solid @gray-dark;
+
+    .btn-group {
+      button.btn.btn-default.json-editor-btn-delete.delete,
+      button.btn.btn-default.json-editor-btn-moveup.moveup,
+      button.btn.btn-default.json-editor-btn-movedown.movedown {
+        font-size: 10px;
+        background-color: #222228;
+        height: 36px;
+        width: 10px;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  [data-schematype="array"] table.table.table-bordered {
+    margin-top: 20px;
+  }
+
+  button.btn.btn-default.json-editor-btn-add {
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+
+  table .table .table-bordered {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .table td:first-child {
+    width: 70%;
+  }
+
+  .table td{
+    width: 30%;
+  }
+
+  .table td:nth-child(3) {
+    width: 20%;
+  }
+
+  @media screen and (max-width: 1200px) {
+    .table td:first-child {
+    width: 50%;
+    }
+  }
+
+  [data-schematype="array"] {
+    //border: 1px solid @gray-dark;
+    //padding: 15px;
+    //margin: 15px;
+    //background-color: lighten(@gray-darker,2%);
+  }
+}
+
 
 // Time Frame
 
@@ -656,9 +768,15 @@ select[size] {
 .breadcrumb {
 
   padding-left: 0px;
+  font-size: 14px;
 
   a {
+    color: @gray-lighter;
+    transition: all .2s;
+  }
+  a:hover {
     color: @white;
+    text-decoration: none;
   }
 }
 
@@ -666,6 +784,7 @@ select[size] {
 .nav-pills {
   a {
     color: @white;
+    transition: all .2s;
   }
 
   a:hover {
@@ -677,6 +796,11 @@ select[size] {
   & > li {
     & > a {
       color: @gray-light;
+      transition: all .2s;
+    }
+    & > a:hover {
+      color: @white;
+      background-color: @body-bg;
     }
 
     &.active {
@@ -684,17 +808,21 @@ select[size] {
         color: @white;
         border-color: transparent;
         border-bottom-color: @brand-primary;
-        transition: all 400ms;
+        transition: all .2s;
 
         &:hover,
         &:focus {
-          background-color: @gray-darker;
+          background-color: @body-bg;
           border-color: transparent;
           border-bottom-color: @brand-primary;
         }
       }
     }
   }
+}
+
+.nav-tabs {
+  border-bottom: 1px solid @gray-dark2;
 }
 
 .pager {

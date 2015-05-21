@@ -2322,11 +2322,11 @@ th {
   padding: 10px;
   line-height: 1.42857143;
   vertical-align: top;
-  border-top: 1px solid #444448;
+  border-top: 1px solid #333338;
 }
 .table > thead > tr > th {
   vertical-align: bottom;
-  border-bottom: 2px solid #444448;
+  border-bottom: 2px solid #333338;
 }
 .table > caption + thead > tr:first-child > th,
 .table > colgroup + thead > tr:first-child > th,
@@ -2337,7 +2337,7 @@ th {
   border-top: 0;
 }
 .table > tbody + tbody {
-  border-top: 2px solid #444448;
+  border-top: 2px solid #333338;
 }
 .table .table {
   background-color: #222228;
@@ -2351,7 +2351,7 @@ th {
   padding: 5px;
 }
 .table-bordered {
-  border: 1px solid #444448;
+  border: 1px solid #333338;
 }
 .table-bordered > thead > tr > th,
 .table-bordered > tbody > tr > th,
@@ -2359,7 +2359,7 @@ th {
 .table-bordered > thead > tr > td,
 .table-bordered > tbody > tr > td,
 .table-bordered > tfoot > tr > td {
-  border: 1px solid #444448;
+  border: 1px solid #333338;
 }
 .table-bordered > thead > tr > th,
 .table-bordered > thead > tr > td {
@@ -2497,7 +2497,7 @@ table th[class*="col-"] {
     margin-bottom: 16.5px;
     overflow-y: hidden;
     -ms-overflow-style: -ms-autohiding-scrollbar;
-    border: 1px solid #444448;
+    border: 1px solid #333338;
   }
   .table-responsive > .table {
     margin-bottom: 0;
@@ -3967,7 +3967,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   max-width: none;
 }
 .nav-tabs {
-  border-bottom: 1px solid #444448;
+  border-bottom: 1px solid #333338;
 }
 .nav-tabs > li {
   float: left;
@@ -3980,14 +3980,14 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-radius: 2px 2px 0 0;
 }
 .nav-tabs > li > a:hover {
-  border-color: transparent transparent #444448;
+  border-color: transparent transparent #333338;
 }
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
   color: #f1f1f1;
   background-color: #222228;
-  border: 1px solid #444448;
+  border: 1px solid #333338;
   border-bottom-color: transparent;
   cursor: default;
 }
@@ -5500,7 +5500,7 @@ a.list-group-item-danger.active:focus {
 .panel > .panel-body + .table-responsive,
 .panel > .table + .panel-body,
 .panel > .table-responsive + .panel-body {
-  border-top: 1px solid #444448;
+  border-top: 1px solid #333338;
 }
 .panel > .table > tbody:first-child > tr:first-child th,
 .panel > .table > tbody:first-child > tr:first-child td {
@@ -6831,12 +6831,56 @@ table .text-muted,
   font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   text-transform: uppercase;
+  border-bottom: 1px solid #444448;
 }
 td.product-name,
 td.order-line-expand {
   -webkit-transition: color 0.25s ease-in-out;
        -o-transition: color 0.25s ease-in-out;
           transition: color 0.25s ease-in-out;
+}
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+  padding: 10px;
+}
+.tabpanel input:hover {
+  color: #f1f1f1;
+}
+tr.body {
+  -webkit-transition: all .2s;
+       -o-transition: all .2s;
+          transition: all .2s;
+}
+.orders-page .table > thead > tr > th,
+.order-page .table > thead > tr > th {
+  border-bottom: 1px solid #444448;
+}
+.orders-page .table,
+.order-page .table {
+  border-bottom: 1px solid #333338;
+}
+.orders-page .table > thead > tr > th,
+.order-page .table > thead > tr > th,
+.orders-page .table > tbody > tr > th,
+.order-page .table > tbody > tr > th,
+.orders-page .table > tfoot > tr > th,
+.order-page .table > tfoot > tr > th,
+.orders-page .table > thead > tr > td,
+.order-page .table > thead > tr > td,
+.orders-page .table > tbody > tr > td,
+.order-page .table > tbody > tr > td,
+.orders-page .table > tfoot > tr > td,
+.order-page .table > tfoot > tr > td {
+  padding: 10px 15px;
 }
 .form-control {
   display: block;
@@ -6858,7 +6902,7 @@ td.order-line-expand {
   -webkit-appearance: none;
 }
 .form-control:focus {
-  background-color: #222228;
+  background-color: #222228 !important;
   border-color: #bdbdc1;
   color: #f1f1f1;
   outline: 0;
@@ -6938,16 +6982,20 @@ input .form-custom {
 }
 input::-webkit-input-placeholder {
   font-style: italic;
+  color: #66656c;
 }
 input::-moz-placeholder {
   font-style: italic;
+  color: #66656c;
 }
 input:-moz-placeholder {
   /* Older versions of Firefox */
   font-style: italic;
+  color: #66656c;
 }
 input:-ms-input-placeholder {
   font-style: italic;
+  color: #66656c;
 }
 label {
   margin-bottom: 0px;
@@ -7083,9 +7131,8 @@ select[size] {
   padding: 5px 10px 0px 0px;
   border-top: none;
 }
-[data-schematype="array"] [title="Delete Last Comp"] {
-  display: none;
-}
+[data-schematype="array"] [title="Delete Last Comp"],
+[data-schematype="array"] [title="Delete Last Group"],
 [data-schematype="array"] [title="Delete All"] {
   display: none;
 }
@@ -7096,6 +7143,64 @@ select[size] {
 }
 .col-md-12.container-comps {
   margin: 20px 0px;
+}
+.container-compsGroups [data-schemapath="root.entities.compsGroups.0"],
+.container-compsGroups [data-schemapath="root.entities.compsGroups.1"],
+.container-compsGroups [data-schemapath="root.entities.compsGroups.2"],
+.container-compsGroups [data-schemapath="root.entities.compsGroups.3"],
+.container-compsGroups [data-schemapath="root.entities.compsGroups.4"],
+.container-compsGroups [data-schemapath="root.entities.compsGroups.5"] {
+  border-bottom: 0px solid #444448;
+  border-top: 1px solid #444448;
+}
+.container-compsGroups [data-schemapath="root.entities.compsGroups.0"] .btn-group button.btn.btn-default.json-editor-btn-delete.delete,
+.container-compsGroups [data-schemapath="root.entities.compsGroups.1"] .btn-group button.btn.btn-default.json-editor-btn-delete.delete,
+.container-compsGroups [data-schemapath="root.entities.compsGroups.2"] .btn-group button.btn.btn-default.json-editor-btn-delete.delete,
+.container-compsGroups [data-schemapath="root.entities.compsGroups.3"] .btn-group button.btn.btn-default.json-editor-btn-delete.delete,
+.container-compsGroups [data-schemapath="root.entities.compsGroups.4"] .btn-group button.btn.btn-default.json-editor-btn-delete.delete,
+.container-compsGroups [data-schemapath="root.entities.compsGroups.5"] .btn-group button.btn.btn-default.json-editor-btn-delete.delete,
+.container-compsGroups [data-schemapath="root.entities.compsGroups.0"] .btn-group button.btn.btn-default.json-editor-btn-moveup.moveup,
+.container-compsGroups [data-schemapath="root.entities.compsGroups.1"] .btn-group button.btn.btn-default.json-editor-btn-moveup.moveup,
+.container-compsGroups [data-schemapath="root.entities.compsGroups.2"] .btn-group button.btn.btn-default.json-editor-btn-moveup.moveup,
+.container-compsGroups [data-schemapath="root.entities.compsGroups.3"] .btn-group button.btn.btn-default.json-editor-btn-moveup.moveup,
+.container-compsGroups [data-schemapath="root.entities.compsGroups.4"] .btn-group button.btn.btn-default.json-editor-btn-moveup.moveup,
+.container-compsGroups [data-schemapath="root.entities.compsGroups.5"] .btn-group button.btn.btn-default.json-editor-btn-moveup.moveup,
+.container-compsGroups [data-schemapath="root.entities.compsGroups.0"] .btn-group button.btn.btn-default.json-editor-btn-movedown.movedown,
+.container-compsGroups [data-schemapath="root.entities.compsGroups.1"] .btn-group button.btn.btn-default.json-editor-btn-movedown.movedown,
+.container-compsGroups [data-schemapath="root.entities.compsGroups.2"] .btn-group button.btn.btn-default.json-editor-btn-movedown.movedown,
+.container-compsGroups [data-schemapath="root.entities.compsGroups.3"] .btn-group button.btn.btn-default.json-editor-btn-movedown.movedown,
+.container-compsGroups [data-schemapath="root.entities.compsGroups.4"] .btn-group button.btn.btn-default.json-editor-btn-movedown.movedown,
+.container-compsGroups [data-schemapath="root.entities.compsGroups.5"] .btn-group button.btn.btn-default.json-editor-btn-movedown.movedown {
+  font-size: 10px;
+  background-color: #222228;
+  height: 36px;
+  width: 10px;
+  vertical-align: middle;
+}
+.container-compsGroups [data-schematype="array"] table.table.table-bordered {
+  margin-top: 20px;
+}
+.container-compsGroups button.btn.btn-default.json-editor-btn-add {
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+.container-compsGroups table .table .table-bordered {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+.container-compsGroups .table td:first-child {
+  width: 70%;
+}
+.container-compsGroups .table td {
+  width: 30%;
+}
+.container-compsGroups .table td:nth-child(3) {
+  width: 20%;
+}
+@media screen and (max-width: 1200px) {
+  .container-compsGroups .table td:first-child {
+    width: 50%;
+  }
 }
 [data-schemaid="timeframeDuration"] .row,
 [data-schemaid="timeframeEndDate"] .row {
@@ -7142,13 +7247,24 @@ select[size] {
 }
 .breadcrumb {
   padding-left: 0px;
+  font-size: 14px;
 }
 .breadcrumb a {
+  color: #bdbdc1;
+  -webkit-transition: all .2s;
+       -o-transition: all .2s;
+          transition: all .2s;
+}
+.breadcrumb a:hover {
   color: #f1f1f1;
+  text-decoration: none;
 }
 .nav-tabs a,
 .nav-pills a {
   color: #f1f1f1;
+  -webkit-transition: all .2s;
+       -o-transition: all .2s;
+          transition: all .2s;
 }
 .nav-tabs a:hover,
 .nav-pills a:hover {
@@ -7156,20 +7272,30 @@ select[size] {
 }
 .nav-tabs > li > a {
   color: #878690;
+  -webkit-transition: all .2s;
+       -o-transition: all .2s;
+          transition: all .2s;
+}
+.nav-tabs > li > a:hover {
+  color: #f1f1f1;
+  background-color: #222228;
 }
 .nav-tabs > li.active > a {
   color: #f1f1f1;
   border-color: transparent;
   border-bottom-color: #00b7f0;
-  -webkit-transition: all 400ms;
-       -o-transition: all 400ms;
-          transition: all 400ms;
+  -webkit-transition: all .2s;
+       -o-transition: all .2s;
+          transition: all .2s;
 }
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
   background-color: #222228;
   border-color: transparent;
   border-bottom-color: #00b7f0;
+}
+.nav-tabs {
+  border-bottom: 1px solid #333338;
 }
 .pager a {
   color: #f1f1f1;
