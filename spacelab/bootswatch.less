@@ -1,8 +1,8 @@
-// Spacelab 3.3.1
+// Spacelab 3.3.4
 // Bootswatch
 // -----------------------------------------------------
 
-@import url("//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700");
 
 .btn-shadow(@color) {
   #gradient > .vertical-three-colors(lighten(@color, 15%), @color, 50%, darken(@color, 4%));
@@ -33,8 +33,8 @@
 
   &-nav > li > a,
   &-nav > li > a:hover {
-    padding-top: @navbar-padding-vertical + 2px;
-    padding-bottom: @navbar-padding-vertical - 2px;
+    padding-top: (@navbar-padding-vertical + 2px);
+    padding-bottom: (@navbar-padding-vertical - 2px);
     .transition(color ease-in-out .2s);
   }
   

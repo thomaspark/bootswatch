@@ -1,8 +1,8 @@
-// Flatly 3.3.1
+// Flatly 3.3.4
 // Bootswatch
 // -----------------------------------------------------
 
-@import url("//fonts.googleapis.com/css?family=Lato:400,700,400italic");
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700,400italic");
 
 // Navbar =====================================================================
 
@@ -26,11 +26,15 @@
   }
 
   &-brand {
-    padding: 18.5px 15px 20.5px;
+    line-height: 1;
   }
 }
 
 // Buttons ====================================================================
+
+.btn {
+  border-width: 2px;
+}
 
 .btn:active {
   .box-shadow(none);
@@ -86,7 +90,9 @@ table,
   .info {
     color: #fff;
 
-    a {
+    > th > a,
+    > td > a,
+    > a {
       color: #fff;
     }
   }

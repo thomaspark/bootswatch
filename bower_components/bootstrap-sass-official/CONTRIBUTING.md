@@ -57,7 +57,11 @@ Example:
 
 **We will not accept pull requests that modify the SCSS beyond fixing bugs caused by *our* code!**
 
-Most pull requests should go to [twbs/bootstrap](https://github.com/twbs/bootstrap) or [jlong/sass-twitter-bootstrap](https://github.com/jlong/sass-twitter-bootstrap)
+We use a [converter script][converter-readme] to automatically convert upstream bootstrap, written in LESS, to Sass.
+
+Issues related to styles or javascript but unrelated to the conversion process should go to [twbs/bootstrap][upstream].
+
+Pull requests that fix bugs caused by our code should not modify the SCSS directly, but should patch the converter instead.
 
 Good pull requests - patches, improvements, new features - are a fantastic
 help. They should remain focused in scope and avoid containing unrelated
@@ -77,3 +81,6 @@ Please **do not** derail or troll issues. Keep the
 discussion on topic and respect the opinions of others.
 
 *props [html5-boilerplate](https://github.com/h5bp/html5-boilerplate/blob/master/CONTRIBUTING.md)*
+
+[upstream]: https://github.com/twbs/bootstrap
+[converter-readme]: https://github.com/twbs/bootstrap-sass/blob/master/README.md#upstream-converter

@@ -1,8 +1,8 @@
-// Lumen 3.3.1
+// Lumen 3.3.4
 // Bootswatch
 // -----------------------------------------------------
 
-@import url("//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic");
 
 .shadow (@width: 4px) {
   border-width: 0 1px @width 1px;
@@ -17,7 +17,7 @@
 // Buttons ====================================================================
 
 .btn {
-  padding: @padding-base-vertical+2 @padding-base-horizontal @padding-base-vertical;
+  padding: (@padding-base-vertical + 2) @padding-base-horizontal @padding-base-vertical;
   .shadow();
   font-size: 12px;
   font-weight: bold;
@@ -36,18 +36,18 @@
 
   &-lg,
   &-group-lg > .btn {
-    padding: @padding-large-vertical+2 @padding-large-horizontal @padding-large-vertical;
+    padding: (@padding-large-vertical + 2) @padding-large-horizontal @padding-large-vertical;
     line-height: 15px;
   }
 
   &-sm,
   &-group-sm > .btn {
-    padding: @padding-small-vertical+2 @padding-small-horizontal @padding-small-vertical;
+    padding: (@padding-small-vertical + 2) @padding-small-horizontal @padding-small-vertical;
   }
 
   &-xs,
   &-group-xs > .btn {
-    padding: @padding-xs-vertical+2 @padding-xs-horizontal @padding-xs-vertical;
+    padding: (@padding-xs-vertical + 2) @padding-xs-horizontal @padding-xs-vertical;
   }
 
   &-default:hover,
@@ -123,6 +123,18 @@
 
     &:active {
       margin-top: 16px
+    }
+  }
+}
+
+.btn-group-vertical {
+  .btn + .btn {
+    &:hover {
+      border-top-width: 1px;
+    }
+
+    &:active {
+      border-top-width: 2px;
     }
   }
 }
@@ -279,8 +291,7 @@ label {
   .open > a,
   .open > a:hover,
   .open > a:focus {
-    padding-top: @padding-large-vertical + 3px;
-    padding-bottom: @padding-large-vertical + 3px;
+    padding-bottom: (@padding-large-vertical + 3);
     margin-top: 0;
   }
 
@@ -292,9 +303,13 @@ label {
 
   > li.disabled > a:hover,
   > li.disabled > a:focus {
-    padding-top: @padding-large-vertical;
-    padding-bottom: @padding-large-vertical;
+    padding-top: 10px;
+    padding-bottom: 10px;
     margin-top: 6px;
+  }
+
+  &.nav-justified > li {
+    vertical-align: bottom;
   }
 }
 
