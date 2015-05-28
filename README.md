@@ -40,7 +40,7 @@ Thomas Park
 
 Thanks
 ------
-[Mark Otto](https://github.com/mdo) and [Jacob Thornton](https://github.com/fat) for [Bootstrap](https://github.com/twitter/bootstrap).
+[Mark Otto](https://github.com/mdo) and [Jacob Thornton](https://github.com/fat) for [Bootstrap](https://github.com/twbs/bootstrap).
 
 [Jenil Gogari](http://www.jgog.in/) for his contributions to the Flatly theme.
 
