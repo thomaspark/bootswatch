@@ -9,7 +9,10 @@ Download the `bootstrap.min.css` file associated with a theme and replace Bootst
 
 The themes are also hosted on [BootstrapCDN](http://www.bootstrapcdn.com/).
 
-Rails users should check out [twitter-bootswatch-rails](https://github.com/scottvrosenthal/twitter-bootswatch-rails).
+ Rails users should check out:
+
+* [twitter-bootswatch-rails](https://github.com/scottvrosenthal/twitter-bootswatch-rails) if using _LESS_.
+* [bootswatch-rails](https://github.com/maxim/bootswatch-rails) if using _SASS_.
 
 
 Customization
