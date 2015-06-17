@@ -1,4 +1,4 @@
-// Spacelab 3.3.4
+// Spacelab 3.3.5
 // Variables
 // --------------------------------------------------
 
@@ -169,6 +169,11 @@
 @btn-danger-border:              @btn-danger-bg;
 
 @btn-link-disabled-color:        @gray-light;
+
+// Allows for customizing button radius independently from global border radius
+@btn-border-radius-base:         @border-radius-base;
+@btn-border-radius-large:        @border-radius-large;
+@btn-border-radius-small:        @border-radius-small;
 
 
 //== Forms
@@ -383,7 +388,7 @@
 @navbar-default-toggle-border-color:       darken(@navbar-default-bg, 6.5%);
 
 
-// Inverted navbar
+//=== Inverted navbar
 // Reset inverted navbar basics
 @navbar-inverse-color:                      #ddd;
 @navbar-inverse-bg:                         @brand-primary;
@@ -484,6 +489,7 @@
 @jumbotron-bg:                   @gray-lighter;
 @jumbotron-heading-color:        inherit;
 @jumbotron-font-size:            ceil((@font-size-base * 1.5));
+@jumbotron-heading-font-size:    ceil((@font-size-base * 4.5));
 
 
 //== Form states and alerts
