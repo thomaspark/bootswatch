@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.3.5
+
+Fix for standalone Compass extension compatibility. [#914](https://github.com/twbs/bootstrap-sass/issues/914)
+
+Framework version: Bootstrap **v3.3.5**
+
 ## 3.3.4
 
 No Sass-specific changes.
