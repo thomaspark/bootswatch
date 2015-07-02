@@ -7328,6 +7328,13 @@ input[type="checkbox"]:disabled:checked:after,
   -webkit-box-shadow: inset 0 -2px 0 #4caf50;
   box-shadow: inset 0 -2px 0 #4caf50;
 }
+.has-warning .input-group-addon,
+.has-error .input-group-addon,
+.has-success .input-group-addon {
+  color: #666666;
+  border-color: transparent;
+  background-color: transparent;
+}
 .nav-tabs > li > a,
 .nav-tabs > li > a:focus {
   margin-right: 0;
