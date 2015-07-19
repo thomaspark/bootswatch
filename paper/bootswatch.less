@@ -348,8 +348,12 @@ input[type="checkbox"],
 .has-warning {
   input:not([type=checkbox]),
   .form-control,
+  input.form-control[readonly],
+  input[type=text][readonly],
+  [type=text].form-control[readonly],
   input:not([type=checkbox]):focus,
   .form-control:focus {
+    border-bottom: none;
     .box-shadow(inset 0 -2px 0 @brand-warning);
   }
 }
@@ -357,8 +361,12 @@ input[type="checkbox"],
 .has-error {
   input:not([type=checkbox]),
   .form-control,
+  input.form-control[readonly],
+  input[type=text][readonly],
+  [type=text].form-control[readonly],
   input:not([type=checkbox]):focus,
   .form-control:focus {
+    border-bottom: none;
     .box-shadow(inset 0 -2px 0 @brand-danger);
   }
 }
@@ -366,8 +374,12 @@ input[type="checkbox"],
 .has-success {
   input:not([type=checkbox]),
   .form-control,
+  input.form-control[readonly],
+  input[type=text][readonly],
+  [type=text].form-control[readonly],
   input:not([type=checkbox]):focus,
   .form-control:focus {
+    border-bottom: none;
     .box-shadow(inset 0 -2px 0 @brand-success);
   }
 }
