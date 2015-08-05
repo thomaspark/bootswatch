@@ -3036,7 +3036,7 @@ select[multiple].input-lg {
 .btn:hover,
 .btn:focus,
 .btn.focus {
-  color: #666666;
+  color: #444444;
   text-decoration: none;
 }
 .btn:active,
@@ -3060,27 +3060,27 @@ fieldset[disabled] a.btn {
   pointer-events: none;
 }
 .btn-default {
-  color: #666666;
+  color: #444444;
   background-color: #ffffff;
-  border-color: #eeeeee;
+  border-color: transparent;
 }
 .btn-default:focus,
 .btn-default.focus {
-  color: #666666;
+  color: #444444;
   background-color: #e6e6e6;
-  border-color: #aeaeae;
+  border-color: rgba(0, 0, 0, 0);
 }
 .btn-default:hover {
-  color: #666666;
+  color: #444444;
   background-color: #e6e6e6;
-  border-color: #cfcfcf;
+  border-color: rgba(0, 0, 0, 0);
 }
 .btn-default:active,
 .btn-default.active,
 .open > .dropdown-toggle.btn-default {
-  color: #666666;
+  color: #444444;
   background-color: #e6e6e6;
-  border-color: #cfcfcf;
+  border-color: rgba(0, 0, 0, 0);
 }
 .btn-default:active:hover,
 .btn-default.active:hover,
@@ -3091,9 +3091,9 @@ fieldset[disabled] a.btn {
 .btn-default:active.focus,
 .btn-default.active.focus,
 .open > .dropdown-toggle.btn-default.focus {
-  color: #666666;
+  color: #444444;
   background-color: #d4d4d4;
-  border-color: #aeaeae;
+  border-color: rgba(0, 0, 0, 0);
 }
 .btn-default:active,
 .btn-default.active,
@@ -3119,11 +3119,11 @@ fieldset[disabled] .btn-default:active,
 .btn-default[disabled].active,
 fieldset[disabled] .btn-default.active {
   background-color: #ffffff;
-  border-color: #eeeeee;
+  border-color: transparent;
 }
 .btn-default .badge {
   color: #ffffff;
-  background-color: #666666;
+  background-color: #444444;
 }
 .btn-primary {
   color: #ffffff;
@@ -6833,148 +6833,188 @@ button.close {
           background-size: 200%;
   background-position: 50%;
 }
-.btn-default:hover,
-.btn-default:active:hover,
 .btn-default:focus {
+  background-color: #ffffff;
+}
+.btn-default:hover,
+.btn-default:active:hover {
   background-color: #f0f0f0;
 }
 .btn-default:active {
-  background-color: #f0f0f0;
-  background-image: -webkit-radial-gradient(circle, #f0f0f0 10%, #ffffff 11%);
-  background-image: -o-radial-gradient(circle, #f0f0f0 10%, #ffffff 11%);
-  background-image: radial-gradient(circle, #f0f0f0 10%, #ffffff 11%);
+  background-color: #e0e0e0;
+  background-image: -webkit-radial-gradient(circle, #e0e0e0 10%, #ffffff 11%);
+  background-image: -o-radial-gradient(circle, #e0e0e0 10%, #ffffff 11%);
+  background-image: radial-gradient(circle, #e0e0e0 10%, #ffffff 11%);
   background-repeat: no-repeat;
   -webkit-background-size: 1000% 1000%;
           background-size: 1000%;
-  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 .btn-primary {
   -webkit-background-size: 200% 200%;
           background-size: 200%;
   background-position: 50%;
 }
-.btn-primary:hover,
-.btn-primary:active:hover,
 .btn-primary:focus {
+  background-color: #2196f3;
+}
+.btn-primary:hover,
+.btn-primary:active:hover {
   background-color: #0d87e9;
 }
 .btn-primary:active {
-  background-color: #0d87e9;
-  background-image: -webkit-radial-gradient(circle, #0d87e9 10%, #2196f3 11%);
-  background-image: -o-radial-gradient(circle, #0d87e9 10%, #2196f3 11%);
-  background-image: radial-gradient(circle, #0d87e9 10%, #2196f3 11%);
+  background-color: #0b76cc;
+  background-image: -webkit-radial-gradient(circle, #0b76cc 10%, #2196f3 11%);
+  background-image: -o-radial-gradient(circle, #0b76cc 10%, #2196f3 11%);
+  background-image: radial-gradient(circle, #0b76cc 10%, #2196f3 11%);
   background-repeat: no-repeat;
   -webkit-background-size: 1000% 1000%;
           background-size: 1000%;
-  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 .btn-success {
   -webkit-background-size: 200% 200%;
           background-size: 200%;
   background-position: 50%;
 }
-.btn-success:hover,
-.btn-success:active:hover,
 .btn-success:focus {
+  background-color: #4caf50;
+}
+.btn-success:hover,
+.btn-success:active:hover {
   background-color: #439a46;
 }
 .btn-success:active {
-  background-color: #439a46;
-  background-image: -webkit-radial-gradient(circle, #439a46 10%, #4caf50 11%);
-  background-image: -o-radial-gradient(circle, #439a46 10%, #4caf50 11%);
-  background-image: radial-gradient(circle, #439a46 10%, #4caf50 11%);
+  background-color: #39843c;
+  background-image: -webkit-radial-gradient(circle, #39843c 10%, #4caf50 11%);
+  background-image: -o-radial-gradient(circle, #39843c 10%, #4caf50 11%);
+  background-image: radial-gradient(circle, #39843c 10%, #4caf50 11%);
   background-repeat: no-repeat;
   -webkit-background-size: 1000% 1000%;
           background-size: 1000%;
-  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 .btn-info {
   -webkit-background-size: 200% 200%;
           background-size: 200%;
   background-position: 50%;
 }
-.btn-info:hover,
-.btn-info:active:hover,
 .btn-info:focus {
+  background-color: #9c27b0;
+}
+.btn-info:hover,
+.btn-info:active:hover {
   background-color: #862197;
 }
 .btn-info:active {
-  background-color: #862197;
-  background-image: -webkit-radial-gradient(circle, #862197 10%, #9c27b0 11%);
-  background-image: -o-radial-gradient(circle, #862197 10%, #9c27b0 11%);
-  background-image: radial-gradient(circle, #862197 10%, #9c27b0 11%);
+  background-color: #701c7e;
+  background-image: -webkit-radial-gradient(circle, #701c7e 10%, #9c27b0 11%);
+  background-image: -o-radial-gradient(circle, #701c7e 10%, #9c27b0 11%);
+  background-image: radial-gradient(circle, #701c7e 10%, #9c27b0 11%);
   background-repeat: no-repeat;
   -webkit-background-size: 1000% 1000%;
           background-size: 1000%;
-  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 .btn-warning {
   -webkit-background-size: 200% 200%;
           background-size: 200%;
   background-position: 50%;
 }
-.btn-warning:hover,
-.btn-warning:active:hover,
 .btn-warning:focus {
+  background-color: #ff9800;
+}
+.btn-warning:hover,
+.btn-warning:active:hover {
   background-color: #e08600;
 }
 .btn-warning:active {
-  background-color: #e08600;
-  background-image: -webkit-radial-gradient(circle, #e08600 10%, #ff9800 11%);
-  background-image: -o-radial-gradient(circle, #e08600 10%, #ff9800 11%);
-  background-image: radial-gradient(circle, #e08600 10%, #ff9800 11%);
+  background-color: #c27400;
+  background-image: -webkit-radial-gradient(circle, #c27400 10%, #ff9800 11%);
+  background-image: -o-radial-gradient(circle, #c27400 10%, #ff9800 11%);
+  background-image: radial-gradient(circle, #c27400 10%, #ff9800 11%);
   background-repeat: no-repeat;
   -webkit-background-size: 1000% 1000%;
           background-size: 1000%;
-  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 .btn-danger {
   -webkit-background-size: 200% 200%;
           background-size: 200%;
   background-position: 50%;
 }
-.btn-danger:hover,
-.btn-danger:active:hover,
 .btn-danger:focus {
+  background-color: #e51c23;
+}
+.btn-danger:hover,
+.btn-danger:active:hover {
   background-color: #cb171e;
 }
 .btn-danger:active {
-  background-color: #cb171e;
-  background-image: -webkit-radial-gradient(circle, #cb171e 10%, #e51c23 11%);
-  background-image: -o-radial-gradient(circle, #cb171e 10%, #e51c23 11%);
-  background-image: radial-gradient(circle, #cb171e 10%, #e51c23 11%);
+  background-color: #b0141a;
+  background-image: -webkit-radial-gradient(circle, #b0141a 10%, #e51c23 11%);
+  background-image: -o-radial-gradient(circle, #b0141a 10%, #e51c23 11%);
+  background-image: radial-gradient(circle, #b0141a 10%, #e51c23 11%);
   background-repeat: no-repeat;
   -webkit-background-size: 1000% 1000%;
           background-size: 1000%;
-  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+.btn-link {
+  -webkit-background-size: 200% 200%;
+          background-size: 200%;
+  background-position: 50%;
+}
+.btn-link:focus {
+  background-color: #ffffff;
+}
+.btn-link:hover,
+.btn-link:active:hover {
+  background-color: #f0f0f0;
+}
+.btn-link:active {
+  background-color: #e0e0e0;
+  background-image: -webkit-radial-gradient(circle, #e0e0e0 10%, #ffffff 11%);
+  background-image: -o-radial-gradient(circle, #e0e0e0 10%, #ffffff 11%);
+  background-image: radial-gradient(circle, #e0e0e0 10%, #ffffff 11%);
+  background-repeat: no-repeat;
+  -webkit-background-size: 1000% 1000%;
+          background-size: 1000%;
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 .btn {
   text-transform: uppercase;
-  border-right: none;
-  border-bottom: none;
-  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-  -webkit-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  transition: all 0.2s;
+  border: none;
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
 }
 .btn-link {
+  border-radius: 3px;
   -webkit-box-shadow: none;
   box-shadow: none;
+  color: #444444;
 }
 .btn-link:hover,
 .btn-link:focus {
-  color: #2196f3;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #444444;
   text-decoration: none;
 }
 .btn-default.disabled {
-  border: 1px solid #eeeeee;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.4);
+  opacity: 1;
 }
 .btn-group .btn + .btn,
 .btn-group .btn + .btn-group,

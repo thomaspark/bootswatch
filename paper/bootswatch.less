@@ -38,17 +38,20 @@
     background-size: 200%;
     background-position: 50%;
 
-    &:hover,
-    &:active:hover,
     &:focus {
+      background-color: @bg;
+    }
+
+    &:hover,
+    &:active:hover {
       background-color: darken(@bg, 6%);
     }
 
     &:active {
-      background-color: darken(@bg, 6%);
-      #gradient > .radial(darken(@bg, 6%) 10%, @bg 11%);
+      background-color: darken(@bg, 12%);
+      #gradient > .radial(darken(@bg, 12%) 10%, @bg 11%);
       background-size: 1000%;
-      .box-shadow(2px 2px 2px rgba(0,0,0,.3));
+      .box-shadow(2px 2px 4px rgba(0,0,0,.4));
     }
   }
 }
@@ -59,26 +62,34 @@
 #btn(info,@btn-info-bg);
 #btn(warning,@btn-warning-bg);
 #btn(danger,@btn-danger-bg);
+#btn(link,#fff);
 
 .btn {
   text-transform: uppercase;
-  border-right: none;
-  border-bottom: none;
-  .box-shadow(1px 1px 2px rgba(0,0,0,.3));
-  .transition(all 0.2s);
+  border: none;
+  .box-shadow(1px 1px 4px rgba(0,0,0,.4));
+  .transition(all 0.4s);
 
   &-link {
+    border-radius: @btn-border-radius-base;
     .box-shadow(none);
+    color: @btn-default-color;
 
     &:hover,
     &:focus {
-      color: @brand-primary;
+      .box-shadow(none);
+      color: @btn-default-color;
       text-decoration: none;
     }
   }
 
-  &-default.disabled {
-    border: 1px solid @btn-default-border;
+  &-default {
+
+    &.disabled {
+      background-color: rgba(0, 0, 0, 0.1);
+      color: rgba(0, 0, 0, 0.4);
+      opacity: 1;
+    }
   }
 }
 
