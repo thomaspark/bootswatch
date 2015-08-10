@@ -247,9 +247,9 @@ input[type="radio"],
 .radio input[type="radio"],
 .radio-inline input[type="radio"] {
   position: relative;
-  margin-top: 5px;
+  margin-top: 6px;
   margin-right: 4px;
-  vertical-align: -4px;
+  vertical-align: top;
   border: none;
   background-color: transparent;
   -webkit-appearance: none;
@@ -266,7 +266,6 @@ input[type="radio"],
     display: block;
     width: 18px;
     height: 18px;
-    margin-top: -3px;
     border-radius: 50%;
     .transition(240ms);
   }
@@ -274,12 +273,14 @@ input[type="radio"],
   &:before {
     position: absolute;
     left: 0;
-    top: 0;
+    top: -3px;
     background-color: @brand-primary;
     .scale(0);
   }
 
   &:after {
+    position: relative;
+    top: -3px;
     border: 2px solid @gray;
   }
 
@@ -305,8 +306,8 @@ input[type="checkbox"],
 .checkbox input[type="checkbox"],
 .checkbox-inline input[type="checkbox"] {
   position: relative;
-  vertical-align: -4px;
   border: none;
+  margin-bottom: -4px;
   -webkit-appearance: none;
   appearance: none;
   cursor: pointer;

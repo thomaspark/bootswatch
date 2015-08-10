@@ -7207,9 +7207,9 @@ input[type="radio"],
 .radio input[type="radio"],
 .radio-inline input[type="radio"] {
   position: relative;
-  margin-top: 5px;
+  margin-top: 6px;
   margin-right: 4px;
-  vertical-align: -4px;
+  vertical-align: top;
   border: none;
   background-color: transparent;
   -webkit-appearance: none;
@@ -7231,7 +7231,6 @@ input[type="radio"]:after,
   display: block;
   width: 18px;
   height: 18px;
-  margin-top: -3px;
   border-radius: 50%;
   -webkit-transition: 240ms;
   -o-transition: 240ms;
@@ -7242,7 +7241,7 @@ input[type="radio"]:before,
 .radio-inline input[type="radio"]:before {
   position: absolute;
   left: 0;
-  top: 0;
+  top: -3px;
   background-color: #2196f3;
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
@@ -7252,6 +7251,8 @@ input[type="radio"]:before,
 input[type="radio"]:after,
 .radio input[type="radio"]:after,
 .radio-inline input[type="radio"]:after {
+  position: relative;
+  top: -3px;
   border: 2px solid #666666;
 }
 input[type="radio"]:checked:before,
@@ -7284,8 +7285,8 @@ input[type="checkbox"],
 .checkbox input[type="checkbox"],
 .checkbox-inline input[type="checkbox"] {
   position: relative;
-  vertical-align: -4px;
   border: none;
+  margin-bottom: -4px;
   -webkit-appearance: none;
   appearance: none;
   cursor: pointer;
