@@ -316,6 +316,10 @@ input[type="checkbox"],
     outline: none;
   }
 
+  &:focus:after {
+    border-color: $brand-primary;
+  }
+
   &:after {
     content: "";
     display: block;
