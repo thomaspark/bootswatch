@@ -2,7 +2,12 @@
 // Bootswatch
 // -----------------------------------------------------
 
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
+$web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:400,700" !default;
+
+@mixin web-font($path){
+  @import url("#{$path}");
+}
+@include web-font($web-font-path);
 
 @mixin btn-shadow($color){
   @include gradient-vertical-three-colors(lighten($color, 3%), $color, 6%, darken($color, 3%));

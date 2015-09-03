@@ -2,7 +2,12 @@
 // Bootswatch
 // -----------------------------------------------------
 
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,500");
+$web-font-path: "https://fonts.googleapis.com/css?family=Roboto:400,500" !default;
+
+@mixin web-font($path){
+  @import url("#{$path}");
+}
+@include web-font($web-font-path);
 
 // Navbar =====================================================================
 

@@ -231,11 +231,13 @@ grunt.registerTask('build_scss', 'build a regular theme from scss', function(the
                 .replace(/bootstrap\/less\//g, 'bootstrap-sass-official/assets/stylesheets/')
                 .replace(/\.less/g, '')
                 // 11. replace icon-font-path value with conditional for asset helpers
-                .replace(/(\$icon-font-path:).*;/g, '$1 if($bootstrap-sass-asset-helper, "bootstrap/", "../fonts/bootstrap/");');
+                .replace(/(\$icon-font-path:).*;/g, '$1 if($bootstrap-sass-asset-helper, "bootstrap/", "../fonts/bootstrap/");')
+                // 12. set bootswatch's web-font-path value as !default
+                .replace(/(\$web-font-path:.*);/g, '$1 !default;');
                 if (/\/variables.less$/.test(lessFile)) {
-                // 12. set default value of $bootstrap-sass-asset-helper to false
+                // 13. set default value of $bootstrap-sass-asset-helper to false
                   out = "$bootstrap-sass-asset-helper: false;\n" + out;
-                // 13. only assign variables if they haven't been previously set e.g. $var: #f00; > $var: #f00 !default;
+                // 14. only assign variables if they haven't been previously set e.g. $var: #f00; > $var: #f00 !default;
                   out = out.replace(/^(\$.*);/gm, '$1 !default;');
                 }
 
