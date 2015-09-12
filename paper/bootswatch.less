@@ -20,13 +20,13 @@
   }
 
   &-inverse {
-    .form-control {
-      color: #fff;
-      .placeholder(@navbar-inverse-link-color);
+    .navbar-form {
 
-      &[type=text],
-      &[type=password] {
+      input[type=text],
+      input[type=password] {
+        color: #fff;
         .box-shadow(inset 0 -1px 0 @navbar-inverse-link-color);
+        .placeholder(@navbar-inverse-link-color);
 
         &:focus {
           .box-shadow(inset 0 -2px 0 #fff);

@@ -6805,26 +6805,27 @@ button.close {
 .navbar-brand {
   font-size: 24px;
 }
-.navbar-inverse .form-control {
+.navbar-inverse .navbar-form input[type=text],
+.navbar-inverse .navbar-form input[type=password] {
   color: #fff;
-}
-.navbar-inverse .form-control::-moz-placeholder {
-  color: #b2dbfb;
-  opacity: 1;
-}
-.navbar-inverse .form-control:-ms-input-placeholder {
-  color: #b2dbfb;
-}
-.navbar-inverse .form-control::-webkit-input-placeholder {
-  color: #b2dbfb;
-}
-.navbar-inverse .form-control[type=text],
-.navbar-inverse .form-control[type=password] {
   -webkit-box-shadow: inset 0 -1px 0 #b2dbfb;
   box-shadow: inset 0 -1px 0 #b2dbfb;
 }
-.navbar-inverse .form-control[type=text]:focus,
-.navbar-inverse .form-control[type=password]:focus {
+.navbar-inverse .navbar-form input[type=text]::-moz-placeholder,
+.navbar-inverse .navbar-form input[type=password]::-moz-placeholder {
+  color: #b2dbfb;
+  opacity: 1;
+}
+.navbar-inverse .navbar-form input[type=text]:-ms-input-placeholder,
+.navbar-inverse .navbar-form input[type=password]:-ms-input-placeholder {
+  color: #b2dbfb;
+}
+.navbar-inverse .navbar-form input[type=text]::-webkit-input-placeholder,
+.navbar-inverse .navbar-form input[type=password]::-webkit-input-placeholder {
+  color: #b2dbfb;
+}
+.navbar-inverse .navbar-form input[type=text]:focus,
+.navbar-inverse .navbar-form input[type=password]:focus {
   -webkit-box-shadow: inset 0 -2px 0 #ffffff;
   box-shadow: inset 0 -2px 0 #ffffff;
 }

@@ -20,13 +20,13 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
   }
 
   &-inverse {
-    .form-control {
-      color: #fff;
-      @include placeholder($navbar-inverse-link-color);
+    .navbar-form {
 
-      &[type=text],
-      &[type=password] {
+      input[type=text],
+      input[type=password] {
+        color: #fff;
         @include box-shadow(inset 0 -1px 0 $navbar-inverse-link-color);
+        @include placeholder($navbar-inverse-link-color);
 
         &:focus {
           @include box-shadow(inset 0 -2px 0 #fff);
