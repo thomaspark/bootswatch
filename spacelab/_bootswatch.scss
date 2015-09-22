@@ -4,10 +4,7 @@
 
 $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700" !default;
 
-@mixin web-font($path){
-  @import url("#{$path}");
-}
-@include web-font($web-font-path);
+@import url("#{$web-font-path}");
 
 @mixin btn-shadow($color){
   @include gradient-vertical-three-colors(lighten($color, 15%), $color, 50%, darken($color, 4%));
@@ -42,7 +39,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:400italic,700
     padding-bottom: ($navbar-padding-vertical - 2px);
     @include transition(color ease-in-out .2s);
   }
-  
+
   &-brand,
   &-brand:hover {
     @include transition(color ease-in-out .2s);
