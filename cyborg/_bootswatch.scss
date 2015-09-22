@@ -4,10 +4,7 @@
 
 $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:400,700" !default;
 
-@mixin web-font($path){
-  @import url("#{$path}");
-}
-@include web-font($web-font-path);
+@import url("#{$web-font-path}");
 
 // Navbar =====================================================================
 
@@ -219,7 +216,7 @@ a.list-group-item {
     &.active {
       background-color: $state-warning-bg;
     }
-    
+
     &.active:hover,
     &.active:focus {
       background-color: darken($state-warning-bg, 5%);
@@ -230,7 +227,7 @@ a.list-group-item {
     &.active {
       background-color: $state-danger-bg;
     }
-    
+
     &.active:hover,
     &.active:focus {
       background-color: darken($state-danger-bg, 5%);
