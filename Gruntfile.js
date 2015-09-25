@@ -232,17 +232,13 @@ grunt.registerTask('build_scss', 'build a regular theme from scss', function(the
                 .replace(/\.less/g, '')
                 // 11. replace icon-font-path value with conditional for asset helpers
                 .replace(/(\$icon-font-path:).*;/g, '$1 if($bootstrap-sass-asset-helper, "bootstrap/", "../fonts/bootstrap/");')
-                // 12. set bootswatch's web-font-path value as !default
-                .replace(/(\$web-font-path:.*);/g, '$1 !default;')
-                // 13. Remove the web-font mixin which breaks in libsass
-                .replace(/[\s\S][\s\S]@mixin web-font.*([\s\S]*?).*;([\s\S]*?)}([\s\S]*?)/,"")
-                // 14. Replace usage of the web-font mixin with variable interpolation
-                .replace(/@include web-font/,'@import url');
+                // 12. remove css import option
+                .replace(/@import \(css\)/g, '@import');
 
                 if (/\/variables.less$/.test(lessFile)) {
-                // 15. set default value of $bootstrap-sass-asset-helper to false
+                // 13. set default value of $bootstrap-sass-asset-helper to false
                   out = "$bootstrap-sass-asset-helper: false;\n" + out;
-                // 16. only assign variables if they haven't been previously set e.g. $var: #f00; > $var: #f00 !default;
+                // 14. only assign variables if they haven't been previously set e.g. $var: #f00; > $var: #f00 !default;
                   out = out.replace(/^(\$.*);/gm, '$1 !default;');
                 }
 
