@@ -232,8 +232,9 @@ grunt.registerTask('build_scss', 'build a regular theme from scss', function(the
                 .replace(/\.less/g, '')
                 // 11. replace icon-font-path value with conditional for asset helpers
                 .replace(/(\$icon-font-path:).*;/g, '$1 if($bootstrap-sass-asset-helper, "bootstrap/", "../fonts/bootstrap/");')
-                // 12. set bootswatch's web-font-path value as !default
-                .replace(/(\$web-font-path:.*);/g, '$1 !default;');
+                // 12. remove css import option
+                .replace(/@import \(css\)/g, '@import');
+
                 if (/\/variables.less$/.test(lessFile)) {
                 // 13. set default value of $bootstrap-sass-asset-helper to false
                   out = "$bootstrap-sass-asset-helper: false;\n" + out;

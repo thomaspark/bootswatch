@@ -2,12 +2,7 @@
 // Bootswatch
 // -----------------------------------------------------
 
-$web-font-path: "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic" !default;
-
-@mixin web-font($path){
-  @import url("#{$path}");
-}
-@include web-font($web-font-path);
+@import url("#{$web-font-path}");
 
 @mixin shadow($width: 4px){
   border-width: 0 1px $width 1px;
