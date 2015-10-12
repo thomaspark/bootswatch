@@ -3,7 +3,6 @@
 // -----------------------------------------------------
 
 $web-font-path: "https://fonts.googleapis.com/css?family=Lato:300,400,700" !default;
-
 @import url($web-font-path);
 
 // Navbar =====================================================================
@@ -34,8 +33,6 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Lato:300,400,700" !defa
 
 .btn {
 
-  font-weight: 300;
-
   &-default {
     &:hover {
       background-color: darken($btn-default-bg, 3%);
@@ -49,10 +46,6 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Lato:300,400,700" !defa
 }
 
 // Typography =================================================================
-
-body {
-  font-weight: 300;
-}
 
 .text-primary,
 .text-primary:hover {
@@ -91,7 +84,6 @@ body {
 
   > li > a {
     font-size: 12px;
-    font-weight: 300;
   }
 }
 
@@ -144,7 +136,6 @@ label,
 .checkbox label,
 .help-block {
   font-size: 12px;
-  font-weight: 300;
 }
 
 .input-addon,
@@ -253,10 +244,6 @@ label,
 }
 
 // Indicators =================================================================
-
-.label {
-  font-weight: 300;
-}
 
 .alert {
   color: #fff;
