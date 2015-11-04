@@ -32,6 +32,12 @@
   });
 
   function cleanSource(html) {
+    html = html.replace(/×/g, "&close;")
+               .replace(/«/g, "&laquo;")
+               .replace(/»/g, "&raquo;")
+               .replace(/←/g, "&larr;")
+               .replace(/→/g, "&rarr;");
+
     var lines = html.split(/\n/);
 
     lines.shift();
