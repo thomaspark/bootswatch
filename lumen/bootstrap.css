@@ -2279,11 +2279,11 @@ th {
   padding: 8px;
   line-height: 1.42857143;
   vertical-align: top;
-  border-top: 1px solid #dddddd;
+  border-top: 1px solid #eeeeee;
 }
 .table > thead > tr > th {
   vertical-align: bottom;
-  border-bottom: 2px solid #dddddd;
+  border-bottom: 2px solid #eeeeee;
 }
 .table > caption + thead > tr:first-child > th,
 .table > colgroup + thead > tr:first-child > th,
@@ -2294,7 +2294,7 @@ th {
   border-top: 0;
 }
 .table > tbody + tbody {
-  border-top: 2px solid #dddddd;
+  border-top: 2px solid #eeeeee;
 }
 .table .table {
   background-color: #ffffff;
@@ -2308,7 +2308,7 @@ th {
   padding: 5px;
 }
 .table-bordered {
-  border: 1px solid #dddddd;
+  border: 1px solid #eeeeee;
 }
 .table-bordered > thead > tr > th,
 .table-bordered > tbody > tr > th,
@@ -2316,7 +2316,7 @@ th {
 .table-bordered > thead > tr > td,
 .table-bordered > tbody > tr > td,
 .table-bordered > tfoot > tr > td {
-  border: 1px solid #dddddd;
+  border: 1px solid #eeeeee;
 }
 .table-bordered > thead > tr > th,
 .table-bordered > thead > tr > td {
@@ -2454,7 +2454,7 @@ table th[class*="col-"] {
     margin-bottom: 15px;
     overflow-y: hidden;
     -ms-overflow-style: -ms-autohiding-scrollbar;
-    border: 1px solid #dddddd;
+    border: 1px solid #eeeeee;
   }
   .table-responsive > .table {
     margin-bottom: 0;
@@ -5301,7 +5301,7 @@ a.thumbnail.active {
   padding: 10px 15px;
   margin-bottom: -1px;
   background-color: #ffffff;
-  border: 1px solid #dddddd;
+  border: 1px solid #eeeeee;
 }
 .list-group-item:first-child {
   border-top-right-radius: 4px;
@@ -5647,7 +5647,7 @@ button.list-group-item-danger.active:focus {
 .panel > .panel-body + .table-responsive,
 .panel > .table + .panel-body,
 .panel > .table-responsive + .panel-body {
-  border-top: 1px solid #dddddd;
+  border-top: 1px solid #eeeeee;
 }
 .panel > .table > tbody:first-child > tr:first-child th,
 .panel > .table > tbody:first-child > tr:first-child td {
@@ -5955,8 +5955,8 @@ button.close {
 .modal-content {
   position: relative;
   background-color: #ffffff;
-  border: 1px solid #999999;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid #eeeeee;
+  border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: 5px;
   -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
@@ -6943,18 +6943,18 @@ table .info a:not(.btn),
 .table .info a:not(.btn) {
   color: #fff;
 }
-table > thead > tr > th,
-.table > thead > tr > th,
-table > tbody > tr > th,
-.table > tbody > tr > th,
-table > tfoot > tr > th,
-.table > tfoot > tr > th,
-table > thead > tr > td,
-.table > thead > tr > td,
-table > tbody > tr > td,
-.table > tbody > tr > td,
-table > tfoot > tr > td,
-.table > tfoot > tr > td {
+table:not(.table-bordered) > thead > tr > th,
+.table:not(.table-bordered) > thead > tr > th,
+table:not(.table-bordered) > tbody > tr > th,
+.table:not(.table-bordered) > tbody > tr > th,
+table:not(.table-bordered) > tfoot > tr > th,
+.table:not(.table-bordered) > tfoot > tr > th,
+table:not(.table-bordered) > thead > tr > td,
+.table:not(.table-bordered) > thead > tr > td,
+table:not(.table-bordered) > tbody > tr > td,
+.table:not(.table-bordered) > tbody > tr > td,
+table:not(.table-bordered) > tfoot > tr > td,
+.table:not(.table-bordered) > tfoot > tr > td {
   border-color: transparent;
 }
 .form-control {
@@ -7173,7 +7173,7 @@ label {
 a.list-group-item.active,
 a.list-group-item.active:hover,
 a.list-group-item.active:focus {
-  border-color: #dddddd;
+  border-color: #eeeeee;
 }
 a.list-group-item-success.active {
   background-color: #28b62c;
