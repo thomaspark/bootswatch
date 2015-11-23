@@ -34,6 +34,16 @@ The swatch objects are returned in an array called `themes`, each one with the f
 
 More info at http://bootswatch.com/help/#api
 
+Contributing
+-----
+It's through your contributions that Bootswatch will continue to improve. You can contribute in several ways.
+
+Bug Reports: Provide a detailed report of any bugs you encounter and open an issue on [GitHub](https://github.com/thomaspark/bootswatch/issues).
+
+Documentation: If you'd like to fix a typo or beef up the docs, you can fork the project, make your changes, and submit a pull request.
+
+Fixes: You're more than welcome to make a fix and submit it as a pull request. When making changes, it's important to keep the CSS, LESS and SASS versions in sync. To do this, be sure to edit the LESS source files for the particular theme, then run the  tasks `grunt swatch` and `grunt:convert_less` to build the CSS and LESS.
+
 Author
 ------
 Thomas Park
