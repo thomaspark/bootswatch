@@ -2,9 +2,11 @@
 [![Gem Version](https://badge.fury.io/rb/bootstrap-sass.svg)](http://badge.fury.io/rb/bootstrap-sass)
 [![npm version](https://img.shields.io/npm/v/bootstrap-sass.svg?style=flat)](https://www.npmjs.com/package/bootstrap-sass)
 [![Bower Version](https://badge.fury.io/bo/bootstrap-sass.svg)](http://badge.fury.io/bo/bootstrap-sass)
-[![Build Status](http://img.shields.io/travis/twbs/bootstrap-sass.svg)](http://travis-ci.org/twbs/bootstrap-sass)
+[![Build Status](https://img.shields.io/travis/twbs/bootstrap-sass.svg)](https://travis-ci.org/twbs/bootstrap-sass)
 
-`bootstrap-sass` is a Sass-powered version of [Bootstrap](http://github.com/twbs/bootstrap), ready to drop right into your Sass powered applications.
+`bootstrap-sass` is a Sass-powered version of [Bootstrap](https://github.com/twbs/bootstrap) 3, ready to drop right into your Sass powered applications.
+
+This is Bootstrap 3. For Bootstrap 4 use the [Bootstrap Ruby gem](http://github.com/twbs/bootstrap-rubygem) if you use Ruby, and the [main repo](http://github.com/twbs/bootstrap) otherwise.
 
 ## Installation
 
@@ -21,7 +23,7 @@ Please see the appropriate guide for your environment of choice:
 In your Gemfile you need to add the `bootstrap-sass` gem, and ensure that the `sass-rails` gem is present - it is added to new Rails applications by default.
 
 ```ruby
-gem 'bootstrap-sass', '~> 3.3.5'
+gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '>= 3.2'
 ```
 
@@ -44,9 +46,9 @@ it may come with a `.css` file instead. If this file exists, it will be served i
 $ mv app/assets/stylesheets/application.css app/assets/stylesheets/application.scss
 ```
 
-Then, remove all the `//= require` and `//= require_tree` statements from the file. Instead, use `@import` to import Sass files.
+Then, remove all the `*= require_self` and `*= require_tree .` statements from the sass file. Instead, use `@import` to import Sass files.
 
-Do not use `//= require` in Sass or your other stylesheets will not be [able to access][antirequire] the Bootstrap mixins or variables.
+Do not use `*= require` in Sass or your other stylesheets will not be [able to access][antirequire] the Bootstrap mixins or variables.
 
 Require Bootstrap Javascripts in `app/assets/javascripts/application.js`:
 
@@ -285,6 +287,7 @@ The upstream versions vs the Bootstrap for Sass versions are:
 
 | Upstream |    Sass |
 |---------:|--------:|
+|    3.3.6 |   3.3.6 |
 |    3.3.5 |   3.3.5 |
 |    3.3.4 |   3.3.4 |
 |    3.3.2 |   3.3.3 |
@@ -340,8 +343,8 @@ and a [significant number of other contributors][contrib].
 ## You're in good company
 bootstrap-sass is used to build some awesome projects all over the web, including
 [Diaspora](https://diasporafoundation.org/), [rails_admin](https://github.com/sferik/rails_admin),
-Michael Hartl's [Rails Tutorial](http://railstutorial.org/), [gitlabhq](http://gitlabhq.com/) and
-[kandan](http://kandan.io/).
+Michael Hartl's [Rails Tutorial](https://www.railstutorial.org/), [gitlabhq](http://gitlabhq.com/) and
+[kandan](http://getkandan.com/).
 
 [converter]: https://github.com/twbs/bootstrap-sass/blob/master/tasks/converter/less_conversion.rb
 [version]: https://github.com/twbs/bootstrap-sass/blob/master/lib/bootstrap-sass/version.rb
@@ -350,4 +353,4 @@ Michael Hartl's [Rails Tutorial](http://railstutorial.org/), [gitlabhq](http://g
 [jsdocs]: http://getbootstrap.com/javascript/#transitions
 [sass-precision]: http://sass-lang.com/documentation/Sass/Script/Value/Number.html#precision%3D-class_method
 [mincer]: https://github.com/nodeca/mincer
-[autoprefixer]: https://github.com/ai/autoprefixer
+[autoprefixer]: https://github.com/postcss/autoprefixer

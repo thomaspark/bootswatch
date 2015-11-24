@@ -9,11 +9,11 @@
   // from "path/to/font.ext#suffix" to "<%- asset_path(path/to/font.ext)) + #suffix %>"
   // from "path/to/font.ext?#suffix" to "<%- asset_path(path/to/font.ext)) + ?#suffix %>"
   // or from "path/to/font.ext" just "<%- asset_path(path/to/font.ext)) %>"
-  @return "<%- asset_path('#{$path}'.replace(/[#?].*$/, '')) + '#{$path}'.replace(/(^[^#?]*)([#?]?.*$)/, '$2') %>";
+  @return "<%- asset_path("#{$path}".replace(/[#?].*$/, '')) + "#{$path}".replace(/(^[^#?]*)([#?]?.*$)/, '$2') %>";
 }
 
 @function twbs-image-path($file) {
-  @return "<%- asset_path('#{$file}') %>";
+  @return "<%- asset_path("#{$file}") %>";
 }
 
 $bootstrap-sass-asset-helper: true;

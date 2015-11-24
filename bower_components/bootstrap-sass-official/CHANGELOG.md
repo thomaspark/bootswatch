@@ -1,5 +1,14 @@
 # Changelog
 
+## 3.3.6
+
+Bumps Sass dependency to 3.3.4+ to avoid compatibility issues with @at-root.
+Bumps node-sass dependency to ~3.4.2 for Node.js v5 compatibility. [#986](https://github.com/twbs/bootstrap-sass/issues/986)
+Fixes breadcrumb content issues on libsass. [#919](https://github.com/twbs/bootstrap-sass/issues/919)
+Fixes a Rails 5 compatibility issue. [#965](https://github.com/twbs/bootstrap-sass/pull/965)
+
+Framework version: Bootstrap **v3.3.6**
+
 ## 3.3.5
 
 Fix for standalone Compass extension compatibility. [#914](https://github.com/twbs/bootstrap-sass/issues/914)
