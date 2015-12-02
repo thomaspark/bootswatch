@@ -1,8 +1,13 @@
-// Paper 3.3.4
+// Paper 3.3.5
 // Bootswatch
 // -----------------------------------------------------
 
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
+@web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700";
+
+.web-font(@path) {
+  @import url("@{path}");
+}
+.web-font(@web-font-path);
 
 // Navbar =====================================================================
 
@@ -15,13 +20,13 @@
   }
 
   &-inverse {
-    .form-control {
-      color: #fff;
-      .placeholder(@navbar-inverse-link-color);
+    .navbar-form {
 
-      &[type=text],
-      &[type=password] {
+      input[type=text],
+      input[type=password] {
+        color: #fff;
         .box-shadow(inset 0 -1px 0 @navbar-inverse-link-color);
+        .placeholder(@navbar-inverse-link-color);
 
         &:focus {
           .box-shadow(inset 0 -2px 0 #fff);
@@ -38,17 +43,20 @@
     background-size: 200%;
     background-position: 50%;
 
-    &:hover,
-    &:active:hover,
     &:focus {
+      background-color: @bg;
+    }
+
+    &:hover,
+    &:active:hover {
       background-color: darken(@bg, 6%);
     }
 
     &:active {
-      background-color: darken(@bg, 6%);
-      #gradient > .radial(darken(@bg, 6%) 10%, @bg 11%);
+      background-color: darken(@bg, 12%);
+      #gradient > .radial(darken(@bg, 12%) 10%, @bg 11%);
       background-size: 1000%;
-      .box-shadow(2px 2px 2px rgba(0,0,0,.3));
+      .box-shadow(2px 2px 4px rgba(0,0,0,.4));
     }
   }
 }
@@ -59,26 +67,34 @@
 #btn(info,@btn-info-bg);
 #btn(warning,@btn-warning-bg);
 #btn(danger,@btn-danger-bg);
+#btn(link,#fff);
 
 .btn {
   text-transform: uppercase;
-  border-right: none;
-  border-bottom: none;
-  .box-shadow(1px 1px 2px rgba(0,0,0,.3));
-  .transition(all 0.2s);
+  border: none;
+  .box-shadow(1px 1px 4px rgba(0,0,0,.4));
+  .transition(all 0.4s);
 
   &-link {
+    border-radius: @btn-border-radius-base;
     .box-shadow(none);
+    color: @btn-default-color;
 
     &:hover,
     &:focus {
-      color: @brand-primary;
+      .box-shadow(none);
+      color: @btn-default-color;
       text-decoration: none;
     }
   }
 
-  &-default.disabled {
-    border: 1px solid @btn-default-border;
+  &-default {
+
+    &.disabled {
+      background-color: rgba(0, 0, 0, 0.1);
+      color: rgba(0, 0, 0, 0.4);
+      opacity: 1;
+    }
   }
 }
 
@@ -105,7 +121,6 @@
 body {
   -webkit-font-smoothing: antialiased;
   letter-spacing: .1px;
-  text-rendering: optimizeLegibility;
 }
 
 p {
@@ -116,7 +131,6 @@ input,
 button {
   -webkit-font-smoothing: antialiased;
   letter-spacing: .1px;
-  text-rendering: optimizeLegibility;
 }
 
 a {
@@ -238,9 +252,9 @@ input[type="radio"],
 .radio input[type="radio"],
 .radio-inline input[type="radio"] {
   position: relative;
-  margin-top: 5px;
+  margin-top: 6px;
   margin-right: 4px;
-  vertical-align: -4px;
+  vertical-align: top;
   border: none;
   background-color: transparent;
   -webkit-appearance: none;
@@ -257,7 +271,6 @@ input[type="radio"],
     display: block;
     width: 18px;
     height: 18px;
-    margin-top: -3px;
     border-radius: 50%;
     .transition(240ms);
   }
@@ -265,12 +278,14 @@ input[type="radio"],
   &:before {
     position: absolute;
     left: 0;
-    top: 0;
+    top: -3px;
     background-color: @brand-primary;
     .scale(0);
   }
 
   &:after {
+    position: relative;
+    top: -3px;
     border: 2px solid @gray;
   }
 
@@ -296,14 +311,18 @@ input[type="checkbox"],
 .checkbox input[type="checkbox"],
 .checkbox-inline input[type="checkbox"] {
   position: relative;
-  vertical-align: -4px;
   border: none;
+  margin-bottom: -4px;
   -webkit-appearance: none;
   appearance: none;
   cursor: pointer;
 
   &:focus {
     outline: none;
+  }
+
+  &:focus:after {
+    border-color: @brand-primary;
   }
 
   &:after {
@@ -350,8 +369,12 @@ input[type="checkbox"],
 .has-warning {
   input:not([type=checkbox]),
   .form-control,
+  input.form-control[readonly],
+  input[type=text][readonly],
+  [type=text].form-control[readonly],
   input:not([type=checkbox]):focus,
   .form-control:focus {
+    border-bottom: none;
     .box-shadow(inset 0 -2px 0 @brand-warning);
   }
 }
@@ -359,8 +382,12 @@ input[type="checkbox"],
 .has-error {
   input:not([type=checkbox]),
   .form-control,
+  input.form-control[readonly],
+  input[type=text][readonly],
+  [type=text].form-control[readonly],
   input:not([type=checkbox]):focus,
   .form-control:focus {
+    border-bottom: none;
     .box-shadow(inset 0 -2px 0 @brand-danger);
   }
 }
@@ -368,9 +395,22 @@ input[type="checkbox"],
 .has-success {
   input:not([type=checkbox]),
   .form-control,
+  input.form-control[readonly],
+  input[type=text][readonly],
+  [type=text].form-control[readonly],
   input:not([type=checkbox]):focus,
   .form-control:focus {
+    border-bottom: none;
     .box-shadow(inset 0 -2px 0 @brand-success);
+  }
+}
+
+// Remove the Bootstrap feedback styles for input addons
+.input-group-addon {
+  .has-warning &, .has-error &, .has-success & {
+    color: @input-color;
+    border-color: @input-group-addon-border-color;
+    background-color: @input-group-addon-bg;
   }
 }
 
@@ -466,7 +506,7 @@ input[type="checkbox"],
 }
 
 .badge {
-  padding: 3px 6px 5px;
+  padding: 4px 6px 4px;
 }
 
 .progress {

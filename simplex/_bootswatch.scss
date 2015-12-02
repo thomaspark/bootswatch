@@ -1,8 +1,9 @@
-// Simplex 3.3.4
+// Simplex 3.3.5
 // Bootswatch
 // -----------------------------------------------------
 
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
+$web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:400,700" !default;
+@import url($web-font-path);
 
 @mixin btn-shadow($color){
   @include gradient-vertical-three-colors(lighten($color, 3%), $color, 6%, darken($color, 3%));
@@ -83,7 +84,16 @@ label {
 
 .has-warning {
   .help-block,
-  .control-label {
+  .control-label,
+  .radio,
+  .checkbox,
+  .radio-inline,
+  .checkbox-inline,
+  &.radio label,
+  &.checkbox label,
+  &.radio-inline label,
+  &.checkbox-inline label,
+  .form-control-feedback {
     color: $brand-danger;
   }
 
@@ -95,7 +105,16 @@ label {
 
 .has-error {
   .help-block,
-  .control-label {
+  .control-label,
+  .radio,
+  .checkbox,
+  .radio-inline,
+  .checkbox-inline,
+  &.radio label,
+  &.checkbox label,
+  &.radio-inline label,
+  &.checkbox-inline label,
+  .form-control-feedback {
     color: $brand-primary;
   }
 
@@ -107,7 +126,16 @@ label {
 
 .has-success {
   .help-block,
-  .control-label {
+  .control-label,
+  .radio,
+  .checkbox,
+  .radio-inline,
+  .checkbox-inline,
+  &.radio label,
+  &.checkbox label,
+  &.radio-inline label,
+  &.checkbox-inline label,
+  .form-control-feedback {
     color: $brand-success;
   }
 

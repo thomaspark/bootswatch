@@ -1,8 +1,9 @@
-// Spacelab 3.3.4
+// Spacelab 3.3.5
 // Bootswatch
 // -----------------------------------------------------
 
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700");
+$web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700" !default;
+@import url($web-font-path);
 
 @mixin btn-shadow($color){
   @include gradient-vertical-three-colors(lighten($color, 15%), $color, 50%, darken($color, 4%));
@@ -104,6 +105,10 @@
     &:hover {
       @include btn-shadow(darken($btn-danger-bg, 4%));
     }
+  }
+
+  &-link {
+    text-shadow: none;
   }
 
   &:active,

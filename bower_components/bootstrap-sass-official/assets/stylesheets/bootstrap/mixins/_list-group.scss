@@ -5,10 +5,11 @@
     color: $color;
     background-color: $background;
 
-    // [converter] extracted a& to a.list-group-item-#{$state}
+    // [converter] extracted a&, button& to a.list-group-item-#{$state}, button.list-group-item-#{$state}
   }
 
-  a.list-group-item-#{$state} {
+  a.list-group-item-#{$state},
+  button.list-group-item-#{$state} {
     color: $color;
 
     .list-group-item-heading {

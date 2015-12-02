@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="stylesheet" href="./bootstrap.css" media="screen">
-    <link rel="stylesheet" href="../assets/css/bootswatch.min.css">
+    <link rel="stylesheet" href="../assets/css/custom.min.css">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="../bower_components/html5shiv/dist/html5shiv.js"></script>
@@ -71,8 +71,10 @@
               <a href="http://news.bootswatch.com">Blog</a>
             </li>
             <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download">Download <span class="caret"></span></a>
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download">Cosmo <span class="caret"></span></a>
               <ul class="dropdown-menu" aria-labelledby="download">
+                <li><a href="http://jsfiddle.net/bootswatch/h3fgn55j/">Open Sandbox</a></li>
+                <li class="divider"></li>
                 <li><a href="./bootstrap.min.css">bootstrap.min.css</a></li>
                 <li><a href="./bootstrap.css">bootstrap.css</a></li>
                 <li class="divider"></li>
@@ -105,7 +107,25 @@
           </div>
           <div class="col-lg-4 col-md-5 col-sm-6">
             <div class="sponsor">
-              <a href="http://www.shopify.com/?ref=bootswatch" target="_blank" onclick="_gaq.push(['_trackEvent', 'banner', 'click', 'shopify']);"><img src="../assets/img/shopify.png" alt="Shopify" onload="_gaq.push(['_trackEvent', 'banner', 'impression', 'shopify']);"></a>
+              <a href="http://www.shopify.com/?ref=bootswatch" target="_blank" onclick="_gaq.push(['_trackEvent', 'banner', 'click', 'shopify']);">
+                <img src="../assets/img/shopify.png" alt="Shopify" width="180" height="150" onload="_gaq.push(['_trackEvent', 'banner', 'impression', 'shopify']);">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-4">
+            <div class="list-group table-of-contents">
+              <a class="list-group-item" href="#navbar">Navbar</a>
+              <a class="list-group-item" href="#buttons">Buttons</a>
+              <a class="list-group-item" href="#typography">Typography</a>
+              <a class="list-group-item" href="#tables">Tables</a>
+              <a class="list-group-item" href="#forms">Forms</a>
+              <a class="list-group-item" href="#navs">Navs</a>
+              <a class="list-group-item" href="#indicators">Indicators</a>
+              <a class="list-group-item" href="#progress-bars">Progress bars</a>
+              <a class="list-group-item" href="#containers">Containers</a>
+              <a class="list-group-item" href="#dialogs">Dialogs</a>
             </div>
           </div>
         </div>
@@ -225,7 +245,7 @@
         </div>
 
         <div class="row">
-          <div class="col-lg-6">
+          <div class="col-lg-7">
 
             <p class="bs-component">
               <a href="#" class="btn btn-default">Default</a>
@@ -320,7 +340,7 @@
             </p>
 
           </div>
-          <div class="col-lg-6">
+          <div class="col-lg-5">
 
             <p class="bs-component">
               <a href="#" class="btn btn-default btn-lg btn-block">Block level button</a>
@@ -386,7 +406,7 @@
         <div class="row">
           <div class="col-lg-12">
             <div class="page-header">
-              <h1 id="type">Typography</h1>
+              <h1 id="typography">Typography</h1>
             </div>
           </div>
         </div>
@@ -448,7 +468,7 @@
           </div>
           <div class="col-lg-6">
             <div class="bs-component">
-              <blockquote class="pull-right">
+              <blockquote class="blockquote-reverse">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
                 <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
               </blockquote>
@@ -681,7 +701,7 @@
         <div class="row">
           <div class="col-lg-12">
             <div class="page-header">
-              <h1 id="nav">Navs</h1>
+              <h1 id="navs">Navs</h1>
             </div>
           </div>
         </div>
@@ -921,7 +941,7 @@
         <div class="row">
           <div class="col-lg-12">
             <div class="page-header">
-              <h1 id="progress">Progress bars</h1>
+              <h1 id="progress-bars">Progress bars</h1>
             </div>
 
             <h3 id="progress-basic">Basic</h3>
@@ -995,7 +1015,7 @@
         <div class="row">
           <div class="col-lg-12">
             <div class="page-header">
-              <h1 id="container">Containers</h1>
+              <h1 id="containers">Containers</h1>
             </div>
             <div class="bs-component">
               <div class="jumbotron">
@@ -1276,6 +1296,6 @@
 
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="../assets/js/bootswatch.js"></script>
+    <script src="../assets/js/custom.js"></script>
   </body>
 </html>

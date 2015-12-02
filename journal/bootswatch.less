@@ -1,8 +1,13 @@
-// Journal 3.3.4
+// Journal 3.3.5
 // Bootswatch
 // -----------------------------------------------------
 
-@import url("https://fonts.googleapis.com/css?family=News+Cycle:400,700");
+@web-font-path: "https://fonts.googleapis.com/css?family=News+Cycle:400,700";
+
+.web-font(@path) {
+  @import url("@{path}");
+}
+.web-font(@web-font-path);
 
 // Navbar =====================================================================
 
@@ -45,6 +50,14 @@
 .has-warning {
   .help-block,
   .control-label,
+  .radio,
+  .checkbox,
+  .radio-inline,
+  .checkbox-inline,
+  &.radio label,
+  &.checkbox label,
+  &.radio-inline label,
+  &.checkbox-inline label,
   .form-control-feedback {
     color: @brand-danger;
   }
@@ -58,6 +71,14 @@
 .has-error {
   .help-block,
   .control-label,
+  .radio,
+  .checkbox,
+  .radio-inline,
+  .checkbox-inline,
+  &.radio label,
+  &.checkbox label,
+  &.radio-inline label,
+  &.checkbox-inline label,
   .form-control-feedback {
     color: @brand-primary;
   }
@@ -71,6 +92,14 @@
 .has-success {
   .help-block,
   .control-label,
+  .radio,
+  .checkbox,
+  .radio-inline,
+  .checkbox-inline,
+  &.radio label,
+  &.checkbox label,
+  &.radio-inline label,
+  &.checkbox-inline label,
   .form-control-feedback {
     color: @brand-success;
   }

@@ -1,8 +1,9 @@
-// Lumen 3.3.4
+// Lumen 3.3.5
 // Bootswatch
 // -----------------------------------------------------
 
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic");
+$web-font-path: "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic" !default;
+@import url($web-font-path);
 
 @mixin shadow($width: 4px){
   border-width: 0 1px $width 1px;
@@ -190,13 +191,15 @@ table,
     }
   }
 
-  > thead > tr > th,
-  > tbody > tr > th,
-  > tfoot > tr > th,
-  > thead > tr > td,
-  > tbody > tr > td,
-  > tfoot > tr > td {
-    border-color: transparent;
+  &:not(.table-bordered) {
+    > thead > tr > th,
+    > tbody > tr > th,
+    > tfoot > tr > th,
+    > thead > tr > td,
+    > tbody > tr > td,
+    > tfoot > tr > td {
+      border-color: transparent;
+    }
   }
 }
 
@@ -213,6 +216,14 @@ label {
 .has-warning {
   .help-block,
   .control-label,
+  .radio,
+  .checkbox,
+  .radio-inline,
+  .checkbox-inline,
+  &.radio label,
+  &.checkbox label,
+  &.radio-inline label,
+  &.checkbox-inline label,
   .form-control-feedback {
     color: $brand-warning;
   }
@@ -231,6 +242,14 @@ label {
 .has-error {
   .help-block,
   .control-label,
+  .radio,
+  .checkbox,
+  .radio-inline,
+  .checkbox-inline,
+  &.radio label,
+  &.checkbox label,
+  &.radio-inline label,
+  &.checkbox-inline label,
   .form-control-feedback {
     color: $brand-danger;
   }
@@ -249,6 +268,14 @@ label {
 .has-success {
   .help-block,
   .control-label,
+  .radio,
+  .checkbox,
+  .radio-inline,
+  .checkbox-inline,
+  &.radio label,
+  &.checkbox label,
+  &.radio-inline label,
+  &.checkbox-inline label,
   .form-control-feedback {
     color: $brand-success;
   }

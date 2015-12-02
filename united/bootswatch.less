@@ -1,8 +1,13 @@
-// United 3.3.4
+// United 3.3.5
 // Bootswatch
 // -----------------------------------------------------
 
-@import url("https://fonts.googleapis.com/css?family=Ubuntu:400,700");
+@web-font-path: "https://fonts.googleapis.com/css?family=Ubuntu:400,700";
+
+.web-font(@path) {
+  @import url("@{path}");
+}
+.web-font(@web-font-path);
 
 // Navbar =====================================================================
 
