@@ -24,13 +24,13 @@ For the full story of HTML5 Shiv and all of the people involved in making it, re
 
 `bower install html5shiv --save-dev`
 
-This will clone the latest version of the HTML5 shiv into the `components` directory at the root of your project and also create or update the file `bower.json` which specifies your projects dependencies.
+This will clone the latest version of the HTML5 shiv into the `bower_components` directory at the root of your project and also create or update the file `bower.json` which specifies your projects dependencies.
 
 Include the HTML5 shiv in the `<head>` of your page in a conditional comment and after any stylesheets.
 
 ```html
 <!--[if lt IE 9]>
-	<script src="components/html5shiv/html5shiv.js"></script>
+	<script src="bower_components/html5shiv/html5shiv.js"></script>
 <![endif]-->
 ```
 
@@ -44,7 +44,7 @@ HTML5 Shiv works as a simple drop-in solution. In most cases there is no need to
 
 ### `html5.elements` option
 
-The `elements` option is a space separated string or array, which describes the **full** list of the elements to shiv. 
+The `elements` option is a space separated string or array, which describes the **full** list of the elements to shiv. see also `addElements`.
 
 **Configuring `elements` before `html5shiv.js` is included.**
 
@@ -80,7 +80,7 @@ window.html5 = {
 
 If the `shivMethods` option is set to `true` (by default) HTML5 Shiv will override `document.createElement`/`document.createDocumentFragment` in Internet Explorer 6-8 to allow dynamic DOM creation of HTML5 elements. 
 
-Known issue: If an element is created using the overridden `createElement` method this element returns a document fragment as its `parentNode`, but should be normally `null`. If a script relays on this behavior, `shivMethods`should be set to `false`.
+Known issue: If an element is created using the overridden `createElement` method this element returns a document fragment as its `parentNode`, but should be normally `null`. If a script relies on this behavior, `shivMethods`should be set to `false`.
 Note: jQuery 1.7+ has implemented his own HTML5 DOM creation fix for Internet Explorer 6-8. If all your scripts (including Third party scripts) are using jQuery's manipulation and DOM creation methods, you might want to set this option to `false`.
 
 **Configuring `shivMethods` before `html5shiv.js` is included.**
@@ -96,6 +96,15 @@ window.html5 = {
 ```js
 //change the html5shiv options object 
 window.html5.shivMethods = false;
+```
+
+### `html5.addElements( newElements [, document] )`
+
+The `html5.addElements` method extends the list of elements to shiv. The newElements argument can be a whitespace separated list or an array.
+
+```js
+//extend list of elements to shiv
+html5.addElements('element content');
 ```
 
 ### `html5.createElement( nodeName [, document] )`

@@ -1,8 +1,8 @@
-// Readable 3.3.1
+// Readable 3.3.4
 // Bootswatch
 // -----------------------------------------------------
 
-@import url("//fonts.googleapis.com/css?family=Raleway:400,700");
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
 
 // Navbar =====================================================================
 
@@ -16,8 +16,9 @@
   }
 
   &-nav > li > a {
+    @margin-vertical: ((@navbar-height - 2*@padding-base-vertical - @line-height-computed - 2px) / 2);
+    margin: @margin-vertical 6px;
     padding: @padding-base-vertical @padding-base-horizontal;
-    margin: 12px 6px;
     border: 1px solid transparent;
     border-radius: @border-radius-base;
 
@@ -40,11 +41,21 @@
   }
 
   &-brand {
-    padding-top: 20px;
+    padding-top: ((@navbar-height - 2*@font-size-large) / 2);
+    padding-bottom: ((@navbar-height - 2*@font-size-large) / 2);
+    line-height: 1.9;
   }
 }
 
-@media (max-width: @grid-float-breakpoint) {
+@media (min-width: @grid-float-breakpoint) {
+  .navbar {
+    .navbar-nav > li > a {
+      padding: @padding-base-vertical @padding-base-horizontal;
+    }
+  }
+}
+
+@media (max-width: @grid-float-breakpoint - 1) {
   .navbar {
     .navbar-nav > li > a {
       margin: 0;
@@ -160,22 +171,6 @@ legend {
   &-default {
     .close {
       color: @text-color;
-    }
-  }
-
-  &-primary,
-  &-success,
-  &-warning,
-  &-danger,
-  &-info {
-    .panel-heading {
-      color: #fff;
-    }
-
-    .panel-body {
-      border: 1px solid #ddd;
-      border-top-width: 0;
-      border-radius: 0 0 @border-radius-base @border-radius-base;
     }
   }
 }

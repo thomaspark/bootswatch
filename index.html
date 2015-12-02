@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Bootswatch: Free themes for Bootstrap</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="stylesheet" href="./flatly/bootstrap.css" media="screen">
     <link rel="stylesheet" href="./bower_components/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="./assets/css/bootswatch.min.css">
@@ -28,11 +29,11 @@
 
     </script>
   </head>
-  <body>
-    <div class="navbar navbar-default navbar-fixed-top">
+  <body id="home">
+    <div class="navbar navbar-default navbar-fixed-top navbar-transparent">
       <div class="container">
         <div class="navbar-header">
-          <a href="./" class="navbar-brand">Bootswatch</a>
+          <a href="./" class="navbar-brand"><img src="assets/img/logo-nav.png">Bootswatch</a>
           <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -86,12 +87,12 @@
 
         <div class="row">
           <div class="col-lg-12">
-            <div><img class="logo" src="assets/img/logo.png"></div>
+            <!-- <div><img class="logo" src="assets/img/logo.png"></div> -->
             <h1>Free themes for Bootstrap</h1>
             <div id="social">
               <span>
-                <iframe id="gh-fork" src="http://ghbtns.com/github-btn.html?user=thomaspark&repo=bootswatch&type=fork" allowtransparency="true" frameborder="0" scrolling="0" width="53" height="20"></iframe>
-                <iframe id="gh-star" src="http://ghbtns.com/github-btn.html?user=thomaspark&repo=bootswatch&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+                <iframe id="gh-fork" src="https://ghbtns.com/github-btn.html?user=thomaspark&repo=bootswatch&type=fork" allowtransparency="true" frameborder="0" scrolling="0" width="53" height="20"></iframe>
+                <iframe id="gh-star" src="https://ghbtns.com/github-btn.html?user=thomaspark&repo=bootswatch&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
               </span>
               <span>
                 <a href="https://twitter.com/bootswatch" class="twitter-follow-button" data-show-count="false" data-show-screen-name="true">Follow @bootswatch</a>
@@ -101,7 +102,7 @@
             <div class="row">
               <div class="col-md-6 col-md-offset-3">
                 <div class="sponsor">
-                  <a href="http://gridgum.com/themes/category/bootstrap-themes/?utm_source=Bootswatch&utm_medium=250ad&utm_campaign=Bootswatch%20Campaign" target="_blank" onclick="_gaq.push(['_trackEvent', 'banner', 'click', 'gridgum']);"><img src="assets/img/gridgum.png" alt="Gridgum" onload="_gaq.push(['_trackEvent', 'banner', 'impression', 'gridgum']);"></a>
+                  <a href="http://www.shopify.com/?ref=bootswatch" target="_blank" onclick="_gaq.push(['_trackEvent', 'banner', 'click', 'shopify']);"><img src="assets/img/shopify.png" alt="Shopify" onload="_gaq.push(['_trackEvent', 'banner', 'impression', 'shopify']);"></a>
                 </div>
               </div>
             </div>
@@ -124,8 +125,8 @@
             <p>Bootstrap themes are released under the MIT License and maintained by the community on <a target="_blank" href="https://github.com/thomaspark/bootswatch">GitHub</a>.</p>
           </div>
           <div class="col-lg-4 col-sm-6">
-            <h3><i class="fa fa-wrench"></i> Tuned for 3.3.1</h3>
-            <p>Themes are built for the latest version of Bootstrap. <a href="2/">Version 2.3.2</a> and <a target="_blank" href="https://github.com/thomaspark/bootswatch/tags">others</a> are also available to download.</p>
+            <h3><i class="fa fa-wrench"></i> Tuned for 3.3.4</h3>
+            <p>Themes are built for the latest version of Bootstrap. <a href="2/">Version 2</a> and <a target="_blank" href="https://github.com/thomaspark/bootswatch/tags">others</a> are also available to download.</p>
           </div>
           <div class="col-lg-4 col-sm-6">
             <h3><i class="fa fa-cogs"></i> Modular</h3>
@@ -704,7 +705,7 @@
                 <h3>HTML &amp; CSS</h3>
                 <p>Jon Duckett</p>
                 <div>
-                  <img src="http://www.assoc-amazon.com/e/ir?t=bootswatch-20&amp;l=as2&amp;o=1&amp;a=1118008189" width="1" height="1" alt="" style="border:none !important; margin:0px !important; height: 1px;" />
+                  <img src="https://www.assoc-amazon.com/e/ir?t=bootswatch-20&amp;l=as2&amp;o=1&amp;a=1118008189" width="1" height="1" alt="" style="border:none !important; margin:0px !important; height: 1px;" />
                   <div class="btn-group"><a class="btn btn-info" onClick="_gaq.push(['_trackEvent', 'refs', 'amazon', 'htmlandcss']);" href="http://www.amazon.com/gp/product/1118008189/ref=as_li_tf_tl?ie=UTF8&amp;tag=bootswatch-20&amp;linkCode=as2&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1118008189" target="_blank">Amazon</a></div>
                 </div>
               </div>
@@ -714,7 +715,7 @@
             <div class="preview">
               <div class="image">
 
-                <a onClick="_gaq.push(['_trackEvent', 'refs', 'amazon', 'eloquentjavascript']);" href="http://www.amazon.com/gp/product/1593272820/ref=as_li_tf_tl?ie=UTF8&amp;tag=bootswatch-20&amp;linkCode=as2&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1593272820" target="_blank"><img class="img-responsive" src="assets/img/refs/eloquentjavascript.png" alt="Eloquent JavaScript, by Marijn Haverbeke"></a>
+                <a onClick="_gaq.push(['_trackEvent', 'refs', 'amazon', 'eloquentjavascript']);" href="http://www.amazon.com/gp/product/1593275846/ref=as_li_tf_tl?ie=UTF8&amp;tag=bootswatch-20&amp;linkCode=as2&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1593275846" target="_blank"><img class="img-responsive" src="assets/img/refs/eloquentjavascript.png" alt="Eloquent JavaScript, by Marijn Haverbeke"></a>
 
               </div>
               <div class="options">
@@ -722,8 +723,8 @@
                 <h3>Eloquent JavaScript</h3>
                 <p>Marijn Haverbeke</p>
                 <div>
-                  <img src="http://www.assoc-amazon.com/e/ir?t=bootswatch-20&amp;l=as2&amp;o=1&amp;a=1593272820" width="1" height="1" alt="" style="border:none !important; margin:0px !important; height: 1px;" />
-                  <div class="btn-group"><a class="btn btn-info" onClick="_gaq.push(['_trackEvent', 'refs', 'amazon', 'lesscss']);" href="http://www.amazon.com/gp/product/1593272820/ref=as_li_tf_tl?ie=UTF8&amp;tag=bootswatch-20&amp;linkCode=as2&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1593272820" target="_blank">Amazon</a></div>
+                  <img src="https://www.assoc-amazon.com/e/ir?t=bootswatch-20&amp;l=as2&amp;o=1&amp;a=1593275846" width="1" height="1" alt="" style="border:none !important; margin:0px !important; height: 1px;" />
+                  <div class="btn-group"><a class="btn btn-info" onClick="_gaq.push(['_trackEvent', 'refs', 'amazon', 'lesscss']);" href="http://www.amazon.com/gp/product/1593275846/ref=as_li_tf_tl?ie=UTF8&amp;tag=bootswatch-20&amp;linkCode=as2&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1593275846" target="_blank">Amazon</a></div>
                 </div>
               </div>
             </div>
@@ -740,7 +741,7 @@
                 <h3>Beautiful Web Design</h3>
                 <p>Jason Beaird</p>
                 <div>
-                  <img src="http://www.assoc-amazon.com/e/ir?t=bootswatch-20&amp;l=as2&amp;o=1&amp;a=098057689X" width="1" height="1" alt="" style="border:none !important; margin:0px !important; height: 1px;" />
+                  <img src="https://www.assoc-amazon.com/e/ir?t=bootswatch-20&amp;l=as2&amp;o=1&amp;a=098057689X" width="1" height="1" alt="" style="border:none !important; margin:0px !important; height: 1px;" />
                   <div class="btn-group"><a class="btn btn-info" onClick="_gaq.push(['_trackEvent', 'refs', 'amazon', 'beautifulwebdesign']);" href="http://www.amazon.com/gp/product/098057689X/ref=as_li_tf_tl?ie=UTF8&amp;tag=bootswatch-20&amp;linkCode=as2&amp;camp=1789&amp;creative=9325&amp;creativeASIN=098057689X" target="_blank">Amazon</a></div>
                 </div>
               </div>
@@ -767,7 +768,7 @@
               <li><a href="./help/#api">API</a></li>
               <li><a href="./help/#support">Support</a></li>
             </ul>
-            <p>Made by <a href="http://thomaspark.me" rel="nofollow">Thomas Park</a>. Contact him at <a href="mailto:thomas@bootswatch.com">thomas@bootswatch.com</a>.</p>
+            <p>Made by <a href="http://thomaspark.co" rel="nofollow">Thomas Park</a>. Contact him at <a href="mailto:thomas@bootswatch.com">thomas@bootswatch.com</a>.</p>
             <p>Code released under the <a href="https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE">MIT License</a>.</p>
             <p>Based on <a href="http://getbootstrap.com" rel="nofollow">Bootstrap</a>. Icons from <a href="http://fortawesome.github.io/Font-Awesome/" rel="nofollow">Font Awesome</a>. Web fonts from <a href="http://www.google.com/webfonts" rel="nofollow">Google</a>.</p>
 
@@ -784,7 +785,7 @@
     <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="./assets/js/bootswatch.js"></script>
     <script>
-      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
     </script>
   </body>
 </html>

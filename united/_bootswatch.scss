@@ -1,8 +1,8 @@
-// United 3.3.1
+// United 3.3.4
 // Bootswatch
 // -----------------------------------------------------
 
-@import url("//fonts.googleapis.com/css?family=Ubuntu");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:400,700");
 
 // Navbar =====================================================================
 
@@ -24,6 +24,19 @@
     }
   }
 }
+
+@media (max-width: $grid-float-breakpoint-max) {
+
+  .navbar {
+
+    .dropdown-menu {
+      a {
+        color: #fff;
+      }
+    }
+  }
+}
+
 
 // Buttons ====================================================================
 
