@@ -1,7 +1,9 @@
 Bootswatch
 ==========
 
-Bootswatch is a collection of free themes for [Bootstrap](http://getbootstrap.com/). Check it out at [bootswatch.com](http://bootswatch.com).
+[![Bootswatch Logo](./assets/img/logo-dark.png)](http://bootswatch.com)
+
+Bootswatch is a collection of open source themes for [Bootstrap](http://getbootstrap.com/). Check it out at [bootswatch.com](http://bootswatch.com).
 
 Usage
 -----
@@ -42,7 +44,7 @@ It's through your contributions that Bootswatch will continue to improve. You ca
 
 **Documentation:** If you'd like to fix a typo or beef up the docs, you can fork the project, make your changes, and submit a pull request.
 
-**Code:** You're more than welcome to make a fix and submit it as a pull request. When making changes, it's important to keep the CSS, LESS and SASS versions in sync. To do this, be sure to edit the LESS source files for the particular theme, then run the  tasks `grunt swatch` and `grunt:convert_less` to build the CSS and LESS.
+**Code:** Make a fix and submit it as a pull request. When making changes, it's important to keep the CSS, LESS and SASS versions in sync. To do this, be sure to edit the LESS source files for the particular theme, then run the  tasks `grunt swatch` and `grunt:convert_less` to build the CSS and LESS.
 
 **Donation:** Donations are gratefully accepted via [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=F22JEM3Q78JC2) and [Gratipay](https://gratipay.com/bootswatch/).
 
