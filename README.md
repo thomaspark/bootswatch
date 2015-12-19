@@ -30,11 +30,7 @@ Check out the [Help page](http://bootswatch.com/help/) for more details on build
 API
 -----
 
-A simple API is available for integrating your platform with Bootswatch. Send your request to `http://api.bootswatch.com/3/`.
-
-The swatch objects are returned in an array called `themes`, each one with the following properties:  `name`, `description`, `preview`, `thumbnail`, `css`, `cssMin`, `less`, and `lessVariables`.
-
-More info at http://bootswatch.com/help/#api
+A simple API is available for integrating your platform with Bootswatch. More info at http://bootswatch.com/help/#api
 
 Contributing
 -----
