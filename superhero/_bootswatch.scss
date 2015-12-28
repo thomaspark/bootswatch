@@ -10,7 +10,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Lato:300,400,700" !defa
 .navbar {
   @include box-shadow(none);
   border: none;
-  font-size: 12px;
+  font-size: $font-size-small;
 
   &-default {
 
@@ -41,7 +41,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Lato:300,400,700" !defa
 
   &-sm,
   &-xs {
-    font-size: 12px;
+    font-size: $font-size-small;
   }
 }
 
@@ -83,7 +83,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Lato:300,400,700" !defa
   @include box-shadow(none);
 
   > li > a {
-    font-size: 12px;
+    font-size: $font-size-small;
   }
 }
 
@@ -92,14 +92,14 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Lato:300,400,700" !defa
 }
 
 .dropdown-header {
-  font-size: 12px;
+  font-size: $font-size-small;
 }
 
 // Tables =====================================================================
 
 table,
 .table {
-  font-size: 12px;
+  font-size: $font-size-small;
 
   a:not(.btn) {
     color: #fff;
@@ -135,7 +135,7 @@ label,
 .radio label,
 .checkbox label,
 .help-block {
-  font-size: 12px;
+  font-size: $font-size-small;
 }
 
 .input-addon,
