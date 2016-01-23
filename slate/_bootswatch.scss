@@ -8,7 +8,7 @@
 }
 
 @mixin btn-shadow-inverse($color){
-  @include gradient-vertical-three-colors(darken($color, 24%), darken($color, 18%), 40%, darken($color, 14%));
+  @include gradient-vertical-three-colors(darken($color, 24%), darken($color, 18%), 40%, darken($color, 16%));
   filter: none;
 }
 
@@ -20,21 +20,28 @@
   border: 1px solid rgba(0, 0, 0, 0.6);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 
-  &-inverse {
-    @include btn-shadow($navbar-inverse-bg);
-
-    .badge {
-      background-color: $navbar-inverse-link-active-bg;
-    }
-  }
-
-  &-nav > li > a {
+  .navbar-nav > li > a {
     border-right: 1px solid rgba(0, 0, 0, 0.2);
     border-left: 1px solid rgba(255, 255, 255, 0.1);
 
     &:hover {
       @include btn-shadow-inverse($navbar-default-bg);
       border-left-color: transparent;
+    }
+  }
+
+  &-inverse {
+    @include btn-shadow($navbar-inverse-bg);
+
+    .badge {
+      background-color: $navbar-inverse-link-active-bg;
+    }
+
+    .navbar-nav > li > a {
+
+      &:hover {
+        @include btn-shadow-inverse($navbar-inverse-bg);
+      }
     }
   }
 
