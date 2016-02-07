@@ -7,14 +7,29 @@ Bootswatch is a collection of open source themes for [Bootstrap](http://getboots
 
 Usage
 -----
-Download the `bootstrap.min.css` file associated with a theme and replace Bootstrap's default stylesheet.
+Download the `bootstrap.min.css` file associated with a theme and replace Bootstrap's default stylesheet. You must still include Bootstrap's JavaScript file to have functional dropdowns, modals, etc.
 
-The themes are also hosted on [BootstrapCDN](http://www.bootstrapcdn.com/bootswatch/).
+The themes are also hosted on [BootstrapCDN](http://www.bootstrapcdn.com/bootswatch/). 
 
- Rails users should check out:
+You can import a theme into your styles using either LESS or SASS.
 
-* [twitter-bootswatch-rails](https://github.com/scottvrosenthal/twitter-bootswatch-rails) if using _LESS_.
-* [bootswatch-rails](https://github.com/maxim/bootswatch-rails) if using _SASS_.
+LESS:
+
+```
+@import "bootstrap/less/bootstrap.less";
+@import "bootswatch/theme/variables.less";
+@import "bootswatch/theme/bootswatch.less";
+
+```
+
+SASS:
+
+```
+@import "bootswatch/theme/variables";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap";
+@import "bootswatch/theme/bootswatch";
+
+```
 
 
 Customization
