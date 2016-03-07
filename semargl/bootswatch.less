@@ -175,6 +175,31 @@ html, body {
   }
 }
 
+// Tabs =================================================================
+.nav-tabs {
+  &.nav-tabs-* {
+    li {
+      font-weight: bold;
+
+      a {
+        border-top: 4px solid @body-bg;
+        font-weight: bold;
+      }
+    }
+  }
+  &.nav-tabs-default {
+    li.active a {
+      border-top: 4px solid @brand-danger;
+    }
+  }
+  &.nav-tabs-inverse {
+    li.active a {
+      border-top: 4px solid @brand-primary;
+    }
+  }
+
+}
+
 // Indicators =================================================================
 
 // Progress bars ==============================================================
