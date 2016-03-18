@@ -32,7 +32,7 @@
   });
 
   function cleanSource(html) {
-    html = html.replace(/×/g, "&close;")
+    html = html.replace(/×/g, "&times;")
                .replace(/«/g, "&laquo;")
                .replace(/»/g, "&raquo;")
                .replace(/←/g, "&larr;")
