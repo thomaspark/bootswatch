@@ -2,7 +2,7 @@
 // Bootswatch
 // -----------------------------------------------------
 
-@web-font-path: "https://fonts.googleapis.com/css?family=Lato:300,400,700";
+@web-font-path: "https://fonts.googleapis.com/css?family=Frijole:300,400,700";
 
 .web-font(@path) {
   @import url("@{path}");
@@ -361,4 +361,134 @@ a.list-group-item {
   &-title {
     border: none;
   }
+}
+
+.bean-bg{
+  background-image: url('http://cdn.amazingribs.com/images/recipes/boston_beans.jpg')
+}
+
+.banner-link-text{
+  color: white;
+}
+
+body{
+  background-image: url('http://slavosalt.com/wp-content/uploads/2014/03/slavo-clean-your-grill.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-background-size: 120%;
+  -moz-background-size: 120%;
+  -o-background-size: 120%;
+  background-size: 120%;
+
+}
+.gif{
+  padding-top: 3%;
+}
+/* Use a wide full screen for small screens like tablets. */
+@media (min-width: 768px) and (max-width:992px) {
+  .container {
+    width: initial;
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+}
+
+/* --- Plans ---------------------------- */
+
+.my_planHeader {
+  text-align: center;
+  color: white;
+  padding-top:0.2em;
+  padding-bottom:0.2em;
+}
+.my_planTitle {
+  font-size:2em;
+  font-weight: bold;
+}
+.my_planPrice {
+  font-size:1.4em;
+  font-weight: bold;
+}
+.my_planDuration {
+  margin-top: -0.6em;
+}
+
+@media (max-width: 768px) {
+  .my_planTitle {
+    font-size:small;
+  }
+}
+
+/* --- Features ------------------------- */
+
+.my_feature {
+  line-height:2.8em;
+}
+
+@media (max-width: 768px) {
+  .my_feature {
+    text-align: center
+  }
+}
+
+.my_featureRow {
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+  border: 0.1em solid rgb(163, 163, 163);
+  background-color: #55080D;
+}
+
+/* --- Plan 1 --------------------------- */
+.my_plan1 {
+  background: rgb(213, 255, 204);
+}
+
+.my_planHeader.my_plan1 a {
+  background: rgb(91, 114, 57);
+  color:white;
+}
+
+.my_planHeader.my_plan1 {
+  background: rgb(108, 131, 62);
+
+}
+
+/* --- Plan 2 --------------------------- */
+.my_plan2 {
+  background: rgb(235, 211, 175);
+}
+
+.my_planHeader.my_plan2 a {
+  background: rgb(165, 105, 0);
+  color:white;
+}
+
+.my_planHeader.my_plan2 {
+  background: rgb(203, 139, 0);
+}
+
+/* --- Plan 3 --------------------------- */
+.my_plan3 {
+  background: rgb(254,235,212);
+}
+
+.my_planHeader.my_plan3 a {
+  background: rgb(194, 12, 20);
+  color:white;
+}
+
+.my_planHeader.my_plan3 {
+  background: rgb(253, 0, 0);
+}
+
+
+
+
+.my_planFeature {
+  text-align: center;
+  font-size: 2em;
+}
+
+.my_planFeature i.my_check {
+  color: green;
 }
