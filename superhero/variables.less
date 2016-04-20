@@ -11,8 +11,8 @@
 @gray-darker:            lighten(@gray-base, 13.5%); // #222
 @gray-dark:              lighten(@gray-base, 20%);   // #333
 @gray:                   lighten(@gray-base, 33.5%); // #555
-@gray-light:             #4E5D6C;   // #999
-@gray-lighter:           #EBEBEB; // #eee
+@bbq-redish:             #55080D;   // #999
+@bbq-redisher:           #EBEBEB; // #eee
 
 @brand-primary:         #DF691A;
 @brand-success:         #5cb85c;
@@ -28,7 +28,7 @@
 //** Background color for `<body>`.
 @body-bg:               #2B3E50;
 //** Global text color on `<body>`.
-@text-color:            @gray-lighter;
+@text-color:            @bbq-redisher;
 
 //** Global textual link color.
 @link-color:            @brand-primary;
@@ -42,10 +42,10 @@
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-@font-family-sans-serif:  "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-@font-family-serif:       Georgia, "Times New Roman", Times, serif;
+@font-family-sans-serif:  "Frijole", "Frijole", Frijole, Frijole, sans-serif;
+@font-family-serif:       Frijole, "Frijole", Frijole, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
-@font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+@font-family-monospace:   Frijole, Frijole, Frijole, "Frijole", monospace;
 @font-family-base:        @font-family-sans-serif;
 
 @font-size-base:          15px;
@@ -129,13 +129,13 @@
 //** Default background color used for all tables.
 @table-bg:                      transparent;
 //** Background color used for `.table-striped`.
-@table-bg-accent:               @gray-light;
+@table-bg-accent:               @bbq-redish;
 //** Background color used for `.table-hover`.
-@table-bg-hover:                darken(@gray-light, 3%);
+@table-bg-hover:                darken(@bbq-redish, 3%);
 @table-bg-active:               @table-bg-hover;
 
 //** Border color for table and cell borders.
-@table-border-color:            @gray-light;  
+@table-border-color:            @bbq-redish;  
 
 
 //== Buttons
@@ -145,7 +145,7 @@
 @btn-font-weight:                normal;
 
 @btn-default-color:              #fff;
-@btn-default-bg:                 @gray-light;
+@btn-default-bg:                 @bbq-redish;
 @btn-default-border:             transparent;
 
 @btn-primary-color:              #fff;
@@ -168,7 +168,7 @@
 @btn-danger-bg:                  @brand-danger;
 @btn-danger-border:              transparent;
 
-@btn-link-disabled-color:        @gray-light;
+@btn-link-disabled-color:        @bbq-redish;
 
 // Allows for customizing button radius independently from global border radius
 @btn-border-radius-base:         @border-radius-base;
@@ -183,7 +183,7 @@
 //** `<input>` background color
 @input-bg:                       #fff;
 //** `<input disabled>` background color
-@input-bg-disabled:              @gray-lighter;
+@input-bg-disabled:              @bbq-redisher;
 
 //** Text color for `<input>`s
 @input-color:                    @body-bg;
@@ -216,7 +216,7 @@
 @form-group-margin-bottom:       15px;
 
 @legend-color:                   @text-color;
-@legend-border-color:            @gray-light;
+@legend-border-color:            @bbq-redish;
 
 //** Background color for textual input addons
 @input-group-addon-bg:           @btn-default-bg;
@@ -232,7 +232,7 @@
 //## Dropdown menu container and contents.
 
 //** Background for the dropdown menu.
-@dropdown-bg:                    @gray-light;
+@dropdown-bg:                    @bbq-redish;
 //** Dropdown menu `border-color`.
 @dropdown-border:                transparent;
 //** Dropdown menu `border-color` **for IE8**.
@@ -245,7 +245,7 @@
 //** Hover color for dropdown links.
 @dropdown-link-hover-color:      @text-color;
 //** Hover background for dropdown links.
-@dropdown-link-hover-bg:         darken(@gray-light, 3%);
+@dropdown-link-hover-bg:         darken(@bbq-redish, 3%);
 
 //** Active dropdown menu item text color.
 @dropdown-link-active-color:     @component-active-color;
@@ -365,7 +365,7 @@
 @navbar-collapse-max-height:       340px;
 
 @navbar-default-color:             @text-color;
-@navbar-default-bg:                @gray-light;
+@navbar-default-bg:                @bbq-redish;
 @navbar-default-border:            transparent;
 
 // Navbar links
@@ -420,22 +420,22 @@
 
 //=== Shared nav styles
 @nav-link-padding:                          10px 15px;
-@nav-link-hover-bg:                         @gray-light;
+@nav-link-hover-bg:                         @bbq-redish;
 
-@nav-disabled-link-color:                   @gray-light;
-@nav-disabled-link-hover-color:             @gray-light;
+@nav-disabled-link-color:                   @bbq-redish;
+@nav-disabled-link-hover-color:             @bbq-redish;
 
 //== Tabs
 @nav-tabs-border-color:                     transparent;
 
-@nav-tabs-link-hover-border-color:          @gray-light;
+@nav-tabs-link-hover-border-color:          @bbq-redish;
 
 @nav-tabs-active-link-hover-bg:             @body-bg;
 @nav-tabs-active-link-hover-color:          @text-color;
-@nav-tabs-active-link-hover-border-color:   @gray-light;
+@nav-tabs-active-link-hover-border-color:   @bbq-redish;
 
-@nav-tabs-justified-link-border-color:            @gray-light;
-@nav-tabs-justified-active-link-border-color:     @gray-light;
+@nav-tabs-justified-link-border-color:            @bbq-redish;
+@nav-tabs-justified-active-link-border-color:     @bbq-redish;
 
 //== Pills
 @nav-pills-border-radius:                   @border-radius-base;
@@ -448,7 +448,7 @@
 //##
 
 @pagination-color:                     @text-color;
-@pagination-bg:                        @gray-light;
+@pagination-bg:                        @bbq-redish;
 @pagination-border:                    transparent;
 
 @pagination-hover-color:               @text-color;
@@ -460,7 +460,7 @@
 @pagination-active-border:             transparent;
 
 @pagination-disabled-color:            darken(@table-bg-hover, 10%);
-@pagination-disabled-bg:               @gray-light;
+@pagination-disabled-bg:               @bbq-redish;
 @pagination-disabled-border:           transparent;
 
 
@@ -486,7 +486,7 @@
 
 @jumbotron-padding:              30px;
 @jumbotron-color:                inherit;
-@jumbotron-bg:                   @gray-light;
+@jumbotron-bg:                   @bbq-redish;
 @jumbotron-heading-color:        inherit;
 @jumbotron-font-size:            ceil((@font-size-base * 1.5));
 @jumbotron-heading-font-size:    ceil((@font-size-base * 4.5));
@@ -536,7 +536,7 @@
 //##
 
 //** Popover body background color
-@popover-bg:                          @gray-light;
+@popover-bg:                          @bbq-redish;
 //** Popover maximum width
 @popover-max-width:                   276px;
 //** Popover border color
@@ -565,7 +565,7 @@
 //##
 
 //** Default label background color
-@label-default-bg:            @gray-light;
+@label-default-bg:            @bbq-redish;
 //** Primary label background color
 @label-primary-bg:            @brand-primary;
 //** Success label background color
@@ -596,7 +596,7 @@
 @modal-title-line-height:     @line-height-base;
 
 //** Background color of modal content area
-@modal-content-bg:                             @gray-light;
+@modal-content-bg:                             @bbq-redish;
 //** Modal content border color
 @modal-content-border-color:                   transparent;
 //** Modal content border color **for IE8**
@@ -646,7 +646,7 @@
 //##
 
 //** Background color of the whole progress component
-@progress-bg:                 @gray-light;
+@progress-bg:                 @bbq-redish;
 //** Progress bar text color
 @progress-bar-color:          #fff;
 //** Variable for setting rounded corners on progress bar.
@@ -669,7 +669,7 @@
 //##
 
 //** Background color on `.list-group-item`
-@list-group-bg:                 @gray-light;
+@list-group-bg:                 @bbq-redish;
 //** `.list-group-item` border color
 @list-group-border:             transparent;
 //** List group border radius
@@ -687,9 +687,9 @@
 @list-group-active-text-color:  lighten(@list-group-active-bg, 40%);
 
 //** Text color of disabled list items
-@list-group-disabled-color:      @gray-light;
+@list-group-disabled-color:      @bbq-redish;
 //** Background color of disabled list items
-@list-group-disabled-bg:         @gray-lighter;
+@list-group-disabled-bg:         @bbq-redisher;
 //** Text color for content within disabled list items
 @list-group-disabled-text-color: @list-group-disabled-color;
 
@@ -702,7 +702,7 @@
 //
 //##
 
-@panel-bg:                    @gray-light;
+@panel-bg:                    @bbq-redish;
 @panel-body-padding:          15px;
 @panel-heading-padding:       10px 15px;
 @panel-footer-padding:        @panel-heading-padding;
@@ -760,7 +760,7 @@
 //
 //## 
 
-@well-bg:                     @gray-light;
+@well-bg:                     @bbq-redish;
 @well-border:                 transparent;
 
 
@@ -771,7 +771,7 @@
 @badge-color:                 @text-color;
 //** Linked badge text color on hover
 @badge-link-hover-color:      #fff;
-@badge-bg:                    @gray-light;
+@badge-bg:                    @bbq-redish;
 
 //** Badge text color in active nav link
 @badge-active-color:          @link-color;
@@ -790,7 +790,7 @@
 @breadcrumb-padding-vertical:   8px;
 @breadcrumb-padding-horizontal: 15px;
 //** Breadcrumb background color
-@breadcrumb-bg:                 @gray-light;
+@breadcrumb-bg:                 @bbq-redish;
 //** Breadcrumb text color
 @breadcrumb-color:              @text-color;
 //** Text color of current page in the breadcrumb
@@ -848,9 +848,9 @@
 //** Horizontal offset for forms and lists.
 @component-offset-horizontal: 180px;
 //** Text muted color
-@text-muted:                  @gray-light;
+@text-muted:                  @bbq-redish;
 //** Abbreviations and acronyms border color
-@abbr-border-color:           @gray-light;
+@abbr-border-color:           @bbq-redish;
 //** Headings small color
 @headings-small-color:        @text-color;
 //** Blockquote small color
@@ -858,12 +858,12 @@
 //** Blockquote font size
 @blockquote-font-size:        (@font-size-base * 1.25);
 //** Blockquote border color
-@blockquote-border-color:     @gray-light;
+@blockquote-border-color:     @bbq-redish;
 //** Page header border color
-@page-header-border-color:    @gray-lighter;
+@page-header-border-color:    @bbq-redisher;
 //** Width of horizontal description list titles
 @dl-horizontal-offset:        @component-offset-horizontal;
 //** Point at which .dl-horizontal becomes horizontal
 @dl-horizontal-breakpoint:    @grid-float-breakpoint;
 //** Horizontal line color.
-@hr-border:                   lighten(@gray-light, 5%);
+@hr-border:                   lighten(@bbq-redish, 5%);
