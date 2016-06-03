@@ -36,7 +36,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
 
 @mixin btn($class,$bg){
   .btn-#{$class} {
-    background-size: 200%;
+    background-size: 200% 200%;
     background-position: 50%;
 
     &:focus {
@@ -51,7 +51,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
     &:active {
       background-color: darken($bg, 12%);
       @include gradient-radial(darken($bg, 12%) 10%, $bg 11%);
-      background-size: 1000%;
+      background-size: 1000% 1000%;
       @include box-shadow(2px 2px 4px rgba(0,0,0,.4));
     }
   }

@@ -40,7 +40,7 @@
 
 #btn(@class,@bg) {
   .btn-@{class} {
-    background-size: 200%;
+    background-size: 200% 200%;
     background-position: 50%;
 
     &:focus {
@@ -55,7 +55,7 @@
     &:active {
       background-color: darken(@bg, 12%);
       #gradient > .radial(darken(@bg, 12%) 10%, @bg 11%);
-      background-size: 1000%;
+      background-size: 1000% 1000%;
       .box-shadow(2px 2px 4px rgba(0,0,0,.4));
     }
   }
