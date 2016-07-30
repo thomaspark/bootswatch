@@ -1,11 +1,17 @@
 # Changelog
 
+## 3.3.7
+
+* Allows jQuery 3.x in bower.json. [#1048](https://github.com/twbs/bootstrap-sass/issues/1048)
+* Adds the `style` and `sass` fields to package.json. [#1045](https://github.com/twbs/bootstrap-sass/issues/1045)
+* Adds Eyeglass support. [#1007](https://github.com/twbs/bootstrap-sass/pull/1007)
+
 ## 3.3.6
 
-Bumps Sass dependency to 3.3.4+ to avoid compatibility issues with @at-root.
-Bumps node-sass dependency to ~3.4.2 for Node.js v5 compatibility. [#986](https://github.com/twbs/bootstrap-sass/issues/986)
-Fixes breadcrumb content issues on libsass. [#919](https://github.com/twbs/bootstrap-sass/issues/919)
-Fixes a Rails 5 compatibility issue. [#965](https://github.com/twbs/bootstrap-sass/pull/965)
+* Bumps Sass dependency to 3.3.4+ to avoid compatibility issues with @at-root.
+* Bumps node-sass dependency to ~3.4.2 for Node.js v5 compatibility. [#986](https://github.com/twbs/bootstrap-sass/issues/986)
+* Fixes breadcrumb content issues on libsass. [#919](https://github.com/twbs/bootstrap-sass/issues/919)
+* Fixes a Rails 5 compatibility issue. [#965](https://github.com/twbs/bootstrap-sass/pull/965)
 
 Framework version: Bootstrap **v3.3.6**
 

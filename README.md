@@ -79,6 +79,6 @@ Thanks
 
 Copyright and License
 ----
-Copyright 2014 Thomas Park
+Copyright 2014-2016 Thomas Park
 
 Code released under the MIT License.

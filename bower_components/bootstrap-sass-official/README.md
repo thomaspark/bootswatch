@@ -15,6 +15,7 @@ Please see the appropriate guide for your environment of choice:
 * [Ruby on Rails](#a-ruby-on-rails).
 * [Compass](#b-compass-without-rails) not on Rails.
 * [Bower](#c-bower).
+* [npm / Node.js](#d-npm--nodejs).
 
 ### a. Ruby on Rails
 
@@ -157,7 +158,7 @@ This is compatible by default with asset managers such as [wiredep](https://gith
 
 #### Node.js Mincer
 
-If you use [mincer][mincer] with node-sass, import bootstrap like so:
+If you use [mincer][mincer] with node-sass, import Bootstrap like so:
 
 In `application.css.ejs.scss` (NB **.css.ejs.scss**):
 
@@ -175,10 +176,15 @@ In `application.js`:
 
 See also this [example manifest.js](/test/dummy_node_mincer/manifest.js) for mincer.
 
+### d. npm / Node.js
+```console
+$ npm install bootstrap-sass
+```
 
-### Configuration
 
-#### Sass
+## Configuration
+
+### Sass
 
 By default all of Bootstrap is imported.
 
@@ -191,25 +197,39 @@ In the application Sass file, replace `@import 'bootstrap'` with:
 @import 'bootstrap-custom';
 ```
 
-#### Sass: Number Precision
+### Sass: Number Precision
 
 bootstrap-sass [requires](https://github.com/twbs/bootstrap-sass/issues/409) minimum [Sass number precision][sass-precision] of 8 (default is 5).
 
 Precision is set for Rails and Compass automatically.
-When using ruby Sass compiler standalone or with the Bower version you can set it with:
+When using Ruby Sass compiler standalone or with the Bower version you can set it with:
 
 ```ruby
 ::Sass::Script::Value::Number.precision = [8, ::Sass::Script::Value::Number.precision].max
 ```
 
-#### Sass: Autoprefixer
+### Sass: Autoprefixer
 
 Bootstrap requires the use of [Autoprefixer][autoprefixer].
 [Autoprefixer][autoprefixer] adds vendor prefixes to CSS rules using values from [Can I Use](http://caniuse.com/).
 
-#### JavaScript
+To match [upstream Bootstrap's level of browser compatibility](http://getbootstrap.com/getting-started/#support), set Autoprefixer's `browsers` option to:
+```json
+[
+  "Android 2.3",
+  "Android >= 4",
+  "Chrome >= 20",
+  "Firefox >= 24",
+  "Explorer >= 8",
+  "iOS >= 6",
+  "Opera >= 12",
+  "Safari >= 6"
+]
+```
 
-[`assets/javascripts/bootstrap.js`](/assets/javascripts/bootstrap.js) contains all of Bootstrap JavaScript,
+### JavaScript
+
+[`assets/javascripts/bootstrap.js`](/assets/javascripts/bootstrap.js) contains all of Bootstrap's JavaScript,
 concatenated in the [correct order](/assets/javascripts/bootstrap-sprockets.js).
 
 
@@ -231,7 +251,7 @@ You can check dependencies in the [Bootstrap JS documentation][jsdocs].
 //= require bootstrap/dropdown
 ```
 
-#### Fonts
+### Fonts
 
 The fonts are referenced as:
 
@@ -252,19 +272,19 @@ When using bootstrap-sass with Compass, Sprockets, or Mincer, you **must** impor
 
 ### Sass
 
-Import Bootstrap into a Sass file (for example, application.scss) to get all of Bootstrap's styles, mixins and variables!
+Import Bootstrap into a Sass file (for example, `application.scss`) to get all of Bootstrap's styles, mixins and variables!
 
 ```scss
 @import "bootstrap";
 ```
 
-You can also include optional bootstrap theme:
+You can also include optional Bootstrap theme:
 
 ```scss
 @import "bootstrap/theme";
 ```
 
-The full list of bootstrap variables can be found [here](http://getbootstrap.com/customize/#less-variables). You can override these by simply redefining the variable before the `@import` directive, e.g.:
+The full list of Bootstrap variables can be found [here](http://getbootstrap.com/customize/#less-variables). You can override these by simply redefining the variable before the `@import` directive, e.g.:
 
 ```scss
 $navbar-default-bg: #312312;
@@ -272,6 +292,22 @@ $light-orange: #ff8c00;
 $navbar-default-color: $light-orange;
 
 @import "bootstrap";
+```
+
+### Eyeglass
+
+Bootstrap is available as an [Eyeglass](https://github.com/sass-eyeglass/eyeglass) module. After installing Bootstrap via NPM you can import the Bootstrap library via:
+
+```scss
+@import "bootstrap-sass/bootstrap"
+```
+
+or import only the parts of Bootstrap you need:
+
+```scss
+@import "bootstrap-sass/bootstrap/variables";
+@import "bootstrap-sass/bootstrap/mixins";
+@import "bootstrap-sass/bootstrap/carousel";
 ```
 
 ## Version
@@ -287,9 +323,7 @@ The upstream versions vs the Bootstrap for Sass versions are:
 
 | Upstream |    Sass |
 |---------:|--------:|
-|    3.3.6 |   3.3.6 |
-|    3.3.5 |   3.3.5 |
-|    3.3.4 |   3.3.4 |
+|    3.3.4+ |   same |
 |    3.3.2 |   3.3.3 |
 | <= 3.3.1 | 3.3.1.x |
 
@@ -320,7 +354,7 @@ To convert a specific branch or version, pass the branch name or the commit hash
 
 The latest converter script is located [here][converter] and does the following:
 
-* Converts upstream bootstrap LESS files to its matching SCSS file.
+* Converts upstream Bootstrap LESS files to its matching SCSS file.
 * Copies all upstream JavaScript into `assets/javascripts/bootstrap`, a Sprockets manifest at `assets/javascripts/bootstrap-sprockets.js`, and a concatenation at `assets/javascripts/bootstrap.js`.
 * Copies all upstream font files into `assets/fonts/bootstrap`.
 * Sets `Bootstrap::BOOTSTRAP_SHA` in [version.rb][version] to the branch sha.
