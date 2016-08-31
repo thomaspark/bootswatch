@@ -1,0 +1,1398 @@
+// Cyborg 3.3.2
+// Bootswatch
+// -----------------------------------------------------
+
+@import (inline) './fonts.css';
+
+.well :focus {
+  outline-width: 0px;
+  color: @white;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 3px rgba(225, 225, 225, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 3px rgba(225, 225, 225, 0.6);
+}
+
+// Colors =====================================================================
+
+.square {
+  width: 100px;
+  height: 100px;
+  border: 1px solid lighten(@gray-dark, 5%);
+}
+
+.color1 { background-color: @gray-base; }
+.color2 { background-color: @gray-darker; }
+.color3 { background-color: @gray-dark; }
+.color4 { background-color: @gray; }
+.color5 { background-color: @gray-light; }
+.color6 { background-color: @gray-lighter; }
+
+.color7 { background-color: @brand-primary; }
+.color8 { background-color: @brand-success; }
+.color9 { background-color: @brand-info; }
+.color10 { background-color: @brand-warning; }
+.color11 { background-color: @brand-danger; }
+
+
+// Navbar =====================================================================
+
+.navbar {
+  border-color: #444448;
+  border-style: solid;
+  border-width: 0px 0px 1px 0px;
+  border-radius: 0px;
+}
+
+.navbar-default .navbar-nav > li > a {
+  font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-size: 14px;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: #FFFFFF;
+}
+
+a.navbar-brand {
+  -webkit-transition: opacity ease-in-out .2s;
+  -o-transition: opacity ease-in-out .2s;
+  transition: opacity ease-in-out .2s;
+}
+
+a.navbar-brand:hover{
+  opacity: 0.75;
+}
+
+
+// Buttons ====================================================================
+
+.btn {
+  padding: 6px 12px;
+}
+
+// button.btn.btn-primary.btn-block.add-to-cart {
+//  transition: all 0.3s ease 0s;
+//}
+
+//button.btn.btn-primary.btn-block.add-to-cart:hover {
+//  background-color: @body-bg;
+//  color: @brand-primary;
+//  border: 1px solid @brand-primary;
+//}
+
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  list-style: none;
+  font-size: 16px;
+  text-align: left;
+  background-color: lighten(@gray-darker, 5%);
+  border: 1px solid darken(@gray-darker, 5%);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.175);
+  -webkit-background-clip: padding-box;
+          background-clip: padding-box;
+}
+
+.input-group-btn .btn {
+  border: 1px solid @gray-dark;
+}
+
+.btn-group .btn {
+  border: 1px solid @body-bg;
+}
+
+// Navbar User Menu
+
+.navbar  {
+  .dropdown-menu {
+    position: absolute;
+    top: 80%;
+    left: -11px;
+    z-index: 1030;
+    float: left;
+    min-width: 160px;
+    padding: 10px 0px;
+    margin: 5px;
+    list-style: none;
+    font-size: 14px;
+    font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: left;
+    background-color: @gray-base;
+    border: 1px solid @gray-darker;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.175);
+    -webkit-background-clip: padding-box;
+            background-clip: padding-box;
+  }
+
+  .dropdown-menu > li a {
+    color: @gray-lighter;
+  }
+
+  .dropdown-menu > li a:hover {
+    background-color: lighten(@gray-base, 10%);
+    color: @white;
+  }
+
+  .dropdown-menu .divider {
+  background-color: @gray-darker;
+  }
+
+  .user-menu:hover {
+    color: @white !important;
+  }
+
+  .user-menu .caret {
+    margin-left: 10px;
+    font-size: 10px;
+  }
+
+  .cart-link .cart-container:hover {
+  color: @white !important;
+  }
+}
+
+// Typography =================================================================
+
+p {
+  line-height: 26px;
+}
+
+.text-primary,
+.text-primary:hover {
+  color: @brand-primary;
+}
+
+.text-success,
+.text-success:hover {
+  color: @brand-success;
+}
+
+.text-danger,
+.text-danger:hover {
+  color: @brand-danger;
+}
+
+.text-warning,
+.text-warning:hover {
+  color: @brand-warning;
+}
+
+.text-info,
+.text-info:hover {
+  color: @brand-info;
+}
+
+.product-description {
+
+  ul li:first-child{
+    padding-top: 23px;
+  }
+
+  #description {
+    margin-bottom: 23px;
+  }
+
+  a {
+    color: @gray-lighter;
+    border-bottom: 1px dotted @gray;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: @white;
+    border-bottom: 1px dotted @white;
+    text-decoration: none;
+  }
+
+}
+
+// Tables =====================================================================
+
+table,
+.table {
+  color: @gray-lighter;
+
+  a:not(.btn) {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  .dropdown-menu a {
+    text-decoration: none;
+  }
+
+  .text-muted {
+    color: @text-muted;
+  }
+}
+
+.table-responsive > .table {
+  background-color: @table-bg;
+}
+
+.table > thead > tr > th {
+  color: @gray;
+  font-size: 12px;
+  font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  border-bottom: 1px solid @gray-dark;
+}
+
+td.product-name,
+td.order-line-expand {
+  transition: color .25s ease-in-out;
+}
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+.table>thead>tr>th, 
+.table>tbody>tr>th, 
+.table>tfoot>tr>th, 
+.table>thead>tr>td, 
+.table>tbody>tr>td, 
+.table>tfoot>tr>td {
+  padding: 10px;
+}
+
+.tabpanel input:hover{
+  color: @white;
+}
+
+tr.body {
+  transition: all .2s;
+}
+
+.orders-page,
+.order-page {
+  .table > thead > tr > th {
+    border-bottom: 1px solid @gray-dark;
+  }
+  .table {
+    border-bottom: 1px solid @gray-dark2;
+  }
+  .table>thead>tr>th, 
+  .table>tbody>tr>th, 
+  .table>tfoot>tr>th, 
+  .table>thead>tr>td, 
+  .table>tbody>tr>td, 
+  .table>tfoot>tr>td {
+    padding: 10px 15px;
+  }
+}
+
+
+// Forms ======================================================================
+
+.form-control {
+  display: block;
+  width: 100% !important;
+  height: 36px !important;
+  padding: 6px 12px !important;
+  margin-left: 0px !important;
+  font-size: 16px;
+  font-style: normal !important;
+  line-height: 1.42857143;
+  color: @gray-lighter;
+  background-color: lighten(@gray-darker,2%) !important;
+  background-image: none;
+  border: 1px solid @gray-dark;
+  border-radius: 2px;
+  -webkit-transition: border-color ease-in-out .25s, -webkit-box-shadow ease-in-out .25s;
+  -o-transition: border-color ease-in-out .25s, box-shadow ease-in-out .25s;
+  transition: border-color ease-in-out .25s, box-shadow ease-in-out .25s;
+  -webkit-appearance: none;
+}
+
+.form-control:focus {
+  background-color: @gray-darker !important;
+  border-color: @gray-lighter;
+  color: @white;
+  outline: 0;
+  border-radius: 2px !important;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 3px rgba(225, 225, 225, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 3px rgba(225, 225, 225, 0.6);
+  -webkit-appearance: none;
+}
+
+.control-label {
+  display: block;
+  text-align: left;
+  margin-bottom: 0;
+  padding-top: 9px;
+}
+
+.control-label:first-letter {
+  text-transform: capitalize;
+}
+
+.well label:first-letter {
+  text-transform: capitalize !important;
+}
+
+.form-control[disabled],
+.form-control[readonly],
+fieldset[disabled] .form-control {
+  cursor: not-allowed;
+  background-color: darken(#444448, 10%);
+  opacity: .25;
+}
+
+  .form-custom .control-label {
+    display: block;
+    text-align: right;
+    margin-bottom: 0;
+    padding-top: 9px;
+  }
+
+  .form-custom .control-label:first-letter {
+  text-transform: capitalize;
+  }
+
+  input .form-custom{
+    display: block;
+  }
+
+.has-warning {
+  .help-block,
+  .control-label,
+  .form-control-feedback {
+    color: @brand-warning;
+  }
+
+  .form-control,
+  .form-control:focus,
+  .input-group-addon {
+    border-color: @brand-warning;
+  }
+}
+
+.has-error {
+  .help-block,
+  .control-label,
+  .form-control-feedback {
+    color: @brand-danger;
+  }
+
+  .form-control,
+  .form-control:focus,
+  .input-group-addon {
+    border-color: @brand-danger;
+  }
+}
+
+.has-success {
+  .help-block,
+  .control-label,
+  .form-control-feedback {
+    color: @brand-success;
+  }
+
+  .form-control,
+  .form-control:focus,
+  .input-group-addon {
+    border-color: @brand-success;
+  }
+}
+
+.help-block {
+  color: #878690;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.input-group-addon {
+  background-color: @btn-default-bg;
+}
+
+input::-webkit-input-placeholder {
+  font-style: italic;
+  color: @gray;
+}
+
+input::-moz-placeholder {
+  font-style: italic;
+  color: @gray;
+}
+
+input:-moz-placeholder {   /* Older versions of Firefox */
+  font-style: italic;
+  color: @gray;
+}
+
+input:-ms-input-placeholder {
+  font-style: italic;
+  color: @gray;
+}
+
+label {
+  margin-bottom: 0px;
+  font-weight: normal;
+  font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: @white;
+}
+
+legend {
+  font-size: 12px;
+  font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  border: 0px;
+}
+
+// Firefox and Safari fixes
+
+select {
+  // "!important" to override bootstrap's "!important" :(
+  background: url("/assets/sort.png") no-repeat right center !important;
+  -moz-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: '';
+  -webkit-appearance: none;
+}
+
+// Checkbox =========================================================
+
+input[type=checkbox] { display:none; } /* hide default checkbox */
+
+.custom-checkbox {
+
+  label {
+    padding-left: 0px;
+    vertical-align: middle;
+  }
+
+  input[type=checkbox] + label:before {
+    font-family: 'FontAwesome';
+    display: inline-block;
+    content: "\f096";
+    font-size: 16px;
+    vertical-align: middle;
+    padding-bottom: 5px;
+    margin-left: 0px;
+    margin-right: 10px;
+  }
+
+  input[type=checkbox]:checked + label:before {
+    content: "\f14a";
+    font-size: 16px;
+    margin-right: 9px;
+  }
+}
+
+// JSON Editor Fields =========================================================
+
+textarea.form-control {
+  height: 108px !important;
+}
+
+textarea.form-control:focus {
+  background-color: @body-bg !important;
+}
+
+span.select2.select2-container.select2-container--default {
+  width: 100% !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__placeholder {
+  color: @gray;
+}
+
+.container-startDateCustomDuration:after,
+.container-customEndDate:after {
+  content: "Format: DD MMM YYYY";
+  color: @gray-light;
+  font-size: 12px;
+  font-style: italic;
+  font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding-bottom: 15px;
+}
+
+.container-startDateCustomDuration .form-group,
+.container-customEndDate .form-group {
+  margin-bottom: 0px !important;
+}
+
+select[multiple],
+select[size] {
+  height: auto !important;
+}
+
+.container-customize label:after {
+  content: "If you have additional specifications, please enter them here. Our team of experts will tailor the content to meet your needs.";
+  color: @gray-light;
+  display: block;
+  font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 14px;
+  padding-bottom: 5px;
+}
+
+.container-duration > label:after {
+  content: "Provided with latest available data unless custom date range is specified";
+  color: @gray-light;
+  display: block;
+  font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 14px;
+  padding-bottom: 0px;
+} 
+
+.container-customEndDate label.control-label {
+  display: none;
+}
+
+// Comps List
+
+.container-comps {
+
+  table .table .table-bordered {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .table td{
+    width: 30%;
+  }
+
+  .table td:first-child {
+    width: 70%;
+  }
+
+  @media screen and (max-width: 1200px) {
+    .table td:first-child {
+    width: 50%;
+    }
+  }
+
+}
+
+[data-schematype="array"] thead {
+  display: none;
+}
+
+[data-schematype="array"] .table {
+  border: none !important;
+}
+
+[data-schematype="array"] table.table.table-bordered {
+  margin-bottom: 5px;
+}
+
+[data-schematype="array"] .table-bordered > thead > tr > th,
+[data-schematype="array"] .table-bordered > tbody > tr > th,
+[data-schematype="array"] .table-bordered > tfoot > tr > th,
+[data-schematype="array"] .table-bordered > thead > tr > td,
+[data-schematype="array"] .table-bordered > tbody > tr > td,
+[data-schematype="array"] .table-bordered > tfoot > tr > td {
+  border: none;
+}
+
+[data-schematype="array"] .table > thead > tr > th,
+[data-schematype="array"] .table > tbody > tr > th,
+[data-schematype="array"] .table > tfoot > tr > th,
+[data-schematype="array"] .table > thead > tr > td,
+[data-schematype="array"] .table > tbody > tr > td,
+[data-schematype="array"] .table > tfoot > tr > td {
+  padding: 5px 10px 0px 0px;
+  border-top: none;
+}
+
+[data-schematype="array"] [title="Delete Last Comp"],
+[data-schematype="array"] [title="Delete Last Group"],
+[data-schematype="array"] [title="Delete All"] {
+  display: none;
+}
+
+[data-schematype="array"] h3 {
+  font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  margin-bottom: 0px;
+}
+.col-md-12.container-comps {
+  margin: 20px 0px;
+}
+
+// Comps groups
+
+.container-compsGroups {
+
+  [data-schemapath="root.entities.compsGroups.0"],
+  [data-schemapath="root.entities.compsGroups.1"],
+  [data-schemapath="root.entities.compsGroups.2"],
+  [data-schemapath="root.entities.compsGroups.3"],
+  [data-schemapath="root.entities.compsGroups.4"],
+  [data-schemapath="root.entities.compsGroups.5"], {
+    border-bottom: 0px solid @gray-dark;
+    border-top: 1px solid @gray-dark;
+
+    .btn-group {
+      button.btn.btn-default.json-editor-btn-delete.delete,
+      button.btn.btn-default.json-editor-btn-moveup.moveup,
+      button.btn.btn-default.json-editor-btn-movedown.movedown {
+        font-size: 10px;
+        background-color: #222228;
+        height: 36px;
+        width: 10px;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  [data-schematype="array"] table.table.table-bordered {
+    margin-top: 20px;
+  }
+
+  button.btn.btn-default.json-editor-btn-add {
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+
+  table .table .table-bordered {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .table td:first-child {
+    width: 70%;
+  }
+
+  .table td{
+    width: 30%;
+  }
+
+  .table td:nth-child(3) {
+    width: 20%;
+  }
+
+  @media screen and (max-width: 1200px) {
+    .table td:first-child {
+    width: 50%;
+    }
+  }
+
+  [data-schematype="array"] {
+    //border: 1px solid @gray-dark;
+    //padding: 15px;
+    //margin: 15px;
+    //background-color: lighten(@gray-darker,2%);
+  }
+}
+
+
+// Time Frame
+
+[data-schemaid="timeframeDuration"] .row,
+[data-schemaid="timeframeEndDate"] .row {
+  width: 50%;
+  padding: 10px 10px 10px 0px;
+}
+
+[data-schemaid="timeframeDuration"] .row:first-child,
+[data-schemaid="timeframeEndDate"] .row:first-child {
+  float: left;
+}
+
+[data-schemaid="timeframeDuration"] .row:nth-child(2),
+[data-schemaid="timeframeEndDate"] .row:nth-child(2) {
+  float: left;
+}
+
+[data-schemaid="timeframeDuration"] > h3 {
+  display: none;
+}
+
+[data-schemaid="timeframeEndDate"] > h3 {
+  display: none;
+}
+
+[data-schemaid="dimensions"] > h3 {
+  display: none;
+}
+
+[data-schemaid="dimensions"] .row {
+  padding: 10px 10px 10px 0px;
+}
+
+[data-schemaid="dimensions"] .row:first-child {
+  width: 40%;
+  float: left;
+}
+
+[data-schemaid="dimensions"] .row:nth-child(2) {
+  width: 40%;
+  float: left;
+}
+
+[data-schemaid="dimensions"] .row:nth-child(3) {
+  width: 120px;
+  float: left;
+  margin-top: 20px;
+  height: 36px !important;
+}
+
+
+// Button groups
+
+.btn-group {
+
+  .json-editor-btn-add {
+
+    .fa-plus:before {
+      font-size: 14px;
+      margin-right: 5px;
+    }
+
+  }
+
+}
+
+
+// Navs =======================================================================
+
+
+.breadcrumb {
+
+  padding-left: 0px;
+  font-size: 14px;
+
+  a {
+    color: @gray-lighter;
+    transition: all .2s;
+  }
+  a:hover {
+    color: @white;
+    text-decoration: none;
+  }
+}
+
+.nav-tabs,
+.nav-pills {
+  a {
+    color: @white;
+    transition: all .2s;
+  }
+
+  a:hover {
+    color: @gray-lighter;
+  }
+}
+
+.nav-tabs {
+  & > li {
+    & > a {
+      color: @gray-light;
+      transition: all .2s;
+    }
+    & > a:hover {
+      color: @white;
+      background-color: @body-bg;
+    }
+
+    &.active {
+      & > a {
+        color: @white;
+        border-color: transparent;
+        border-bottom-color: @brand-primary;
+        transition: all .2s;
+
+        &:hover,
+        &:focus {
+          background-color: @body-bg;
+          border-color: transparent;
+          border-bottom-color: @brand-primary;
+        }
+      }
+    }
+  }
+}
+
+.nav-tabs {
+  border-bottom: 1px solid @gray-dark2;
+}
+
+.pager {
+
+  a {
+    color: @white;
+  }
+
+  a:hover {
+    color: @gray-lighter;
+  }
+}
+
+
+
+// Indicators =================================================================
+
+
+.alert {
+  border-radius: 2px;
+
+  .alert-link,
+  a {
+    text-decoration: underline;
+  }
+
+  .close {
+    text-decoration: none;
+    text-shadow: 0 1px 0 #000;
+    opacity: .5;
+    filter: alpha(opacity=50);
+  }
+}
+
+.close {
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.4;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    opacity: 1;
+  }
+}
+
+.label {
+  display: inline;
+  padding: .25em 1em;
+  font-size: 75%;
+  font-weight: normal;
+  line-height: 1;
+  color: @white;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 10em;
+}
+
+// Progress bars ==============================================================
+
+.progress {
+  height: 10px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.progress .progress-bar {
+  font-size: 10px;
+  line-height: 10px;
+}
+
+// Containers =================================================================
+
+a.thumbnail:hover,
+a.thumbnail:focus,
+a.thumbnail.active {
+  border-color: @gray-light;
+  background-color: @body-bg;
+}
+
+a.list-group-item {
+
+  &.active,
+  &.active:hover,
+  &.active:focus {
+    border-color: @list-group-border;
+  }
+
+  &-success {
+    &.active {
+      background-color: @state-success-bg;
+    }
+
+    &.active:hover,
+    &.active:focus {
+      background-color: darken(@state-success-bg, 5%);
+    }
+  }
+
+  &-warning {
+    &.active {
+      background-color: @state-warning-bg;
+    }
+
+    &.active:hover,
+    &.active:focus {
+      background-color: darken(@state-warning-bg, 5%);
+    }
+  }
+
+  &-danger {
+    &.active {
+      background-color: @state-danger-bg;
+    }
+
+    &.active:hover,
+    &.active:focus {
+      background-color: darken(@state-danger-bg, 5%);
+    }
+  }
+}
+
+.jumbotron {
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #fff;
+  }
+}
+
+.badge {
+  padding: 3px 5px;
+}
+
+// Dialogs =================================================================
+
+.popover {
+  border-radius: 2px;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  background-color: darken(@gray-darker,5%);
+}
+
+// Wells =====================================================================
+
+.well {
+  min-height: 20px;
+  padding: 0px;
+  margin-bottom: 0px;
+  background-color: #222228;
+  border: 0px solid #222228;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0);
+  box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0);
+}
+.well blockquote {
+  border-color: @body-bg;
+  border-color: rgba(0, 0, 0, 0);
+}
+.well-lg {
+  padding: 0px;
+  border-radius: 0px;
+}
+.well-sm {
+  padding: 0px;
+  border-radius: 0px;
+}
+
+.well h3 > span {
+  color: @gray-light;
+  font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 0px;
+  margin-bottom: 15px;
+}
+
+// Custom =====================================================================
+
+.small-label {
+  font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  color: @gray-light;
+  text-transform: uppercase;
+}
+
+a.small-label:hover,
+a.small-label:focus {
+  text-decoration: underline;
+}
+
+a.small-label.active {
+  color: @white;
+}
+
+// Super Fun Tag Filter Panel
+
+.tag-filter {
+  .panel-heading {
+    background-color: lighten(@gray-darker,2%);
+  }
+
+  .panel-title {
+    font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .list-group-item,
+  .list-group-item:first-child {
+    border-color: fadeout(@gray-dark, 50%);
+    color: @gray-light;
+  }
+
+  .list-group-item:hover {
+    color: @white;
+    text-decoration: none;
+  }
+}
+
+// General Accordion Stuff
+
+.accordion {
+  // inside an accordion, move padding from heading to toggle link
+  .panel-heading {
+    padding: 0;
+  }
+  .accordion-toggle {
+    color: @white;
+    display: block;
+    padding: 10px 15px; // instead of padding in the panel-heading
+    text-decoration: none;
+    transition: color .25s ease-in-out;
+
+    &:hover, &:focus {
+      color: @white;
+      text-decoration: none;
+    }
+  }
+
+  .accordion-toggle.collapsed {
+    color: @gray-light;
+    text-decoration: none;
+  }
+
+  .panel-heading .accordion-toggle:after {
+    /* symbol for "open" panels */
+    font-family: 'FontAwesome';
+    content: "\f0d7";
+    float: right;
+    color: @white;
+    padding-top: 2px;
+  }
+
+  .panel-heading .accordion-toggle.collapsed:after {
+    /* symbol for "collapsed" panels */
+    content: "\f0da";
+    color: @gray-light;
+  }
+
+  .tag-name {
+    font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+
+  .tag-icon {
+    font-size: 1em;
+    line-height: 1em;
+  }
+}
+
+
+// Tag Label
+
+.label-tag {
+  background-color: @gray-darker;
+  border: 1px solid @gray-dark;
+  color: @gray-light;
+  font-size: 90%;
+  font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  -webkit-transition: border 0.25s ease-in-out;
+  -o-transition: border 0.25s ease-in-out;
+  transition: border 0.25s ease-in-out;
+}
+
+// Breadcrumb fix
+
+.breadcrumb .breadcrumb-tag-link-name {
+  color: @gray-light;
+  font-size: 14px;
+  -webkit-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.breadcrumb li:hover a span,
+.breadcrumb li:focus a span {
+  color: @white;
+}
+
+.label-tag:after {
+  font-family: 'FontAwesome';
+  content: "\f057";
+  color: @gray-dark;
+  margin-left: 12px;
+  margin-right: -8px;
+  vertical-align: -1px;
+  -webkit-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.label-tag:hover,
+.label-tag:focus {
+  color: @white;
+  text-decoration: none;
+}
+
+.label-tag a{
+  &:focus, &:hover {
+  text-decoration: none;
+  }
+}
+
+.label-tag:hover:after {
+  color: @white;
+}
+
+.label-tag:hover:after {
+  color: @white;
+}
+
+a.no-underline {
+  text-decoration: none;
+}
+
+.clear-all {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+// Product Detail
+
+.product-description h6 {
+  color: @gray-light;
+  font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+// Select2
+
+  .select2-dropdown {
+    background-color: lighten(@gray-darker,2%) !important;
+    border: 1px solid @gray-dark !important;
+    border-radius: 2px !important;
+    color: @gray-lighter;
+  }
+
+  .select2-container--default .select2-search--dropdown .select2-search__field {
+    border: 1px solid @gray-dark !important;
+    background-color: @white !important;
+    color: @gray-darker !important;
+  }
+
+  .select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: darken(@gray-darker, 5%) !important;
+    color: @white !important;
+  }
+
+  .select2-container--default .select2-results__option[aria-selected=true] {
+    background-color: lighten(@gray-darker,2%) !important;
+    color: fade(@white, 25%) !important;
+  }
+
+  .select2-container--default .select2-selection--single .select2-selection__rendered {
+    background-color: lighten(@gray-darker,2%) !important;
+    border: 1px solid @gray-dark !important;
+    border-radius: 2px !important;
+    color: @gray-lighter !important;
+    line-height: 36px !important;
+  }
+
+  .select2-container--default .select2-selection--single {
+    background-color: lighten(@gray-darker,2%) !important;
+    border: 0px solid @gray-dark !important;
+    border-radius: 2px !important;
+  }
+
+  .select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 36px !important;
+    right: 6px !important;
+  }
+
+  .select2-container .select2-selection--single {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    height: 36px !important;
+  }
+
+  .select2-container .select2-selection--single .select2-selection__rendered {
+    height: 36px;
+  }
+
+// Checkout Panels =====================================================================
+
+.panel {
+  background-color: lighten(@gray-darker,2%);
+}
+
+tr.order-line-details.expanded {
+  background-color: lighten(@gray-darker,2%);
+}
+
+.panel-default .product-name a {
+  text-decoration: none;
+  color: @gray-light;
+}
+
+.panel-default .product-name a:hover {
+  text-decoration: none;
+  color: @white;
+}
+
+.expand-order-line .fa {
+  color: @gray;
+}
+
+.expand-order-line .fa:hover {
+  color: @white;
+}
+
+// Checkout area
+
+.container-order-info {
+
+  .row-order-summary .panel-default {
+    border: none;
+    background-color: @body-bg;
+  }
+
+  .table>tbody>tr>td,
+  .table>tfoot>tr>td {
+    border-top: 0px;
+  }
+
+  .row-order-form p {
+    font-size: 14px;
+    color: @gray-light;
+    font-family: "Gibson", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-bottom: 0px;
+  }
+
+}
+
+// Change Password  =====================================================================
+
+.change-password {
+
+  .form-control {
+    width: 300px !important;
+  }
+
+  button.btn.btn-primary.btn.btn-block {
+    width: inherit;
+  }
+
+}
+
+// Lightbox =====================================================================
+
+ #imagelightbox-close {
+  background-color: rgba(225, 225, 225, 0);
+  background-color: none;
+}
+
+#imagelightbox-close:hover {
+  background-color: rgba(225, 225, 225, 0);
+  background-color: none;
+}
+
+#imagelightbox-caption {
+  color: #f1f1f1;
+  background-color: #000000;
+}
+
+#imagelightbox-nav {
+  background-color: rgba(225, 225, 225, 0);
+  background-color: none;
+  bottom: 1em; /* 16 */
+  padding: 0.313em; /* 5 */
+  border-radius: 50px;
+}
+
+#imagelightbox-nav a {
+  width: 0.938em; /* 15 */
+  height: 0.938em;/* 15 */
+  border: 2px solid #444448;
+  display: inline-block;
+  margin: 0 0.313em; /* 5 */
+  border-radius: 50%;
+  background-color: none;
+}
+
+#imagelightbox-nav .active {
+  background-color: rgba(225, 225, 225, 0.1);
+  border: 2px solid #00b7f0;
+}
+
+.imagelightbox-arrow {
+  border: none;
+  background-color: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.imagelightbox-arrow:hover,
+.imagelightbox-arrow:focus {
+  background-color: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+#imagelightbox-caption {
+  display: none;
+}
+
+#imagelightbox {
+  -webkit-box-shadow: 0 0 0.125em rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 0.125em rgba(0, 0, 0, 0.5);
+}
+
+// Product image
+
+.product-page .product-page-left {
+
+  .carousel img {
+    opacity: 1;
+  }
+
+ .carousel img:hover {
+    opacity: .9;
+    transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -webkit-transition: opacity .5s ease-in-out;
+  }
+}
+
+// Password reset
+
+.login-block {
+
+  i.fa.fa-lock.password-reset,
+  i.fa.fa-unlock-alt.password-reset {
+    font-size: 50px;
+    width: 50px;
+    display: block;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
