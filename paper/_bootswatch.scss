@@ -36,9 +36,6 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
 
 @mixin btn($class,$bg){
   .btn-#{$class} {
-    background-size: 200% 200%;
-    background-position: 50%;
-
     &:focus {
       background-color: $bg;
     }
@@ -49,9 +46,6 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
     }
 
     &:active {
-      background-color: darken($bg, 12%);
-      @include gradient-radial(darken($bg, 12%) 10%, $bg 11%);
-      background-size: 1000% 1000%;
       @include box-shadow(2px 2px 4px rgba(0,0,0,.4));
     }
   }
@@ -70,6 +64,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
   border: none;
   @include box-shadow(1px 1px 4px rgba(0,0,0,.4));
   @include transition(all 0.4s);
+  @include ripple();
 
   &-link {
     border-radius: $btn-border-radius-base;
@@ -617,3 +612,30 @@ input[type="checkbox"],
   }
 }
 
+// Effects =================================================================
+
+.ripple {
+  position: relative;
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    @include gradient-radial(#000 10%, transparent 10.01%);
+    background-size: 1000% 1000%;
+    background-position: 50%;
+    opacity: 0;
+    pointer-events: none;
+    transition: background .5s, opacity 1s;
+  }
+
+  &:active:after {
+    background-size: 0% 0%;
+    opacity: .2;
+    transition: 0s;
+  }
+}
