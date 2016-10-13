@@ -7464,35 +7464,3 @@ input[type="checkbox"]:disabled:checked:after,
 .carousel-caption h6 {
   color: inherit;
 }
-.ripple {
-  position: relative;
-}
-.ripple:after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-image: -webkit-radial-gradient(circle, #000000 10%, transparent 10.01%);
-  background-image: -o-radial-gradient(circle, #000000 10%, transparent 10.01%);
-  background-image: radial-gradient(circle, #000000 10%, transparent 10.01%);
-  background-repeat: no-repeat;
-  -webkit-background-size: 1000% 1000%;
-          background-size: 1000% 1000%;
-  background-position: 50%;
-  opacity: 0;
-  pointer-events: none;
-  -webkit-transition: background .5s, opacity 1s;
-       -o-transition: background .5s, opacity 1s;
-          transition: background .5s, opacity 1s;
-}
-.ripple:active:after {
-  -webkit-background-size: 0% 0%;
-          background-size: 0% 0%;
-  opacity: .2;
-  -webkit-transition: 0s;
-       -o-transition: 0s;
-          transition: 0s;
-}
