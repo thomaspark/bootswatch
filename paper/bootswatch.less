@@ -109,14 +109,30 @@
       color: @btn-default-color;
       text-decoration: none;
     }
+
+    .disabled, // Although btn-link is intended for buttons, which want to look like link, I include here a.disable for the sake of consistency
+    &[disabled],
+    fieldset[disabled] & {
+      &:hover,
+      &:active:hover {
+        background-color: #fff;
+        color: @btn-default-color;
+      }
+    }
   }
 
   &-default {
-
-    &.disabled {
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
       background-color: rgba(0, 0, 0, 0.1);
       color: rgba(0, 0, 0, 0.4);
       opacity: 1;
+
+      &:hover,
+      &:focus {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
     }
   }
 }

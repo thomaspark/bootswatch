@@ -6915,10 +6915,29 @@ button.close {
   color: #444444;
   text-decoration: none;
 }
-.btn-default.disabled {
+.btn-link .disabled:hover,
+.btn-link[disabled]:hover,
+fieldset[disabled] .btn-link:hover,
+.btn-link .disabled:active:hover,
+.btn-link[disabled]:active:hover,
+fieldset[disabled] .btn-link:active:hover {
+  background-color: #fff;
+  color: #444444;
+}
+.btn-default.disabled,
+.btn-default[disabled],
+fieldset[disabled] .btn-default {
   background-color: rgba(0, 0, 0, 0.1);
   color: rgba(0, 0, 0, 0.4);
   opacity: 1;
+}
+.btn-default.disabled:hover,
+.btn-default[disabled]:hover,
+fieldset[disabled] .btn-default:hover,
+.btn-default.disabled:focus,
+.btn-default[disabled]:focus,
+fieldset[disabled] .btn-default:focus {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 .btn-group .btn + .btn,
 .btn-group .btn + .btn-group,
