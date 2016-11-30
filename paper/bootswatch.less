@@ -11,7 +11,7 @@
 
 // Effects =================================================================
 
-.ripple() {
+.ripple(@color) {
   position: relative;
 
   &:after {
@@ -22,7 +22,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    #gradient > .radial(#000 10%, transparent 10.01%);
+    #gradient > .radial(@color 10%, transparent 10.01%);
     background-size: 1000% 1000%;
     background-position: 50%;
     opacity: 0;
@@ -66,7 +66,7 @@
 
 // Buttons ====================================================================
 
-#btn(@class,@bg) {
+#btn(@class,@bg,@color) {
   .btn-@{class} {
     &:focus {
       background-color: @bg;
@@ -80,23 +80,24 @@
     &:active {
       .box-shadow(2px 2px 4px rgba(0,0,0,.4));
     }
+
+    .ripple(@color);
   }
 }
 
-#btn(default,@btn-default-bg);
-#btn(primary,@btn-primary-bg);
-#btn(success,@btn-success-bg);
-#btn(info,@btn-info-bg);
-#btn(warning,@btn-warning-bg);
-#btn(danger,@btn-danger-bg);
-#btn(link,#fff);
+#btn(default,@btn-default-bg,@btn-default-color);
+#btn(primary,@btn-primary-bg,@btn-primary-color);
+#btn(success,@btn-success-bg,@btn-success-color);
+#btn(info,@btn-info-bg,@btn-info-color);
+#btn(warning,@btn-warning-bg,@btn-warning-color);
+#btn(danger,@btn-danger-bg,@btn-danger-color);
+#btn(link,#fff,@btn-default-color);
 
 .btn {
   text-transform: uppercase;
   border: none;
   .box-shadow(1px 1px 4px rgba(0,0,0,.4));
   .transition(all 0.4s);
-  .ripple();
 
   &-link {
     border-radius: @btn-border-radius-base;

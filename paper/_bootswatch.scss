@@ -7,7 +7,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
 
 // Effects =================================================================
 
-@mixin ripple(){
+@mixin ripple($color){
   position: relative;
 
   &:after {
@@ -18,7 +18,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
     height: 100%;
     top: 0;
     left: 0;
-    @include gradient-radial(#000 10%, transparent 10.01%);
+    @include gradient-radial($color 10%, transparent 10.01%);
     background-size: 1000% 1000%;
     background-position: 50%;
     opacity: 0;
@@ -62,7 +62,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
 
 // Buttons ====================================================================
 
-@mixin btn($class,$bg){
+@mixin btn($class,$bg,$color){
   .btn-#{$class} {
     &:focus {
       background-color: $bg;
@@ -76,23 +76,24 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
     &:active {
       @include box-shadow(2px 2px 4px rgba(0,0,0,.4));
     }
+
+    @include ripple($color);
   }
 }
 
-@include btn(default,$btn-default-bg);
-@include btn(primary,$btn-primary-bg);
-@include btn(success,$btn-success-bg);
-@include btn(info,$btn-info-bg);
-@include btn(warning,$btn-warning-bg);
-@include btn(danger,$btn-danger-bg);
-@include btn(link,#fff);
+@include btn(default,$btn-default-bg,$btn-default-color);
+@include btn(primary,$btn-primary-bg,$btn-primary-color);
+@include btn(success,$btn-success-bg,$btn-success-color);
+@include btn(info,$btn-info-bg,$btn-info-color);
+@include btn(warning,$btn-warning-bg,$btn-warning-color);
+@include btn(danger,$btn-danger-bg,$btn-danger-color);
+@include btn(link,#fff,$btn-default-color);
 
 .btn {
   text-transform: uppercase;
   border: none;
   @include box-shadow(1px 1px 4px rgba(0,0,0,.4));
   @include transition(all 0.4s);
-  @include ripple();
 
   &-link {
     border-radius: $btn-border-radius-base;

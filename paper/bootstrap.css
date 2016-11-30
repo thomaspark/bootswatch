@@ -6786,6 +6786,9 @@ button.close {
   -webkit-box-shadow: inset 0 -2px 0 #ffffff;
   box-shadow: inset 0 -2px 0 #ffffff;
 }
+.btn-default {
+  position: relative;
+}
 .btn-default:focus {
   background-color: #ffffff;
 }
@@ -6796,6 +6799,38 @@ button.close {
 .btn-default:active {
   -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+.btn-default:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: -webkit-radial-gradient(circle, #444444 10%, transparent 10.01%);
+  background-image: -o-radial-gradient(circle, #444444 10%, transparent 10.01%);
+  background-image: radial-gradient(circle, #444444 10%, transparent 10.01%);
+  background-repeat: no-repeat;
+  -webkit-background-size: 1000% 1000%;
+          background-size: 1000% 1000%;
+  background-position: 50%;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: background .5s, opacity 1s;
+       -o-transition: background .5s, opacity 1s;
+          transition: background .5s, opacity 1s;
+}
+.btn-default:active:after {
+  -webkit-background-size: 0% 0%;
+          background-size: 0% 0%;
+  opacity: .2;
+  -webkit-transition: 0s;
+       -o-transition: 0s;
+          transition: 0s;
+}
+.btn-primary {
+  position: relative;
 }
 .btn-primary:focus {
   background-color: #2196f3;
@@ -6808,6 +6843,38 @@ button.close {
   -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
+.btn-primary:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: -webkit-radial-gradient(circle, #ffffff 10%, transparent 10.01%);
+  background-image: -o-radial-gradient(circle, #ffffff 10%, transparent 10.01%);
+  background-image: radial-gradient(circle, #ffffff 10%, transparent 10.01%);
+  background-repeat: no-repeat;
+  -webkit-background-size: 1000% 1000%;
+          background-size: 1000% 1000%;
+  background-position: 50%;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: background .5s, opacity 1s;
+       -o-transition: background .5s, opacity 1s;
+          transition: background .5s, opacity 1s;
+}
+.btn-primary:active:after {
+  -webkit-background-size: 0% 0%;
+          background-size: 0% 0%;
+  opacity: .2;
+  -webkit-transition: 0s;
+       -o-transition: 0s;
+          transition: 0s;
+}
+.btn-success {
+  position: relative;
+}
 .btn-success:focus {
   background-color: #4caf50;
 }
@@ -6818,6 +6885,38 @@ button.close {
 .btn-success:active {
   -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+.btn-success:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: -webkit-radial-gradient(circle, #ffffff 10%, transparent 10.01%);
+  background-image: -o-radial-gradient(circle, #ffffff 10%, transparent 10.01%);
+  background-image: radial-gradient(circle, #ffffff 10%, transparent 10.01%);
+  background-repeat: no-repeat;
+  -webkit-background-size: 1000% 1000%;
+          background-size: 1000% 1000%;
+  background-position: 50%;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: background .5s, opacity 1s;
+       -o-transition: background .5s, opacity 1s;
+          transition: background .5s, opacity 1s;
+}
+.btn-success:active:after {
+  -webkit-background-size: 0% 0%;
+          background-size: 0% 0%;
+  opacity: .2;
+  -webkit-transition: 0s;
+       -o-transition: 0s;
+          transition: 0s;
+}
+.btn-info {
+  position: relative;
 }
 .btn-info:focus {
   background-color: #9c27b0;
@@ -6830,6 +6929,38 @@ button.close {
   -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
+.btn-info:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: -webkit-radial-gradient(circle, #ffffff 10%, transparent 10.01%);
+  background-image: -o-radial-gradient(circle, #ffffff 10%, transparent 10.01%);
+  background-image: radial-gradient(circle, #ffffff 10%, transparent 10.01%);
+  background-repeat: no-repeat;
+  -webkit-background-size: 1000% 1000%;
+          background-size: 1000% 1000%;
+  background-position: 50%;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: background .5s, opacity 1s;
+       -o-transition: background .5s, opacity 1s;
+          transition: background .5s, opacity 1s;
+}
+.btn-info:active:after {
+  -webkit-background-size: 0% 0%;
+          background-size: 0% 0%;
+  opacity: .2;
+  -webkit-transition: 0s;
+       -o-transition: 0s;
+          transition: 0s;
+}
+.btn-warning {
+  position: relative;
+}
 .btn-warning:focus {
   background-color: #ff9800;
 }
@@ -6840,6 +6971,38 @@ button.close {
 .btn-warning:active {
   -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+.btn-warning:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: -webkit-radial-gradient(circle, #ffffff 10%, transparent 10.01%);
+  background-image: -o-radial-gradient(circle, #ffffff 10%, transparent 10.01%);
+  background-image: radial-gradient(circle, #ffffff 10%, transparent 10.01%);
+  background-repeat: no-repeat;
+  -webkit-background-size: 1000% 1000%;
+          background-size: 1000% 1000%;
+  background-position: 50%;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: background .5s, opacity 1s;
+       -o-transition: background .5s, opacity 1s;
+          transition: background .5s, opacity 1s;
+}
+.btn-warning:active:after {
+  -webkit-background-size: 0% 0%;
+          background-size: 0% 0%;
+  opacity: .2;
+  -webkit-transition: 0s;
+       -o-transition: 0s;
+          transition: 0s;
+}
+.btn-danger {
+  position: relative;
 }
 .btn-danger:focus {
   background-color: #e51c23;
@@ -6852,6 +7015,38 @@ button.close {
   -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
+.btn-danger:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: -webkit-radial-gradient(circle, #ffffff 10%, transparent 10.01%);
+  background-image: -o-radial-gradient(circle, #ffffff 10%, transparent 10.01%);
+  background-image: radial-gradient(circle, #ffffff 10%, transparent 10.01%);
+  background-repeat: no-repeat;
+  -webkit-background-size: 1000% 1000%;
+          background-size: 1000% 1000%;
+  background-position: 50%;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: background .5s, opacity 1s;
+       -o-transition: background .5s, opacity 1s;
+          transition: background .5s, opacity 1s;
+}
+.btn-danger:active:after {
+  -webkit-background-size: 0% 0%;
+          background-size: 0% 0%;
+  opacity: .2;
+  -webkit-transition: 0s;
+       -o-transition: 0s;
+          transition: 0s;
+}
+.btn-link {
+  position: relative;
+}
 .btn-link:focus {
   background-color: #ffffff;
 }
@@ -6863,17 +7058,7 @@ button.close {
   -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
-.btn {
-  text-transform: uppercase;
-  border: none;
-  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  transition: all 0.4s;
-  position: relative;
-}
-.btn:after {
+.btn-link:after {
   content: "";
   display: block;
   position: absolute;
@@ -6881,9 +7066,9 @@ button.close {
   height: 100%;
   top: 0;
   left: 0;
-  background-image: -webkit-radial-gradient(circle, #000000 10%, transparent 10.01%);
-  background-image: -o-radial-gradient(circle, #000000 10%, transparent 10.01%);
-  background-image: radial-gradient(circle, #000000 10%, transparent 10.01%);
+  background-image: -webkit-radial-gradient(circle, #444444 10%, transparent 10.01%);
+  background-image: -o-radial-gradient(circle, #444444 10%, transparent 10.01%);
+  background-image: radial-gradient(circle, #444444 10%, transparent 10.01%);
   background-repeat: no-repeat;
   -webkit-background-size: 1000% 1000%;
           background-size: 1000% 1000%;
@@ -6894,13 +7079,22 @@ button.close {
        -o-transition: background .5s, opacity 1s;
           transition: background .5s, opacity 1s;
 }
-.btn:active:after {
+.btn-link:active:after {
   -webkit-background-size: 0% 0%;
           background-size: 0% 0%;
   opacity: .2;
   -webkit-transition: 0s;
        -o-transition: 0s;
           transition: 0s;
+}
+.btn {
+  text-transform: uppercase;
+  border: none;
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
 }
 .btn-link {
   border-radius: 3px;
