@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 'use strict';
 
-/* globals Set */
 /*!
  * Script to update version number references in the project.
+ * Copyright 2015 The Bootstrap Authors
  * Copyright 2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
@@ -95,10 +95,7 @@ function main(args) {
     '.html',
     '.js',
     '.json',
-    '.less',
     '.md',
-    '.nuspec',
-    '.ps1',
     '.scss',
     '.txt',
     '.yml'
