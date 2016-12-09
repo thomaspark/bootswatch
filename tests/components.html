@@ -33,62 +33,55 @@
   </head>
   <body>
 
-    <div class="navbar navbar-default navbar-fixed-top">
+    <div class="navbar navbar-light navbar-fixed-top bg-faded">
       <div class="container">
-        <div class="navbar-header">
-          <a href="../" class="navbar-brand">Bootswatch</a>
-          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
+        <div class="clearfix">
+          <button class="navbar-toggler float-xs-right hidden-sm-up" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"></button>
+          <a href="../" class="navbar-brand hidden-sm-up">Bootswatch</a>
         </div>
-        <div class="navbar-collapse collapse" id="navbar-main">
+        <div class="collapse navbar-toggleable-xs" id="navbarResponsive">
           <ul class="nav navbar-nav">
-            <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Themes <span class="caret"></span></a>
-              <ul class="dropdown-menu" aria-labelledby="themes">
-                <li><a href="../default/">Default</a></li>
-                <li class="divider"></li>
-                <li><a href="../cerulean/">Cerulean</a></li>
-                <li><a href="../cosmo/">Cosmo</a></li>
-                <li><a href="../cyborg/">Cyborg</a></li>
-                <li><a href="../darkly/">Darkly</a></li>
-                <li><a href="../flatly/">Flatly</a></li>
-                <li><a href="../journal/">Journal</a></li>
-                <li><a href="../lumen/">Lumen</a></li>
-                <li><a href="../paper/">Paper</a></li>
-                <li><a href="../readable/">Readable</a></li>
-                <li><a href="../sandstone/">Sandstone</a></li>
-                <li><a href="../simplex/">Simplex</a></li>
-                <li><a href="../slate/">Slate</a></li>
-                <li><a href="../spacelab/">Spacelab</a></li>
-                <li><a href="../superhero/">Superhero</a></li>
-                <li><a href="../united/">United</a></li>
-                <li><a href="../yeti/">Yeti</a></li>
-              </ul>
+            <li class="nav-item active">
+              <a class="nav-link" href="../">Bootswatch</a>
             </li>
-            <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download">Download <span class="caret"></span></a>
-              <ul class="dropdown-menu" aria-labelledby="download">
-                <li><a href="../default/">bootstrap.min.css</a></li>
-                <li><a href="../amelia/">bootstrap.css</a></li>
-                <li class="divider"></li>
-                <li><a href="../cerulean/">variables.less</a></li>
-                <li><a href="../cosmo/">bootswatch.less</a></li>
-              </ul>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Themes <span class="caret"></span></a>
+              <div class="dropdown-menu" aria-labelledby="themes">
+                <a class="dropdown-item" href="../default/">Default</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="../cerulean/">Cerulean</a>
+                <a class="dropdown-item" href="../cosmo/">Cosmo</a>
+                <a class="dropdown-item" href="../cyborg/">Cyborg</a>
+                <a class="dropdown-item" href="../darkly/">Darkly</a>
+                <a class="dropdown-item" href="../flatly/">Flatly</a>
+                <a class="dropdown-item" href="../journal/">Journal</a>
+                <a class="dropdown-item" href="../lumen/">Lumen</a>
+                <a class="dropdown-item" href="../materia/">Materia</a>
+                <a class="dropdown-item" href="../readable/">Readable</a>
+                <a class="dropdown-item" href="../sandstone/">Sandstone</a>
+                <a class="dropdown-item" href="../simplex/">Simplex</a>
+                <a class="dropdown-item" href="../slate/">Slate</a>
+                <a class="dropdown-item" href="../spacelab/">Spacelab</a>
+                <a class="dropdown-item" href="../superhero/">Superhero</a>
+                <a class="dropdown-item" href="../united/">United</a>
+                <a class="dropdown-item" href="../yeti/">Yeti</a>
+              </div>
             </li>
-            <li>
-              <a href="../help/">Help</a>
+            <li class="nav-item">
+              <a class="nav-link" href="../help/">Help</a>
             </li>
-            <li>
-              <a href="http://news.bootswatch.com">Blog</a>
+            <li class="nav-item">
+              <a class="nav-link" href="http://news.bootswatch.com">Blog</a>
             </li>
           </ul>
 
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="http://builtwithbootstrap.com/" target="_blank">Built With Bootstrap</a></li>
-            <li><a href="https://wrapbootstrap.com/?ref=bsw" target="_blank">WrapBootstrap</a></li>
+          <ul class="nav navbar-nav float-lg-right">
+            <li class="nav-item">
+              <a class="nav-link" href="http://builtwithbootstrap.com/" target="_blank">Built With Bootstrap</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://wrapbootstrap.com/?ref=bsw" target="_blank">WrapBootstrap</a>
+            </li>
           </ul>
 
         </div>

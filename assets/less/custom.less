@@ -1,5 +1,5 @@
 body {
-  padding-top: 50px;
+  padding-top: 120px;
 
   > .navbar {
     -webkit-transition: background-color 300ms ease-in;
@@ -10,7 +10,7 @@ body {
 @media (min-width: 768px) {
   body {
     > .navbar-transparent {
-      background-color: transparent;
+      background-color: transparent !important;
 
       .navbar-nav > .open > a {
         background-color: transparent !important;
@@ -40,23 +40,21 @@ body {
   margin-top: 1em;
 }
 
-.page-header {
-
-  h1 {
-    font-size: 4em;
-  }
-}
-
 .bs-docs-section {
   margin-top: 6em;
 
-  h1 {
-    padding-top: 100px;
+  .page-header h1 {
+    padding: 5rem 0 2rem;
+    font-size: 4em;
   }
 }
 
 .bs-component {
   position: relative;
+
+  & + .bs-component {
+    margin-top: 1rem;
+  }
 
   .modal {
     position: relative;
@@ -96,7 +94,7 @@ body {
   margin-bottom: 10px;
 }
 
-footer {
+#footer {
   margin: 5em 0;
 
   li {
@@ -138,7 +136,7 @@ footer {
 }
 
 .section-tout {
-  padding: 4em 0 3em;
+  padding: 5em 0 2em;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   background-color: #eaf1f1;
 
@@ -158,6 +156,10 @@ footer {
 
     margin-bottom: 4em;
     background-color: #eaf1f1;
+
+    img {
+      max-width: 100%;
+    }
 
     .image {
       position: relative;

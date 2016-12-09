@@ -1,11 +1,11 @@
-// Paper 3.3.7
+// Materia 4.0.0
 // Bootswatch
-// -----------------------------------------------------
+
 
 $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" !default;
 @import url($web-font-path);
 
-// Effects =================================================================
+// Effects =====================================================================
 
 @mixin ripple($color){
   position: relative;
@@ -18,9 +18,11 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
     height: 100%;
     top: 0;
     left: 0;
+    margin-left: 0;
     @include gradient-radial($color 10%, transparent 10.01%);
     background-size: 1000% 1000%;
     background-position: 50%;
+    border: none;
     opacity: 0;
     pointer-events: none;
     transition: background .5s, opacity 1s;
@@ -33,34 +35,48 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
   }
 }
 
-// Navbar =====================================================================
+// Navbar ======================================================================
 
 .navbar {
   border: none;
-  @include box-shadow(0 1px 2px rgba(0,0,0,.3));
+  box-shadow: 0 1px 2px rgba(0,0,0,.3);
 
   &-brand {
     font-size: 24px;
   }
 
-  &-inverse {
-    .navbar-form {
+  &-nav .nav-link {
+    padding-top: 0.9rem;
+    padding-bottom: 0.9rem;
+  }
 
-      input[type=text],
-      input[type=password] {
-        color: #fff;
-        @include box-shadow(inset 0 -1px 0 $navbar-inverse-link-color);
-        @include placeholder($navbar-inverse-link-color);
+  &-dark {
 
-        &:focus {
-          @include box-shadow(inset 0 -2px 0 #fff);
-        }
+    input[type=text],
+    input[type=password] {
+      color: #fff;
+      box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5);
+
+      &:focus {
+        box-shadow: inset 0 -2px 0 #fff;
+      }
+
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.5);
       }
     }
   }
 }
 
-// Buttons ====================================================================
+.bg-inverse {
+  background-color: $brand-info !important;
+}
+
+.bg-faded {
+  background-color: #fff;
+}
+
+// Buttons =====================================================================
 
 @mixin btn($class,$bg,$color){
   .btn-#{$class} {
@@ -74,36 +90,35 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
     }
 
     &:active {
-      @include box-shadow(2px 2px 4px rgba(0,0,0,.4));
+      box-shadow: 2px 2px 4px rgba(0,0,0,.4);
     }
 
     @include ripple($color);
   }
 }
 
-@include btn(default,$btn-default-bg,$btn-default-color);
 @include btn(primary,$btn-primary-bg,$btn-primary-color);
+@include btn(secondary,$btn-secondary-bg,$btn-secondary-color);
 @include btn(success,$btn-success-bg,$btn-success-color);
 @include btn(info,$btn-info-bg,$btn-info-color);
 @include btn(warning,$btn-warning-bg,$btn-warning-color);
 @include btn(danger,$btn-danger-bg,$btn-danger-color);
-@include btn(link,#fff,$btn-default-color);
+@include btn(link,#fff,$btn-secondary-color);
 
 .btn {
   text-transform: uppercase;
   border: none;
-  @include box-shadow(1px 1px 4px rgba(0,0,0,.4));
-  @include transition(all 0.4s);
+  box-shadow: 1px 1px 4px rgba(0,0,0,.4);
+  transition: all 0.4s;
 
   &-link {
-    border-radius: $btn-border-radius-base;
-    @include box-shadow(none);
-    color: $btn-default-color;
+    box-shadow: none;
+    color: $btn-secondary-color;
 
     &:hover,
     &:focus {
-      @include box-shadow(none);
-      color: $btn-default-color;
+      box-shadow: none;
+      color: $btn-secondary-color;
       text-decoration: none;
     }
 
@@ -113,12 +128,12 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
       &:hover,
       &:active:hover {
         background-color: #fff;
-        color: $btn-default-color;
+        color: $btn-secondary-color;
       }
     }
   }
 
-  &-default {
+  &-secondary {
     &.disabled,
     &[disabled],
     fieldset[disabled] & {
@@ -131,6 +146,18 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
         background-color: rgba(0, 0, 0, 0.1);
       }
     }
+  }
+
+  &.dropdown-toggle::before {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 0.3em;
+    vertical-align: middle;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-left: 0.3em solid transparent;
   }
 }
 
@@ -152,7 +179,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
   }
 }
 
-// Typography =================================================================
+// Typography ==================================================================
 
 body {
   -webkit-font-smoothing: antialiased;
@@ -170,20 +197,24 @@ button {
 }
 
 a {
-  @include transition(all 0.2s);
+  transition: all 0.2s;
 }
 
-// Tables =====================================================================
+// Tables ======================================================================
 
 .table-hover {
   > tbody > tr,
   > tbody > tr > th,
   > tbody > tr > td {
-    @include transition(all 0.2s);
+    transition: all 0.2s;
   }
 }
 
-// Forms ======================================================================
+.thead-inverse th {
+  background-color: $brand-primary;
+}
+
+// Forms =======================================================================
 
 label {
   font-weight: normal;
@@ -204,27 +235,29 @@ input[type=number],
   padding: 0;
   border: none;
   border-radius: 0;
-  -webkit-appearance: none;
-  @include box-shadow(inset 0 -1px 0 #ddd);
+  appearance: none;
+  box-shadow: inset 0 -1px 0 #ddd;
   font-size: 16px;
+  line-height: 2.5;
+  transition: all 0.2s;
 
   &:focus {
-    @include box-shadow(inset 0 -2px 0 $brand-primary);
+    box-shadow: inset 0 -2px 0 $brand-primary;
   }
 
   &[disabled],
   &[readonly] {
-    @include box-shadow(none);
+    box-shadow: none;
     border-bottom: 1px dotted #ddd;
   }
 
   &.input {
     &-sm {
-      font-size: $font-size-small;
+      font-size: $font-size-sm;
     }
 
     &-lg {
-      font-size: $font-size-large;
+      font-size: $font-size-lg;
     }
   }
 }
@@ -233,8 +266,6 @@ select,
 select.form-control {
   border: 0;
   border-radius: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   padding-left: 0;
   padding-right: 0\9; // remove padding for < ie9 since default arrow can't be removed
@@ -242,7 +273,7 @@ select.form-control {
   background-size: 13px;
   background-repeat: no-repeat;
   background-position: right center;
-  @include box-shadow(inset 0 -1px 0 #ddd);
+  box-shadow: inset 0 -1px 0 #ddd;
   font-size: 16px;
   line-height: 1.5;
 
@@ -252,16 +283,16 @@ select.form-control {
 
   &.input {
     &-sm {
-      font-size: $font-size-small;
+      font-size: $font-size-sm;
     }
 
     &-lg {
-      font-size: $font-size-large;
+      font-size: $font-size-lg;
     }
   }
 
   &:focus {
-    @include box-shadow(inset 0 -2px 0 $brand-primary);
+    box-shadow: inset 0 -2px 0 $brand-primary;
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAMAAACelLz8AAAAJ1BMVEUhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISF8S9ewAAAADHRSTlMAAgMJC0uWpKa6wMxMdjkoAAAANUlEQVR4AeXJyQEAERAAsNl7Hf3X6xt0QL6JpZWq30pdvdadme+0PMdzvHm8YThHcT1H7K0BtOMDniZhWOgAAAAASUVORK5CYII=);
   }
 
@@ -288,12 +319,10 @@ input[type="radio"],
 .radio input[type="radio"],
 .radio-inline input[type="radio"] {
   position: relative;
-  margin-top: 6px;
   margin-right: 4px;
   vertical-align: top;
   border: none;
   background-color: transparent;
-  -webkit-appearance: none;
   appearance: none;
   cursor: pointer;
 
@@ -308,25 +337,25 @@ input[type="radio"],
     width: 18px;
     height: 18px;
     border-radius: 50%;
-    @include transition(240ms);
+    transition: 240ms;
   }
 
   &:before {
     position: absolute;
     left: 0;
-    top: -3px;
+    top: 1px;
     background-color: $brand-primary;
-    @include scale(0);
+    transform: scale(0);
   }
 
   &:after {
     position: relative;
-    top: -3px;
+    top: -2px;
     border: 2px solid $gray;
   }
 
   &:checked:before {
-    @include scale(0.5);
+    transform: scale(0.5);
   }
 
   &:disabled:checked:before {
@@ -349,7 +378,6 @@ input[type="checkbox"],
   position: relative;
   border: none;
   margin-bottom: -4px;
-  -webkit-appearance: none;
   appearance: none;
   cursor: pointer;
 
@@ -366,17 +394,16 @@ input[type="checkbox"],
     display: block;
     width: 18px;
     height: 18px;
-    margin-top: -2px;
     margin-right: 5px;
     border: 2px solid $gray;
     border-radius: 2px;
-    @include transition(240ms);
+    transition: 240ms;
   }
 
   &:checked:before {
     content: "";
     position: absolute;
-    top: 0;
+    top: 4px;
     left: 6px;
     display: table;
     width: 6px;
@@ -384,7 +411,7 @@ input[type="checkbox"],
     border: 2px solid #fff;
     border-top-width: 0;
     border-left-width: 0;
-    @include rotate(45deg);
+    transform: rotate(45deg);
   }
 
   &:checked:after {
@@ -411,7 +438,7 @@ input[type="checkbox"],
   input:not([type=checkbox]):focus,
   .form-control:focus {
     border-bottom: none;
-    @include box-shadow(inset 0 -2px 0 $brand-warning);
+    box-shadow: inset 0 -2px 0 $brand-warning;
   }
 }
 
@@ -424,7 +451,7 @@ input[type="checkbox"],
   input:not([type=checkbox]):focus,
   .form-control:focus {
     border-bottom: none;
-    @include box-shadow(inset 0 -2px 0 $brand-danger);
+    box-shadow: inset 0 -2px 0 $brand-danger;
   }
 }
 
@@ -437,7 +464,7 @@ input[type="checkbox"],
   input:not([type=checkbox]):focus,
   .form-control:focus {
     border-bottom: none;
-    @include box-shadow(inset 0 -2px 0 $brand-success);
+    box-shadow: inset 0 -2px 0 $brand-success;
   }
 }
 
@@ -457,29 +484,33 @@ input[type="checkbox"],
   }
 }
 
-// Navs =======================================================================
+// Navs ========================================================================
 
 .nav-tabs {
-  > li > a,
-  > li > a:focus {
+  .nav-item + .nav-item {
+    margin-left: 0;
+  }
+
+  .nav-link,
+  .nav-link:focus {
     margin-right: 0;
     background-color: transparent;
     border: none;
-    color: $navbar-default-link-color;
-    @include box-shadow(inset 0 -1px 0 #ddd);
-    @include transition(all 0.2s);
+    color: $body-color;
+    box-shadow: inset 0 -1px 0 #ddd;
+    transition: all 0.2s;
 
     &:hover {
       background-color: transparent;
-      @include box-shadow(inset 0 -2px 0 $brand-primary);
+      box-shadow: inset 0 -2px 0 $brand-primary;
       color: $brand-primary;
     }
   }
 
-  & > li.active > a,
-  & > li.active > a:focus {
+  .nav-link.active,
+  .nav-link.active:focus {
     border: none;
-    @include box-shadow(inset 0 -2px 0 $brand-primary);
+    box-shadow: inset 0 -2px 0 $brand-primary;
     color: $brand-primary;
 
     &:hover {
@@ -488,18 +519,18 @@ input[type="checkbox"],
     }
   }
 
-  & > li.disabled > a {
-    @include box-shadow(inset 0 -1px 0 #ddd);
+  .nav-link.disabled {
+    box-shadow: inset 0 -1px 0 #ddd;
   }
 
   &.nav-justified {
 
-    & > li > a,
-    & > li > a:hover,
-    & > li > a:focus,
-    & > .active > a,
-    & > .active > a:hover,
-    & > .active > a:focus {
+    .nav-link,
+    .nav-link:hover,
+    .nav-link:focus,
+    .nav-link.active,
+    .nav-link.active:hover,
+    .nav-link.active:focus {
       border: none;
     }
   }
@@ -512,29 +543,15 @@ input[type="checkbox"],
 .dropdown-menu {
   margin-top: 0;
   border: none;
-  @include box-shadow(0 1px 4px rgba(0,0,0,.3));
+  box-shadow: 0 1px 4px rgba(0,0,0,.3);
 }
 
-// Indicators =================================================================
+// Indicators ==================================================================
 
 .alert {
-  border: none;
-  color: #fff;
 
-  &-success {
-    background-color: $brand-success;
-  }
-
-  &-info {
-    background-color: $brand-info;
-  }
-
-  &-warning {
-    background-color: $brand-warning;
-  }
-
-  &-danger {
-    background-color: $brand-danger;
+  h1, h2, h3, h4, h5, h6 {
+    color: #fff;
   }
 
   a:not(.close):not(.btn),
@@ -548,105 +565,34 @@ input[type="checkbox"],
   }
 }
 
-.badge {
+.tag {
   padding: 4px 6px 4px;
 }
 
 .progress {
-  position: relative;
-  z-index: 1;
   height: 6px;
   border-radius: 0;
-
-  @include box-shadow(none);
-
-  &-bar {
-    @include box-shadow(none);
-
-    &:last-child {
-      border-radius: 0 3px 3px 0;
-    }
-
-    &:last-child {
-      &:before {
-        display: block;
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        left: 0;
-        right: 0;
-        z-index: -1;
-        background-color: lighten($progress-bar-bg, 35%);
-      }
-    }
-
-    &-success:last-child.progress-bar:before {
-      background-color: lighten($brand-success, 35%);
-    }
-
-    &-info:last-child.progress-bar:before {
-      background-color: lighten($brand-info, 45%);
-    }
-    &-warning:last-child.progress-bar:before {
-      background-color: lighten($brand-warning, 35%);
-    }
-
-    &-danger:last-child.progress-bar:before {
-      background-color: lighten($brand-danger, 25%);
-    }
-  }
 }
 
-// Progress bars ==============================================================
+// Progress bars ===============================================================
 
-// Containers =================================================================
+// Containers ==================================================================
 
 .close {
   font-size: 34px;
   font-weight: 300;
   line-height: 24px;
   opacity: 0.6;
-  @include transition(all 0.2s);
+  transition: all 0.2s;
 
   &:hover {
     opacity: 1;
   }
 }
 
-.list-group {
-
-  &-item {
-    padding: 15px;
-  }
-
-  &-item-text {
-    color: $gray-light;
-  }
-}
-
-.well {
-  border-radius: 0;
-  @include box-shadow(none);
-}
-
-.panel {
-  border: none;
-  border-radius: 2px;
-  @include box-shadow(0 1px 4px rgba(0,0,0,.3));
-
-  &-heading {
-    border-bottom: none;
-  }
-
-  &-footer {
-    border-top: none;
-  }
-}
-
 .popover {
   border: none;
-  @include box-shadow(0 1px 4px rgba(0,0,0,.3));
+  box-shadow: 0 1px 4px rgba(0,0,0,.3);
 }
 
 .carousel {

@@ -1,43 +1,57 @@
-// Simplex 3.3.7
+// Simplex 4.0.0
 // Bootswatch
-// -----------------------------------------------------
+
 
 $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:400,700" !default;
 @import url($web-font-path);
 
 @mixin btn-shadow($color){
-  @include gradient-vertical-three-colors(lighten($color, 3%), $color, 6%, darken($color, 3%));
+  @include gradient-y-three-colors(lighten($color, 3%), $color, 6%, darken($color, 3%));
   filter: none;
-  border: 1px solid darken($color, 10%);
+  border: 1px solid darken($color, 6.5%);
 }
 
-// Navbar =====================================================================
+// Navbar ======================================================================
 
 .navbar {
+  border-width: 1px;
+  border-style: solid;
 
-  &-inverse {
+  &-fixed-top {
+    border-width: 0 0 1px 0;
+  }
 
-    .badge {
-      background-color: #fff;
-      color: $brand-primary;
-    }
+  &-fixed-bottom {
+    border-top-width: 1px 0 0 0;
+    border-style: solid;
   }
 }
 
-// Buttons ====================================================================
-
-.btn {
-  font-family: $headings-font-family;
+.bg-primary {
+  background-color: #fff !important;
+  border-color: darken(#fff, 6.5%);
 }
 
-.btn-default,
-.btn-default:hover {
-  @include btn-shadow($btn-default-bg);
+.bg-inverse {
+  background-color: $body-bg !important;
+  border-color: darken($body-bg, 6.5%);
 }
+
+.bg-faded {
+  background-color: $brand-primary;
+  border-color: darken($brand-primary, 6.5%);
+}
+
+// Buttons =====================================================================
 
 .btn-primary,
 .btn-primary:hover {
   @include btn-shadow($btn-primary-bg);
+}
+
+.btn-secondary,
+.btn-secondary:hover {
+  @include btn-shadow($btn-secondary-bg);
 }
 
 .btn-success,
@@ -60,111 +74,35 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:400,700" !def
   @include btn-shadow($btn-danger-bg);
 }
 
-// Typography =================================================================
+// Typography ==================================================================
 
 body {
   font-weight: 200;
 }
 
-// Tables =====================================================================
+// Tables ======================================================================
 
-th {
-  color: $headings-color;
-}
+// Forms =======================================================================
 
-// Forms ======================================================================
-
-legend {
-  color: $headings-color;
-}
-
+legend,
 label {
-  font-weight: normal;
-}
-
-.has-warning {
-  .help-block,
-  .control-label,
-  .radio,
-  .checkbox,
-  .radio-inline,
-  .checkbox-inline,
-  &.radio label,
-  &.checkbox label,
-  &.radio-inline label,
-  &.checkbox-inline label,
-  .form-control-feedback {
-    color: $brand-danger;
-  }
-
-  .form-control,
-  .form-control:focus {
-    border-color: $brand-danger;
-  }
-}
-
-.has-error {
-  .help-block,
-  .control-label,
-  .radio,
-  .checkbox,
-  .radio-inline,
-  .checkbox-inline,
-  &.radio label,
-  &.checkbox label,
-  &.radio-inline label,
-  &.checkbox-inline label,
-  .form-control-feedback {
-    color: $brand-primary;
-  }
-
-  .form-control,
-  .form-control:focus {
-    border-color: $brand-primary;
-  }
-}
-
-.has-success {
-  .help-block,
-  .control-label,
-  .radio,
-  .checkbox,
-  .radio-inline,
-  .checkbox-inline,
-  &.radio label,
-  &.checkbox label,
-  &.radio-inline label,
-  &.checkbox-inline label,
-  .form-control-feedback {
-    color: $brand-success;
-  }
-
-  .form-control,
-  .form-control:focus {
-    border-color: $brand-success;
-  }
+  color: $headings-color;
 }
 
 // Navs =======================================================================
 
-.pager {
-  a {
-    color: $headings-color;
-  }
+.breadcrumb {
+  border: 1px solid darken(#fff, 6.5%);
+}
 
-  a:hover,
-  .active > a, {
-    border-color: $brand-primary;
-    color: #fff;
-  }
-
-  .disabled > a {
-    border-color: $pager-border;
+.pagination {
+  .page-link:hover {
+    text-decoration: none;
   }
 }
 
-// Indicators =================================================================
+// Indicators ==================================================================
 
-// Progress bars ==============================================================
+// Progress bars ===============================================================
 
-// Containers =================================================================
+// Containers ==================================================================

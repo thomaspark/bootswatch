@@ -7,11 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="stylesheet" href="../flatly/bootstrap.css" media="screen">
     <link rel="stylesheet" href="../assets/css/custom.min.css">
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="../bower_components/html5shiv/dist/html5shiv.js"></script>
-      <script src="../bower_components/respond/dest/respond.min.js"></script>
-    <![endif]-->
     <style>
 
       h1 {
@@ -48,52 +43,55 @@
   </head>
   <body>
 
-    <div class="navbar navbar-default navbar-fixed-top">
+    
+    <div class="navbar navbar-dark navbar-fixed-top bg-primary">
       <div class="container">
-        <div class="navbar-header">
-          <a href="../" class="navbar-brand">Bootswatch</a>
-          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
+        <div class="clearfix">
+          <button class="navbar-toggler float-xs-right hidden-sm-up" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"></button>
+          <a href="../" class="navbar-brand hidden-sm-up">Bootswatch</a>
         </div>
-        <div class="navbar-collapse collapse" id="navbar-main">
+        <div class="collapse navbar-toggleable-xs" id="navbarResponsive">
           <ul class="nav navbar-nav">
-            <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Themes <span class="caret"></span></a>
-              <ul class="dropdown-menu" aria-labelledby="themes">
-                <li><a href="../default/">Default</a></li>
-                <li class="divider"></li>
-                <li><a href="../cerulean/">Cerulean</a></li>
-                <li><a href="../cosmo/">Cosmo</a></li>
-                <li><a href="../cyborg/">Cyborg</a></li>
-                <li><a href="../darkly/">Darkly</a></li>
-                <li><a href="../flatly/">Flatly</a></li>
-                <li><a href="../journal/">Journal</a></li>
-                <li><a href="../lumen/">Lumen</a></li>
-                <li><a href="../paper/">Paper</a></li>
-                <li><a href="../readable/">Readable</a></li>
-                <li><a href="../sandstone/">Sandstone</a></li>
-                <li><a href="../simplex/">Simplex</a></li>
-                <li><a href="../slate/">Slate</a></li>
-                <li><a href="../spacelab/">Spacelab</a></li>
-                <li><a href="../superhero/">Superhero</a></li>
-                <li><a href="../united/">United</a></li>
-                <li><a href="../yeti/">Yeti</a></li>
-              </ul>
+            <li class="nav-item active">
+              <a class="nav-link" href="../">Bootswatch</a>
             </li>
-            <li class="active">
-              <a href="../help/">Help</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Themes <span class="caret"></span></a>
+              <div class="dropdown-menu" aria-labelledby="themes">
+                <a class="dropdown-item" href="../default/">Default</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="../cerulean/">Cerulean</a>
+                <a class="dropdown-item" href="../cosmo/">Cosmo</a>
+                <a class="dropdown-item" href="../cyborg/">Cyborg</a>
+                <a class="dropdown-item" href="../darkly/">Darkly</a>
+                <a class="dropdown-item" href="../flatly/">Flatly</a>
+                <a class="dropdown-item" href="../journal/">Journal</a>
+                <a class="dropdown-item" href="../lumen/">Lumen</a>
+                <a class="dropdown-item" href="../materia/">Materia</a>
+                <a class="dropdown-item" href="../sandstone/">Sandstone</a>
+                <a class="dropdown-item" href="../simplex/">Simplex</a>
+                <a class="dropdown-item" href="../slate/">Slate</a>
+                <a class="dropdown-item" href="../spacelab/">Spacelab</a>
+                <a class="dropdown-item" href="../superhero/">Superhero</a>
+                <a class="dropdown-item" href="../united/">United</a>
+                <a class="dropdown-item" href="../yeti/">Yeti</a>
+              </div>
             </li>
-            <li>
-              <a href="http://news.bootswatch.com">Blog</a>
+            <li class="nav-item">
+              <a class="nav-link" href="../help/">Help</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://news.bootswatch.com">Blog</a>
             </li>
           </ul>
 
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="http://builtwithbootstrap.com/" target="_blank">Built With Bootstrap</a></li>
-            <li><a href="https://wrapbootstrap.com/?ref=bsw" target="_blank">WrapBootstrap</a></li>
+          <ul class="nav navbar-nav float-lg-right">
+            <li class="nav-item">
+              <a class="nav-link" href="http://builtwithbootstrap.com/" target="_blank">Built With Bootstrap</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://wrapbootstrap.com/?ref=bsw" target="_blank">WrapBootstrap</a>
+            </li>
           </ul>
 
         </div>
@@ -160,9 +158,9 @@
             <h1 id="support">Support</h1>
             <p>Show your support for Bootswatch by buying official gear.</p>
             <p>T-shirts based on several themes including Cyborg, Flatly, and Slate are available at <a href="http://bootswatch.spreadshirt.com/">Spreadshirt</a>.</p>
-            <p><a href="http://bootswatch.spreadshirt.com/"><img src="../assets/img/tshirt.jpg"></a></p>
+            <p><a href="http://bootswatch.spreadshirt.com/"><img src="../assets/img/tshirt.jpg" alt="Bootswatch tee"></a></p>
             <p>Stickers are available at <a href="http://www.stickermule.com/marketplace/1959-bootswatch">Sticker Mule</a>.</p>
-            <p><a href="http://www.stickermule.com/marketplace/1959-bootswatch"><img src="../assets/img/stickers.jpg"></a></p>
+            <p><a href="http://www.stickermule.com/marketplace/1959-bootswatch"><img src="../assets/img/stickers.jpg" alt="Bootswatch stickers"></a></p>
             <p>Donations are also accepted via <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=F22JEM3Q78JC2">PayPal</a> and <a href="https://gratipay.com/bootswatch/">Gratipay</a>.</p>
 
         </div>
@@ -171,12 +169,12 @@
 
 
     <div class="container">
-      <footer>
+      <footer id="footer">
         <div class="row">
           <div class="col-lg-12">
 
             <ul class="list-unstyled">
-              <li class="pull-right"><a href="#top">Back to top</a></li>
+              <li class="float-lg-right"><a href="#top">Back to top</a></li>
               <li><a href="http://news.bootswatch.com" onclick="pageTracker._link(this.href); return false;">Blog</a></li>
               <li><a href="http://feeds.feedburner.com/bootswatch">RSS</a></li>
               <li><a href="https://twitter.com/bootswatch">Twitter</a></li>
@@ -186,7 +184,7 @@
             </ul>
             <p>Made by <a href="http://thomaspark.co" rel="nofollow">Thomas Park</a>. Contact him at <a href="mailto:thomas@bootswatch.com">thomas@bootswatch.com</a>.</p>
             <p>Code released under the <a href="https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE">MIT License</a>.</p>
-            <p>Based on <a href="http://getbootstrap.com" rel="nofollow">Bootstrap</a>. Icons from <a href="http://fortawesome.github.io/Font-Awesome/" rel="nofollow">Font Awesome</a>. Web fonts from <a href="http://www.google.com/webfonts" rel="nofollow">Google</a>.</p>
+            <p>Based on <a href="http://getbootstrap.com" rel="nofollow">Bootstrap</a>. Icons from <a href="http://fontawesome.io/" rel="nofollow">Font Awesome</a>. Web fonts from <a href="https://fonts.google.com/" rel="nofollow">Google</a>.</p>
 
           </div>
         </div>
@@ -196,7 +194,8 @@
     </div>
 
 
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/tether/dist/js/tether.min.js"></script>
     <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="../assets/js/custom.js"></script>
   </body>

@@ -1,162 +1,110 @@
-// Yeti 3.3.7
+// Yeti 4.0.0
 // Bootswatch
-// -----------------------------------------------------
+
 
 $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700" !default;
 @import url($web-font-path);
 
-// Navbar =====================================================================
+// Navbar ======================================================================
 
 .navbar {
-  border: none;
-  font-size: 13px;
-  font-weight: 300;
+  font-size: $font-size-sm;
+  font-weight: $headings-font-weight;
+}
 
-  .navbar-toggle:hover .icon-bar {
-    background-color: #b3b3b3;
-  }
+.bg-primary {
 
-  &-collapse {
-    border-top-color: $dropdown-divider-bg;
-    @include box-shadow(none);
-  }
+  .dropdown-menu {
+    background-color: $brand-primary;
 
-  .btn {
-    padding-top: 6px;
-    padding-bottom: 6px;
-  }
-
-  &-form {
-    margin-top: 7px;
-    margin-bottom: 5px;
-
-    .form-control {
-      height: auto;
-      padding: $padding-xs-vertical $padding-xs-horizontal;
-    }
-  }
-
-  &-text {
-    margin: 12px 15px;
-    line-height: 21px;
-  }
-
-  .dropdown {
-
-    &-menu {
-      border: none;
-
-      > li > a,
-      > li > a:focus {
-        background-color: transparent;
-        font-size: 13px;
-        font-weight: 300;
-      }
+    .dropdown-item,
+    .dropdown-item:focus {
+      color: $navbar-dark-color;
     }
 
-    &-header {
-      color: rgba(255, 255, 255, 0.5);
-    }
-
-  }
-
-  &-default {
-
-    .dropdown-menu {
-      background-color: $navbar-default-bg;
-
-      > li > a,
-      > li > a:focus {
-        color: $navbar-default-color;
-      }
-
-      > li > a:hover,
-      > .active > a,
-      > .active > a:hover {
-        background-color: $navbar-default-link-hover-bg;
-      }
-    }
-  }
-
-  &-inverse {
-
-    .dropdown-menu {
-      background-color: $navbar-inverse-bg;
-
-      > li > a,
-      > li > a:focus {
-        color: $navbar-inverse-color;
-      }
-
-      > li > a:hover,
-      > .active > a,
-      > .active > a:hover {
-        background-color: $navbar-inverse-link-hover-bg;
-      }
+    .dropdown-item.active,
+    .dropdown-item:hover,
+    .dropdown-item:focus {
+      background-color: darken($brand-primary, 5%);
+      color: #fff;
     }
   }
 }
 
-// Buttons ====================================================================
+.bg-inverse {
+  background-color: $gray !important;
 
-.btn {
-  padding: $padding-base-vertical $padding-base-horizontal;
+  .dropdown-menu {
+    background-color: $gray;
 
-  &-lg {
-    padding: $padding-large-vertical $padding-large-horizontal;
-  }
+    .dropdown-item,
+    .dropdown-item:focus {
+      color: $navbar-dark-color;
+    }
 
-  &-sm {
-    padding: $padding-small-vertical $padding-small-horizontal;
-  }
-
-  &-xs {
-    padding: $padding-xs-vertical $padding-xs-horizontal;
+    .dropdown-item.active,
+    .dropdown-item:hover,
+    .dropdown-item:focus  {
+      background-color: darken($gray, 5%);
+      color: #fff;
+    }
   }
 }
+
+.bg-faded {
+
+  .dropdown-menu {
+    background-color: $gray-lightest;
+
+    .dropdown-item,
+    .dropdown-item:focus {
+      color: $navbar-light-color;
+    }
+
+    .dropdown-item.active,
+    .dropdown-item:hover,
+    .dropdown-item:focus  {
+      background-color: lighten($gray-lightest, 5%);
+      color: $navbar-light-hover-color;
+    }
+  }
+}
+
+// Buttons =====================================================================
 
 .btn-group {
-
-  .btn ~ .dropdown-toggle {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
 
   .dropdown-menu {
     border-top-width: 0;
   }
 
-  &.dropup .dropdown-menu {
-    border-top-width: 1px;
-    border-bottom-width: 0;
-    margin-bottom: 0;
-  }
-
   .dropdown-toggle {
-
-    &.btn-default ~ .dropdown-menu {
-      background-color: $btn-default-bg;
-      border-color: $btn-default-border;
-
-      > li > a {
-        color: $btn-default-color;
-      }
-
-      > li > a:hover {
-        background-color: darken($btn-default-bg, 8%);
-      }
-    }
 
     &.btn-primary ~ .dropdown-menu {
       background-color: $btn-primary-bg;
       border-color: $btn-primary-border;
 
-      > li > a {
+      .dropdown-item {
         color: $btn-primary-color;
       }
 
-      > li > a:hover {
+      .dropdown-item:hover,
+      .dropdown-item:focus {
         background-color: darken($btn-primary-bg, 8%);
+      }
+    }
+
+    &.btn-secondary ~ .dropdown-menu {
+      background-color: $btn-secondary-bg;
+      border-color: $btn-secondary-border;
+
+      .dropdown-item {
+        color: $btn-secondary-color;
+      }
+
+      .dropdown-item:hover,
+      .dropdown-item:focus {
+        background-color: darken($btn-secondary-bg, 8%);
       }
     }
 
@@ -164,11 +112,12 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:300italic,400
       background-color: $btn-success-bg;
       border-color: $btn-success-border;
 
-      > li > a {
+      .dropdown-item {
         color: $btn-success-color;
       }
 
-      > li > a:hover {
+      .dropdown-item:hover,
+      .dropdown-item:focus {
         background-color: darken($btn-success-bg, 8%);
       }
     }
@@ -177,11 +126,12 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:300italic,400
       background-color: $btn-info-bg;
       border-color: $btn-info-border;
 
-      > li > a {
+      .dropdown-item {
         color: $btn-info-color;
       }
 
-      > li > a:hover {
+      .dropdown-item:hover,
+      .dropdown-item:focus {
         background-color: darken($btn-info-bg, 8%);
       }
     }
@@ -190,11 +140,12 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:300italic,400
       background-color: $btn-warning-bg;
       border-color: $btn-warning-border;
 
-      > li > a {
+      .dropdown-item {
         color: $btn-warning-color;
       }
 
-      > li > a:hover {
+      .dropdown-item:hover,
+      .dropdown-item:focus {
         background-color: darken($btn-warning-bg, 8%);
       }
     }
@@ -203,154 +154,120 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:300italic,400
       background-color: $btn-danger-bg;
       border-color: $btn-danger-border;
 
-      > li > a {
+      .dropdown-item {
         color: $btn-danger-color;
       }
 
-      > li > a:hover {
+      .dropdown-item:hover,
+      .dropdown-item:focus {
         background-color: darken($btn-danger-bg, 8%);
       }
     }
   }
 }
 
-// Typography =================================================================
+// Typography ==================================================================
 
-.lead {
-  color: $gray;
+.blockquote-footer {
+  color: $gray-light;
 }
 
-cite {
-  font-style: italic;
-}
-
-blockquote {
-  border-left-width: 1px;
-  color: $gray;
-
-  &.pull-right {
-    border-right-width: 1px;
-  }
-
-  small {
-    font-size: $font-size-small;
-    font-weight: 300;
-  }
-}
-
-// Tables =====================================================================
+// Tables ======================================================================
 
 table {
-  font-size: $font-size-small;
+  font-size: $font-size-sm;
 }
 
-// Forms ======================================================================
+.table {
+
+  &-success,
+  &-info,
+  &-warning,
+  &-danger {
+    color: #fff;
+  }
+}
+
+// Forms =======================================================================
 
 label,
 .control-label,
 .help-block,
 .checkbox,
-.radio {
-  font-size: $font-size-small;
-  font-weight: normal;
+.radio,
+.form-control-feedback {
+  font-size: $font-size-sm;
 }
 
-input[type="radio"],
-input[type="checkbox"] {
-  margin-top: 1px;
-}
+// Navs ========================================================================
 
-// Navs =======================================================================
-
-.nav {
-  .open > a,
-  .open > a:hover,
-  .open > a:focus {
-    border-color: transparent;
-  }
+.dropdown-item {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: $font-size-sm;
+  font-weight: 300;
 }
 
 .nav-tabs {
-  > li > a {
-    background-color: $btn-default-bg;
-    color: $text-color;
+  .nav-link,
+  .nav-link.disabled,
+  .nav-link.disabled:hover,
+  .nav-link.disabled:focus {
+    border-color: $nav-tabs-border-color;
+    background-color: $gray-lightest;
   }
 
-  .caret {
-    border-top-color: $text-color;
-    border-bottom-color: $text-color;
+  .nav-link:hover,
+  .nav-link:focus {
+    background-color: lighten($gray-lightest, 5%);
   }
 }
 
 .nav-pills {
-  font-weight: 300;
+  .active {
+    border: 1px solid $btn-primary-border;
+  }
 }
 
 .breadcrumb {
-  border: 1px solid $table-border-color;
+  border: 1px solid $dropdown-border-color;
   border-radius: 3px;
-  font-size: 10px;
+  font-size: $font-size-sm;
   font-weight: 300;
   text-transform: uppercase;
 }
 
 .pagination {
-  font-size: $font-size-small;
   font-weight: 300;
-  color: $gray-light;
 
-  > li {
-    > a,
-    > span {
-      margin-left: 4px;
-      color: $gray-light;
+  .page-link {
+    border-color: transparent;
+    border-radius: 3px;
+    margin-left: 0.1em;
+    margin-right: 0.1em;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
     }
   }
 
-  > .active {
-    > a,
-    > span {
-      color: #fff;
+  .page-item.disabled {
+    .page-link {
+      border-color: transparent;
     }
   }
-
-  > li,
-  > li:first-child,
-  > li:last-child {
-    > a,
-    > span {
-      border-radius: 3px;
-    }
-  }
-
-  &-lg > li > a,
-  &-lg > li > span {
-    padding-left: 22px;
-    padding-right: 22px;
-  }
-
-  &-sm > li > a,
-  &-sm > li > span {
-    padding: 0 5px;
-  }
-}
-
-.pager {
-  font-size: $font-size-small;
-  font-weight: 300;
-  color: $gray-light;
 }
 
 .list-group {
-  font-size: $font-size-small;
+  font-size: $font-size-sm;
   font-weight: 300;
 }
 
-// Indicators =================================================================
+// Indicators ==================================================================
 
 .close {
-  opacity: 0.4;
-  text-decoration: none;
+  opacity: 0.6;
   text-shadow: none;
 
   &:hover,
@@ -360,7 +277,7 @@ input[type="checkbox"] {
 }
 
 .alert {
-  font-size: $font-size-small;
+  font-size: $font-size-sm;
   font-weight: 300;
 
   .alert-link {
@@ -370,25 +287,13 @@ input[type="checkbox"] {
   }
 }
 
-.label {
-  padding-left: 1em;
-  padding-right: 1em;
-  border-radius: 0;
-  font-weight: 300;
-
-  &-default {
-    background-color: $btn-default-bg;
-    color: $btn-default-color;
-  }
+.tag {
+  padding-bottom: .6em;
 }
 
-.badge {
-  font-weight: 300;
-}
+// Progress bars ===============================================================
 
-// Progress bars ==============================================================
-
-.progress {
+.progress[value] {
   height: 22px;
   padding: 2px;
   background-color: #f6f6f6;
@@ -396,50 +301,4 @@ input[type="checkbox"] {
   @include box-shadow(none);
 }
 
-// Containers =================================================================
-
-.dropdown {
-
-  &-menu {
-    padding: 0;
-    margin-top: 0;
-    font-size: $font-size-small;
-
-    > li > a {
-      padding: 12px 15px;
-    }
-  }
-
-  &-header {
-    padding-left: 15px;
-    padding-right: 15px;
-    font-size: 9px;
-    text-transform: uppercase;
-  }
-}
-
-.popover {
-  color: #fff;
-  font-size: 12px;
-  font-weight: 300;
-}
-
-.panel {
-  &-heading,
-  &-footer {
-    border-top-right-radius: 0;
-    border-top-left-radius: 0;
-  }
-
-  &-default {
-    .close {
-      color: $text-color;
-    }
-  }
-}
-
-.modal {
-  .close {
-    color: $text-color;
-  }
-}
+// Containers ==================================================================
