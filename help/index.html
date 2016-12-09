@@ -115,9 +115,9 @@
               <li><p>Download the repository: <code>git clone https://github.com/thomaspark/bootswatch.git</code></p></li>
               <li><p>Install dependencies: <code>npm install</code></p></li>
               <li><p>Make sure that you have <code>grunt</code> available in the command line. You can install <code>grunt-cli</code> as described on the <a href="http://gruntjs.com/getting-started">Grunt Getting Started page</a>.</p></li>
-              <li><p>Modify <code>variables.less</code> and <code>bootswatch.less</code> in one of the theme directories, or create your own in <code>/custom</code>.</p></li>
-              <li><p>Type <code>grunt swatch:[theme]</code> to build the CSS for a theme, e.g., <code>grunt swatch:amelia</code> for Amelia. Or type <code>grunt swatch</code> to build them all at once. </p></li>
-              <li><p>You can run <code>grunt</code> to start a server, watch for any changes to the LESS files, and automatically build a theme and reload it on change. Run <code>grunt server</code> for just the server, and <code>grunt watch</code> for just the watcher.</p></li>
+              <li><p>Modify <code>_variables.scss</code> and <code>_bootswatch.scss</code> in one of the theme directories, or create your own in <code>/custom</code>.</p></li>
+              <li><p>Type <code>grunt swatch:[theme]</code> to build the CSS for a theme, e.g., <code>grunt swatch:flatly</code> for Flatly. Or type <code>grunt swatch</code> to build them all at once. </p></li>
+              <li><p>You can run <code>grunt</code> to start a server, watch for any changes to the SASS files, and automatically build a theme and reload it on change. Run <code>grunt server</code> for just the server, and <code>grunt watch</code> for just the watcher.</p></li>
             </ol>
             <p>Here are additional tips for <a href="http://www.smashingmagazine.com/2013/03/12/customizing-bootstrap/" target="_blank">customizing Bootstrap</a>.</p>
           </div>
@@ -127,7 +127,7 @@
           <div class="col-lg-12">
             <h1 id="api">API</h1>
             <p>You can use the API to integrate the themes with your platform. Get:</p>
-            <p><a href="https://bootswatch.com/api/3.json">https://bootswatch.com/api/3.json</a></p>
+            <p><a href="https://bootswatch.com/api/4.json">https://bootswatch.com/api/4.json</a></p>
             <p>This returns an object with a <code>version</code> and a <code>themes</code> property. <code>themes</code> is an array with the following properties:</p>
             <ul>
               <li><code>name</code></li>
@@ -137,8 +137,8 @@
               <li><code>css</code></li>
               <li><code>cssMin</code></li>
               <li><code>cssCdn</code></li>
-              <li><code>less</code></li>
-              <li><code>lessVariables</code></li>
+              <li><code>scss</code></li>
+              <li><code>scssVariables</code></li>
             </ul>
             <p>Here's a <a href="http://jsbin.com/momonupayu/1/edit?html,js,output">demo</a> of the API in action.</p>
           </div>
