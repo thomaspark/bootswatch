@@ -18,10 +18,25 @@ module.exports = function (grunt) {
             ' * Based on Bootstrap\n' +
             '*/\n',
     swatch: {
-      cerulean:{}, cosmo:{}, cyborg:{}, darkly:{},
-      flatly:{}, journal:{}, lumen:{}, paper:{},
-      sandstone:{}, simplex:{}, slate:{}, spacelab:{},
-      superhero:{}, united:{}, yeti:{}, custom:{}
+      cerulean:{},
+      cosmo:{},
+      cyborg:{},
+      darkly:{},
+      flatly:{},
+      journal:{},
+      lumen:{},
+      lux:{},
+      materia:{},
+      minty:{},
+      pulse:{},
+      sandstone:{},
+      simplex:{},
+      slate:{},
+      spacelab:{},
+      superhero:{},
+      united:{},
+      yeti:{},
+      custom:{}
     },
     clean: {
       build: {
