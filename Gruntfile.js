@@ -24,6 +24,7 @@ module.exports = function (grunt) {
       darkly:{},
       flatly:{},
       journal:{},
+      litera:{},
       lumen:{},
       lux:{},
       materia:{},
