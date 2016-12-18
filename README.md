@@ -28,7 +28,7 @@ Customization
 ------
 Bootswatch is open source and you’re welcome to modify the themes.
 
-Each theme consists of two SASS files. `_variables.scss`, which is included by default in Bootstrap, allows you to customize [these settings](http://getbootstrap.com/customize/#less-variables). `_bootswatch.scss` introduces more extensive structural changes.
+Each theme consists of two SASS files. `_variables.scss`, which is included by default in Bootstrap, allows you to customize the settings. `_bootswatch.scss` introduces more extensive structural changes.
 
 Check out the [Help page](http://bootswatch.com/help/) for more details on building your own theme.
 
