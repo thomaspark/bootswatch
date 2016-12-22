@@ -6526,12 +6526,15 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   transition: background .5s, opacity 1s;
 }
 .btn-primary:active:after {
-  -webkit-background-size: 0% 0%;
-          background-size: 0% 0%;
+  -webkit-background-size: 0 0;
+          background-size: 0 0;
   opacity: .2;
   -webkit-transition: 0s;
   -o-transition: 0s;
   transition: 0s;
+}
+.btn-primary.disabled:after, .btn-primary[disabled]:after {
+  display: none;
 }
 
 .btn-secondary {
@@ -6571,12 +6574,15 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   transition: background .5s, opacity 1s;
 }
 .btn-secondary:active:after {
-  -webkit-background-size: 0% 0%;
-          background-size: 0% 0%;
+  -webkit-background-size: 0 0;
+          background-size: 0 0;
   opacity: .2;
   -webkit-transition: 0s;
   -o-transition: 0s;
   transition: 0s;
+}
+.btn-secondary.disabled:after, .btn-secondary[disabled]:after {
+  display: none;
 }
 
 .btn-success {
@@ -6616,12 +6622,15 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   transition: background .5s, opacity 1s;
 }
 .btn-success:active:after {
-  -webkit-background-size: 0% 0%;
-          background-size: 0% 0%;
+  -webkit-background-size: 0 0;
+          background-size: 0 0;
   opacity: .2;
   -webkit-transition: 0s;
   -o-transition: 0s;
   transition: 0s;
+}
+.btn-success.disabled:after, .btn-success[disabled]:after {
+  display: none;
 }
 
 .btn-info {
@@ -6661,12 +6670,15 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   transition: background .5s, opacity 1s;
 }
 .btn-info:active:after {
-  -webkit-background-size: 0% 0%;
-          background-size: 0% 0%;
+  -webkit-background-size: 0 0;
+          background-size: 0 0;
   opacity: .2;
   -webkit-transition: 0s;
   -o-transition: 0s;
   transition: 0s;
+}
+.btn-info.disabled:after, .btn-info[disabled]:after {
+  display: none;
 }
 
 .btn-warning {
@@ -6706,12 +6718,15 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   transition: background .5s, opacity 1s;
 }
 .btn-warning:active:after {
-  -webkit-background-size: 0% 0%;
-          background-size: 0% 0%;
+  -webkit-background-size: 0 0;
+          background-size: 0 0;
   opacity: .2;
   -webkit-transition: 0s;
   -o-transition: 0s;
   transition: 0s;
+}
+.btn-warning.disabled:after, .btn-warning[disabled]:after {
+  display: none;
 }
 
 .btn-danger {
@@ -6751,12 +6766,15 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   transition: background .5s, opacity 1s;
 }
 .btn-danger:active:after {
-  -webkit-background-size: 0% 0%;
-          background-size: 0% 0%;
+  -webkit-background-size: 0 0;
+          background-size: 0 0;
   opacity: .2;
   -webkit-transition: 0s;
   -o-transition: 0s;
   transition: 0s;
+}
+.btn-danger.disabled:after, .btn-danger[disabled]:after {
+  display: none;
 }
 
 .btn-link {
@@ -6796,12 +6814,15 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   transition: background .5s, opacity 1s;
 }
 .btn-link:active:after {
-  -webkit-background-size: 0% 0%;
-          background-size: 0% 0%;
+  -webkit-background-size: 0 0;
+          background-size: 0 0;
   opacity: .2;
   -webkit-transition: 0s;
   -o-transition: 0s;
   transition: 0s;
+}
+.btn-link.disabled:after, .btn-link[disabled]:after {
+  display: none;
 }
 
 .btn {

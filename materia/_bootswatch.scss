@@ -29,9 +29,16 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
   }
 
   &:active:after {
-    background-size: 0% 0%;
+    background-size: 0 0;
     opacity: .2;
     transition: 0s;
+  }
+
+  &.disabled,
+  &[disabled] {
+    &:after {
+      display: none;
+    }
   }
 }
 
