@@ -7,6 +7,10 @@ body {
   }
 }
 
+pre {
+  background: #f7f7f9;
+}
+
 @media (min-width: 768px) {
   body {
     > .navbar-transparent {
@@ -21,12 +25,18 @@ body {
 
 #home {
   padding-top: 0px;
-  .navbar-brand {
-    padding: 13.5px 15px 12.5px;
-    > img {
-      display: inline;
+
+  .logo {
+
+    .nav-link {
+      display: inline-block;
+      margin-right: -30px;
+    }
+
+    img {
+      display: inline-block;
       margin: 0 10px;
-      height: 100%;
+      width: 20%;
     }
   }
 }
@@ -110,11 +120,8 @@ body {
 }
 
 .splash {
-  padding: 9em 0 2em;
+  padding: 10em 0 4em;
   background-color: #141d27;
-  background-image: url(../img/bg.jpg);
-  background-size: cover;
-  background-attachment: fixed;
   color: #fff;
   text-align: center;
 

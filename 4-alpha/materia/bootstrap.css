@@ -6526,12 +6526,53 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   transition: background .5s, opacity 1s;
 }
 .btn-primary:active:after {
-  -webkit-background-size: 0% 0%;
-          background-size: 0% 0%;
+  -webkit-background-size: 0 0;
+          background-size: 0 0;
   opacity: .2;
   -webkit-transition: 0s;
   -o-transition: 0s;
   transition: 0s;
+}
+.btn-primary.disabled:after, .btn-primary[disabled]:after {
+  display: none;
+}
+
+.btn-outline-primary {
+  position: relative;
+}
+.btn-outline-primary:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin-left: 0;
+  background-image: -webkit-radial-gradient(circle, #fff 10%, transparent 10.01%);
+  background-image: -o-radial-gradient(circle, #fff 10%, transparent 10.01%);
+  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+  background-repeat: no-repeat;
+  -webkit-background-size: 1000% 1000%;
+          background-size: 1000% 1000%;
+  background-position: 50%;
+  border: none;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: background .5s, opacity 1s;
+  -o-transition: background .5s, opacity 1s;
+  transition: background .5s, opacity 1s;
+}
+.btn-outline-primary:active:after {
+  -webkit-background-size: 0 0;
+          background-size: 0 0;
+  opacity: .2;
+  -webkit-transition: 0s;
+  -o-transition: 0s;
+  transition: 0s;
+}
+.btn-outline-primary.disabled:after, .btn-outline-primary[disabled]:after {
+  display: none;
 }
 
 .btn-secondary {
@@ -6571,12 +6612,53 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   transition: background .5s, opacity 1s;
 }
 .btn-secondary:active:after {
-  -webkit-background-size: 0% 0%;
-          background-size: 0% 0%;
+  -webkit-background-size: 0 0;
+          background-size: 0 0;
   opacity: .2;
   -webkit-transition: 0s;
   -o-transition: 0s;
   transition: 0s;
+}
+.btn-secondary.disabled:after, .btn-secondary[disabled]:after {
+  display: none;
+}
+
+.btn-outline-secondary {
+  position: relative;
+}
+.btn-outline-secondary:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin-left: 0;
+  background-image: -webkit-radial-gradient(circle, #222 10%, transparent 10.01%);
+  background-image: -o-radial-gradient(circle, #222 10%, transparent 10.01%);
+  background-image: radial-gradient(circle, #222 10%, transparent 10.01%);
+  background-repeat: no-repeat;
+  -webkit-background-size: 1000% 1000%;
+          background-size: 1000% 1000%;
+  background-position: 50%;
+  border: none;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: background .5s, opacity 1s;
+  -o-transition: background .5s, opacity 1s;
+  transition: background .5s, opacity 1s;
+}
+.btn-outline-secondary:active:after {
+  -webkit-background-size: 0 0;
+          background-size: 0 0;
+  opacity: .2;
+  -webkit-transition: 0s;
+  -o-transition: 0s;
+  transition: 0s;
+}
+.btn-outline-secondary.disabled:after, .btn-outline-secondary[disabled]:after {
+  display: none;
 }
 
 .btn-success {
@@ -6616,12 +6698,53 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   transition: background .5s, opacity 1s;
 }
 .btn-success:active:after {
-  -webkit-background-size: 0% 0%;
-          background-size: 0% 0%;
+  -webkit-background-size: 0 0;
+          background-size: 0 0;
   opacity: .2;
   -webkit-transition: 0s;
   -o-transition: 0s;
   transition: 0s;
+}
+.btn-success.disabled:after, .btn-success[disabled]:after {
+  display: none;
+}
+
+.btn-outline-success {
+  position: relative;
+}
+.btn-outline-success:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin-left: 0;
+  background-image: -webkit-radial-gradient(circle, #fff 10%, transparent 10.01%);
+  background-image: -o-radial-gradient(circle, #fff 10%, transparent 10.01%);
+  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+  background-repeat: no-repeat;
+  -webkit-background-size: 1000% 1000%;
+          background-size: 1000% 1000%;
+  background-position: 50%;
+  border: none;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: background .5s, opacity 1s;
+  -o-transition: background .5s, opacity 1s;
+  transition: background .5s, opacity 1s;
+}
+.btn-outline-success:active:after {
+  -webkit-background-size: 0 0;
+          background-size: 0 0;
+  opacity: .2;
+  -webkit-transition: 0s;
+  -o-transition: 0s;
+  transition: 0s;
+}
+.btn-outline-success.disabled:after, .btn-outline-success[disabled]:after {
+  display: none;
 }
 
 .btn-info {
@@ -6661,12 +6784,53 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   transition: background .5s, opacity 1s;
 }
 .btn-info:active:after {
-  -webkit-background-size: 0% 0%;
-          background-size: 0% 0%;
+  -webkit-background-size: 0 0;
+          background-size: 0 0;
   opacity: .2;
   -webkit-transition: 0s;
   -o-transition: 0s;
   transition: 0s;
+}
+.btn-info.disabled:after, .btn-info[disabled]:after {
+  display: none;
+}
+
+.btn-outline-info {
+  position: relative;
+}
+.btn-outline-info:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin-left: 0;
+  background-image: -webkit-radial-gradient(circle, #fff 10%, transparent 10.01%);
+  background-image: -o-radial-gradient(circle, #fff 10%, transparent 10.01%);
+  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+  background-repeat: no-repeat;
+  -webkit-background-size: 1000% 1000%;
+          background-size: 1000% 1000%;
+  background-position: 50%;
+  border: none;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: background .5s, opacity 1s;
+  -o-transition: background .5s, opacity 1s;
+  transition: background .5s, opacity 1s;
+}
+.btn-outline-info:active:after {
+  -webkit-background-size: 0 0;
+          background-size: 0 0;
+  opacity: .2;
+  -webkit-transition: 0s;
+  -o-transition: 0s;
+  transition: 0s;
+}
+.btn-outline-info.disabled:after, .btn-outline-info[disabled]:after {
+  display: none;
 }
 
 .btn-warning {
@@ -6706,12 +6870,53 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   transition: background .5s, opacity 1s;
 }
 .btn-warning:active:after {
-  -webkit-background-size: 0% 0%;
-          background-size: 0% 0%;
+  -webkit-background-size: 0 0;
+          background-size: 0 0;
   opacity: .2;
   -webkit-transition: 0s;
   -o-transition: 0s;
   transition: 0s;
+}
+.btn-warning.disabled:after, .btn-warning[disabled]:after {
+  display: none;
+}
+
+.btn-outline-warning {
+  position: relative;
+}
+.btn-outline-warning:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin-left: 0;
+  background-image: -webkit-radial-gradient(circle, #fff 10%, transparent 10.01%);
+  background-image: -o-radial-gradient(circle, #fff 10%, transparent 10.01%);
+  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+  background-repeat: no-repeat;
+  -webkit-background-size: 1000% 1000%;
+          background-size: 1000% 1000%;
+  background-position: 50%;
+  border: none;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: background .5s, opacity 1s;
+  -o-transition: background .5s, opacity 1s;
+  transition: background .5s, opacity 1s;
+}
+.btn-outline-warning:active:after {
+  -webkit-background-size: 0 0;
+          background-size: 0 0;
+  opacity: .2;
+  -webkit-transition: 0s;
+  -o-transition: 0s;
+  transition: 0s;
+}
+.btn-outline-warning.disabled:after, .btn-outline-warning[disabled]:after {
+  display: none;
 }
 
 .btn-danger {
@@ -6751,28 +6956,21 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   transition: background .5s, opacity 1s;
 }
 .btn-danger:active:after {
-  -webkit-background-size: 0% 0%;
-          background-size: 0% 0%;
+  -webkit-background-size: 0 0;
+          background-size: 0 0;
   opacity: .2;
   -webkit-transition: 0s;
   -o-transition: 0s;
   transition: 0s;
 }
+.btn-danger.disabled:after, .btn-danger[disabled]:after {
+  display: none;
+}
 
-.btn-link {
+.btn-outline-danger {
   position: relative;
 }
-.btn-link:focus {
-  background-color: #fff;
-}
-.btn-link:hover, .btn-link:active:hover {
-  background-color: #f0f0f0;
-}
-.btn-link:active {
-  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-}
-.btn-link:after {
+.btn-outline-danger:after {
   content: "";
   display: block;
   position: absolute;
@@ -6781,9 +6979,9 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   top: 0;
   left: 0;
   margin-left: 0;
-  background-image: -webkit-radial-gradient(circle, #222 10%, transparent 10.01%);
-  background-image: -o-radial-gradient(circle, #222 10%, transparent 10.01%);
-  background-image: radial-gradient(circle, #222 10%, transparent 10.01%);
+  background-image: -webkit-radial-gradient(circle, #fff 10%, transparent 10.01%);
+  background-image: -o-radial-gradient(circle, #fff 10%, transparent 10.01%);
+  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
   background-repeat: no-repeat;
   -webkit-background-size: 1000% 1000%;
           background-size: 1000% 1000%;
@@ -6795,13 +6993,16 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   -o-transition: background .5s, opacity 1s;
   transition: background .5s, opacity 1s;
 }
-.btn-link:active:after {
-  -webkit-background-size: 0% 0%;
-          background-size: 0% 0%;
+.btn-outline-danger:active:after {
+  -webkit-background-size: 0 0;
+          background-size: 0 0;
   opacity: .2;
   -webkit-transition: 0s;
   -o-transition: 0s;
   transition: 0s;
+}
+.btn-outline-danger.disabled:after, .btn-outline-danger[disabled]:after {
+  display: none;
 }
 
 .btn {
@@ -6816,17 +7017,17 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 .btn-link {
   -webkit-box-shadow: none;
           box-shadow: none;
-  color: #222;
+  color: #2196F3;
 }
 .btn-link:hover, .btn-link:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
-  color: #222;
-  text-decoration: none;
+  color: #0a6ebd;
+  text-decoration: underline;
 }
-.btn-link .disabled:hover, .btn-link .disabled:active:hover, .btn-link[disabled]:hover, .btn-link[disabled]:active:hover, fieldset[disabled] .btn-link:hover, fieldset[disabled] .btn-link:active:hover {
-  background-color: #fff;
-  color: #222;
+.btn-link.disabled:hover, .btn-link.disabled:active:hover, .btn-link[disabled]:hover, .btn-link[disabled]:active:hover, fieldset[disabled] .btn-link:hover, fieldset[disabled] .btn-link:active:hover {
+  color: #666;
+  text-decoration: none;
 }
 .btn-secondary.disabled, .btn-secondary[disabled], fieldset[disabled] .btn-secondary {
   background-color: rgba(0, 0, 0, 0.1);
