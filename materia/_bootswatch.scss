@@ -102,6 +102,10 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
 
     @include ripple($color);
   }
+
+  .btn-outline-#{$class} {
+    @include ripple($color);
+  }
 }
 
 @include btn(primary,$btn-primary-bg,$btn-primary-color);
@@ -110,7 +114,6 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
 @include btn(info,$btn-info-bg,$btn-info-color);
 @include btn(warning,$btn-warning-bg,$btn-warning-color);
 @include btn(danger,$btn-danger-bg,$btn-danger-color);
-@include btn(link,#fff,$btn-secondary-color);
 
 .btn {
   text-transform: uppercase;
@@ -120,22 +123,22 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
 
   &-link {
     box-shadow: none;
-    color: $btn-secondary-color;
+    color: $link-color;
 
     &:hover,
     &:focus {
       box-shadow: none;
-      color: $btn-secondary-color;
-      text-decoration: none;
+      color: $link-hover-color;
+      text-decoration: $link-hover-decoration;
     }
 
-    .disabled, // Although btn-link is intended for buttons, which want to look like link, I include here a.disable for the sake of consistency
+    &.disabled, // Although btn-link is intended for buttons, which want to look like link, I include here a.disable for the sake of consistency
     &[disabled],
     fieldset[disabled] & {
       &:hover,
       &:active:hover {
-        background-color: #fff;
-        color: $btn-secondary-color;
+        color: $btn-link-disabled-color;
+        text-decoration: none;
       }
     }
   }
