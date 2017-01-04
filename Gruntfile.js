@@ -33,6 +33,7 @@ module.exports = function (grunt) {
       sandstone:{},
       simplex:{},
       slate:{},
+      solar:{},
       spacelab:{},
       superhero:{},
       united:{},
