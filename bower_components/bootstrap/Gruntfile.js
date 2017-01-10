@@ -1,32 +1,31 @@
 /*!
  * Bootstrap's Gruntfile
  * https://getbootstrap.com
- * Copyright 2013-2016 The Bootstrap Authors
- * Copyright 2013-2016 Twitter, Inc.
+ * Copyright 2013-2017 The Bootstrap Authors
+ * Copyright 2013-2017 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
 module.exports = function (grunt) {
-  'use strict';
+  'use strict'
 
   // Force use of Unix newlines
-  grunt.util.linefeed = '\n';
+  grunt.util.linefeed = '\n'
 
   RegExp.quote = function (string) {
-    return string.replace(/[-\\^$*+?.()|[\]{}]/g, '\\$&');
-  };
+    return string.replace(/[-\\^$*+?.()|[\]{}]/g, '\\$&')
+  }
 
-  var fs = require('fs');
-  var path = require('path');
-  var isTravis = require('is-travis');
+  var path = require('path')
+  var isTravis = require('is-travis')
 
-  var configBridge = grunt.file.readJSON('./grunt/configBridge.json', { encoding: 'utf8' });
+  var configBridge = grunt.file.readJSON('./grunt/configBridge.json', { encoding: 'utf8' })
 
   Object.keys(configBridge.paths).forEach(function (key) {
     configBridge.paths[key].forEach(function (val, i, arr) {
-      arr[i] = path.join('./docs', val);
-    });
-  });
+      arr[i] = path.join('./docs', val)
+    })
+  })
 
   // Project configuration.
   grunt.initConfig({
@@ -39,7 +38,7 @@ module.exports = function (grunt) {
             ' * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)\n' +
             ' */\n',
     jqueryCheck: 'if (typeof jQuery === \'undefined\') {\n' +
-                 '  throw new Error(\'Bootstrap\\\'s JavaScript requires jQuery\')\n' +
+                 '  throw new Error(\'Bootstrap\\\'s JavaScript requires jQuery. jQuery must be included before Bootstrap\\\'s JavaScript.\')\n' +
                  '}\n',
     jqueryVersionCheck: '+function ($) {\n' +
                         '  var version = $.fn.jquery.split(\' \')[0].split(\'.\')\n' +
@@ -100,7 +99,7 @@ module.exports = function (grunt) {
       options: {
         // Custom function to remove all export and import statements
         process: function (src) {
-          return src.replace(/^(export|import).*/gm, '');
+          return src.replace(/^(export|import).*/gm, '')
         }
       },
       bootstrap: {
@@ -121,24 +120,6 @@ module.exports = function (grunt) {
       }
     },
 
-    uglify: {
-      options: {
-        compress: {
-          warnings: false
-        },
-        mangle: true,
-        preserveComments: /^!|@preserve|@license|@cc_on/i
-      },
-      core: {
-        src: '<%= concat.bootstrap.dest %>',
-        dest: 'dist/js/<%= pkg.name %>.min.js'
-      },
-      docsJs: {
-        src: configBridge.paths.docsJs,
-        dest: 'docs/assets/js/docs.min.js'
-      }
-    },
-
     qunit: {
       options: {
         inject: 'js/tests/unit/phantom.js'
@@ -147,51 +128,6 @@ module.exports = function (grunt) {
     },
 
     // CSS build configuration
-    scsslint: {
-      options: {
-        bundleExec: true,
-        config: 'scss/.scss-lint.yml',
-        reporterOutput: null
-      },
-      core: {
-        src: ['scss/*.scss', '!scss/_normalize.scss']
-      },
-      docs: {
-        src: ['docs/assets/scss/*.scss', '!docs/assets/scss/docs.scss']
-      }
-    },
-
-    cssmin: {
-      options: {
-        compatibility: 'ie9,-properties.zeroUnits',
-        sourceMap: true,
-        // sourceMapInlineSources: true,
-        advanced: false
-      },
-      core: {
-        files: [
-          {
-            expand: true,
-            cwd: 'dist/css',
-            src: ['*.css', '!*.min.css'],
-            dest: 'dist/css',
-            ext: '.min.css'
-          }
-        ]
-      },
-      docs: {
-        files: [
-          {
-            expand: true,
-            cwd: 'docs/assets/css',
-            src: ['*.css', '!*.min.css'],
-            dest: 'docs/assets/css',
-            ext: '.min.css'
-          }
-        ]
-      }
-    },
-
     copy: {
       docs: {
         expand: true,
@@ -275,6 +211,12 @@ module.exports = function (grunt) {
     },
 
     exec: {
+      'clean-css': {
+        command: 'npm run clean-css'
+      },
+      'clean-css-docs': {
+        command: 'npm run clean-css-docs'
+      },
       postcss: {
         command: 'npm run postcss'
       },
@@ -284,8 +226,23 @@ module.exports = function (grunt) {
       htmlhint: {
         command: 'npm run htmlhint'
       },
-      'upload-preview': {
-        command: './grunt/upload-preview.sh'
+      sass: {
+        command: 'npm run sass'
+      },
+      'sass-docs': {
+        command: 'npm run sass-docs'
+      },
+      'scss-lint': {
+        command: 'npm run scss-lint'
+      },
+      'scss-lint-docs': {
+        command: 'npm run scss-lint-docs'
+      },
+      uglify: {
+        command: 'npm run uglify'
+      },
+      'uglify-docs': {
+        command: 'npm run uglify-docs'
       }
     },
 
@@ -323,83 +280,76 @@ module.exports = function (grunt) {
       }
     }
 
-  });
+  })
 
 
   // These plugins provide necessary tasks.
-  require('load-grunt-tasks')(grunt, { scope: 'devDependencies',
-    // Exclude Sass compilers. We choose the one to load later on.
-    pattern: ['grunt-*', '!grunt-sass', '!grunt-contrib-sass'] });
-  require('time-grunt')(grunt);
+  require('load-grunt-tasks')(grunt)
+  require('time-grunt')(grunt)
 
   // Docs HTML validation task
-  grunt.registerTask('validate-html', ['jekyll:docs', 'htmllint', 'exec:htmlhint']);
+  grunt.registerTask('validate-html', ['jekyll:docs', 'htmllint', 'exec:htmlhint'])
 
   var runSubset = function (subset) {
-    return !process.env.TWBS_TEST || process.env.TWBS_TEST === subset;
-  };
+    return !process.env.TWBS_TEST || process.env.TWBS_TEST === subset
+  }
   var isUndefOrNonZero = function (val) {
-    return val === undefined || val !== '0';
-  };
+    return val === undefined || val !== '0'
+  }
 
   // Test task.
-  var testSubtasks = [];
+  var testSubtasks = []
   // Skip core tests if running a different subset of the test suite
   if (runSubset('core') &&
     // Skip core tests if this is a Savage build
     process.env.TRAVIS_REPO_SLUG !== 'twbs-savage/bootstrap') {
-    testSubtasks = testSubtasks.concat(['dist-css', 'dist-js', 'test-scss', 'qunit', 'docs']);
+    testSubtasks = testSubtasks.concat(['dist-css', 'dist-js', 'test-scss', 'qunit', 'docs'])
   }
   // Skip HTML validation if running a different subset of the test suite
   if (runSubset('validate-html') &&
       isTravis &&
       // Skip HTML5 validator when [skip validator] is in the commit message
       isUndefOrNonZero(process.env.TWBS_DO_VALIDATOR)) {
-    testSubtasks.push('validate-html');
+    testSubtasks.push('validate-html')
   }
   // Only run Sauce Labs tests if there's a Sauce access key
   if (typeof process.env.SAUCE_ACCESS_KEY !== 'undefined' &&
       // Skip Sauce if running a different subset of the test suite
       runSubset('sauce-js-unit')) {
-    testSubtasks = testSubtasks.concat(['dist', 'docs-css', 'docs-js', 'clean:docs', 'copy:docs', 'exec:upload-preview']);
+    testSubtasks = testSubtasks.concat(['dist', 'docs-css', 'docs-js', 'clean:docs', 'copy:docs'])
     // Skip Sauce on Travis when [skip sauce] is in the commit message
     if (isUndefOrNonZero(process.env.TWBS_DO_SAUCE)) {
-      testSubtasks.push('connect');
-      testSubtasks.push('saucelabs-qunit');
+      testSubtasks.push('connect')
+      testSubtasks.push('saucelabs-qunit')
     }
   }
-  grunt.registerTask('test', testSubtasks);
+  grunt.registerTask('test', testSubtasks)
 
   // JS distribution task.
-  grunt.registerTask('dist-js', ['babel:dev', 'concat', 'babel:dist', 'stamp', 'uglify:core']);
+  grunt.registerTask('dist-js', ['babel:dev', 'concat', 'babel:dist', 'stamp', 'exec:uglify'])
 
-  grunt.registerTask('test-scss', ['scsslint:core']);
+  grunt.registerTask('test-scss', ['exec:scss-lint'])
 
   // CSS distribution task.
-  // Supported Compilers: sass (Ruby) and libsass.
-  (function (sassCompilerName) {
-    require('./grunt/bs-sass-compile/' + sassCompilerName + '.js')(grunt);
-  })(process.env.TWBS_SASS || 'libsass');
-  // grunt.registerTask('sass-compile', ['sass:core', 'sass:extras', 'sass:docs']);
-  grunt.registerTask('sass-compile', ['sass:core', 'sass:extras', 'sass:docs']);
+  grunt.registerTask('sass-compile', ['exec:sass', 'exec:sass-docs'])
 
-  grunt.registerTask('dist-css', ['sass-compile', 'exec:postcss', 'cssmin:core', 'cssmin:docs']);
+  grunt.registerTask('dist-css', ['sass-compile', 'exec:postcss', 'exec:clean-css', 'exec:clean-css-docs'])
 
   // Full distribution task.
-  grunt.registerTask('dist', ['clean:dist', 'dist-css', 'dist-js']);
+  grunt.registerTask('dist', ['clean:dist', 'dist-css', 'dist-js'])
 
   // Default task.
-  grunt.registerTask('default', ['clean:dist', 'test']);
+  grunt.registerTask('default', ['clean:dist', 'test'])
 
   // Docs task.
-  grunt.registerTask('docs-css', ['cssmin:docs', 'exec:postcss-docs']);
-  grunt.registerTask('lint-docs-css', ['scsslint:docs']);
-  grunt.registerTask('docs-js', ['uglify:docsJs']);
-  grunt.registerTask('docs', ['lint-docs-css', 'docs-css', 'docs-js', 'clean:docs', 'copy:docs']);
-  grunt.registerTask('docs-github', ['jekyll:github']);
+  grunt.registerTask('docs-css', ['exec:clean-css-docs', 'exec:postcss-docs'])
+  grunt.registerTask('lint-docs-css', ['exec:scss-lint-docs'])
+  grunt.registerTask('docs-js', ['exec:uglify-docs'])
+  grunt.registerTask('docs', ['lint-docs-css', 'docs-css', 'docs-js', 'clean:docs', 'copy:docs'])
+  grunt.registerTask('docs-github', ['jekyll:github'])
 
-  grunt.registerTask('prep-release', ['dist', 'docs', 'docs-github', 'compress']);
+  grunt.registerTask('prep-release', ['dist', 'docs', 'docs-github', 'compress'])
 
   // Publish to GitHub
-  grunt.registerTask('publish', ['buildcontrol:pages']);
-};
+  grunt.registerTask('publish', ['buildcontrol:pages'])
+}

@@ -759,20 +759,24 @@ class TetherClass extends Evented {
     }
 
     if (!moved) {
-      let offsetParentIsBody = true;
-      let currentNode = this.element.parentNode;
-      while (currentNode && currentNode.nodeType === 1 && currentNode.tagName !== 'BODY') {
-        if (getComputedStyle(currentNode).position !== 'static') {
-          offsetParentIsBody = false;
-          break;
+      if (this.options.bodyElement) {
+        this.options.bodyElement.appendChild(this.element);
+      } else {
+        let offsetParentIsBody = true;
+        let currentNode = this.element.parentNode;
+        while (currentNode && currentNode.nodeType === 1 && currentNode.tagName !== 'BODY') {
+          if (getComputedStyle(currentNode).position !== 'static') {
+            offsetParentIsBody = false;
+            break;
+          }
+
+          currentNode = currentNode.parentNode;
         }
 
-        currentNode = currentNode.parentNode;
-      }
-
-      if (!offsetParentIsBody) {
-        this.element.parentNode.removeChild(this.element);
-        this.element.ownerDocument.body.appendChild(this.element);
+        if (!offsetParentIsBody) {
+          this.element.parentNode.removeChild(this.element);
+          this.element.ownerDocument.body.appendChild(this.element);
+        }
       }
     }
 

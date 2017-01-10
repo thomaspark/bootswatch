@@ -13,7 +13,10 @@
     *,
     *::before,
     *::after,
-    *::first-letter,
+    p::first-letter,
+    div::first-letter,
+    blockquote::first-letter,
+    li::first-letter,
     p::first-line,
     div::first-line,
     blockquote::first-line,
@@ -92,13 +95,7 @@
     .navbar {
       display: none;
     }
-    .btn,
-    .dropup > .btn {
-      > .caret {
-        border-top-color: #000 !important;
-      }
-    }
-    .tag {
+    .badge {
       border: $border-width solid #000;
     }
 
