@@ -28,16 +28,13 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:400,700" !def
 }
 
 .bg-primary {
-  border-color: darken($brand-primary, 6.5%);
+  background-color: #fff !important;
+  border-color: darken(#fff, 6.5%);
 }
 
 .bg-inverse {
-  border-color: darken($body-color, 6.5%);
-}
-
-.bg-faded {
-  background-color: #fff !important;
-  border-color: darken(#fff, 6.5%);
+  background-color: $brand-primary !important;
+  border-color: darken($brand-primary, 6.5%) !important;
 }
 
 // Buttons =====================================================================

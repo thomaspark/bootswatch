@@ -17,17 +17,13 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400
 }
 
 .bg-primary {
-  border-color: darken($brand-primary, 5%);
-}
-
-.bg-faded {
-  background-color: #fff;
+  background-color: #fff !important;
   border-color: darken(#fff, 5%);
 }
 
 .bg-inverse {
-  background-color: $gray-lightest !important;
-  border-color: darken($gray-lightest, 5%);
+  background-color: $brand-primary !important;
+  border-color: darken($brand-primary, 5%) !important;
 }
 
 // Buttons =====================================================================

@@ -25,18 +25,14 @@
     </script>
   </head>
   <body id="home">
-    <div class="navbar navbar-dark navbar-fixed-top bg-primary navbar-transparent">
+    <div class="navbar navbar-toggleable-md fixed-top navbar-inverse bg-primary navbar-transparent">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
       <div class="container">
-        <div class="clearfix">
-          <button class="navbar-toggler float-xs-right hidden-sm-up" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"></button>
-          <a href="../" class="navbar-brand hidden-sm-up">Bootswatch</a>
-        </div>
-        <div class="collapse navbar-toggleable-xs" id="navbarResponsive">
-          <ul class="nav navbar-nav">
-            <li class="nav-item active logo">
-              <img src="assets/img/logo-nav.png">
-              <a class="nav-link" href="./">Bootswatch</a>
-            </li>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <a href="./" class="navbar-brand">Bootswatch</a>
+          <ul class="navbar-nav">
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Themes <span class="caret"></span></a>
               <div class="dropdown-menu" aria-labelledby="themes">
@@ -57,6 +53,7 @@
                 <a class="dropdown-item" href="./sandstone/">Sandstone</a>
                 <a class="dropdown-item" href="./simplex/">Simplex</a>
                 <a class="dropdown-item" href="./slate/">Slate</a>
+                <a class="dropdown-item" href="./solar/">Solar</a>
                 <a class="dropdown-item" href="./spacelab/">Spacelab</a>
                 <a class="dropdown-item" href="./superhero/">Superhero</a>
                 <a class="dropdown-item" href="./united/">United</a>
@@ -71,7 +68,7 @@
             </li>
           </ul>
 
-          <ul class="nav navbar-nav float-lg-right">
+          <ul class="nav navbar-nav ml-auto">
             <li class="nav-item">
               <a class="nav-link" href="http://builtwithbootstrap.com/" target="_blank">Built With Bootstrap</a>
             </li>
@@ -553,6 +550,35 @@
               </div>
             </div>
           </div>
+
+          <div class="col-lg-4 col-sm-6">
+            <div class="preview">
+              <div class="image">
+                <a href="solar/"><img class="img-responsive" src="solar/thumbnail.png" alt="Solar"></a>
+              </div>
+              <div class="options">
+                <h3>Solar</h3>
+                <p>A spin on Solarized</p>
+                <div class="btn-group"><a class="btn btn-info" href="solar/">Preview</a></div>
+                <div class="btn-group">
+                  <a class="btn btn-info" target="_blank" href="solar/bootstrap.min.css"
+                  onClick="_gaq.push(['_trackEvent', 'bootswatch', 'solar', 'bootstrap.min.css']);">Download</a>
+                  <a class="btn btn-info dropdown-toggle" data-toggle="dropdown" href="#">
+                    <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a target="_blank" href="solar/bootstrap.min.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'solar', 'bootstrap.min.css']);">bootstrap.min.css</a></li>
+                    <li><a target="_blank" href="solar/bootstrap.css" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'solar', 'bootstrap.css']);">bootstrap.css</a></li>
+                    <li class="divider"></li>
+                    <li><a target="_blank" href="solar/_variables.scss" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'solar', '_variables.scss']);">_variables.scss</a></li>
+                    <li><a target="_blank" href="solar/_bootswatch.scss" onClick="_gaq.push(['_trackEvent', 'bootswatch', 'solar', '_bootswatch.scss']);">_bootswatch.scss</a></li>
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
           <div class="col-lg-4 col-sm-6">
             <div class="preview">
               <div class="image">

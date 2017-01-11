@@ -7,22 +7,23 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:400,700" !defaul
 
 // Navbar ======================================================================
 
-.bg-faded {
-  background-color: $gray;
+.bg-primary {
+  background-color: #060606 !important;
+  border: 1px solid $gray;
 }
 
 .bg-inverse {
-  background-color: #060606 !important;
+  background-color: $gray !important;
   border: 1px solid $gray;
 }
 
 .navbar {
 
-  &-fixed-top.bg-inverse {
+  &.fixed-top {
     border-width: 0 0 1px 0;
   }
 
-  &-fixed-bottom.bg-inverse {
+  &.fixed-bottom {
     border-width: 1px 0 0 0;
   }
 

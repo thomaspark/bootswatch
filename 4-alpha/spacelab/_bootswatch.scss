@@ -22,14 +22,6 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:400italic,700
 }
 
 .bg-primary {
-  @include btn-shadow($gray-lighter);
-}
-
-.bg-inverse {
-  @include btn-shadow($brand-primary);
-}
-
-.bg-faded {
   @include btn-shadow($gray-lightest);
 
   .nav-link {
@@ -44,6 +36,10 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:400italic,700
   .nav-item.active .nav-link {
     color: $navbar-light-hover-color;
   }
+}
+
+.bg-inverse {
+  @include btn-shadow($brand-primary);
 }
 
 // Buttons =====================================================================
