@@ -11,12 +11,8 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Raleway:400,700" !defau
   font-size: 14px;
 }
 
-.bg-inverse {
-  background-color: $brand-success !important;
-}
-
-.bg-faded {
-  background-color: #fff;
+.bg-primary {
+  background-color: #fff !important;
   border: 1px solid rgba(0, 0, 0, 0.1);
 
   &.navbar-fixed-top {
@@ -26,6 +22,10 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Raleway:400,700" !defau
   &.navbar-fixed-bottom {
     border-width: 1px 0 0 0;
   }
+}
+
+.bg-inverse {
+  background-color: $brand-success !important;
 }
 
 // Buttons =====================================================================

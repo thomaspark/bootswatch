@@ -14,12 +14,8 @@ $text-shadow: 0 1px 0 rgba(0, 0, 0, 0.05) !default;
   @include btn-shadow($brand-primary);
 }
 
-.bg-faded {
-  @include gradient-y-three-colors(lighten($gray-light, 8%), $gray-light, 60%, darken($gray-light, 2%));
-}
-
 .bg-inverse {
-  @include gradient-y-three-colors(lighten($brand-info, 5%), lighten($brand-info, 4%), 60%, darken($brand-info, 2%));
+  @include gradient-y-three-colors(lighten($gray-light, 8%), $gray-light, 60%, darken($gray-light, 2%));
 }
 
 .nav-item {

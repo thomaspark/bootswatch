@@ -7,8 +7,8 @@ $web-font-path: "https://fonts.googleapis.com/css?family=News+Cycle:400,700" !de
 
 // Navbar ======================================================================
 
-.bg-faded {
-  background-color: #fff;
+.bg-primary {
+  background-color: #fff !important;
   border: 1px solid $gray-lightest;
 
   &.navbar-fixed-top {
@@ -18,6 +18,10 @@ $web-font-path: "https://fonts.googleapis.com/css?family=News+Cycle:400,700" !de
   &.navbar-fixed-bottom {
     border-width: 1px 0 0 0;
   }
+}
+
+.bg-inverse {
+  background-color: #000 !important;
 }
 
 .navbar {
@@ -31,7 +35,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=News+Cycle:400,700" !de
 }
 
 .navbar-brand {
-  padding-top: 0.4rem;
+  padding-top: 0.5rem;
   font-size: inherit;
   font-weight: $headings-font-weight;
   text-transform: uppercase;
