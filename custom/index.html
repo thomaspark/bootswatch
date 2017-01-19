@@ -51,6 +51,7 @@
                 <a class="dropdown-item" href="../pulse/">Pulse</a>
                 <a class="dropdown-item" href="../sandstone/">Sandstone</a>
                 <a class="dropdown-item" href="../simplex/">Simplex</a>
+                <a class="dropdown-item" href="../sketchy/">Sketchy</a>
                 <a class="dropdown-item" href="../slate/">Slate</a>
                 <a class="dropdown-item" href="../solar/">Solar</a>
                 <a class="dropdown-item" href="../spacelab/">Spacelab</a>
@@ -1240,18 +1241,20 @@
             <h2>Modals</h2>
             <div class="bs-component">
               <div class="modal">
-                <div class="modal-dialog">
+                <div class="modal-dialog" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                      <h4 class="modal-title">Modal title</h4>
+                      <h5 class="modal-title">Modal title</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
                     </div>
                     <div class="modal-body">
-                      <p>One fine body…</p>
+                      <p>Modal body text goes here.</p>
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                       <button type="button" class="btn btn-primary">Save changes</button>
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     </div>
                   </div>
                 </div>

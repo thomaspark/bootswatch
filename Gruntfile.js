@@ -32,6 +32,7 @@ module.exports = function (grunt) {
       pulse:{},
       sandstone:{},
       simplex:{},
+      sketchy:{},
       slate:{},
       solar:{},
       spacelab:{},
