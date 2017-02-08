@@ -78,7 +78,7 @@
     }
 
     &:active {
-      .box-shadow(0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.4););
+      .box-shadow(2px 2px 4px rgba(0,0,0,.4));
     }
 
     .ripple(@color);
@@ -96,7 +96,7 @@
 .btn {
   text-transform: uppercase;
   border: none;
-  .box-shadow(0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2););
+  .box-shadow(1px 1px 4px rgba(0,0,0,.4));
   .transition(box-shadow 0.2s);
 
   &-link {
@@ -152,19 +152,6 @@
     > .btn-group + .btn,
     > .btn-group + .btn-group {
       margin-top: 0;
-    }
-  }
-}
-
-// Reset z-index, prevent shadow overlay
-.btn-group,
-.btn-group-vertical {
-	> .btn {
-    &:hover,
-    &:focus,
-    &:active,
-    &.active {
-      z-index: initial;
     }
   }
 }
@@ -311,7 +298,7 @@ input[type="radio"],
     width: 18px;
     height: 18px;
     border-radius: 50%;
-    .transition(200ms);
+    .transition(0.2s);
   }
 
   &:before {
@@ -373,7 +360,7 @@ input[type="checkbox"],
     margin-right: 5px;
     border: 2px solid @gray;
     border-radius: 2px;
-    .transition(200ms);
+    .transition(0.2s);
   }
 
   &:checked:before {
@@ -515,7 +502,7 @@ input[type="checkbox"],
 .dropdown-menu {
   margin-top: 0;
   border: none;
-  .box-shadow(0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2););
+  .box-shadow(0 1px 4px rgba(0,0,0,.3));
 }
 
 // Indicators =================================================================
@@ -523,8 +510,6 @@ input[type="checkbox"],
 .alert {
   border: none;
   color: #fff;
-  .box-shadow(0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2););
-
 
   &-success {
     background-color: @brand-success;
@@ -611,6 +596,10 @@ input[type="checkbox"],
   .box-shadow(0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.4););
 }
 
+.modal-header {
+	padding-bottom: 0px;
+}
+
 // Containers =================================================================
 
 .close {
@@ -643,7 +632,7 @@ input[type="checkbox"],
 .panel {
   border: none;
   border-radius: 2px;
-  .box-shadow(0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2););
+  .box-shadow(0 1px 4px rgba(0,0,0,.3));
 
   &-heading {
     border-bottom: none;
@@ -656,7 +645,7 @@ input[type="checkbox"],
 
 .popover {
   border: none;
-  .box-shadow(0 2px 5px 0 rgba(0, 0, 0, 0.26));
+  .box-shadow(0 1px 4px rgba(0,0,0,.3));
 }
 
 .carousel {
