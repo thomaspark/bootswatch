@@ -519,33 +519,6 @@ input[type="checkbox"],
 
 .alert {
   border: none;
-  color: #fff;
-
-  &-success {
-    background-color: $brand-success;
-  }
-
-  &-info {
-    background-color: $brand-info;
-  }
-
-  &-warning {
-    background-color: $brand-warning;
-  }
-
-  &-danger {
-    background-color: $brand-danger;
-  }
-
-  a:not(.close):not(.btn),
-  .alert-link {
-    color: #fff;
-    font-weight: bold;
-  }
-
-  .close {
-    color: #fff;
-  }
 }
 
 .badge {
@@ -582,18 +555,18 @@ input[type="checkbox"],
     }
 
     &-success:last-child.progress-bar:before {
-      background-color: lighten($brand-success, 35%);
+      background-color: lighten($progress-bar-success-bg, 35%);
     }
 
     &-info:last-child.progress-bar:before {
-      background-color: lighten($brand-info, 45%);
+      background-color: lighten($progress-bar-info-bg, 45%);
     }
     &-warning:last-child.progress-bar:before {
-      background-color: lighten($brand-warning, 35%);
+      background-color: lighten($progress-bar-warning-bg, 35%);
     }
 
     &-danger:last-child.progress-bar:before {
-      background-color: lighten($brand-danger, 25%);
+      background-color: lighten($progress-bar-danger-bg, 25%);
     }
   }
 }
