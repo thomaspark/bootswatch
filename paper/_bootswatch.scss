@@ -74,7 +74,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
     }
 
     &:active {
-      @include box-shadow(0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.4));
+      @include box-shadow(2px 2px 4px rgba(0,0,0,.4));
     }
 
     @include ripple($color);
@@ -92,7 +92,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
 .btn {
   text-transform: uppercase;
   border: none;
-  @include box-shadow(0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2));
+  @include box-shadow(2px 2px 4px rgba(0,0,0,.4))
   @include transition(box-shadow 0.2s);
 
   &-link {
@@ -498,7 +498,7 @@ input[type="checkbox"],
 .dropdown-menu {
   margin-top: 0;
   border: none;
-  @include box-shadow(0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2));
+  @include box-shadow(1px 1px 4px rgba(0,0,0,.4));
 }
 
 // Indicators =================================================================
@@ -506,7 +506,6 @@ input[type="checkbox"],
 .alert {
   border: none;
   color: #fff;
-  @include box-shadow(0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2));
 
   &-success {
     background-color: $brand-success;
@@ -619,7 +618,7 @@ input[type="checkbox"],
 .panel {
   border: none;
   border-radius: 2px;
-  @include box-shadow(0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2));
+  @include box-shadow(0 1px 4px rgba(0,0,0,.3));
 
   &-heading {
     border-bottom: none;
@@ -632,7 +631,7 @@ input[type="checkbox"],
 
 .popover {
   border: none;
-  @include box-shadow(0 2px 5px 0 rgba(0, 0, 0, 0.26));
+  @include box-shadow(0 1px 4px rgba(0,0,0,.3));
 }
 
 .carousel {
