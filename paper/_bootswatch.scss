@@ -169,6 +169,20 @@ button {
   letter-spacing: .1px;
 }
 
+a {
+  @include transition(all 0.2s);
+}
+
+// Tables =====================================================================
+
+.table-hover {
+  > tbody > tr,
+  > tbody > tr > th,
+  > tbody > tr > td {
+    @include transition(all 0.2s);
+  }
+}
+
 // Forms ======================================================================
 
 label {
@@ -593,6 +607,7 @@ input[type="checkbox"],
   font-weight: 300;
   line-height: 24px;
   opacity: 0.6;
+  @include transition(all 0.2s);
 
   &:hover {
     opacity: 1;
