@@ -308,7 +308,7 @@ input[type="radio"],
     width: 18px;
     height: 18px;
     border-radius: 50%;
-    @include transition(0.2ms);
+    @include transition(0.2s);
   }
 
   &:before {
@@ -370,7 +370,7 @@ input[type="checkbox"],
     margin-right: 5px;
     border: 2px solid $gray;
     border-radius: 2px;
-    @include transition(0.2ms);
+    @include transition(0.2s);
   }
 
   &:checked:before {
@@ -512,7 +512,7 @@ input[type="checkbox"],
 .dropdown-menu {
   margin-top: 0;
   border: none;
-  @include box-shadow(1px 1px 4px rgba(0,0,0,.4));
+  @include box-shadow(0px 1px 4px rgba(0,0,0,.3));
 }
 
 // Indicators =================================================================
