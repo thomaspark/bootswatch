@@ -7157,6 +7157,18 @@ button {
   -webkit-font-smoothing: antialiased;
   letter-spacing: .1px;
 }
+a {
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.table-hover > tbody > tr,
+.table-hover > tbody > tr > th,
+.table-hover > tbody > tr > td {
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
 label {
   font-weight: normal;
 }
