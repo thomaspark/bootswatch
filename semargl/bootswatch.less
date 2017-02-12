@@ -1,0 +1,207 @@
+// Semargl 3.3.6
+// Bootswatch
+// -----------------------------------------------------
+
+@web-font-path: "https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600,600italic&subset=latin,latin-ext";
+
+.web-font(@path) {
+  @import url("@{path}");
+}
+.web-font(@web-font-path);
+
+
+html, body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+// Navbar =====================================================================
+
+.navbar {
+  padding-left: 15px;
+  padding-right: 15px;
+
+  a {
+    font-weight: bold;
+  }
+
+  .btn {
+    &.btn-default {
+      border-color: #FFF;
+    }
+  }
+
+  .navbar-brand {
+    margin-right: 15px;
+  }
+
+  &-default {
+    .navbar-form {
+      input.form-control {
+        border-color: @brand-danger;
+      }
+    }
+    .dropdown {
+      .dropdown-menu > li > a:hover,
+      .dropdown-menu > li > a:focus {
+        text-decoration: none;
+        color: #FFF;
+        background-color: @brand-danger;
+      }
+    }
+  }
+
+  &-inverse {
+
+    .badge {
+      background-color: #fff;
+      color: @brand-primary;
+    }
+
+    .navbar-form {
+      input.form-control {
+        border-color: @brand-primary;
+      }
+    }
+    .dropdown {
+      .dropdown-menu > li > a:hover,
+      .dropdown-menu > li > a:focus {
+        text-decoration: none;
+        color: #FFF;
+        background-color: @brand-primary;
+      }
+    }
+  }
+}
+
+// Buttons ====================================================================
+
+.btn {
+  font-family: @headings-font-family;
+}
+
+// Typography =================================================================
+
+// Tables =====================================================================
+.table {
+  tr.info,
+  tr.success,
+  tr.warning,
+  tr.danger {
+      color: #FFF;
+  }
+}
+// Forms ======================================================================
+
+.has-warning {
+  .help-block,
+  .control-label,
+  .radio,
+  .checkbox,
+  .radio-inline,
+  .checkbox-inline,
+  &.radio label,
+  &.checkbox label,
+  &.radio-inline label,
+  &.checkbox-inline label,
+  .form-control-feedback {
+    color: @brand-warning;
+  }
+
+  .form-control,
+  .form-control:focus {
+    border-color: @brand-warning;
+  }
+}
+
+.has-error {
+  .help-block,
+  .control-label,
+  .radio,
+  .checkbox,
+  .radio-inline,
+  .checkbox-inline,
+  &.radio label,
+  &.checkbox label,
+  &.radio-inline label,
+  &.checkbox-inline label,
+  .form-control-feedback {
+    color: @brand-danger;
+  }
+
+  .form-control,
+  .form-control:focus {
+    border-color: @brand-danger;
+  }
+}
+
+.has-success {
+  .help-block,
+  .control-label,
+  .radio,
+  .checkbox,
+  .radio-inline,
+  .checkbox-inline,
+  &.radio label,
+  &.checkbox label,
+  &.radio-inline label,
+  &.checkbox-inline label,
+  .form-control-feedback {
+    color: @brand-success;
+  }
+
+  .form-control,
+  .form-control:focus {
+    border-color: @brand-success;
+  }
+}
+
+// Navs =======================================================================
+
+.pager {
+  li a {
+    color: @pagination-color;
+  }
+
+  li a:hover,
+  li a:focus,
+  li a:active,
+  .active > a {
+    border-color: @brand-primary;
+    color: #fff;
+  }
+
+  .disabled > a {
+    border-color: @pager-border;
+  }
+}
+
+// Tabs =================================================================
+.nav-tabs {
+  &.nav-tabs-* {
+    li {
+      font-weight: bold;
+
+      a {
+        border-top: 4px solid @body-bg;
+        font-weight: bold;
+      }
+    }
+  }
+  &.nav-tabs-default {
+    li.active a {
+      border-top: 4px solid @brand-danger;
+    }
+  }
+  &.nav-tabs-inverse {
+    li.active a {
+      border-top: 4px solid @brand-primary;
+    }
+  }
+
+}
+
+// Indicators =================================================================
+
+// Progress bars ==============================================================
+
+// Containers =================================================================
