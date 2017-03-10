@@ -7300,6 +7300,24 @@ select.form-control:focus {
   box-shadow: inset 0 -2px 0 #2196f3;
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAMAAACelLz8AAAAJ1BMVEUhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISF8S9ewAAAADHRSTlMAAgMJC0uWpKa6wMxMdjkoAAAANUlEQVR4AeXJyQEAERAAsNl7Hf3X6xt0QL6JpZWq30pdvdadme+0PMdzvHm8YThHcT1H7K0BtOMDniZhWOgAAAAASUVORK5CYII=);
 }
+select[disabled],
+select.form-control[disabled],
+select[readonly],
+select.form-control[readonly] {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-bottom: 1px dotted #ddd;
+}
+select[disabled],
+select.form-control[disabled],
+select[readonly],
+select.form-control[readonly],
+select[disabled] option,
+select.form-control[disabled] option,
+select[readonly] option,
+select.form-control[readonly] option {
+  color: #bbbbbb;
+}
 select[multiple],
 select.form-control[multiple] {
   background: none;
