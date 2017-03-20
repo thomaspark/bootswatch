@@ -2670,6 +2670,8 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
   -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
@@ -2706,6 +2708,8 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
     -webkit-flex: 0 0 auto;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
     -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
             flex-flow: row wrap;
@@ -4604,6 +4608,8 @@ tbody.collapse.show {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
     -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
             flex-flow: row wrap;
@@ -4636,6 +4642,8 @@ tbody.collapse.show {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
     -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
             flex-flow: row wrap;
@@ -5085,6 +5093,8 @@ a.badge:focus, a.badge:hover {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
   -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
@@ -9701,8 +9711,8 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 .bg-inverse {
   background-color: #18BC9C !important;
 }
-.bg-inverse.navbar-dark .navbar-nav .nav-link:focus, .bg-inverse.navbar-dark .navbar-nav .nav-link:hover {
-  color: #2C3E50;
+.bg-inverse.navbar-inverse .navbar-nav .nav-link:focus, .bg-inverse.navbar-inverse .navbar-nav .nav-link:hover {
+  color: #2C3E50 !important;
 }
 
 .navbar-brand {
