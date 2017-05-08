@@ -226,6 +226,18 @@ label {
   font-weight: normal;
 }
 
+.col-form-label {
+  font-size: 16px;
+
+  &-sm {
+    font-size: $font-size-sm;
+  }
+
+  &-lg {
+    font-size: $font-size-lg;
+  }
+}
+
 textarea,
 textarea.form-control,
 input.form-control,
@@ -256,9 +268,8 @@ input[type=number],
     border-bottom: 1px dotted #ddd;
   }
 
-  &:not(.form-control-sm, .form-control-lg) {
-  height: $input-height;
-
+  &:not(textarea) {
+    height: $input-height;
   }
 
   &.form-control {

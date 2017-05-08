@@ -10352,6 +10352,16 @@ label {
   font-weight: normal;
 }
 
+.col-form-label {
+  font-size: 16px;
+}
+.col-form-label-sm {
+  font-size: 0.875rem;
+}
+.col-form-label-lg {
+  font-size: 1.25rem;
+}
+
 textarea,
 textarea.form-control,
 input.form-control,
@@ -10419,18 +10429,18 @@ input[type=number][readonly],
           box-shadow: none;
   border-bottom: 1px dotted #ddd;
 }
-textarea:not(.form-control-sm, .form-control-lg),
-textarea.form-control:not(.form-control-sm, .form-control-lg),
-input.form-control:not(.form-control-sm, .form-control-lg),
-input[type=text]:not(.form-control-sm, .form-control-lg),
-input[type=password]:not(.form-control-sm, .form-control-lg),
-input[type=email]:not(.form-control-sm, .form-control-lg),
-input[type=number]:not(.form-control-sm, .form-control-lg),
-[type=text].form-control:not(.form-control-sm, .form-control-lg),
-[type=password].form-control:not(.form-control-sm, .form-control-lg),
-[type=email].form-control:not(.form-control-sm, .form-control-lg),
-[type=tel].form-control:not(.form-control-sm, .form-control-lg),
-[contenteditable].form-control:not(.form-control-sm, .form-control-lg) {
+textarea:not(textarea),
+textarea.form-control:not(textarea),
+input.form-control:not(textarea),
+input[type=text]:not(textarea),
+input[type=password]:not(textarea),
+input[type=email]:not(textarea),
+input[type=number]:not(textarea),
+[type=text].form-control:not(textarea),
+[type=password].form-control:not(textarea),
+[type=email].form-control:not(textarea),
+[type=tel].form-control:not(textarea),
+[contenteditable].form-control:not(textarea) {
   height: 3.03125rem;
 }
 textarea.form-control-sm, .input-group-sm > textarea.form-control,
