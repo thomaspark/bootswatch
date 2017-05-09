@@ -1,0 +1,111 @@
+body {
+  padding-top: 50px;
+}
+
+#banner {
+  border-bottom: none;
+}
+
+.page-header h1 {
+  font-size: 4em;
+}
+
+.bs-docs-section {
+  margin-top: 8em;
+}
+
+footer {
+  margin: 5em 0;
+  li {
+    float: left;
+    margin-right: 1.5em;
+    margin-bottom: 1.5em;
+  }
+  p {
+    clear: left;
+    margin-bottom: 0;
+  }
+}
+
+.splash {
+  background-color: #1c2533;
+  background: -webkit-linear-gradient(70deg, #080f1f 30%, #2b4b5a 87%, #435e67 100%);
+  background: -o-linear-gradient(70deg, #080f1f 30%, #2b4b5a 87%, #435e67 100%);
+  background: -ms-linear-gradient(70deg, #080f1f 30%, #2b4b5a 87%, #435e67 100%);
+  background: -moz-linear-gradient(70deg, #080f1f 30%, #2b4b5a 87%, #435e67 100%);
+  background: linear-gradient(20deg, #080f1f 30%, #2b4b5a 87%, #435e67 100%);
+  background-attachment: fixed;
+  padding: 6em 0 2em;
+  color: #fff;
+  text-align: center;
+  .alert {
+    margin: 4em 0 2em;
+  }
+  h1 {
+    font-size: 4em;
+  }
+  #social {
+    margin-top: 6em;
+  }
+}
+
+.section-tout {
+  padding: 4em 0 3em;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #eaf1f1;
+  .fa {
+    margin-right: .5em;
+  }
+  p {
+    margin-bottom: 3em;
+  }
+}
+
+.section-preview {
+  padding: 4em 0 4em;
+  .preview {
+    margin-bottom: 4em;
+    background-color: #eaf1f1;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    .image {
+      padding: 5px;
+      img {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+      }
+    }
+    .options {
+      text-align: center;
+      padding: 0 2em 2em;
+      p {
+        margin-bottom: 2em;
+      }
+    }
+  }
+  .dropdown-menu {
+    text-align: left;
+  }
+  .lead {
+    margin-bottom: 2em;
+  }
+}
+
+@media (max-width: 767px) {
+  .section-preview .image img {
+    width: 100%;
+  }
+}
+
+.bsa .one {
+  .bsa_it_ad {
+    border: none !important;
+    background-color: transparent !important;
+    .bsa_it_t, .bsa_it_d {
+      color: inherit !important;
+    }
+  }
+  .bsa_it_p {
+    display: none;
+  }
+}
