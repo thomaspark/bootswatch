@@ -111,6 +111,33 @@
         </div>
 
         <div class="row">
+          <div class="col-lg-12">
+            <div><h1 id="quickstart">Bower</h1>
+              <p>
+                To include Bootswatch using Bower, just type <code>bower install 
+                bootswatch</code>. Bower will then automaticly download it to your 
+                <code>bower_components</code> folder in your project. To include it in your pages,
+                just put <code>&lt;link rel="stylesheet" 
+                href="PATH/TO/BOWER_COMPONENTS/bootswatch/THEME/bootswatch.css" /&gt;</code>. 
+                If you are a Sass user, you can use <code>bower install bootswatch-sass</code>. 
+                To use it in your Sass just do an <code>@import</code> to the theme you would 
+                like.
+               </p> 
+               <p>
+                 For example, here is the file <code>resources/assets/app.scss</code> in a
+                 <a href="http://www.laravel.com">Laravel 5</a> project: <br>
+                 <code>
+                  @import "../../../vendor/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/variables"; <br>
+                  @import "../../../vendor/bower_components/bootswatch-sass/cosmo/variables"; <br>
+                  @import "../../../vendor/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap"; <br>
+                  @import "../../../vendor/bower_components/bootswatch-sass/cosmo/bootswatch"; <br>
+                 </code>
+               </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
           <div class="col-lg-9">
             <h1 id="customization">Customization</h1>
             <p>To modify a theme or create your own, follow the steps below in your terminal. You'll need to have <a href="https://help.github.com/articles/set-up-git" target="_blank">Git</a> and <a href="http://nodejs.org/" target="_blank">Node</a> installed.</p>
