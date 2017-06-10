@@ -1,10 +1,5 @@
 body {
   padding-top: 120px;
-
-  > .navbar {
-    -webkit-transition: background-color 300ms ease-in;
-    transition: background-color 300ms ease-in;
-  }
 }
 
 pre {
@@ -14,10 +9,10 @@ pre {
 @media (min-width: 768px) {
   body {
     > .navbar-transparent {
-      background-color: transparent !important;
+      box-shadow: none;
 
       .navbar-nav > .open > a {
-        background-color: transparent !important;
+        box-shadow: none;
       }
     }
   }
@@ -26,7 +21,11 @@ pre {
 #home {
   padding-top: 0px;
 
-  .logo {
+  .navbar {
+    transition: box-shadow 200ms ease-in;
+  }
+
+  .navbar-brand {
 
     .nav-link {
       display: inline-block;
@@ -36,8 +35,14 @@ pre {
     img {
       display: inline-block;
       margin: 0 10px;
-      width: 20%;
+      width: 30px;
     }
+  }
+
+  .btn {
+    padding: 0.7em;
+    box-shadow: none;
+    font-size: 0.7rem;
   }
 }
 
@@ -124,8 +129,9 @@ pre {
 }
 
 .splash {
-  padding: 10em 0 4em;
-  background-color: #141d27;
+  padding: 12em 0 4em;
+  background-color: #1976D2;
+  background-color: #2196F3;
   color: #fff;
   text-align: center;
 
@@ -135,6 +141,7 @@ pre {
 
   h1 {
     font-size: 3em;
+    color: #fff;
   }
 
   #social {
@@ -143,6 +150,11 @@ pre {
 
   .alert {
     margin: 2em 0;
+    border: none;
+  }
+
+  .sponsor a {
+    color: #fff
   }
 }
 
@@ -188,7 +200,7 @@ pre {
     }
 
     .options {
-      padding: 1em 2em 2em;
+      padding: 2em;
       border: 1px solid rgba(0, 0, 0, 0.05);
       border-top: none;
       text-align: center;
@@ -239,7 +251,7 @@ pre {
 
   .splash {
 
-    padding-top: 4em;
+    padding-top: 8em;
 
     .logo {
       width: 100px;
