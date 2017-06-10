@@ -2672,8 +2672,6 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   display: flex;
   -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
-          -webkit-box-orient: horizontal;
-          -webkit-box-direction: normal;
           flex-flow: row wrap;
   -webkit-box-align: center;
   -webkit-align-items: center;
@@ -2710,8 +2708,6 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
             flex: 0 0 auto;
     -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
-            -webkit-box-orient: horizontal;
-            -webkit-box-direction: normal;
             flex-flow: row wrap;
     -webkit-box-align: center;
     -webkit-align-items: center;
@@ -4610,8 +4606,6 @@ tbody.collapse.show {
     display: flex;
     -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
-            -webkit-box-orient: horizontal;
-            -webkit-box-direction: normal;
             flex-flow: row wrap;
   }
   .card-deck .card {
@@ -4644,8 +4638,6 @@ tbody.collapse.show {
     display: flex;
     -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
-            -webkit-box-orient: horizontal;
-            -webkit-box-direction: normal;
             flex-flow: row wrap;
   }
   .card-group .card {
@@ -5095,8 +5087,6 @@ a.badge:focus, a.badge:hover {
   display: flex;
   -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
-          -webkit-box-orient: horizontal;
-          -webkit-box-direction: normal;
           flex-flow: row wrap;
   -webkit-box-align: center;
   -webkit-align-items: center;
@@ -9717,6 +9707,10 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 }
 
 .table-success, .table-info, .table-warning, .table-danger {
+  color: #fff;
+}
+
+.thead-inverse th {
   color: #fff;
 }
 
