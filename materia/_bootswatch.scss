@@ -469,7 +469,7 @@ input[type="checkbox"],
   }
 }
 
-.has-error {
+.has-danger {
   input:not([type=checkbox]),
   .form-control,
   input.form-control[readonly],
@@ -497,7 +497,7 @@ input[type="checkbox"],
 
 // Remove the Bootstrap feedback styles for input addons
 .input-group-addon {
-  .has-warning &, .has-error &, .has-success & {
+  .has-warning &, .has-danger &, .has-success & {
     color: $input-color;
     border-color: $input-group-addon-border-color;
     background-color: $input-group-addon-bg;
