@@ -104,18 +104,18 @@ $pink:   #ff5b77 !default;
 $purple: #613d7c !default;
 
 // Create grayscale
-$gray-dark:                 #222;
-$gray:                      #333;
-$gray-light:                #777;
-$gray-lighter:              #AEA79F;
-$gray-lightest:             #eee;
+$gray-dark:                 #222 !default;
+$gray:                      #333 !default;
+$gray-light:                #777 !default;
+$gray-lighter:              #AEA79F !default;
+$gray-lightest:             #eee !default;
 
 // Reassign color vars to semantic color scheme
-$brand-primary:             #E95420;
-$brand-success:             #38B44A;
-$brand-info:                #772953;
-$brand-warning:             #EFB73E;
-$brand-danger:              #DF382C;
+$brand-primary:             #E95420 !default;
+$brand-success:             #38B44A !default;
+$brand-info:                #772953 !default;
+$brand-warning:             #EFB73E !default;
+$brand-danger:              #DF382C !default;
 $brand-inverse:             $gray-dark !default;
 
 
@@ -182,7 +182,7 @@ $sizes: (
 // Settings for the `<body>` element.
 
 $body-bg:       #fff !default;
-$body-color:    $gray;
+$body-color:    $gray !default;
 $inverse-bg:    $gray-dark !default;
 $inverse-color: $gray-lighter !default;
 
@@ -244,7 +244,7 @@ $grid-gutter-widths: (
 //
 // Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif: "Ubuntu", Tahoma, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-sans-serif: "Ubuntu", Tahoma, "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $font-family-serif:      Georgia, "Times New Roman", Times, serif !default;
 $font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:       $font-family-sans-serif !default;
@@ -371,9 +371,9 @@ $btn-primary-color:              $white !default;
 $btn-primary-bg:                 $brand-primary !default;
 $btn-primary-border:             $btn-primary-bg !default;
 
-$btn-secondary-color:            #fff;
-$btn-secondary-bg:               $gray-lighter;
-$btn-secondary-border:           $btn-secondary-bg;
+$btn-secondary-color:            #fff !default;
+$btn-secondary-bg:               $gray-lighter !default;
+$btn-secondary-border:           $btn-secondary-bg !default;
 
 $btn-info-color:                 $white !default;
 $btn-info-bg:                    $brand-info !default;
@@ -417,7 +417,7 @@ $input-padding-y:                .5rem !default;
 $input-line-height:              1.25 !default;
 
 $input-bg:                       $white !default;
-$input-bg-disabled:              $gray-lightest;
+$input-bg-disabled:              $gray-lightest !default;
 
 $input-color:                    $gray !default;
 $input-border-color:             rgba($black,.15) !default;
@@ -459,7 +459,7 @@ $form-check-inline-margin-x: .75rem !default;
 
 $form-group-margin-bottom:       $spacer-y !default;
 
-$input-group-addon-bg:           $gray-lightest;
+$input-group-addon-bg:           $gray-lightest !default;
 $input-group-addon-border-color: $input-border-color !default;
 
 $cursor-disabled:                not-allowed !default;
@@ -612,8 +612,8 @@ $navbar-toggler-padding-y:           .25rem !default;
 $navbar-toggler-font-size:           $font-size-lg !default;
 $navbar-toggler-border-radius:       $btn-border-radius !default;
 
-$navbar-inverse-color:                 rgba(255,255,255,.75);
-$navbar-inverse-hover-color:           rgba(255,255,255,1);
+$navbar-inverse-color:                 rgba(255,255,255,.75) !default;
+$navbar-inverse-hover-color:           rgba(255,255,255,1) !default;
 $navbar-inverse-active-color:          rgba(255,255,255,1) !default;
 $navbar-inverse-disabled-color:        rgba(255,255,255,.25) !default;
 $navbar-inverse-toggler-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-inverse-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"), "#", "%23") !default;
@@ -680,7 +680,7 @@ $pagination-disabled-border:           #ddd !default;
 // Jumbotron
 
 $jumbotron-padding:              2rem !default;
-$jumbotron-bg:                   $gray-lightest;
+$jumbotron-bg:                   $gray-lightest !default;
 
 
 // Form states and alerts
@@ -852,7 +852,7 @@ $progress-font-size:            .75rem !default;
 $progress-bg:                   $gray-lighter !default;
 $progress-border-radius:        $border-radius !default;
 $progress-box-shadow:           inset 0 .1rem .1rem rgba($black,.1) !default;
-$progress-bar-color:            $brand-primary;
+$progress-bar-color:            $brand-primary !default;
 $progress-bar-bg:               $brand-primary !default;
 $progress-bar-animation-timing: 1s linear infinite !default;
 
@@ -874,7 +874,7 @@ $list-group-active-border:       $list-group-active-bg !default;
 $list-group-active-text-color:   lighten($list-group-active-bg, 50%) !default;
 
 $list-group-disabled-color:      $gray-light !default;
-$list-group-disabled-bg:         $gray-lightest;
+$list-group-disabled-bg:         $gray-lightest !default;
 $list-group-disabled-text-color: $list-group-disabled-color !default;
 
 $list-group-link-color:          $gray !default;
@@ -908,7 +908,7 @@ $breadcrumb-padding-y:          .75rem !default;
 $breadcrumb-padding-x:          1rem !default;
 $breadcrumb-item-padding:       .5rem !default;
 
-$breadcrumb-bg:                 $gray-lightest;
+$breadcrumb-bg:                 $gray-lightest !default;
 $breadcrumb-divider-color:      $gray-light !default;
 $breadcrumb-active-color:       $gray-light !default;
 $breadcrumb-divider:            "/" !default;
