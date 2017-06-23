@@ -111,16 +111,11 @@ $gray-lighter:              #eceeef !default;
 $gray-lightest:             #f7f7f9 !default;
 
 // Reassign color vars to semantic color scheme
-// ChangedNextLineForBootstrap4
-$brand-primary:             #2780E3 !default;
-// ChangedNextLineForBootstrap4
-$brand-success:             #3FB618 !default;
-// ChangedNextLineForBootstrap4
-$brand-info:                #9954BB !default;
-// ChangedNextLineForBootstrap4
-$brand-warning:             #FF7518 !default;
-// ChangedNextLineForBootstrap4
-$brand-danger:              #FF0039 !default;
+$brand-primary:             #2780E3;
+$brand-success:             #3FB618;
+$brand-info:                #9954BB;
+$brand-warning:             #FF7518;
+$brand-danger:              #FF0039;
 $brand-inverse:             $gray-dark !default;
 
 
@@ -249,14 +244,12 @@ $grid-gutter-widths: (
 //
 // Font, line-height, and color for body text, headings, and more.
 
-// ChangedNextLineForBootstrap4
-$font-family-sans-serif: "Segoe UI", "Source Sans Pro", Calibri, Candara, Arial, sans-serif !default;
+$font-family-sans-serif: "Segoe UI", "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
 $font-family-serif:      Georgia, "Times New Roman", Times, serif !default;
 $font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:       $font-family-sans-serif !default;
 
-// ChangedNextLineForBootstrap4
-$font-size-base: 0.9375rem !default;
+$font-size-base: 0.9375rem;
 $font-size-lg:   1.25rem !default;
 $font-size-sm:   .875rem !default;
 $font-size-xs:   .75rem !default;
@@ -276,8 +269,7 @@ $font-size-h6: 1rem !default;
 
 $headings-margin-bottom: ($spacer / 2) !default;
 $headings-font-family:   inherit !default;
-// ChangedNextLineForBootstrap4
-$headings-font-weight:   300 !default;
+$headings-font-weight:   300;
 $headings-line-height:   1.1 !default;
 $headings-color:         inherit !default;
 
@@ -326,12 +318,9 @@ $list-inline-padding: 5px !default;
 $line-height-lg:         (4 / 3) !default;
 $line-height-sm:         1.5 !default;
 
-// ChangedNextLineForBootstrap4
-$border-radius:          0 !default;
-// ChangedNextLineForBootstrap4
-$border-radius-lg:       0 !default;
-// ChangedNextLineForBootstrap4
-$border-radius-sm:       0 !default;
+$border-radius:          0;
+$border-radius-lg:       0;
+$border-radius-sm:       0;
 
 $component-active-color: $white !default;
 $component-active-bg:    $brand-primary !default;
@@ -382,12 +371,9 @@ $btn-primary-color:              $white !default;
 $btn-primary-bg:                 $brand-primary !default;
 $btn-primary-border:             $btn-primary-bg !default;
 
-// ChangedNextLineForBootstrap4
-$btn-secondary-color:            #fff !default;
-// ChangedNextLineForBootstrap4
-$btn-secondary-bg:               $gray-dark !default;
-// ChangedNextLineForBootstrap4
-$btn-secondary-border:           $btn-secondary-bg !default;
+$btn-secondary-color:            #fff;
+$btn-secondary-bg:               $gray-dark;
+$btn-secondary-border:           $btn-secondary-bg;
 
 $btn-info-color:                 $white !default;
 $btn-info-bg:                    $brand-info !default;
@@ -626,10 +612,8 @@ $navbar-toggler-padding-y:           .25rem !default;
 $navbar-toggler-font-size:           $font-size-lg !default;
 $navbar-toggler-border-radius:       $btn-border-radius !default;
 
-// ChangedNextLineForBootstrap4
-$navbar-inverse-color:                 rgba(255,255,255,.75) !default;
-// ChangedNextLineForBootstrap4
-$navbar-inverse-hover-color:           rgba(255,255,255,1) !default;
+$navbar-inverse-color:                 rgba(255,255,255,.75);
+$navbar-inverse-hover-color:           rgba(255,255,255,1);
 $navbar-inverse-active-color:          rgba(255,255,255,1) !default;
 $navbar-inverse-disabled-color:        rgba(255,255,255,.25) !default;
 $navbar-inverse-toggler-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-inverse-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"), "#", "%23") !default;

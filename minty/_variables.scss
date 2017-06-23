@@ -104,26 +104,18 @@ $pink:   #ff5b77 !default;
 $purple: #613d7c !default;
 
 // Create grayscale
-// ChangedNextLineForBootstrap4
-$gray-dark:                 #5a5a5a !default;
-// ChangedNextLineForBootstrap4
-$gray:                      #888 !default;
-// ChangedNextLineForBootstrap4
-$gray-light:                #aaa !default;
+$gray-dark:                 #5a5a5a;
+$gray:                      #888;
+$gray-light:                #aaa;
 $gray-lighter:              #eceeef !default;
 $gray-lightest:             #f7f7f9 !default;
 
 // Reassign color vars to semantic color scheme
-// ChangedNextLineForBootstrap4
-$brand-primary:             #78C2AD !default;
-// ChangedNextLineForBootstrap4
-$brand-success:             #56CC9D !default;
-// ChangedNextLineForBootstrap4
-$brand-info:                #6CC3D5 !default;
-// ChangedNextLineForBootstrap4
-$brand-warning:             #FFCE67 !default;
-// ChangedNextLineForBootstrap4
-$brand-danger:              #FF7851 !default;
+$brand-primary:             #78C2AD;
+$brand-success:             #56CC9D;
+$brand-info:                #6CC3D5;
+$brand-warning:             #FFCE67;
+$brand-danger:              #FF7851;
 $brand-inverse:             $gray-dark !default;
 
 
@@ -189,10 +181,8 @@ $sizes: (
 //
 // Settings for the `<body>` element.
 
-// ChangedNextLineForBootstrap4
-$body-bg:       #fff !default;
-// ChangedNextLineForBootstrap4
-$body-color:    $gray !default;
+$body-bg:       #fff;
+$body-color:    $gray;
 $inverse-bg:    $gray-dark !default;
 $inverse-color: $gray-lighter !default;
 
@@ -278,12 +268,10 @@ $font-size-h5: 1.25rem !default;
 $font-size-h6: 1rem !default;
 
 $headings-margin-bottom: ($spacer / 2) !default;
-// ChangedNextLineForBootstrap4
-$headings-font-family:   "Montserrat", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$headings-font-family:   "Montserrat", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 $headings-font-weight:   500 !default;
 $headings-line-height:   1.1 !default;
-// ChangedNextLineForBootstrap4
-$headings-color:         $gray-dark !default;
+$headings-color:         $gray-dark;
 
 $display1-size: 6rem !default;
 $display2-size: 5.5rem !default;
@@ -307,10 +295,8 @@ $abbr-border-color: $gray-light !default;
 
 $blockquote-small-color:  $gray-light !default;
 $blockquote-font-size:    ($font-size-base * 1.25) !default;
-// ChangedNextLineForBootstrap4
-$blockquote-border-color: #CCE8E0 !default;
-// ChangedNextLineForBootstrap4
-$blockquote-border-width: .4rem !default;
+$blockquote-border-color: #CCE8E0;
+$blockquote-border-width: .4rem;
 
 $hr-border-color: rgba($black,.1) !default;
 $hr-border-width: $border-width !default;
@@ -332,12 +318,9 @@ $list-inline-padding: 5px !default;
 $line-height-lg:         (4 / 3) !default;
 $line-height-sm:         1.5 !default;
 
-// ChangedNextLineForBootstrap4
-$border-radius:          .4rem !default;
-// ChangedNextLineForBootstrap4
-$border-radius-lg:       .6rem !default;
-// ChangedNextLineForBootstrap4
-$border-radius-sm:       .3rem !default;
+$border-radius:          .4rem;
+$border-radius-lg:       .6rem;
+$border-radius-sm:       .3rem;
 
 $component-active-color: $white !default;
 $component-active-bg:    $brand-primary !default;
@@ -369,8 +352,7 @@ $table-head-bg:                 $gray-lighter !default;
 $table-head-color:              $gray !default;
 
 $table-border-width:            $border-width !default;
-// ChangedNextLineForBootstrap4
-$table-border-color:            rgba(0,0,0,0.05) !default;
+$table-border-color:            rgba(0,0,0,0.05);
 
 
 // Buttons
@@ -389,12 +371,9 @@ $btn-primary-color:              $white !default;
 $btn-primary-bg:                 $brand-primary !default;
 $btn-primary-border:             $btn-primary-bg !default;
 
-// ChangedNextLineForBootstrap4
-$btn-secondary-color:            #fff !default;
-// ChangedNextLineForBootstrap4
-$btn-secondary-bg:               #F3969A !default;
-// ChangedNextLineForBootstrap4
-$btn-secondary-border:           $btn-secondary-bg !default;
+$btn-secondary-color:            #fff;
+$btn-secondary-bg:               #F3969A;
+$btn-secondary-border:           $btn-secondary-bg;
 
 $btn-info-color:                 $white !default;
 $btn-info-bg:                    $brand-info !default;
@@ -591,10 +570,8 @@ $dropdown-divider-bg:            $gray-lighter !default;
 $dropdown-box-shadow:            0 .5rem 1rem rgba($black,.175) !default;
 
 $dropdown-link-color:            $gray-dark !default;
-// ChangedNextLineForBootstrap4
-$dropdown-link-hover-color:      #fff !default;
-// ChangedNextLineForBootstrap4
-$dropdown-link-hover-bg:         #F3969A !default;
+$dropdown-link-hover-color:      #fff;
+$dropdown-link-hover-bg:         #F3969A;
 
 $dropdown-link-active-color:     $component-active-color !default;
 $dropdown-link-active-bg:        $component-active-bg !default;
@@ -635,20 +612,16 @@ $navbar-toggler-padding-y:           .25rem !default;
 $navbar-toggler-font-size:           $font-size-lg !default;
 $navbar-toggler-border-radius:       $btn-border-radius !default;
 
-// ChangedNextLineForBootstrap4
-$navbar-inverse-color:                 rgba(255,255,255,.6) !default;
+$navbar-inverse-color:                 rgba(255,255,255,.6);
 $navbar-inverse-hover-color:           rgba(255,255,255,1) !default;
 $navbar-inverse-active-color:          rgba(255,255,255,1) !default;
 $navbar-inverse-disabled-color:        rgba(255,255,255,.25) !default;
 $navbar-inverse-toggler-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-inverse-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"), "#", "%23") !default;
 $navbar-inverse-toggler-border:        rgba($white,.1) !default;
 
-// ChangedNextLineForBootstrap4
-$navbar-light-color:                rgba(0,0,0,.3) !default;
-// ChangedNextLineForBootstrap4
-$navbar-light-hover-color:          $headings-color !default;
-// ChangedNextLineForBootstrap4
-$navbar-light-active-color:         $headings-color !default;
+$navbar-light-color:                rgba(0,0,0,.3);
+$navbar-light-hover-color:          $headings-color;
+$navbar-light-active-color:         $headings-color;
 $navbar-light-disabled-color:       rgba(0,0,0,.1) !default;
 $navbar-light-toggler-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"), "#", "%23") !default;
 $navbar-light-toggler-border:       rgba($black,.1) !default;
@@ -686,74 +659,50 @@ $pagination-padding-x-lg:             1.5rem !default;
 $pagination-padding-y-lg:             .75rem !default;
 $pagination-line-height:              1.25 !default;
 
-// ChangedNextLineForBootstrap4
-$pagination-color:                     #fff !default;
-// ChangedNextLineForBootstrap4
-$pagination-bg:                        $brand-primary !default;
+$pagination-color:                     #fff;
+$pagination-bg:                        $brand-primary;
 $pagination-border-width:              $border-width !default;
-// ChangedNextLineForBootstrap4
-$pagination-border-color:              $pagination-bg !default;
+$pagination-border-color:              $pagination-bg;
 
-// ChangedNextLineForBootstrap4
-$pagination-hover-color:               #fff !default;
-// ChangedNextLineForBootstrap4
-$pagination-hover-bg:                  #F3969A !default;
-// ChangedNextLineForBootstrap4
-$pagination-hover-border:              $pagination-hover-bg !default;
+$pagination-hover-color:               #fff;
+$pagination-hover-bg:                  #F3969A;
+$pagination-hover-border:              $pagination-hover-bg;
 
 $pagination-active-color:              $white !default;
-// ChangedNextLineForBootstrap4
-$pagination-active-bg:                 #F3969A !default;
-// ChangedNextLineForBootstrap4
-$pagination-active-border:             $pagination-active-bg !default;
+$pagination-active-bg:                 #F3969A;
+$pagination-active-border:             $pagination-active-bg;
 
-// ChangedNextLineForBootstrap4
-$pagination-disabled-color:            #fff !default;
-// ChangedNextLineForBootstrap4
-$pagination-disabled-bg:               #CCE8E0 !default;
-// ChangedNextLineForBootstrap4
-$pagination-disabled-border:           $pagination-disabled-bg !default;
+$pagination-disabled-color:            #fff;
+$pagination-disabled-bg:               #CCE8E0;
+$pagination-disabled-border:           $pagination-disabled-bg;
 
 
 // Jumbotron
 
 $jumbotron-padding:              2rem !default;
-// ChangedNextLineForBootstrap4
-$jumbotron-bg:                   $gray-lightest !default;
+$jumbotron-bg:                   $gray-lightest;
 
 
 // Form states and alerts
 //
 // Define colors for form feedback states and, by default, alerts.
 
-// ChangedNextLineForBootstrap4
-$state-success-text:             #fff !default;
-// ChangedNextLineForBootstrap4
-$state-success-bg:               $brand-success !default;
-// ChangedNextLineForBootstrap4
-$state-success-border:           $state-success-bg !default;
+$state-success-text:             #fff;
+$state-success-bg:               $brand-success;
+$state-success-border:           $state-success-bg;
 
-// ChangedNextLineForBootstrap4
-$state-info-text:                #fff !default;
-// ChangedNextLineForBootstrap4
-$state-info-bg:                  $brand-info !default;
-// ChangedNextLineForBootstrap4
-$state-info-border:              $state-info-bg !default;
+$state-info-text:                #fff;
+$state-info-bg:                  $brand-info;
+$state-info-border:              $state-info-bg;
 
-// ChangedNextLineForBootstrap4
-$state-warning-text:             #fff !default;
-// ChangedNextLineForBootstrap4
-$state-warning-bg:               $brand-warning !default;
+$state-warning-text:             #fff;
+$state-warning-bg:               $brand-warning;
 $mark-bg:                        $state-warning-bg !default;
-// ChangedNextLineForBootstrap4
-$state-warning-border:           $state-warning-bg !default;
+$state-warning-border:           $state-warning-bg;
 
-// ChangedNextLineForBootstrap4
-$state-danger-text:              #fff !default;
-// ChangedNextLineForBootstrap4
-$state-danger-bg:                $brand-danger !default;
-// ChangedNextLineForBootstrap4
-$state-danger-border:            $state-danger-bg !default;
+$state-danger-text:              #fff;
+$state-danger-bg:                $brand-danger;
+$state-danger-border:            $state-danger-bg;
 
 
 // Cards
@@ -925,8 +874,7 @@ $list-group-active-border:       $list-group-active-bg !default;
 $list-group-active-text-color:   lighten($list-group-active-bg, 50%) !default;
 
 $list-group-disabled-color:      $gray-light !default;
-// ChangedNextLineForBootstrap4
-$list-group-disabled-bg:         $gray-lightest !default;
+$list-group-disabled-bg:         $gray-lightest;
 $list-group-disabled-text-color: $list-group-disabled-color !default;
 
 $list-group-link-color:          $gray !default;
@@ -960,12 +908,9 @@ $breadcrumb-padding-y:          .75rem !default;
 $breadcrumb-padding-x:          1rem !default;
 $breadcrumb-item-padding:       .5rem !default;
 
-// ChangedNextLineForBootstrap4
-$breadcrumb-bg:                 $brand-primary !default;
-// ChangedNextLineForBootstrap4
-$breadcrumb-divider-color:      #fff !default;
-// ChangedNextLineForBootstrap4
-$breadcrumb-active-color:       $breadcrumb-divider-color !default;
+$breadcrumb-bg:                 $brand-primary;
+$breadcrumb-divider-color:      #fff;
+$breadcrumb-active-color:       $breadcrumb-divider-color;
 $breadcrumb-divider:            "/" !default;
 
 
