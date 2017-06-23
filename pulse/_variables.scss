@@ -104,18 +104,18 @@ $pink:   #ff5b77 !default;
 $purple: #613d7c !default;
 
 // Create grayscale
-$gray-dark:                 #17141F;
-$gray:                      #444;
-$gray-light:                #cbc8d0;
-$gray-lighter:              #EDEDED;
-$gray-lightest:             #F9F8FC;
+$gray-dark:                 #17141F !default; // ChangedLineForBootstrap4
+$gray:                      #444 !default; // ChangedLineForBootstrap4
+$gray-light:                #cbc8d0 !default; // ChangedLineForBootstrap4
+$gray-lighter:              #EDEDED !default; // ChangedLineForBootstrap4
+$gray-lightest:             #F9F8FC !default; // ChangedLineForBootstrap4
 
 // Reassign color vars to semantic color scheme
 $brand-primary:             #593196 !default;
-$brand-success:             #13B955;
-$brand-info:                #009CDC;
-$brand-warning:             #EFA31D;
-$brand-danger:              #FC3939;
+$brand-success:             #13B955 !default; // ChangedLineForBootstrap4
+$brand-info:                #009CDC !default; // ChangedLineForBootstrap4
+$brand-warning:             #EFA31D !default; // ChangedLineForBootstrap4
+$brand-danger:              #FC3939 !default; // ChangedLineForBootstrap4
 $brand-inverse:             $gray-dark !default;
 
 
@@ -182,7 +182,7 @@ $sizes: (
 // Settings for the `<body>` element.
 
 $body-bg:       #fff !default;
-$body-color:    $gray;
+$body-color:    $gray !default; // ChangedLineForBootstrap4
 $inverse-bg:    $gray-dark !default;
 $inverse-color: $gray-lighter !default;
 
@@ -193,7 +193,7 @@ $inverse-color: $gray-lighter !default;
 
 $link-color:            $brand-primary !default;
 $link-decoration:       none !default;
-$link-hover-color:      $link-color;
+$link-hover-color:      $link-color !default; // ChangedLineForBootstrap4
 $link-hover-decoration: underline !default;
 
 
@@ -249,7 +249,7 @@ $font-family-serif:      Georgia, "Times New Roman", Times, serif !default;
 $font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:       $font-family-sans-serif !default;
 
-$font-size-base: 0.875rem;
+$font-size-base: 0.875rem !default; // ChangedLineForBootstrap4
 $font-size-lg:   1.25rem !default;
 $font-size-sm:   .875rem !default;
 $font-size-xs:   .75rem !default;
@@ -318,9 +318,9 @@ $list-inline-padding: 5px !default;
 $line-height-lg:         (4 / 3) !default;
 $line-height-sm:         1.5 !default;
 
-$border-radius:          0;
-$border-radius-lg:       0;
-$border-radius-sm:       0;
+$border-radius:          0 !default; // ChangedLineForBootstrap4
+$border-radius-lg:       0 !default; // ChangedLineForBootstrap4
+$border-radius-sm:       0 !default; // ChangedLineForBootstrap4
 
 $component-active-color: $white !default;
 $component-active-bg:    $brand-primary !default;
@@ -352,7 +352,7 @@ $table-head-bg:                 $gray-lighter !default;
 $table-head-color:              $gray !default;
 
 $table-border-width:            $border-width !default;
-$table-border-color:            rgba(0, 0, 0, 0.05);
+$table-border-color:            rgba(0, 0, 0, 0.05) !default; // ChangedLineForBootstrap4
 
 
 // Buttons
@@ -429,7 +429,7 @@ $input-border-radius-lg:         $border-radius-lg !default;
 $input-border-radius-sm:         $border-radius-sm !default;
 
 $input-bg-focus:                 $input-bg !default;
-$input-border-focus:             $brand-primary;
+$input-border-focus:             $brand-primary !default; // ChangedLineForBootstrap4
 $input-box-shadow-focus:         $input-box-shadow, 0 0 8px rgba(102,175,233,.6) !default;
 $input-color-focus:              $input-color !default;
 
@@ -569,9 +569,9 @@ $dropdown-border-width:          $border-width !default;
 $dropdown-divider-bg:            $gray-lighter !default;
 $dropdown-box-shadow:            0 .5rem 1rem rgba($black,.175) !default;
 
-$dropdown-link-color:            $gray;
-$dropdown-link-hover-color:      #fff;
-$dropdown-link-hover-bg:         $brand-primary;
+$dropdown-link-color:            $gray !default; // ChangedLineForBootstrap4
+$dropdown-link-hover-color:      #fff !default; // ChangedLineForBootstrap4
+$dropdown-link-hover-bg:         $brand-primary !default; // ChangedLineForBootstrap4
 
 $dropdown-link-active-color:     $component-active-color !default;
 $dropdown-link-active-bg:        $component-active-bg !default;
@@ -603,7 +603,7 @@ $zindex-tooltip:            1070 !default;
 
 $navbar-border-radius:              $border-radius !default;
 $navbar-padding-x:                  $spacer !default;
-$navbar-padding-y:                  $spacer * 1.2;
+$navbar-padding-y:                  $spacer * 1.2 !default; // ChangedLineForBootstrap4
 
 $navbar-brand-padding-y:            .25rem !default;
 
@@ -612,17 +612,17 @@ $navbar-toggler-padding-y:           .25rem !default;
 $navbar-toggler-font-size:           $font-size-lg !default;
 $navbar-toggler-border-radius:       $btn-border-radius !default;
 
-$navbar-inverse-color:                 rgba(255,255,255,.5);
-$navbar-inverse-hover-color:           rgba(255,255,255,.9);
-$navbar-inverse-active-color:          rgba(255,255,255,.9);
+$navbar-inverse-color:                 rgba(255,255,255,.5) !default; // ChangedLineForBootstrap4
+$navbar-inverse-hover-color:           rgba(255,255,255,.9) !default; // ChangedLineForBootstrap4
+$navbar-inverse-active-color:          rgba(255,255,255,.9) !default; // ChangedLineForBootstrap4
 $navbar-inverse-disabled-color:        rgba(255,255,255,.25) !default;
 $navbar-inverse-toggler-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-inverse-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"), "#", "%23") !default;
 $navbar-inverse-toggler-border:        rgba($white,.1) !default;
 
-$navbar-light-color:                rgba(0,0,0,.4);
-$navbar-light-hover-color:          rgba(0,0,0,.7);
-$navbar-light-active-color:         rgba(0,0,0,.7);
-$navbar-light-disabled-color:       rgba(0,0,0,.2);
+$navbar-light-color:                rgba(0,0,0,.4) !default; // ChangedLineForBootstrap4
+$navbar-light-hover-color:          rgba(0,0,0,.7) !default; // ChangedLineForBootstrap4
+$navbar-light-active-color:         rgba(0,0,0,.7) !default; // ChangedLineForBootstrap4
+$navbar-light-disabled-color:       rgba(0,0,0,.2) !default; // ChangedLineForBootstrap4
 $navbar-light-toggler-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"), "#", "%23") !default;
 $navbar-light-toggler-border:       rgba($black,.1) !default;
 
@@ -634,13 +634,13 @@ $nav-link-padding:              .5em 1em !default;
 $nav-link-hover-bg:             $gray-lighter !default;
 $nav-disabled-link-color:       $gray-light !default;
 
-$nav-tabs-border-color:                       $gray-lighter;
+$nav-tabs-border-color:                       $gray-lighter !default; // ChangedLineForBootstrap4
 $nav-tabs-border-width:                       $border-width !default;
 $nav-tabs-border-radius:                      $border-radius !default;
-$nav-tabs-link-hover-border-color:            $brand-primary;
+$nav-tabs-link-hover-border-color:            $brand-primary !default; // ChangedLineForBootstrap4
 $nav-tabs-active-link-hover-color:            $gray !default;
 $nav-tabs-active-link-hover-bg:               $body-bg !default;
-$nav-tabs-active-link-hover-border-color:     $nav-tabs-link-hover-border-color;
+$nav-tabs-active-link-hover-border-color:     $nav-tabs-link-hover-border-color !default; // ChangedLineForBootstrap4
 $nav-tabs-justified-link-border-color:        #ddd !default;
 $nav-tabs-justified-active-link-border-color: $body-bg !default;
 
@@ -849,36 +849,36 @@ $alert-danger-border:         $state-danger-border !default;
 
 $progress-height:               1rem !default;
 $progress-font-size:            .75rem !default;
-$progress-bg:                   $gray-lighter;
+$progress-bg:                   $gray-lighter !default; // ChangedLineForBootstrap4
 $progress-border-radius:        $border-radius !default;
 $progress-box-shadow:           inset 0 .1rem .1rem rgba($black,.1) !default;
-$progress-bar-color:            #A991D4;
+$progress-bar-color:            #A991D4 !default; // ChangedLineForBootstrap4
 $progress-bar-bg:               $brand-primary !default;
 $progress-bar-animation-timing: 1s linear infinite !default;
 
 // List group
 
 $list-group-color:               $body-color !default;
-$list-group-bg:                  $gray-dark;
-$list-group-border-color:        transparent;
+$list-group-bg:                  $gray-dark !default; // ChangedLineForBootstrap4
+$list-group-border-color:        transparent !default; // ChangedLineForBootstrap4
 $list-group-border-width:        $border-width !default;
 $list-group-border-radius:       $border-radius !default;
 
 $list-group-item-padding-x:      1.25rem !default;
 $list-group-item-padding-y:      .75rem !default;
 
-$list-group-hover-bg:            lighten($list-group-bg, 10%);
-$list-group-active-color:        #fff;
-$list-group-active-bg:           $list-group-bg;
+$list-group-hover-bg:            lighten($list-group-bg, 10%) !default; // ChangedLineForBootstrap4
+$list-group-active-color:        #fff !default; // ChangedLineForBootstrap4
+$list-group-active-bg:           $list-group-bg !default; // ChangedLineForBootstrap4
 $list-group-active-border:       $list-group-active-bg !default;
-$list-group-active-text-color:   #fff;
+$list-group-active-text-color:   #fff !default; // ChangedLineForBootstrap4
 
-$list-group-disabled-color:      lighten($list-group-bg, 20%);
-$list-group-disabled-bg:         $list-group-bg;
+$list-group-disabled-color:      lighten($list-group-bg, 20%) !default; // ChangedLineForBootstrap4
+$list-group-disabled-bg:         $list-group-bg !default; // ChangedLineForBootstrap4
 $list-group-disabled-text-color: $list-group-disabled-color !default;
 
-$list-group-link-color:          #fff;
-$list-group-link-heading-color:  #fff;
+$list-group-link-color:          #fff !default; // ChangedLineForBootstrap4
+$list-group-link-heading-color:  #fff !default; // ChangedLineForBootstrap4
 $list-group-link-hover-color:    $list-group-link-color !default;
 
 $list-group-link-active-color:   $list-group-color !default;
@@ -908,7 +908,7 @@ $breadcrumb-padding-y:          .75rem !default;
 $breadcrumb-padding-x:          1rem !default;
 $breadcrumb-item-padding:       .5rem !default;
 
-$breadcrumb-bg:                 $gray-lightest;
+$breadcrumb-bg:                 $gray-lightest !default; // ChangedLineForBootstrap4
 $breadcrumb-divider-color:      $gray-light !default;
 $breadcrumb-active-color:       $gray-light !default;
 $breadcrumb-divider:            "/" !default;

@@ -105,18 +105,18 @@ $purple: #613d7c !default;
 
 // Create grayscale
 $gray-dark:                 #373a3c !default;
-$gray:                      #666;
-$gray-light:                #e7e7e7;
+$gray:                      #666 !default; // ChangedLineForBootstrap4
+$gray-light:                #e7e7e7 !default; // ChangedLineForBootstrap4
 $gray-lighter:              #eceeef !default;
 $gray-lightest:             #f7f7f9 !default;
 
 // Reassign color vars to semantic color scheme
-$brand-primary:             #2FA4E7;
-$brand-success:             #73A839;
-$brand-info:                #033C73;
-$brand-warning:             #DD5600;
-$brand-danger:              #C71C22;
-$brand-inverse:             $gray-dark;
+$brand-primary:             #2FA4E7 !default; // ChangedLineForBootstrap4
+$brand-success:             #73A839 !default; // ChangedLineForBootstrap4
+$brand-info:                #033C73 !default; // ChangedLineForBootstrap4
+$brand-warning:             #DD5600 !default; // ChangedLineForBootstrap4
+$brand-danger:              #C71C22 !default; // ChangedLineForBootstrap4
+$brand-inverse:             $gray-dark !default; // ChangedLineForBootstrap4
 
 
 // Options
@@ -182,7 +182,7 @@ $sizes: (
 // Settings for the `<body>` element.
 
 $body-bg:       #fff !default;
-$body-color:    $gray;
+$body-color:    $gray !default; // ChangedLineForBootstrap4
 $inverse-bg:    $gray-dark !default;
 $inverse-color: $gray-lighter !default;
 
@@ -271,7 +271,7 @@ $headings-margin-bottom: ($spacer / 2) !default;
 $headings-font-family:   inherit !default;
 $headings-font-weight:   500 !default;
 $headings-line-height:   1.1 !default;
-$headings-color:         $brand-primary;
+$headings-color:         $brand-primary !default; // ChangedLineForBootstrap4
 
 $display1-size: 6rem !default;
 $display2-size: 5.5rem !default;
@@ -371,7 +371,7 @@ $btn-primary-color:              $white !default;
 $btn-primary-bg:                 $brand-primary !default;
 $btn-primary-border:             $btn-primary-bg !default;
 
-$btn-secondary-color:            $gray;
+$btn-secondary-color:            $gray !default; // ChangedLineForBootstrap4
 $btn-secondary-bg:               $white !default;
 $btn-secondary-border:           #ccc !default;
 
@@ -570,8 +570,8 @@ $dropdown-divider-bg:            $gray-lighter !default;
 $dropdown-box-shadow:            0 .5rem 1rem rgba($black,.175) !default;
 
 $dropdown-link-color:            $gray-dark !default;
-$dropdown-link-hover-color:      #fff;
-$dropdown-link-hover-bg:         $brand-primary;
+$dropdown-link-hover-color:      #fff !default; // ChangedLineForBootstrap4
+$dropdown-link-hover-bg:         $brand-primary !default; // ChangedLineForBootstrap4
 
 $dropdown-link-active-color:     $component-active-color !default;
 $dropdown-link-active-bg:        $component-active-bg !default;
@@ -612,9 +612,9 @@ $navbar-toggler-padding-y:           .25rem !default;
 $navbar-toggler-font-size:           $font-size-lg !default;
 $navbar-toggler-border-radius:       $btn-border-radius !default;
 
-$navbar-inverse-color:                 rgba(255,255,255,.8);
-$navbar-inverse-hover-color:           #fff;
-$navbar-inverse-active-color:          #fff;
+$navbar-inverse-color:                 rgba(255,255,255,.8) !default; // ChangedLineForBootstrap4
+$navbar-inverse-hover-color:           #fff !default; // ChangedLineForBootstrap4
+$navbar-inverse-active-color:          #fff !default; // ChangedLineForBootstrap4
 $navbar-inverse-disabled-color:        rgba(255,255,255,.25) !default;
 $navbar-inverse-toggler-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-inverse-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"), "#", "%23") !default;
 $navbar-inverse-toggler-border:        rgba($white,.1) !default;
