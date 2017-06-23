@@ -104,18 +104,18 @@ $pink:   #ff5b77 !default;
 $purple: #613d7c !default;
 
 // Create grayscale
-$gray-dark:                 #222;
-$gray:                      #333;
-$gray-light:                #888;
-$gray-lighter:              #ccc;
-$gray-lightest:             #eee;
+$gray-dark:                 #222 !default; // ChangedLineForBootstrap4
+$gray:                      #333 !default; // ChangedLineForBootstrap4
+$gray-light:                #888 !default; // ChangedLineForBootstrap4
+$gray-lighter:              #ccc !default; // ChangedLineForBootstrap4
+$gray-lightest:             #eee !default; // ChangedLineForBootstrap4
 
 // Reassign color vars to semantic color scheme
-$brand-primary:             #008cba;
-$brand-success:             #43ac6a;
-$brand-info:                #5bc0de;
-$brand-warning:             #E99002;
-$brand-danger:              #F04124;
+$brand-primary:             #008cba !default; // ChangedLineForBootstrap4
+$brand-success:             #43ac6a !default; // ChangedLineForBootstrap4
+$brand-info:                #5bc0de !default; // ChangedLineForBootstrap4
+$brand-warning:             #E99002 !default; // ChangedLineForBootstrap4
+$brand-danger:              #F04124 !default; // ChangedLineForBootstrap4
 $brand-inverse:             $gray-dark !default;
 
 
@@ -244,12 +244,12 @@ $grid-gutter-widths: (
 //
 // Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-sans-serif: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !default; // ChangedLineForBootstrap4
 $font-family-serif:      Georgia, "Times New Roman", Times, serif !default;
 $font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:       $font-family-sans-serif !default;
 
-$font-size-base: 0.9375rem;
+$font-size-base: 0.9375rem !default; // ChangedLineForBootstrap4
 $font-size-lg:   1.25rem !default;
 $font-size-sm:   .875rem !default;
 $font-size-xs:   .75rem !default;
@@ -269,7 +269,7 @@ $font-size-h6: 1rem !default;
 
 $headings-margin-bottom: ($spacer / 2) !default;
 $headings-font-family:   inherit !default;
-$headings-font-weight:   300;
+$headings-font-weight:   300 !default; // ChangedLineForBootstrap4
 $headings-line-height:   1.1 !default;
 $headings-color:         inherit !default;
 
@@ -295,7 +295,7 @@ $abbr-border-color: $gray-light !default;
 
 $blockquote-small-color:  $gray-light !default;
 $blockquote-font-size:    ($font-size-base * 1.25) !default;
-$blockquote-border-color: $gray-lightest;
+$blockquote-border-color: $gray-lightest !default; // ChangedLineForBootstrap4
 $blockquote-border-width: .25rem !default;
 
 $hr-border-color: rgba($black,.1) !default;
@@ -318,9 +318,9 @@ $list-inline-padding: 5px !default;
 $line-height-lg:         (4 / 3) !default;
 $line-height-sm:         1.5 !default;
 
-$border-radius:          0;
-$border-radius-lg:       0;
-$border-radius-sm:       0;
+$border-radius:          0 !default; // ChangedLineForBootstrap4
+$border-radius-lg:       0 !default; // ChangedLineForBootstrap4
+$border-radius-sm:       0 !default; // ChangedLineForBootstrap4
 
 $component-active-color: $white !default;
 $component-active-bg:    $brand-primary !default;
@@ -352,7 +352,7 @@ $table-head-bg:                 $gray-lighter !default;
 $table-head-color:              $gray !default;
 
 $table-border-width:            $border-width !default;
-$table-border-color:            $gray-lightest;
+$table-border-color:            $gray-lightest !default; // ChangedLineForBootstrap4
 
 
 // Buttons
@@ -362,34 +362,34 @@ $table-border-color:            $gray-lightest;
 $btn-padding-x:                  1rem !default;
 $btn-padding-y:                  .5rem !default;
 $btn-line-height:                1.25 !default;
-$btn-font-weight:                300;
+$btn-font-weight:                300 !default; // ChangedLineForBootstrap4
 $btn-box-shadow:                 inset 0 1px 0 rgba($white,.15), 0 1px 1px rgba($black,.075) !default;
 $btn-focus-box-shadow:           0 0 0 2px rgba($brand-primary, .25) !default;
 $btn-active-box-shadow:          inset 0 3px 5px rgba($black,.125) !default;
 
 $btn-primary-color:              $white !default;
 $btn-primary-bg:                 $brand-primary !default;
-$btn-primary-border:             darken($btn-primary-bg, 5%);
+$btn-primary-border:             darken($btn-primary-bg, 5%) !default; // ChangedLineForBootstrap4
 
-$btn-secondary-color:            $gray;
-$btn-secondary-bg:               $gray-lightest;
-$btn-secondary-border:           darken($btn-secondary-bg, 5%);
+$btn-secondary-color:            $gray !default; // ChangedLineForBootstrap4
+$btn-secondary-bg:               $gray-lightest !default; // ChangedLineForBootstrap4
+$btn-secondary-border:           darken($btn-secondary-bg, 5%) !default; // ChangedLineForBootstrap4
 
 $btn-info-color:                 $white !default;
 $btn-info-bg:                    $brand-info !default;
-$btn-info-border:                darken($btn-info-bg, 5%);
+$btn-info-border:                darken($btn-info-bg, 5%) !default; // ChangedLineForBootstrap4
 
 $btn-success-color:              $white !default;
 $btn-success-bg:                 $brand-success !default;
-$btn-success-border:             darken($btn-success-bg, 5%);
+$btn-success-border:             darken($btn-success-bg, 5%) !default; // ChangedLineForBootstrap4
 
 $btn-warning-color:              $white !default;
 $btn-warning-bg:                 $brand-warning !default;
-$btn-warning-border:             darken($btn-warning-bg, 5%);
+$btn-warning-border:             darken($btn-warning-bg, 5%) !default; // ChangedLineForBootstrap4
 
 $btn-danger-color:               $white !default;
 $btn-danger-bg:                  $brand-danger !default;
-$btn-danger-border:              darken($btn-danger-bg, 5%);
+$btn-danger-border:              darken($btn-danger-bg, 5%) !default; // ChangedLineForBootstrap4
 
 $btn-link-disabled-color:        $gray-light !default;
 
@@ -417,7 +417,7 @@ $input-padding-y:                .5rem !default;
 $input-line-height:              1.25 !default;
 
 $input-bg:                       $white !default;
-$input-bg-disabled:              $gray-lightest;
+$input-bg-disabled:              $gray-lightest !default; // ChangedLineForBootstrap4
 
 $input-color:                    $gray !default;
 $input-border-color:             rgba($black,.15) !default;
@@ -459,7 +459,7 @@ $form-check-inline-margin-x: .75rem !default;
 
 $form-group-margin-bottom:       $spacer-y !default;
 
-$input-group-addon-bg:           $gray-lightest;
+$input-group-addon-bg:           $gray-lightest !default; // ChangedLineForBootstrap4
 $input-group-addon-border-color: $input-border-color !default;
 
 $cursor-disabled:                not-allowed !default;
@@ -564,9 +564,9 @@ $dropdown-min-width:             10rem !default;
 $dropdown-padding-y:             .5rem !default;
 $dropdown-margin-top:            .125rem !default;
 $dropdown-bg:                    #fff !default;
-$dropdown-border-color:          rgba(0,0,0,.1);
+$dropdown-border-color:          rgba(0,0,0,.1) !default; // ChangedLineForBootstrap4
 $dropdown-border-width:          $border-width !default;
-$dropdown-divider-bg:            rgba(0,0,0,.1);
+$dropdown-divider-bg:            rgba(0,0,0,.1) !default; // ChangedLineForBootstrap4
 $dropdown-box-shadow:            0 .5rem 1rem rgba($black,.175) !default;
 
 $dropdown-link-color:            $gray-dark !default;
@@ -612,8 +612,8 @@ $navbar-toggler-padding-y:           .25rem !default;
 $navbar-toggler-font-size:           $font-size-lg !default;
 $navbar-toggler-border-radius:       $btn-border-radius !default;
 
-$navbar-inverse-color:                 rgba(255,255,255,.7);
-$navbar-inverse-hover-color:           rgba(255,255,255,1);
+$navbar-inverse-color:                 rgba(255,255,255,.7) !default; // ChangedLineForBootstrap4
+$navbar-inverse-hover-color:           rgba(255,255,255,1) !default; // ChangedLineForBootstrap4
 $navbar-inverse-active-color:          rgba(255,255,255,1) !default;
 $navbar-inverse-disabled-color:        rgba(255,255,255,.25) !default;
 $navbar-inverse-toggler-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-inverse-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"), "#", "%23") !default;
@@ -632,16 +632,16 @@ $nav-item-margin:               .2rem !default;
 $nav-item-inline-spacer:        1rem !default;
 $nav-link-padding:              .5em 1em !default;
 $nav-link-hover-bg:             $gray-lighter !default;
-$nav-disabled-link-color:       $gray-lighter;
+$nav-disabled-link-color:       $gray-lighter !default; // ChangedLineForBootstrap4
 
-$nav-tabs-border-color:                       $dropdown-border-color;
+$nav-tabs-border-color:                       $dropdown-border-color !default; // ChangedLineForBootstrap4
 $nav-tabs-border-width:                       $border-width !default;
 $nav-tabs-border-radius:                      $border-radius !default;
 $nav-tabs-link-hover-border-color:            $gray-lighter !default;
 $nav-tabs-active-link-hover-color:            $gray !default;
 $nav-tabs-active-link-hover-bg:               $body-bg !default;
-$nav-tabs-active-link-hover-border-color:     $nav-tabs-border-color;
-$nav-tabs-justified-link-border-color:        $nav-tabs-border-color;
+$nav-tabs-active-link-hover-border-color:     $nav-tabs-border-color !default; // ChangedLineForBootstrap4
+$nav-tabs-justified-link-border-color:        $nav-tabs-border-color !default; // ChangedLineForBootstrap4
 $nav-tabs-justified-active-link-border-color: $body-bg !default;
 
 $nav-pills-border-radius:     $border-radius !default;
@@ -659,49 +659,49 @@ $pagination-padding-x-lg:             1.5rem !default;
 $pagination-padding-y-lg:             .75rem !default;
 $pagination-line-height:              1.25 !default;
 
-$pagination-color:                     $gray-light;
+$pagination-color:                     $gray-light !default; // ChangedLineForBootstrap4
 $pagination-bg:                        $white !default;
 $pagination-border-width:              $border-width !default;
-$pagination-border-color:              $dropdown-border-color;
+$pagination-border-color:              $dropdown-border-color !default; // ChangedLineForBootstrap4
 
 $pagination-hover-color:               $link-hover-color !default;
-$pagination-hover-bg:                  $gray-lightest;
+$pagination-hover-bg:                  $gray-lightest !default; // ChangedLineForBootstrap4
 $pagination-hover-border:              #ddd !default;
 
 $pagination-active-color:              $white !default;
 $pagination-active-bg:                 $brand-primary !default;
-$pagination-active-border:             $btn-primary-border;
+$pagination-active-border:             $btn-primary-border !default; // ChangedLineForBootstrap4
 
-$pagination-disabled-color:            $gray-lighter;
+$pagination-disabled-color:            $gray-lighter !default; // ChangedLineForBootstrap4
 $pagination-disabled-bg:               $white !default;
 $pagination-disabled-border:           #ddd !default;
 
 
 // Jumbotron
 
-$jumbotron-padding:              4rem;
-$jumbotron-bg:                   $gray-lightest;
+$jumbotron-padding:              4rem !default; // ChangedLineForBootstrap4
+$jumbotron-bg:                   $gray-lightest !default; // ChangedLineForBootstrap4
 
 
 // Form states and alerts
 //
 // Define colors for form feedback states and, by default, alerts.
 
-$state-success-text:             #fff;
-$state-success-bg:               $brand-success;
+$state-success-text:             #fff !default; // ChangedLineForBootstrap4
+$state-success-bg:               $brand-success !default; // ChangedLineForBootstrap4
 $state-success-border:           darken($state-success-bg, 5%) !default;
 
-$state-info-text:                #fff;
-$state-info-bg:                  $brand-info;
+$state-info-text:                #fff !default; // ChangedLineForBootstrap4
+$state-info-bg:                  $brand-info !default; // ChangedLineForBootstrap4
 $state-info-border:              darken($state-info-bg, 7%) !default;
 
-$state-warning-text:             #fff;
-$state-warning-bg:               $brand-warning;
+$state-warning-text:             #fff !default; // ChangedLineForBootstrap4
+$state-warning-bg:               $brand-warning !default; // ChangedLineForBootstrap4
 $mark-bg:                        $state-warning-bg !default;
 $state-warning-border:           darken($state-warning-bg, 5%) !default;
 
-$state-danger-text:              #fff;
-$state-danger-bg:                $brand-danger;
+$state-danger-text:              #fff !default; // ChangedLineForBootstrap4
+$state-danger-bg:                $brand-danger !default; // ChangedLineForBootstrap4
 $state-danger-border:            darken($state-danger-bg, 5%) !default;
 
 
@@ -776,8 +776,8 @@ $badge-danger-bg:             $brand-danger !default;
 $badge-color:                 $white !default;
 $badge-link-hover-color:      $white !default;
 $badge-font-size:             75% !default;
-$badge-font-weight:           300;
-$badge-padding-x:             1em;
+$badge-font-weight:           300 !default; // ChangedLineForBootstrap4
+$badge-padding-x:             1em !default; // ChangedLineForBootstrap4
 $badge-padding-y:             .4em !default;
 
 $badge-pill-padding-x:        .6em !default;
@@ -849,10 +849,10 @@ $alert-danger-border:         $state-danger-border !default;
 
 $progress-height:               1rem !default;
 $progress-font-size:            .75rem !default;
-$progress-bg:                   #f6f6f6;
+$progress-bg:                   #f6f6f6 !default; // ChangedLineForBootstrap4
 $progress-border-radius:        $border-radius !default;
 $progress-box-shadow:           inset 0 .1rem .1rem rgba($black,.1) !default;
-$progress-bar-color:            $brand-primary;
+$progress-bar-color:            $brand-primary !default; // ChangedLineForBootstrap4
 $progress-bar-bg:               $brand-primary !default;
 $progress-bar-animation-timing: 1s linear infinite !default;
 
@@ -874,7 +874,7 @@ $list-group-active-border:       $list-group-active-bg !default;
 $list-group-active-text-color:   lighten($list-group-active-bg, 50%) !default;
 
 $list-group-disabled-color:      $gray-light !default;
-$list-group-disabled-bg:         $gray-lightest;
+$list-group-disabled-bg:         $gray-lightest !default; // ChangedLineForBootstrap4
 $list-group-disabled-text-color: $list-group-disabled-color !default;
 
 $list-group-link-color:          $gray !default;
@@ -908,7 +908,7 @@ $breadcrumb-padding-y:          .75rem !default;
 $breadcrumb-padding-x:          1rem !default;
 $breadcrumb-item-padding:       .5rem !default;
 
-$breadcrumb-bg:                 $gray-lightest;
+$breadcrumb-bg:                 $gray-lightest !default; // ChangedLineForBootstrap4
 $breadcrumb-divider-color:      $gray-light !default;
 $breadcrumb-active-color:       $gray-light !default;
 $breadcrumb-divider:            "/" !default;
@@ -940,8 +940,8 @@ $carousel-transition:           transform .6s ease-in-out !default;
 
 $close-font-size:             $font-size-base * 1.5 !default;
 $close-font-weight:           $font-weight-bold !default;
-$close-color:                 $gray;
-$close-text-shadow:           none;
+$close-color:                 $gray !default; // ChangedLineForBootstrap4
+$close-text-shadow:           none !default; // ChangedLineForBootstrap4
 
 
 // Code
