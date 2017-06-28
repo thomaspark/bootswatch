@@ -2304,25 +2304,25 @@ pre code {
 }
 
 .table-striped tbody tr:nth-of-type(odd) {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .table-hover tbody tr:hover {
-  background-color: #485563;
+  background-color: rgba(255, 255, 255, 0.075);
 }
 
 .table-active,
 .table-active > th,
 .table-active > td {
-  background-color: #485563;
+  background-color: rgba(255, 255, 255, 0.075);
 }
 
 .table-hover .table-active:hover {
-  background-color: #3d4954;
+  background-color: rgba(242, 242, 242, 0.075);
 }
 .table-hover .table-active:hover > td,
 .table-hover .table-active:hover > th {
-  background-color: #3d4954;
+  background-color: rgba(242, 242, 242, 0.075);
 }
 
 .table-success,
@@ -3277,7 +3277,7 @@ tbody.collapse.show {
 .dropdown-item:focus, .dropdown-item:hover {
   color: #EBEBEB;
   text-decoration: none;
-  background-color: #485563;
+  background-color: rgba(255, 255, 255, 0.075);
 }
 .dropdown-item.active, .dropdown-item:active {
   color: #fff;
@@ -4442,7 +4442,7 @@ tbody.collapse.show {
 .card-header {
   padding: 0.75rem 1.25rem;
   margin-bottom: 0;
-  background-color: #485563;
+  background-color: rgba(255, 255, 255, 0.075);
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 }
 .card-header:first-child {
@@ -4451,7 +4451,7 @@ tbody.collapse.show {
 
 .card-footer {
   padding: 0.75rem 1.25rem;
-  background-color: #485563;
+  background-color: rgba(255, 255, 255, 0.075);
   border-top: 1px solid rgba(0, 0, 0, 0.125);
 }
 .card-footer:last-child {
@@ -5641,7 +5641,7 @@ button.close {
 .popover.popover-bottom::after, .popover.bs-tether-element-attached-top::after {
   top: -10px;
   margin-left: -10px;
-  border-bottom-color: #485563;
+  border-bottom-color: rgba(255, 255, 255, 0.075);
 }
 .popover.popover-bottom .popover-title::before, .popover.bs-tether-element-attached-top .popover-title::before {
   position: absolute;
@@ -5651,7 +5651,7 @@ button.close {
   width: 20px;
   margin-left: -10px;
   content: "";
-  border-bottom: 1px solid #485563;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.075);
 }
 .popover.popover-left, .popover.bs-tether-element-attached-right {
   margin-left: -10px;
@@ -5675,8 +5675,8 @@ button.close {
   padding: 8px 14px;
   margin-bottom: 0;
   font-size: 1rem;
-  background-color: #485563;
-  border-bottom: 1px solid #3d4954;
+  background-color: rgba(255, 255, 255, 0.075);
+  border-bottom: 1px solid rgba(242, 242, 242, 0.075);
   border-top-right-radius: calc(0 - 1px);
   border-top-left-radius: calc(0 - 1px);
 }
@@ -9786,7 +9786,7 @@ label,
 }
 
 .modal-header, .modal-footer {
-  background-color: #485563;
+  background-color: rgba(255, 255, 255, 0.075);
 }
 .modal-header .close, .modal-footer .close {
   color: #fff;
