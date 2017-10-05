@@ -33,8 +33,8 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:400,700" !def
 }
 
 .bg-inverse {
-  background-color: $brand-primary !important;
-  border-color: darken($brand-primary, 6.5%) !important;
+  background-color: theme-color("primary") !important;
+  border-color: darken(theme-color("primary"), 6.5%) !important;
 }
 
 // Buttons =====================================================================

@@ -26,7 +26,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Montserrat" !default;
 // Tables ======================================================================
 
 .thead-inverse th {
-  background-color: $brand-primary;
+  background-color: theme-color("primary");
   font-family: $headings-font-family;
 }
 
@@ -51,7 +51,7 @@ legend {
 
 .breadcrumb {
   a {
-    color: $navbar-inverse-color;
+    color: $navbar-dark-color;
   }
 
   a:hover {

@@ -39,7 +39,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:400italic,700
 }
 
 .bg-inverse {
-  @include btn-shadow($brand-primary);
+  @include btn-shadow(theme-color("primary"));
 }
 
 // Buttons =====================================================================

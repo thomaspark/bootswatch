@@ -217,7 +217,7 @@ a {
 }
 
 .thead-inverse th {
-  background-color: $brand-primary;
+  background-color: theme-color("primary");
 }
 
 // Forms =======================================================================
@@ -259,7 +259,7 @@ input[type=number],
   transition: all 0.2s;
 
   &:focus {
-    box-shadow: inset 0 -2px 0 $brand-primary;
+    box-shadow: inset 0 -2px 0 theme-color("primary");
   }
 
   &[disabled],
@@ -319,7 +319,7 @@ select.form-control {
   }
 
   &:focus {
-    box-shadow: inset 0 -2px 0 $brand-primary;
+    box-shadow: inset 0 -2px 0 theme-color("primary");
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAMAAACelLz8AAAAJ1BMVEUhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISF8S9ewAAAADHRSTlMAAgMJC0uWpKa6wMxMdjkoAAAANUlEQVR4AeXJyQEAERAAsNl7Hf3X6xt0QL6JpZWq30pdvdadme+0PMdzvHm8YThHcT1H7K0BtOMDniZhWOgAAAAASUVORK5CYII=);
   }
 
@@ -371,7 +371,7 @@ input[type="radio"],
     position: absolute;
     left: 0;
     top: 2px;
-    background-color: $brand-primary;
+    background-color: theme-color("primary");
     transform: scale(0);
   }
 
@@ -390,7 +390,7 @@ input[type="radio"],
   }
 
   &:checked:after {
-    border-color: $brand-primary;
+    border-color: theme-color("primary");
   }
 
   &:disabled:after,
@@ -413,7 +413,7 @@ input[type="checkbox"],
   }
 
   &:focus:after {
-    border-color: $brand-primary;
+    border-color: theme-color("primary");
   }
 
   &:after {
@@ -442,8 +442,8 @@ input[type="checkbox"],
   }
 
   &:checked:after {
-    background-color: $brand-primary;
-    border-color: $brand-primary;
+    background-color: theme-color("primary");
+    border-color: theme-color("primary");
   }
 
   &:disabled:after {
@@ -465,7 +465,7 @@ input[type="checkbox"],
   input:not([type=checkbox]):focus,
   .form-control:focus {
     border-bottom: none;
-    box-shadow: inset 0 -2px 0 $brand-warning;
+    box-shadow: inset 0 -2px 0 theme-color("warning");
   }
 }
 
@@ -478,7 +478,7 @@ input[type="checkbox"],
   input:not([type=checkbox]):focus,
   .form-control:focus {
     border-bottom: none;
-    box-shadow: inset 0 -2px 0 $brand-danger;
+    box-shadow: inset 0 -2px 0 theme-color("danger");
   }
 }
 
@@ -491,7 +491,7 @@ input[type="checkbox"],
   input:not([type=checkbox]):focus,
   .form-control:focus {
     border-bottom: none;
-    box-shadow: inset 0 -2px 0 $brand-success;
+    box-shadow: inset 0 -2px 0 theme-color("success");
   }
 }
 
@@ -529,20 +529,20 @@ input[type="checkbox"],
 
     &:hover {
       background-color: transparent;
-      box-shadow: inset 0 -2px 0 $brand-primary;
-      color: $brand-primary;
+      box-shadow: inset 0 -2px 0 theme-color("primary");
+      color: theme-color("primary");
     }
   }
 
   .nav-link.active,
   .nav-link.active:focus {
     border: none;
-    box-shadow: inset 0 -2px 0 $brand-primary;
-    color: $brand-primary;
+    box-shadow: inset 0 -2px 0 theme-color("primary");
+    color: theme-color("primary");
 
     &:hover {
       border: none;
-      color: $brand-primary;
+      color: theme-color("primary");
     }
   }
 

@@ -11,7 +11,7 @@ $text-shadow: 0 1px 0 rgba(0, 0, 0, 0.05) !default;
 // Navbar ======================================================================
 
 .bg-primary {
-  @include btn-shadow($brand-primary);
+  @include btn-shadow(theme-color("primary"));
 }
 
 .bg-inverse {

@@ -15,17 +15,17 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:300italic,400
 .bg-primary {
 
   .dropdown-menu {
-    background-color: $brand-primary;
+    background-color: theme-color("primary");
 
     .dropdown-item,
     .dropdown-item:focus {
-      color: $navbar-inverse-color;
+      color: $navbar-dark-color;
     }
 
     .dropdown-item.active,
     .dropdown-item:hover,
     .dropdown-item:focus {
-      background-color: darken($brand-primary, 5%);
+      background-color: darken(theme-color("primary"), 5%);
       color: #fff;
     }
   }
@@ -39,7 +39,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:300italic,400
 
     .dropdown-item,
     .dropdown-item:focus {
-      color: $navbar-inverse-color;
+      color: $navbar-dark-color;
     }
 
     .dropdown-item.active,
