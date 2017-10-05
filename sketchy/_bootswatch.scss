@@ -72,7 +72,7 @@ table {
   .table-success,
   .table-success:hover {
     td, th {
-      background-color: $brand-success;
+      background-color: theme-color("success");
       color: $white;
     }
   }
@@ -80,7 +80,7 @@ table {
   .table-info,
   .table-info:hover {
     td, th {
-      background-color: $brand-info;
+      background-color: theme-color("info");
       color: $white;
     }
   }
@@ -88,7 +88,7 @@ table {
   .table-warning,
   .table-warning:hover {
     td, th {
-      background-color: $brand-warning;
+      background-color: theme-color("warning");
       color: $white;
     }
   }
@@ -96,7 +96,7 @@ table {
   .table-danger,
   .table-danger:hover {
     td, th {
-      background-color: $brand-danger;
+      background-color: theme-color("danger");
       color: $white;
     }
   }
