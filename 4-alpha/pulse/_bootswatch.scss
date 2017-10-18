@@ -20,7 +20,7 @@
   }
 
   &-primary:focus {
-    box-shadow: 0 0 5px lighten($brand-primary, 10%);
+    box-shadow: 0 0 5px lighten(theme-color("primary"), 10%);
   }
 
   &-secondary:focus {
@@ -28,19 +28,19 @@
   }
 
   &-success:focus {
-    box-shadow: 0 0 5px lighten($brand-success, 10%);
+    box-shadow: 0 0 5px lighten(theme-color("success"), 10%);
   }
 
   &-info:focus {
-    box-shadow: 0 0 5px lighten($brand-info, 10%);
+    box-shadow: 0 0 5px lighten(theme-color("info"), 10%);
   }
 
   &-warning:focus {
-    box-shadow: 0 0 5px lighten($brand-warning, 10%);
+    box-shadow: 0 0 5px lighten(theme-color("warning"), 10%);
   }
 
   &-danger:focus {
-    box-shadow: 0 0 5px lighten($brand-danger, 10%);
+    box-shadow: 0 0 5px lighten(theme-color("danger"), 10%);
   }
 
   &.disabled:focus {
@@ -76,7 +76,7 @@
   .nav-link.active,
   .nav-link.active:hover,
   .nav-link.active:focus {
-    border-bottom: 1px solid $brand-primary;
+    border-bottom: 1px solid theme-color("primary");
   }
 
   .nav-item + .nav-item {

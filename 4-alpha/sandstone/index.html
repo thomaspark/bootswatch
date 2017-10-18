@@ -24,7 +24,7 @@
     </script>
   </head>
   <body>
-    <div class="navbar navbar-toggleable-md fixed-top navbar-inverse bg-primary">
+    <div class="navbar navbar-expand-md fixed-top navbar-inverse bg-primary">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -51,6 +51,7 @@
                 <a class="dropdown-item" href="../pulse/">Pulse</a>
                 <a class="dropdown-item" href="../sandstone/">Sandstone</a>
                 <a class="dropdown-item" href="../simplex/">Simplex</a>
+                <a class="dropdown-item" href="../sketchy/">Sketchy</a>
                 <a class="dropdown-item" href="../slate/">Slate</a>
                 <a class="dropdown-item" href="../solar/">Solar</a>
                 <a class="dropdown-item" href="../spacelab/">Spacelab</a>
@@ -103,23 +104,9 @@
           </div>
           <div class="col-lg-4 col-md-5 col-sm-6">
             <div class="sponsor">
-              <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=bootswatchcom" id="_carbonads_js"></script>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-3 col-md-3 col-sm-4">
-            <div class="list-group table-of-contents">
-              <a class="list-group-item list-group-item-action" href="#navbars">Navbars</a>
-              <a class="list-group-item list-group-item-action" href="#buttons">Buttons</a>
-              <a class="list-group-item list-group-item-action" href="#typography">Typography</a>
-              <a class="list-group-item list-group-item-action" href="#tables">Tables</a>
-              <a class="list-group-item list-group-item-action" href="#forms">Forms</a>
-              <a class="list-group-item list-group-item-action" href="#navs">Navs</a>
-              <a class="list-group-item list-group-item-action" href="#indicators">Indicators</a>
-              <a class="list-group-item list-group-item-action" href="#progress">Progress</a>
-              <a class="list-group-item list-group-item-action" href="#containers">Containers</a>
-              <a class="list-group-item list-group-item-action" href="#dialogs">Dialogs</a>
+              <a href="http://www.shopify.com/?ref=bootswatch">
+                <img src="../assets/img/shopify.png">
+              </a>
             </div>
           </div>
         </div>
@@ -135,11 +122,11 @@
             </div>
 
             <div class="bs-component">
-              <nav class="navbar navbar-toggleable-md navbar-inverse bg-primary">
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
+              <nav class="navbar navbar-expand-md navbar-inverse bg-primary">
                 <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
 
                 <div class="collapse navbar-collapse" id="navbarColor01">
                   <ul class="navbar-nav mr-auto">
@@ -165,13 +152,13 @@
             </div>
 
             <div class="bs-component">
-              <nav class="navbar navbar-toggleable-md navbar-light bg-inverse">
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
+              <nav class="navbar navbar-expand-md navbar-light bg-inverse">
                 <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
 
-                <div class="collapse navbar-collapse" id="navbarColor01">
+                <div class="collapse navbar-collapse" id="navbarColor02">
                   <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
                       <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
@@ -627,22 +614,16 @@
                   </fieldset>
                 </div>
 
-                <div class="form-group has-success">
-                  <label class="form-control-label" for="inputSuccess1">Input with success</label>
-                  <input type="text" class="form-control form-control-success" id="inputSuccess1">
-                  <div class="form-control-feedback">Success! You've done it.</div>
+                <div class="form-group">
+                  <label for="inputSuccess1">Input with success</label>
+                  <input type="text" class="form-control is-valid" id="inputSuccess1">
+                  <div class="valid-feedback">Success! You've done it.</div>
                 </div>
 
-                <div class="form-group has-warning">
-                  <label class="form-control-label" for="inputWarning1">Input with warning</label>
-                  <input type="text" class="form-control form-control-warning" id="inputWarning1">
-                  <div class="form-control-feedback">Shucks, try again.</div>
-                </div>
-
-                <div class="form-group has-danger">
-                  <label class="form-control-label" for="inputDanger1">Input with danger</label>
-                  <input type="text" class="form-control form-control-danger" id="inputDanger1">
-                  <div class="form-control-feedback">Sorry, that username's taken. Try another?</div>
+                <div class="form-group">
+                  <label for="inputDanger1">Input with danger</label>
+                  <input type="text" class="form-control is-invalid" id="inputDanger1">
+                  <div class="invalid-feedback">Sorry, that username's taken. Try another?</div>
                 </div>
 
                 <div class="form-group">
@@ -941,7 +922,7 @@
         <div>
           <h2>Badges</h2>
           <div class="bs-component" style="margin-bottom: 40px;">
-            <span class="badge badge-default">Default</span>
+            <span class="badge badge-secondary">Secondary</span>
             <span class="badge badge-primary">Primary</span>
             <span class="badge badge-success">Success</span>
             <span class="badge badge-warning">Warning</span>
@@ -949,7 +930,7 @@
             <span class="badge badge-info">Info</span>
           </div>
           <div class="bs-component">
-            <span class="badge badge-pill badge-default">Default</span>
+            <span class="badge badge-pill badge-secondary">Secondary</span>
             <span class="badge badge-pill badge-primary">Primary</span>
             <span class="badge badge-pill badge-success">Success</span>
             <span class="badge badge-pill badge-warning">Warning</span>
@@ -1061,15 +1042,15 @@
             <div class="bs-component">
               <ul class="list-group">
                 <li class="list-group-item">
-                  <span class="tag tag-default tag-pill float-xs-right">14</span>
+                  <span class="badge badge-secondary badge-pill float-right">14</span>
                   Cras justo odio
                 </li>
                 <li class="list-group-item">
-                  <span class="tag tag-default tag-pill float-xs-right">2</span>
+                  <span class="badge badge-secondary badge-pill float-right">2</span>
                   Dapibus ac facilisis in
                 </li>
                 <li class="list-group-item">
-                  <span class="tag tag-default tag-pill float-xs-right">1</span>
+                  <span class="badge badge-secondary badge-pill float-right">1</span>
                   Morbi leo risus
                 </li>
               </ul>
@@ -1113,40 +1094,40 @@
         <div class="row">
           <div class="col-lg-4">
             <div class="bs-component">
-              <div class="card card-inverse card-primary text-xs-center">
-                <div class="card-block">
+              <div class="card text-white bg-primary text-sm-center">
+                <div class="card-body">
                   <blockquote class="card-blockquote">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
                     <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
                   </blockquote>
                 </div>
               </div>
-              <div class="card card-inverse card-success text-xs-center">
-                <div class="card-block">
+              <div class="card text-white bg-success text-sm-center">
+                <div class="card-body">
                   <blockquote class="card-blockquote">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
                     <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
                   </blockquote>
                 </div>
               </div>
-              <div class="card card-inverse card-info text-xs-center">
-                <div class="card-block">
+              <div class="card text-white bg-info text-sm-center">
+                <div class="card-body">
                   <blockquote class="card-blockquote">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
                     <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
                   </blockquote>
                 </div>
               </div>
-              <div class="card card-inverse card-warning text-xs-center">
-                <div class="card-block">
+              <div class="card text-white bg-warning text-sm-center">
+                <div class="card-body">
                   <blockquote class="card-blockquote">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
                     <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
                   </blockquote>
                 </div>
               </div>
-              <div class="card card-inverse card-danger text-xs-center">
-                <div class="card-block">
+              <div class="card text-white bg-danger text-sm-center">
+                <div class="card-body">
                   <blockquote class="card-blockquote">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
                     <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
@@ -1157,40 +1138,40 @@
           </div>
           <div class="col-lg-4">
             <div class="bs-component">
-              <div class="card card-outline-primary text-xs-center">
-                <div class="card-block">
+              <div class="card border-primary text-primary text-sm-center">
+                <div class="card-body">
                   <blockquote class="card-blockquote">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
                     <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
                   </blockquote>
                 </div>
               </div>
-              <div class="card card-outline-success text-xs-center">
-                <div class="card-block">
+              <div class="card border-success text-success text-sm-center">
+                <div class="card-body">
                   <blockquote class="card-blockquote">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
                     <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
                   </blockquote>
                 </div>
               </div>
-              <div class="card card-outline-info text-xs-center">
-                <div class="card-block">
+              <div class="card border-info text-info text-sm-center">
+                <div class="card-body">
                   <blockquote class="card-blockquote">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
                     <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
                   </blockquote>
                 </div>
               </div>
-              <div class="card card-outline-warning text-xs-center">
-                <div class="card-block">
+              <div class="card border-warning text-warning text-sm-center">
+                <div class="card-body">
                   <blockquote class="card-blockquote">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
                     <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
                   </blockquote>
                 </div>
               </div>
-              <div class="card card-outline-danger text-xs-center">
-                <div class="card-block">
+              <div class="card border-danger text-danger text-sm-center">
+                <div class="card-body">
                   <blockquote class="card-blockquote">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
                     <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
@@ -1204,17 +1185,17 @@
             <div class="bs-component">
               <div class="card">
                 <h3 class="card-header">Card header</h3>
-                <div class="card-block">
+                <div class="card-body">
                   <h5 class="card-title">Special title treatment</h5>
                   <h6 class="card-subtitle text-muted">Support card subtitle</h6>
                 </div>
                 <img style="height: 200px; width: 100%; display: block;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22318%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_158bd1d28ef%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_158bd1d28ef%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22129.359375%22%20y%3D%2297.35%22%3EImage%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="Card image">
-                <div class="card-block">
+                <div class="card-body">
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                   <a href="#" class="card-link">Card link</a>
                   <a href="#" class="card-link">Another link</a>
                 </div>
-                <div class="card-footer text-muted text-xs-center">
+                <div class="card-footer text-muted text-sm-center">
                   2 days ago
                 </div>
               </div>
@@ -1290,8 +1271,8 @@
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
             <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
               <h4 class="modal-title">Source Code</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
             </div>
             <div class="modal-body">
               <pre></pre>
@@ -1313,7 +1294,7 @@
               <li><a href="../help/#api">API</a></li>
               <li><a href="../help/#support">Support</a></li>
             </ul>
-            <p>Made by <a href="http://thomaspark.co" rel="nofollow">Thomas Park</a>. Contact him at <a href="mailto:thomas@bootswatch.com">thomas@bootswatch.com</a>.</p>
+            <p>Made by <a href="http://thomaspark.co">Thomas Park</a>.</p>
             <p>Code released under the <a href="https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE">MIT License</a>.</p>
             <p>Based on <a href="http://getbootstrap.com" rel="nofollow">Bootstrap</a>. Icons from <a href="http://fontawesome.io/" rel="nofollow">Font Awesome</a>. Web fonts from <a href="https://fonts.google.com/" rel="nofollow">Google</a>.</p>
 
@@ -1327,7 +1308,7 @@
 
 
     <script src="../bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="../bower_components/tether/dist/js/tether.min.js"></script>
+    <script src="../bower_components/popper/popper.min.js"></script>
     <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="../assets/js/custom.js"></script>
   </body>

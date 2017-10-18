@@ -12,7 +12,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Source+Sans+Pro" !defau
 }
 
 .bg-inverse {
-  background-color: $brand-primary !important;
+  background-color: theme-color("primary") !important;
 }
 
 // Buttons =====================================================================
@@ -28,6 +28,10 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Source+Sans+Pro" !defau
   &-danger {
     color: #fff;
   }
+}
+
+.thead-inverse th {
+  color: $white;
 }
 
 // Forms =======================================================================
