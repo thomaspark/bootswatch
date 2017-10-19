@@ -8,11 +8,11 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:400,500,700" !de
 // Navbar ======================================================================
 
 .bg-primary {
-  background-color: $gray-dark !important;
+  background-color: $gray-800 !important;
 }
 
 .bg-inverse {
-  background-color: $gray-lightest !important;
+  background-color: $gray-100 !important;
 }
 
 .sandstone {
@@ -64,21 +64,21 @@ input,
 .nav-tabs {
   .nav-link {
     @extend .sandstone;
-    background-color: $gray-lightest;
-    border-color: $gray-lighter;
+    background-color: $gray-100;
+    border-color: $gray-200;
   }
 
   .nav-link,
   .nav-link:hover,
   .nav-link:focus {
-    color: $gray;
+    color: $gray-600;
   }
 
   .nav-link.disabled,
   .nav-link.disabled:hover,
   .nav-link.disabled:focus {
-    background-color: $gray-lightest;
-    border-color: $gray-lighter;
+    background-color: $gray-100;
+    border-color: $gray-200;
   }
 }
 
@@ -86,14 +86,14 @@ input,
   .nav-link {
     @extend .sandstone;
     border: 1px solid transparent;
-    color: $gray;
+    color: $gray-600;
   }
 
   .nav-link.active,
   .nav-link:hover,
   .nav-link:focus {
-    background-color: $gray-lightest;
-    border-color: $gray-lighter;
+    background-color: $gray-100;
+    border-color: $gray-200;
   }
 
   .nav-link.disabled,
@@ -107,7 +107,7 @@ input,
 
 .breadcrumb {
   @extend .sandstone;
-  border: 1px solid $gray-lighter;
+  border: 1px solid $gray-200;
 }
 
 .pagination {
@@ -139,11 +139,11 @@ input,
 }
 
 .close {
-  color: $gray-lighter;
+  color: $gray-200;
   opacity: 1;
 
   &:hover {
-    color: darken($gray-lighter, 20%);
+    color: darken($gray-200, 20%);
   }
 }
 
