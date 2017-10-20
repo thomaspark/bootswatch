@@ -8,11 +8,11 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Lato:400,700,400italic"
 // Navbar ======================================================================
 
 .bg-inverse {
-  background-color: $brand-success !important;
+  background-color: theme-color("success") !important;
 
   &.navbar-dark .navbar-nav .nav-link:focus,
   &.navbar-dark .navbar-nav .nav-link:hover {
-    color: $brand-primary;
+    color: theme-color("primary") !important;
   }
 }
 
@@ -22,8 +22,8 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Lato:400,700,400italic"
     margin-right: 2rem;
   }
 
-  &-nav .nav-item + .nav-item {
-    margin-left: 2rem;
+  &-nav .nav-item {
+    margin-right: 2rem;
   }
 
   &-nav .nav-link {
@@ -38,7 +38,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Lato:400,700,400italic"
 
 .blockquote {
   &-footer {
-    color: $gray-lighter;
+    color: $gray-200;
   }
 }
 
@@ -55,7 +55,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Lato:400,700,400italic"
 }
 
 .thead-inverse th {
-  background-color: $brand-primary;
+  background-color: theme-color("primary");
 }
 
 
@@ -105,6 +105,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Lato:400,700,400italic"
   }
 }
 
+/* 
 .alert {
 
   .alert-link {
@@ -112,6 +113,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Lato:400,700,400italic"
     text-decoration: underline;
   }
 }
+ */
 
 // Progress bars ===============================================================
 
@@ -132,7 +134,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Lato:400,700,400italic"
 
   &:hover,
   &:focus {
-    background-color: $gray-light;
+    background-color: $gray-300;
     color: #fff;
   }
 

@@ -9,12 +9,12 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:400,700" !defaul
 
 .bg-primary {
   background-color: #060606 !important;
-  border: 1px solid $gray;
+  border: 1px solid $gray-600;
 }
 
 .bg-inverse {
-  background-color: $gray !important;
-  border: 1px solid $gray;
+  background-color: $gray-600 !important;
+  border: 1px solid $gray-600;
 }
 
 .navbar {
@@ -54,7 +54,7 @@ legend,
     color: #fff;
 
     &:hover {
-      background-color: $gray;
+      background-color: $gray-600;
     }
 
     &.disabled,
@@ -64,7 +64,7 @@ legend,
     }
 
     &.active {
-      background-color: $brand-primary;
+      background-color: theme-color("primary");
     }
   }
 }
@@ -106,15 +106,15 @@ legend,
 .list-group-item {
 
   &:hover {
-    background-color: $gray;
+    background-color: $gray-600;
     color: #fff;
   }
 
   &-action {
-    color: $gray-lighter;
+    color: $gray-200;
 
     .list-group-item-heading {
-      color: $gray-lighter;
+      color: $gray-200;
     }
   }
 
@@ -125,7 +125,7 @@ legend,
 
 .card {
   &-header {
-    background-color: $gray-dark;
+    background-color: $gray-800;
   }
 
   &-header,

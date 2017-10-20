@@ -17,10 +17,10 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Nunito+Sans" !default;
       padding-top: .715rem;
       padding-bottom: .715rem;
     }
+  &-nav .nav-item {
+    margin-right: 3rem;
+  }
 
-    .nav-item + .nav-item {
-      margin-left: 3rem;
-    }
   }
 
   &-brand {
@@ -29,7 +29,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Nunito+Sans" !default;
 }
 
 .bg-primary {
-  background-color: $gray-dark !important;
+  background-color: $gray-800 !important;
 }
 
 .bg-inverse {
@@ -58,11 +58,11 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Nunito+Sans" !default;
 }
 
 .btn-outline-secondary {
-  border-color: $gray-light;
-  color: $gray-light;
+  border-color: $gray-300;
+  color: $gray-300;
 
   &:hover {
-    background-color: $gray-light;
+    background-color: $gray-300;
   }
 }
 
