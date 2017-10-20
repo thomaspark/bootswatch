@@ -32,10 +32,10 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:300italic,400
 }
 
 .bg-inverse {
-  background-color: $gray !important;
+  background-color: $gray-600 !important;
 
   .dropdown-menu {
-    background-color: $gray;
+    background-color: $gray-600;
 
     .dropdown-item,
     .dropdown-item:focus {
@@ -45,7 +45,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:300italic,400
     .dropdown-item.active,
     .dropdown-item:hover,
     .dropdown-item:focus  {
-      background-color: darken($gray, 5%);
+      background-color: darken($gray-600, 5%);
       color: #fff;
     }
   }
@@ -54,7 +54,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:300italic,400
 .bg-faded {
 
   .dropdown-menu {
-    background-color: $gray-lightest;
+    background-color: $gray-100;
 
     .dropdown-item,
     .dropdown-item:focus {
@@ -64,7 +64,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:300italic,400
     .dropdown-item.active,
     .dropdown-item:hover,
     .dropdown-item:focus  {
-      background-color: lighten($gray-lightest, 5%);
+      background-color: lighten($gray-100, 5%);
       color: $navbar-light-hover-color;
     }
   }
@@ -169,7 +169,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:300italic,400
 // Typography ==================================================================
 
 .blockquote-footer {
-  color: $gray-light;
+  color: $gray-300;
 }
 
 // Tables ======================================================================
@@ -184,7 +184,7 @@ table {
   &-info,
   &-warning,
   &-danger {
-    color: #fff;
+    color: $white;
   }
 }
 
@@ -214,12 +214,12 @@ label,
   .nav-link.disabled:hover,
   .nav-link.disabled:focus {
     border-color: $nav-tabs-border-color;
-    background-color: $gray-lightest;
+    background-color: $gray-100;
   }
 
   .nav-link:hover,
   .nav-link:focus {
-    background-color: lighten($gray-lightest, 5%);
+    background-color: lighten($gray-100, 5%);
   }
 }
 

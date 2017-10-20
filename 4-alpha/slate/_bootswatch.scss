@@ -47,7 +47,7 @@
 
     &:hover,
     &:focus {
-      @include btn-shadow-inverse($gray);
+      @include btn-shadow-inverse($gray-600);
       border-left: 1px solid rgba(0, 0, 0, 0.2);
     }
   }
@@ -73,7 +73,7 @@
 }
 
 .bg-primary {
-  background-color: $gray !important;
+  background-color: $gray-600 !important;
 }
 
 .bg-inverse {
@@ -191,13 +191,13 @@ legend {
 .nav-pills {
 
   .nav-link {
-    @include btn-shadow($gray);
+    @include btn-shadow($gray-600);
     border: 1px solid rgba(0, 0, 0, 0.6);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
     color: #fff;
 
     &:hover {
-      @include btn-shadow-inverse($gray);
+      @include btn-shadow-inverse($gray-600);
       border: 1px solid rgba(0, 0, 0, 0.6);
     }
   }
@@ -205,13 +205,13 @@ legend {
   .nav-link.active,
   .nav-link:hover {
     background-color: transparent;
-    @include btn-shadow-inverse($gray);
+    @include btn-shadow-inverse($gray-600);
     border: 1px solid rgba(0, 0, 0, 0.6);
   }
 
   .nav-link.disabled,
   .nav-link.disabled:hover {
-    @include btn-shadow($gray);
+    @include btn-shadow($gray-600);
     color: $nav-disabled-link-color;
   }
 }
@@ -220,20 +220,20 @@ legend {
 
   .page-link {
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-    @include btn-shadow($gray);
+    @include btn-shadow($gray-600);
 
     &:hover {
-      @include btn-shadow-inverse($gray);
+      @include btn-shadow-inverse($gray-600);
       text-decoration: none;
     }
   }
 
   .page-item.active .page-link {
-    @include btn-shadow-inverse($gray);
+    @include btn-shadow-inverse($gray-600);
   }
 
   .page-item.disabled .page-link {
-    @include btn-shadow($gray);
+    @include btn-shadow($gray-600);
   }
 }
 
@@ -241,7 +241,7 @@ legend {
   border: 1px solid rgba(0, 0, 0, 0.6);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   background-color: transparent;
-  @include btn-shadow($gray);
+  @include btn-shadow($gray-600);
 
   a,
   a:hover {
@@ -253,11 +253,13 @@ legend {
 
 .alert {
 
+/* 
   .alert-link,
   a {
-    color: #fff;
+     color: #fff;
     text-decoration: underline;
   }
+ */
 
   .close {
     color: $close-color;

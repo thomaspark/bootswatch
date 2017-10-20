@@ -22,7 +22,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:400italic,700
 }
 
 .bg-primary {
-  @include btn-shadow($gray-lightest);
+  @include btn-shadow($gray-100);
 
   .nav-link {
     text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1);
@@ -56,10 +56,10 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:400italic,700
   }
 
   &-secondary {
-  @include btn-shadow($gray-lighter);
+  @include btn-shadow($gray-200);
 
     &:hover {
-      @include btn-shadow(darken($gray-lighter, 4%));
+      @include btn-shadow(darken($gray-200, 4%));
     }
   }
 

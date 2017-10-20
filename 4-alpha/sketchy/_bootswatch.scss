@@ -9,7 +9,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Neucha|Cabin+Sketch" !d
 
 .bg-inverse {
   background-color: $white !important;
-  border: $gray-dark 2px solid;
+  border: $gray-800 2px solid;
 }
 .navbar {
   border-radius: 25px 25px 55px 5px/5px 55px 25px 25px;
@@ -58,7 +58,7 @@ table {
 }
 
 .table-bordered {
-  background-color: $gray-dark;
+  background-color: $gray-800;
   border-collapse: separate;
   border-spacing: 0;
   border-radius: 5px 25px 5px 25px/25px 5px 25px 5px;
@@ -129,7 +129,7 @@ select.form-control {
     display: inline-block;
     width: 15px;
     height: 16px;
-    border: 2px solid $gray-dark;
+    border: 2px solid $gray-800;
     border-radius: 2px 8px 2px 4px / 5px 3px 5px 3px;
   }
 
@@ -139,12 +139,12 @@ select.form-control {
     left: 4px;
     top: -7px;
     font-size: 1.5rem;
-    color: $gray-dark;
+    color: $gray-800;
   }
 
   &:disabled {
     &:before {
-      border: 2px solid $gray-light;
+      border: 2px solid $gray-300;
     }
   }
 }
@@ -162,17 +162,17 @@ select.form-control {
     display: inline-block;
     width: 16px;
     height: 16px;
-    border: 2px solid $gray-dark;
+    border: 2px solid $gray-800;
     border-radius: 50% 45% 40% 50% / 40% 50% 50% 45%;
   }
 
   &:checked:before {
-    background-color: $gray-dark;
+    background-color: $gray-800;
   }
 
   &:disabled {
     &:before {
-      border: 2px solid $gray-light;
+      border: 2px solid $gray-300;
     }
   }
 }
@@ -193,15 +193,15 @@ select.form-control {
 }
 
 .list-group {
-  background-color: $gray-dark;
-  border: 2px solid $gray-dark;
+  background-color: $gray-800;
+  border: 2px solid $gray-800;
   border-radius: 45px 15px 35px 5px/15px 5px 15px 65px;
   overflow: hidden;
 
   &-item {
     border-left: none;
     border-right: none;
-    border-top: 2px solid $gray-dark;
+    border-top: 2px solid $gray-800;
     border-radius: 255px 5px 225px 5px/25px 225px 25px 255px;
 
     &:first-child {
@@ -232,7 +232,7 @@ select.form-control {
 }
 
 .breadcrumb {
-  border: 2px solid $gray-dark;
+  border: 2px solid $gray-800;
 }
 
 .pagination {
@@ -244,7 +244,7 @@ select.form-control {
 // Indicators ==================================================================
 
 .progress {
-  border: 2px solid $gray-dark;
+  border: 2px solid $gray-800;
 }
 
 .badge-pill {
@@ -308,7 +308,7 @@ select.form-control {
 }
 
 .jumbotron {
-  border: 2px solid $gray-dark;
+  border: 2px solid $gray-800;
 }
 
 .modal {
@@ -322,7 +322,7 @@ select.form-control {
   border-radius: 45px 85px 15px 25px/15px 10px 35px 555px;
 
   &-title {
-    border-bottom: 2px solid $gray-dark;
+    border-bottom: 2px solid $gray-800;
   }
 
   &.popover-left::before,
@@ -347,7 +347,7 @@ select.form-control {
 }
 
 pre {
-  border: 2px solid $gray-dark;
+  border: 2px solid $gray-800;
   border-radius: 15px 5px 5px 25px/5px 25px 25px 5px;
 }
 
@@ -364,6 +364,6 @@ pre {
     right: 0;
     top: 0;
     content: "X";
-    color: $gray-dark;
+    color: $gray-800;
   }
 }

@@ -90,6 +90,8 @@
 // Colors
 //
 // Grayscale and brand colors for use across Bootstrap.
+// Create grayscale
+
 
 $white:    #fff !default;
 $gray-100: #F8F5F0 !default;//
@@ -147,15 +149,7 @@ $colors: map-merge((
   "gray-dark":  $gray-800
 ), $colors);
 
-// Create grayscale
-/* 
-$gray-dark:                 #3E3F3A !default; // ChangedLineForBootstrap4//800
-$gray:                      #8E8C84 !default; // ChangedLineForBootstrap4//600
-$gray-light:                #98978B !default; // ChangedLineForBootstrap4//300
-$gray-lighter:              #DFD7CA !default; // ChangedLineForBootstrap4//200
-$gray-lightest:             #F8F5F0 !default; // ChangedLineForBootstrap4//100
 
- */
 // Reassign color vars to semantic color scheme
 $theme-colors: () !default;
 $theme-colors: map-merge((

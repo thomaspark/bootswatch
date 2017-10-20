@@ -378,7 +378,7 @@ input[type="radio"],
   &:after {
     position: relative;
     top: -2px;
-    border: 2px solid $gray;
+    border: 2px solid $gray-600;
   }
 
   &:checked:before {
@@ -386,7 +386,7 @@ input[type="radio"],
   }
 
   &:disabled:checked:before {
-    background-color: $gray-light;
+    background-color: $gray-300;
   }
 
   &:checked:after {
@@ -395,7 +395,7 @@ input[type="radio"],
 
   &:disabled:after,
   &:disabled:checked:after {
-    border-color: $gray-light;
+    border-color: $gray-300;
   }
 }
 
@@ -422,7 +422,7 @@ input[type="checkbox"],
     width: 18px;
     height: 18px;
     margin-right: 5px;
-    border: 2px solid $gray;
+    border: 2px solid $gray-600;
     border-radius: 2px;
     transition: 240ms;
   }
@@ -447,11 +447,11 @@ input[type="checkbox"],
   }
 
   &:disabled:after {
-    border-color: $gray-light;
+    border-color: $gray-300;
   }
 
   &:disabled:checked:after {
-    background-color: $gray-light;
+    background-color: $gray-300;
     border-color: transparent;
   }
 }

@@ -90,16 +90,18 @@
 // Colors
 //
 // Grayscale and brand colors for use across Bootstrap.
+// Create grayscale
+
 
 $white:    #fff !default;
-$gray-100: #f8f9fa !default;
-$gray-200: #e9ecef !default;
-$gray-300: #dee2e6 !default;
+$gray-100: #ddd !default;
+$gray-200: #bbb !default;
+$gray-300: #777 !default;
 $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
-$gray-600: #868e96 !default;
+$gray-600: #444 !default;
 $gray-700: #495057 !default;
-$gray-800: #343a40 !default;
+$gray-800: #373a3c !default;
 $gray-900: #212529 !default;
 $black:    #000 !default;
 
@@ -116,6 +118,8 @@ $grays: map-merge((
   "900": $gray-900
 ), $grays);
 
+// Start with assigning color names to specific hex values.
+
 $blue:    #D9230F !default;//
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
@@ -128,7 +132,6 @@ $teal:    #20c997 !default;
 $cyan:    #029ACF !default;//
 
 
-// Start with assigning color names to specific hex values.
 $colors: () !default;
 $colors: map-merge((
   "blue":       $blue,
@@ -146,19 +149,9 @@ $colors: map-merge((
   "gray-dark":  $gray-800
 ), $colors);
 
-$theme-colors: () !default;
-
-
-// Create grayscale
-/* 
-$gray-dark:                 #373a3c !default; // ChangedLineForBootstrap4
-$gray:                      #444 !default; // ChangedLineForBootstrap4
-$gray-light:                #777 !default; // ChangedLineForBootstrap4
-$gray-lighter:              #bbb !default; // ChangedLineForBootstrap4
-$gray-lightest:             #ddd !default; // ChangedLineForBootstrap4
- */
 
 // Reassign color vars to semantic color scheme
+$theme-colors: () !default;
 $theme-colors: map-merge((
   "primary": $blue,
   "secondary": $gray-600,
