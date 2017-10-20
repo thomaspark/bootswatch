@@ -1,7 +1,7 @@
 {
   "name": "bootswatch",
   "description": "Bootswatch is a collection of themes for Bootstrap.",
-  "version": "4.0.0-alpha.6",
+  "version": "4.0.0-beta.2",
   "author": "Thomas Park",
   "homepage": "https://bootswatch.com",
   "license": "MIT",
@@ -15,9 +15,14 @@
   "scripts": {
     "postcss": "postcss --config assets/js/postcss.js --replace */bootstrap*.css"
   },
+  "dependencies": {
+    "bootstrap": "~4.0.0-beta.2",
+    "jquery": ">=1.9.1",
+    "popper.js": "^1.11.0"
+  },
   "devDependencies": {
     "autoprefixer": "^6.5.0",
-    "bower": "~1.2.8",
+    "font-awesome": "~4.7.0",
     "grunt": "^1.0.1",
     "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-concat": "^1.0.1",
