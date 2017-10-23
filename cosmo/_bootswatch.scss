@@ -2,6 +2,8 @@
 // Bootswatch
 
 
+// Variables ===================================================================
+
 $web-font-path: "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" !default;
 @import url($web-font-path);
 
@@ -30,7 +32,6 @@ body {
 // Progress bars ===============================================================
 
 .progress {
-  height: 8px;
   @include box-shadow(none);
   .progress-bar {
     font-size: 8px;
@@ -39,7 +40,3 @@ body {
 }
 
 // Containers ==================================================================
-
-.popover {
-  color: $body-color;
-}

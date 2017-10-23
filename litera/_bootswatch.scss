@@ -2,8 +2,12 @@
 // Bootswatch
 
 
+// Variables ===================================================================
+
 $web-font-path: "https://fonts.googleapis.com/css?family=Raleway:400,700" !default;
 @import url($web-font-path);
+
+$font-family-serif:      Georgia, Cambria, "Times New Roman", Times, serif !default;
 
 // Navbar ======================================================================
 
@@ -11,7 +15,11 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Raleway:400,700" !defau
   font-size: 14px;
 }
 
-.bg-primary {
+.bg-dark {
+  background-color: $success !important;
+}
+
+.bg-light {
   background-color: #fff !important;
   border: 1px solid rgba(0, 0, 0, 0.1);
 
@@ -22,10 +30,6 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Raleway:400,700" !defau
   &.navbar-fixed-bottom {
     border-width: 1px 0 0 0;
   }
-}
-
-.bg-inverse {
-  background-color: $brand-success !important;
 }
 
 // Buttons =====================================================================
@@ -43,6 +47,13 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Raleway:400,700" !defau
     border-radius: 13.5px;
     font-size: 11px;
   }
+
+  &-secondary,
+  &-secondary:hover,
+  &-warning,
+  &-warning:hover {
+    color: $white;
+  }
 }
 
 // Typography ==================================================================
@@ -53,10 +64,6 @@ p {
 
 blockquote {
   font-style: italic;
-
-  &-footer {
-    color: $blockquote-border-color;
-  }
 }
 
 footer {
@@ -64,7 +71,7 @@ footer {
 }
 
 .lead {
-  color: $gray-light;
+  color: $gray-600;
   font-family: $font-family-sans-serif;
 }
 
@@ -82,11 +89,64 @@ table,
   }
 }
 
+.table {
+
+  &-success {
+    &, > th, > td {
+      background-color: $success;
+    }
+  }
+
+  &-info {
+    &, > th, > td {
+      background-color: $info;
+    }
+  }
+
+  &-danger {
+    &, > th, > td {
+      background-color: $danger;
+    }
+  }
+
+  &-warning {
+    &, > th, > td {
+      background-color: $warning;
+    }
+  }
+
+  &-hover {
+
+    .table-success:hover {
+      &, > th, > td {
+        background-color: darken($success, 5%);
+      }
+    }
+
+    .table-info:hover {
+      &, > th, > td {
+        background-color: darken($info, 5%);
+      }
+    }
+
+    .table-danger:hover {
+      &, > th, > td {
+        background-color: darken($danger, 5%);
+      }
+    }
+
+    .table-warning:hover {
+      &, > th, > td {
+        background-color: darken($warning, 5%);
+      }
+    }
+
+  }
+}
 
 // Forms =======================================================================
 
 // Navs ========================================================================
-
 
 .nav,
 .breadcrumb,
@@ -94,9 +154,15 @@ table,
   font-size: 14px;
 }
 
+.dropdown-menu {
+  font-size: 14px;
+}
+
 // Indicators ==================================================================
 
 .alert {
+  border: none;
+  color: $white;
   font-size: 14px;
 
   &, p {
@@ -108,12 +174,38 @@ table,
     font-weight: normal;
     text-decoration: underline;
   }
+
+  &-primary {
+    background-color: $primary;
+  }
+
+  &-success {
+    background-color: $success;
+  }
+
+  &-danger {
+    background-color: $danger;
+  }
+
+  &-warning {
+    background-color: $warning;
+  }
+
+  &-info {
+    background-color: $info;
+  }
+
+  &-dark {
+    background-color: $dark;
+  }
 }
 
-.tag {
+.badge {
+  vertical-align: bottom;
 
-  &-default {
-    color: $btn-secondary-color;
+  &-secondary,
+  &-warning {
+    color: $white;
   }
 }
 

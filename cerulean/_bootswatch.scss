@@ -8,48 +8,54 @@
 
 $text-shadow: 0 1px 0 rgba(0, 0, 0, 0.05) !default;
 
-// Navbar ======================================================================
+// // Navbar ======================================================================
 
 .bg-primary {
-  @include btn-shadow($brand-primary);
+  @include btn-shadow($primary);
 }
 
-.bg-inverse {
-  @include gradient-y-three-colors(lighten($gray-light, 8%), $gray-light, 60%, darken($gray-light, 2%));
+.bg-dark {
+  @include btn-shadow($blue);
 }
 
-.nav-item {
+.bg-light {
+  @include gradient-y-three-colors(lighten($gray-200, 8%), $gray-200, 60%, darken($gray-200, 2%));
+}
+
+.navbar-brand,
+.nav-link {
   text-shadow: $text-shadow
 }
 
-// Buttons =====================================================================
+// // Buttons =====================================================================
 
 .btn {
   text-shadow: $text-shadow
 }
 
 .btn-primary {
-  @include btn-shadow($btn-primary-bg);
+  @include btn-shadow($primary);
 }
 
 .btn-secondary {
-  @include btn-shadow($btn-secondary-bg);
+  @include btn-shadow($secondary);
+  color: $gray-700;
 }
 
 .btn-success {
-  @include btn-shadow($btn-success-bg);
+  @include btn-shadow($success);
 }
 
 .btn-info {
-  @include btn-shadow($btn-info-bg);
+  @include btn-shadow($info);
 }
 
 .btn-warning {
-  @include btn-shadow($btn-warning-bg);
+  @include btn-shadow($warning);
 }
 
 .btn-danger {
-  @include btn-shadow($btn-danger-bg);
+  @include btn-shadow($danger);
 }
 
 // Typography ==================================================================

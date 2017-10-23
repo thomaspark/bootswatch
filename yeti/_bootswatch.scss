@@ -2,6 +2,8 @@
 // Bootswatch
 
 
+// Variables ===================================================================
+
 $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700" !default;
 @import url($web-font-path);
 
@@ -15,46 +17,46 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:300italic,400
 .bg-primary {
 
   .dropdown-menu {
-    background-color: $brand-primary;
+    background-color: $primary;
 
     .dropdown-item,
     .dropdown-item:focus {
-      color: $navbar-inverse-color;
+      color: $navbar-dark-color;
     }
 
     .dropdown-item.active,
     .dropdown-item:hover,
     .dropdown-item:focus {
-      background-color: darken($brand-primary, 5%);
+      background-color: darken($primary, 5%);
       color: #fff;
     }
   }
 }
 
-.bg-inverse {
-  background-color: $gray !important;
+.bg-dark {
+  background-color: $gray-800 !important;
 
   .dropdown-menu {
-    background-color: $gray;
+    background-color: $gray-800;
 
     .dropdown-item,
     .dropdown-item:focus {
-      color: $navbar-inverse-color;
+      color: $navbar-dark-color;
     }
 
     .dropdown-item.active,
     .dropdown-item:hover,
     .dropdown-item:focus  {
-      background-color: darken($gray, 5%);
+      background-color: darken($gray-800, 5%);
       color: #fff;
     }
   }
 }
 
-.bg-faded {
+.bg-light {
 
   .dropdown-menu {
-    background-color: $gray-lightest;
+    background-color: $gray-200;
 
     .dropdown-item,
     .dropdown-item:focus {
@@ -64,13 +66,49 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:300italic,400
     .dropdown-item.active,
     .dropdown-item:hover,
     .dropdown-item:focus  {
-      background-color: lighten($gray-lightest, 5%);
+      background-color: lighten($gray-200, 5%);
       color: $navbar-light-hover-color;
     }
   }
 }
 
 // Buttons =====================================================================
+
+.btn {
+  &-primary {
+    border-color: darken($primary, 5%);
+  }
+
+  &-secondary {
+    border-color: darken($secondary, 5%);
+  }
+
+  &-success {
+    border-color: darken($success, 5%);
+  }
+
+  &-info {
+    border-color: darken($info, 5%);
+    color: $white;
+  }
+
+  &-danger {
+    border-color: darken($danger, 5%);
+  }
+
+  &-warning {
+    border-color: darken($warning, 5%);
+    color: $white;
+  }
+
+  &-light {
+    border-color: darken($light, 5%);
+  }
+
+  &-dark {
+    border-color: darken($dark, 5%);
+  }
+}
 
 .btn-group {
 
@@ -81,86 +119,86 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:300italic,400
   .dropdown-toggle {
 
     &.btn-primary ~ .dropdown-menu {
-      background-color: $btn-primary-bg;
-      border-color: $btn-primary-border;
+      background-color: $primary;
+      border-color: darken($primary, 5%);
 
       .dropdown-item {
-        color: $btn-primary-color;
+        color: $white;
       }
 
       .dropdown-item:hover,
       .dropdown-item:focus {
-        background-color: darken($btn-primary-bg, 8%);
+        background-color: darken($primary, 8%);
       }
     }
 
     &.btn-secondary ~ .dropdown-menu {
-      background-color: $btn-secondary-bg;
-      border-color: $btn-secondary-border;
+      background-color: $secondary;
+      border-color: darken($secondary, 5%);
 
       .dropdown-item {
-        color: $btn-secondary-color;
+        color: $white;
       }
 
       .dropdown-item:hover,
       .dropdown-item:focus {
-        background-color: darken($btn-secondary-bg, 8%);
+        background-color: darken($secondary, 8%);
       }
     }
 
     &.btn-success ~ .dropdown-menu {
-      background-color: $btn-success-bg;
-      border-color: $btn-success-border;
+      background-color: $success;
+      border-color: darken($success, 5%);
 
       .dropdown-item {
-        color: $btn-success-color;
+        color: $white;
       }
 
       .dropdown-item:hover,
       .dropdown-item:focus {
-        background-color: darken($btn-success-bg, 8%);
+        background-color: darken($success, 8%);
       }
     }
 
     &.btn-info ~ .dropdown-menu {
-      background-color: $btn-info-bg;
-      border-color: $btn-info-border;
+      background-color: $info;
+      border-color: darken($info, 5%);
 
       .dropdown-item {
-        color: $btn-info-color;
+        color: $white;
       }
 
       .dropdown-item:hover,
       .dropdown-item:focus {
-        background-color: darken($btn-info-bg, 8%);
+        background-color: darken($info, 8%);
       }
     }
 
     &.btn-warning ~ .dropdown-menu {
-      background-color: $btn-warning-bg;
-      border-color: $btn-warning-border;
+      background-color: $warning;
+      border-color: darken($warning, 5%);
 
       .dropdown-item {
-        color: $btn-warning-color;
+        color: $white;
       }
 
       .dropdown-item:hover,
       .dropdown-item:focus {
-        background-color: darken($btn-warning-bg, 8%);
+        background-color: darken($warning, 8%);
       }
     }
 
     &.btn-danger ~ .dropdown-menu {
-      background-color: $btn-danger-bg;
-      border-color: $btn-danger-border;
+      background-color: $danger;
+      border-color: darken($primary, 5%);
 
       .dropdown-item {
-        color: $btn-danger-color;
+        color: $white;
       }
 
       .dropdown-item:hover,
       .dropdown-item:focus {
-        background-color: darken($btn-danger-bg, 8%);
+        background-color: darken($danger, 8%);
       }
     }
   }
@@ -169,7 +207,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:300italic,400
 // Typography ==================================================================
 
 .blockquote-footer {
-  color: $gray-light;
+  color: $gray-600;
 }
 
 // Tables ======================================================================
@@ -185,6 +223,58 @@ table {
   &-warning,
   &-danger {
     color: #fff;
+  }
+
+  &-success {
+    &, > th, > td {
+      background-color: $success;
+    }
+  }
+
+  &-info {
+    &, > th, > td {
+      background-color: $info;
+    }
+  }
+
+  &-danger {
+    &, > th, > td {
+      background-color: $danger;
+    }
+  }
+
+  &-warning {
+    &, > th, > td {
+      background-color: $warning;
+    }
+  }
+
+  &-hover {
+
+    .table-success:hover {
+      &, > th, > td {
+        background-color: darken($success, 5%);
+      }
+    }
+
+    .table-info:hover {
+      &, > th, > td {
+        background-color: darken($info, 5%);
+      }
+    }
+
+    .table-danger:hover {
+      &, > th, > td {
+        background-color: darken($danger, 5%);
+      }
+    }
+
+    .table-warning:hover {
+      &, > th, > td {
+        background-color: darken($warning, 5%);
+      }
+    }
+
   }
 }
 
@@ -214,18 +304,18 @@ label,
   .nav-link.disabled:hover,
   .nav-link.disabled:focus {
     border-color: $nav-tabs-border-color;
-    background-color: $gray-lightest;
+    background-color: $gray-200;
   }
 
   .nav-link:hover,
   .nav-link:focus {
-    background-color: lighten($gray-lightest, 5%);
+    background-color: lighten($gray-200, 5%);
   }
 }
 
 .nav-pills {
   .active {
-    border: 1px solid $btn-primary-border;
+    border: 1px solid darken($primary, 5%);
   }
 }
 
@@ -279,6 +369,31 @@ label,
 .alert {
   font-size: $font-size-sm;
   font-weight: 300;
+  color: $white;
+
+  &-success {
+    &, > th, > td {
+      background-color: $success;
+    }
+  }
+
+  &-info {
+    &, > th, > td {
+      background-color: $info;
+    }
+  }
+
+  &-danger {
+    &, > th, > td {
+      background-color: $danger;
+    }
+  }
+
+  &-warning {
+    &, > th, > td {
+      background-color: $warning;
+    }
+  }
 
   .alert-link {
     font-weight: normal;
@@ -287,8 +402,14 @@ label,
   }
 }
 
-.tag {
-  padding-bottom: .6em;
+
+.badge {
+  padding-bottom: .3em;
+
+  &-warning,
+  &-info {
+    color: $white;
+  }
 }
 
 // Progress bars ===============================================================

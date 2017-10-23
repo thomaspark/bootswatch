@@ -2,6 +2,8 @@
 // Bootswatch
 
 
+// Variables ===================================================================
+
 $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" !default;
 @import url($web-font-path);
 
@@ -57,7 +59,8 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
     padding-bottom: 0.9rem;
   }
 
-  &-inverse {
+  &.bg-dark,
+  &.bg-primary {
 
     input[type=text],
     input[type=password] {
@@ -75,16 +78,13 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
   }
 }
 
-.bg-inverse {
-  background-color: #fff !important;
-}
-
 // Buttons =====================================================================
 
 @mixin btn($class,$bg,$color){
   .btn-#{$class} {
     &:focus {
       background-color: $bg;
+      box-shadow: 0 0 0 2px rgba(204, 204, 204, 0.5);
     }
 
     &:hover,
@@ -104,12 +104,14 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
   }
 }
 
-@include btn(primary,$btn-primary-bg,$btn-primary-color);
-@include btn(secondary,$btn-secondary-bg,$btn-secondary-color);
-@include btn(success,$btn-success-bg,$btn-success-color);
-@include btn(info,$btn-info-bg,$btn-info-color);
-@include btn(warning,$btn-warning-bg,$btn-warning-color);
-@include btn(danger,$btn-danger-bg,$btn-danger-color);
+@include btn(primary,$primary,$white);
+@include btn(secondary,$secondary,$gray-500);
+@include btn(success,$success,$white);
+@include btn(info,$info,$white);
+@include btn(warning,$warning,$white);
+@include btn(danger,$danger,$white);
+@include btn(dark,$dark,$white);
+@include btn(light,$light,$white);
 
 .btn {
   text-transform: uppercase;
@@ -154,6 +156,15 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
     }
   }
 
+  &-outline-secondary {
+    border-color: $gray-200;
+    color: $gray-300;
+  }
+
+  &-warning {
+    color: $white;
+  }
+
   &.dropdown-toggle::before {
     display: inline-block;
     width: 0;
@@ -187,19 +198,15 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
 
 // Typography ==================================================================
 
-body {
+body,
+input,
+button {
   -webkit-font-smoothing: antialiased;
   letter-spacing: .1px;
 }
 
 p {
   margin: 0 0 1em;
-}
-
-input,
-button {
-  -webkit-font-smoothing: antialiased;
-  letter-spacing: .1px;
 }
 
 a {
@@ -217,14 +224,11 @@ a {
 }
 
 .thead-inverse th {
-  background-color: $brand-primary;
+  background-color: $primary;
+  color: $white;
 }
 
 // Forms =======================================================================
-
-label {
-  font-weight: normal;
-}
 
 .col-form-label {
   font-size: 16px;
@@ -252,14 +256,13 @@ input[type=number],
 [contenteditable].form-control {
   padding: 0;
   border: none;
-  border-radius: 0;
   appearance: none;
   box-shadow: inset 0 -1px 0 #ddd;
   font-size: 16px;
   transition: all 0.2s;
 
   &:focus {
-    box-shadow: inset 0 -2px 0 $brand-primary;
+    box-shadow: inset 0 -2px 0 $primary;
   }
 
   &[disabled],
@@ -319,7 +322,7 @@ select.form-control {
   }
 
   &:focus {
-    box-shadow: inset 0 -2px 0 $brand-primary;
+    box-shadow: inset 0 -2px 0 $primary;
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAMAAACelLz8AAAAJ1BMVEUhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISF8S9ewAAAADHRSTlMAAgMJC0uWpKa6wMxMdjkoAAAANUlEQVR4AeXJyQEAERAAsNl7Hf3X6xt0QL6JpZWq30pdvdadme+0PMdzvHm8YThHcT1H7K0BtOMDniZhWOgAAAAASUVORK5CYII=);
   }
 
@@ -371,14 +374,14 @@ input[type="radio"],
     position: absolute;
     left: 0;
     top: 2px;
-    background-color: $brand-primary;
+    background-color: $primary;
     transform: scale(0);
   }
 
   &:after {
     position: relative;
     top: -2px;
-    border: 2px solid $gray;
+    border: 2px solid $gray-500;
   }
 
   &:checked:before {
@@ -386,16 +389,16 @@ input[type="radio"],
   }
 
   &:disabled:checked:before {
-    background-color: $gray-light;
+    background-color: $gray-300;
   }
 
   &:checked:after {
-    border-color: $brand-primary;
+    border-color: $primary;
   }
 
   &:disabled:after,
   &:disabled:checked:after {
-    border-color: $gray-light;
+    border-color: $gray-300;
   }
 }
 
@@ -413,7 +416,7 @@ input[type="checkbox"],
   }
 
   &:focus:after {
-    border-color: $brand-primary;
+    border-color: $primary;
   }
 
   &:after {
@@ -422,7 +425,7 @@ input[type="checkbox"],
     width: 18px;
     height: 18px;
     margin-right: 5px;
-    border: 2px solid $gray;
+    border: 2px solid $gray-500;
     border-radius: 2px;
     transition: 240ms;
   }
@@ -442,16 +445,16 @@ input[type="checkbox"],
   }
 
   &:checked:after {
-    background-color: $brand-primary;
-    border-color: $brand-primary;
+    background-color: $primary;
+    border-color: $primary;
   }
 
   &:disabled:after {
-    border-color: $gray-light;
+    border-color: $gray-300;
   }
 
   &:disabled:checked:after {
-    background-color: $gray-light;
+    background-color: $gray-300;
     border-color: transparent;
   }
 }
@@ -465,7 +468,7 @@ input[type="checkbox"],
   input:not([type=checkbox]):focus,
   .form-control:focus {
     border-bottom: none;
-    box-shadow: inset 0 -2px 0 $brand-warning;
+    box-shadow: inset 0 -2px 0 $warning;
   }
 }
 
@@ -478,7 +481,7 @@ input[type="checkbox"],
   input:not([type=checkbox]):focus,
   .form-control:focus {
     border-bottom: none;
-    box-shadow: inset 0 -2px 0 $brand-danger;
+    box-shadow: inset 0 -2px 0 $danger;
   }
 }
 
@@ -491,7 +494,7 @@ input[type="checkbox"],
   input:not([type=checkbox]):focus,
   .form-control:focus {
     border-bottom: none;
-    box-shadow: inset 0 -2px 0 $brand-success;
+    box-shadow: inset 0 -2px 0 $success;
   }
 }
 
@@ -529,20 +532,20 @@ input[type="checkbox"],
 
     &:hover {
       background-color: transparent;
-      box-shadow: inset 0 -2px 0 $brand-primary;
-      color: $brand-primary;
+      box-shadow: inset 0 -2px 0 $primary;
+      color: $primary;
     }
   }
 
   .nav-link.active,
   .nav-link.active:focus {
     border: none;
-    box-shadow: inset 0 -2px 0 $brand-primary;
-    color: $brand-primary;
+    box-shadow: inset 0 -2px 0 $primary;
+    color: $primary;
 
     &:hover {
       border: none;
-      color: $brand-primary;
+      color: $primary;
     }
   }
 
@@ -576,9 +579,34 @@ input[type="checkbox"],
 // Indicators ==================================================================
 
 .alert {
+  padding-right: 2.5rem;
 
-  h1, h2, h3, h4, h5, h6 {
+  &, h1, h2, h3, h4, h5, h6 {
     color: #fff;
+  }
+
+  &-primary {
+    background-color: $primary;
+  }
+
+  &-success {
+    background-color: $success;
+  }
+
+  &-danger {
+    background-color: $danger;
+  }
+
+  &-warning {
+    background-color: $warning;
+  }
+
+  &-info {
+    background-color: $info;
+  }
+
+  &-dark {
+    background-color: $dark;
   }
 
   a:not(.close):not(.btn),
@@ -592,13 +620,20 @@ input[type="checkbox"],
   }
 }
 
-.tag {
-  padding: 4px 6px 4px;
+.badge {
+
+  &-secondary {
+    background-color: $gray-500;
+    color: $white;
+  }
+
+  &-light {
+    background-color: $gray-200;
+  }
 }
 
-.progress {
-  height: 6px;
-  border-radius: 0;
+.tag {
+  padding: 4px 6px 4px;
 }
 
 // Progress bars ===============================================================
@@ -606,14 +641,26 @@ input[type="checkbox"],
 // Containers ==================================================================
 
 .close {
-  font-size: 34px;
-  font-weight: 300;
-  line-height: 24px;
+  line-height: 0.5;
   opacity: 0.6;
   transition: all 0.2s;
 
   &:hover {
     opacity: 1;
+  }
+}
+
+.alert-dismissible {
+  .close {
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+.list-group {
+  &-item-action.active {
+    h1, h2, h3, h4, h5, h6 {
+      color: $white;
+    }
   }
 }
 

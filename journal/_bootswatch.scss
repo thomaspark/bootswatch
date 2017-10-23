@@ -2,14 +2,21 @@
 // Bootswatch
 
 
+// Variables ===================================================================
+
 $web-font-path: "https://fonts.googleapis.com/css?family=News+Cycle:400,700" !default;
 @import url($web-font-path);
 
 // Navbar ======================================================================
 
-.bg-primary {
-  background-color: #fff !important;
-  border: 1px solid $gray-lightest;
+.bg-dark {
+  background-color: #000 !important;
+}
+
+.bg-light {
+  background-color: $white !important;
+  color: $black;
+  border: 1px solid $gray-200;
 
   &.navbar-fixed-top {
     border-width: 0 0 1px 0;
@@ -20,18 +27,10 @@ $web-font-path: "https://fonts.googleapis.com/css?family=News+Cycle:400,700" !de
   }
 }
 
-.bg-inverse {
-  background-color: #000 !important;
-}
-
 .navbar {
   font-size: 18px;
   font-family: $headings-font-family;
   font-weight: $headings-font-weight;
-
-  &-nav .nav-item + .nav-item {
-    margin-left: 2rem;
-  }
 }
 
 .navbar-brand {
@@ -46,6 +45,11 @@ $web-font-path: "https://fonts.googleapis.com/css?family=News+Cycle:400,700" !de
 .btn {
   font-family: $headings-font-family;
   font-weight: $headings-font-weight;
+
+  &-secondary,
+  &-warning {
+    color: $white;
+  }
 }
 
 // Typography ==================================================================

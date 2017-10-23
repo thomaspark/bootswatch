@@ -2,17 +2,19 @@
 // Bootswatch
 
 
+// Variables ===================================================================
+
 $web-font-path: "https://fonts.googleapis.com/css?family=Lato:400,700,400italic" !default;
 @import url($web-font-path);
 
 // Navbar =======================================================================
 
-.bg-inverse {
-  background-color: $brand-success !important;
+.bg-dark {
+  background-color: $success !important;
 
   &.navbar-inverse .navbar-nav .nav-link:focus,
   &.navbar-inverse .navbar-nav .nav-link:hover {
-    color: $brand-primary !important;
+    color: $primary !important;
   }
 }
 
@@ -33,23 +35,84 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Lato:400,700,400italic"
 
 // Buttons =====================================================================
 
+.btn {
+  &-secondary,
+  &-secondary:hover,
+  &-warning,
+  &-warning:hover {
+    color: #fff;
+  }
+}
+
 // Typography ==================================================================
 
 // Tables ======================================================================
 
 .table {
+
+  .thead-dark th {
+    background-color: $primary;
+  }
+
   &-success,
   &-info,
   &-warning,
   &-danger {
     color: #fff;
   }
-}
 
-.thead-inverse th {
-  background-color: $brand-primary;
-}
+  &-success {
+    &, > th, > td {
+      background-color: $success;
+    }
+  }
 
+  &-info {
+    &, > th, > td {
+      background-color: $info;
+    }
+  }
+
+  &-danger {
+    &, > th, > td {
+      background-color: $danger;
+    }
+  }
+
+  &-warning {
+    &, > th, > td {
+      background-color: $warning;
+    }
+  }
+
+  &-hover {
+
+    .table-success:hover {
+      &, > th, > td {
+        background-color: darken($success, 5%);
+      }
+    }
+
+    .table-info:hover {
+      &, > th, > td {
+        background-color: darken($info, 5%);
+      }
+    }
+
+    .table-danger:hover {
+      &, > th, > td {
+        background-color: darken($danger, 5%);
+      }
+    }
+
+    .table-warning:hover {
+      &, > th, > td {
+        background-color: darken($warning, 5%);
+      }
+    }
+
+  }
+}
 
 // Forms =======================================================================
 
@@ -62,7 +125,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Lato:400,700,400italic"
   .nav-item.open .nav-link,
   .nav-item.open .nav-link:focus,
   .nav-item.open .nav-link:hover {
-    color: $brand-primary;
+    color: $primary;
   }
 }
 
@@ -75,7 +138,6 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Lato:400,700,400italic"
 // Indicators ==================================================================
 
 .close {
-  color: #fff;
   text-decoration: none;
   opacity: 0.4;
 
@@ -85,23 +147,49 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Lato:400,700,400italic"
   }
 }
 
-.alert {
+.badge {
+  &-secondary,
+  &-warning {
+    color: #fff;
+  }
+}
 
+
+.alert {
+  border: none;
+  color: $white;
+
+  a,
   .alert-link {
     color: #fff;
     text-decoration: underline;
   }
+
+  &-primary {
+    background-color: $primary;
+  }
+
+  &-success {
+    background-color: $success;
+  }
+
+  &-danger {
+    background-color: $danger;
+  }
+
+  &-warning {
+    background-color: $warning;
+  }
+
+  &-info {
+    background-color: $info;
+  }
+
+  &-dark {
+    background-color: $dark;
+  }
 }
 
 // Progress bars ===============================================================
-
-.progress {
-  height: 10px;
-
-  .progress-bar {
-    font-size: 10px;
-    line-height: 10px;
-  }
-}
 
 // Containers ==================================================================
