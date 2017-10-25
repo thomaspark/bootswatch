@@ -2,6 +2,8 @@
 // Bootswatch
 
 
+// Variables ===================================================================
+
 $web-font-path: "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic" !default;
 @import url($web-font-path);
 
@@ -17,13 +19,17 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400
 }
 
 .bg-primary {
-  background-color: #fff !important;
-  border-color: darken(#fff, 5%);
+  border-color: darken($primary, 5%);
 }
 
-.bg-inverse {
-  background-color: $brand-primary !important;
-  border-color: darken($brand-primary, 5%) !important;
+.bg-dark {
+  background-color: $gray-200 !important;
+  border-color: darken($gray-200, 5%);
+}
+
+.bg-light {
+  background-color: #fff !important;
+  border-color: darken(#fff, 5%);
 }
 
 // Buttons =====================================================================
@@ -50,19 +56,40 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400
   border-top-width: 1px;
 }
 
-.btn-secondary,
-.btn-secondary:hover{
-  background-color: $gray-lightest;
-  border-color: darken($gray-lightest, 7%);
-}
+.btn {
+  &-primary {
+    border-color: darken($primary, 5%);
+  }
 
-.btn-outline-secondary {
-  background-color: #fff;
-  color: $gray-dark;
-}
+  &-secondary {
+    border-color: darken($secondary, 5%);
+  }
 
-.btn-outline-secondary:hover {
-  color: $gray-dark;
+  &-success {
+    border-color: darken($success, 5%);
+  }
+
+  &-info {
+    border-color: darken($info, 5%);
+    color: $white;
+  }
+
+  &-danger {
+    border-color: darken($danger, 5%);
+  }
+
+  &-warning {
+    border-color: darken($warning, 5%);
+    color: $white;
+  }
+
+  &-light {
+    border-color: darken($light, 5%);
+  }
+
+  &-dark {
+    border-color: darken($dark, 5%);
+  }
 }
 
 .btn-group-vertical {
@@ -82,20 +109,76 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400
 // Typography ==================================================================
 
 .blockquote-footer {
-  color: $gray-lighter;
+  color: $gray-600;
 }
 
 // Tables ======================================================================
 
-.table-success,
-.table-info,
-.table-warning,
-.table-danger {
-  color: #fff;
-}
+.table {
 
-.thead-inverse th {
-  background-color: $brand-primary;
+  &-success,
+  &-info,
+  &-warning,
+  &-danger {
+    color: #fff;
+  }
+
+  .thead-dark th {
+    background-color: $primary;
+    border-color: $primary;
+  }
+
+  &-success {
+    &, > th, > td {
+      background-color: $success;
+    }
+  }
+
+  &-info {
+    &, > th, > td {
+      background-color: $info;
+    }
+  }
+
+  &-danger {
+    &, > th, > td {
+      background-color: $danger;
+    }
+  }
+
+  &-warning {
+    &, > th, > td {
+      background-color: $warning;
+    }
+  }
+
+  &-hover {
+
+    .table-success:hover {
+      &, > th, > td {
+        background-color: darken($success, 5%);
+      }
+    }
+
+    .table-info:hover {
+      &, > th, > td {
+        background-color: darken($info, 5%);
+      }
+    }
+
+    .table-danger:hover {
+      &, > th, > td {
+        background-color: darken($danger, 5%);
+      }
+    }
+
+    .table-warning:hover {
+      &, > th, > td {
+        background-color: darken($warning, 5%);
+      }
+    }
+
+  }
 }
 
 // Forms =======================================================================
@@ -223,12 +306,40 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400
 }
 
 .alert {
+  color: $white;
   @include shadow();
+
+  &-success {
+    background-color: $success;
+    border-color: darken($success, 5%);
+  }
+
+  &-info {
+    background-color: $info;
+    border-color: darken($info, 5%);
+  }
+
+  &-danger {
+    background-color: $danger;
+    border-color: darken($danger, 5%);
+  }
+
+  &-warning {
+    background-color: $warning;
+    border-color: darken($warning, 5%);
+  }
 
   .alert-link {
     font-weight: normal;
     color: #fff;
     text-decoration: underline;
+  }
+}
+
+.badge {
+  &-warning,
+  &-info {
+    color: $white;
   }
 }
 
@@ -238,57 +349,48 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400
 
 a.list-group-item {
 
-  &.active,
-  &.active:hover,
-  &.active:focus {
-    // border-color: $list-group-border;
-  }
-
   &-success {
     &.active {
-      background-color: $state-success-bg;
+      background-color: $success;
     }
 
     &.active:hover,
     &.active:focus {
-      background-color: darken($state-success-bg, 5%);
+      background-color: darken($success, 5%);
     }
   }
 
   &-warning {
     &.active {
-      background-color: $state-warning-bg;
+      background-color: $warning;
     }
     
     &.active:hover,
     &.active:focus {
-      background-color: darken($state-warning-bg, 5%);
+      background-color: darken($warning, 5%);
     }
   }
 
   &-danger {
     &.active {
-      background-color: $state-danger-bg;
+      background-color: $danger;
     }
     
     &.active:hover,
     &.active:focus {
-      background-color: darken($state-danger-bg, 5%);
+      background-color: darken($danger, 5%);
     }
   }
 }
 
-.jumbotron {
-  border: 1px solid $gray-lightest;
-  box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.05);
-}
+.card {
 
-.modal {
-  .close {
-    color: $body-color;
+  &.bg-dark {
+    background-color: $gray-700 !important;
   }
 }
 
-.popover {
-  color: $body-color;
+.jumbotron {
+  border: 1px solid $gray-200;
+  box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.05);
 }

@@ -2,7 +2,9 @@
 // Bootswatch
 
 
-$web-font-path: "https://fonts.googleapis.com/css?family=Nunito+Sans" !default;
+// Variables ===================================================================
+
+$web-font-path: "https://fonts.googleapis.com/css?family=Nunito+Sans:400,600" !default;
 @import url($web-font-path);
 
 // Navbar ======================================================================
@@ -29,11 +31,10 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Nunito+Sans" !default;
 }
 
 .bg-primary {
-  background-color: $gray-dark !important;
+  background-color: $gray-900 !important;
 }
 
-.bg-inverse {
-  background-color: #fff !important;
+.bg-light {
   border: 1px solid rgba(0, 0, 0, 0.1);
 
   &.navbar-fixed-top {
@@ -50,7 +51,6 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Nunito+Sans" !default;
 .btn {
   font-size: $font-size-sm;
   text-transform: uppercase;
-  font-weight: 600;
 
   &-sm {
     font-size: 10px;
@@ -58,11 +58,11 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Nunito+Sans" !default;
 }
 
 .btn-outline-secondary {
-  border-color: $gray-light;
-  color: $gray-light;
+  border-color: $gray-600;
+  color: $gray-600;
 
   &:hover {
-    background-color: $gray-light;
+    background-color: $gray-600;
   }
 }
 
