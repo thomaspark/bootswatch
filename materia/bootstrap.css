@@ -111,8 +111,8 @@ body {
   font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 0.8125rem;
   font-weight: 400;
-  line-height: 1.1;
-  color: #666;
+  line-height: 1.5;
+  color: #444;
   text-align: left;
   background-color: #fff; }
 
@@ -1727,7 +1727,7 @@ pre {
   width: 100%;
   padding: 1rem 1rem;
   font-size: 0.8125rem;
-  line-height: 1.1;
+  line-height: 1.5;
   color: #666;
   background-color: transparent;
   background-image: none;
@@ -1767,7 +1767,7 @@ pre {
     opacity: 1; }
 
 select.form-control:not([size]):not([multiple]) {
-  height: calc(2.89375rem + 2px); }
+  height: calc(3.21875rem + 2px); }
 
 select.form-control:focus::-ms-value {
   color: #666;
@@ -1781,7 +1781,7 @@ select.form-control:focus::-ms-value {
   padding-top: calc(1rem + 1px);
   padding-bottom: calc(1rem + 1px);
   margin-bottom: 0;
-  line-height: 1.1; }
+  line-height: 1.5; }
 
 .col-form-label-lg {
   padding-top: calc(0.5rem + 1px);
@@ -1805,7 +1805,7 @@ select.form-control:focus::-ms-value {
   padding-top: 1rem;
   padding-bottom: 1rem;
   margin-bottom: 0;
-  line-height: 1.1;
+  line-height: 1.5;
   background-color: transparent;
   border: solid transparent;
   border-width: 1px 0; }
@@ -2113,7 +2113,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   border: 1px solid transparent;
   padding: 1rem 1rem;
   font-size: 0.8125rem;
-  line-height: 1.1;
+  line-height: 1.5;
   border-radius: 0.25rem;
   -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
@@ -2592,7 +2592,7 @@ tbody.collapse.show {
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
   font-size: 0.8125rem;
-  color: #666;
+  color: #444;
   text-align: left;
   list-style: none;
   background-color: #fff;
@@ -2848,7 +2848,7 @@ tbody.collapse.show {
   margin-bottom: 0;
   font-size: 0.8125rem;
   font-weight: 400;
-  line-height: 1.1;
+  line-height: 1.5;
   color: #666;
   text-align: center;
   background-color: transparent;
@@ -2934,7 +2934,7 @@ tbody.collapse.show {
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  min-height: 1.1rem;
+  min-height: 1.5rem;
   padding-left: 1.5rem;
   margin-right: 1rem; }
 
@@ -2958,7 +2958,7 @@ tbody.collapse.show {
 
 .custom-control-indicator {
   position: absolute;
-  top: 0.05rem;
+  top: 0.25rem;
   left: 0;
   display: block;
   width: 1rem;
@@ -3008,9 +3008,9 @@ tbody.collapse.show {
 .custom-select {
   display: inline-block;
   max-width: 100%;
-  height: calc(2.89375rem + 2px);
+  height: calc(3.21875rem + 2px);
   padding: 0.375rem 1.75rem 0.375rem 0.75rem;
-  line-height: 1.1;
+  line-height: 1.5;
   color: #666;
   vertical-align: middle;
   background: #fff url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23333' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right 0.75rem center;
@@ -3046,13 +3046,13 @@ tbody.collapse.show {
   position: relative;
   display: inline-block;
   max-width: 100%;
-  height: calc(2.89375rem + 2px);
+  height: calc(3.21875rem + 2px);
   margin-bottom: 0; }
 
 .custom-file-input {
   min-width: 14rem;
   max-width: 100%;
-  height: calc(2.89375rem + 2px);
+  height: calc(3.21875rem + 2px);
   margin: 0;
   opacity: 0; }
   .custom-file-input:focus ~ .custom-file-control {
@@ -3065,9 +3065,9 @@ tbody.collapse.show {
   right: 0;
   left: 0;
   z-index: 5;
-  height: calc(2.89375rem + 2px);
+  height: calc(3.21875rem + 2px);
   padding: 1rem 1rem;
-  line-height: 1.1;
+  line-height: 1.5;
   color: #666;
   pointer-events: none;
   -webkit-user-select: none;
@@ -3086,9 +3086,9 @@ tbody.collapse.show {
     bottom: -1px;
     z-index: 6;
     display: block;
-    height: calc(2.89375rem + 2px);
+    height: calc(3.21875rem + 2px);
     padding: 1rem 1rem;
-    line-height: 1.1;
+    line-height: 1.5;
     color: #666;
     background-color: transparent;
     border: 1px solid transparent;
@@ -3209,8 +3209,8 @@ tbody.collapse.show {
 
 .navbar-brand {
   display: inline-block;
-  padding-top: 0.38828125rem;
-  padding-bottom: 0.38828125rem;
+  padding-top: 0.34765625rem;
+  padding-bottom: 0.34765625rem;
   margin-right: 1rem;
   font-size: 1.015625rem;
   line-height: inherit;
@@ -3551,7 +3551,7 @@ tbody.collapse.show {
     color: #fff; }
 
 .navbar-dark .navbar-nav .nav-link {
-  color: rgba(255, 255, 255, 0.5); }
+  color: rgba(255, 255, 255, 0.75); }
   .navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
     color: #fff; }
   .navbar-dark .navbar-nav .nav-link.disabled {
@@ -3564,14 +3564,14 @@ tbody.collapse.show {
   color: #fff; }
 
 .navbar-dark .navbar-toggler {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.75);
   border-color: rgba(255, 255, 255, 0.1); }
 
 .navbar-dark .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); }
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.75)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); }
 
 .navbar-dark .navbar-text {
-  color: rgba(255, 255, 255, 0.5); }
+  color: rgba(255, 255, 255, 0.75); }
   .navbar-dark .navbar-text a {
     color: #fff; }
     .navbar-dark .navbar-text a:focus, .navbar-dark .navbar-text a:hover {
@@ -4171,7 +4171,7 @@ tbody.collapse.show {
     text-decoration: none;
     background-color: #f8f9fa; }
   .list-group-item-action:active {
-    color: #666;
+    color: #444;
     background-color: #eee; }
 
 .list-group-item {
@@ -4467,7 +4467,7 @@ button.close {
 
 .modal-title {
   margin-bottom: 0;
-  line-height: 1.1; }
+  line-height: 1.5; }
 
 .modal-body {
   position: relative;
@@ -4523,7 +4523,7 @@ button.close {
   font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
-  line-height: 1.1;
+  line-height: 1.5;
   text-align: left;
   text-align: start;
   text-decoration: none;
@@ -4604,7 +4604,7 @@ button.close {
   font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
-  line-height: 1.1;
+  line-height: 1.5;
   text-align: left;
   text-align: start;
   text-decoration: none;
@@ -4720,7 +4720,7 @@ button.close {
 
 .popover-body {
   padding: 0.5rem 0.75rem;
-  color: #666; }
+  color: #444; }
 
 .carousel {
   position: relative; }
@@ -8033,7 +8033,7 @@ input[type=number],
   [type=email].form-control:not(textarea),
   [type=tel].form-control:not(textarea),
   [contenteditable].form-control:not(textarea) {
-    height: calc(2.89375rem + 2px); }
+    height: calc(3.21875rem + 2px); }
   textarea.form-control-sm, .input-group-sm > textarea.form-control,
   .input-group-sm > textarea.input-group-addon,
   .input-group-sm > .input-group-btn > textarea.btn,
@@ -8365,7 +8365,7 @@ input[type="checkbox"],
   margin-right: 0;
   background-color: transparent;
   border: none;
-  color: #666;
+  color: #444;
   -webkit-box-shadow: inset 0 -1px 0 #ddd;
           box-shadow: inset 0 -1px 0 #ddd;
   -webkit-transition: all 0.2s;
