@@ -2,23 +2,31 @@
 // Bootswatch
 
 
+// Variables ===================================================================
+
 $web-font-path: "https://fonts.googleapis.com/css?family=Ubuntu:400,700" !default;
 @import url($web-font-path);
 
 // Navbar ======================================================================
 
-.bg-inverse {
-  background-color: $brand-info !important;
-}
-
 // Buttons =====================================================================
+
+.btn {
+
+	&-secondary,
+	&-warning,
+	&-warning:hover {
+		color: $white;
+	}
+}
 
 // Typography ==================================================================
 
 // Tables ======================================================================
 
-.thead-inverse th {
-  background-color: $brand-info;
+.table .thead-dark th {
+  background-color: $dark;
+  border-color: darken($dark, 5%);
 }
 
 // Forms =======================================================================

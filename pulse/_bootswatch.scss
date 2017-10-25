@@ -2,10 +2,12 @@
 // Bootswatch
 
 
+// Variables ===================================================================
+
 // Navbar ======================================================================
 
-.bg-inverse {
-  background-color: $gray-dark !important;
+.bg-dark {
+  // background-color: $gray-900 !important;
 }
 
 // Buttons =====================================================================
@@ -19,28 +21,50 @@
     outline: none;
   }
 
+  &-secondary {
+    background-color: $white;
+    border-color: #ccc;
+    color: $gray-900;
+
+    &:hover {
+      background-color: $gray-300;
+      border-color: $gray-500;
+      color: $gray-900;
+    }
+
+    &.disabled {
+      background-color: $white;
+      border-color: lighten(#ccc, 5%);
+      color: lighten($gray-900, 5%);
+    }
+  }
+
+  &-warning {
+    color: $white;
+  }
+
   &-primary:focus {
-    box-shadow: 0 0 5px lighten($brand-primary, 10%);
+    box-shadow: 0 0 5px lighten($primary, 10%);
   }
 
   &-secondary:focus {
-    box-shadow: 0 0 5px $gray-light;
+    box-shadow: 0 0 5px $gray-400;
   }
 
   &-success:focus {
-    box-shadow: 0 0 5px lighten($brand-success, 10%);
+    box-shadow: 0 0 5px lighten($success, 10%);
   }
 
   &-info:focus {
-    box-shadow: 0 0 5px lighten($brand-info, 10%);
+    box-shadow: 0 0 5px lighten($info, 10%);
   }
 
   &-warning:focus {
-    box-shadow: 0 0 5px lighten($brand-warning, 10%);
+    box-shadow: 0 0 5px lighten($warning, 10%);
   }
 
   &-danger:focus {
-    box-shadow: 0 0 5px lighten($brand-danger, 10%);
+    box-shadow: 0 0 5px lighten($danger, 10%);
   }
 
   &.disabled:focus {
@@ -53,8 +77,9 @@
 
 // Tables ======================================================================
 
-.thead-inverse th {
-  background-color: #A991D4;
+.table .thead-dark th {
+  background-color: $secondary;
+  border-color: $table-border-color;
 }
 
 // Forms =======================================================================
@@ -76,7 +101,7 @@
   .nav-link.active,
   .nav-link.active:hover,
   .nav-link.active:focus {
-    border-bottom: 1px solid $brand-primary;
+    border-bottom: 1px solid $primary;
   }
 
   .nav-item + .nav-item {
@@ -86,11 +111,20 @@
 
 .breadcrumb {
   &-item.active {
-    color: $gray;
+    color: $gray-700;
   }
 }
 
 // Indicators ==================================================================
+
+.badge {
+  padding-bottom: 0.4em;
+
+  &-secondary,
+  &-warning {
+    color: $white;
+  }
+}
 
 // Progress bars ===============================================================
 
@@ -117,6 +151,10 @@
       &:hover {
         background-color: $list-group-hover-bg;
       }
+    }
+
+    &.disabled:hover {
+      color: $list-group-disabled-color;
     }
   }
 }

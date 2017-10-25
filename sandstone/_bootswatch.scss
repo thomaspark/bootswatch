@@ -2,17 +2,23 @@
 // Bootswatch
 
 
+// Variables ===================================================================
+
 $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:400,500,700" !default;
 @import url($web-font-path);
 
 // Navbar ======================================================================
 
 .bg-primary {
-  background-color: $gray-dark !important;
+  background-color: $dark !important;
 }
 
-.bg-inverse {
-  background-color: $gray-lightest !important;
+.bg-dark {
+  background-color: $secondary !important;
+}
+
+.bg-light {
+  background-color: $gray-200 !important;
 }
 
 .sandstone {
@@ -41,11 +47,22 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:400,500,700" !de
   &:hover {
     border-color: transparent;
   }
+
+  &-success,
+  &-warning {
+    color: $white;
+  }
 }
 
 // Typography ==================================================================
 
 // Tables ======================================================================
+
+.table {
+  .thead-dark th {
+    background-color: $dark;
+  }
+}
 
 // Forms =======================================================================
 
@@ -64,21 +81,21 @@ input,
 .nav-tabs {
   .nav-link {
     @extend .sandstone;
-    background-color: $gray-lightest;
-    border-color: $gray-lighter;
+    background-color: $gray-200;
+    border-color: $gray-300;
   }
 
   .nav-link,
   .nav-link:hover,
   .nav-link:focus {
-    color: $gray;
+    color: $gray-600;
   }
 
   .nav-link.disabled,
   .nav-link.disabled:hover,
   .nav-link.disabled:focus {
-    background-color: $gray-lightest;
-    border-color: $gray-lighter;
+    background-color: $gray-200;
+    border-color: $gray-300;
   }
 }
 
@@ -86,28 +103,28 @@ input,
   .nav-link {
     @extend .sandstone;
     border: 1px solid transparent;
-    color: $gray;
+    color: $gray-600;
   }
 
   .nav-link.active,
   .nav-link:hover,
   .nav-link:focus {
-    background-color: $gray-lightest;
-    border-color: $gray-lighter;
+    background-color: $gray-200;
+    border-color: $gray-300;
   }
 
   .nav-link.disabled,
   .nav-link.disabled:hover {
     background-color: transparent;
     border-color: transparent;
-    color: $nav-disabled-link-color;
+    color: $gray-300;
   }
 }
 
 
 .breadcrumb {
   @extend .sandstone;
-  border: 1px solid $gray-lighter;
+  border: 1px solid $gray-300;
 }
 
 .pagination {
@@ -127,10 +144,44 @@ input,
 // Indicators ==================================================================
 
 .alert {
+  color: #fff;
 
   a,
   .alert-link {
     color: #fff;
+    text-decoration: underline;
+  }
+
+  &-success {
+    &, > th, > td {
+      background-color: $success;
+    }
+  }
+
+  &-info {
+    &, > th, > td {
+      background-color: $info;
+    }
+  }
+
+  &-danger {
+    &, > th, > td {
+      background-color: $danger;
+    }
+  }
+
+  &-warning {
+    &, > th, > td {
+      background-color: $warning;
+    }
+  }
+}
+
+.badge {
+
+  &-success,
+  &-warning {
+    color: $white;
   }
 }
 
@@ -139,11 +190,11 @@ input,
 }
 
 .close {
-  color: $gray-lighter;
+  color: $gray-300;
   opacity: 1;
 
   &:hover {
-    color: darken($gray-lighter, 20%);
+    color: darken($gray-300, 20%);
   }
 }
 
