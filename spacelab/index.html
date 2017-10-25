@@ -24,7 +24,7 @@
     </script>
   </head>
   <body>
-    <div class="navbar navbar-toggleable-md fixed-top navbar-light bg-primary">
+    <div class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -122,7 +122,7 @@
             </div>
 
             <div class="bs-component">
-              <nav class="navbar navbar-toggleable-md navbar-light bg-primary">
+              <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -152,7 +152,37 @@
             </div>
 
             <div class="bs-component">
-              <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+              <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+                <a class="navbar-brand" href="#">Navbar</a>
+
+                <div class="collapse navbar-collapse" id="navbarColor01">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">About</a>
+                    </li>
+                  </ul>
+                  <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                  </form>
+                </div>
+              </nav>
+            </div>
+
+            <div class="bs-component">
+              <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -337,13 +367,13 @@
 
             <div class="bs-component" style="margin-bottom: 15px;">
               <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                <div class="btn-group" role="group" aria-label="First group">
+                <div class="btn-group mr-2" role="group" aria-label="First group">
                   <button type="button" class="btn btn-secondary">1</button>
                   <button type="button" class="btn btn-secondary">2</button>
                   <button type="button" class="btn btn-secondary">3</button>
                   <button type="button" class="btn btn-secondary">4</button>
                 </div>
-                <div class="btn-group" role="group" aria-label="Second group">
+                <div class="btn-group mr-2" role="group" aria-label="Second group">
                   <button type="button" class="btn btn-secondary">5</button>
                   <button type="button" class="btn btn-secondary">6</button>
                   <button type="button" class="btn btn-secondary">7</button>
@@ -451,7 +481,7 @@
 
             <div class="bs-component">
               <table class="table table-striped table-hover table-bordered">
-                <thead class="thead-inverse">
+                <thead class="thead-dark">
                   <tr>
                     <th>#</th>
                     <th>Column heading</th>
@@ -596,7 +626,7 @@
               </form>
             </div>
           </div>
-          <div class="col-lg-4 col-lg-offset-1">
+          <div class="col-lg-4 offset-lg-1">
 
               <form class="bs-component">
 
@@ -928,20 +958,24 @@
         <div>
           <h2>Badges</h2>
           <div class="bs-component" style="margin-bottom: 40px;">
-            <span class="badge badge-default">Default</span>
             <span class="badge badge-primary">Primary</span>
+            <span class="badge badge-secondary">Secondary</span>
             <span class="badge badge-success">Success</span>
-            <span class="badge badge-warning">Warning</span>
             <span class="badge badge-danger">Danger</span>
+            <span class="badge badge-warning">Warning</span>
             <span class="badge badge-info">Info</span>
+            <span class="badge badge-light">Light</span>
+            <span class="badge badge-dark">Dark</span>
           </div>
           <div class="bs-component">
-            <span class="badge badge-pill badge-default">Default</span>
             <span class="badge badge-pill badge-primary">Primary</span>
+            <span class="badge badge-pill badge-secondary">Secondary</span>
             <span class="badge badge-pill badge-success">Success</span>
-            <span class="badge badge-pill badge-warning">Warning</span>
             <span class="badge badge-pill badge-danger">Danger</span>
+            <span class="badge badge-pill badge-warning">Warning</span>
             <span class="badge badge-pill badge-info">Info</span>
+            <span class="badge badge-pill badge-light">Light</span>
+            <span class="badge badge-pill badge-dark">Dark</span>
           </div>
         </div>
       </div>
@@ -959,7 +993,7 @@
             <h3 id="progress-basic">Basic</h3>
             <div class="bs-component">
               <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: 25%; height: 20px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div>
 
@@ -1100,40 +1134,56 @@
         <div class="row">
           <div class="col-lg-4">
             <div class="bs-component">
-              <div class="card card-inverse card-primary text-xs-center">
-                <div class="card-block">
+              <div class="card text-white bg-primary">
+                <div class="card-body">
                   <blockquote class="card-blockquote">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
                     <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
                   </blockquote>
                 </div>
               </div>
-              <div class="card card-inverse card-success text-xs-center">
-                <div class="card-block">
+              <div class="card text-white bg-success">
+                <div class="card-body">
                   <blockquote class="card-blockquote">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
                     <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
                   </blockquote>
                 </div>
               </div>
-              <div class="card card-inverse card-info text-xs-center">
-                <div class="card-block">
+              <div class="card text-white bg-info">
+                <div class="card-body">
                   <blockquote class="card-blockquote">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
                     <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
                   </blockquote>
                 </div>
               </div>
-              <div class="card card-inverse card-warning text-xs-center">
-                <div class="card-block">
+              <div class="card text-white bg-warning">
+                <div class="card-body">
                   <blockquote class="card-blockquote">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
                     <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
                   </blockquote>
                 </div>
               </div>
-              <div class="card card-inverse card-danger text-xs-center">
-                <div class="card-block">
+              <div class="card text-white bg-danger">
+                <div class="card-body">
+                  <blockquote class="card-blockquote">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                    <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                  </blockquote>
+                </div>
+              </div>
+              <div class="card text-black bg-light">
+                <div class="card-body">
+                  <blockquote class="card-blockquote">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                    <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                  </blockquote>
+                </div>
+              </div>
+              <div class="card text-white bg-dark">
+                <div class="card-body">
                   <blockquote class="card-blockquote">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
                     <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
@@ -1144,40 +1194,56 @@
           </div>
           <div class="col-lg-4">
             <div class="bs-component">
-              <div class="card card-outline-primary text-xs-center">
-                <div class="card-block">
+              <div class="card border-primary">
+                <div class="card-body">
                   <blockquote class="card-blockquote">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
                     <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
                   </blockquote>
                 </div>
               </div>
-              <div class="card card-outline-success text-xs-center">
-                <div class="card-block">
+              <div class="card border-success">
+                <div class="card-body">
                   <blockquote class="card-blockquote">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
                     <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
                   </blockquote>
                 </div>
               </div>
-              <div class="card card-outline-info text-xs-center">
-                <div class="card-block">
+              <div class="card border-info">
+                <div class="card-body">
                   <blockquote class="card-blockquote">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
                     <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
                   </blockquote>
                 </div>
               </div>
-              <div class="card card-outline-warning text-xs-center">
-                <div class="card-block">
+              <div class="card border-warning">
+                <div class="card-body">
                   <blockquote class="card-blockquote">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
                     <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
                   </blockquote>
                 </div>
               </div>
-              <div class="card card-outline-danger text-xs-center">
-                <div class="card-block">
+              <div class="card border-danger">
+                <div class="card-body">
+                  <blockquote class="card-blockquote">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                    <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                  </blockquote>
+                </div>
+              </div>
+              <div class="card border-light">
+                <div class="card-body">
+                  <blockquote class="card-blockquote">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                    <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+                  </blockquote>
+                </div>
+              </div>
+              <div class="card border-dark">
+                <div class="card-body">
                   <blockquote class="card-blockquote">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
                     <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
@@ -1191,17 +1257,17 @@
             <div class="bs-component">
               <div class="card">
                 <h3 class="card-header">Card header</h3>
-                <div class="card-block">
+                <div class="card-body">
                   <h5 class="card-title">Special title treatment</h5>
                   <h6 class="card-subtitle text-muted">Support card subtitle</h6>
                 </div>
                 <img style="height: 200px; width: 100%; display: block;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22318%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_158bd1d28ef%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_158bd1d28ef%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22129.359375%22%20y%3D%2297.35%22%3EImage%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="Card image">
-                <div class="card-block">
+                <div class="card-body">
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                   <a href="#" class="card-link">Card link</a>
                   <a href="#" class="card-link">Another link</a>
                 </div>
-                <div class="card-footer text-muted text-xs-center">
+                <div class="card-footer text-muted">
                   2 days ago
                 </div>
               </div>
@@ -1313,9 +1379,9 @@
     </div>
 
 
-    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="../bower_components/tether/dist/js/tether.min.js"></script>
-    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="../assets/js/custom.js"></script>
   </body>
 </html>
