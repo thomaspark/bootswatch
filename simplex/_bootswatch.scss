@@ -2,6 +2,8 @@
 // Bootswatch
 
 
+// Variables ===================================================================
+
 $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:400,700" !default;
 @import url($web-font-path);
 
@@ -28,45 +30,74 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:400,700" !def
 }
 
 .bg-primary {
-  background-color: #fff !important;
-  border-color: darken(#fff, 6.5%);
+  background-color: $primary !important;
+  border-color: darken($primary, 6.5%) !important;
 }
 
-.bg-inverse {
-  background-color: $brand-primary !important;
-  border-color: darken($brand-primary, 6.5%) !important;
+.bg-dark {
+  border-color: darken($dark, 6.5%) !important;
+}
+
+.bg-light {
+  border-color: darken(#fff, 6.5%);
 }
 
 // Buttons =====================================================================
 
 .btn-primary,
 .btn-primary:hover {
-  @include btn-shadow($btn-primary-bg);
+  @include btn-shadow($primary);
 }
 
 .btn-secondary,
 .btn-secondary:hover {
-  @include btn-shadow($btn-secondary-bg);
+  @include btn-shadow($secondary);
+}
+
+.btn-secondary:focus,
+.btn-secondary:not([disabled]):not(.disabled):active,
+.btn-secondary:not([disabled]):not(.disabled).active {
+  box-shadow: 0 0 0 0.2rem rgba($gray-200, 0.5);
 }
 
 .btn-success,
 .btn-success:hover {
-  @include btn-shadow($btn-success-bg);
+  @include btn-shadow($success);
 }
 
 .btn-info,
 .btn-info:hover {
-  @include btn-shadow($btn-info-bg);
+  @include btn-shadow($info);
 }
 
 .btn-warning,
 .btn-warning:hover {
-  @include btn-shadow($btn-warning-bg);
+  @include btn-shadow($warning);
 }
 
 .btn-danger,
 .btn-danger:hover {
-  @include btn-shadow($btn-danger-bg);
+  @include btn-shadow($danger);
+}
+
+.btn-dark,
+.btn-dark:hover {
+  @include btn-shadow($dark);
+}
+
+.btn-light,
+.btn-light:hover {
+  @include btn-shadow($light);
+}
+
+.btn-outline-secondary {
+  border-color: $gray-400;
+  color: $gray-400;
+
+  &:hover {
+    background-color: $gray-400;
+    color: $white;
+  }
 }
 
 // Typography ==================================================================
