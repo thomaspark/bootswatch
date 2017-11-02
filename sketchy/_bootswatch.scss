@@ -2,17 +2,21 @@
 // Bootswatch
 
 
+// Variables ===================================================================
+
 $web-font-path: "https://fonts.googleapis.com/css?family=Neucha|Cabin+Sketch" !default;
 @import url($web-font-path);
 
 // Navbar ======================================================================
 
-.bg-inverse {
-  background-color: $white !important;
-  border: $gray-dark 2px solid;
-}
 .navbar {
+  border-width: 2px;
+  border-style: solid;
   border-radius: 25px 25px 55px 5px/5px 55px 25px 25px;
+
+  &.bg-light {
+    border-color: $gray-800;
+  }
 
   &.fixed-top {
     border-radius: 0 25px 225px 0/25px 0 25px 255px;
@@ -36,6 +40,10 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Neucha|Cabin+Sketch" !d
 .btn {
   border-radius: $border-radius;
   text-decoration: none;
+
+  &-warning {
+    color: $white;
+  }
 }
 
 // Typography ==================================================================
@@ -58,7 +66,7 @@ table {
 }
 
 .table-bordered {
-  background-color: $gray-dark;
+  background-color: $gray-800;
   border-collapse: separate;
   border-spacing: 0;
   border-radius: 5px 25px 5px 25px/25px 5px 25px 5px;
@@ -72,7 +80,7 @@ table {
   .table-success,
   .table-success:hover {
     td, th {
-      background-color: $brand-success;
+      background-color: $success;
       color: $white;
     }
   }
@@ -80,7 +88,7 @@ table {
   .table-info,
   .table-info:hover {
     td, th {
-      background-color: $brand-info;
+      background-color: $info;
       color: $white;
     }
   }
@@ -88,7 +96,7 @@ table {
   .table-warning,
   .table-warning:hover {
     td, th {
-      background-color: $brand-warning;
+      background-color: $warning;
       color: $white;
     }
   }
@@ -96,7 +104,7 @@ table {
   .table-danger,
   .table-danger:hover {
     td, th {
-      background-color: $brand-danger;
+      background-color: $danger;
       color: $white;
     }
   }
@@ -124,12 +132,12 @@ select.form-control {
   &:before {
     content: "";
     position: absolute;
-    left: 0;
-    top: 2px;
+    left: -1.2em;
+    top: -0.9em;
     display: inline-block;
     width: 15px;
     height: 16px;
-    border: 2px solid $gray-dark;
+    border: 2px solid $gray-800;
     border-radius: 2px 8px 2px 4px / 5px 3px 5px 3px;
   }
 
@@ -139,12 +147,12 @@ select.form-control {
     left: 4px;
     top: -7px;
     font-size: 1.5rem;
-    color: $gray-dark;
+    color: $gray-800;
   }
 
   &:disabled {
     &:before {
-      border: 2px solid $gray-light;
+      border: 2px solid $gray-500;
     }
   }
 }
@@ -157,22 +165,22 @@ select.form-control {
   &:before {
     content: "";
     position: absolute;
-    left: 0;
-    top: 2px;
+    left: -1.2em;
+    top: -0.9em;
     display: inline-block;
     width: 16px;
     height: 16px;
-    border: 2px solid $gray-dark;
+    border: 2px solid $gray-800;
     border-radius: 50% 45% 40% 50% / 40% 50% 50% 45%;
   }
 
   &:checked:before {
-    background-color: $gray-dark;
+    background-color: $gray-800;
   }
 
   &:disabled {
     &:before {
-      border: 2px solid $gray-light;
+      border: 2px solid $gray-500;
     }
   }
 }
@@ -189,19 +197,19 @@ select.form-control {
 }
 
 .dropdown-divider {
-  height: 2px;
+  border-top-width: 2px;
 }
 
 .list-group {
-  background-color: $gray-dark;
-  border: 2px solid $gray-dark;
+  background-color: $gray-800;
+  border: 2px solid $gray-800;
   border-radius: 45px 15px 35px 5px/15px 5px 15px 65px;
   overflow: hidden;
 
   &-item {
     border-left: none;
     border-right: none;
-    border-top: 2px solid $gray-dark;
+    border-top: 2px solid $gray-800;
     border-radius: 255px 5px 225px 5px/25px 225px 25px 255px;
 
     &:first-child {
@@ -232,7 +240,7 @@ select.form-control {
 }
 
 .breadcrumb {
-  border: 2px solid $gray-dark;
+  border: 2px solid $gray-800;
 }
 
 .pagination {
@@ -244,11 +252,17 @@ select.form-control {
 // Indicators ==================================================================
 
 .progress {
-  border: 2px solid $gray-dark;
+  border: 2px solid $gray-800;
 }
 
-.badge-pill {
-  border-radius: 7rem 8rem 8rem 8rem / 4rem 5rem 6rem 6rem;
+.badge {
+  &-pill {
+    border-radius: 7rem 8rem 8rem 8rem / 4rem 5rem 6rem 6rem;
+  }
+
+  &-warning {
+    color: $white;
+  }
 }
 
 .alert {
@@ -262,20 +276,44 @@ select.form-control {
       }
     }
 
-    &.alert-success .close:before {
-      color: $alert-success-text
+    &.alert-success {
+      border-color: $success;
+
+      &,
+      .alert-link,
+      .close:before {
+        color: $success;
+      }
     }
 
-    &.alert-info .close:before {
-      color: $alert-info-text
+    &.alert-info {
+      border-color: $info;
+
+      &,
+      .alert-link,
+      .close:before {
+        color: $info;
+      }
     }
 
-    &.alert-warning .close:before {
-      color: $alert-warning-text
+    &.alert-warning {
+      border-color: $warning;
+
+      &,
+      .alert-link,
+      .close:before {
+        color: $warning;
+      }
     }
 
-    &.alert-danger .close:before {
-      color: $alert-danger-text
+    &.alert-danger {
+      border-color: $danger;
+
+      &,
+      .alert-link,
+      .close:before {
+        color: $danger;
+      }
     }
   }
 }
@@ -285,6 +323,7 @@ select.form-control {
 // Containers ==================================================================
 
 .card {
+  border-color: transparent;
   border-radius: 5px 5px 5px 5px/25px 25px 25px 5px;
   overflow: hidden;
 
@@ -308,7 +347,7 @@ select.form-control {
 }
 
 .jumbotron {
-  border: 2px solid $gray-dark;
+  border: 2px solid $gray-800;
 }
 
 .modal {
@@ -322,7 +361,7 @@ select.form-control {
   border-radius: 45px 85px 15px 25px/15px 10px 35px 555px;
 
   &-title {
-    border-bottom: 2px solid $gray-dark;
+    border-bottom: 2px solid $gray-800;
   }
 
   &.popover-left::before,
@@ -347,7 +386,7 @@ select.form-control {
 }
 
 pre {
-  border: 2px solid $gray-dark;
+  border: 2px solid $gray-800;
   border-radius: 15px 5px 5px 25px/5px 25px 25px 5px;
 }
 
@@ -357,13 +396,10 @@ pre {
 .close:active {
   position: relative;
   opacity: 1;
-  color: #fff;
 
   &:before {
     position: absolute;
-    right: 0;
-    top: 0;
     content: "X";
-    color: $gray-dark;
+    color: $gray-800;
   }
 }
