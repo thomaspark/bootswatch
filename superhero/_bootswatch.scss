@@ -1,105 +1,55 @@
-// Superhero 3.3.7
+// Superhero 4.0.0
 // Bootswatch
-// -----------------------------------------------------
+
+
+// Variables ===================================================================
 
 $web-font-path: "https://fonts.googleapis.com/css?family=Lato:300,400,700" !default;
 @import url($web-font-path);
 
-// Navbar =====================================================================
+// Navbar ======================================================================
 
-.navbar {
-  @include box-shadow(none);
-  border: none;
-  font-size: $font-size-small;
-
-  &-default {
-
-    .badge {
-      background-color: #fff;
-      color: $navbar-default-bg;
-    }
-  }
-
-  &-inverse {
-
-    .badge {
-      background-color: #fff;
-      color: $navbar-inverse-bg;
-    }
-  }
+.bg-primary {
+  background-color: $gray-200 !important;
 }
 
-// Buttons ====================================================================
+.navbar {
+  font-size: $font-size-sm;
+}
+
+// Buttons =====================================================================
 
 .btn {
 
-  &-default {
-    &:hover {
-      background-color: darken($btn-default-bg, 3%);
-    }
-  }
-
-  &-sm,
-  &-xs {
-    font-size: $font-size-small;
+  &-info,
+  &-warning {
+    color: $white;
   }
 }
 
-// Typography =================================================================
-
-.text-primary,
-.text-primary:hover {
-  color: $brand-primary;
-}
-
-.text-success,
-.text-success:hover {
-  color: $brand-success;
-}
-
-.text-danger,
-.text-danger:hover {
-  color: $brand-danger;
-}
-
-.text-warning,
-.text-warning:hover {
-  color: $brand-warning;
-}
-
-.text-info,
-.text-info:hover {
-  color: $brand-info;
-}
-
-.page-header {
-  border-bottom-color: $table-border-color;
-}
+// Typography ==================================================================
 
 .dropdown-menu {
 
-  border: none;
-  margin: 0;
-  @include box-shadow(none);
-
-  > li > a {
-    font-size: $font-size-small;
-  }
-}
-
-.btn-group.open .dropdown-toggle {
-  @include box-shadow(none);
+  font-size: $font-size-sm;
 }
 
 .dropdown-header {
-  font-size: $font-size-small;
+  font-size: $font-size-sm;
 }
 
-// Tables =====================================================================
+.blockquote-footer {
+  color: $body-color;
+}
 
-table,
+// Tables ======================================================================
+
 .table {
-  font-size: $font-size-small;
+  font-size: $font-size-sm;
+
+  .thead-dark th {
+    color: $white;
+  }
 
   a:not(.btn) {
     color: #fff;
@@ -114,163 +64,139 @@ table,
     color: $text-muted;
   }
 
-  > thead > tr > th,
-  > tbody > tr > th,
-  > tfoot > tr > th,
-  > thead > tr > td,
-  > tbody > tr > td,
-  > tfoot > tr > td {
-    border-color: transparent;
+  &-success {
+    &, > th, > td {
+      background-color: $success;
+    }
   }
- }
 
-// Forms ======================================================================
+  &-info {
+    &, > th, > td {
+      background-color: $info;
+    }
+  }
 
-input,
-textarea {
-  color: $input-color;
+  &-danger {
+    &, > th, > td {
+      background-color: $danger;
+    }
+  }
+
+  &-warning {
+    &, > th, > td {
+      background-color: $warning;
+    }
+  }
+
+  &-hover {
+
+    .table-success:hover {
+      &, > th, > td {
+        background-color: darken($success, 5%);
+      }
+    }
+
+    .table-info:hover {
+      &, > th, > td {
+        background-color: darken($info, 5%);
+      }
+    }
+
+    .table-danger:hover {
+      &, > th, > td {
+        background-color: darken($danger, 5%);
+      }
+    }
+
+    .table-warning:hover {
+      &, > th, > td {
+        background-color: darken($warning, 5%);
+      }
+    }
+
+  }
 }
+
+// Forms =======================================================================
 
 label,
 .radio label,
 .checkbox label,
 .help-block {
-  font-size: $font-size-small;
+  font-size: $font-size-sm;
 }
 
 .input-addon,
 .input-group-addon {
-  color: $text-color;
+  color: $body-color;
 }
 
-.has-warning {
-  .help-block,
-  .control-label,
-  .radio,
-  .checkbox,
-  .radio-inline,
-  .checkbox-inline,
-  &.radio label,
-  &.checkbox label,
-  &.radio-inline label,
-  &.checkbox-inline label,
-  .form-control-feedback {
-    color: $brand-warning;
-  }
+// Navs ========================================================================
 
-  .form-control,
-  .form-control:focus {
-    border: 4px solid $brand-warning;
-  }
-
-  .input-group-addon {
-    border: none;
-  }
-}
-
-.has-error {
-  .help-block,
-  .control-label,
-  .radio,
-  .checkbox,
-  .radio-inline,
-  .checkbox-inline,
-  &.radio label,
-  &.checkbox label,
-  &.radio-inline label,
-  &.checkbox-inline label,
-  .form-control-feedback {
-    color: $brand-danger;
-  }
-
-  .form-control,
-  .form-control:focus {
-    border: 4px solid $brand-danger;
-  }
-
-  .input-group-addon {
-    border: none;
-  }
-}
-
-.has-success {
-  .help-block,
-  .control-label,
-  .radio,
-  .checkbox,
-  .radio-inline,
-  .checkbox-inline,
-  &.radio label,
-  &.checkbox label,
-  &.radio-inline label,
-  &.checkbox-inline label,
-  .form-control-feedback {
-    color: $brand-success;
-  }
-
-  .form-control,
-  .form-control:focus {
-    border: 4px solid $brand-success;
-  }
-
-  .input-group-addon {
-    border: none;
-  }
-}
-
-.form-control:focus {
-  @include box-shadow(none);
-}
-
-.has-warning,
-.has-error,
-.has-success {
-  .form-control:focus {
-    @include box-shadow(none);
-  }
-}
-
-// Navs =======================================================================
-
-.nav {
-  .open > a,
-  .open > a:hover,
-  .open > a:focus {
-    border-color: transparent;
-  }
-}
-
-.nav-tabs {
-  > li > a {
-    color: $text-color;
-  }
-}
-
+.nav-tabs,
 .nav-pills {
-  > li > a {
-    color: $text-color;
+  .nav-link,
+  .nav-link:hover {
+    color: $body-color;
+  }
+
+  .nav-link.disabled {
+    color: $nav-link-disabled-color;
   }
 }
 
-.pager {
-  a {
-    color: $text-color;
-  }
+.page-link:hover,
+.page-link:focus {
+  color: #fff;
+  text-decoration: none;
 }
 
-// Indicators =================================================================
+// Indicators ==================================================================
 
 .alert {
-  color: #fff;
+  border: none;
+  color: $white;
 
   a,
   .alert-link {
     color: #fff;
+    text-decoration: underline;
+  }
+
+  &-primary {
+    background-color: $primary;
+  }
+
+  &-success {
+    background-color: $success;
+  }
+
+  &-danger {
+    background-color: $danger;
+  }
+
+  &-warning {
+    background-color: $warning;
+  }
+
+  &-info {
+    background-color: $info;
+  }
+
+  &-dark {
+    background-color: $dark;
+  }
+}
+
+.badge {
+  &-warning,
+  &-info {
+    color: $white;
   }
 }
 
 .close {
-  opacity: 0.4;
+  opacity: 0.5;
 
   &:hover,
   &:focus {
@@ -278,87 +204,24 @@ label,
   }
 }
 
-// Progress bars ==============================================================
+// Progress bars ===============================================================
 
-// Containers =================================================================
-
-.well {
-  @include box-shadow(none);
-}
-
-a.list-group-item {
-
-  &.active,
-  &.active:hover,
-  &.active:focus {
-    border: none;
-  }
-
-  &-success {
-    &.active {
-      background-color: $state-success-bg;
-    }
-
-    &.active:hover,
-    &.active:focus {
-      background-color: darken($state-success-bg, 5%);
-    }
-  }
-
-  &-warning {
-    &.active {
-      background-color: $state-warning-bg;
-    }
-    
-    &.active:hover,
-    &.active:focus {
-      background-color: darken($state-warning-bg, 5%);
-    }
-  }
-
-  &-danger {
-    &.active {
-      background-color: $state-danger-bg;
-    }
-    
-    &.active:hover,
-    &.active:focus {
-      background-color: darken($state-danger-bg, 5%);
-    }
-  }
-}
-
-.panel {
-  border: none;
-
-  &-default > .panel-heading {
-    background-color: $table-bg-hover;
-    color: $text-color;
-  }
-
-  .text-muted {
-    color: rgba(255, 255, 255, 0.4);
-  }
-}
-
-.thumbnail {
-  background-color: $well-bg;
-  border: none;
-}
+// Containers ==================================================================
 
 .modal {
-  padding: 0;
-
   &-header,
   &-footer {
-    background-color: $table-bg-hover;
-    border: none;
-    border-radius: 0;
-  }
-}
+    background-color: $table-hover-bg;
 
-.popover {
-  &-title {
-    border: none;
+    .close {
+      color: #fff;
+      text-shadow: none;
+      opacity: 0.5;
+
+      &:hover,
+      &:focus {
+        opacity: 1;
+      }
+    }
   }
 }

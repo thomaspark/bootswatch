@@ -1,0 +1,111 @@
+// Lux 4.0.0
+// Bootswatch
+
+
+// Variables ===================================================================
+
+$web-font-path: "https://fonts.googleapis.com/css?family=Nunito+Sans:400,600" !default;
+@import url($web-font-path);
+
+// Navbar ======================================================================
+
+.navbar {
+  font-size: $font-size-sm;
+  text-transform: uppercase;
+  font-weight: 600;
+
+  &-nav {
+    .nav-link {
+      padding-top: .715rem;
+      padding-bottom: .715rem;
+    }
+
+    .nav-item + .nav-item {
+      margin-left: 3rem;
+    }
+  }
+
+  &-brand {
+    margin-right: 3rem;
+  }
+}
+
+.bg-primary {
+  background-color: $gray-900 !important;
+}
+
+.bg-light {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  &.navbar-fixed-top {
+    border-width: 0 0 1px 0;
+  }
+
+  &.navbar-bottom-top {
+    border-width: 1px 0 0 0;
+  }
+}
+
+// Buttons =====================================================================
+
+.btn {
+  font-size: $font-size-sm;
+  text-transform: uppercase;
+
+  &-sm {
+    font-size: 10px;
+  }
+}
+
+.btn-outline-secondary {
+  border-color: $gray-600;
+  color: $gray-600;
+
+  &:hover {
+    background-color: $gray-600;
+  }
+}
+
+[class*="btn-outline-"] {
+  border-width: 2px;
+}
+
+// Typography ==================================================================
+
+body {
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+// Tables ======================================================================
+
+th {
+  font-size: $font-size-sm;
+  text-transform: uppercase;
+}
+
+.table {
+  th, td {
+    padding: 1.5rem;
+  }
+}
+
+// Forms =======================================================================
+
+// Navs ========================================================================
+
+.dropdown-menu {
+  font-size: $font-size-sm;
+  text-transform: none;
+}
+
+// Indicators ==================================================================
+
+// Progress bars ===============================================================
+
+// Containers ==================================================================

@@ -1,9 +1,9 @@
 {
   "name": "bootswatch",
   "description": "Bootswatch is a collection of themes for Bootstrap.",
-  "version": "3.3.7",
+  "version": "4.0.0-beta.2",
   "author": "Thomas Park",
-  "homepage": "http://bootswatch.com",
+  "homepage": "https://bootswatch.com",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -12,15 +12,26 @@
   "engines": {
     "node": ">= 0.10.0"
   },
+  "scripts": {
+    "postcss": "postcss --config assets/js/postcss.js --replace */bootstrap*.css"
+  },
+  "dependencies": {
+    "bootstrap": "~4.0.0-beta.2",
+    "jquery": ">=1.9.1",
+    "popper.js": "^1.11.0"
+  },
   "devDependencies": {
-    "bower": "~1.2.8",
-    "grunt": "~0.4.2",
-    "grunt-autoprefixer": "~1.0.1",
-    "grunt-contrib-clean": "~0.5.0",
-    "grunt-contrib-concat": "~0.3.0",
-    "grunt-contrib-connect": "~0.8.0",
-    "grunt-contrib-less": "~0.9.0",
-    "grunt-contrib-sass": "~0.7.4",
-    "grunt-contrib-watch": "~0.5.1"
+    "autoprefixer": "^6.5.0",
+    "font-awesome": "~4.7.0",
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-exec": "^1.0.1",
+    "grunt-sass": "^2.0.0",
+    "postcss-cli": "^2.6.0",
+    "postcss-flexbugs-fixes": "^2.0.0"
   }
 }

@@ -1,7 +1,7 @@
 Bootswatch
 ==========
 
-[![Bootswatch Logo](./assets/img/logo-dark.png)](http://bootswatch.com)
+[![Bootswatch Logo](https://bootswatch.com/assets/img/logo-dark.png)](http://bootswatch.com)
 
 Bootswatch is a collection of open source themes for [Bootstrap](http://getbootstrap.com/). Check it out at [bootswatch.com](http://bootswatch.com).
 
@@ -11,22 +11,14 @@ Download the `bootstrap.min.css` file associated with a theme and replace Bootst
 
 The themes are also hosted on [BootstrapCDN](http://www.bootstrapcdn.com/bootswatch/). 
 
-You can import a theme into your styles using either LESS or SASS.
+You can import a theme into your styles using SASS.
 
-LESS:
-
-```less
-@import "bootstrap/less/bootstrap.less";
-@import "bootswatch/theme/variables.less";
-@import "bootswatch/theme/bootswatch.less";
-
-```
 
 SASS:
 
-```sass
+```
 @import "bootswatch/theme/variables";
-@import "bootstrap-sass-official/assets/stylesheets/bootstrap";
+@import "bootstrap/scss/bootstrap";
 @import "bootswatch/theme/bootswatch";
 
 ```
@@ -36,9 +28,7 @@ Customization
 ------
 Bootswatch is open source and you’re welcome to modify the themes.
 
-Each theme consists of two LESS files. `variables.less`, which is included by default in Bootstrap, allows you to customize [these settings](http://getbootstrap.com/customize/#less-variables). `bootswatch.less` introduces more extensive structural changes.
-
-These files are also available in SASS.
+Each theme consists of two SASS files. `_variables.scss`, which is included by default in Bootstrap, allows you to customize the settings. `_bootswatch.scss` introduces more extensive structural changes.
 
 Check out the [Help page](http://bootswatch.com/help/) for more details on building your own theme.
 
@@ -55,7 +45,7 @@ It's through your contributions that Bootswatch will continue to improve. You ca
 
 **Documentation:** If you'd like to fix a typo or beef up the docs, you can fork the project, make your changes, and submit a pull request.
 
-**Code:** Make a fix and submit it as a pull request. When making changes, it's important to keep the CSS, LESS and SASS versions in sync. To do this, be sure to edit the LESS source files for the particular theme, then run the  tasks `grunt swatch` and `grunt convert_less` to build the CSS and SASS.
+**Code:** Make a fix and submit it as a pull request. When making changes, it's important to keep the CSS and SASS versions in sync. To do this, be sure to edit the SASS source files for the particular theme firsst, then run the  tasks `grunt swatch` to build the CSS.
 
 **Donation:** Donations are gratefully accepted via [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=F22JEM3Q78JC2) and [Gratipay](https://gratipay.com/bootswatch/).
 
@@ -79,6 +69,6 @@ Thanks
 
 Copyright and License
 ----
-Copyright 2014-2016 Thomas Park
+Copyright 2014-2017 Thomas Park
 
 Code released under the MIT License.

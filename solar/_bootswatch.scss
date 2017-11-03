@@ -1,138 +1,129 @@
-// Solar 3.3.7
+// Solar 4.0.0
 // Bootswatch
-// -----------------------------------------------------
 
-$web-font-path: "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" !default;
+
+// Variables ===================================================================
+
+$web-font-path: "https://fonts.googleapis.com/css?family=Source+Sans+Pro" !default;
 @import url($web-font-path);
 
-// Navbar =====================================================================
+// Navbar ======================================================================
 
-// Buttons ====================================================================
+// Buttons =====================================================================
 
-// Typography =================================================================
+// Typography ==================================================================
 
-.text-primary,
-.text-primary:hover {
-  color: $brand-primary;
-}
+// Tables ======================================================================
 
-.text-success,
-.text-success:hover {
-  color: $brand-success;
-}
-
-.text-danger,
-.text-danger:hover {
-  color: $brand-danger;
-}
-
-.text-warning,
-.text-warning:hover {
-  color: $brand-warning;
-}
-
-.text-info,
-.text-info:hover {
-  color: $brand-info;
-}
-
-.bg-success,
-.bg-info,
-.bg-warning,
-.bg-danger {
-  color: #fff;
-}
-
-// Tables =====================================================================
-
-table,
 .table {
-  .success,
-  .info,
-  .warning,
-  .danger {
-    td, th {
-      color: #fff;
+  &-success,
+  &-info,
+  &-warning,
+  &-danger {
+    color: #fff;
+  }
+}
+
+.table {
+
+  &-success {
+    &, > th, > td {
+      background-color: $success;
     }
   }
-}
 
-// Forms ======================================================================
-
-.has-warning {
-  .help-block,
-  .control-label,
-  .radio,
-  .checkbox,
-  .radio-inline,
-  .checkbox-inline,
-  &.radio label,
-  &.checkbox label,
-  &.radio-inline label,
-  &.checkbox-inline label,
-  .form-control-feedback {
-    color: $brand-warning;
+  &-info {
+    &, > th, > td {
+      background-color: $info;
+    }
   }
 
-  .form-control,
-  .form-control:focus,
-  .input-group-addon {
-    border-color: $brand-warning;
-  }
-}
-
-.has-error {
-  .help-block,
-  .control-label,
-  .radio,
-  .checkbox,
-  .radio-inline,
-  .checkbox-inline,
-  &.radio label,
-  &.checkbox label,
-  &.radio-inline label,
-  &.checkbox-inline label,
-  .form-control-feedback {
-    color: $brand-danger;
+  &-danger {
+    &, > th, > td {
+      background-color: $danger;
+    }
   }
 
-  .form-control,
-  .form-control:focus,
-  .input-group-addon {
-    border-color: $brand-danger;
-  }
-}
-
-.has-success {
-  .help-block,
-  .control-label,
-  .radio,
-  .checkbox,
-  .radio-inline,
-  .checkbox-inline,
-  &.radio label,
-  &.checkbox label,
-  &.radio-inline label,
-  &.checkbox-inline label,
-  .form-control-feedback {
-    color: $brand-success;
+  &-warning {
+    &, > th, > td {
+      background-color: $warning;
+    }
   }
 
-  .form-control,
-  .form-control:focus,
-  .input-group-addon {
-    border-color: $brand-success;
+  &-hover {
+
+    .table-success:hover {
+      &, > th, > td {
+        background-color: darken($success, 5%);
+      }
+    }
+
+    .table-info:hover {
+      &, > th, > td {
+        background-color: darken($info, 5%);
+      }
+    }
+
+    .table-danger:hover {
+      &, > th, > td {
+        background-color: darken($danger, 5%);
+      }
+    }
+
+    .table-warning:hover {
+      &, > th, > td {
+        background-color: darken($warning, 5%);
+      }
+    }
+
   }
 }
 
-.input-group-addon {
-  color: $text-color;
+// Forms =======================================================================
+
+// .input-group-addon {
+//   color: $body-color;
+// }
+
+// Navs ========================================================================
+
+// Indicators ==================================================================
+
+.alert {
+  border: none;
+  color: $white;
+
+  a,
+  .alert-link {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  &-primary {
+    background-color: $primary;
+  }
+
+  &-success {
+    background-color: $success;
+  }
+
+  &-danger {
+    background-color: $danger;
+  }
+
+  &-warning {
+    background-color: $warning;
+  }
+
+  &-info {
+    background-color: $info;
+  }
+
+  &-dark {
+    background-color: $dark;
+  }
 }
 
-// Navs =======================================================================
+// Progress bars ===============================================================
 
-// Indicators =================================================================
-
-// Progress bars ==============================================================
-
-// Containers =================================================================
+// Containers ==================================================================
