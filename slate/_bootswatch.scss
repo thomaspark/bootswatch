@@ -26,8 +26,6 @@
 
   .navbar-toggler {
     border-color: rgba(0, 0, 0, 0.6);
-    margin-top: 0.5rem;
-    margin-right: 0.5rem;
   }
 
   &-fixed-top {
@@ -74,6 +72,33 @@
         @include btn-shadow-inverse($gray-600);
         border-left: 1px solid rgba(0, 0, 0, 0.2);
       }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-expand-sm {
+    .navbar-brand,
+    .nav-link {
+      border: none !important;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-expand-md {
+    .navbar-brand,
+    .nav-link {
+      border: none !important;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar-expand-lg {
+    .navbar-brand,
+    .nav-link {
+      border: none !important;
     }
   }
 }
