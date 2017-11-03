@@ -35,7 +35,7 @@ Check out the [Help page](https://bootswatch.com/help/) for more details on buil
 API
 -----
 
-A simple API is available for integrating your platform with Bootswatch. More info at http://bootswatch.com/help/#api
+A simple API is available for integrating your platform with Bootswatch. More info at https://bootswatch.com/help/#api
 
 Contributing
 -----
