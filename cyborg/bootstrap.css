@@ -7214,20 +7214,21 @@ a.text-dark:focus, a.text-dark:hover {
 .invisible {
   visibility: hidden !important; }
 
-.bg-primary {
+.navbar.bg-primary {
   border: 1px solid #282828; }
 
-.bg-light {
+.navbar.bg-dark {
+  background-color: #060606 !important;
   border: 1px solid #282828; }
+
+.navbar.bg-light {
+  background-color: #888 !important; }
 
 .navbar.fixed-top {
   border-width: 0 0 1px 0; }
 
 .navbar.fixed-bottom {
   border-width: 1px 0 0 0; }
-
-.navbar.bg-light {
-  background-color: #060606 !important; }
 
 .btn-warning, .btn-warning:hover {
   color: #fff; }

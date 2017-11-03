@@ -9,15 +9,20 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:400,700" !defaul
 
 // Navbar ======================================================================
 
-.bg-primary {
-  border: 1px solid $gray-700;
-}
-
-.bg-light {
-  border: 1px solid $gray-700;
-}
-
 .navbar {
+
+  &.bg-primary {
+    border: 1px solid $gray-700;
+  }
+
+  &.bg-dark {
+    background-color: $body-bg !important;
+    border: 1px solid $gray-700;
+  }
+
+  &.bg-light {
+    background-color: $gray-500 !important;
+  }
 
   &.fixed-top {
     border-width: 0 0 1px 0;
@@ -25,10 +30,6 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:400,700" !defaul
 
   &.fixed-bottom {
     border-width: 1px 0 0 0;
-  }
-
-  &.bg-light {
-    background-color: $body-bg !important;
   }
 
 }
