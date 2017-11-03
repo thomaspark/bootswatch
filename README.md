@@ -1,15 +1,15 @@
 Bootswatch
 ==========
 
-[![Bootswatch Logo](https://bootswatch.com/assets/img/logo-dark.png)](http://bootswatch.com)
+[![Bootswatch Logo](https://bootswatch.com/assets/img/logo-dark.png)](https://bootswatch.com)
 
-Bootswatch is a collection of open source themes for [Bootstrap](http://getbootstrap.com/). Check it out at [bootswatch.com](http://bootswatch.com).
+Bootswatch is a collection of open source themes for [Bootstrap](https://getbootstrap.com/). Check it out at [bootswatch.com](https://bootswatch.com).
 
 Usage
 -----
 Download the `bootstrap.min.css` file associated with a theme and replace Bootstrap's default stylesheet. You must still include Bootstrap's JavaScript file to have functional dropdowns, modals, etc.
 
-The themes are also hosted on [BootstrapCDN](http://www.bootstrapcdn.com/bootswatch/). 
+The themes are also hosted on [BootstrapCDN](https://www.bootstrapcdn.com/bootswatch/). 
 
 You can import a theme into your styles using SASS.
 
@@ -30,7 +30,7 @@ Bootswatch is open source and you’re welcome to modify the themes.
 
 Each theme consists of two SASS files. `_variables.scss`, which is included by default in Bootstrap, allows you to customize the settings. `_bootswatch.scss` introduces more extensive structural changes.
 
-Check out the [Help page](http://bootswatch.com/help/) for more details on building your own theme.
+Check out the [Help page](https://bootswatch.com/help/) for more details on building your own theme.
 
 API
 -----
@@ -47,14 +47,14 @@ It's through your contributions that Bootswatch will continue to improve. You ca
 
 **Code:** Make a fix and submit it as a pull request. When making changes, it's important to keep the CSS and SASS versions in sync. To do this, be sure to edit the SASS source files for the particular theme firsst, then run the  tasks `grunt swatch` to build the CSS.
 
-**Donation:** Donations are gratefully accepted via [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=F22JEM3Q78JC2) and [Gratipay](https://gratipay.com/bootswatch/).
+**Donation:** Donations are gratefully accepted via [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=F22JEM3Q78JC2) and Bitcoin at [1EMqwwjqJrfyoPqmxNM7buzU6DmySZnHBK](bitcoin:1EMqwwjqJrfyoPqmxNM7buzU6DmySZnHBK).
 
 Author
 ------
 Thomas Park
 
-+ http://github.com/thomaspark
-+ http://thomaspark.co
++ https://github.com/thomaspark
++ https://thomaspark.co
 
 Thanks
 ------
