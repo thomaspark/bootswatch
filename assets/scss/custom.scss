@@ -46,6 +46,20 @@ pre {
   }
 }
 
+.dropdown-menu.show[aria-labelledby="themes"] {
+  display: flex;
+  width: 420px;
+  flex-wrap: wrap;
+
+  .dropdown-item {
+    width: 33.333%;
+
+    &:first-child {
+      width: 100%;
+    }
+  }
+}
+
 .bs-component {
   position: relative;
   + .bs-component {
