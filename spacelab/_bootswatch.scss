@@ -2,6 +2,8 @@
 // Bootswatch
 
 
+// Variables ===================================================================
+
 $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700" !default;
 @import url($web-font-path);
 
@@ -15,31 +17,36 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:400italic,700
 
 .navbar {
 
-  .nav-link {
+  .nav-link,
+  .navbar-brand {
     text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.1);
     transition: color ease-in-out .2s;
   }
-}
 
-.bg-primary {
-  @include btn-shadow($gray-lightest);
-
-  .nav-link {
-    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1);
+  &.bg-primary {
+    @include btn-shadow($primary);
   }
 
-  .navbar-brand {
-    color: $navbar-light-active-color;
+  &.bg-dark {
+    @include btn-shadow($secondary);
   }
 
-  .navbar-brand:hover,
-  .nav-item.active .nav-link {
-    color: $navbar-light-hover-color;
-  }
-}
+  &.bg-light {
+    @include btn-shadow($gray-200);
 
-.bg-inverse {
-  @include btn-shadow($brand-primary);
+    .nav-link,
+    .navbar-brand {
+      text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1);
+    }
+
+    .navbar-brand {
+      color: $navbar-light-color;
+
+      &:hover {
+        color: $info;
+      }
+    }
+  }
 }
 
 // Buttons =====================================================================
@@ -48,50 +55,67 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:400italic,700
   text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.1);
 
   &-primary {
-    @include btn-shadow($btn-primary-bg);
+    @include btn-shadow($primary);
 
     &:hover {
-      @include btn-shadow(darken($btn-primary-bg, 4%));
+      @include btn-shadow(darken($primary, 4%));
     }
   }
 
   &-secondary {
-  @include btn-shadow($gray-lighter);
+    @include btn-shadow($secondary);
+    color: $white;
 
     &:hover {
-      @include btn-shadow(darken($gray-lighter, 4%));
+      @include btn-shadow(darken($secondary, 4%));
     }
   }
 
   &-success {
-    @include btn-shadow($btn-success-bg);
+    @include btn-shadow($success);
 
     &:hover {
-      @include btn-shadow(darken($btn-success-bg, 4%));
+      @include btn-shadow(darken($success, 4%));
     }
   }
 
   &-info {
-    @include btn-shadow($btn-info-bg);
+    @include btn-shadow($info);
 
     &:hover {
-      @include btn-shadow(darken($btn-info-bg, 4%));
+      @include btn-shadow(darken($info, 4%));
     }
   }
 
   &-warning {
-    @include btn-shadow($btn-warning-bg);
+    @include btn-shadow($warning);
 
     &:hover {
-      @include btn-shadow(darken($btn-warning-bg, 4%));
+      @include btn-shadow(darken($warning, 4%));
     }
   }
 
   &-danger {
-    @include btn-shadow($btn-danger-bg);
+    @include btn-shadow($danger);
 
     &:hover {
-      @include btn-shadow(darken($btn-danger-bg, 4%));
+      @include btn-shadow(darken($danger, 4%));
+    }
+  }
+
+  &-dark {
+    @include btn-shadow($danger);
+
+    &:hover {
+      @include btn-shadow(darken($danger, 4%));
+    }
+  }
+
+  &-light {
+    @include btn-shadow($danger);
+
+    &:hover {
+      @include btn-shadow(darken($danger, 4%));
     }
   }
 
@@ -119,6 +143,13 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:400italic,700
 // Navs ========================================================================
 
 // Indicators ==================================================================
+
+.badge {
+
+  &-secondary {
+    color: $white;
+  }
+}
 
 // Progress bars ===============================================================
 
