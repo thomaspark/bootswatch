@@ -1,1 +1,0 @@
-Visit https://github.com/thomaspark/bootswatch/tree/gh-pages/swatchmaker for swatchmaker.
