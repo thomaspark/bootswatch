@@ -1,0 +1,222 @@
+// Litera 4.0.0
+// Bootswatch
+
+
+// Variables ===================================================================
+
+$web-font-path: "https://fonts.googleapis.com/css?family=Raleway:400,700" !default;
+@import url($web-font-path);
+
+$font-family-serif:      Georgia, Cambria, "Times New Roman", Times, serif !default;
+
+// Navbar ======================================================================
+
+.navbar {
+  font-size: 14px;
+}
+
+.bg-dark {
+  background-color: $success !important;
+}
+
+.bg-light {
+  background-color: #fff !important;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  &.navbar-fixed-top {
+    border-width: 0 0 1px 0;
+  }
+
+  &.navbar-fixed-bottom {
+    border-width: 1px 0 0 0;
+  }
+}
+
+// Buttons =====================================================================
+
+.btn {
+  border-radius: 17.25px;
+  font-family: $font-family-sans-serif;
+  font-size: 14px;
+
+  &-lg {
+    border-radius: 43px;
+  }
+
+  &-sm {
+    border-radius: 13.5px;
+    font-size: 11px;
+  }
+
+  &-secondary,
+  &-secondary:hover,
+  &-warning,
+  &-warning:hover {
+    color: $white;
+  }
+}
+
+// Typography ==================================================================
+
+p {
+  font-family: $font-family-serif;
+}
+
+blockquote {
+  font-style: italic;
+}
+
+footer {
+  font-size: 14px;
+}
+
+.lead {
+  color: $gray-600;
+  font-family: $font-family-sans-serif;
+}
+
+// Tables ======================================================================
+
+table,
+.table {
+  font-size: 14px;
+
+  &-success,
+  &-info,
+  &-warning,
+  &-danger {
+    color: #fff;
+  }
+}
+
+.table {
+
+  &-success {
+    &, > th, > td {
+      background-color: $success;
+    }
+  }
+
+  &-info {
+    &, > th, > td {
+      background-color: $info;
+    }
+  }
+
+  &-danger {
+    &, > th, > td {
+      background-color: $danger;
+    }
+  }
+
+  &-warning {
+    &, > th, > td {
+      background-color: $warning;
+    }
+  }
+
+  &-hover {
+
+    .table-success:hover {
+      &, > th, > td {
+        background-color: darken($success, 5%);
+      }
+    }
+
+    .table-info:hover {
+      &, > th, > td {
+        background-color: darken($info, 5%);
+      }
+    }
+
+    .table-danger:hover {
+      &, > th, > td {
+        background-color: darken($danger, 5%);
+      }
+    }
+
+    .table-warning:hover {
+      &, > th, > td {
+        background-color: darken($warning, 5%);
+      }
+    }
+
+  }
+}
+
+// Forms =======================================================================
+
+// Navs ========================================================================
+
+.nav,
+.breadcrumb,
+.pagination {
+  font-size: 14px;
+}
+
+.dropdown-menu {
+  font-size: 14px;
+}
+
+// Indicators ==================================================================
+
+.alert {
+  border: none;
+  color: $white;
+  font-size: 14px;
+
+  &, p {
+    font-family: $font-family-sans-serif;
+  }
+
+  a, .alert-link {
+    color: #fff;
+    font-weight: normal;
+    text-decoration: underline;
+  }
+
+  &-primary {
+    background-color: $primary;
+  }
+
+  &-success {
+    background-color: $success;
+  }
+
+  &-danger {
+    background-color: $danger;
+  }
+
+  &-warning {
+    background-color: $warning;
+  }
+
+  &-info {
+    background-color: $info;
+  }
+
+  &-dark {
+    background-color: $dark;
+  }
+}
+
+.badge {
+  vertical-align: bottom;
+
+  &-secondary,
+  &-warning {
+    color: $white;
+  }
+}
+
+.tooltip {
+  font-size: 11px;
+}
+
+// Progress bars ===============================================================
+
+// Containers ==================================================================
+
+.list-group {
+  font-size: 14px;
+}

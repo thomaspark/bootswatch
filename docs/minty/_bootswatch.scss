@@ -1,0 +1,231 @@
+// Minty 4.0.0
+// Bootswatch
+
+
+// Variables ===================================================================
+
+$web-font-path: "https://fonts.googleapis.com/css?family=Montserrat" !default;
+@import url($web-font-path);
+
+// Navbar ======================================================================
+
+.navbar {
+  font-family: $headings-font-family;
+}
+
+.bg-dark {
+  background-color: $secondary !important;
+}
+
+.border-dark {
+  border-color: $secondary !important;
+}
+
+// Buttons =====================================================================
+
+.btn {
+  font-family: $headings-font-family;
+
+  &,
+  &:hover {
+    color: $white;
+  }
+
+  &-link,
+  &-link:hover {
+    color: $primary;
+  }
+
+  &-link.disabled:hover {
+    color: $gray-600;
+  }
+
+  &-outline-primary {
+    color: $primary;
+  }
+
+  &-outline-secondary {
+    color: $secondary;
+  }
+
+  &-outline-success {
+    color: $success;
+  }
+
+  &-outline-info {
+    color: $info;
+  }
+
+  &-outline-warning {
+    color: $warning;
+  }
+
+  &-outline-danger {
+    color: $danger;
+  }
+
+  &-outline-dark {
+    color: $dark;
+  }
+
+  &-outline-light {
+    color: $light;
+  }
+}
+
+// Typography ==================================================================
+
+// Tables ======================================================================
+
+.table {
+
+  &-success,
+  &-info,
+  &-warning,
+  &-danger {
+    color: #fff;
+  }
+
+  &-success {
+    &, > th, > td {
+      background-color: $success;
+    }
+  }
+
+  &-info {
+    &, > th, > td {
+      background-color: $info;
+    }
+  }
+
+  &-danger {
+    &, > th, > td {
+      background-color: $danger;
+    }
+  }
+
+  &-warning {
+    &, > th, > td {
+      background-color: $warning;
+    }
+  }
+
+  &-hover {
+
+    .table-success:hover {
+      &, > th, > td {
+        background-color: darken($success, 5%);
+      }
+    }
+
+    .table-info:hover {
+      &, > th, > td {
+        background-color: darken($info, 5%);
+      }
+    }
+
+    .table-danger:hover {
+      &, > th, > td {
+        background-color: darken($danger, 5%);
+      }
+    }
+
+    .table-warning:hover {
+      &, > th, > td {
+        background-color: darken($warning, 5%);
+      }
+    }
+  }
+
+  .thead-dark th {
+    background-color: $primary;
+    border-color: $table-border-color;
+    font-family: $headings-font-family;
+  }
+}
+
+// Forms =======================================================================
+
+legend {
+  font-family: $headings-font-family;
+}
+
+// Navs ========================================================================
+
+.dropdown-menu {
+  font-family: $font-family-sans-serif;
+}
+
+.breadcrumb {
+  a {
+    color: $navbar-dark-color;
+  }
+
+  a:hover {
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+.pagination {
+  .page-link:hover {
+    text-decoration: none;
+  }
+}
+
+// Indicators ==================================================================
+
+.alert {
+  color: $white;
+
+  h1, h2, h3, h4, h5, h6 {
+    color: inherit;
+  }
+
+  a,
+  .alert-link {
+    color: $white;
+  }
+
+  &-success {
+    &, > th, > td {
+      background-color: $success;
+    }
+  }
+
+  &-info {
+    &, > th, > td {
+      background-color: $info;
+    }
+  }
+
+  &-danger {
+    &, > th, > td {
+      background-color: $danger;
+    }
+  }
+
+  &-warning {
+    &, > th, > td {
+      background-color: $warning;
+    }
+  }
+}
+
+.badge {
+  color: $white;
+
+  &-light {
+    color: $gray-700;
+  }
+}
+
+// Progress bars ===============================================================
+
+// Containers ==================================================================
+
+.list-group-item {
+  h1, h2, h3, h4, h5, h6 {
+    color: inherit;
+  }
+}

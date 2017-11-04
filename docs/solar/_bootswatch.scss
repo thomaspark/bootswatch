@@ -1,0 +1,129 @@
+// Solar 4.0.0
+// Bootswatch
+
+
+// Variables ===================================================================
+
+$web-font-path: "https://fonts.googleapis.com/css?family=Source+Sans+Pro" !default;
+@import url($web-font-path);
+
+// Navbar ======================================================================
+
+// Buttons =====================================================================
+
+// Typography ==================================================================
+
+// Tables ======================================================================
+
+.table {
+  &-success,
+  &-info,
+  &-warning,
+  &-danger {
+    color: #fff;
+  }
+}
+
+.table {
+
+  &-success {
+    &, > th, > td {
+      background-color: $success;
+    }
+  }
+
+  &-info {
+    &, > th, > td {
+      background-color: $info;
+    }
+  }
+
+  &-danger {
+    &, > th, > td {
+      background-color: $danger;
+    }
+  }
+
+  &-warning {
+    &, > th, > td {
+      background-color: $warning;
+    }
+  }
+
+  &-hover {
+
+    .table-success:hover {
+      &, > th, > td {
+        background-color: darken($success, 5%);
+      }
+    }
+
+    .table-info:hover {
+      &, > th, > td {
+        background-color: darken($info, 5%);
+      }
+    }
+
+    .table-danger:hover {
+      &, > th, > td {
+        background-color: darken($danger, 5%);
+      }
+    }
+
+    .table-warning:hover {
+      &, > th, > td {
+        background-color: darken($warning, 5%);
+      }
+    }
+
+  }
+}
+
+// Forms =======================================================================
+
+// .input-group-addon {
+//   color: $body-color;
+// }
+
+// Navs ========================================================================
+
+// Indicators ==================================================================
+
+.alert {
+  border: none;
+  color: $white;
+
+  a,
+  .alert-link {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  &-primary {
+    background-color: $primary;
+  }
+
+  &-success {
+    background-color: $success;
+  }
+
+  &-danger {
+    background-color: $danger;
+  }
+
+  &-warning {
+    background-color: $warning;
+  }
+
+  &-info {
+    background-color: $info;
+  }
+
+  &-dark {
+    background-color: $dark;
+  }
+}
+
+// Progress bars ===============================================================
+
+// Containers ==================================================================
