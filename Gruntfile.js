@@ -1,14 +1,15 @@
 module.exports = function (grunt) {
-  grunt.loadNpmTasks('grunt-sass');
+  grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-connect');
-  grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-exec');
+  grunt.loadNpmTasks('grunt-sass');
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    builddir: '.',
+    builddir: 'dist',
     buildtheme: '',
     banner: '/*!\n' +
             ' * Bootswatch v<%= pkg.version %>\n' +
@@ -42,7 +43,7 @@ module.exports = function (grunt) {
     },
     clean: {
       build: {
-        src: ['*/build.scss', '!assets/scss/build.scss']
+        src: ['dist/*/build.scss']
       }
     },
     concat: {
@@ -55,13 +56,28 @@ module.exports = function (grunt) {
         dest: ''
       }
     },
+    copy: {
+      vendor: {
+        files: [
+          {expand: true, cwd: 'node_modules/font-awesome', src: ['css/**', 'fonts/**'], dest: 'docs/_vendor/font-awesome/'},
+          {expand: true, cwd: 'node_modules/jquery', src: ['dist/**'], dest: 'docs/_vendor/jquery/'},
+          {expand: true, cwd: 'node_modules/bootstrap', src: ['dist/**'], dest: 'docs/_vendor/bootstrap/'},
+          {expand: true, cwd: 'node_modules/popper.js', src: ['dist/**'], dest: 'docs/_vendor/popper.js/'}
+        ]
+      },
+      css: {
+        files: [
+          {expand: true, cwd: 'dist', src: ['**/*.css', '**/*.scss'], dest: 'docs/4/'},
+        ]
+      }
+    },
     exec: {
       postcss: {
         command: 'npm run postcss'
       }
     },
     watch: {
-      files: ['*/_variables.scss', '*/_bootswatch.scss', '*/index.html'],
+      files: ['dist/*/_variables.scss', 'dist/*/_bootswatch.scss'],
       tasks: 'build',
       options: {
         livereload: true,
@@ -71,6 +87,7 @@ module.exports = function (grunt) {
     connect: {
       base: {
         options: {
+          base: 'docs',
           port: 3000,
           livereload: true,
           open: true
@@ -93,7 +110,7 @@ module.exports = function (grunt) {
     theme = theme === undefined ? grunt.config('buildtheme') : theme;
     compress = compress === undefined ? true : compress;
 
-    var isValidTheme = grunt.file.exists(theme, '_variables.scss') && grunt.file.exists(theme, '_bootswatch.scss');
+    var isValidTheme = grunt.file.exists('dist/' + theme, '_variables.scss') && grunt.file.exists('dist/' + theme, '_bootswatch.scss');
 
      // cancel the build (without failing) if this directory is not a valid theme
     if (!isValidTheme) {
@@ -105,23 +122,21 @@ module.exports = function (grunt) {
     var scssSrc;
     var files = {};
     var dist = {};
-    concatSrc = 'assets/scss/build.scss';
-    concatDest = theme + '/build.scss';
+    concatSrc = 'build/scss/build.scss';
+    concatDest = 'dist/' + theme + '/build.scss';
+    scssSrc = 'dist/' + theme + '/build.scss';
     scssDest = '<%=builddir%>/' + theme + '/bootstrap.css';
-    scssSrc = [theme + '/' + 'build.scss'];
 
     dist = {src: concatSrc, dest: concatDest};
     grunt.config('concat.dist', dist);
     files = {};
     files[scssDest] = scssSrc;
     grunt.config('sass.dist.files', files);
-    grunt.config('sass.dist.options.style', 'expanded');
-    grunt.config('sass.dist.options.sourcemap', 'none');
-    grunt.config('sass.dist.options.precision', 8);
-    grunt.config('sass.dist.options.unix-newlines', true);
+    grunt.config('sass.dist.options.outputStyle', 'expanded');
  
     grunt.task.run(['concat', 'sass:dist', 'exec:postcss', 'clean:build',
-      compress ? 'compress:' + scssDest + ':' + '<%=builddir%>/' + theme + '/bootstrap.min.css' : 'none']);
+      compress ? 'compress:' + scssDest + ':' + '<%=builddir%>/' + theme + '/bootstrap.min.css' : 'none',
+      'copy:css']);
   });
 
   grunt.registerTask('compress', 'compress a generic css with sass', function(fileSrc, fileDst) {
@@ -129,7 +144,7 @@ module.exports = function (grunt) {
     grunt.log.writeln('compressing file ' + fileSrc);
 
     grunt.config('sass.dist.files', files);
-    grunt.config('sass.dist.options.style', 'compressed');
+    grunt.config('sass.dist.options.outputStyle', 'compressed');
     grunt.task.run(['sass:dist']);
   });
 
@@ -151,9 +166,12 @@ module.exports = function (grunt) {
 
   grunt.event.on('watch', function(action, filepath) {
     var path = require('path');
-    var theme = path.dirname(filepath);
+    var theme = path.basename(path.dirname(filepath));
+    console.log(theme);
     grunt.config('buildtheme', theme);
   });
+
+  grunt.registerTask('vendor', 'copy:vendor');
 
   grunt.registerTask('postcss', 'exec:postcss');
 

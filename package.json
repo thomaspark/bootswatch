@@ -13,7 +13,7 @@
     "node": ">=6"
   },
   "scripts": {
-    "postcss": "postcss --config assets/js/postcss.js --replace */bootstrap*.css"
+    "postcss": "postcss --config build/js/postcss.js --replace dist/*/bootstrap*.css"
   },
   "dependencies": {
     "bootstrap": "~4.0.0-beta.2",
@@ -27,6 +27,7 @@
     "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-uglify": "^2.0.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-exec": "^1.0.1",
