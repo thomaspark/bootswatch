@@ -1,0 +1,679 @@
+// Superhero 2.3.2
+// Bootswatch
+// -----------------------------------------------------
+
+
+// TYPOGRAPHY
+// --------------------------------------------------
+
+@import url('//fonts.googleapis.com/css?family=Oswald|Noticia+Text');
+
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, h6 {
+	font-family: @headingsFontFamily;
+	color: @orange;
+	text-shadow: -1px 1px 0 darken(@orange, 30%);
+}
+
+h1, h2 {
+	text-shadow: -2px 2px 0 darken(@orange, 30%);
+}
+
+h1 {
+	line-height: 55px;
+}
+
+code, pre {
+	background-color: lighten(@blue, 8%);
+	border: none;
+	color: @textColor;
+}
+
+// SCAFFOLDING
+// --------------------------------------------------
+
+.page-header {
+	border-bottom: none;
+}
+
+blockquote {
+	border-left: 5px solid @blue;
+}
+
+blockquote.pull-right {
+	border-right: 5px solid @blue;
+}
+
+// NAVBAR
+// --------------------------------------------------
+
+.navbar {
+
+	.navbar-inner {
+		.box-shadow(none);
+		background-image: none;
+	}
+
+	.brand {
+		padding: 25px 20px 15px;
+		font-family: @headingsFontFamily;
+		font-size: 30px;
+		text-shadow: -2px 2px 0 darken(@orange, 30%);
+	}
+
+	.nav > li > a {
+		padding: 23px 20px 13px;
+		line-height: 30px;
+		font-family: @headingsFontFamily;
+		font-size: 22px;
+		text-shadow: -2px 2px 0 darken(@orange, 30%);
+	}
+
+	.brand:hover,
+	.nav > li > a:hover,
+	.nav > li.active > a:hover,
+	.nav > li.dropdown.open > a,
+	.nav > li.dropdown.open > a:hover {
+		position: relative;
+		top: 1px;
+		left: -1px;
+		color: @orange;
+		text-shadow: -1px 1px 0 darken(@orange, 30%);
+	}
+
+	.nav > .active > a,
+	.nav > .active > a:hover,
+	.nav > .active > a:focus {
+		.box-shadow(none);
+	}
+
+	.navbar-text {
+		padding: 23px 20px 13px;
+		line-height: 30px;
+		font-family: @headingsFontFamily;
+		font-size: 22px;
+		text-shadow: -2px 2px 0 @gray;
+	}
+
+	.navbar-search {
+		margin-top: 24px;
+	}
+
+	.navbar-search .search-query {
+		font-family: @baseFontFamily;
+		font-size: @baseFontSize;
+		line-height: @baseLineHeight;
+		.box-shadow(none);
+	}
+
+	&.navbar-inverse .navbar-search .search-query {
+		color: @blueDark;
+	}
+
+	.divider-vertical {
+		height: 70px;
+	}
+
+	.nav .dropdown-toggle .caret,
+	.nav .open.dropdown .caret {
+		margin-top: 14px;
+		border-top-color: @textColor;
+	}
+
+	.dropdown-menu::before {
+		border: none;
+	}
+
+	.dropdown-menu::after {
+		left: 20px;
+		border-left: 7px solid transparent;
+		border-right: 7px solid transparent;
+		border-bottom: 7px solid lighten(@blue, 10%);
+	}
+
+	[class^="icon-"], [class*=" icon-"] {
+		vertical-align: 20%;
+	}
+
+	.btn-navbar {
+		background-color: @blue;
+		border-color: transparent;
+	}
+}
+
+@media (max-width: @navbarCollapseWidth) {
+
+	.navbar .nav-collapse {
+
+		.border-radius(4px);
+
+		.nav li > a {
+			color: @orange;
+
+			&:hover {
+				background-color: lighten(@blue, 10%) !important;
+				background-image: none;
+			}
+		}
+
+		.navbar-form,
+		.navbar-search {
+			border-top: none;
+			border-bottom: none;
+			.box-shadow(none);
+		}
+
+		.nav-header {
+			color: @textColor;
+		}
+	}
+}
+
+div.subnav {
+	margin: 0 1px;
+	background: @blue none;
+	border: none;
+
+	.nav > li > a,
+	.nav > li.active > a {
+		border-color: transparent;
+		color: @textColor;
+	}
+
+	.nav > li > a:hover,
+	.nav > li.active > a:hover {
+		background-color: lighten(@blue, 10%);
+		border-color: transparent;
+	}
+
+	.nav > li.active > a,
+	.nav > li.active > a:hover {
+		background: @orange none;
+		.box-shadow(none);
+		color: @white;
+	}
+
+	&.subnav-fixed {
+		top: @navbarHeight + 1;
+		margin: 0;
+		.box-shadow(none);
+
+		.nav > li > a,
+		.nav > li > a:hover,
+		.nav > li.active > a,
+		.nav > li.active > a:hover {
+			border-color: transparent;
+			.border-radius(0);
+		}
+
+		.nav > li > a:hover,
+		.nav > li.active > a:hover {
+			color: @white;
+		}
+	}
+
+	.nav > .active > a .caret,
+	.nav > .active > a:hover .caret {
+		border-top-color: @textColor;
+	}
+}
+
+// NAVIGATION
+// --------------------------------------------------
+
+.nav .nav-header {
+	color: @textColor;
+	text-shadow: none;
+}
+
+.nav-list {
+
+	padding: 0 15px;
+
+	& > li > a, 
+	& > .nav-header {
+		text-shadow: none;
+		color: @textColor;
+	}
+
+	.active > a,
+	.active > a:hover {
+		text-shadow: none;
+		color: @white;
+	}
+	
+	li > a:hover {
+		background-color: lighten(@blue, 10%);
+	}
+
+}
+
+.nav-tabs,
+.nav-tabs.nav-stacked > li > a {
+	border-color: transparent;
+}
+
+.nav-tabs {
+
+	& > li > a {
+		background-color: @blue;
+		color: @textColor;
+	}
+
+	li.active > a,
+	li.active > a:hover,
+	&.nav-stacked > li.active > a:hover {
+		color: @white;
+		background-color: @orange;
+		border-color: transparent;
+	}
+
+	li > a:hover,
+	&.nav-stacked > li > a:hover {
+		background-color: lighten(@blue, 10%);
+		border-color: transparent;
+	}
+
+	li.disabled > a:hover {
+		background-color: @blue;
+	}
+}
+
+.nav-pills {
+
+	& > li > a {
+		color: @textColor;
+		background-color: @blue;
+	}
+
+	& > li > a:hover {
+		background-color: lighten(@blue, 10%);
+		border-color: transparent;
+	}
+
+	& > .disabled > a:hover {
+		background-color: @blue;
+	}
+}
+
+.nav-tabs .open .dropdown-toggle,
+.nav-pills .open .dropdown-toggle,
+.nav > .open.active > a:hover {
+	background-color: lighten(@blue, 10%);
+	border-color: transparent;
+}
+
+.nav-pills .dropdown .caret,
+.nav-pills .dropdown:hover .caret {
+	border-top-color: @textColor;
+}
+
+.dropdown.open .dropdown-menu > li > a:hover,
+.dropdown.open .dropdown-menu > li.active > a:hover {
+	background-color: @orange;
+	color: @white;
+}
+
+.tabbable .nav-tabs,
+.tabbable .nav-tabs > li.active > a,
+.tabbable .nav-tabs > li > a:hover,
+.tabbable .nav-tabs > li.active > a:hover {
+	border-color: transparent;
+}
+
+.breadcrumb {
+	background-color: @blue;
+	background-image: none;
+	border: none;
+	.box-shadow(none);
+
+	li {
+		text-shadow: none;
+	}
+
+	.divider {
+		color: @textColor;
+	}
+}
+
+.pagination {
+
+	ul {
+		background-image: none;
+		border-color: transparent;
+	}
+
+	ul > li > a,
+	ul > li > span {
+		border: none;
+		color: @textColor;
+	}
+
+	ul > li > a:hover {
+		background: lighten(@blue, 10%);
+	}
+
+	ul > .active > a,
+	ul > .active > a:hover,
+	ul > .active > span,
+	ul > .active > span:hover {
+		background-color: @orange;
+		color: @white;
+	}
+
+	ul > .disabled > a,
+	ul > .disabled > a:hover,
+	ul > .disabled > span,
+	ul > .disabled > span:hover {
+		background: darken(@blue, 5%);
+	}
+}
+
+.pager {
+
+	li > a,
+	li > span {
+
+		background-color: @blue;
+		border: none;
+		color: @textColor;
+
+		&:hover {
+			background: lighten(@blue, 10%);
+		}
+	}
+
+	.disabled a,
+	.disabled a:hover {
+		background-color: @blue;
+	}
+}
+
+// BUTTONS
+// --------------------------------------------------
+
+.btn,
+.btn:hover {
+	text-shadow: none;
+	background-image: none;
+	.box-shadow(-2px 2px 0 rgba(0, 0, 0, 0.2));
+	border: none;
+}
+
+.btn-warning {
+	background-color: @yellow;
+}
+
+.btn-primary, .btn-primary:hover {
+	.box-shadow(-2px 2px 0 darken(@btnPrimaryBackground, 30%));
+}
+
+.btn-warning, .btn-warning:hover {
+	.box-shadow(-2px 2px 0 darken(@yellow, 30%));
+}
+
+.btn-danger, .btn-danger:hover {
+	.box-shadow(-2px 2px 0 darken(#ee5f5b, 30%));
+}
+
+.btn-success, .btn-success:hover {
+	.box-shadow(-2px 2px 0 darken(#62c462, 30%));
+}
+
+.btn-info, .btn-info:hover {
+	.box-shadow(-2px 2px 0 darken(#5bc0de, 40%));
+}
+
+.btn-inverse, .btn-inverse:hover {
+	.box-shadow(-2px 2px 0 darken(#454545, 20%));
+}
+
+.btn.dropdown-toggle, .btn.dropdown-toggle:hover {
+	.box-shadow(0 2px 0 darken(@white, 80%));
+}
+
+.btn-primary.dropdown-toggle, .btn-primary.dropdown-toggle:hover {
+	.box-shadow(0 2px 0 darken(@btnPrimaryBackground, 30%));
+}
+
+.btn-warning.dropdown-toggle, .btn-warning.dropdown-toggle:hover {
+	.box-shadow(0 2px 0 darken(@yellow, 30%));
+}
+
+.btn-danger.dropdown-toggle, .btn-danger.dropdown-toggle:hover {
+	.box-shadow(0 2px 0 darken(#ee5f5b, 30%));
+}
+
+.btn-success.dropdown-toggle, .btn-success.dropdown-toggle:hover {
+	.box-shadow(0 2px 0 darken(#62c462, 30%));
+}
+
+.btn-info.dropdown-toggle, .btn-info.dropdown-toggle:hover {
+	.box-shadow(0 2px 0 darken(#5bc0de, 40%));
+}
+
+.btn-inverse.dropdown-toggle, .btn-inverse.dropdown-toggle:hover {
+	.box-shadow(0 2px 0 darken(#454545, 20%));
+}
+
+.btn.active,
+.btn:active {
+	position: relative;
+	top: 1px;
+	left: -1px;
+	.box-shadow(-1px 1px 0 darken(@white, 80%))
+}
+
+.btn.disabled,
+.btn.disabled.active,
+.btn.disabled:active,
+.btn[disabled] {
+	.box-shadow(none);
+	text-shadow: none;
+	top: 0;
+	left: 0;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	vertical-align: -13%;
+}
+
+// TABLES
+// -----------------------------------------------------
+
+.table,
+.table-striped tbody > tr > td:first-child,
+.table-striped tbody > tr > td:last-child, {
+	.border-radius(4px);
+}
+
+// FORMS
+// --------------------------------------------------
+
+input, button, select, textarea {
+	font-family: 'Noticia Text', serif;
+}
+
+legend {
+	border-bottom: none;
+	font-family: @headingsFontFamily;
+	color: @orange;
+	text-shadow: -2px 2px 0 darken(@orange, 30%);
+}
+
+label {
+	color: @textColor;
+	line-height: 15px;
+}
+
+.help-block {
+	color: @textColor;
+	opacity: 0.6;
+}
+
+.form-actions {
+	border-top: none;
+}
+
+.control-group.warning {
+  .formFieldState(lighten(@warningText, 10%), lighten(@warningText, 10%), @warningBackground);
+}
+
+.control-group.error {
+  .formFieldState(lighten(@errorText, 10%), lighten(@errorText, 10%), @errorBackground);
+}
+
+.control-group.success {
+  .formFieldState(lighten(@successText, 10%), lighten(@successText, 10%), @successBackground);
+}
+
+.input-append .add-on,
+.input-prepend .add-on,
+.input-append .btn,
+.input-prepend .btn {
+	color: @bodyBackground;
+}
+
+// DROPDOWNS
+// --------------------------------------------------
+
+.dropdown .caret {
+	margin-top: 14px;
+	opacity: 1;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid lighten(@blue, 10%);
+}
+
+// ALERTS, LABELS, BADGES
+// --------------------------------------------------
+
+.label,
+.badge {
+	background-color: @blue;
+  	color: @textColor;
+}
+
+.label-important,
+.badge-important {
+	background-color: @errorText;
+}
+
+.label-warning,
+.badge-warning {
+	background-color: @orange;
+}
+
+.label-success,
+.badge-success {
+	background-color: @successText;
+}
+
+.label-info,
+.badge-info {
+	background-color: @infoText;
+}
+
+.label-inverse,
+.badge-inverse {
+	background-color: @gray;
+}
+
+.alert {
+  background-color: @blue;
+  border: none;
+  color: @textColor;
+  text-shadow: none;
+}
+
+.alert .alert-heading {
+	color: @orange;
+}
+
+.alert-success {
+	background-color: @successText;
+}
+
+.alert-danger,
+.alert-error {
+	background-color: @errorText;
+}
+
+.alert-info {
+	background-color: @infoText;
+}
+
+
+// MISC
+// --------------------------------------------------
+
+.well, .hero-unit {
+	border: none;
+	.box-shadow(none);
+}
+
+.hero-unit h1 {
+	color: @orange;
+	line-height: 2em;
+}
+
+.progress {
+	background-color: darken(@blueDark, 5%);
+	background-image: none;
+	.box-shadow(none);
+
+	.bar {
+		.box-shadow(none);
+	}
+}
+
+.thumbnail {
+	border: none;
+	background: @blue;
+	.border-radius(3px);
+}
+
+.modal {
+	background-color: transparent;
+
+	&-header,
+	&-body,
+	&-footer {
+		.box-shadow(none);
+		background-color: @bodyBackground;
+		border: none;
+	}
+
+	&-header {
+		.border-radius(4px 4px 0 0);
+	}
+
+	&-footer {
+		.border-radius(0 0 4px 4px);
+	}
+}
+
+// MEDIA QUERIES
+// --------------------------------------------------
+
+@media (max-width: 768px) {
+
+	div.subnav {
+
+		.nav > li {
+
+			&:first-child > a,
+			&:first-child > a:hover,
+			&.active:first-child > a,
+			&.active:first-child > a:hover {
+				.border-radius(4px 4px 0 0);
+			}
+
+			&:last-child > a,
+			&:last-child > a:hover,
+			&.active:last-child > a,
+			&.active:last-child > a:hover {
+				.border-radius(0 0 4px 4px);
+			}
+		}
+	}
+}

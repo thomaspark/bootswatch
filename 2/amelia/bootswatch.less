@@ -1,0 +1,789 @@
+// Amelia 2.3.2
+// Bootswatch
+// -----------------------------------------------------
+
+
+// TYPOGRAPHY
+// -----------------------------------------------------
+
+@import url('//fonts.googleapis.com/css?family=Lobster|Cabin:400,700');
+
+h6 {
+	color: @textColor;
+}
+
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+	font-family: @baseFontFamily;
+	color: @textColor;
+}
+
+code, pre {
+	background-color: rgba(255, 255, 255, 0.3);
+	padding: 2px;
+}
+
+blockquote {
+
+	border-left-color: lighten(#147E88, 12%);
+
+	&.pull-right {
+		border-right-color: lighten(#147E88, 12%);
+	}
+
+	small {
+		color: rgba(255, 255, 255, 0.6);
+	}
+}
+
+.muted {
+	color: rgba(255, 255, 255, 0.6);
+}
+
+.text-warning {
+	color: lighten(@yellow, 30%);
+}
+
+.text-error {
+	color: lighten(@orange, 30%);
+}
+
+.text-success {
+	color: lighten(@green, 30%);
+}
+
+.text-info {
+	color: lighten(@blue, 30%);
+}
+
+// SCAFFOLDING
+// -----------------------------------------------------
+
+body {
+	#gradient > .radial(lighten(#0F8790, 7%), #0F8790);
+}
+
+hr {
+	border-bottom: none;
+}
+
+.page-header {
+	margin: 30px 0 15px;
+	border-bottom: 0px solid transparent;
+}
+
+// NAVBAR
+// -----------------------------------------------------
+
+.navbar {
+
+	.navbar-inner {
+		.border-radius(0);
+	}
+
+	.brand {
+		padding: 15px 20px 14px;
+		font-family: @headingsFontFamily;
+		font-size: 24px;
+		font-weight: normal;
+	}
+
+	.nav > li > a {
+		padding-top: 17px;
+		padding-bottom: 14px;
+		text-shadow: none;
+	}
+
+	.nav > .active > a,
+	.nav > .active > a:hover,
+	.navbar .nav > .active > a:focus {
+		.box-shadow(none);
+	}
+
+	.navbar-search {
+		margin-top: 10px;
+	}
+
+	.navbar-search .search-query {
+		.border-radius(0);
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+
+	.navbar-text {
+		margin: 17px 15px 14px;
+		line-height: 20px;
+	}
+
+	.btn,
+	.btn-group {
+		padding: 4px;
+	}
+
+	&-inverse {
+
+		.dropdown-menu li > a:hover,
+		.dropdown-menu li > a:focus,
+		.dropdown-submenu:hover > a {
+			background-image: none;
+			background-color: @yellow;
+		}
+	}
+}
+
+@media (max-width: @navbarCollapseWidth) {
+
+	.navbar .nav-collapse {
+
+		.nav li > a {
+
+			color: @textColor;
+			.border-radius(0);
+
+			&:hover {
+				background-color: lighten(@navbarBackground, 10%);
+			}
+		}
+
+		.dropdown-menu li > a:hover,
+		.dropdown-menu li > a:focus,
+		.dropdown-submenu:hover > a {
+			background-image: none;
+		}
+
+		.navbar-form,
+		.navbar-search {
+			.box-shadow(none);
+			border: none;
+		}
+
+		.navbar-search .search-query {
+			border: 2px solid @textColor;
+		}
+
+		.nav-header {
+			color: rgba(255, 255, 255, 0.5);
+		}
+	}
+
+	.navbar-inverse .nav-collapse {
+
+		.nav > li > a,
+		.dropdown-menu a {
+			color: @navbarInverseLinkColor !important;
+		}
+
+		.nav li > a:hover,
+		.dropdown-menu a:hover {
+			background-color: lighten(@navbarInverseBackground, 10%) !important;
+		}
+	}
+}
+
+div.subnav {
+
+	margin: 0 1px;
+	background: rgba(42, 99, 105, 0.9) none;
+	border: none;
+	.border-radius(0);
+	.box-shadow(none);
+
+	.nav > li > a {
+		color: @textColor;
+		border-color: transparent;
+	}
+
+	.nav > li:first-child > a,
+	.nav > li:first-child > a:hover {
+		.border-radius(0);
+	}
+
+	.nav > .active > a {
+		background-color: rgba(255, 255, 255, 0.4);
+		border-color: transparent;
+		color: @textColor;
+		.box-shadow(none);
+	}
+
+	.nav > li > a:hover,
+	.nav > .active > a:hover, {
+		border-right-color: transparent;
+		background-color: rgba(255, 255, 255, 0.4);
+		color: @textColor;
+	}
+
+	.nav > li.open > a {
+		border-color: transparent;
+		background-color: rgba(255, 255, 255, 0.4);
+	}
+
+	&-fixed {
+		top: @navbarHeight + 1;
+		margin: 0;
+	}
+}
+
+@media (max-width: 767px) {
+	
+	div.subnav .nav > li + li > a {
+		border-top: 1px solid rgba(255, 255, 255, 0.4);
+	}
+}
+
+// NAV
+// -----------------------------------------------------
+
+.nav-tabs,
+.nav-pills {
+
+	border-color: transparent;
+
+
+	& > li > a {
+		border-color: transparent;
+		.border-radius(0);
+		.box-shadow(0);
+	}
+
+	& > li > a:hover {
+		background-color: #8AD5DC;
+		border-color: transparent;
+		text-shadow: none;
+	}
+
+	& > .active > a,
+	& > .active > a:hover {
+		background-color: #8AD5DC;
+		border-color: transparent;
+		color: @textColor;
+		text-shadow: none;
+	}
+
+	& > .disabled > a,
+	& > .disabled > a:hover {
+		background: none;
+		color: @grayLighter;
+	}
+
+	& > .open > .dropdown-toggle,
+	& > .open > .dropdown-toggle {
+		background-color: #8AD5DC;
+		color: @linkColor;
+		border-color: transparent;
+	}
+
+
+}
+
+.nav-tabs {
+
+	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+	& > li > a  {
+		background-color: #3CB9C6;
+	}
+
+	&.nav-stacked {
+
+		li > a:first-child,
+		li > a:last-child {
+			.border-radius(0);
+		}
+
+		li > a,
+		li > a:hover,
+		li.active > a,
+		li.active > a:hover {
+			border-color: transparent;
+		}
+	}
+}
+
+.nav-list {
+
+	.nav-header {
+		text-shadow: none;
+		color: @textColor;
+	}
+
+	li > a {
+		text-shadow: none;
+	}
+
+	li.active > a,
+	li > a:hover,
+	li.active > a:hover {
+		background-color: #8AD5DC;
+		text-shadow: none;
+	}
+
+	.divider {
+		background-color: rgba(255, 255, 255, 0.3);
+		border-bottom: none;
+	}
+}
+
+.breadcrumb, .pager > li > a {
+	border-color: transparent;
+	.border-radius(0);
+	.box-shadow(none);
+	text-shadow: none;
+}
+
+.breadcrumb {
+
+	background-color: #3CB9C6;
+	background-image: none;
+
+	li {
+		text-shadow: none;
+	}
+
+	.active {
+		color: @white;
+	}
+
+	& > li > a.divider,
+	& > li > span.divider {
+		color: @grayLighter;
+	}
+}
+
+.pagination {
+
+	ul  {
+		background-color: @paginationBackground;
+		background-image: none;
+		.border-radius(0);
+	}
+
+	ul > li > a:hover {
+		background-color: rgba(255, 255, 255, 0.4);
+		color: @linkColor;
+	}
+
+	ul > li:first-child > a,
+	ul > li:last-child > a {
+		.border-radius(0);
+	}
+
+	ul > .disabled > a,
+	ul > .disabled > a:hover,
+	ul > .disabled > span,
+	ul > .disabled > span:hover {
+		color: @textColor;
+	}
+
+	ul > .active > a,
+	ul > .active > a:hover,
+	ul > .active > span,
+	ul > .active > span:hover {
+		background-color: rgba(255, 255, 255, 0.4);
+		color: @textColor;
+	}
+}
+
+.pager {
+
+	li > a {
+		background-color: #3CB9C6;
+
+		&:hover {
+			background-color: #8AD5DC;
+		}
+	}
+
+	.disabled a,
+	.disabled a:hover {
+		background-color: #3CB9C6;
+		color: @white;
+	}
+}
+
+// BUTTONS
+// -----------------------------------------------------
+
+.buttonBackgroundCustom(@color) {
+
+  background-color: @color;
+  border-color: transparent;
+
+  &:hover, &:active, &.active, &.disabled, &[disabled] {
+    background-color: darken(@color, 5%);
+	text-shadow: none;
+  }
+
+  &:active, &.active {
+    background-color: darken(@color, 15%);
+	.box-shadow(none);
+  }
+
+  // IE 7 + 8 can't handle box-shadow to show active, so we darken a bit ourselves
+  &:active,
+  &.active {
+    background-color: darken(@color, 15%) e("\9");
+  }
+}
+
+.btn {
+ 	padding: 12px 16px;
+	.border-radius(0);
+	background-image: none;
+	text-shadow: none;
+	.box-shadow(none);
+	.buttonBackgroundCustom(@btnBackground)
+}
+
+.btn-large {
+	padding: @paddingLarge;
+}
+
+.btn-small {
+	padding: @paddingSmall;
+}
+
+.btn-mini {
+	padding: @paddingMini;
+}
+
+.btn-group .btn:first-child {
+	margin-left: 0;
+	.border-radius(0);
+}
+
+.btn-group .btn:last-child,
+.btn-group .dropdown-toggle {
+     .border-radius(0);
+}
+
+.btn-group .dropdown-toggle,
+.btn-group.open .dropdown-toggle,
+.btn.open .dropdown-toggle {
+	.box-shadow(none);
+}
+
+.btn-primary {
+  .buttonBackgroundCustom(@btnPrimaryBackground);
+}
+
+.btn-info {
+  .buttonBackgroundCustom(@btnInfoBackground);
+}
+
+.btn-success {
+  .buttonBackgroundCustom(@btnSuccessBackground);
+}
+
+.btn-warning {
+  .buttonBackgroundCustom(@btnWarningBackground);
+}
+
+.btn-danger {
+  .buttonBackgroundCustom(@btnDangerBackground);
+}
+
+.btn-inverse {
+  .buttonBackgroundCustom(@btnInverseBackground);
+}
+
+.btn-link {
+	.buttonBackgroundCustom(@btnPrimaryBackground);
+}
+
+.btn-small [class^="icon-"] {
+	margin-top: 1px;
+}
+
+.add-on [class^="icon-"] {
+	margin-left: 5px;
+}
+
+// TABLES
+// -----------------------------------------------------
+
+.table th, .table td,
+.table tbody + tbody {
+	border-top: 0px solid transparent;
+}
+
+.table-bordered {
+	.border-radius(0);
+}
+
+.table tbody {
+
+	tr.success td {
+		background-color: @green;
+	}
+
+	tr.error td {
+		background-color: @red;
+	}
+
+	tr.info td {
+		background-color: @blue;
+	}
+}
+
+// FORMS
+// -----------------------------------------------------
+
+legend {
+	font-family: @headingsFontFamily;
+}
+
+legend, label, .help-block, .input-file {
+	border: none;
+	color: inherit;
+}
+
+input, textarea, .uneditable-input {
+	border: none;
+	padding: 10px;
+}
+
+.dropdown input {
+	border: 1px solid @dropdownBorder;
+}
+
+.uneditable-input {
+	padding-bottom: 30px;
+}
+
+select {
+	border: none;
+}
+
+button {
+	margin-left: 12px;
+}
+
+input, textarea, .search-query, .uneditable-input,
+.input-append input, .input-append .uneditable-input,
+.input-prepend input, .input-prepend .uneditable-input {
+	border-color: transparent;
+	.box-shadow(none);
+}
+
+.form-actions {
+	border-top: 0px solid transparent;
+}
+
+.control-group.warning {
+  .formFieldState(@yellow, lighten(@yellow, 30%), @warningBackground);
+}
+
+.control-group.error {
+  .formFieldState(@orange, lighten(@orange, 30%), @errorBackground);
+}
+
+.control-group.success {
+  .formFieldState(@green, lighten(@green, 20%), @successBackground);
+}
+
+.control-group.info {
+  .formFieldState(@purple, lighten(@purple, 20%), @infoBackground);
+}
+
+.control-group.warning {
+
+	.control-label,
+	.help-block,
+	.help-inline {
+		color: lighten(@yellow, 30%);
+	}
+}
+
+.control-group.error {
+
+	.control-label,
+	.help-block,
+	.help-inline {
+		color: lighten(@orange, 30%);
+	}
+}
+
+.control-group.success {
+
+	.control-label,
+	.help-block,
+	.help-inline {
+		color: lighten(@green, 20%);
+	}
+}
+.control-group.info {
+
+	.control-label,
+	.help-block,
+	.help-inline {
+		color: lighten(@purple, 20%);
+	}
+}
+
+.input-prepend .add-on,
+.input-append .add-on {
+	height: 20px;
+	padding-top: 4px;
+	background-color: @grayLighter;
+	border-color: transparent;
+	.border-radius(0);
+	color: @gray;
+	text-shadow: none;
+}
+
+.input-append .btn,
+.input-prepend .btn {
+	padding: 4px 10px;
+}
+
+// ALERTS, LABELS, BADGES
+// -----------------------------------------------------
+
+.alert {
+
+	border-color: transparent;
+	.border-radius(0);
+	.box-shadow(none);
+	text-shadow: none;
+
+	h1, h2, h3, h4, h5, h6 {
+		color: @textColor;
+	}
+
+	&-heading {
+		color: @textColor;
+	}
+}
+
+.label,
+.badge {
+
+	background-color: @blue;
+
+	&-success {
+		background-color: @green;
+	}
+
+	&-important {
+		background-color: @red;
+	}
+
+	&-warning {
+		background-color: @orange;
+	}
+
+	&-info {
+		background-color: @purple;
+	}
+
+	&-inverse {
+		background-color: @btnInverseBackground;
+	}
+
+}
+
+// MISCELLANEOUS
+// -----------------------------------------------------
+
+.progress, .well, pre, code {
+	border-color: transparent;
+	.border-radius(0);
+	.box-shadow(none);
+	text-shadow: none;
+}
+
+.well {
+	background-image: none;
+}
+
+.hero-unit {
+	.border-radius(0);
+}
+
+.thumbnail {
+	border: 0 solid transparent;
+	.border-radius(0);
+	.box-shadow(none);
+}
+
+.progress {
+
+	background-image: none;
+	background-color: #27666D;
+
+	.bar {
+
+		.box-shadow(none);
+		background-image: none;
+		background-color: @yellow;
+
+		&-success {
+			background-color: @green;
+		}
+
+		&-warning {
+			background-color: @orange;
+		}
+
+		&-error {
+			background-color: @red;
+		}
+	}
+}
+
+.progress-danger .bar {
+	background-image: none;
+	background-color: #AD1D28;
+}
+
+.progress-danger.progress-striped .bar {
+	#gradient > .striped(#AD1D28);
+}
+
+.progress-success .bar {
+	background-image: none;
+	background-color: @green;
+}
+
+.progress-success.progress-striped .bar {
+	#gradient > .striped(@green);
+}
+
+.progress-info .bar {
+	background-image: none;
+	background-color: @blue;
+}
+
+.progress-info.progress-striped .bar {
+	#gradient > .striped(@blue);
+}
+
+.modal {
+
+	.border-radius(0);
+
+	&-header {
+		background-color: @navbarBackground;
+		border-bottom: none;
+		color: @white;
+	}
+
+	&-body {
+		
+		background-color: @wellBackground;
+	}
+}
+
+.popover {
+	
+	padding: 0;
+	.border-radius(0);
+	color: @grayDark;
+
+	.popover-title {
+		.border-radius(0);
+		color: @white;
+	}
+}
+
+// MEDIA QUERIES
+// -----------------------------------------------------

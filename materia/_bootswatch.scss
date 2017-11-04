@@ -1,0 +1,678 @@
+// Materia 4.0.0
+// Bootswatch
+
+
+// Variables ===================================================================
+
+$web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" !default;
+@import url($web-font-path);
+
+// Effects =====================================================================
+
+@mixin ripple($color){
+  position: relative;
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin-left: 0;
+    @include gradient-radial($color 10%, transparent 10.01%);
+    background-size: 1000% 1000%;
+    background-position: 50%;
+    border: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: background .5s, opacity 1s;
+  }
+
+  &:active:after {
+    background-size: 0 0;
+    opacity: .2;
+    transition: 0s;
+  }
+
+  &.disabled,
+  &[disabled] {
+    &:after {
+      display: none;
+    }
+  }
+}
+
+// Navbar ======================================================================
+
+.navbar {
+  border: none;
+  box-shadow: 0 1px 2px rgba(0,0,0,.3);
+
+  &-brand {
+    font-size: 24px;
+  }
+
+  &-nav .nav-link {
+    padding-top: 0.9rem;
+    padding-bottom: 0.9rem;
+  }
+
+  &.bg-dark,
+  &.bg-primary {
+
+    input[type=text],
+    input[type=password] {
+      color: #fff;
+      box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5);
+
+      &:focus {
+        box-shadow: inset 0 -2px 0 #fff;
+      }
+
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+      }
+    }
+  }
+}
+
+// Buttons =====================================================================
+
+@mixin btn($class,$bg,$color){
+  .btn-#{$class} {
+    &:focus {
+      background-color: $bg;
+      box-shadow: 0 0 0 2px rgba(204, 204, 204, 0.5);
+    }
+
+    &:hover,
+    &:active:hover {
+      background-color: darken($bg, 6%);
+    }
+
+    &:active {
+      box-shadow: 2px 2px 4px rgba(0,0,0,.4);
+    }
+
+    @include ripple($color);
+  }
+
+  .btn-outline-#{$class} {
+    @include ripple($color);
+  }
+}
+
+@include btn(primary,$primary,$white);
+@include btn(secondary,$secondary,$gray-500);
+@include btn(success,$success,$white);
+@include btn(info,$info,$white);
+@include btn(warning,$warning,$white);
+@include btn(danger,$danger,$white);
+@include btn(dark,$dark,$white);
+@include btn(light,$light,$white);
+
+.btn {
+  text-transform: uppercase;
+  border: none;
+  box-shadow: 1px 1px 4px rgba(0,0,0,.4);
+  transition: all 0.4s;
+
+  &-link {
+    box-shadow: none;
+    color: $link-color;
+
+    &:hover,
+    &:focus {
+      box-shadow: none;
+      color: $link-hover-color;
+      text-decoration: $link-hover-decoration;
+    }
+
+    &.disabled, // Although btn-link is intended for buttons, which want to look like link, I include here a.disable for the sake of consistency
+    &[disabled],
+    fieldset[disabled] & {
+      &:hover,
+      &:active:hover {
+        color: $btn-link-disabled-color;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &-secondary {
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+      background-color: rgba(0, 0, 0, 0.1);
+      color: rgba(0, 0, 0, 0.4);
+      opacity: 1;
+
+      &:hover,
+      &:focus {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+
+  &-outline-secondary {
+    border-color: $gray-200;
+    color: $gray-300;
+  }
+
+  &-warning {
+    color: $white;
+  }
+
+  &.dropdown-toggle::before {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 0.3em;
+    vertical-align: middle;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-left: 0.3em solid transparent;
+  }
+}
+
+.btn-group {
+  .btn + .btn,
+  .btn + .btn-group,
+  .btn-group + .btn,
+  .btn-group + .btn-group {
+    margin-left: 0;
+  }
+
+  &-vertical {
+    > .btn + .btn,
+    > .btn + .btn-group,
+    > .btn-group + .btn,
+    > .btn-group + .btn-group {
+      margin-top: 0;
+    }
+  }
+}
+
+// Typography ==================================================================
+
+body,
+input,
+button {
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: .1px;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+a {
+  transition: all 0.2s;
+}
+
+// Tables ======================================================================
+
+.table-hover {
+  > tbody > tr,
+  > tbody > tr > th,
+  > tbody > tr > td {
+    transition: all 0.2s;
+  }
+}
+
+.thead-inverse th {
+  background-color: $primary;
+  color: $white;
+}
+
+// Forms =======================================================================
+
+.col-form-label {
+  font-size: 16px;
+
+  &-sm {
+    font-size: $font-size-sm;
+  }
+
+  &-lg {
+    font-size: $font-size-lg;
+  }
+}
+
+textarea,
+textarea.form-control,
+input.form-control,
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=number],
+[type=text].form-control,
+[type=password].form-control,
+[type=email].form-control,
+[type=tel].form-control,
+[contenteditable].form-control {
+  padding: 0;
+  border: none;
+  appearance: none;
+  box-shadow: inset 0 -1px 0 #ddd;
+  font-size: 16px;
+  transition: all 0.2s;
+
+  &:focus {
+    box-shadow: inset 0 -2px 0 $primary;
+  }
+
+  &[disabled],
+  &[readonly] {
+    box-shadow: none;
+    border-bottom: 1px dotted #ddd;
+  }
+
+  &:not(textarea) {
+    height: $input-height;
+  }
+
+  &.form-control {
+    &-sm {
+      height: $input-height-sm;
+      font-size: $font-size-sm;
+    }
+
+    &-lg {
+      height: $input-height-lg;
+      font-size: $font-size-lg;
+    }
+  }
+
+  &::-ms-clear {
+    display: none;
+  }
+}
+
+select,
+select.form-control {
+  border: 0;
+  border-radius: 0;
+  appearance: none;
+  padding-left: 0;
+  padding-right: 0\9; // remove padding for < ie9 since default arrow can't be removed
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAMAAACelLz8AAAAJ1BMVEVmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmaP/QSjAAAADHRSTlMAAgMJC0uWpKa6wMxMdjkoAAAANUlEQVR4AeXJyQEAERAAsNl7Hf3X6xt0QL6JpZWq30pdvdadme+0PMdzvHm8YThHcT1H7K0BtOMDniZhWOgAAAAASUVORK5CYII=);
+  background-size: 13px;
+  background-repeat: no-repeat;
+  background-position: right center;
+  box-shadow: inset 0 -1px 0 #ddd;
+  font-size: 16px;
+  line-height: 1.5;
+
+  &::-ms-expand {
+    display: none;
+  }
+
+  &.input {
+    &-sm {
+      font-size: $font-size-sm;
+    }
+
+    &-lg {
+      font-size: $font-size-lg;
+    }
+  }
+
+  &:focus {
+    box-shadow: inset 0 -2px 0 $primary;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAMAAACelLz8AAAAJ1BMVEUhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISF8S9ewAAAADHRSTlMAAgMJC0uWpKa6wMxMdjkoAAAANUlEQVR4AeXJyQEAERAAsNl7Hf3X6xt0QL6JpZWq30pdvdadme+0PMdzvHm8YThHcT1H7K0BtOMDniZhWOgAAAAASUVORK5CYII=);
+  }
+
+  &[multiple] {
+    background: none;
+  }
+}
+
+.radio,
+.radio-inline,
+.checkbox,
+.checkbox-inline {
+  label {
+    padding-left: 25px;
+  }
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    margin-left: -25px;
+  }
+}
+
+input[type="radio"],
+.radio input[type="radio"],
+.radio-inline input[type="radio"] {
+  position: relative;
+  margin-right: 4px;
+  vertical-align: top;
+  border: none;
+  background-color: transparent;
+  appearance: none;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    transition: 240ms;
+  }
+
+  &:before {
+    position: absolute;
+    left: 0;
+    top: -2px;
+    background-color: $primary;
+    transform: scale(0);
+  }
+
+  &:after {
+    position: relative;
+    top: -2px;
+    border: 2px solid $gray-500;
+  }
+
+  &:checked:before {
+    transform: scale(0.5);
+  }
+
+  &:disabled:checked:before {
+    background-color: $gray-300;
+  }
+
+  &:checked:after {
+    border-color: $primary;
+  }
+
+  &:disabled:after,
+  &:disabled:checked:after {
+    border-color: $gray-300;
+  }
+}
+
+input[type="checkbox"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+  position: relative;
+  border: none;
+  margin-bottom: -4px;
+  appearance: none;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus:after {
+    border-color: $primary;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+    border: 2px solid $gray-500;
+    border-radius: 2px;
+    transition: 240ms;
+  }
+
+  &:checked:before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 6px;
+    display: table;
+    width: 6px;
+    height: 12px;
+    border: 2px solid #fff;
+    border-top-width: 0;
+    border-left-width: 0;
+    transform: rotate(45deg);
+  }
+
+  &:checked:after {
+    background-color: $primary;
+    border-color: $primary;
+  }
+
+  &:disabled:after {
+    border-color: $gray-300;
+  }
+
+  &:disabled:checked:after {
+    background-color: $gray-300;
+    border-color: transparent;
+  }
+}
+
+.has-warning {
+  input:not([type=checkbox]),
+  .form-control,
+  input.form-control[readonly],
+  input[type=text][readonly],
+  [type=text].form-control[readonly],
+  input:not([type=checkbox]):focus,
+  .form-control:focus {
+    border-bottom: none;
+    box-shadow: inset 0 -2px 0 $warning;
+  }
+}
+
+.has-danger {
+  input:not([type=checkbox]),
+  .form-control,
+  input.form-control[readonly],
+  input[type=text][readonly],
+  [type=text].form-control[readonly],
+  input:not([type=checkbox]):focus,
+  .form-control:focus {
+    border-bottom: none;
+    box-shadow: inset 0 -2px 0 $danger;
+  }
+}
+
+.has-success {
+  input:not([type=checkbox]),
+  .form-control,
+  input.form-control[readonly],
+  input[type=text][readonly],
+  [type=text].form-control[readonly],
+  input:not([type=checkbox]):focus,
+  .form-control:focus {
+    border-bottom: none;
+    box-shadow: inset 0 -2px 0 $success;
+  }
+}
+
+// Remove the Bootstrap feedback styles for input addons
+.input-group-addon {
+  .has-warning &, .has-danger &, .has-success & {
+    color: $input-color;
+    border-color: $input-group-addon-border-color;
+    background-color: $input-group-addon-bg;
+  }
+}
+
+.form-group-lg {
+  select,
+  select.form-control {
+    line-height: 1.5;
+  }
+}
+
+// Navs ========================================================================
+
+.nav-tabs {
+  .nav-item + .nav-item {
+    margin-left: 0;
+  }
+
+  .nav-link,
+  .nav-link:focus {
+    margin-right: 0;
+    background-color: transparent;
+    border: none;
+    color: $body-color;
+    box-shadow: inset 0 -1px 0 #ddd;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: transparent;
+      box-shadow: inset 0 -2px 0 $primary;
+      color: $primary;
+    }
+  }
+
+  .nav-link.active,
+  .nav-link.active:focus {
+    border: none;
+    box-shadow: inset 0 -2px 0 $primary;
+    color: $primary;
+
+    &:hover {
+      border: none;
+      color: $primary;
+    }
+  }
+
+  .nav-link.disabled {
+    box-shadow: inset 0 -1px 0 #ddd;
+  }
+
+  &.nav-justified {
+
+    .nav-link,
+    .nav-link:hover,
+    .nav-link:focus,
+    .nav-link.active,
+    .nav-link.active:hover,
+    .nav-link.active:focus {
+      border: none;
+    }
+  }
+
+  .dropdown-menu {
+    margin-top: 0;
+  }
+}
+
+.dropdown-menu {
+  margin-top: 0;
+  border: none;
+  box-shadow: 0 1px 4px rgba(0,0,0,.3);
+}
+
+// Indicators ==================================================================
+
+.alert {
+  padding-right: 2.5rem;
+
+  &, h1, h2, h3, h4, h5, h6 {
+    color: #fff;
+  }
+
+  &-primary {
+    background-color: $primary;
+  }
+
+  &-success {
+    background-color: $success;
+  }
+
+  &-danger {
+    background-color: $danger;
+  }
+
+  &-warning {
+    background-color: $warning;
+  }
+
+  &-info {
+    background-color: $info;
+  }
+
+  &-dark {
+    background-color: $dark;
+  }
+
+  a:not(.close):not(.btn),
+  .alert-link {
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .close {
+    color: #fff;
+  }
+}
+
+.badge {
+
+  &-secondary {
+    background-color: $gray-500;
+    color: $white;
+  }
+
+  &-light {
+    background-color: $gray-200;
+  }
+}
+
+.tag {
+  padding: 4px 6px 4px;
+}
+
+// Progress bars ===============================================================
+
+// Containers ==================================================================
+
+.close {
+  line-height: 0.5;
+  opacity: 0.6;
+  transition: all 0.2s;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.alert-dismissible {
+  .close {
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+.list-group {
+  &-item-action.active {
+    h1, h2, h3, h4, h5, h6 {
+      color: $white;
+    }
+  }
+}
+
+.popover {
+  border: none;
+  box-shadow: 0 1px 4px rgba(0,0,0,.3);
+}
+
+.carousel {
+  &-caption {
+    h1, h2, h3, h4, h5, h6 {
+      color: inherit;
+    }
+  }
+}

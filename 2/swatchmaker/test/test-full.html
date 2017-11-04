@@ -1,0 +1,2490 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="../swatch/bootstrap.min.css" rel="stylesheet">
+    <link href="../bootstrap/docs/assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="../bootstrap/docs/assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+    <link href="bootswatch.css" rel="stylesheet">
+    <style>
+
+    @media (min-width: 980px) {
+
+      body {
+        padding-top: 80px;
+      }
+    }
+
+    section {
+      margin-top: 80px;
+    }
+
+    </style>
+
+    <!-- HTML5 shim for IE8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="../bootstrap/docs/assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../bootstrap/docs/assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../bootstrap/docs/assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../bootstrap/docs/assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../bootstrap/docs/assets/ico/apple-touch-icon-57-precomposed.png">
+
+  </head>
+
+  <body id="top" data-spy="scroll" data-target=".bs-docs-sidebar">
+
+    <!-- Navbar
+    ================================================== -->
+     <div class="navbar navbar-fixed-top">
+       <div class="navbar-inner">
+         <div class="container">
+           <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+           </a>
+           <a class="brand" href="./test-full.html">Brand</a>
+           <div class="nav-collapse">
+             <ul class="nav">
+               <li class="">
+                 <a href="test.html">Nav</a>
+               </li>
+               <li class="divider-vertical"></li>
+               <li class="active">
+                 <a href="test.html">Active</a>
+               </li>
+               <li class="dropdown">
+                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Dd-Tog Active <b class="caret"></b></a>
+                 <ul class="dropdown-menu">
+                   <li><a href="test.html">Default</a></li>
+                   <li class="divider"></li>
+                   <li><a href="test.html">Cerulean</a></li>
+                   <li><a href="test.html">Cyborg</a></li>
+                   <li><a href="test.html"><label>Label</label> <input type="text" placeholder="Input"></a></li>
+                   <li><a href="test.html">Simplex</a></li>
+                   <li><a href="test.html">Spacelab</a></li>
+                   <li><a href="test.html">United</a></li>
+                 </ul>
+               </li>
+               <li class="">
+                 <a data-toggle="modal" href="#myModal" ><i class="icon-plus"></i> Launch Modal</a>
+               </li>
+               <li class="navbar-text">
+                  Just Text
+               </li>
+             </ul>
+             <form class="navbar-search pull-right" action="/search" method="get">
+               <input type="text" class="search-query" placeholder="Search..." id="search" name="q" value="">
+             </form>
+             <a class="btn btn-primary">Button</a>
+           </div>
+         </div>
+       </div>
+     </div>
+
+
+<!-- Subhead
+================================================== -->
+<div class="container" id="overview">
+  <div class="hero-unit">
+    <h1>Components</h1>
+    <p class="lead">Dozens of reusable components built to provide navigation, alerts, popovers, and more.</p>
+  </div>
+</div>
+
+
+  <div class="container">
+
+    <!-- Docs nav
+    ================================================== -->
+    <div class="row">
+<!--       <div class="span3 bs-docs-sidebar">
+        <ul class="nav nav-list bs-docs-sidenav">
+          <li><a href="#dropdowns"><i class="icon-chevron-right"></i> Dropdowns</a></li>
+          <li><a href="#buttonGroups"><i class="icon-chevron-right"></i> Button groups</a></li>
+          <li><a href="#buttonDropdowns"><i class="icon-chevron-right"></i> Button dropdowns</a></li>
+          <li><a href="#navs"><i class="icon-chevron-right"></i> Navs</a></li>
+          <li><a href="#navbar"><i class="icon-chevron-right"></i> Navbar</a></li>
+          <li><a href="#breadcrumbs"><i class="icon-chevron-right"></i> Breadcrumbs</a></li>
+          <li><a href="#pagination"><i class="icon-chevron-right"></i> Pagination</a></li>
+          <li><a href="#labels-badges"><i class="icon-chevron-right"></i> Labels and badges</a></li>
+          <li><a href="#typography"><i class="icon-chevron-right"></i> Typography</a></li>
+          <li><a href="#thumbnails"><i class="icon-chevron-right"></i> Thumbnails</a></li>
+          <li><a href="#alerts"><i class="icon-chevron-right"></i> Alerts</a></li>
+          <li><a href="#progress"><i class="icon-chevron-right"></i> Progress bars</a></li>
+          <li><a href="#misc"><i class="icon-chevron-right"></i> Misc</a></li>
+        </ul>
+      </div> -->
+      <div class="span12">
+
+          <!-- Typography
+          ================================================== -->
+          <section id="typography">
+            <div class="page-header">
+              <h1>Typography</h1>
+            </div>
+
+            <div class="bs-docs-example">
+              <h1>h1. Heading 1</h1>
+              <h2>h2. Heading 2</h2>
+              <h3>h3. Heading 3</h3>
+              <h4>h4. Heading 4</h4>
+              <h5>h5. Heading 5</h5>
+              <h6>h6. Heading 6</h6>
+            </div>
+
+            <div class="bs-docs-example">
+              <p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
+
+              <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+              <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
+              <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+            </div>
+
+            <div class="bs-docs-example">
+              <p><small>This line of text is meant to be treated as fine print.</small></p>
+            </div>
+
+            <div class="bs-docs-example">
+              <p>The following snippet of text is <strong>rendered as bold text</strong>.</p>
+            </div>
+
+            <div class="bs-docs-example">
+              <p>The following snippet of text is <em>rendered as italicized text</em>.</p>
+            </div>
+
+            <div class="bs-docs-example">
+              <p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>.</p>
+            </div>
+
+            <div class="bs-docs-example">
+              <p><abbr title="HyperText Markup Language" class="initialism">HTML</abbr> is the best thing since sliced bread.</p>
+            </div>
+
+            <div class="bs-docs-example">
+              <address>
+                <strong>Twitter, Inc.</strong><br>
+                795 Folsom Ave, Suite 600<br>
+                San Francisco, CA 94107<br>
+                <abbr title="Phone">P:</abbr> (123) 456-7890
+              </address>
+              <address>
+                <strong>Full Name</strong><br>
+                <a href="mailto:#">first.last@gmail.com</a>
+              </address>
+            </div>
+
+            <div class="bs-docs-example">
+              <blockquote>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+              </blockquote>
+            </div>
+
+            <div class="bs-docs-example" style="overflow: hidden;">
+              <blockquote class="pull-right">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+              </blockquote>
+            </div>
+
+            <div class="bs-docs-example">
+              <ul>
+                <li>Lorem ipsum dolor sit amet</li>
+                <li>Consectetur adipiscing elit</li>
+                <li>Integer molestie lorem at massa</li>
+                <li>Facilisis in pretium nisl aliquet</li>
+                <li>Nulla volutpat aliquam velit
+                  <ul>
+                    <li>Phasellus iaculis neque</li>
+                    <li>Purus sodales ultricies</li>
+                    <li>Vestibulum laoreet porttitor sem</li>
+                    <li>Ac tristique libero volutpat at</li>
+                  </ul>
+                </li>
+                <li>Faucibus porta lacus fringilla vel</li>
+                <li>Aenean sit amet erat nunc</li>
+                <li>Eget porttitor lorem</li>
+              </ul>
+            </div>
+
+            <div class="bs-docs-example">
+              <ol>
+                <li>Lorem ipsum dolor sit amet</li>
+                <li>Consectetur adipiscing elit</li>
+                <li>Integer molestie lorem at massa</li>
+                <li>Facilisis in pretium nisl aliquet</li>
+                <li>Nulla volutpat aliquam velit</li>
+                <li>Faucibus porta lacus fringilla vel</li>
+                <li>Aenean sit amet erat nunc</li>
+                <li>Eget porttitor lorem</li>
+              </ol>
+            </div>
+
+          <div class="bs-docs-example">
+            <ul class="unstyled">
+              <li>Lorem ipsum dolor sit amet</li>
+              <li>Consectetur adipiscing elit</li>
+              <li>Integer molestie lorem at massa</li>
+              <li>Facilisis in pretium nisl aliquet</li>
+              <li>Nulla volutpat aliquam velit
+                <ul>
+                  <li>Phasellus iaculis neque</li>
+                  <li>Purus sodales ultricies</li>
+                  <li>Vestibulum laoreet porttitor sem</li>
+                  <li>Ac tristique libero volutpat at</li>
+                </ul>
+              </li>
+              <li>Faucibus porta lacus fringilla vel</li>
+              <li>Aenean sit amet erat nunc</li>
+              <li>Eget porttitor lorem</li>
+            </ul>
+          </div>
+
+          <div class="bs-docs-example">
+            <dl>
+              <dt>Description lists</dt>
+              <dd>A description list is perfect for defining terms.</dd>
+              <dt>Euismod</dt>
+              <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+              <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+              <dt>Malesuada porta</dt>
+              <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+            </dl>
+          </div>
+
+          <div class="bs-docs-example">
+            <dl class="dl-horizontal">
+              <dt>Description lists</dt>
+              <dd>A description list is perfect for defining terms.</dd>
+              <dt>Euismod</dt>
+              <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+              <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+              <dt>Malesuada porta</dt>
+              <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+              <dt>Felis euismod semper eget lacinia</dt>
+              <dd>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
+            </dl>
+          </div>
+
+        </section>
+
+
+
+          <!-- Code
+          ================================================== -->
+          <section id="code">
+            <div class="page-header">
+              <h1>Code</h1>
+            </div>
+
+            <div class="bs-docs-example">
+              For example, <code>&lt;section&gt;</code> should be wrapped as inline.
+            </div>
+
+            <div class="bs-docs-example">
+              <pre>&lt;p&gt;Sample text here...&lt;/p&gt;</pre>
+            </div>
+
+          </section>
+
+
+
+          <!-- Tables
+          ================================================== -->
+          <section id="tables">
+            <div class="page-header">
+              <h1>Tables</h1>
+            </div>
+
+            <div class="bs-docs-example">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Username</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="bs-docs-example">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Username</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="bs-docs-example">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Username</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td rowspan="2">1</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@TwBootstrap</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="bs-docs-example">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Username</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="bs-docs-example">
+              <table class="table table-condensed">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Username</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="bs-docs-example">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Product</th>
+                    <th>Payment Taken</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="success">
+                    <td>1</td>
+                    <td>TB - Monthly</td>
+                    <td>01/04/2012</td>
+                    <td>Approved</td>
+                  </tr>
+                  <tr class="error">
+                    <td>2</td>
+                    <td>TB - Monthly</td>
+                    <td>02/04/2012</td>
+                    <td>Declined</td>
+                  </tr>
+                  <tr class="info">
+                    <td>3</td>
+                    <td>TB - Monthly</td>
+                    <td>03/04/2012</td>
+                    <td>Pending</td>
+                  </tr>
+                  <tr class="warning">
+                    <td>3</td>
+                    <td>TB - Monthly</td>
+                    <td>03/04/2012</td>
+                    <td>Pending</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </section>
+
+
+
+          <!-- Forms
+          ================================================== -->
+          <section id="forms">
+            <div class="page-header">
+              <h1>Forms</h1>
+            </div>
+
+            <form class="bs-docs-example">
+              <legend>Legend</legend>
+              <label>Label name</label>
+              <input type="text" placeholder="Type something…">
+              <span class="help-block">Example block-level help text here.</span>
+              <label class="checkbox">
+                <input type="checkbox"> Check me out
+              </label>
+              <button type="submit" class="btn">Submit</button>
+            </form>
+
+            <form class="bs-docs-example form-search">
+              <input type="text" class="input-medium search-query">
+              <button type="submit" class="btn">Search</button>
+            </form>
+
+            <form class="bs-docs-example form-inline">
+              <input type="text" class="input-small" placeholder="Email">
+              <input type="password" class="input-small" placeholder="Password">
+              <label class="checkbox">
+                <input type="checkbox"> Remember me
+              </label>
+              <button type="submit" class="btn">Sign in</button>
+            </form>
+
+            <form class="bs-docs-example form-horizontal">
+              <legend>Legend</legend>
+              <div class="control-group">
+                <label class="control-label" for="inputEmail">Email</label>
+                <div class="controls">
+                  <input type="text" id="inputEmail" placeholder="Email">
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="inputPassword">Password</label>
+                <div class="controls">
+                  <input type="password" id="inputPassword" placeholder="Password">
+                </div>
+              </div>
+              <div class="control-group">
+                <div class="controls">
+                  <label class="checkbox">
+                    <input type="checkbox"> Remember me
+                  </label>
+                  <button type="submit" class="btn">Sign in</button>
+                </div>
+              </div>
+            </form>
+
+            <form class="bs-docs-example form-inline">
+              <input type="text" placeholder="Text input">
+            </form>
+
+            <form class="bs-docs-example form-inline">
+              <textarea rows="3"></textarea>
+            </form>
+
+            <form class="bs-docs-example">
+              <label class="checkbox">
+                <input type="checkbox" value="">
+                Option one is this and that&mdash;be sure to include why it's great
+              </label>
+              <br>
+              <label class="radio">
+                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                Option one is this and that&mdash;be sure to include why it's great
+              </label>
+              <label class="radio">
+                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                Option two can be something else and selecting it will deselect option one
+              </label>
+            </form>
+
+            <form class="bs-docs-example">
+              <label class="checkbox inline">
+                <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+              </label>
+              <label class="checkbox inline">
+                <input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+              </label>
+              <label class="checkbox inline">
+                <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+              </label>
+            </form>
+
+            <form class="bs-docs-example">
+              <select>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+              <br>
+              <select multiple="multiple">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </form>
+
+            <form class="bs-docs-example">
+              <div class="input-prepend">
+                <span class="add-on">@</span>
+                <input class="span2" id="prependedInput" size="16" type="text" placeholder="Username">
+              </div>
+              <br>
+              <div class="input-append">
+                <input class="span2" id="appendedInput" size="16" type="text">
+                <span class="add-on">.00</span>
+              </div>
+            </form>
+
+            <form class="bs-docs-example form-inline">
+              <div class="input-prepend input-append">
+                <span class="add-on">$</span>
+                <input class="span2" id="appendedPrependedInput" size="16" type="text">
+                <span class="add-on">.00</span>
+              </div>
+            </form>
+
+            <form class="bs-docs-example">
+              <div class="input-append">
+                <input class="span2" id="appendedInputButton" size="16" type="text">
+                <button class="btn" type="button">Go!</button>
+              </div>
+              <br>
+              <div class="input-append">
+                <input class="span2" id="appendedInputButtons" size="16" type="text">
+                <button class="btn" type="button">Search</button>
+                <button class="btn" type="button">Options</button>
+              </div>
+            </form>
+
+            <form class="bs-docs-example form-search">
+              <div class="input-append">
+                <input type="text" class="span2 search-query">
+                <button type="submit" class="btn">Search</button>
+              </div>
+              <div class="input-prepend">
+                <button type="submit" class="btn">Search</button>
+                <input type="text" class="span2 search-query">
+              </div>
+            </form>
+
+            <form class="bs-docs-example" style="padding-bottom: 15px;">
+              <div class="controls docs-input-sizes">
+                <input class="input-mini" type="text" placeholder=".input-mini">
+                <input class="input-small" type="text" placeholder=".input-small">
+                <input class="input-medium" type="text" placeholder=".input-medium">
+                <input class="input-large" type="text" placeholder=".input-large">
+                <input class="input-xlarge" type="text" placeholder=".input-xlarge">
+                <input class="input-xxlarge" type="text" placeholder=".input-xxlarge">
+              </div>
+            </form>
+
+            <form class="bs-docs-example" style="padding-bottom: 15px;">
+              <div class="controls docs-input-sizes">
+                <input class="span1" type="text" placeholder=".span1">
+                <input class="span2" type="text" placeholder=".span2">
+                <input class="span3" type="text" placeholder=".span3">
+                <select class="span1">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+                <select class="span2">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+                <select class="span3">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+              </div>
+            </form>
+
+            <form class="bs-docs-example" style="padding-bottom: 15px;">
+              <div class="controls">
+                <input class="span5" type="text" placeholder=".span5">
+              </div>
+              <div class="controls controls-row">
+                <input class="span4" type="text" placeholder=".span4">
+                <input class="span1" type="text" placeholder=".span1">
+              </div>
+              <div class="controls controls-row">
+                <input class="span3" type="text" placeholder=".span3">
+                <input class="span2" type="text" placeholder=".span2">
+              </div>
+              <div class="controls controls-row">
+                <input class="span2" type="text" placeholder=".span2">
+                <input class="span3" type="text" placeholder=".span3">
+              </div>
+              <div class="controls controls-row">
+                <input class="span1" type="text" placeholder=".span1">
+                <input class="span4" type="text" placeholder=".span4">
+              </div>
+            </form>
+
+            <form class="bs-docs-example">
+              <span class="input-xlarge uneditable-input">Some value here</span>
+            </form>
+
+            <form class="bs-docs-example">
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn">Cancel</button>
+              </div>
+            </form>
+
+            <form class="bs-docs-example form-inline">
+              <input type="text"> <span class="help-inline">Inline help text</span>
+            </form>
+
+            <form class="bs-docs-example form-inline">
+              <input type="text">
+              <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
+            </form>
+
+            <form class="bs-docs-example form-inline">
+              <input class="input-xlarge focused" id="focusedInput" type="text" value="This is focused...">
+            </form>
+
+            <form class="bs-docs-example form-inline">
+              <input class="input-xlarge" id="disabledInput" type="text" placeholder="Disabled input here…" disabled>
+            </form>
+
+            <form class="bs-docs-example form-horizontal">
+              <div class="control-group warning">
+                <label class="control-label" for="inputWarning">Input with warning</label>
+                <div class="controls">
+                  <input type="text" id="inputWarning">
+                  <span class="help-inline">Something may have gone wrong</span>
+                </div>
+              </div>
+              <div class="control-group error">
+                <label class="control-label" for="inputError">Input with error</label>
+                <div class="controls">
+                  <input type="text" id="inputError">
+                  <span class="help-inline">Please correct the error</span>
+                </div>
+              </div>
+              <div class="control-group info">
+                <label class="control-label" for="inputError">Input with info</label>
+                <div class="controls">
+                  <input type="text" id="inputError">
+                  <span class="help-inline">Please correct the info</span>
+                </div>
+              </div>
+              <div class="control-group success">
+                <label class="control-label" for="inputSuccess">Input with success</label>
+                <div class="controls">
+                  <input type="text" id="inputSuccess">
+                  <span class="help-inline">Woohoo!</span>
+                </div>
+              </div>
+            </form>
+
+          </section>
+
+
+
+          <!-- Buttons
+          ================================================== -->
+          <section id="buttons">
+            <div class="page-header">
+              <h1>Buttons</h1>
+            </div>
+
+            <table class="table table-bordered table-striped">
+              <thead>
+                <tr>
+                  <th>Button</th>
+                  <th>class=""</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><button type="button" class="btn">Default</button></td>
+                  <td><code>btn</code></td>
+                  <td>Standard gray button with gradient</td>
+                </tr>
+                <tr>
+                  <td><button type="button" class="btn btn-primary">Primary</button></td>
+                  <td><code>btn btn-primary</code></td>
+                  <td>Provides extra visual weight and identifies the primary action in a set of buttons</td>
+                </tr>
+                <tr>
+                  <td><button type="button" class="btn btn-info">Info</button></td>
+                  <td><code>btn btn-info</code></td>
+                  <td>Used as an alternative to the default styles</td>
+                </tr>
+                <tr>
+                  <td><button type="button" class="btn btn-success">Success</button></td>
+                  <td><code>btn btn-success</code></td>
+                  <td>Indicates a successful or positive action</td>
+                </tr>
+                <tr>
+                  <td><button type="button" class="btn btn-warning">Warning</button></td>
+                  <td><code>btn btn-warning</code></td>
+                  <td>Indicates caution should be taken with this action</td>
+                </tr>
+                <tr>
+                  <td><button type="button" class="btn btn-danger">Danger</button></td>
+                  <td><code>btn btn-danger</code></td>
+                  <td>Indicates a dangerous or potentially negative action</td>
+                </tr>
+                <tr>
+                  <td><button type="button" class="btn btn-inverse">Inverse</button></td>
+                  <td><code>btn btn-inverse</code></td>
+                  <td>Alternate dark gray button, not tied to a semantic action or use</td>
+                </tr>
+                <tr>
+                  <td><button type="button" class="btn btn-link">Link</button></td>
+                  <td><code>btn btn-link</code></td>
+                  <td>Deemphasize a button by making it look like a link while maintaining button behavior</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="bs-docs-example">
+              <p>
+                <button type="button" class="btn btn-large btn-primary">Large button</button>
+                <button type="button" class="btn btn-large">Large button</button>
+              </p>
+              <p>
+                <button type="button" class="btn btn-primary">Default button</button>
+                <button type="button" class="btn">Default button</button>
+              </p>
+              <p>
+                <button type="button" class="btn btn-small btn-primary">Small button</button>
+                <button type="button" class="btn btn-small">Small button</button>
+              </p>
+              <p>
+                <button type="button" class="btn btn-mini btn-primary">Mini button</button>
+                <button type="button" class="btn btn-mini">Mini button</button>
+              </p>
+            </div>
+
+            <div class="bs-docs-example">
+              <div class="well" style="max-width: 400px; margin: 0 auto 10px;">
+                <button type="button" class="btn btn-large btn-block btn-primary">Block level button</button>
+                <button type="button" class="btn btn-large btn-block">Block level button</button>
+              </div>
+            </div>
+
+            <p class="bs-docs-example">
+              <a href="#" class="btn btn-large btn-primary disabled">Primary link</a>
+              <a href="#" class="btn btn-large disabled">Link</a>
+            </p>
+
+            <p class="bs-docs-example">
+              <button type="button" class="btn btn-large btn-primary disabled" disabled="disabled">Primary button</button>
+              <button type="button" class="btn btn-large" disabled>Button</button>
+            </p>
+
+            <form class="bs-docs-example">
+              <a class="btn" href="">Link</a>
+              <button class="btn" type="submit">Button</button>
+              <input class="btn" type="button" value="Input">
+              <input class="btn" type="submit" value="Submit">
+            </form>
+
+          </section>
+
+
+
+          <!-- Images
+          ================================================== -->
+          <section id="images">
+            <div class="page-header">
+              <h1>Images</h1>
+            </div>
+
+            <div class="bs-docs-example bs-docs-example-images">
+              <img src="http://placehold.it/140x140" class="img-rounded">
+              <img src="http://placehold.it/140x140" class="img-circle">
+              <img src="http://placehold.it/140x140" class="img-polaroid">
+            </div>
+
+
+          </section>
+
+
+
+          <!-- Icons
+          ================================================== -->
+          <section id="icons">
+            <div class="page-header">
+              <h1>Icons <small>by <a href="http://glyphicons.com" target="_blank">Glyphicons</a></small></h1>
+            </div>
+
+            <ul class="the-icons clearfix">
+              <li><i class="icon-glass"></i> icon-glass</li>
+              <li><i class="icon-music"></i> icon-music</li>
+              <li><i class="icon-search"></i> icon-search</li>
+              <li><i class="icon-envelope"></i> icon-envelope</li>
+              <li><i class="icon-heart"></i> icon-heart</li>
+              <li><i class="icon-star"></i> icon-star</li>
+              <li><i class="icon-star-empty"></i> icon-star-empty</li>
+              <li><i class="icon-user"></i> icon-user</li>
+              <li><i class="icon-film"></i> icon-film</li>
+              <li><i class="icon-th-large"></i> icon-th-large</li>
+              <li><i class="icon-th"></i> icon-th</li>
+              <li><i class="icon-th-list"></i> icon-th-list</li>
+              <li><i class="icon-ok"></i> icon-ok</li>
+              <li><i class="icon-remove"></i> icon-remove</li>
+              <li><i class="icon-zoom-in"></i> icon-zoom-in</li>
+              <li><i class="icon-zoom-out"></i> icon-zoom-out</li>
+              <li><i class="icon-off"></i> icon-off</li>
+              <li><i class="icon-signal"></i> icon-signal</li>
+              <li><i class="icon-cog"></i> icon-cog</li>
+              <li><i class="icon-trash"></i> icon-trash</li>
+              <li><i class="icon-home"></i> icon-home</li>
+              <li><i class="icon-file"></i> icon-file</li>
+              <li><i class="icon-time"></i> icon-time</li>
+              <li><i class="icon-road"></i> icon-road</li>
+              <li><i class="icon-download-alt"></i> icon-download-alt</li>
+              <li><i class="icon-download"></i> icon-download</li>
+              <li><i class="icon-upload"></i> icon-upload</li>
+              <li><i class="icon-inbox"></i> icon-inbox</li>
+
+              <li><i class="icon-play-circle"></i> icon-play-circle</li>
+              <li><i class="icon-repeat"></i> icon-repeat</li>
+              <li><i class="icon-refresh"></i> icon-refresh</li>
+              <li><i class="icon-list-alt"></i> icon-list-alt</li>
+              <li><i class="icon-lock"></i> icon-lock</li>
+              <li><i class="icon-flag"></i> icon-flag</li>
+              <li><i class="icon-headphones"></i> icon-headphones</li>
+              <li><i class="icon-volume-off"></i> icon-volume-off</li>
+              <li><i class="icon-volume-down"></i> icon-volume-down</li>
+              <li><i class="icon-volume-up"></i> icon-volume-up</li>
+              <li><i class="icon-qrcode"></i> icon-qrcode</li>
+              <li><i class="icon-barcode"></i> icon-barcode</li>
+              <li><i class="icon-tag"></i> icon-tag</li>
+              <li><i class="icon-tags"></i> icon-tags</li>
+              <li><i class="icon-book"></i> icon-book</li>
+              <li><i class="icon-bookmark"></i> icon-bookmark</li>
+              <li><i class="icon-print"></i> icon-print</li>
+              <li><i class="icon-camera"></i> icon-camera</li>
+              <li><i class="icon-font"></i> icon-font</li>
+              <li><i class="icon-bold"></i> icon-bold</li>
+              <li><i class="icon-italic"></i> icon-italic</li>
+              <li><i class="icon-text-height"></i> icon-text-height</li>
+              <li><i class="icon-text-width"></i> icon-text-width</li>
+              <li><i class="icon-align-left"></i> icon-align-left</li>
+              <li><i class="icon-align-center"></i> icon-align-center</li>
+              <li><i class="icon-align-right"></i> icon-align-right</li>
+              <li><i class="icon-align-justify"></i> icon-align-justify</li>
+              <li><i class="icon-list"></i> icon-list</li>
+
+              <li><i class="icon-indent-left"></i> icon-indent-left</li>
+              <li><i class="icon-indent-right"></i> icon-indent-right</li>
+              <li><i class="icon-facetime-video"></i> icon-facetime-video</li>
+              <li><i class="icon-picture"></i> icon-picture</li>
+              <li><i class="icon-pencil"></i> icon-pencil</li>
+              <li><i class="icon-map-marker"></i> icon-map-marker</li>
+              <li><i class="icon-adjust"></i> icon-adjust</li>
+              <li><i class="icon-tint"></i> icon-tint</li>
+              <li><i class="icon-edit"></i> icon-edit</li>
+              <li><i class="icon-share"></i> icon-share</li>
+              <li><i class="icon-check"></i> icon-check</li>
+              <li><i class="icon-move"></i> icon-move</li>
+              <li><i class="icon-step-backward"></i> icon-step-backward</li>
+              <li><i class="icon-fast-backward"></i> icon-fast-backward</li>
+              <li><i class="icon-backward"></i> icon-backward</li>
+              <li><i class="icon-play"></i> icon-play</li>
+              <li><i class="icon-pause"></i> icon-pause</li>
+              <li><i class="icon-stop"></i> icon-stop</li>
+              <li><i class="icon-forward"></i> icon-forward</li>
+              <li><i class="icon-fast-forward"></i> icon-fast-forward</li>
+              <li><i class="icon-step-forward"></i> icon-step-forward</li>
+              <li><i class="icon-eject"></i> icon-eject</li>
+              <li><i class="icon-chevron-left"></i> icon-chevron-left</li>
+              <li><i class="icon-chevron-right"></i> icon-chevron-right</li>
+              <li><i class="icon-plus-sign"></i> icon-plus-sign</li>
+              <li><i class="icon-minus-sign"></i> icon-minus-sign</li>
+              <li><i class="icon-remove-sign"></i> icon-remove-sign</li>
+              <li><i class="icon-ok-sign"></i> icon-ok-sign</li>
+
+              <li><i class="icon-question-sign"></i> icon-question-sign</li>
+              <li><i class="icon-info-sign"></i> icon-info-sign</li>
+              <li><i class="icon-screenshot"></i> icon-screenshot</li>
+              <li><i class="icon-remove-circle"></i> icon-remove-circle</li>
+              <li><i class="icon-ok-circle"></i> icon-ok-circle</li>
+              <li><i class="icon-ban-circle"></i> icon-ban-circle</li>
+              <li><i class="icon-arrow-left"></i> icon-arrow-left</li>
+              <li><i class="icon-arrow-right"></i> icon-arrow-right</li>
+              <li><i class="icon-arrow-up"></i> icon-arrow-up</li>
+              <li><i class="icon-arrow-down"></i> icon-arrow-down</li>
+              <li><i class="icon-share-alt"></i> icon-share-alt</li>
+              <li><i class="icon-resize-full"></i> icon-resize-full</li>
+              <li><i class="icon-resize-small"></i> icon-resize-small</li>
+              <li><i class="icon-plus"></i> icon-plus</li>
+              <li><i class="icon-minus"></i> icon-minus</li>
+              <li><i class="icon-asterisk"></i> icon-asterisk</li>
+              <li><i class="icon-exclamation-sign"></i> icon-exclamation-sign</li>
+              <li><i class="icon-gift"></i> icon-gift</li>
+              <li><i class="icon-leaf"></i> icon-leaf</li>
+              <li><i class="icon-fire"></i> icon-fire</li>
+              <li><i class="icon-eye-open"></i> icon-eye-open</li>
+              <li><i class="icon-eye-close"></i> icon-eye-close</li>
+              <li><i class="icon-warning-sign"></i> icon-warning-sign</li>
+              <li><i class="icon-plane"></i> icon-plane</li>
+              <li><i class="icon-calendar"></i> icon-calendar</li>
+              <li><i class="icon-random"></i> icon-random</li>
+              <li><i class="icon-comment"></i> icon-comment</li>
+              <li><i class="icon-magnet"></i> icon-magnet</li>
+
+              <li><i class="icon-chevron-up"></i> icon-chevron-up</li>
+              <li><i class="icon-chevron-down"></i> icon-chevron-down</li>
+              <li><i class="icon-retweet"></i> icon-retweet</li>
+              <li><i class="icon-shopping-cart"></i> icon-shopping-cart</li>
+              <li><i class="icon-folder-close"></i> icon-folder-close</li>
+              <li><i class="icon-folder-open"></i> icon-folder-open</li>
+              <li><i class="icon-resize-vertical"></i> icon-resize-vertical</li>
+              <li><i class="icon-resize-horizontal"></i> icon-resize-horizontal</li>
+              <li><i class="icon-hdd"></i> icon-hdd</li>
+              <li><i class="icon-bullhorn"></i> icon-bullhorn</li>
+              <li><i class="icon-bell"></i> icon-bell</li>
+              <li><i class="icon-certificate"></i> icon-certificate</li>
+              <li><i class="icon-thumbs-up"></i> icon-thumbs-up</li>
+              <li><i class="icon-thumbs-down"></i> icon-thumbs-down</li>
+              <li><i class="icon-hand-right"></i> icon-hand-right</li>
+              <li><i class="icon-hand-left"></i> icon-hand-left</li>
+              <li><i class="icon-hand-up"></i> icon-hand-up</li>
+              <li><i class="icon-hand-down"></i> icon-hand-down</li>
+              <li><i class="icon-circle-arrow-right"></i> icon-circle-arrow-right</li>
+              <li><i class="icon-circle-arrow-left"></i> icon-circle-arrow-left</li>
+              <li><i class="icon-circle-arrow-up"></i> icon-circle-arrow-up</li>
+              <li><i class="icon-circle-arrow-down"></i> icon-circle-arrow-down</li>
+              <li><i class="icon-globe"></i> icon-globe</li>
+              <li><i class="icon-wrench"></i> icon-wrench</li>
+              <li><i class="icon-tasks"></i> icon-tasks</li>
+              <li><i class="icon-filter"></i> icon-filter</li>
+              <li><i class="icon-briefcase"></i> icon-briefcase</li>
+              <li><i class="icon-fullscreen"></i> icon-fullscreen</li>
+            </ul>
+
+            <div class="bs-docs-example">
+              <div class="btn-toolbar">
+                <div class="btn-group">
+                  <a class="btn" href="#"><i class="icon-align-left"></i></a>
+                  <a class="btn" href="#"><i class="icon-align-center"></i></a>
+                  <a class="btn" href="#"><i class="icon-align-right"></i></a>
+                  <a class="btn" href="#"><i class="icon-align-justify"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="bs-docs-example">
+              <div class="btn-group">
+                <a class="btn btn-primary" href="#"><i class="icon-user icon-white"></i> User</a>
+                <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#"><i class="icon-pencil"></i> Edit</a></li>
+                  <li><a href="#"><i class="icon-trash"></i> Delete</a></li>
+                  <li><a href="#"><i class="icon-ban-circle"></i> Ban</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#"><i class="i"></i> Make admin</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="bs-docs-example">
+              <a class="btn btn-small" href="#"><i class="icon-star"></i></a>
+            </div>
+
+            <div class="bs-docs-example">
+              <div class="well" style="padding: 8px 0; margin-bottom: 0;">
+                <ul class="nav nav-list">
+                  <li class="active"><a href="#"><i class="icon-home icon-white"></i> Home</a></li>
+                  <li><a href="#"><i class="icon-book"></i> Library</a></li>
+                  <li><a href="#"><i class="icon-pencil"></i> Applications</a></li>
+                  <li><a href="#"><i class="i"></i> Misc</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <form class="bs-docs-example form-horizontal">
+              <div class="control-group">
+                <label class="control-label" for="inputIcon">Email address</label>
+                <div class="controls">
+                  <div class="input-prepend">
+                    <span class="add-on"><i class="icon-envelope"></i></span><input class="span2" id="inputIcon" type="text">
+                  </div>
+                </div>
+              </div>
+            </form>
+
+          </section>
+
+        <!-- Dropdowns
+        ================================================== -->
+        <section id="dropdowns">
+          <div class="page-header">
+            <h1>Dropdown menus</h1>
+          </div>
+
+          <div class="bs-docs-example">
+            <div class="dropdown clearfix">
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static; margin-bottom: 5px; *width: 180px;">
+                <li><a tabindex="-1" href="#">Action</a></li>
+                <li><a tabindex="-1" href="#">Another action</a></li>
+                <li><a tabindex="-1" href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a tabindex="-1" href="#">Separated link</a></li>
+              </ul>
+            </div>
+
+            <div class="dropdown clearfix">
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static; margin-bottom: 5px; *width: 180px;">
+                <li><a tabindex="-1" href="#">Action</a></li>
+                <li><a tabindex="-1" href="#">Another action</a></li>
+                <li><a tabindex="-1" href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-submenu">
+                  <a tabindex="-1" href="#">More options</a>
+                  <ul class="dropdown-menu">
+                    <li><a tabindex="-1" href="#">Second level link</a></li>
+                    <li><a tabindex="-1" href="#">Second level link</a></li>
+                    <li><a tabindex="-1" href="#">Second level link</a></li>
+                    <li><a tabindex="-1" href="#">Second level link</a></li>
+                    <li><a tabindex="-1" href="#">Second level link</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </section>
+
+
+
+
+        <!-- Button Groups
+        ================================================== -->
+        <section id="buttonGroups">
+          <div class="page-header">
+            <h1>Button groups</h1>
+          </div>
+
+          <div class="bs-docs-example">
+            <div class="btn-group" style="margin: 9px 0 5px;">
+              <button class="btn">Left</button>
+              <button class="btn">Middle</button>
+              <button class="btn">Right</button>
+            </div>
+
+            <div class="btn-toolbar" style="margin: 0;">
+              <div class="btn-group">
+                <button class="btn">1</button>
+                <button class="btn">2</button>
+                <button class="btn">3</button>
+                <button class="btn">4</button>
+              </div>
+              <div class="btn-group">
+                <button class="btn">5</button>
+                <button class="btn">6</button>
+                <button class="btn">7</button>
+              </div>
+              <div class="btn-group">
+                <button class="btn">8</button>
+              </div>
+            </div>
+
+            <div class="btn-group btn-group-vertical">
+              <button type="button" class="btn"><i class="icon-align-left"></i></button>
+              <button type="button" class="btn"><i class="icon-align-center"></i></button>
+              <button type="button" class="btn"><i class="icon-align-right"></i></button>
+              <button type="button" class="btn"><i class="icon-align-justify"></i></button>
+            </div>
+          </div>
+
+
+          <hr class="bs-docs-separator">
+
+        </section>
+
+
+
+        <!-- Split button dropdowns
+        ================================================== -->
+        <section id="buttonDropdowns">
+          <div class="page-header">
+            <h1>Button dropdown menus</h1>
+          </div>
+
+
+          <div class="bs-docs-example">
+            <div class="btn-toolbar" style="margin: 0;">
+              <div class="btn-group">
+                <button class="btn dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <div class="btn-group">
+                <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <div class="btn-group">
+                <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown">Danger <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <div class="btn-group">
+                <button class="btn btn-warning dropdown-toggle" data-toggle="dropdown">Warning <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <div class="btn-group">
+                <button class="btn btn-success dropdown-toggle" data-toggle="dropdown">Success <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <div class="btn-group">
+                <button class="btn btn-info dropdown-toggle" data-toggle="dropdown">Info <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <div class="btn-group">
+                <button class="btn btn-inverse dropdown-toggle" data-toggle="dropdown">Inverse <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+            </div><!-- /btn-toolbar -->
+
+            <div class="btn-toolbar" style="margin: 0;">
+              <div class="btn-group">
+                <button class="btn btn-large dropdown-toggle" data-toggle="dropdown">Large button <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <div class="btn-group">
+                <button class="btn btn-small dropdown-toggle" data-toggle="dropdown">Small button <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <div class="btn-group">
+                <button class="btn btn-mini dropdown-toggle" data-toggle="dropdown">Mini button <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+            </div><!-- /btn-toolbar -->
+
+            <div class="btn-toolbar" style="margin: 0;">
+              <div class="btn-group">
+                <button class="btn">Action</button>
+                <button class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <div class="btn-group">
+                <button class="btn btn-primary">Action</button>
+                <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <div class="btn-group">
+                <button class="btn btn-danger">Danger</button>
+                <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <div class="btn-group">
+                <button class="btn btn-warning">Warning</button>
+                <button class="btn btn-warning dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <div class="btn-group">
+                <button class="btn btn-success">Success</button>
+                <button class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <div class="btn-group">
+                <button class="btn btn-info">Info</button>
+                <button class="btn btn-info dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <div class="btn-group">
+                <button class="btn btn-inverse">Inverse</button>
+                <button class="btn btn-inverse dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+            </div><!-- /btn-toolbar -->
+
+            <div class="btn-toolbar">
+              <div class="btn-group">
+                <button class="btn btn-large">Large action</button>
+                <button class="btn btn-large dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+            </div><!-- /btn-toolbar -->
+            <div class="btn-toolbar">
+              <div class="btn-group">
+                <button class="btn btn-small">Small action</button>
+                <button class="btn btn-small dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+            </div><!-- /btn-toolbar -->
+            <div class="btn-toolbar">
+              <div class="btn-group">
+                <button class="btn btn-mini">Mini action</button>
+                <button class="btn btn-mini dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+            </div><!-- /btn-toolbar -->
+
+            <div class="btn-toolbar" style="margin: 0;">
+              <div class="btn-group dropup">
+                <button class="btn">Dropup</button>
+                <button class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <div class="btn-group dropup">
+                <button class="btn primary">Right dropup</button>
+                <button class="btn primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu pull-right">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+            </div>
+          </div>
+
+        </section>
+
+
+
+        <!-- Nav, Tabs, & Pills
+        ================================================== -->
+        <section id="navs">
+          <div class="page-header">
+            <h1>Nav: tabs, pills, and lists</small></h1>
+          </div>
+
+          <div class="bs-docs-example">
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">Profile</a></li>
+              <li><a href="#">Messages</a></li>
+            </ul>
+          </div>
+
+          <div class="bs-docs-example">
+            <ul class="nav nav-pills">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">Profile</a></li>
+              <li><a href="#">Messages</a></li>
+            </ul>
+          </div>
+
+          <div class="bs-docs-example">
+            <ul class="nav nav-pills">
+              <li><a href="#">Clickable link</a></li>
+              <li><a href="#">Clickable link</a></li>
+              <li class="disabled"><a href="#">Disabled link</a></li>
+            </ul>
+          </div>
+
+          <div class="bs-docs-example">
+            <ul class="nav nav-tabs nav-stacked">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">Profile</a></li>
+              <li><a href="#">Messages</a></li>
+            </ul>
+          </div>
+
+          <div class="bs-docs-example">
+            <ul class="nav nav-pills nav-stacked">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">Profile</a></li>
+              <li><a href="#">Messages</a></li>
+            </ul>
+          </div>
+
+          <div class="bs-docs-example">
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">Help</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bs-docs-example">
+            <ul class="nav nav-pills">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">Help</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bs-docs-example">
+            <div class="well" style="max-width: 340px; padding: 8px 0;">
+              <ul class="nav nav-list">
+                <li class="nav-header">List header</li>
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Library</a></li>
+                <li><a href="#">Applications</a></li>
+                <li class="nav-header">Another list header</li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Settings</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Help</a></li>
+              </ul>
+            </div> <!-- /well -->
+          </div>
+
+          <div class="bs-docs-example">
+            <div class="tabbable" style="margin-bottom: 18px;">
+              <ul class="nav nav-tabs">
+                <li class="active"><a href="#tab1" data-toggle="tab">Section 1</a></li>
+                <li><a href="#tab2" data-toggle="tab">Section 2</a></li>
+                <li><a href="#tab3" data-toggle="tab">Section 3</a></li>
+              </ul>
+              <div class="tab-content" style="padding-bottom: 9px; border-bottom: 1px solid #ddd;">
+                <div class="tab-pane active" id="tab1">
+                  <p>I'm in Section 1.</p>
+                </div>
+                <div class="tab-pane" id="tab2">
+                  <p>Howdy, I'm in Section 2.</p>
+                </div>
+                <div class="tab-pane" id="tab3">
+                  <p>What up girl, this is Section 3.</p>
+                </div>
+              </div>
+            </div> <!-- /tabbable -->
+          </div>
+
+          <div class="bs-docs-example">
+            <div class="tabbable tabs-below">
+              <div class="tab-content">
+                <div class="tab-pane active" id="A">
+                  <p>I'm in Section A.</p>
+                </div>
+                <div class="tab-pane" id="B">
+                  <p>Howdy, I'm in Section B.</p>
+                </div>
+                <div class="tab-pane" id="C">
+                  <p>What up girl, this is Section C.</p>
+                </div>
+              </div>
+              <ul class="nav nav-tabs">
+                <li class="active"><a href="#A" data-toggle="tab">Section 1</a></li>
+                <li><a href="#B" data-toggle="tab">Section 2</a></li>
+                <li><a href="#C" data-toggle="tab">Section 3</a></li>
+              </ul>
+            </div> <!-- /tabbable -->
+          </div>
+
+          <div class="bs-docs-example">
+            <div class="tabbable tabs-left">
+              <ul class="nav nav-tabs">
+                <li class="active"><a href="#lA" data-toggle="tab">Section 1</a></li>
+                <li><a href="#lB" data-toggle="tab">Section 2</a></li>
+                <li><a href="#lC" data-toggle="tab">Section 3</a></li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-pane active" id="lA">
+                  <p>I'm in Section A.</p>
+                </div>
+                <div class="tab-pane" id="lB">
+                  <p>Howdy, I'm in Section B.</p>
+                </div>
+                <div class="tab-pane" id="lC">
+                  <p>What up girl, this is Section C.</p>
+                </div>
+              </div>
+            </div> <!-- /tabbable -->
+          </div>
+
+          <div class="bs-docs-example">
+            <div class="tabbable tabs-right">
+              <ul class="nav nav-tabs">
+                <li class="active"><a href="#rA" data-toggle="tab">Section 1</a></li>
+                <li><a href="#rB" data-toggle="tab">Section 2</a></li>
+                <li><a href="#rC" data-toggle="tab">Section 3</a></li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-pane active" id="rA">
+                  <p>I'm in Section A.</p>
+                </div>
+                <div class="tab-pane" id="rB">
+                  <p>Howdy, I'm in Section B.</p>
+                </div>
+                <div class="tab-pane" id="rC">
+                  <p>What up girl, this is Section C.</p>
+                </div>
+              </div>
+            </div> <!-- /tabbable -->
+          </div>
+
+        </section>
+
+
+
+        <!-- Navbar
+        ================================================== -->
+        <section id="navbar">
+          <div class="page-header">
+            <h1>Navbar</h1>
+          </div>
+
+
+          <div class="bs-docs-example">
+            <div class="navbar">
+              <div class="navbar-inner">
+                <a class="brand" href="#">Title</a>
+                <ul class="nav">
+                  <li class="active"><a href="#">Home</a></li>
+                  <li><a href="#">Link</a></li>
+                  <li><a href="#">Link</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="navbar">
+              <div class="navbar-inner">
+                <ul class="nav">
+                  <li class="active"><a href="#">Home</a></li>
+                  <li class="divider-vertical"></li>
+                  <li><a href="#">Link</a></li>
+                  <li class="divider-vertical"></li>
+                  <li><a href="#">Link</a></li>
+                  <li class="divider-vertical"></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="navbar">
+              <div class="navbar-inner">
+                <form class="navbar-form pull-left">
+                  <input type="text" class="span2">
+                  <button type="submit" class="btn">Submit</button>
+                </form>
+              </div>
+            </div>
+
+            <div class="navbar">
+              <div class="navbar-inner">
+                <form class="navbar-search pull-left">
+                  <input type="text" class="search-query" placeholder="Search">
+                </form>
+              </div>
+            </div>
+
+            <div class="navbar">
+              <div class="navbar-inner">
+                <div class="container">
+                  <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </a>
+                  <a class="brand" href="#">Title</a>
+                  <div class="nav-collapse">
+                    <ul class="nav">
+                      <li class="active"><a href="#">Home</a></li>
+                      <li><a href="#">Link</a></li>
+                      <li><a href="#">Link</a></li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">Action</a></li>
+                          <li><a href="#">Another action</a></li>
+                          <li><a href="#">Something else here</a></li>
+                          <li class="divider"></li>
+                          <li class="nav-header">Nav header</li>
+                          <li><a href="#">Separated link</a></li>
+                          <li><a href="#">One more separated link</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <form class="navbar-search pull-left" action="">
+                      <input type="text" class="search-query span2" placeholder="Search">
+                    </form>
+                    <ul class="nav pull-right">
+                      <li><a href="#">Link</a></li>
+                      <li class="divider-vertical"></li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">Action</a></li>
+                          <li><a href="#">Another action</a></li>
+                          <li><a href="#">Something else here</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#">Separated link</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div><!-- /.nav-collapse -->
+                </div>
+              </div><!-- /navbar-inner -->
+            </div><!-- /navbar -->
+
+            <div class="navbar navbar-inverse" style="position: static;">
+              <div class="navbar-inner">
+                <div class="container">
+                  <a class="btn btn-navbar" data-toggle="collapse" data-target=".subnav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </a>
+                  <a class="brand" href="#">Title</a>
+                  <div class="nav-collapse subnav-collapse">
+                    <ul class="nav">
+                      <li class="active"><a href="#">Home</a></li>
+                      <li><a href="#">Link</a></li>
+                      <li><a href="#">Link</a></li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">Action</a></li>
+                          <li><a href="#">Another action</a></li>
+                          <li><a href="#">Something else here</a></li>
+                          <li class="divider"></li>
+                          <li class="nav-header">Nav header</li>
+                          <li><a href="#">Separated link</a></li>
+                          <li><a href="#">One more separated link</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <form class="navbar-search pull-left" action="">
+                      <input type="text" class="search-query span2" placeholder="Search">
+                    </form>
+                    <ul class="nav pull-right">
+                      <li><a href="#">Link</a></li>
+                      <li class="divider-vertical"></li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">Action</a></li>
+                          <li><a href="#">Another action</a></li>
+                          <li><a href="#">Something else here</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#">Separated link</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div><!-- /.nav-collapse -->
+                </div>
+              </div><!-- /navbar-inner -->
+            </div><!-- /navbar -->
+          </div>
+
+        </section>
+
+
+
+        <!-- Breadcrumbs
+        ================================================== -->
+        <section id="breadcrumbs">
+          <div class="page-header">
+            <h1>Breadcrumbs <small></small></h1>
+          </div>
+
+          <div class="bs-docs-example">
+            <ul class="breadcrumb">
+              <li class="active">Home</li>
+            </ul>
+            <ul class="breadcrumb">
+              <li><a href="#">Home</a> <span class="divider">/</span></li>
+              <li class="active">Library</li>
+            </ul>
+            <ul class="breadcrumb" style="margin-bottom: 5px;">
+              <li><a href="#">Home</a> <span class="divider">/</span></li>
+              <li><a href="#">Library</a> <span class="divider">/</span></li>
+              <li class="active">Data</li>
+            </ul>
+          </div>
+
+        </section>
+
+
+
+        <!-- Pagination
+        ================================================== -->
+        <section id="pagination">
+          <div class="page-header">
+            <h1>Pagination</h1>
+          </div>
+
+          <div class="bs-docs-example">
+            <div class="pagination">
+              <ul>
+                <li><a href="#">&laquo;</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">&raquo;</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="bs-docs-example">
+            <div class="pagination pagination-centered">
+              <ul>
+                <li class="disabled"><a href="#">&laquo;</a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">&raquo;</a></li>
+             </ul>
+            </div>
+          </div>
+
+          <div class="bs-docs-example">
+            <div class="pagination pagination-centered">
+              <ul>
+                <li><a href="#">&laquo;</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">&raquo;</a></li>
+             </ul>
+            </div>
+          </div>
+
+          <div class="bs-docs-example">
+            <div class="pagination pagination-right">
+              <ul>
+                <li><a href="#">&laquo;</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">&raquo;</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="bs-docs-example">
+            <ul class="pager">
+              <li><a href="#">Previous</a></li>
+              <li><a href="#">Next</a></li>
+            </ul>
+          </div>
+
+          <div class="bs-docs-example">
+            <ul class="pager">
+              <li class="previous"><a href="#">&larr; Older</a></li>
+              <li class="next"><a href="#">Newer &rarr;</a></li>
+            </ul>
+          </div>
+
+          <div class="bs-docs-example">
+            <ul class="pager">
+              <li class="previous disabled"><a href="#">&larr; Older</a></li>
+              <li class="next"><a href="#">Newer &rarr;</a></li>
+            </ul>
+          </div>
+
+        </section>
+
+
+
+        <!-- Labels and badges
+        ================================================== -->
+        <section id="labels-badges">
+          <div class="page-header">
+            <h1>Labels and badges</h1>
+          </div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>Labels</th>
+                <th>Markup</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <span class="label">Default</span>
+                </td>
+                <td>
+                  <code>&lt;span class="label"&gt;Default&lt;/span&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="label label-success">Success</span>
+                </td>
+                <td>
+                  <code>&lt;span class="label label-success"&gt;Success&lt;/span&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="label label-warning">Warning</span>
+                </td>
+                <td>
+                  <code>&lt;span class="label label-warning"&gt;Warning&lt;/span&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="label label-important">Important</span>
+                </td>
+                <td>
+                  <code>&lt;span class="label label-important"&gt;Important&lt;/span&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="label label-info">Info</span>
+                </td>
+                <td>
+                  <code>&lt;span class="label label-info"&gt;Info&lt;/span&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="label label-inverse">Inverse</span>
+                </td>
+                <td>
+                  <code>&lt;span class="label label-inverse"&gt;Inverse&lt;/span&gt;</code>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Example</th>
+                <th>Markup</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  Default
+                </td>
+                <td>
+                  <span class="badge">1</span>
+                </td>
+                <td>
+                  <code>&lt;span class="badge"&gt;1&lt;/span&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Success
+                </td>
+                <td>
+                  <span class="badge badge-success">2</span>
+                </td>
+                <td>
+                  <code>&lt;span class="badge badge-success"&gt;2&lt;/span&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Warning
+                </td>
+                <td>
+                  <span class="badge badge-warning">4</span>
+                </td>
+                <td>
+                  <code>&lt;span class="badge badge-warning"&gt;4&lt;/span&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Important
+                </td>
+                <td>
+                  <span class="badge badge-important">6</span>
+                </td>
+                <td>
+                  <code>&lt;span class="badge badge-important"&gt;6&lt;/span&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Info
+                </td>
+                <td>
+                  <span class="badge badge-info">8</span>
+                </td>
+                <td>
+                  <code>&lt;span class="badge badge-info"&gt;8&lt;/span&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Inverse
+                </td>
+                <td>
+                  <span class="badge badge-inverse">10</span>
+                </td>
+                <td>
+                  <code>&lt;span class="badge badge-inverse"&gt;10&lt;/span&gt;</code>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </section>
+
+
+
+        <!-- Typographic components
+        ================================================== -->
+        <section id="typography">
+          <div class="page-header">
+            <h1>Typographic components</h1>
+          </div>
+
+          <div class="bs-docs-example">
+            <div class="hero-unit">
+              <h1>Hello, world!</h1>
+              <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+              <p><a class="btn btn-primary btn-large">Learn more</a></p>
+            </div>
+          </div>
+
+          <div class="bs-docs-example">
+            <div class="page-header">
+              <h1>Example page header <small>Subtext for header</small></h1>
+            </div>
+          </div>
+
+        </section>
+
+
+
+        <!-- Thumbnails
+        ================================================== -->
+        <section id="thumbnails">
+          <div class="page-header">
+            <h1>Thumbnails</h1>
+          </div>
+
+          <div class="row-fluid">
+            <ul class="thumbnails">
+              <li class="span3">
+                <a href="#" class="thumbnail">
+                  <img src="http://placehold.it/260x180" alt="">
+                </a>
+              </li>
+              <li class="span3">
+                <a href="#" class="thumbnail">
+                  <img src="http://placehold.it/260x180" alt="">
+                </a>
+              </li>
+              <li class="span3">
+                <a href="#" class="thumbnail">
+                  <img src="http://placehold.it/260x180" alt="">
+                </a>
+              </li>
+              <li class="span3">
+                <a href="#" class="thumbnail">
+                  <img src="http://placehold.it/260x180" alt="">
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <ul class="thumbnails">
+            <li class="span4">
+              <a href="#" class="thumbnail">
+                <img src="http://placehold.it/360x270" alt="">
+              </a>
+            </li>
+            <li class="span3">
+              <a href="#" class="thumbnail">
+                <img src="http://placehold.it/260x120" alt="">
+              </a>
+            </li>
+            <li class="span2">
+              <a href="#" class="thumbnail">
+                <img src="http://placehold.it/160x120" alt="">
+              </a>
+            </li>
+            <li class="span3">
+              <a href="#" class="thumbnail">
+                <img src="http://placehold.it/260x120" alt="">
+              </a>
+            </li>
+            <li class="span2">
+              <a href="#" class="thumbnail">
+                <img src="http://placehold.it/160x120" alt="">
+              </a>
+            </li>
+          </ul>
+
+        </section>
+
+
+
+        <!-- Alerts
+        ================================================== -->
+        <section id="alerts">
+          <div class="page-header">
+            <h1>Alerts</h1>
+          </div>
+
+          <div class="bs-docs-example">
+            <div class="alert">
+              <button type="button" class="close" data-dismiss="alert">&times;</button>
+              <strong>Warning!</strong> Best check yo self, you're not looking too good.
+            </div>
+
+            <div class="alert alert-block">
+              <button type="button" class="close" data-dismiss="alert">&times;</button>
+              <h4>Warning!</h4>
+              <p>Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+            </div>
+
+            <div class="alert alert-error">
+              <button type="button" class="close" data-dismiss="alert">&times;</button>
+              <strong>Oh snap!</strong> Change a few things up and try <a href="#">submitting again</a>.
+            </div>
+
+            <div class="alert alert-success">
+              <button type="button" class="close" data-dismiss="alert">&times;</button>
+              <strong>Well done!</strong> You successfully read this important alert message.
+            </div>
+
+            <div class="alert alert-info">
+              <button type="button" class="close" data-dismiss="alert">&times;</button>
+              <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+            </div>
+          </div>
+
+        </section>
+
+
+
+        <!-- Progress bars
+        ================================================== -->
+        <section id="progress">
+          <div class="page-header">
+            <h1>Progress bars</h1>
+          </div>
+
+          <div class="bs-docs-example">
+            <div class="progress">
+              <div class="bar" style="width: 60%;"></div>
+            </div>
+
+            <div class="progress progress-striped">
+              <div class="bar" style="width: 20%;"></div>
+            </div>
+
+            <div class="progress progress-striped active">
+              <div class="bar" style="width: 45%"></div>
+            </div>
+
+            <div class="progress">
+              <div class="bar bar-success" style="width: 35%"></div>
+              <div class="bar bar-warning" style="width: 20%"></div>
+              <div class="bar bar-danger" style="width: 10%"></div>
+            </div>
+          </div>
+
+          <div class="bs-docs-example">
+            <div class="progress progress-info" style="margin-bottom: 9px;">
+              <div class="bar" style="width: 20%"></div>
+            </div>
+            <div class="progress progress-success" style="margin-bottom: 9px;">
+              <div class="bar" style="width: 40%"></div>
+            </div>
+            <div class="progress progress-warning" style="margin-bottom: 9px;">
+              <div class="bar" style="width: 60%"></div>
+            </div>
+            <div class="progress progress-danger">
+              <div class="bar" style="width: 80%"></div>
+            </div>
+          </div>
+
+          <div class="bs-docs-example">
+            <div class="progress progress-info progress-striped" style="margin-bottom: 9px;">
+              <div class="bar" style="width: 20%"></div>
+            </div>
+            <div class="progress progress-success progress-striped" style="margin-bottom: 9px;">
+              <div class="bar" style="width: 40%"></div>
+            </div>
+            <div class="progress progress-warning progress-striped" style="margin-bottom: 9px;">
+              <div class="bar" style="width: 60%"></div>
+            </div>
+            <div class="progress progress-danger progress-striped">
+              <div class="bar" style="width: 80%"></div>
+            </div>
+          </div>
+
+        </section>
+
+
+        <!-- Media Objects
+        ================================================== -->
+        <section id="media">
+          <div class="page-header">
+            <h1>Media objects</h1>
+          </div>
+
+          <h2>Default example</h2>
+
+          <div class="media">
+            <a class="pull-left" href="#">
+              <img class="media-object" src="http://placehold.it/64x64">
+            </a>
+            <div class="media-body">
+              <h4 class="media-heading">Media heading</h4>
+              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+            </div>
+          </div>
+
+          <div class="media">
+            <a class="pull-left" href="#">
+              <img class="media-object" src="http://placehold.it/64x64">
+            </a>
+            <div class="media-body">
+              <h4 class="media-heading">Media heading</h4>
+              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+              <div class="media">
+                <a class="pull-left" href="#">
+                  <img class="media-object" src="http://placehold.it/64x64">
+                </a>
+                <div class="media-body">
+                  <h4 class="media-heading">Media heading</h4>
+                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h2>Media list</h2>
+
+          <ul class="media-list">
+            <li class="media">
+              <a class="pull-left" href="#">
+                <img class="media-object" src="http://placehold.it/64x64">
+              </a>
+              <div class="media-body">
+                <h4 class="media-heading">Media heading</h4>
+                <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+                <!-- Nested media object -->
+                <div class="media">
+                  <a class="pull-left" href="#">
+                    <img class="media-object" src="http://placehold.it/64x64">
+                  </a>
+                  <div class="media-body">
+                    <h4 class="media-heading">Nested media heading</h4>
+                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                    <!-- Nested media object -->
+                    <div class="media">
+                      <a class="pull-left" href="#">
+                        <img class="media-object" src="http://placehold.it/64x64">
+                      </a>
+                      <div class="media-body">
+                        <h4 class="media-heading">Nested media heading</h4>
+                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Nested media object -->
+                <div class="media">
+                  <a class="pull-left" href="#">
+                    <img class="media-object" src="http://placehold.it/64x64">
+                  </a>
+                  <div class="media-body">
+                    <h4 class="media-heading">Nested media heading</h4>
+                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="media">
+              <a class="pull-right" href="#">
+                <img class="media-object" src="http://placehold.it/64x64">
+              </a>
+              <div class="media-body">
+                <h4 class="media-heading">Media heading</h4>
+                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+              </div>
+            </li>
+          </ul>
+
+        </section>
+
+
+
+
+
+        <!-- Miscellaneous
+        ================================================== -->
+        <section id="misc">
+          <div class="page-header">
+            <h1>Miscellaneous</h1>
+          </div>
+
+          <div class="bs-docs-example">
+            <div class="well">
+              Look, I'm in a well!
+            </div>
+
+            <div class="well well-large">
+              Look, I'm in a well-large!
+            </div>
+
+            <div class="well well-small">
+              Look, I'm in a well-small!
+            </div>
+
+            <p><button class="close" style="float: none;">&times;</button></p>
+          </div>
+
+          <div class="bs-docs-example tooltip-demo">
+            <p class="muted" style="margin-bottom: 0;">Tight pants next level keffiyeh <a href="#" rel="tooltip" data-original-title="Default tooltip">you probably</a> haven't heard of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown. Farm-to-table seitan, mcsweeney's fixie sustainable quinoa 8-bit american apparel <a href="#" rel="tooltip" title="Another tooltip">have a</a> terry richardson vinyl chambray. Beard stumptown, cardigans banh mi lomo thundercats. Tofu biodiesel williamsburg marfa, four loko mcsweeney's cleanse vegan chambray. A really ironic artisan <a href="#" rel="tooltip" title="Another one here too">whatever keytar</a>, scenester farm-to-table banksy Austin <a href="#" rel="tooltip" title="The last tip!">twitter handle</a> freegan cred raw denim single-origin coffee viral.
+            </p>
+          </div>
+
+          <div class="bs-docs-example" style="padding-bottom: 24px;">
+            <a href="#" id="myPopover" class="btn btn-large btn-danger" rel="popover" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title">Click to toggle popover</a>
+          </div>
+
+        </section>
+
+
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+    <!-- Footer
+    ================================================== -->
+    <footer class="footer">
+      <div class="container">
+        <p class="pull-right"><a href="#top">Back to top</a></p>
+        <p>Designed and built with all the love in the world <a href="http://twitter.com/twitter" target="_blank">@twitter</a> by <a href="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="http://twitter.com/fat" target="_blank">@fat</a>.</p>
+        <p>Code licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>. Documentation licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        <p>Icons from <a href="http://glyphicons.com">Glyphicons Free</a>, licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        <ul class="footer-links">
+          <li><a href="http://blog.getbootstrap.com">Read the blog</a></li>
+          <li><a href="https://github.com/twitter/bootstrap/issues?state=open">Submit issues</a></li>
+          <li><a href="https://github.com/twitter/bootstrap/wiki">Roadmap and changelog</a></li>
+        </ul>
+      </div>
+    </footer>
+
+
+    <!-- Modal
+     ================================================== -->
+    <div class="modal hide fade" id="myModal">
+      <div class="modal-header">
+        <a class="close" data-dismiss="modal">×</a>
+        <h3>Modal header</h3>
+      </div>
+      <div class="modal-body">
+        <form>
+          <legend>Legend</legend>
+          <label>Label name</label>
+          <input type="text" placeholder="Type something">
+          <span class="help-block">Example block-level help text here.</span>
+          <label class="checkbox">
+            <input type="checkbox"> Check me out
+          </label>
+          <button type="submit" class="btn">Submit</button>
+        </form>
+
+        <p>One fine body in paragraph tags…</p>
+        And without p tags
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="btn">Close</a>
+        <a href="#" class="btn btn-primary">Save changes</a>
+      </div>
+    </div>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../bootstrap/docs/assets/js/jquery.js"></script>
+    <script src="../bootstrap/docs/assets/js/google-code-prettify/prettify.js"></script>
+    <script src="../bootstrap/docs/assets/js/bootstrap-transition.js"></script>
+    <script src="../bootstrap/docs/assets/js/bootstrap-alert.js"></script>
+    <script src="../bootstrap/docs/assets/js/bootstrap-modal.js"></script>
+    <script src="../bootstrap/docs/assets/js/bootstrap-dropdown.js"></script>
+    <script src="../bootstrap/docs/assets/js/bootstrap-scrollspy.js"></script>
+    <script src="../bootstrap/docs/assets/js/bootstrap-tab.js"></script>
+    <script src="../bootstrap/docs/assets/js/bootstrap-tooltip.js"></script>
+    <script src="../bootstrap/docs/assets/js/bootstrap-popover.js"></script>
+    <script src="../bootstrap/docs/assets/js/bootstrap-button.js"></script>
+    <script src="../bootstrap/docs/assets/js/bootstrap-collapse.js"></script>
+    <script src="../bootstrap/docs/assets/js/bootstrap-carousel.js"></script>
+    <script src="../bootstrap/docs/assets/js/bootstrap-typeahead.js"></script>
+    <script src="../bootstrap/docs/assets/js/bootstrap-affix.js"></script>
+    <script src="jquery.smooth-scroll.min.js"></script>
+    <script src="bootswatch.js"></script>
+    <script>
+
+      $(document).ready(function () {
+        $('.modal').modal('hide');
+
+        $("[rel=popover]").popover().click(function(e){
+          e.preventDefault();
+        });
+      });
+
+    </script>
+
+
+  </body>
+</html>

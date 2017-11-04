@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bootswatch: Default Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="../default/bootstrap.css" media="screen" id="stylesheet">
+    <link rel="stylesheet" href="../assets/css/custom.min.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../bower_components/html5shiv/dist/html5shiv.js"></script>
+      <script src="../bower_components/respond/dest/respond.min.js"></script>
+    <![endif]-->
+    <style>
+
+        body,
+        .navbar,
+        .container {
+          width: 500px;
+        }
+
+        h1, p, .bs-example {
+          text-align: center;
+        }
+
+        .lead {
+          margin-bottom: 2em;
+        }
+
+        .page-header {
+          border-bottom: none;
+        }
+
+    </style>
+  </head>
+  <body>
+
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="../" class="navbar-brand">Bootswatch</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav">
+            <li class="dropdown active">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Themes <span class="caret"></span></a>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download">Download <span class="caret"></span></a>
+            </li>
+            <li>
+              <a href="../help/">Help</a>
+            </li>
+            <li>
+              <a href="http://news.bootswatch.com">Blog</a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-12">
+          <div class="page-header">
+            <h1 id="theme">Default</h1>
+            <p id="description" class="lead">Basic Bootstrap</p>
+            <div class="bs-example">
+              <button type="button" class="btn btn-default">Default</button>
+              <button type="button" class="btn btn-primary">Primary</button>
+              <button type="button" class="btn btn-success">Success</button>
+              <button type="button" class="btn btn-info">Info</button>
+              <button type="button" class="btn btn-warning">Warning</button>
+              <button type="button" class="btn btn-danger">Danger</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+    <script>
+
+      $.get("http://api.bootswatch.com/3/", function (data) {
+          var menuTemplate = "<div id='menu' style='position:fixed;top:10px;right:10px;'><select>{{#.}}<option data-description='{{description}}'>{{name}}</option>{{/.}}</select></div>",
+              menuHTML = Mustache.render(menuTemplate, data.themes);
+
+          $('body').append(menuHTML);
+
+          $('#menu').change(function(){
+            var theme = $('#menu :selected');
+            $('#theme').text(theme.text());
+            $('#description').text(theme.data('description'));
+            theme = '../' + theme.text().toLowerCase() + '/bootstrap.min.css';
+            $('#stylesheet').attr('href', theme);
+          });
+      }, "json");
+
+    </script>
+  </body>
+</html>

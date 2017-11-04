@@ -1,63 +1,74 @@
 Bootswatch
 ==========
 
-Bootswatch is a collection of free themes for [Twitter Bootstrap](http://twitter.github.com/bootstrap/). Check it out at [bootswatch.com](http://bootswatch.com).
+[![Bootswatch Logo](https://bootswatch.com/assets/img/logo-dark.png)](https://bootswatch.com)
 
-On GitHub, the source is located in the [gh-pages branch](https://github.com/thomaspark/bootswatch/tree/gh-pages).
+Bootswatch is a collection of open source themes for [Bootstrap](https://getbootstrap.com/). Check it out at [bootswatch.com](https://bootswatch.com).
 
 Usage
 -----
-Head over to [Bootswatch](http://bootswatch.com) and download the `bootstrap.min.css` file associated with a theme.
+Download the `bootstrap.min.css` file associated with a theme and replace Bootstrap's default stylesheet. You must still include Bootstrap's JavaScript file to have functional dropdowns, modals, etc.
 
-In Bootstrap’s CSS directory, you’ll find a stylesheet in full (`bootstrap.css`) and minified (`bootstrap.min.css`) forms. Rename them or move them to a safe place, and replace with the downloaded file. If you ever change your mind, simply drop in another theme or switch back to the original.
+The themes are also hosted on [BootstrapCDN](https://www.bootstrapcdn.com/bootswatch/). 
 
-For use with Rails, check out [bootswatch-rails](https://github.com/maxim/bootswatch-rails) (Sass) and [twitter-bootswatch-rails](https://github.com/scottvrosenthal/twitter-bootswatch-rails) (LESS).
+You can import a theme into your styles using SASS.
+
+
+SASS:
+
+```
+@import "bootswatch/theme/variables";
+@import "bootstrap/scss/bootstrap";
+@import "bootswatch/theme/bootswatch";
+
+```
 
 
 Customization
 ------
-Bootswatch is an open source project, and you’re welcome to modify the themes further. If you’re interested, fork or follow the GitHub repository. The files of interest are in the `gh-pages` branch.
+Bootswatch is open source and you’re welcome to modify the themes.
 
-Each raw theme consists of two LESS files. One is `variables.less`, which is included by default in Bootstrap and allows you to customize [these settings](http://twitter.github.com/bootstrap/customize.html#variables). The other is called `bootswatch.less` and introduces more extensive structural changes.
+Each theme consists of two SASS files. `_variables.scss`, which is included by default in Bootstrap, allows you to customize the settings. `_bootswatch.scss` introduces more extensive structural changes.
 
-Check out the README in the [swatchmaker directory](https://github.com/thomaspark/bootswatch/tree/master/swatchmaker) for step-by-step instructions on building your own swatch.
+Check out the [Help page](https://bootswatch.com/help/) for more details on building your own theme.
 
 API
 -----
 
-A simple API is available for integrating your platform with Bootswatch.
+A simple API is available for integrating your platform with Bootswatch. More info at https://bootswatch.com/help/#api
 
-The swatch objects are housed in an array called `themes`, and each swatch has the following properties:  `name`, `description`, `preview`, `thumbnail`, `css`, `css-min`, `less`, and `less-variables`.
+Contributing
+-----
+It's through your contributions that Bootswatch will continue to improve. You can contribute in several ways.
 
-CORS and JSONP are supported. Send your request to `http://api.bootswatch.com`.
+**Issues:** Provide a detailed report of any bugs you encounter and open an issue on [GitHub](https://github.com/thomaspark/bootswatch/issues).
 
-A simple demo, using mustache.js for templating: http://jsbin.com/asowud/1/edit
+**Documentation:** If you'd like to fix a typo or beef up the docs, you can fork the project, make your changes, and submit a pull request.
 
-Feedback
-------
-Please send feedback to thomas@thomaspark.me. For more information, visit http://thomaspark.me/2012/02/introducing-bootswatch/.
+**Code:** Make a fix and submit it as a pull request. When making changes, it's important to keep the CSS and SASS versions in sync. To do this, be sure to edit the SASS source files for the particular theme firsst, then run the  tasks `grunt swatch` to build the CSS.
+
+**Donation:** Donations are gratefully accepted via [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=F22JEM3Q78JC2) and Bitcoin at [1EMqwwjqJrfyoPqmxNM7buzU6DmySZnHBK](bitcoin:1EMqwwjqJrfyoPqmxNM7buzU6DmySZnHBK).
 
 Author
 ------
-[Thomas Park](http://github.com/thomaspark)
+Thomas Park
 
-+ http://thomaspark.me
++ https://github.com/thomaspark
++ https://thomaspark.co
 
 Thanks
 ------
-[Mark Otto](http://github.com/markdotto) and [Jacob Thornton](http://github.com/fat) for [Bootstrap](https://github.com/twitter/bootstrap).
+[Mark Otto](https://github.com/mdo) and [Jacob Thornton](https://github.com/fat) for [Bootstrap](https://github.com/twbs/bootstrap).
 
-[James Taylor](http://github.com/jostylr) for [cors-lite](https://github.com/jostylr/cors-lite).
+[Jenil Gogari](http://www.jgog.in/) for his contributions to the Flatly theme.
 
-[Zack Maril](http://github.com/zmaril) for [bootswatch/swatchmaker/watcher.rb](https://github.com/thomaspark/bootswatch/blob/master/swatchmaker/watcher.rb).
+[James Taylor](https://github.com/jostylr) for [cors-lite](https://github.com/jostylr/cors-lite).
+
+[Corey Sewell](https://github.com/cjsewell) for SASS conversion.
 
 
 Copyright and License
 ----
-Copyright 2012 Thomas Park
+Copyright 2014-2017 Thomas Park
 
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
-
-http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+Code released under the MIT License.

@@ -1,0 +1,205 @@
+section {
+	margin-top: 60px;
+	padding-top: 100px;
+}
+
+/* index */
+
+.tooltip-inner {
+	max-width: 500px;
+}
+
+.hero-unit h1,
+.hero-unit p {
+	margin-bottom: 15px;
+}
+
+#footer {
+	margin-bottom: 20px;
+}
+
+#footer .links a {
+	margin-right: 10px;
+}
+
+@media (max-width: 767px) {
+
+	section {
+		padding-top: 20px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+	section {
+		padding-top: 20px;
+	}
+}
+
+/* preview */
+
+.subhead {
+	padding-bottom: 0;
+	margin-bottom: 9px;
+}
+
+.subhead h1 {
+	font-size: 54px;
+}
+
+.subhead > div:first-child {
+	min-height: 200px;
+}
+
+@media (min-width: 980px) {
+
+	.preview {
+		padding-top: 100px;
+	}
+}
+
+/* subnav */
+ 
+.subnav {
+	margin-bottom: 60px;
+	width: 100%;
+	height: 36px;
+	background-color: #eeeeee; /* Old browsers */
+	background-repeat: repeat-x; /* Repeat the gradient */
+	background-image: -moz-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%); /* FF3.6+ */
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f5f5f5), color-stop(100%,#eeeeee)); /* Chrome,Safari4+ */
+	background-image: -webkit-linear-gradient(top, #f5f5f5 0%,#eeeeee 100%); /* Chrome 10+,Safari 5.1+ */
+	background-image: -ms-linear-gradient(top, #f5f5f5 0%,#eeeeee 100%); /* IE10+ */
+	background-image: -o-linear-gradient(top, #f5f5f5 0%,#eeeeee 100%); /* Opera 11.10+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#eeeeee',GradientType=0 ); /* IE6-9 */
+	background-image: linear-gradient(top, #f5f5f5 0%,#eeeeee 100%); /* W3C */
+	border: 1px solid #e5e5e5;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+ 
+.subnav .nav {
+	margin-bottom: 0;
+}
+ 
+.subnav .nav > li > a {
+	margin: 0;
+	padding-top:    11px;
+	padding-bottom: 11px;
+	border-left: 1px solid #f5f5f5;
+	border-right: 1px solid #e5e5e5;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+ 
+.subnav .nav > .active > a,
+.subnav .nav > .active > a:hover {
+	padding-left: 13px;
+	color: #777;
+	background-color: #e9e9e9;
+	border-right-color: #ddd;
+	border-left: 0;
+	-webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.05);
+	-moz-box-shadow: inset 0 3px 5px rgba(0,0,0,.05);
+	box-shadow: inset 0 3px 5px rgba(0,0,0,.05);
+}
+ 
+.subnav .nav > .active > a .caret,
+.subnav .nav > .active > a:hover .caret {
+	border-top-color: #777;
+}
+ 
+.subnav .nav > li:first-child > a,
+.subnav .nav > li:first-child > a:hover {
+	border-left: 0;
+	padding-left: 12px;
+	-webkit-border-radius: 4px 0 0 4px;
+	-moz-border-radius: 4px 0 0 4px;
+	border-radius: 4px 0 0 4px;
+}
+ 
+.subnav .nav > li:last-child > a {
+	border-right: 0;
+}
+ 
+.subnav .dropdown-menu {
+	-webkit-border-radius: 0 0 4px 4px;
+	-moz-border-radius: 0 0 4px 4px;
+	border-radius: 0 0 4px 4px;
+}
+ 
+@media (max-width: 767px) {
+ 
+	.subnav {
+		position: static;
+		top: auto;
+		z-index: auto;
+		width: auto;
+		height: auto;
+		background: #fff; /* whole background property since we use a background-image for gradient */
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
+	}
+ 
+	.subnav .nav > li {
+		float: none;
+	}
+ 
+	.subnav .nav > li > a {
+		border: 0;
+	}
+ 
+	.subnav .nav > li + li > a {
+		border-top: 1px solid #e5e5e5;
+	}
+ 
+	.subnav .nav > li:first-child > a,
+	.subnav .nav > li:first-child > a:hover {
+		-webkit-border-radius: 4px 4px 0 0;
+		-moz-border-radius: 4px 4px 0 0;
+		border-radius: 4px 4px 0 0;
+	}
+}
+ 
+@media (min-width: 980px) {
+  
+	.subnav-fixed {
+		position: fixed;
+		top: 40px;
+		left: 0;
+		right: 0;
+		z-index: 1020; /* 10 less than .navbar-fixed to prevent any overlap */
+		border-color: #d5d5d5;
+		border-width: 0 0 1px; /* drop the border on the fixed edges */
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		border-radius: 0;
+		-webkit-box-shadow: inset 0 1px 0 #fff, 0 1px 5px rgba(0,0,0,.1);
+		-moz-box-shadow: inset 0 1px 0 #fff, 0 1px 5px rgba(0,0,0,.1);
+		box-shadow: inset 0 1px 0 #fff, 0 1px 5px rgba(0,0,0,.1);
+		filter: progid:DXImageTransform.Microsoft.gradient(enabled=false); /* IE6-9 */
+	}
+  
+	.subnav-fixed .nav {
+		width: 938px;
+		margin: 0 auto;
+		padding: 0 1px;
+	}
+  
+	.subnav .nav > li:first-child > a,
+	.subnav .nav > li:first-child > a:hover {
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		border-radius: 0;
+	}
+}
+ 
+@media (min-width: 1210px) {
+ 
+	.subnav-fixed .nav {
+		width: 1168px; /* 2px less to account for left/right borders being removed when in fixed mode */
+	}
+}
