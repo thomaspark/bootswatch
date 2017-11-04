@@ -1,7 +1,7 @@
 Bootswatch
 ==========
 
-[![Bootswatch Logo](https://bootswatch.com/assets/img/logo-dark.png)](https://bootswatch.com)
+[![Bootswatch Logo](https://bootswatch.com/_assets/img/logo-dark.png)](https://bootswatch.com)
 
 Bootswatch is a collection of open source themes for [Bootstrap](https://getbootstrap.com/). Check it out at [bootswatch.com](https://bootswatch.com).
 
