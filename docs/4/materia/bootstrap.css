@@ -4553,7 +4553,7 @@ tbody.collapse.show {
   background-color: #fff;
   -webkit-background-clip: border-box;
           background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  border: 0 solid transparent;
   border-radius: 0.25rem;
 }
 
@@ -4605,11 +4605,11 @@ tbody.collapse.show {
   padding: 0.75rem 1.25rem;
   margin-bottom: 0;
   background-color: rgba(0, 0, 0, 0.03);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  border-bottom: 0 solid transparent;
 }
 
 .card-header:first-child {
-  border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+  border-radius: calc(0.25rem - 0) calc(0.25rem - 0) 0 0;
 }
 
 .card-header + .list-group .list-group-item:first-child {
@@ -4619,11 +4619,11 @@ tbody.collapse.show {
 .card-footer {
   padding: 0.75rem 1.25rem;
   background-color: rgba(0, 0, 0, 0.03);
-  border-top: 1px solid rgba(0, 0, 0, 0.125);
+  border-top: 0 solid transparent;
 }
 
 .card-footer:last-child {
-  border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px);
+  border-radius: 0 0 calc(0.25rem - 0) calc(0.25rem - 0);
 }
 
 .card-header-tabs {
@@ -4649,19 +4649,19 @@ tbody.collapse.show {
 
 .card-img {
   width: 100%;
-  border-radius: calc(0.25rem - 1px);
+  border-radius: calc(0.25rem - 0);
 }
 
 .card-img-top {
   width: 100%;
-  border-top-left-radius: calc(0.25rem - 1px);
-  border-top-right-radius: calc(0.25rem - 1px);
+  border-top-left-radius: calc(0.25rem - 0);
+  border-top-right-radius: calc(0.25rem - 0);
 }
 
 .card-img-bottom {
   width: 100%;
-  border-bottom-right-radius: calc(0.25rem - 1px);
-  border-bottom-left-radius: calc(0.25rem - 1px);
+  border-bottom-right-radius: calc(0.25rem - 0);
+  border-bottom-left-radius: calc(0.25rem - 0);
 }
 
 .card-deck {
@@ -5636,7 +5636,7 @@ button.close {
   background-color: #fff;
   -webkit-background-clip: padding-box;
           background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid transparent;
   border-radius: 0.3rem;
   outline: 0;
 }
@@ -5799,7 +5799,7 @@ button.close {
   margin-left: -3px;
   content: "";
   border-width: 5px 5px 0;
-  border-top-color: #000;
+  border-top-color: #444;
 }
 
 .tooltip.bs-tooltip-right, .tooltip.bs-tooltip-auto[x-placement^="right"] {
@@ -5814,7 +5814,7 @@ button.close {
   margin-top: -3px;
   content: "";
   border-width: 5px 5px 5px 0;
-  border-right-color: #000;
+  border-right-color: #444;
 }
 
 .tooltip.bs-tooltip-bottom, .tooltip.bs-tooltip-auto[x-placement^="bottom"] {
@@ -5829,7 +5829,7 @@ button.close {
   margin-left: -3px;
   content: "";
   border-width: 0 5px 5px;
-  border-bottom-color: #000;
+  border-bottom-color: #444;
 }
 
 .tooltip.bs-tooltip-left, .tooltip.bs-tooltip-auto[x-placement^="left"] {
@@ -5845,7 +5845,7 @@ button.close {
   margin-top: -3px;
   content: "";
   border-width: 5px 0 5px 5px;
-  border-left-color: #000;
+  border-left-color: #444;
 }
 
 .tooltip-inner {
@@ -5853,7 +5853,7 @@ button.close {
   padding: 3px 8px;
   color: #fff;
   text-align: center;
-  background-color: #000;
+  background-color: #444;
   border-radius: 0.25rem;
 }
 
@@ -10087,8 +10087,8 @@ a.text-dark:focus, a.text-dark:hover {
 .btn {
   text-transform: uppercase;
   border: none;
-  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
-          box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   transition: all 0.4s;
@@ -10801,12 +10801,27 @@ input[type="checkbox"]:disabled:checked:after,
   opacity: 1;
 }
 
+.card {
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.card.border-primary, .card.border-secondary, .card.border-success, .card.border-info, .card.border-warning, .card.border-danger, .card.border-light, .card.border-dark {
+  border-width: 1px;
+}
+
 .alert-dismissible .close {
   padding: 0.5rem 0.75rem;
 }
 
 .list-group-item-action.active h1, .list-group-item-action.active h2, .list-group-item-action.active h3, .list-group-item-action.active h4, .list-group-item-action.active h5, .list-group-item-action.active h6 {
   color: #fff;
+}
+
+.modal-content {
+  border-radius: 0.2rem;
+  -webkit-box-shadow: 0 6px 36px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 6px 36px rgba(0, 0, 0, 0.3);
 }
 
 .popover {

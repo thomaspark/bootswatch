@@ -116,7 +116,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
 .btn {
   text-transform: uppercase;
   border: none;
-  box-shadow: 1px 1px 4px rgba(0,0,0,.4);
+  box-shadow: 0 1px 4px rgba(0,0,0,.4);
   transition: all 0.4s;
 
   &-link {
@@ -654,6 +654,21 @@ input[type="checkbox"],
   }
 }
 
+.card {
+  box-shadow: 0 1px 4px rgba(0,0,0,.4);
+
+  &.border-primary,
+  &.border-secondary,
+  &.border-success,
+  &.border-info,
+  &.border-warning,
+  &.border-danger,
+  &.border-light,
+  &.border-dark {
+  	border-width: 1px;
+  }
+}
+
 .alert-dismissible {
   .close {
     padding: 0.5rem 0.75rem;
@@ -666,6 +681,11 @@ input[type="checkbox"],
       color: $white;
     }
   }
+}
+
+.modal-content {
+	border-radius: 0.2rem;
+  box-shadow: 0 6px 36px rgba(0,0,0,.3);
 }
 
 .popover {
