@@ -9,14 +9,14 @@ Usage
 -----
 Download the `bootstrap.min.css` file associated with a theme and replace Bootstrap's default stylesheet. You must still include Bootstrap's JavaScript file to have functional dropdowns, modals, etc.
 
-The themes are also hosted on [BootstrapCDN](https://www.bootstrapcdn.com/bootswatch/). 
+You can install as a package via npm with the command `npm install bootswatch`.
 
-You can import a theme into your styles using SASS.
+You can also hotlink the themes via CDN at [BootstrapCDN](https://www.bootstrapcdn.com/bootswatch/). 
+
+Lastly, you can import a theme into your styles using SASS.
 
 
-SASS:
-
-```
+```sass
 @import "bootswatch/theme/variables";
 @import "bootstrap/scss/bootstrap";
 @import "bootswatch/theme/bootswatch";
@@ -30,12 +30,12 @@ Bootswatch is open source and you’re welcome to modify the themes.
 
 Each theme consists of two SASS files. `_variables.scss`, which is included by default in Bootstrap, allows you to customize the settings. `_bootswatch.scss` introduces more extensive structural changes.
 
-Check out the [Help page](https://bootswatch.com/help/) for more details on building your own theme.
+Check out the [Help page](https://bootswatch.com/help/#customization) for more details on building your own theme.
 
 API
 -----
 
-A simple API is available for integrating your platform with Bootswatch. More info at https://bootswatch.com/help/#api
+A simple API is available for integrating your platform with Bootswatch. More info can be found on the [Help page](https://bootswatch.com/help/#api).
 
 Contributing
 -----
