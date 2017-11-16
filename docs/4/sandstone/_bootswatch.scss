@@ -71,7 +71,6 @@ input,
   @include box-shadow(none);
 
   &:focus {
-    // border-color: $input-border;
     @include box-shadow(none);
   }
 }
@@ -96,6 +95,7 @@ input,
   .nav-link.disabled:focus {
     background-color: $gray-200;
     border-color: $gray-300;
+    color: $nav-link-disabled-color;
   }
 }
 
