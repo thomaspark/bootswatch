@@ -110,6 +110,17 @@ table {
   }
 }
 
+.table-dark {
+  th,
+  td,
+  &.table-hover .table-active:hover > th,
+  &.table-hover .table-active:hover > td {
+    background-color: $gray-800;
+  }
+  
+}
+
+
 // Forms =======================================================================
 
 input,
