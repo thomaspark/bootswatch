@@ -8840,17 +8840,32 @@ a.text-dark:focus, a.text-dark:hover {
   font-size: 10px;
 }
 
+.btn-warning, .btn-warning:hover, .btn-warning:not([disabled]):not(.disabled):active, .btn-warning:focus {
+  color: #fff;
+}
+
 .btn-outline-secondary {
   border-color: #919aa1;
   color: #919aa1;
 }
 
-.btn-outline-secondary:hover {
-  background-color: #919aa1;
+.btn-outline-secondary:not([disabled]):not(.disabled):hover, .btn-outline-secondary:not([disabled]):not(.disabled):focus, .btn-outline-secondary:not([disabled]):not(.disabled):active {
+  background-color: #ced4da;
+  border-color: #ced4da;
+  color: #fff;
+}
+
+.btn-outline-secondary:not([disabled]):not(.disabled):focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(206, 212, 218, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(206, 212, 218, 0.5);
 }
 
 [class*="btn-outline-"] {
   border-width: 2px;
+}
+
+.border-secondary {
+  border: 2px solid #ced4da !important;
 }
 
 body {

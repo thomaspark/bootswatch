@@ -55,19 +55,40 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Nunito+Sans:400,600" !d
   &-sm {
     font-size: 10px;
   }
+
+  &-warning {
+    &,
+    &:hover,
+    &:not([disabled]):not(.disabled):active,
+    &:focus {
+      color: $white;
+    }
+  }
 }
 
 .btn-outline-secondary {
   border-color: $gray-600;
   color: $gray-600;
 
-  &:hover {
-    background-color: $gray-600;
+  &:not([disabled]):not(.disabled):hover,
+  &:not([disabled]):not(.disabled):focus,
+  &:not([disabled]):not(.disabled):active {
+    background-color: $gray-400;
+	  border-color: $gray-400;
+    color: $white;
+  }
+  
+  &:not([disabled]):not(.disabled):focus {
+    box-shadow: 0 0 0 0.2rem rgba($gray-400, 0.5);
   }
 }
 
 [class*="btn-outline-"] {
   border-width: 2px;
+}
+
+.border-secondary {
+  border: 2px solid $gray-400 !important;
 }
 
 // Typography ==================================================================
