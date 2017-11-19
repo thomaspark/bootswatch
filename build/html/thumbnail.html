@@ -5,8 +5,8 @@
     <title>Bootswatch: Default Bootstrap</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.css" media="screen" id="stylesheet">
-    <link rel="stylesheet" href="../css/custom.min.css">
+    <link rel="stylesheet" href="../../docs/_vendor/bootstrap/dist/css/bootstrap.css" media="screen" id="stylesheet">
+    <link rel="stylesheet" href="../../docs/_assets//css/custom.min.css">
     <style>
 
         body {
@@ -34,12 +34,11 @@
     </style>
   </head>
   <body>
-
-    <nav class="navbar fixed-top navbar-toggleable-md navbar-inverse bg-primary">
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
       <a class="navbar-brand" href="#">Bootswatch</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
       <div class="collapse navbar-collapse" id="navbarColor01">
         <ul class="navbar-nav mr-auto">
@@ -72,7 +71,6 @@
               <button type="button" class="btn btn-primary">Primary</button>
               <button type="button" class="btn btn-secondary">Secondary</button>
               <button type="button" class="btn btn-success">Success</button>
-              <button type="button" class="btn btn-info">Info</button>
               <button type="button" class="btn btn-warning">Warning</button>
               <button type="button" class="btn btn-danger">Danger</button>
             </div>
@@ -87,7 +85,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
     <script>
 
-      $.get("../../api/4.json", function (data) {
+      $.get("../../docs/api/4.json", function (data) {
           var menuTemplate = "<div id='menu' style='position:fixed;top:10px;right:10px;'><select>{{#.}}<option data-description='{{description}}'>{{name}}</option>{{/.}}</select></div>",
               menuHTML = Mustache.render(menuTemplate, data.themes);
 
