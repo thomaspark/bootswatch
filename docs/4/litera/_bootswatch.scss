@@ -175,28 +175,10 @@ table,
     text-decoration: underline;
   }
 
-  &-primary {
-    background-color: $primary;
-  }
-
-  &-success {
-    background-color: $success;
-  }
-
-  &-danger {
-    background-color: $danger;
-  }
-
-  &-warning {
-    background-color: $warning;
-  }
-
-  &-info {
-    background-color: $info;
-  }
-
-  &-dark {
-    background-color: $dark;
+  @each $color, $value in $theme-colors {
+    &-#{$color} {
+      background-color: $value;
+    }
   }
 }
 
