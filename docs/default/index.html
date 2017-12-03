@@ -278,7 +278,7 @@
                   </div>
                 </div>
               </div>
-              
+
               <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
                 <button type="button" class="btn btn-info">Info</button>
                 <div class="btn-group" role="group">
@@ -289,7 +289,7 @@
                   </div>
                 </div>
               </div>
-              
+
               <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
                 <button type="button" class="btn btn-danger">Danger</button>
                 <div class="btn-group" role="group">
@@ -530,7 +530,7 @@
                     <td>Column content</td>
                   </tr>
                 </tbody>
-              </table> 
+              </table>
             </div><!-- /example -->
           </div>
         </div>
@@ -1072,17 +1072,17 @@
           <div class="col-lg-4">
             <div class="bs-component">
               <ul class="list-group">
-                <li class="list-group-item">
-                  <span class="tag tag-default tag-pill float-xs-right">14</span>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
                   Cras justo odio
+                  <span class="badge badge-primary badge-pill">14</span>
                 </li>
-                <li class="list-group-item">
-                  <span class="tag tag-default tag-pill float-xs-right">2</span>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
                   Dapibus ac facilisis in
+                  <span class="badge badge-primary badge-pill">2</span>
                 </li>
-                <li class="list-group-item">
-                  <span class="tag tag-default tag-pill float-xs-right">1</span>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
                   Morbi leo risus
+                  <span class="badge badge-primary badge-pill">1</span>
                 </li>
               </ul>
             </div>
@@ -1090,7 +1090,7 @@
           <div class="col-lg-4">
             <div class="bs-component">
               <div class="list-group">
-                <a href="#" class="list-group-item  list-group-item-action active">
+                <a href="#" class="list-group-item list-group-item-action active">
                   Cras justo odio
                 </a>
                 <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in
@@ -1103,13 +1103,21 @@
           <div class="col-lg-4">
             <div class="bs-component">
               <div class="list-group">
-                <a href="#" class="list-group-item list-group-item-action active">
-                  <h4 class="list-group-item-heading">List group item heading</h4>
-                  <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">List group item heading</h5>
+                    <small>3 days ago</small>
+                  </div>
+                  <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                  <small>Donec id elit non mi porta.</small>
                 </a>
-                <a href="#" class="list-group-item list-group-item-action">
-                  <h4 class="list-group-item-heading">List group item heading</h4>
-                  <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">List group item heading</h5>
+                    <small class="text-muted">3 days ago</small>
+                  </div>
+                  <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                  <small class="text-muted">Donec id elit non mi porta.</small>
                 </a>
               </div>
             </div>
