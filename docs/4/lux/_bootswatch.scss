@@ -88,7 +88,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Nunito+Sans:400,600" !d
 }
 
 .border-secondary {
-  border: 2px solid $gray-400 !important;
+  border: 1px solid $gray-400 !important;
 }
 
 // Typography ==================================================================
@@ -101,6 +101,10 @@ body {
 h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   letter-spacing: 3px;
+}
+
+.text-secondary {
+  color: $body-color !important;
 }
 
 // Tables ======================================================================
@@ -130,3 +134,11 @@ th {
 // Progress bars ===============================================================
 
 // Containers ==================================================================
+
+.card {
+
+  &-title,
+  &-header {
+    color: inherit;
+  }
+}

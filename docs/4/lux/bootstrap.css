@@ -8865,7 +8865,7 @@ a.text-dark:focus, a.text-dark:hover {
 }
 
 .border-secondary {
-  border: 2px solid #ced4da !important;
+  border: 1px solid #ced4da !important;
 }
 
 body {
@@ -8876,6 +8876,10 @@ body {
 h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   letter-spacing: 3px;
+}
+
+.text-secondary {
+  color: #919aa1 !important;
 }
 
 th {
@@ -8890,4 +8894,8 @@ th {
 .dropdown-menu {
   font-size: 0.765625rem;
   text-transform: none;
+}
+
+.card-title, .card-header {
+  color: inherit;
 }
