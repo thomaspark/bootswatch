@@ -335,7 +335,6 @@ select.form-control {
 // Containers ==================================================================
 
 .card {
-  border-color: transparent;
   border-radius: 5px 5px 5px 5px/25px 25px 25px 5px;
   overflow: hidden;
 
@@ -351,6 +350,7 @@ select.form-control {
 
   &-header {
     border-bottom-width: 2px;
+    border-color: inherit;
   }
 
   &-footer {
