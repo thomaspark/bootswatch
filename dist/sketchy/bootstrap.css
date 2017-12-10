@@ -5042,9 +5042,9 @@ tbody.collapse.show {
 }
 
 .list-group-item-action:focus, .list-group-item-action:hover {
-  color: #fff;
+  color: #333;
   text-decoration: none;
-  background-color: #333;
+  background-color: #dee2e6;
 }
 
 .list-group-item-action:active {
@@ -9001,10 +9001,6 @@ select.form-control {
   border-bottom: none;
 }
 
-.list-group-item:hover .list-group-item-heading {
-  color: #fff;
-}
-
 .nav-link,
 .page-link,
 .list-group-item,
@@ -9096,6 +9092,7 @@ select.form-control {
 
 .card-header {
   border-bottom-width: 2px;
+  border-color: inherit;
 }
 
 .card-footer {
