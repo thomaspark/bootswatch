@@ -4848,7 +4848,7 @@ tbody.collapse.show {
 .list-group-item-action:focus, .list-group-item-action:hover {
   color: #444;
   text-decoration: none;
-  background-color: #fafafa;
+  background-color: #2e283e;
 }
 
 .list-group-item-action:active {
@@ -4861,8 +4861,8 @@ tbody.collapse.show {
   display: block;
   padding: 0.75rem 1.25rem;
   margin-bottom: -1px;
-  background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  background-color: #17141F;
+  border: 1px solid transparent;
 }
 
 .list-group-item:last-child {
@@ -4874,15 +4874,15 @@ tbody.collapse.show {
 }
 
 .list-group-item.disabled, .list-group-item:disabled {
-  color: #868e96;
-  background-color: #fff;
+  color: #5c507c;
+  background-color: #17141F;
 }
 
 .list-group-item.active {
   z-index: 2;
   color: #fff;
-  background-color: #593196;
-  border-color: #593196;
+  background-color: #17141F;
+  border-color: #17141F;
 }
 
 .list-group-flush .list-group-item {
@@ -8687,4 +8687,24 @@ a.text-dark:focus, a.text-dark:hover {
 
 .progress {
   height: 8px;
+}
+
+.list-group-item {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.list-group-item.active, .list-group-item:hover, .list-group-item:focus {
+  color: #fff;
+}
+
+.list-group-item.active {
+  font-weight: bold;
+}
+
+.list-group-item.active:hover {
+  background-color: #2e283e;
+}
+
+.list-group-item.disabled:hover {
+  color: #5c507c;
 }
