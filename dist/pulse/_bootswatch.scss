@@ -127,28 +127,3 @@
 }
 
 // Containers ==================================================================
-
-.list-group {
-
-  &-item {
-    color: rgba(255, 255, 255, 0.8);
-
-    &.active,
-    &:hover,
-    &:focus {
-      color: #fff;
-    }
-
-    &.active {
-      font-weight: bold;
-
-      &:hover {
-        background-color: $list-group-hover-bg;
-      }
-    }
-
-    &.disabled:hover {
-      color: $list-group-disabled-color;
-    }
-  }
-}
