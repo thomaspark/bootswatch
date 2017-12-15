@@ -4330,7 +4330,7 @@ tbody.collapse.show {
   word-wrap: break-word;
   background-color: #282828;
   background-clip: border-box;
-  border: 1px solid #282828;
+  border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
 }
 
@@ -4380,8 +4380,8 @@ tbody.collapse.show {
 .card-header {
   padding: 0.75rem 1.25rem;
   margin-bottom: 0;
-  background-color: #222;
-  border-bottom: 1px solid #282828;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 }
 
 .card-header:first-child {
@@ -4394,8 +4394,8 @@ tbody.collapse.show {
 
 .card-footer {
   padding: 0.75rem 1.25rem;
-  background-color: #222;
-  border-top: 1px solid #282828;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
 }
 
 .card-footer:last-child {
@@ -8968,12 +8968,14 @@ legend,
   color: #fff;
 }
 
-.card-header {
-  background-color: #222;
-}
-
-.card-header, .card-title {
-  color: #fff;
+.card h1, .card h2, .card h3, .card h4, .card h5, .card h6,
+.list-group-item h1,
+.list-group-item h2,
+.list-group-item h3,
+.list-group-item h4,
+.list-group-item h5,
+.list-group-item h6 {
+  color: inherit;
 }
 
 .popover-title {
