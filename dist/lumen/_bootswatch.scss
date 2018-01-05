@@ -294,13 +294,11 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400
 // Indicators ==================================================================
 
 .close {
-  color: #fff;
   text-decoration: none;
   opacity: 0.4;
 
   &:hover,
   &:focus {
-    color: #fff;
     opacity: 1;
   }
 }
@@ -393,4 +391,11 @@ a.list-group-item {
 .jumbotron {
   border: 1px solid $gray-200;
   box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.modal {
+
+  .close {
+    color: $black;
+  }
 }
