@@ -134,7 +134,7 @@ module.exports = function (grunt) {
     grunt.config('sass.dist.files', files);
     grunt.config('sass.dist.options.outputStyle', 'expanded');
  
-    grunt.task.run(['concat', 'sass:dist', 'exec:postcss', 'clean:build',
+    grunt.task.run(['concat', 'sass:dist', 'postcss', 'clean:build',
       compress ? 'compress:' + scssDest + ':' + '<%=builddir%>/' + theme + '/bootstrap.min.css' : 'none',
       'copy:css']);
   });
