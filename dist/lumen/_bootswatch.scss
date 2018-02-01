@@ -307,6 +307,16 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400
   color: $white;
   @include shadow();
 
+  &-primary {
+    background-color: $primary;
+    border-color: darken($primary, 5%);
+  }
+
+  &-secondary {
+    background-color: $secondary;
+    border-color: darken($secondary, 5%);
+  }
+
   &-success {
     background-color: $success;
     border-color: darken($success, 5%);
@@ -327,10 +337,29 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400
     border-color: darken($warning, 5%);
   }
 
+  &-dark {
+    background-color: $dark;
+    border-color: darken($dark, 5%);
+  }
+
+  &-light {
+    background-color: $light;
+    border-color: darken($light, 5%);
+  }
+
   .alert-link {
     font-weight: normal;
     color: #fff;
     text-decoration: underline;
+  }
+
+  &-secondary,
+  &-light {
+    &,
+    & a,
+    & .alert-link {
+      color: $body-color;
+    }
   }
 }
 

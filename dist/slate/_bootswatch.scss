@@ -390,6 +390,14 @@ legend {
       background-color: $value;
     }
   }
+
+  &-light {
+    &,
+    & a:not(.btn),
+    & .alert-link {
+      color: $body-bg;
+    }
+  }
 }
 
 .badge {

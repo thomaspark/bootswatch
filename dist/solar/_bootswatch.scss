@@ -104,6 +104,14 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Source+Sans+Pro" !defau
       background-color: $value;
     }
   }
+
+  &-light {
+    &,
+    & a:not(.btn),
+    & .alert-link {
+      color: $body-bg;
+    }
+  }
 }
 
 // Progress bars ===============================================================

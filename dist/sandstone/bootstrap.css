@@ -9126,6 +9126,14 @@ a.text-dark:hover, a.text-dark:focus {
   text-decoration: underline;
 }
 
+.alert-primary, .alert-primary > th, .alert-primary > td {
+  background-color: #325D88;
+}
+
+.alert-secondary, .alert-secondary > th, .alert-secondary > td {
+  background-color: #8E8C84;
+}
+
 .alert-success, .alert-success > th, .alert-success > td {
   background-color: #93C54B;
 }
@@ -9140,6 +9148,20 @@ a.text-dark:hover, a.text-dark:focus {
 
 .alert-warning, .alert-warning > th, .alert-warning > td {
   background-color: #F47C3C;
+}
+
+.alert-dark, .alert-dark > th, .alert-dark > td {
+  background-color: #3E3F3A;
+}
+
+.alert-light, .alert-light > th, .alert-light > td {
+  background-color: #F8F5F0;
+}
+
+.alert-light,
+.alert-light a:not(.btn),
+.alert-light .alert-link {
+  color: #3E3F3A;
 }
 
 .badge-success, .badge-warning {

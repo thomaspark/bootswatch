@@ -181,6 +181,18 @@ legend {
     color: $white;
   }
 
+  &-primary {
+    &, > th, > td {
+      background-color: $primary;
+    }
+  }
+
+  &-secondary {
+    &, > th, > td {
+      background-color: $secondary;
+    }
+  }
+
   &-success {
     &, > th, > td {
       background-color: $success;
@@ -202,6 +214,26 @@ legend {
   &-warning {
     &, > th, > td {
       background-color: $warning;
+    }
+  }
+
+  &-dark {
+    &, > th, > td {
+      background-color: $dark;
+    }
+  }
+
+  &-light {
+    &, > th, > td {
+      background-color: $light;
+    }
+  }
+
+  &-light {
+    &,
+    & a:not(.btn),
+    & .alert-link {
+      color: $body-color;
     }
   }
 }

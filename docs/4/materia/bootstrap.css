@@ -10506,7 +10506,7 @@ input[type="checkbox"]:disabled:checked:after,
   background-color: #222;
 }
 
-.alert a:not(.close):not(.btn),
+.alert a:not(.btn),
 .alert .alert-link {
   color: #fff;
   font-weight: bold;
@@ -10514,6 +10514,14 @@ input[type="checkbox"]:disabled:checked:after,
 
 .alert .close {
   color: #fff;
+}
+
+.alert-secondary,
+.alert-secondary a:not(.btn),
+.alert-secondary .alert-link, .alert-light,
+.alert-light a:not(.btn),
+.alert-light .alert-link {
+  color: #444;
 }
 
 .badge-secondary {

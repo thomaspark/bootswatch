@@ -595,7 +595,7 @@ input[type="checkbox"],
     }
   }
 
-  a:not(.close):not(.btn),
+  a:not(.btn),
   .alert-link {
     color: #fff;
     font-weight: bold;
@@ -603,6 +603,15 @@ input[type="checkbox"],
 
   .close {
     color: #fff;
+  }
+
+  &-secondary,
+  &-light {
+    &,
+    & a:not(.btn),
+    & .alert-link {
+      color: $body-color;
+    }
   }
 }
 

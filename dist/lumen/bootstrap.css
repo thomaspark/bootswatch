@@ -9277,6 +9277,16 @@ a.text-dark:hover, a.text-dark:focus {
   border-width: 0 1px 4px 1px;
 }
 
+.alert-primary {
+  background-color: #158CBA;
+  border-color: #127ba3;
+}
+
+.alert-secondary {
+  background-color: #f0f0f0;
+  border-color: #e3e3e3;
+}
+
 .alert-success {
   background-color: #28B62C;
   border-color: #23a127;
@@ -9297,10 +9307,28 @@ a.text-dark:hover, a.text-dark:focus {
   border-color: #ff7702;
 }
 
+.alert-dark {
+  background-color: #222;
+  border-color: #151515;
+}
+
+.alert-light {
+  background-color: #f6f6f6;
+  border-color: #e9e9e9;
+}
+
 .alert .alert-link {
   font-weight: normal;
   color: #fff;
   text-decoration: underline;
+}
+
+.alert-secondary,
+.alert-secondary a,
+.alert-secondary .alert-link, .alert-light,
+.alert-light a,
+.alert-light .alert-link {
+  color: #222;
 }
 
 .badge-warning, .badge-info {

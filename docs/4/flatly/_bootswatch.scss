@@ -163,6 +163,14 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Lato:400,700,400italic"
       background-color: $value;
     }
   }
+
+  &-light {
+    &,
+    & a,
+    & .alert-link {
+      color: $body-color;
+    }
+  }
 }
 
 // Progress bars ===============================================================

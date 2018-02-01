@@ -371,6 +371,18 @@ label,
   font-weight: 300;
   color: $white;
 
+  &-primary {
+    &, > th, > td {
+      background-color: $primary;
+    }
+  }
+
+  &-secondary {
+    &, > th, > td {
+      background-color: $secondary;
+    }
+  }
+
   &-success {
     &, > th, > td {
       background-color: $success;
@@ -395,10 +407,31 @@ label,
     }
   }
 
+  &-dark {
+    &, > th, > td {
+      background-color: $dark;
+    }
+  }
+
+  &-light {
+    &, > th, > td {
+      background-color: $light;
+    }
+  }
+
   .alert-link {
     font-weight: normal;
     color: #fff;
     text-decoration: underline;
+  }
+
+  &-secondary,
+  &-light {
+    &,
+    & a:not(.btn),
+    & .alert-link {
+      color: $body-color;
+    }
   }
 }
 
