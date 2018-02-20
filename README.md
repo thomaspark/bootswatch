@@ -17,9 +17,9 @@ Lastly, you can import a theme into your styles using SASS.
 
 
 ```sass
-@import "bootswatch/theme/variables";
-@import "bootstrap/scss/bootstrap";
-@import "bootswatch/theme/bootswatch";
+@import "~bootswatch/dist/[theme]/variables";
+@import "~bootstrap/scss/bootstrap";
+@import "~bootswatch/dist/[theme]/bootswatch";
 
 ```
 
