@@ -23,8 +23,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400
 }
 
 .bg-dark {
-  background-color: $gray-200 !important;
-  border-color: darken($gray-200, 5%);
+  border-color: darken($dark, 5%);
 }
 
 .bg-light {
@@ -407,13 +406,6 @@ a.list-group-item {
     &.active:focus {
       background-color: darken($danger, 5%);
     }
-  }
-}
-
-.card {
-
-  &.bg-dark {
-    background-color: $gray-700 !important;
   }
 }
 
