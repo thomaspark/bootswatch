@@ -346,6 +346,10 @@ select.form-control {
   &-header {
     border-bottom-width: 2px;
     border-color: inherit;
+
+    &:first-child {
+      border-radius: 3px 3px 0 0/23px 23px 0 0;
+    }
   }
 
   &-footer {
