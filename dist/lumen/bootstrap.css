@@ -3946,7 +3946,7 @@ tbody.collapse.show {
 
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
-  color: #555;
+  color: #222;
   background-color: #fff;
   border-color: #f0f0f0;
 }
@@ -9185,8 +9185,9 @@ a.text-dark:hover, a.text-dark:focus {
   transition: all 0.2s ease-in-out;
 }
 
-.nav-tabs .nav-link:not(.disabled):hover, .nav-tabs .nav-link:not(.disabled):focus {
+.nav-tabs .nav-link:not(.disabled):hover, .nav-tabs .nav-link:not(.disabled):focus, .nav-tabs .nav-link.active {
   padding-bottom: calc(0.5em + 6px);
+  border-bottom-color: transparent;
   margin-top: 0;
 }
 

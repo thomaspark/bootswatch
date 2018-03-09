@@ -211,8 +211,10 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400
     }
 
     &:not(.disabled):hover,
-    &:not(.disabled):focus {
+    &:not(.disabled):focus,
+    &.active {
       padding-bottom: calc(0.5em + 6px);
+      border-bottom-color: transparent;
       margin-top: 0;
     }
   }
