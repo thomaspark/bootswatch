@@ -3659,7 +3659,7 @@ tbody.collapse.show {
   position: relative;
   display: block;
   min-height: 1.5rem;
-  padding-left: 1.5rem;
+  padding-left: 1.75rem;
 }
 
 .custom-control-inline {
@@ -3681,8 +3681,8 @@ tbody.collapse.show {
 }
 
 .custom-control-input:focus ~ .custom-control-label::before {
-  -webkit-box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(33, 150, 243, 0.25);
-          box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(33, 150, 243, 0.25);
+  -webkit-box-shadow: 0;
+          box-shadow: 0;
 }
 
 .custom-control-input:active ~ .custom-control-label::before {
@@ -3695,7 +3695,7 @@ tbody.collapse.show {
 }
 
 .custom-control-input:disabled ~ .custom-control-label::before {
-  background-color: #eee;
+  background-color: #f8f9fa;
 }
 
 .custom-control-label {
@@ -3704,27 +3704,27 @@ tbody.collapse.show {
 
 .custom-control-label::before {
   position: absolute;
-  top: 0.25rem;
+  top: 0.125rem;
   left: 0;
   display: block;
-  width: 1rem;
-  height: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
   pointer-events: none;
   content: "";
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  background-color: #dee2e6;
+  background-color: #fff;
 }
 
 .custom-control-label::after {
   position: absolute;
-  top: 0.25rem;
+  top: 0.125rem;
   left: 0;
   display: block;
-  width: 1rem;
-  height: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
   content: "";
   background-repeat: no-repeat;
   background-position: center center;
@@ -3732,7 +3732,7 @@ tbody.collapse.show {
 }
 
 .custom-checkbox .custom-control-label::before {
-  border-radius: 0;
+  border-radius: 2px;
 }
 
 .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
@@ -3768,7 +3768,7 @@ tbody.collapse.show {
 }
 
 .custom-radio .custom-control-input:checked ~ .custom-control-label::after {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%23fff'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%232196F3'/%3E%3C/svg%3E");
 }
 
 .custom-radio .custom-control-input:disabled:checked ~ .custom-control-label::before {
@@ -10170,6 +10170,37 @@ select.form-control:focus {
 select[multiple],
 select.form-control[multiple] {
   background: none;
+}
+
+.custom-control-label::before {
+  top: 0;
+  border: 2px solid #ced4da;
+}
+
+.custom-control-label::after {
+  top: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  border-color: #2196F3;
+}
+
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.custom-radio .custom-control-input:checked ~ .custom-control-label::before {
+  background-color: #fff;
+}
+
+.custom-radio .custom-control-input:checked ~ .custom-control-label::after {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-transition: 240ms;
+  transition: 240ms;
 }
 
 .has-warning input:not([type=checkbox]),

@@ -326,6 +326,37 @@ select.form-control {
   }
 }
 
+.custom-control-label {
+  &::before {
+    top: 0;
+    border: 2px solid $gray-400;
+  }
+  &::after {
+    top: 0;
+    transform: scale(0);
+  }
+
+  .custom-control-input:checked ~ &::before {
+    border-color: $primary;
+  }
+}
+
+.custom-checkbox .custom-control-input:checked {
+  ~ .custom-control-label::after {
+    transform: scale(1.5);
+  }
+}
+
+.custom-radio .custom-control-input:checked {
+   ~ .custom-control-label::before {
+     background-color: $white;
+   }
+   ~ .custom-control-label::after {
+     transform: scale(1.5);
+     transition: 240ms;
+   }
+}
+
 .has-warning {
   input:not([type=checkbox]),
   .form-control,
