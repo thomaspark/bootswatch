@@ -3768,7 +3768,7 @@ tbody.collapse.show {
 }
 
 .custom-radio .custom-control-input:checked ~ .custom-control-label::after {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%232196F3'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='4' fill='%232196F3'/%3E%3C/svg%3E");
 }
 
 .custom-radio .custom-control-input:disabled:checked ~ .custom-control-label::before {
@@ -10179,8 +10179,6 @@ select.form-control[multiple] {
 
 .custom-control-label::after {
   top: 0;
-  -webkit-transform: scale(0);
-          transform: scale(0);
 }
 
 .custom-control-input:checked ~ .custom-control-label::before {
@@ -10197,10 +10195,15 @@ select.form-control[multiple] {
 }
 
 .custom-radio .custom-control-input:checked ~ .custom-control-label::after {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
+  -webkit-transform: scale(1.125);
+          transform: scale(1.125);
   -webkit-transition: 240ms;
   transition: 240ms;
+}
+
+.custom-radio .custom-control-input ~ .custom-control-label::after {
+  -webkit-transform: scale(0.75);
+          transform: scale(0.75);
 }
 
 .has-warning input:not([type=checkbox]),
