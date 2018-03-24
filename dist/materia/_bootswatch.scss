@@ -333,7 +333,6 @@ select.form-control {
   }
   &::after {
     top: 0;
-    transform: scale(0);
   }
 
   .custom-control-input:checked ~ &::before {
@@ -347,14 +346,21 @@ select.form-control {
   }
 }
 
-.custom-radio .custom-control-input:checked {
-   ~ .custom-control-label::before {
-     background-color: $white;
-   }
-   ~ .custom-control-label::after {
-     transform: scale(1.5);
-     transition: 240ms;
-   }
+.custom-radio .custom-control-input {
+  &:checked {
+    ~ .custom-control-label::before {
+      background-color: $white;
+    }
+    ~ .custom-control-label::after {
+      transform: scale(1.125);
+      transition: 240ms;
+    }
+  }
+  & {
+    ~ .custom-control-label::after {
+      transform: scale(.75);
+    }
+  }
 }
 
 .has-warning {
