@@ -258,11 +258,8 @@ input[type=number],
 [type=email].form-control,
 [type=tel].form-control,
 [contenteditable].form-control {
-  padding: 0;
-  border: none;
-  appearance: none;
+  font-size: 1rem;
   box-shadow: inset 0 -1px 0 #ddd;
-  font-size: 16px;
   transition: all 0.2s;
 
   &:focus {
@@ -298,18 +295,12 @@ input[type=number],
 
 select,
 select.form-control {
-  border: 0;
-  border-radius: 0;
   appearance: none;
-  padding-left: 0;
-  padding-right: 0\9; // remove padding for < ie9 since default arrow can't be removed
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAMAAACelLz8AAAAJ1BMVEVmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmaP/QSjAAAADHRSTlMAAgMJC0uWpKa6wMxMdjkoAAAANUlEQVR4AeXJyQEAERAAsNl7Hf3X6xt0QL6JpZWq30pdvdadme+0PMdzvHm8YThHcT1H7K0BtOMDniZhWOgAAAAASUVORK5CYII=);
   background-size: 13px;
   background-repeat: no-repeat;
   background-position: right center;
   box-shadow: inset 0 -1px 0 #ddd;
-  font-size: 16px;
-  line-height: 1.5;
 
   &::-ms-expand {
     display: none;
@@ -335,131 +326,40 @@ select.form-control {
   }
 }
 
-.radio,
-.radio-inline,
-.checkbox,
-.checkbox-inline {
-  label {
-    padding-left: 25px;
+.custom-control-label {
+  &::before {
+    top: 0;
+    border: 2px solid $gray-400;
+  }
+  &::after {
+    top: 0;
   }
 
-  input[type="radio"],
-  input[type="checkbox"] {
-    margin-left: -25px;
+  .custom-control-input:checked ~ &::before {
+    border-color: $primary;
   }
 }
 
-input[type="radio"],
-.radio input[type="radio"],
-.radio-inline input[type="radio"] {
-  position: relative;
-  margin-right: 4px;
-  vertical-align: top;
-  border: none;
-  background-color: transparent;
-  appearance: none;
-  cursor: pointer;
-
-  &:focus {
-    outline: none;
-  }
-
-  &:before,
-  &:after {
-    content: "";
-    display: block;
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    transition: 240ms;
-  }
-
-  &:before {
-    position: absolute;
-    left: 0;
-    top: -2px;
-    background-color: $primary;
-    transform: scale(0);
-  }
-
-  &:after {
-    position: relative;
-    top: -2px;
-    border: 2px solid $gray-500;
-  }
-
-  &:checked:before {
-    transform: scale(0.5);
-  }
-
-  &:disabled:checked:before {
-    background-color: $gray-300;
-  }
-
-  &:checked:after {
-    border-color: $primary;
-  }
-
-  &:disabled:after,
-  &:disabled:checked:after {
-    border-color: $gray-300;
+.custom-checkbox .custom-control-input:checked {
+  ~ .custom-control-label::after {
+    transform: scale(1.5);
   }
 }
 
-input[type="checkbox"],
-.checkbox input[type="checkbox"],
-.checkbox-inline input[type="checkbox"] {
-  position: relative;
-  border: none;
-  margin-bottom: -4px;
-  appearance: none;
-  cursor: pointer;
-
-  &:focus {
-    outline: none;
+.custom-radio .custom-control-input {
+  &:checked {
+    ~ .custom-control-label::before {
+      background-color: $white;
+    }
+    ~ .custom-control-label::after {
+      transform: scale(1.125);
+      transition: 240ms;
+    }
   }
-
-  &:focus:after {
-    border-color: $primary;
-  }
-
-  &:after {
-    content: "";
-    display: block;
-    width: 18px;
-    height: 18px;
-    margin-right: 5px;
-    border: 2px solid $gray-500;
-    border-radius: 2px;
-    transition: 240ms;
-  }
-
-  &:checked:before {
-    content: "";
-    position: absolute;
-    top: 2px;
-    left: 6px;
-    display: table;
-    width: 6px;
-    height: 12px;
-    border: 2px solid #fff;
-    border-top-width: 0;
-    border-left-width: 0;
-    transform: rotate(45deg);
-  }
-
-  &:checked:after {
-    background-color: $primary;
-    border-color: $primary;
-  }
-
-  &:disabled:after {
-    border-color: $gray-300;
-  }
-
-  &:disabled:checked:after {
-    background-color: $gray-300;
-    border-color: transparent;
+  & {
+    ~ .custom-control-label::after {
+      transform: scale(.75);
+    }
   }
 }
 
