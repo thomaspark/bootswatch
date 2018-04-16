@@ -411,6 +411,75 @@ select.form-control {
   }
 }
 
+.input-group {
+
+  > .input-group-prepend > .input-group-text {
+    padding-right: 0.25rem;
+  }
+
+  > .input-group-append > .input-group-text {
+    padding-left: 0.25rem;
+  }
+
+  .form-control {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+}
+
+.input-group-sm {
+
+  > .input-group-prepend > .btn,
+  > .input-group-append > .btn {
+    padding: $input-btn-padding-y-sm $input-btn-padding-x-sm;
+  }
+
+  > .input-group-prepend > .input-group-text {
+    padding-right: $input-btn-padding-x-sm;
+  }
+
+  > .input-group-append > .input-group-text {
+    padding-left: $input-btn-padding-x-sm;
+  }
+
+  > .input-group-prepend > .btn {
+    border-top-left-radius: $btn-border-radius-sm;
+    border-bottom-left-radius: $btn-border-radius-sm;
+  }
+
+  > .input-group-append > .btn {
+    border-top-right-radius: $btn-border-radius-sm;
+    border-bottom-right-radius: $btn-border-radius-sm;
+  }
+}
+
+.input-group-lg {
+
+  > .input-group-prepend > .btn,
+  > .input-group-append > .btn {
+    padding: $input-btn-padding-y-lg $input-btn-padding-x-lg;
+  }
+
+  > .input-group-prepend > .input-group-text {
+    padding-right: $input-btn-padding-x-lg;
+  }
+
+  > .input-group-append > .input-group-text {
+    padding-left: $input-btn-padding-x-lg;
+  }
+
+  > .input-group-prepend > .btn {
+    border-top-left-radius: $btn-border-radius-lg;
+    border-bottom-left-radius: $btn-border-radius-lg;
+  }
+
+  > .input-group-append > .btn {
+    border-top-right-radius: $btn-border-radius-lg;
+    border-bottom-right-radius: $btn-border-radius-lg;
+  }
+}
+
+
 .form-group-lg {
   select,
   select.form-control {
