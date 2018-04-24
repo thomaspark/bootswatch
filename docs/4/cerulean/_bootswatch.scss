@@ -58,6 +58,15 @@ $text-shadow: 0 1px 0 rgba(0, 0, 0, 0.05) !default;
   @include btn-shadow($danger);
 }
 
+.btn-light {
+  @include btn-shadow($light);
+}
+
+.btn-dark {
+  @include btn-shadow($dark);
+}
+
+
 // Typography ==================================================================
 
 .bg-primary,
