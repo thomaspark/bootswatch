@@ -15,10 +15,16 @@ pre {
   }
 }
 
-#home {
-  padding-top: 0px;
+#home, #help {
+  font-size: 0.9rem;
   .navbar {
+    background: rgb(52,154,237);
+    background: linear-gradient(145deg, rgba(52,154,237,1) 50%, rgba(52,216,237,1) 100%);
     transition: box-shadow 200ms ease-in;
+  }
+  .navbar-transparent {
+    background: none !important;
+    box-shadow: none;
   }
   .navbar-brand {
     .nav-link {
@@ -31,10 +37,20 @@ pre {
       width: 30px;
     }
   }
+  .nav-link {
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #fff;
+  }
+}
+
+#home {
+  padding-top: 0px;
   .btn {
-    padding: 0.6em 0.7em;
+    padding: 0.6rem 0.55rem 0.5rem;
     box-shadow: none;
     font-size: 0.7rem;
+    font-weight: 500;
   }
 }
 
@@ -126,8 +142,9 @@ pre {
 }
 
 .splash {
-  padding: 12em 0 3em;
-  background-color: #2196F3;
+  padding: 12em 0 6em;
+  background: rgb(52,154,237);
+  background: linear-gradient(145deg, rgba(52,154,237,1) 50%, rgba(52,216,237,1) 100%);
   color: #fff;
   text-align: center;
   .logo {
