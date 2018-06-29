@@ -349,6 +349,17 @@ label,
   }
 }
 
+.pagination,
+.pagination-lg,
+.pagination-sm {
+  .page-item:first-child,
+  .page-item:last-child {
+    .page-link {
+      border-radius: 3px;
+    }
+  }
+}
+
 .list-group {
   font-size: $font-size-sm;
   font-weight: 300;

@@ -9715,6 +9715,15 @@ label,
   border-color: transparent;
 }
 
+.pagination .page-item:first-child .page-link,
+.pagination .page-item:last-child .page-link,
+.pagination-lg .page-item:first-child .page-link,
+.pagination-lg .page-item:last-child .page-link,
+.pagination-sm .page-item:first-child .page-link,
+.pagination-sm .page-item:last-child .page-link {
+  border-radius: 3px;
+}
+
 .list-group {
   font-size: 0.8203125rem;
   font-weight: 300;
