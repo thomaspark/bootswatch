@@ -194,6 +194,11 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
       margin-top: 0;
     }
   }
+
+  .btn + .btn,
+  .btn + .btn-group > .dropdown-toggle {
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  }
 }
 
 .border-secondary {

@@ -10243,6 +10243,12 @@ fieldset[disabled] .btn-secondary:focus {
   margin-top: 0;
 }
 
+.btn-group .btn + .btn,
+.btn-group .btn + .btn-group > .dropdown-toggle {
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+          box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+
 .border-secondary {
   border: 1px solid #dfdfdf !important;
 }
