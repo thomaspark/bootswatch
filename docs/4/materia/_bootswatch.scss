@@ -277,6 +277,11 @@ input[type=number],
     border-bottom: 1px dotted #ddd;
   }
 
+  &[disabled],
+  &[disabled]::placeholder {
+    color: #ddd;
+  }
+
   &:not(textarea) {
     height: $input-height;
   }
