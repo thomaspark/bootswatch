@@ -147,7 +147,6 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Lato:400,700,400italic"
   }
 }
 
-
 .alert {
   border: none;
   color: $white;
@@ -178,4 +177,9 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Lato:400,700,400italic"
 // Containers ==================================================================
 .modal .close{
   color: $black;
+
+  &:not(:disabled):not(.disabled):hover,
+  &:not(:disabled):not(.disabled):focus {
+    color: $black;
+  }
 }

@@ -420,5 +420,10 @@ a.list-group-item {
 
   .close {
     color: $black;
+
+    &:not(:disabled):not(.disabled):hover,
+    &:not(:disabled):not(.disabled):focus {
+      color: $black;
+    }
   }
 }
