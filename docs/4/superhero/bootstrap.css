@@ -1681,16 +1681,16 @@ pre code {
 .table td {
   padding: 0.75rem;
   vertical-align: top;
-  border-top: 1px solid #dee2e6;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 .table thead th {
   vertical-align: bottom;
-  border-bottom: 2px solid #dee2e6;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.15);
 }
 
 .table tbody + tbody {
-  border-top: 2px solid #dee2e6;
+  border-top: 2px solid rgba(0, 0, 0, 0.15);
 }
 
 .table .table {
@@ -1703,12 +1703,12 @@ pre code {
 }
 
 .table-bordered {
-  border: 1px solid #dee2e6;
+  border: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 .table-bordered th,
 .table-bordered td {
-  border: 1px solid #dee2e6;
+  border: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 .table-bordered thead th,
@@ -1875,7 +1875,7 @@ pre code {
 .table .thead-light th {
   color: #495057;
   background-color: #4E5D6C;
-  border-color: #dee2e6;
+  border-color: rgba(0, 0, 0, 0.15);
 }
 
 .table-dark {
@@ -9489,11 +9489,11 @@ a.text-dark:hover, a.text-dark:focus {
   .table-dark td,
   .table-dark thead th,
   .table-dark tbody + tbody {
-    border-color: #dee2e6;
+    border-color: rgba(0, 0, 0, 0.15);
   }
   .table .thead-dark th {
     color: inherit;
-    border-color: #dee2e6;
+    border-color: rgba(0, 0, 0, 0.15);
   }
 }
 
@@ -9538,6 +9538,26 @@ a.text-dark:hover, a.text-dark:focus {
   color: rgba(255, 255, 255, 0.4);
 }
 
+.table-dark {
+  color: #fff;
+}
+
+.table-primary, .table-primary > th, .table-primary > td {
+  background-color: #DF691A;
+}
+
+.table-secondary, .table-secondary > th, .table-secondary > td {
+  background-color: #4E5D6C;
+}
+
+.table-light, .table-light > th, .table-light > td {
+  background-color: #8d9dad;
+}
+
+.table-dark, .table-dark > th, .table-dark > td {
+  background-color: #4E5D6C;
+}
+
 .table-success, .table-success > th, .table-success > td {
   background-color: #5cb85c;
 }
@@ -9556,6 +9576,22 @@ a.text-dark:hover, a.text-dark:focus {
 
 .table-active, .table-active > th, .table-active > td {
   background-color: rgba(255, 255, 255, 0.075);
+}
+
+.table-hover .table-primary:hover, .table-hover .table-primary:hover > th, .table-hover .table-primary:hover > td {
+  background-color: #c85e17;
+}
+
+.table-hover .table-secondary:hover, .table-hover .table-secondary:hover > th, .table-hover .table-secondary:hover > td {
+  background-color: #43505d;
+}
+
+.table-hover .table-light:hover, .table-hover .table-light:hover > th, .table-hover .table-light:hover > td {
+  background-color: #7e90a2;
+}
+
+.table-hover .table-dark:hover, .table-hover .table-dark:hover > th, .table-hover .table-dark:hover > td {
+  background-color: #43505d;
 }
 
 .table-hover .table-success:hover, .table-hover .table-success:hover > th, .table-hover .table-success:hover > td {

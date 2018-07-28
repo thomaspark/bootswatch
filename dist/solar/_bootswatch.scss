@@ -16,15 +16,40 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Source+Sans+Pro" !defau
 // Tables ======================================================================
 
 .table {
+
+  &-primary,
+  &-secondary,
+  &-dark,
   &-success,
   &-info,
   &-warning,
   &-danger {
     color: #fff;
   }
-}
 
-.table {
+  &-primary {
+    &, > th, > td {
+      background-color: $primary;
+    }
+  }
+
+  &-secondary {
+    &, > th, > td {
+      background-color: $secondary;
+    }
+  }
+
+  &-light {
+    &, > th, > td {
+      background-color: $light;
+    }
+  }
+
+  &-dark {
+    &, > th, > td {
+      background-color: $dark;
+    }
+  }
 
   &-success {
     &, > th, > td {
@@ -57,6 +82,30 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Source+Sans+Pro" !defau
   }
 
   &-hover {
+
+    .table-primary:hover {
+      &, > th, > td {
+        background-color: darken($primary, 5%);
+      }
+    }
+
+    .table-secondary:hover {
+      &, > th, > td {
+        background-color: darken($secondary, 5%);
+      }
+    }
+
+    .table-light:hover {
+      &, > th, > td {
+        background-color: darken($light, 5%);
+      }
+    }
+
+    .table-dark:hover {
+      &, > th, > td {
+        background-color: darken($dark, 5%);
+      }
+    }
 
     .table-success:hover {
       &, > th, > td {
