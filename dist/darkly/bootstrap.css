@@ -9539,6 +9539,10 @@ a.text-dark:hover, a.text-dark:focus {
   background-color: #F39C12;
 }
 
+.table-active, .table-active > th, .table-active > td {
+  background-color: rgba(0, 0, 0, 0.075);
+}
+
 .table-hover .table-success:hover, .table-hover .table-success:hover > th, .table-hover .table-success:hover > td {
   background-color: #00a379;
 }
@@ -9553,6 +9557,10 @@ a.text-dark:hover, a.text-dark:focus {
 
 .table-hover .table-warning:hover, .table-hover .table-warning:hover > th, .table-hover .table-warning:hover > td {
   background-color: #e08e0b;
+}
+
+.table-hover .table-active:hover, .table-hover .table-active:hover > th, .table-hover .table-active:hover > td {
+  background-color: rgba(0, 0, 0, 0.075);
 }
 
 .input-group-addon {

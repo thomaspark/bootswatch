@@ -9733,6 +9733,10 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #f89406;
 }
 
+.table-active, .table-active > th, .table-active > td {
+  background-color: rgba(255, 255, 255, 0.075);
+}
+
 .table-hover .table-success:hover, .table-hover .table-success:hover > th, .table-hover .table-success:hover > td {
   background-color: #4fbd4f;
 }
@@ -9747,6 +9751,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .table-hover .table-warning:hover, .table-hover .table-warning:hover > th, .table-hover .table-warning:hover > td {
   background-color: #df8505;
+}
+
+.table-hover .table-active:hover, .table-hover .table-active:hover > th, .table-hover .table-active:hover > td {
+  background-color: rgba(255, 255, 255, 0.075);
 }
 
 legend {

@@ -84,6 +84,12 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Lato:300,400,700" !defa
     }
   }
 
+  &-active {
+    &, > th, > td {
+      background-color: $table-active-bg;
+    }
+  }
+
   &-hover {
 
     .table-success:hover {
@@ -107,6 +113,12 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Lato:300,400,700" !defa
     .table-warning:hover {
       &, > th, > td {
         background-color: darken($warning, 5%);
+      }
+    }
+
+    .table-active:hover {
+      &, > th, > td {
+        background-color: $table-active-bg;
       }
     }
 

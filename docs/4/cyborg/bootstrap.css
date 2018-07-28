@@ -9546,6 +9546,10 @@ table {
   background-color: #FF8800;
 }
 
+.table-active, .table-active > th, .table-active > td {
+  background-color: rgba(255, 255, 255, 0.075);
+}
+
 .table-hover .table-success:hover, .table-hover .table-success:hover > th, .table-hover .table-success:hover > td {
   background-color: #669a00;
 }
@@ -9560,6 +9564,10 @@ table {
 
 .table-hover .table-warning:hover, .table-hover .table-warning:hover > th, .table-hover .table-warning:hover > td {
   background-color: #e67a00;
+}
+
+.table-hover .table-active:hover, .table-hover .table-active:hover > th, .table-hover .table-active:hover > td {
+  background-color: rgba(255, 255, 255, 0.075);
 }
 
 legend {

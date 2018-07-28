@@ -253,6 +253,12 @@ h1, h2, h3, h4, h5, h6 {
     }
   }
 
+  &-active {
+    &, > th, > td {
+      background-color: $table-active-bg;
+    }
+  }
+
   &-hover {
 
     .table-success:hover {
@@ -276,6 +282,12 @@ h1, h2, h3, h4, h5, h6 {
     .table-warning:hover {
       &, > th, > td {
         background-color: darken($warning, 5%);
+      }
+    }
+
+    .table-active:hover {
+      &, > th, > td {
+        background-color: $table-active-bg;
       }
     }
 

@@ -9610,6 +9610,10 @@ a.text-dark:hover, a.text-dark:focus {
   background-color: #FF851B;
 }
 
+.table-active, .table-active > th, .table-active > td {
+  background-color: rgba(0, 0, 0, 0.075);
+}
+
 .table-hover .table-success:hover, .table-hover .table-success:hover > th, .table-hover .table-success:hover > td {
   background-color: #23a127;
 }
@@ -9624,6 +9628,10 @@ a.text-dark:hover, a.text-dark:focus {
 
 .table-hover .table-warning:hover, .table-hover .table-warning:hover > th, .table-hover .table-warning:hover > td {
   background-color: #ff7702;
+}
+
+.table-hover .table-active:hover, .table-hover .table-active:hover > th, .table-hover .table-active:hover > td {
+  background-color: rgba(0, 0, 0, 0.075);
 }
 
 .form-control {

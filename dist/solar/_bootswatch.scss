@@ -50,6 +50,12 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Source+Sans+Pro" !defau
     }
   }
 
+  &-active {
+    &, > th, > td {
+      background-color: $table-active-bg;
+    }
+  }
+
   &-hover {
 
     .table-success:hover {
@@ -73,6 +79,12 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Source+Sans+Pro" !defau
     .table-warning:hover {
       &, > th, > td {
         background-color: darken($warning, 5%);
+      }
+    }
+
+    .table-active:hover {
+      &, > th, > td {
+        background-color: $table-active-bg;
       }
     }
 

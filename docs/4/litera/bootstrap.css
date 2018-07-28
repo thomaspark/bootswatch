@@ -9583,6 +9583,10 @@ table-success, table-info, table-warning, table-danger,
   background-color: #f0ad4e;
 }
 
+.table-active, .table-active > th, .table-active > td {
+  background-color: rgba(0, 0, 0, 0.075);
+}
+
 .table-hover .table-success:hover, .table-hover .table-success:hover > th, .table-hover .table-success:hover > td {
   background-color: #029f65;
 }
@@ -9597,6 +9601,10 @@ table-success, table-info, table-warning, table-danger,
 
 .table-hover .table-warning:hover, .table-hover .table-warning:hover > th, .table-hover .table-warning:hover > td {
   background-color: #eea236;
+}
+
+.table-hover .table-active:hover, .table-hover .table-active:hover > th, .table-hover .table-active:hover > td {
+  background-color: rgba(0, 0, 0, 0.075);
 }
 
 .nav,

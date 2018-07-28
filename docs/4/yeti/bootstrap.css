@@ -9704,6 +9704,10 @@ table {
   background-color: #E99002;
 }
 
+.table-active, .table-active > th, .table-active > td {
+  background-color: rgba(0, 0, 0, 0.075);
+}
+
 .table-hover .table-success:hover, .table-hover .table-success:hover > th, .table-hover .table-success:hover > td {
   background-color: #3c9a5f;
 }
@@ -9718,6 +9722,10 @@ table {
 
 .table-hover .table-warning:hover, .table-hover .table-warning:hover > th, .table-hover .table-warning:hover > td {
   background-color: #d08002;
+}
+
+.table-hover .table-active:hover, .table-hover .table-active:hover > th, .table-hover .table-active:hover > td {
+  background-color: rgba(0, 0, 0, 0.075);
 }
 
 label,

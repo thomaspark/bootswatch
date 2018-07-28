@@ -82,6 +82,12 @@ table {
     }
   }
 
+  &-active {
+    &, > th, > td {
+      background-color: $table-active-bg;
+    }
+  }
+
   &-hover {
 
     .table-success:hover {
@@ -105,6 +111,12 @@ table {
     .table-warning:hover {
       &, > th, > td {
         background-color: darken($warning, 5%);
+      }
+    }
+
+    .table-active:hover {
+      &, > th, > td {
+        background-color: $table-active-bg;
       }
     }
 
