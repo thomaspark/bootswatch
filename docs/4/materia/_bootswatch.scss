@@ -564,6 +564,7 @@ select.form-control {
 
 .alert {
   padding-right: 2.5rem;
+  border: none;
 
   &, h1, h2, h3, h4, h5, h6 {
     color: #fff;
@@ -571,7 +572,11 @@ select.form-control {
 
   @each $color, $value in $theme-colors {
     &-#{$color} {
-      background-color: $value;
+      @if $enable-gradients {
+        background: $value linear-gradient(180deg, mix($body-bg, $value, 15%), $value) repeat-x;
+      } @else {
+        background-color: $value;
+      }
     }
   }
 

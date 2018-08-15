@@ -37,10 +37,14 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:400,700" !defaul
 // Buttons =====================================================================
 
 .btn {
-
-  &-warning,
-  &-warning:hover {
-    color: $white;
+  @each $color, $value in $theme-colors {
+    &-#{$color} {
+      @if $enable-gradients {
+        background: $value linear-gradient(180deg, mix($white, $value, 15%), $value) repeat-x;
+      } @else {
+        background-color: $value;
+      }
+    }
   }
 }
 
@@ -222,7 +226,11 @@ legend {
 
   @each $color, $value in $theme-colors {
     &-#{$color} {
-      background-color: $value;
+      @if $enable-gradients {
+        background: $value linear-gradient(180deg, mix($white, $value, 15%), $value) repeat-x;
+      } @else {
+        background-color: $value;
+      }
     }
   }
 
