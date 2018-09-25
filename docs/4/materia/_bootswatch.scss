@@ -263,7 +263,6 @@ input[type=number],
 [type=email].form-control,
 [type=tel].form-control,
 [contenteditable].form-control {
-  font-size: 1rem;
   box-shadow: inset 0 -1px 0 #ddd;
   transition: all 0.2s;
 
@@ -280,22 +279,6 @@ input[type=number],
   &[disabled],
   &[disabled]::placeholder {
     color: #ddd;
-  }
-
-  &:not(textarea) {
-    height: $input-height;
-  }
-
-  &.form-control {
-    &-sm {
-      height: $input-height-sm;
-      font-size: $font-size-sm;
-    }
-
-    &-lg {
-      height: $input-height-lg;
-      font-size: $font-size-lg;
-    }
   }
 
   &::-ms-clear {

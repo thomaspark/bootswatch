@@ -10458,7 +10458,6 @@ input[type=number],
 [type=email].form-control,
 [type=tel].form-control,
 [contenteditable].form-control {
-  font-size: 1rem;
   -webkit-box-shadow: inset 0 -1px 0 #ddd;
           box-shadow: inset 0 -1px 0 #ddd;
   -webkit-transition: all 0.2s;
@@ -10611,53 +10610,6 @@ input[type=number][disabled]::placeholder,
 [contenteditable].form-control[disabled],
 [contenteditable].form-control[disabled]::placeholder {
   color: #ddd;
-}
-
-textarea:not(textarea),
-textarea.form-control:not(textarea),
-input.form-control:not(textarea),
-input[type=text]:not(textarea),
-input[type=password]:not(textarea),
-input[type=email]:not(textarea),
-input[type=number]:not(textarea),
-[type=text].form-control:not(textarea),
-[type=password].form-control:not(textarea),
-[type=email].form-control:not(textarea),
-[type=tel].form-control:not(textarea),
-[contenteditable].form-control:not(textarea) {
-  height: calc(2.81875rem + 0rem);
-}
-
-textarea.form-control-sm,
-textarea.form-control.form-control-sm,
-input.form-control.form-control-sm,
-input[type=text].form-control-sm,
-input[type=password].form-control-sm,
-input[type=email].form-control-sm,
-input[type=number].form-control-sm,
-[type=text].form-control.form-control-sm,
-[type=password].form-control.form-control-sm,
-[type=email].form-control.form-control-sm,
-[type=tel].form-control.form-control-sm,
-[contenteditable].form-control.form-control-sm {
-  height: calc(1.56640625rem + 0rem);
-  font-size: 0.7109375rem;
-}
-
-textarea.form-control-lg,
-textarea.form-control.form-control-lg,
-input.form-control.form-control-lg,
-input[type=text].form-control-lg,
-input[type=password].form-control-lg,
-input[type=email].form-control-lg,
-input[type=number].form-control-lg,
-[type=text].form-control.form-control-lg,
-[type=password].form-control.form-control-lg,
-[type=email].form-control.form-control-lg,
-[type=tel].form-control.form-control-lg,
-[contenteditable].form-control.form-control-lg {
-  height: calc(2.5234375rem + 0rem);
-  font-size: 1.015625rem;
 }
 
 textarea::-ms-clear,
