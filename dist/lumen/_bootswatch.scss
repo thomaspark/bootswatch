@@ -4,7 +4,8 @@
 
 // Variables ===================================================================
 
-$web-font-path: "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic" !default;
+// $web-font-path: "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic" !default;
+$web-font-path: "https://fonts.googleapis.com/css?family=Oxygen" !default;
 @import url($web-font-path);
 
 @mixin shadow($width: 4px){
@@ -35,7 +36,9 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400
 
 .btn {
   @include shadow();
-  font-size: 12px;
+  padding: 0.375rem 0.900rem;
+  // font-size: 12px;
+  font-size: 0.900rem;
   font-weight: bold;
   text-transform: uppercase;
 
@@ -89,6 +92,10 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400
   &-dark {
     border-color: darken($dark, 5%);
   }
+}
+
+.btn-sm, .btn-group-sm > .btn {
+  padding: 0.25rem 0.75rem;
 }
 
 .btn-group-vertical {
