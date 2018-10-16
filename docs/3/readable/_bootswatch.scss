@@ -125,14 +125,12 @@ legend {
 // Indicators =================================================================
 
 .close {
-  color: #fff;
   text-decoration: none;
   text-shadow: none;
   opacity: 0.4;
 
   &:hover,
   &:focus {
-    color: #fff;
     opacity: 1;
   }
 }
@@ -141,6 +139,10 @@ legend {
   .alert-link {
     color: $alert-success-text;
     text-decoration: underline;
+  }
+
+  .close {
+    color: #fff;
   }
 }
 
@@ -173,11 +175,5 @@ legend {
     .close {
       color: $text-color;
     }
-  }
-}
-
-.modal {
-  .close {
-    color: $text-color;
   }
 }

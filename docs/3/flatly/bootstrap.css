@@ -2,7 +2,7 @@
 /*!
  * bootswatch v3.3.7
  * Homepage: http://bootswatch.com
- * Copyright 2012-2016 Thomas Park
+ * Copyright 2012-2018 Thomas Park
  * Licensed under MIT
  * Based on Bootstrap
 */
@@ -5847,14 +5847,14 @@ button.list-group-item-danger.active:focus {
   font-size: 22.5px;
   font-weight: bold;
   line-height: 1;
-  color: #000000;
+  color: #2c3e50;
   text-shadow: none;
   opacity: 0.2;
   filter: alpha(opacity=20);
 }
 .close:hover,
 .close:focus {
-  color: #000000;
+  color: #2c3e50;
   text-decoration: none;
   cursor: pointer;
   opacity: 0.5;
@@ -6959,18 +6959,19 @@ input:focus {
   background-color: #3be6c4;
 }
 .close {
-  color: #fff;
   text-decoration: none;
   opacity: 0.4;
 }
 .close:hover,
 .close:focus {
-  color: #fff;
   opacity: 1;
 }
 .alert .alert-link {
   color: #fff;
   text-decoration: underline;
+}
+.alert .close {
+  color: #fff;
 }
 .progress {
   height: 10px;
@@ -7012,9 +7013,6 @@ a.list-group-item-danger.active:focus {
   background-color: #e43725;
 }
 .panel-default .close {
-  color: #2c3e50;
-}
-.modal .close {
   color: #2c3e50;
 }
 .popover {

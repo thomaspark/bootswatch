@@ -182,6 +182,10 @@ table,
     text-decoration: underline;
     color: #fff;
   }
+
+  .close {
+    color: #fff;
+  }
 }
 
 .label {
@@ -248,12 +252,6 @@ a.list-group-item {
     &.active:focus {
       background-color: darken($state-danger-bg, 5%);
     }
-  }
-}
-
-.modal {
-  .close {
-    color: $text-color;
   }
 }
 

@@ -237,13 +237,11 @@ input {
 // Indicators =================================================================
 
 .close {
-  color: #fff;
   text-decoration: none;
   opacity: 0.4;
 
   &:hover,
   &:focus {
-    color: #fff;
     opacity: 1;
   }
 }
@@ -253,6 +251,10 @@ input {
   .alert-link {
     color: #fff;
     text-decoration: underline;
+  }
+
+  .close {
+    color: #fff;
   }
 }
 
@@ -320,12 +322,6 @@ a.list-group-item {
     .close {
       color: @text-color;
     }
-  }
-}
-
-.modal {
-  .close {
-    color: @text-color;
   }
 }
 
