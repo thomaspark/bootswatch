@@ -4,9 +4,10 @@ branches:
   - gh-pages
 language: node_js
 node_js:
-- '6'
+- '0.10'
 before_install:
-- npm install -g grunt-cli recess
+- npm install -g grunt-cli recess bower
+- bower install
 script: grunt swatch
 git:
   depth: 10

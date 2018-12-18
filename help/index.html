@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bootswatch: Help</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="../flatly/bootstrap.css" media="screen">
+    <link rel="stylesheet" href="../assets/css/custom.min.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../bower_components/html5shiv/dist/html5shiv.js"></script>
+      <script src="../bower_components/respond/dest/respond.min.js"></script>
+    <![endif]-->
+    <style>
+
+      h1 {
+        padding-top: 2em;
+      }
+
+      code {
+        background-color: #eee;
+        color: inherit;
+      }
+
+      img {
+        width: 100%;
+        max-width: 500px;
+        margin-bottom: 2em;
+      }
+
+    </style>
+    <script>
+
+     var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-23019901-1']);
+      _gaq.push(['_setDomainName', "bootswatch.com"]);
+      _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+
+     (function() {
+       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
+
+    </script>
+  </head>
+  <body>
+
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="../" class="navbar-brand">Bootswatch</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Themes <span class="caret"></span></a>
+              <ul class="dropdown-menu" aria-labelledby="themes">
+                <li><a href="../default/">Default</a></li>
+                <li class="divider"></li>
+                <li><a href="../cerulean/">Cerulean</a></li>
+                <li><a href="../cosmo/">Cosmo</a></li>
+                <li><a href="../cyborg/">Cyborg</a></li>
+                <li><a href="../darkly/">Darkly</a></li>
+                <li><a href="../flatly/">Flatly</a></li>
+                <li><a href="../journal/">Journal</a></li>
+                <li><a href="../lumen/">Lumen</a></li>
+                <li><a href="../paper/">Paper</a></li>
+                <li><a href="../readable/">Readable</a></li>
+                <li><a href="../sandstone/">Sandstone</a></li>
+                <li><a href="../simplex/">Simplex</a></li>
+                <li><a href="../slate/">Slate</a></li>
+                <li><a href="../spacelab/">Spacelab</a></li>
+                <li><a href="../superhero/">Superhero</a></li>
+                <li><a href="../united/">United</a></li>
+                <li><a href="../yeti/">Yeti</a></li>
+              </ul>
+            </li>
+            <li class="active">
+              <a href="../help/">Help</a>
+            </li>
+            <li>
+              <a href="http://news.bootswatch.com">Blog</a>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="http://builtwithbootstrap.com/" target="_blank">Built With Bootstrap</a></li>
+            <li><a href="https://wrapbootstrap.com/?ref=bsw" target="_blank">WrapBootstrap</a></li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9">
+            <h1 id="quickstart">Quick Start</h1>
+            <p>Using the themes is as easy as downloading a CSS file and replacing the one that comes with <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>.</p>
+            <p>The themes are also available via CDN at <a href="http://www.bootstrapcdn.com/bootswatch/">BootstrapCDN</a>.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-9">
+            <h1 id="customization">Customization</h1>
+            <p>To modify a theme or create your own, follow the steps below in your terminal. You'll need to have <a href="https://help.github.com/articles/set-up-git" target="_blank">Git</a> and <a href="http://nodejs.org/" target="_blank">Node</a> installed.</p>
+            <ol>
+              <li><p>Download the repository: <code>git clone https://github.com/thomaspark/bootswatch.git</code></p></li>
+              <li><p>Install dependencies: <code>npm install</code></p></li>
+              <li><p>Make sure that you have <code>grunt</code> available in the command line. You can install <code>grunt-cli</code> as described on the <a href="http://gruntjs.com/getting-started">Grunt Getting Started page</a>.</p></li>
+              <li><p>Modify <code>variables.less</code> and <code>bootswatch.less</code> in one of the theme directories, or create your own in <code>/custom</code>.</p></li>
+              <li><p>Type <code>grunt swatch:[theme]</code> to build the CSS for a theme, e.g., <code>grunt swatch:amelia</code> for Amelia. Or type <code>grunt swatch</code> to build them all at once. </p></li>
+              <li><p>You can run <code>grunt</code> to start a server, watch for any changes to the LESS files, and automatically build a theme and reload it on change. Run <code>grunt server</code> for just the server, and <code>grunt watch</code> for just the watcher.</p></li>
+            </ol>
+            <p>Here are additional tips for <a href="http://www.smashingmagazine.com/2013/03/12/customizing-bootstrap/" target="_blank">customizing Bootstrap</a>.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <h1 id="api">API</h1>
+            <p>You can use the API to integrate the themes with your platform. Get:</p>
+            <p><a href="https://bootswatch.com/api/3.json">https://bootswatch.com/api/3.json</a></p>
+            <p>This returns an object with a <code>version</code> and a <code>themes</code> property. <code>themes</code> is an array with the following properties:</p>
+            <ul>
+              <li><code>name</code></li>
+              <li><code>description</code></li>
+              <li><code>preview</code></li>
+              <li><code>thumbnail</code></li>
+              <li><code>css</code></li>
+              <li><code>cssMin</code></li>
+              <li><code>cssCdn</code></li>
+              <li><code>less</code></li>
+              <li><code>lessVariables</code></li>
+            </ul>
+            <p>Here's a <a href="http://jsbin.com/momonupayu/1/edit?html,js,output">demo</a> of the API in action.</p>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-lg-9">
+            <h1 id="bookmarklet">Bookmarklet</h1>
+            <p>Drag <a class="label label-info" href="javascript:(function(e,a,g,h,f,c,b,d)%7Bif(!(f%3De.jQuery)%7C%7Cg%3Ef.fn.jquery%7C%7Ch(f))%7Bc%3Da.createElement(%22script%22)%3Bc.type%3D%22text/javascript%22%3Bc.src%3D%22//ajax.googleapis.com/ajax/libs/jquery/%22%2Bg%2B%22/jquery.min.js%22%3Bc.onload%3Dc.onreadystatechange%3Dfunction()%7Bif(!b%26%26(!(d%3Dthis.readyState)%7C%7Cd%3D%3D%22loaded%22%7C%7Cd%3D%3D%22complete%22))%7Bh((f%3De.jQuery).noConflict(1),b%3D1)%3Bf(c).remove()%7D%7D%3Ba.documentElement.childNodes%5B0%5D.appendChild(c)%7D%7D)(window,document,%221.3.2%22,function(%24,L)%7Bif(%24(%22.bootswatcher%22)%5B0%5D)%7B%24(%22.bootswatcher%22).remove()%7Delse%7Bvar%20%24e%3D%24(%27%3Cselect%20class%3D%22bootswatcher%22%3E%3Coption%3ECerulean%3C/option%3E%3Coption%3ECosmo%3C/option%3E%3Coption%3ECyborg%3C/option%3E%3Coption%3EDarkly%3C/option%3E%3Coption%3EFlatly%3C/option%3E%3Coption%3EJournal%3C/option%3E%3Coption%3ELumen%3C/option%3E%3Coption%3EPaper%3C/option%3E%3Coption%3EReadable%3C/option%3E%3Coption%3ESandstone%3C/option%3E%3Coption%3ESimplex%3C/option%3E%3Coption%3ESlate%3C/option%3E%3Coption%3ESpacelab%3C/option%3E%3Coption%3ESuperhero%3C/option%3E%3Coption%3EUnited%3C/option%3E%3Coption%3EYeti%3C/option%3E%3C/select%3E%27)%3Bvar%20l%3D1%2BMath.floor(Math.random()*%24e.children().length)%3B%24e.css(%7B%22z-index%22:%2299999%22,position:%22fixed%22,top:%225px%22,right:%225px%22,opacity:%220.5%22,color:%22%23000%22%7D).hover(function()%7B%24(this).css(%22opacity%22,%221%22)%7D,function()%7B%24(this).css(%22opacity%22,%220.5%22)%7D).change(function()%7Bif(!%24(%22link.bootswatcher%22)%5B0%5D)%7B%24(%22head%22).append(%27%3Clink%20rel%3D%22stylesheet%22%20class%3D%22bootswatcher%22%3E%27)%7D%24(%22link.bootswatcher%22).attr(%22href%22,%22//bootswatch.com/%22%2B%24(this).find(%22:selected%22).text().toLowerCase()%2B%22/bootstrap.min.css%22)%7D).find(%22option:nth-child(%22%2Bl%2B%22)%22).attr(%22selected%22,%22selected%22).end().trigger(%22change%22)%3B%24(%22body%22).append(%24e)%7D%3B%7D)%3B">Bootswatchlet</a> into your bookmarks bar, and use it on Bootstrap-based sites to see how they'd look with a theme.</p>
+            <p></p>
+
+            <h1 id="tools">Tools</h1>
+            <p><a href="http://glyphsearch.com/" target="_blank">GlyphSearch</a> is a tool for searching icons from Glyphicons, Font Awesome, and other popular icon font libraries.</p>
+            <p><a href="http://fontcdn.org/" target="_blank">FontCDN</a> is a tool for searching web fonts from Google Fonts.</p>
+
+            <h1 id="support">Support</h1>
+            <p>Show your support for Bootswatch by buying official gear.</p>
+            <p>T-shirts based on several themes including Cyborg, Flatly, and Slate are available at <a href="http://bootswatch.spreadshirt.com/">Spreadshirt</a>.</p>
+            <p><a href="http://bootswatch.spreadshirt.com/"><img src="../assets/img/tshirt.jpg"></a></p>
+            <p>Stickers are available at <a href="http://www.stickermule.com/marketplace/1959-bootswatch">Sticker Mule</a>.</p>
+            <p><a href="http://www.stickermule.com/marketplace/1959-bootswatch"><img src="../assets/img/stickers.jpg"></a></p>
+            <p>Donations are also accepted via <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=F22JEM3Q78JC2">PayPal</a> and <a href="https://gratipay.com/bootswatch/">Gratipay</a>.</p>
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <footer>
+        <div class="row">
+          <div class="col-lg-12">
+
+            <ul class="list-unstyled">
+              <li class="pull-right"><a href="#top">Back to top</a></li>
+              <li><a href="http://news.bootswatch.com" onclick="pageTracker._link(this.href); return false;">Blog</a></li>
+              <li><a href="http://feeds.feedburner.com/bootswatch">RSS</a></li>
+              <li><a href="https://twitter.com/bootswatch">Twitter</a></li>
+              <li><a href="https://github.com/thomaspark/bootswatch/">GitHub</a></li>
+              <li><a href="../help/#api">API</a></li>
+              <li><a href="../help/#support">Support</a></li>
+            </ul>
+            <p>Made by <a href="http://thomaspark.co" rel="nofollow">Thomas Park</a>. Contact him at <a href="mailto:thomas@bootswatch.com">thomas@bootswatch.com</a>.</p>
+            <p>Code released under the <a href="https://github.com/thomaspark/bootswatch/blob/gh-pages/LICENSE">MIT License</a>.</p>
+            <p>Based on <a href="http://getbootstrap.com" rel="nofollow">Bootstrap</a>. Icons from <a href="http://fortawesome.github.io/Font-Awesome/" rel="nofollow">Font Awesome</a>. Web fonts from <a href="http://www.google.com/webfonts" rel="nofollow">Google</a>.</p>
+
+          </div>
+        </div>
+
+      </footer>
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../assets/js/custom.js"></script>
+  </body>
+</html>
