@@ -1,11 +1,11 @@
-// Yeti 3.3.7
+// Yeti 3.4.0
 // Bootswatch
 // -----------------------------------------------------
 
 @web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700";
 
 .web-font(@path) {
-  @import (css) url("@{path}");
+  @import url("@{path}");
 }
 .web-font(@web-font-path);
 
@@ -372,10 +372,6 @@ input[type="checkbox"] {
     color: #fff;
     text-decoration: underline;
   }
-
-  .close {
-    color: #fff;
-  }
 }
 
 .label {
@@ -443,5 +439,11 @@ input[type="checkbox"] {
     .close {
       color: @text-color;
     }
+  }
+}
+
+.modal {
+  .close {
+    color: @text-color;
   }
 }

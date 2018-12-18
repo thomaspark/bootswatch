@@ -1,11 +1,11 @@
-// Cosmo 3.3.7
+// Cosmo 3.4.0
 // Bootswatch
 // -----------------------------------------------------
 
 @web-font-path: "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700";
 
 .web-font(@path) {
-  @import (css) url("@{path}");
+  @import url("@{path}");
 }
 .web-font(@web-font-path);
 
@@ -186,10 +186,6 @@ table,
     text-decoration: underline;
     color: #fff;
   }
-
-  .close {
-    color: #fff;
-  }
 }
 
 .label {
@@ -256,6 +252,12 @@ a.list-group-item {
     &.active:focus {
       background-color: darken(@state-danger-bg, 5%);
     }
+  }
+}
+
+.modal {
+  .close {
+    color: @text-color;
   }
 }
 

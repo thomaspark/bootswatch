@@ -1,4 +1,4 @@
-// Lumen 3.3.7
+// Lumen 3.4.0
 // Bootswatch
 // -----------------------------------------------------
 
@@ -411,11 +411,13 @@ label {
 // Indicators =================================================================
 
 .close {
+  color: #fff;
   text-decoration: none;
   opacity: 0.4;
 
   &:hover,
   &:focus {
+    color: #fff;
     opacity: 1;
   }
 }
@@ -427,10 +429,6 @@ label {
     font-weight: normal;
     color: #fff;
     text-decoration: underline;
-  }
-
-  .close {
-    color: #fff;
   }
 }
 
@@ -511,6 +509,12 @@ a.list-group-item {
     .close {
       color: $text-color;
     }
+  }
+}
+
+.modal {
+  .close {
+    color: $text-color;
   }
 }
 

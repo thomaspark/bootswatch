@@ -1,4 +1,4 @@
-// Slate 3.3.7
+// Slate 3.4.0
 // Bootswatch
 // -----------------------------------------------------
 
@@ -15,43 +15,18 @@
 // Navbar =====================================================================
 
 .navbar {
-  &-default,
-  &-inverse {
-    border: 1px solid rgba(0, 0, 0, 0.6);
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 
-    @media (min-width: @grid-float-breakpoint) {
-      .navbar-nav > li > a {
-        border-right: 1px solid rgba(0, 0, 0, 0.2);
-        border-left: 1px solid rgba(255, 255, 255, 0.1);
+  .btn-shadow(@navbar-default-bg);
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 
-        &:hover {
-          border-left-color: transparent;
-        }
-      }
+  .navbar-nav > li > a {
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
 
-      .nav .open > a {
-        border-color: transparent;
-      }
-
-      .navbar-nav > li.active > a {
-        border-left-color: transparent;
-      }
-
-      .navbar-form {
-        margin-left: 5px;
-        margin-right: 5px;
-      }
-    }
-  }
-
-  &-default {
-    .btn-shadow(@navbar-default-bg);
-
-    .navbar-nav > li > a {
-      &:hover {
-        .btn-shadow-inverse(@navbar-default-bg);
-      }
+    &:hover {
+      .btn-shadow-inverse(@navbar-default-bg);
+      border-left-color: transparent;
     }
   }
 
@@ -68,6 +43,19 @@
         .btn-shadow-inverse(@navbar-inverse-bg);
       }
     }
+  }
+
+  .nav .open > a {
+    border-color: transparent;
+  }
+
+  &-nav > li.active > a {
+    border-left-color: transparent;
+  }
+
+  &-form {
+    margin-left: 5px;
+    margin-right: 5px;
   }
 }
 
@@ -220,6 +208,7 @@ textarea {
   }
 
   .input-group-addon {
+    background-color: @gray-dark;
     border-color: @input-group-addon-border-color;
   }
 }
@@ -245,6 +234,7 @@ textarea {
   }
 
   .input-group-addon {
+    background-color: @gray-dark;
     border-color: @input-group-addon-border-color;
   }
 }
@@ -270,6 +260,7 @@ textarea {
   }
 
   .input-group-addon {
+    background-color: @gray-dark;
     border-color: @input-group-addon-border-color;
   }
 }
@@ -279,6 +270,7 @@ legend {
 }
 
 .input-group-addon {
+  background-color: @gray-dark;
   .btn-shadow(@btn-default-bg);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   color: @btn-default-color;

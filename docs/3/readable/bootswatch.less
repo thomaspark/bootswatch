@@ -1,11 +1,11 @@
-// Readable 3.3.7
+// Readable 3.4.0
 // Bootswatch
 // -----------------------------------------------------
 
 @web-font-path: "https://fonts.googleapis.com/css?family=Raleway:400,700";
 
 .web-font(@path) {
-  @import (css) url("@{path}");
+  @import url("@{path}");
 }
 .web-font(@web-font-path);
 
@@ -129,12 +129,14 @@ legend {
 // Indicators =================================================================
 
 .close {
+  color: #fff;
   text-decoration: none;
   text-shadow: none;
   opacity: 0.4;
 
   &:hover,
   &:focus {
+    color: #fff;
     opacity: 1;
   }
 }
@@ -143,10 +145,6 @@ legend {
   .alert-link {
     color: @alert-success-text;
     text-decoration: underline;
-  }
-
-  .close {
-    color: #fff;
   }
 }
 
@@ -179,5 +177,11 @@ legend {
     .close {
       color: @text-color;
     }
+  }
+}
+
+.modal {
+  .close {
+    color: @text-color;
   }
 }

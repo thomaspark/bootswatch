@@ -1,11 +1,11 @@
-// Flatly 3.3.7
+// Flatly 3.4.0
 // Bootswatch
 // -----------------------------------------------------
 
 @web-font-path: "https://fonts.googleapis.com/css?family=Lato:400,700,400italic";
 
 .web-font(@path) {
-  @import (css) url("@{path}");
+  @import url("@{path}");
 }
 .web-font(@web-font-path);
 
@@ -237,11 +237,13 @@ input {
 // Indicators =================================================================
 
 .close {
+  color: #fff;
   text-decoration: none;
   opacity: 0.4;
 
   &:hover,
   &:focus {
+    color: #fff;
     opacity: 1;
   }
 }
@@ -251,10 +253,6 @@ input {
   .alert-link {
     color: #fff;
     text-decoration: underline;
-  }
-
-  .close {
-    color: #fff;
   }
 }
 
@@ -322,6 +320,12 @@ a.list-group-item {
     .close {
       color: @text-color;
     }
+  }
+}
+
+.modal {
+  .close {
+    color: @text-color;
   }
 }
 
