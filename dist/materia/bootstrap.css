@@ -2058,6 +2058,11 @@ pre code {
   opacity: 1;
 }
 
+.form-control:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.4);
+  opacity: 1;
+}
+
 .form-control::placeholder {
   color: rgba(0, 0, 0, 0.4);
   opacity: 1;
@@ -10509,6 +10514,12 @@ a.text-dark:hover, a.text-dark:focus {
   color: rgba(255, 255, 255, 0.5);
 }
 
+.navbar.bg-dark input[type=text]:-ms-input-placeholder,
+.navbar.bg-dark input[type=password]:-ms-input-placeholder, .navbar.bg-primary input[type=text]:-ms-input-placeholder,
+.navbar.bg-primary input[type=password]:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
 .navbar.bg-dark input[type=text]::placeholder,
 .navbar.bg-dark input[type=password]::placeholder, .navbar.bg-primary input[type=text]::placeholder,
 .navbar.bg-primary input[type=password]::placeholder {
@@ -11437,6 +11448,32 @@ input[type=number][disabled]::-ms-input-placeholder,
 [type=tel].form-control[disabled]::-ms-input-placeholder,
 [contenteditable].form-control[disabled],
 [contenteditable].form-control[disabled]::-ms-input-placeholder {
+  color: #ddd;
+}
+
+textarea[disabled], textarea[disabled]:-ms-input-placeholder,
+textarea.form-control[disabled],
+textarea.form-control[disabled]:-ms-input-placeholder,
+input.form-control[disabled],
+input.form-control[disabled]:-ms-input-placeholder,
+input[type=text][disabled],
+input[type=text][disabled]:-ms-input-placeholder,
+input[type=password][disabled],
+input[type=password][disabled]:-ms-input-placeholder,
+input[type=email][disabled],
+input[type=email][disabled]:-ms-input-placeholder,
+input[type=number][disabled],
+input[type=number][disabled]:-ms-input-placeholder,
+[type=text].form-control[disabled],
+[type=text].form-control[disabled]:-ms-input-placeholder,
+[type=password].form-control[disabled],
+[type=password].form-control[disabled]:-ms-input-placeholder,
+[type=email].form-control[disabled],
+[type=email].form-control[disabled]:-ms-input-placeholder,
+[type=tel].form-control[disabled],
+[type=tel].form-control[disabled]:-ms-input-placeholder,
+[contenteditable].form-control[disabled],
+[contenteditable].form-control[disabled]:-ms-input-placeholder {
   color: #ddd;
 }
 
