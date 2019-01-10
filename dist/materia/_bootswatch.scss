@@ -324,6 +324,10 @@ select.form-control {
   }
 }
 
+.custom-control {
+  min-height: 1.5rem;
+}
+
 .custom-control-label {
   &::before {
     top: 0;
@@ -347,7 +351,7 @@ select.form-control {
 .custom-radio .custom-control-input {
   &:checked {
     ~ .custom-control-label::before {
-      background-color: $white;
+      background: $white;
     }
     ~ .custom-control-label::after {
       transform: scale(1.125);
