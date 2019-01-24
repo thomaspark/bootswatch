@@ -24,15 +24,15 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Open+Sans:400italic,700
   }
 
   &.bg-primary {
-    @include btn-shadow($primary);
+    @include btn-shadow(map-get($theme-colors, "primary"));
   }
 
   &.bg-dark {
-    @include btn-shadow($secondary);
+    @include btn-shadow(map-get($theme-colors, "secondary"));
   }
 
   &.bg-light {
-    @include btn-shadow($light);
+    @include btn-shadow(map-get($theme-colors, "light"));
 
     .nav-link,
     .navbar-brand {
