@@ -29,7 +29,7 @@ To get started, check out <https://getbootstrap.com/>!
 
 Several quick start options are available:
 
-* [Download the latest release](https://github.com/twbs/bootstrap/archive/v3.4.0.zip).
+* [Download the latest release](https://github.com/twbs/bootstrap/archive/v3.4.1.zip).
 * Clone the repo: `git clone https://github.com/twbs/bootstrap.git`.
 * Install with [Bower](https://bower.io/): `bower install bootstrap`.
 * Install with [npm](https://www.npmjs.com/): `npm install bootstrap@3`.
@@ -146,4 +146,4 @@ Thanks to [BrowserStack](https://www.browserstack.com/) for providing the infras
 
 ## Copyright and license
 
-Code and documentation copyright 2011-2018 Twitter, Inc. Code released under [the MIT license](https://github.com/twbs/bootstrap/blob/master/LICENSE). Docs released under [Creative Commons](https://github.com/twbs/bootstrap/blob/master/docs/LICENSE).
+Code and documentation copyright 2011-2019 Twitter, Inc. Code released under [the MIT license](https://github.com/twbs/bootstrap/blob/master/LICENSE). Docs released under [Creative Commons](https://github.com/twbs/bootstrap/blob/master/docs/LICENSE).
