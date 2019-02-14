@@ -33,7 +33,7 @@
     @include translate(0, -25%);
     @include transition-transform(0.3s ease-out);
   }
-  &.in .modal-dialog { @include translate(0, 0) }
+  &.in .modal-dialog { @include translate(0, 0); }
 }
 .modal-open .modal {
   overflow-x: hidden;

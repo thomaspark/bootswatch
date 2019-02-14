@@ -23,8 +23,8 @@ Please see the appropriate guide for your environment of choice:
 In your Gemfile you need to add the `bootstrap-sass` gem, and ensure that the `sass-rails` gem is present - it is added to new Rails applications by default.
 
 ```ruby
-gem 'bootstrap-sass', '~> 3.4.0'
-gem 'sassc-rails', '>= 2.0.0'
+gem 'bootstrap-sass', '~> 3.4.1'
+gem 'sassc-rails', '>= 2.1.0'
 ```
 
 `bundle install` and restart your server to make the files available through the pipeline.
