@@ -3,7 +3,7 @@ Bootswatch
 
 [![Bootswatch Logo](./assets/img/logo-dark.png)](http://bootswatch.com)
 
-Bootswatch is a collection of open source themes for [Bootstrap](http://getbootstrap.com/). Check it out at [bootswatch.com](http://bootswatch.com).
+Bootswatch is a collection of open source themes for [Bootstrap](https://getbootstrap.com/). Check it out at [bootswatch.com](http://bootswatch.com).
 
 Usage
 -----
@@ -36,7 +36,7 @@ Customization
 ------
 Bootswatch is open source and you’re welcome to modify the themes.
 
-Each theme consists of two LESS files. `variables.less`, which is included by default in Bootstrap, allows you to customize [these settings](http://getbootstrap.com/customize/#less-variables). `bootswatch.less` introduces more extensive structural changes.
+Each theme consists of two LESS files. `variables.less`, which is included by default in Bootstrap, allows you to customize [these settings](https://getbootstrap.com/customize/#less-variables). `bootswatch.less` introduces more extensive structural changes.
 
 These files are also available in SASS.
 
@@ -64,7 +64,7 @@ Author
 Thomas Park
 
 + http://github.com/thomaspark
-+ http://thomaspark.co
++ https://thomaspark.co
 
 Thanks
 ------
