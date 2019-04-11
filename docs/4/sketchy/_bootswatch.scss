@@ -7,6 +7,10 @@
 $web-font-path: "https://fonts.googleapis.com/css?family=Neucha|Cabin+Sketch" !default;
 @import url($web-font-path);
 
+$border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;
+$border-radius-lg: 555px 25px 15px 25px/25px 5px 35px 555px;
+$border-radius-sm: 255px 25px 225px 25px/25px 225px 25px 255px;
+
 // Navbar ======================================================================
 
 .navbar {
@@ -40,6 +44,14 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Neucha|Cabin+Sketch" !d
 .btn {
   border-radius: $border-radius;
   text-decoration: none;
+
+  &-lg {
+    border-radius: $border-radius-lg;
+  }
+
+  &-sm {
+    border-radius: $border-radius-sm;
+  }
 }
 
 // Typography ==================================================================
@@ -120,7 +132,9 @@ table {
 // Forms =======================================================================
 
 input,
-.form-control {
+.form-control,
+.input-group-text,
+.custom-file-label {
   border-radius: $border-radius;
 }
 
@@ -230,6 +244,10 @@ select.form-control {
   }
 }
 
+.nav-pills .nav-link, {
+  border-radius: $border-radius;
+}
+
 .nav-link,
 .page-link,
 .list-group-item,
@@ -245,6 +263,7 @@ select.form-control {
 
 .breadcrumb {
   border: 2px solid $gray-800;
+  border-radius: $border-radius;
 }
 
 .pagination {
@@ -260,6 +279,8 @@ select.form-control {
 }
 
 .badge {
+  border-radius: $border-radius-sm;
+
   &-pill {
     border-radius: 7rem 8rem 8rem 8rem / 4rem 5rem 6rem 6rem;
   }
@@ -270,6 +291,8 @@ select.form-control {
 }
 
 .alert {
+  border-radius: $border-radius;
+
   &-dismissible {
     .close {
       color: transparent;
@@ -324,6 +347,10 @@ select.form-control {
 
 // Progress bars ===============================================================
 
+.progress {
+  border-radius: $border-radius-sm;
+}
+
 // Containers ==================================================================
 
 .card {
@@ -355,6 +382,7 @@ select.form-control {
 
 .jumbotron {
   border: 2px solid $gray-800;
+  border-radius: $border-radius-lg;
 }
 
 .modal {
@@ -389,6 +417,13 @@ select.form-control {
   &.popover-right::before,
   &.bs-tether-element-attached-left::before {
     left: -13px;
+  }
+}
+
+.tooltip {
+
+  &-inner {
+    border-radius: $border-radius-sm;
   }
 }
 
