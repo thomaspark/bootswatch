@@ -7,9 +7,9 @@
 $web-font-path: "https://fonts.googleapis.com/css?family=Neucha|Cabin+Sketch" !default;
 @import url($web-font-path);
 
-$border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;
-$border-radius-lg: 555px 25px 15px 25px/25px 5px 35px 555px;
-$border-radius-sm: 255px 25px 225px 25px/25px 225px 25px 255px;
+$border-radius-sketchy: 255px 25px 225px 25px/25px 225px 25px 255px;
+$border-radius-lg-sketchy: 555px 25px 15px 25px/25px 5px 35px 555px;
+$border-radius-sm-sketchy: 255px 25px 225px 25px/25px 225px 25px 255px;
 
 // Navbar ======================================================================
 
@@ -42,15 +42,15 @@ $border-radius-sm: 255px 25px 225px 25px/25px 225px 25px 255px;
 // Buttons =====================================================================
 
 .btn {
-  border-radius: $border-radius;
+  border-radius: $border-radius-sketchy;
   text-decoration: none;
 
   &-lg {
-    border-radius: $border-radius-lg;
+    border-radius: $border-radius-lg-sketchy;
   }
 
   &-sm {
-    border-radius: $border-radius-sm;
+    border-radius: $border-radius-sm-sketchy;
   }
 }
 
@@ -135,14 +135,14 @@ input,
 .form-control,
 .input-group-text,
 .custom-file-label {
-  border-radius: $border-radius;
+  border-radius: $border-radius-sketchy;
 }
 
 textarea,
 textarea.form-control,
 select,
 select.form-control {
-  border-radius: $border-radius-lg !important;
+  border-radius: $border-radius-lg-sketchy !important;
 }
 
 [type="checkbox"] {
@@ -245,7 +245,7 @@ select.form-control {
 }
 
 .nav-pills .nav-link, {
-  border-radius: $border-radius;
+  border-radius: $border-radius-sketchy;
 }
 
 .nav-link,
@@ -263,7 +263,7 @@ select.form-control {
 
 .breadcrumb {
   border: 2px solid $gray-800;
-  border-radius: $border-radius;
+  border-radius: $border-radius-sketchy;
 }
 
 .pagination {
@@ -279,7 +279,7 @@ select.form-control {
 }
 
 .badge {
-  border-radius: $border-radius-sm;
+  border-radius: $border-radius-sm-sketchy;
 
   &-pill {
     border-radius: 7rem 8rem 8rem 8rem / 4rem 5rem 6rem 6rem;
@@ -291,7 +291,7 @@ select.form-control {
 }
 
 .alert {
-  border-radius: $border-radius;
+  border-radius: $border-radius-sketchy;
 
   &-dismissible {
     .close {
@@ -348,7 +348,7 @@ select.form-control {
 // Progress bars ===============================================================
 
 .progress {
-  border-radius: $border-radius-sm;
+  border-radius: $border-radius-sm-sketchy;
 }
 
 // Containers ==================================================================
@@ -382,7 +382,7 @@ select.form-control {
 
 .jumbotron {
   border: 2px solid $gray-800;
-  border-radius: $border-radius-lg;
+  border-radius: $border-radius-lg-sketchy;
 }
 
 .modal {
@@ -423,7 +423,7 @@ select.form-control {
 .tooltip {
 
   &-inner {
-    border-radius: $border-radius-sm;
+    border-radius: $border-radius-sm-sketchy;
   }
 }
 
