@@ -128,6 +128,19 @@ th {
 
 // Forms =======================================================================
 
+
+.custom-switch {
+
+  .custom-control-label {
+    &::after {
+      top: calc(0.15625rem + 2px);
+      left: calc(-2.25rem + 2px);
+      width: calc(1rem - 4px);
+      height: calc(1rem - 4px);
+    }
+  }
+}
+
 // Navs ========================================================================
 
 .dropdown-menu {

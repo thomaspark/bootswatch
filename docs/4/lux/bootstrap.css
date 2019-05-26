@@ -10652,6 +10652,13 @@ th {
   padding: 0.75rem;
 }
 
+.custom-switch .custom-control-label::after {
+  top: calc(0.15625rem + 2px);
+  left: calc(-2.25rem + 2px);
+  width: calc(1rem - 4px);
+  height: calc(1rem - 4px);
+}
+
 .dropdown-menu {
   font-size: 0.765625rem;
   text-transform: none;
