@@ -104,12 +104,21 @@ pre {
   }
 }
 
-#source-button {
+.source-button {
+  display: none;
   position: absolute;
   top: 0;
   right: 0;
   z-index: 100;
   font-weight: bold;
+}
+
+.source-button:hover {
+  cursor: pointer;
+}
+
+.bs-component:hover .source-button {
+  display: block;
 }
 
 #source-modal {

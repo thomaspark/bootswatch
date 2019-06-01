@@ -11,21 +11,18 @@
     e.preventDefault();
   });
 
-  var $button = $("<div id='source-button' class='btn btn-primary btn-xs'>&lt; &gt;</div>").click(function(){
+  $('.bs-component [data-toggle="popover"]').popover();
+  $('.bs-component [data-toggle="tooltip"]').tooltip();
+  $(".bs-component").each(function() {
+    var $button = $("<button class='source-button btn btn-primary btn-xs' role='button' tabindex='0'>&lt; &gt;</button>");
+    $(this).append($button);
+  });
+
+  $('body').on('click', '.source-button', function() {
     var html = $(this).parent().html();
     html = cleanSource(html);
     $("#source-modal pre").text(html);
     $("#source-modal").modal();
-  });
-
-  $('.bs-component [data-toggle="popover"]').popover();
-  $('.bs-component [data-toggle="tooltip"]').tooltip();
-
-  $(".bs-component").hover(function(){
-    $(this).append($button);
-    $button.show();
-  }, function(){
-    $button.hide();
   });
 
   function cleanSource(html) {
