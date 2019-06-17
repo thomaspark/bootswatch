@@ -1,4 +1,6 @@
 module.exports = function (grunt) {
+  const sass = require('node-sass');
+
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-connect');
@@ -132,6 +134,7 @@ module.exports = function (grunt) {
     files = {};
     files[scssDest] = scssSrc;
     grunt.config('sass.dist.files', files);
+    grunt.config('sass.dist.options.implementation', sass);
     grunt.config('sass.dist.options.outputStyle', 'expanded');
  
     grunt.task.run(['concat', 'sass:dist', 'postcss', 'clean:build',
@@ -144,6 +147,7 @@ module.exports = function (grunt) {
     grunt.log.writeln('compressing file ' + fileSrc);
 
     grunt.config('sass.dist.files', files);
+    grunt.config('sass.dist.options.implementation', sass);
     grunt.config('sass.dist.options.outputStyle', 'compressed');
     grunt.task.run(['sass:dist']);
   });
