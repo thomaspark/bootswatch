@@ -34,8 +34,8 @@ $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
-$light:         $gray-800 !default;
-$dark:          $gray-500 !default;
+$light:         $gray-600 !default;
+$dark:          $gray-800 !default;
 
 $yiq-contrasted-threshold:  175 !default;
 
@@ -63,10 +63,6 @@ $h3-font-size:                2rem !default;
 $table-accent-bg:             $gray-800 !default;
 
 $table-border-color:          $gray-700 !default;
-
-$table-dark-bg:               $gray-500 !default;
-$table-dark-border-color:     darken($gray-500, 7.5%) !default;
-$table-dark-color:            $body-bg !default;
 
 // Forms
 
@@ -102,11 +98,11 @@ $nav-tabs-link-active-border-color: $nav-tabs-border-color $nav-tabs-border-colo
 
 $navbar-padding-y:                  1rem !default;
 
-$navbar-dark-color:                 $white !default;
-$navbar-dark-hover-color:           $success !default;
+$navbar-dark-color:                rgba($white,.6) !default;
+$navbar-dark-hover-color:          $white !default;
 
-$navbar-light-color:                rgba($white,.5) !default;
-$navbar-light-hover-color:          $white !default;
+$navbar-light-color:                 $white !default;
+$navbar-light-hover-color:           $success !default;
 $navbar-light-active-color:         $white !default;
 $navbar-light-disabled-color:       rgba($white,.3) !default;
 $navbar-light-toggler-border-color: rgba($white,.1) !default;
