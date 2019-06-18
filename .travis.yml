@@ -4,7 +4,7 @@ branches:
   - gh-pages
 language: node_js
 node_js:
-- '6'
+  - '12'
 before_install:
 - npm install -g grunt-cli recess
 script: grunt swatch
