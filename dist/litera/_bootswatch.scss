@@ -9,8 +9,7 @@ $font-family-serif:      Georgia, Cambria, "Times New Roman", Times, serif !defa
 // Navbar ======================================================================
 
 .navbar {
-  font-size: 0.875em;
-
+  font-size: $font-size-sm;
 
   &.bg-dark {
     background-color: $success !important;
@@ -34,8 +33,6 @@ $font-family-serif:      Georgia, Cambria, "Times New Roman", Times, serif !defa
 
 .btn {
   border-radius: 1.078em;
-  font-family: $font-family-sans-serif;
-  font-size: 0.875em;
 
   &-lg {
     border-radius: 2.688em;
@@ -43,14 +40,6 @@ $font-family-serif:      Georgia, Cambria, "Times New Roman", Times, serif !defa
 
   &-sm {
     border-radius: 0.844em;
-    font-size: 0.688em;
-  }
-
-  &-secondary,
-  &-secondary:hover,
-  &-warning,
-  &-warning:hover {
-    color: $white;
   }
 }
 
@@ -65,7 +54,7 @@ blockquote {
 }
 
 footer {
-  font-size: 0.875em;
+  font-size: $font-size-sm;
 }
 
 .lead {
@@ -77,7 +66,7 @@ footer {
 
 table,
 .table {
-  font-size: 0.875em;
+  font-size: $font-size-sm;
 
   &-primary,
   &-secondary,
@@ -211,19 +200,18 @@ table,
 .nav,
 .breadcrumb,
 .pagination {
-  font-size: 0.875em;
+  font-size: $font-size-sm;
 }
 
 .dropdown-menu {
-  font-size: 0.875em;
+  font-size: $font-size-sm;
 }
 
 // Indicators ==================================================================
 
 .alert {
-  border: none;
   color: $white;
-  font-size: 0.875em;
+  font-size: $font-size-sm;
 
   &, p {
     font-family: $font-family-sans-serif;
@@ -256,15 +244,6 @@ table,
 
 .badge {
   vertical-align: bottom;
-
-  &-secondary,
-  &-warning {
-    color: $white;
-  }
-}
-
-.tooltip {
-  font-size: 11px;
 }
 
 // Progress bars ===============================================================
@@ -272,5 +251,5 @@ table,
 // Containers ==================================================================
 
 .list-group {
-  font-size: 0.875em;
+  font-size: $font-size-sm;
 }
