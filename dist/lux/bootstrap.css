@@ -2013,7 +2013,7 @@ pre code {
   display: block;
   width: 100%;
   height: calc(1.5em + 1.5rem + 0px);
-  padding: 0.75rem 2rem;
+  padding: 0.75rem 1.5rem;
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.5;
@@ -2129,7 +2129,7 @@ select.form-control:focus::-ms-value {
 
 .form-control-lg {
   height: calc(1.5em + 4rem + 0px);
-  padding: 2rem 3rem;
+  padding: 2rem 2rem;
   font-size: 1.09375rem;
   line-height: 1.5;
 }
@@ -2255,8 +2255,8 @@ textarea.form-control {
 
 .was-validated .custom-select:valid, .custom-select.is-valid {
   border-color: #4BBF73;
-  padding-right: calc((1em + 1.5rem) * 3 / 4 + 3rem);
-  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 2rem center/8px 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%234BBF73' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e") #f7f7f9 no-repeat center right 3rem/calc(0.75em + 0.75rem) calc(0.75em + 0.75rem);
+  padding-right: calc((1em + 1.5rem) * 3 / 4 + 2.5rem);
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 1.5rem center/8px 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%234BBF73' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e") #f7f7f9 no-repeat center right 2.5rem/calc(0.75em + 0.75rem) calc(0.75em + 0.75rem);
 }
 
 .was-validated .custom-select:valid:focus, .custom-select.is-valid:focus {
@@ -2381,8 +2381,8 @@ textarea.form-control {
 
 .was-validated .custom-select:invalid, .custom-select.is-invalid {
   border-color: #d9534f;
-  padding-right: calc((1em + 1.5rem) * 3 / 4 + 3rem);
-  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 2rem center/8px 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23d9534f' viewBox='-2 -2 7 7'%3e%3cpath stroke='%23d9534f' d='M0 0l3 3m0-3L0 3'/%3e%3ccircle r='.5'/%3e%3ccircle cx='3' r='.5'/%3e%3ccircle cy='3' r='.5'/%3e%3ccircle cx='3' cy='3' r='.5'/%3e%3c/svg%3E") #f7f7f9 no-repeat center right 3rem/calc(0.75em + 0.75rem) calc(0.75em + 0.75rem);
+  padding-right: calc((1em + 1.5rem) * 3 / 4 + 2.5rem);
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 1.5rem center/8px 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23d9534f' viewBox='-2 -2 7 7'%3e%3cpath stroke='%23d9534f' d='M0 0l3 3m0-3L0 3'/%3e%3ccircle r='.5'/%3e%3ccircle cx='3' r='.5'/%3e%3ccircle cy='3' r='.5'/%3e%3ccircle cx='3' cy='3' r='.5'/%3e%3c/svg%3E") #f7f7f9 no-repeat center right 2.5rem/calc(0.75em + 0.75rem) calc(0.75em + 0.75rem);
 }
 
 .was-validated .custom-select:invalid:focus, .custom-select.is-invalid:focus {
@@ -2561,7 +2561,7 @@ textarea.form-control {
           user-select: none;
   background-color: transparent;
   border: 0px solid transparent;
-  padding: 0.75rem 2rem;
+  padding: 0.75rem 1.5rem;
   font-size: 0.875rem;
   line-height: 1.5rem;
   border-radius: 0;
@@ -3181,7 +3181,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-lg, .btn-group-lg > .btn {
-  padding: 2rem 3rem;
+  padding: 2rem 2rem;
   font-size: 1.09375rem;
   line-height: 1.5;
   border-radius: 0;
@@ -3541,8 +3541,8 @@ input[type="button"].btn-block {
 }
 
 .dropdown-toggle-split {
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
+  padding-right: 1.125rem;
+  padding-left: 1.125rem;
 }
 
 .dropdown-toggle-split::after,
@@ -3561,8 +3561,8 @@ input[type="button"].btn-block {
 }
 
 .btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split {
-  padding-right: 2.25rem;
-  padding-left: 2.25rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
 }
 
 .btn-group-vertical {
@@ -3705,7 +3705,7 @@ input[type="button"].btn-block {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0.75rem 2rem;
+  padding: 0.75rem 1.5rem;
   margin-bottom: 0;
   font-size: 0.875rem;
   font-weight: 400;
@@ -3733,7 +3733,7 @@ input[type="button"].btn-block {
 .input-group-lg > .input-group-append > .input-group-text,
 .input-group-lg > .input-group-prepend > .btn,
 .input-group-lg > .input-group-append > .btn {
-  padding: 2rem 3rem;
+  padding: 2rem 2rem;
   font-size: 1.09375rem;
   line-height: 1.5;
 }
@@ -3756,7 +3756,7 @@ input[type="button"].btn-block {
 
 .input-group-lg > .custom-select,
 .input-group-sm > .custom-select {
-  padding-right: 3rem;
+  padding-right: 2.5rem;
 }
 
 .custom-control {
@@ -3916,13 +3916,13 @@ input[type="button"].btn-block {
   display: inline-block;
   width: 100%;
   height: calc(1.5em + 1.5rem + 0px);
-  padding: 0.75rem 3rem 0.75rem 2rem;
+  padding: 0.75rem 2.5rem 0.75rem 1.5rem;
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.5;
   color: #55595c;
   vertical-align: middle;
-  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 2rem center/8px 10px;
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 1.5rem center/8px 10px;
   background-color: #f7f7f9;
   border: 0px solid #ced4da;
   border-radius: 0;
@@ -3945,7 +3945,7 @@ input[type="button"].btn-block {
 
 .custom-select[multiple], .custom-select[size]:not([size="1"]) {
   height: auto;
-  padding-right: 2rem;
+  padding-right: 1.5rem;
   background-image: none;
 }
 
@@ -3970,7 +3970,7 @@ input[type="button"].btn-block {
   height: calc(1.5em + 4rem + 0px);
   padding-top: 2rem;
   padding-bottom: 2rem;
-  padding-left: 3rem;
+  padding-left: 2rem;
   font-size: 1.09375rem;
 }
 
@@ -4016,7 +4016,7 @@ input[type="button"].btn-block {
   left: 0;
   z-index: 1;
   height: calc(1.5em + 1.5rem + 0px);
-  padding: 0.75rem 2rem;
+  padding: 0.75rem 1.5rem;
   font-weight: 400;
   line-height: 1.5;
   color: #55595c;
@@ -4032,7 +4032,7 @@ input[type="button"].btn-block {
   z-index: 3;
   display: block;
   height: calc(1.5em + 1.5rem);
-  padding: 0.75rem 2rem;
+  padding: 0.75rem 1.5rem;
   line-height: 1.5;
   color: #55595c;
   content: "Browse";
