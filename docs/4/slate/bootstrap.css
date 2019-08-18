@@ -10869,6 +10869,27 @@ legend {
   color: #fff;
 }
 
+.nav-tabs .nav-link {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#101112), color-stop(40%, #17191b), to(#1b1e20));
+  background-image: linear-gradient(#101112, #17191b 40%, #1b1e20);
+  background-repeat: no-repeat;
+  -webkit-filter: none;
+          filter: none;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+}
+
+.nav-tabs .nav-link:not([disabled]):not(.disabled):hover, .nav-tabs .nav-link:not([disabled]):not(.disabled):focus, .nav-tabs .nav-link:not([disabled]):not(.disabled):active, .nav-tabs .nav-link:not([disabled]):not(.disabled).active {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#484e55), color-stop(60%, #3A3F44), to(#313539));
+  background-image: linear-gradient(#484e55, #3A3F44 60%, #313539);
+  background-repeat: no-repeat;
+  -webkit-filter: none;
+          filter: none;
+}
+
+.nav-tabs .nav-link.disabled {
+  border: 1px solid rgba(0, 0, 0, 0.6);
+}
+
 .nav-tabs .nav-link,
 .nav-tabs .nav-link:hover {
   color: #fff;

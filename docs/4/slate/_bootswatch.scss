@@ -354,6 +354,22 @@ legend {
 
 .nav-tabs {
 
+  .nav-link {
+    @include btn-shadow-inverse($gray-800);
+    border: 1px solid rgba(0, 0, 0, 0.6);
+
+    &:not([disabled]):not(.disabled):hover,
+    &:not([disabled]):not(.disabled):focus,
+    &:not([disabled]):not(.disabled):active,
+    &:not([disabled]):not(.disabled).active {
+      @include btn-shadow($gray-800);
+    }
+
+    &.disabled {
+      border: 1px solid rgba(0, 0, 0, 0.6);
+    }
+  }
+
   .nav-link,
   .nav-link:hover {
     color: #fff;
