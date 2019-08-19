@@ -4921,7 +4921,7 @@ input[type="button"].btn-block {
 }
 
 .card-header:first-child {
-  border-radius: calc(1px - 1px) calc(1px - 1px) 0 0;
+  border-radius: 0px 0px 0 0;
 }
 
 .card-header + .list-group .list-group-item:first-child {
@@ -4935,7 +4935,7 @@ input[type="button"].btn-block {
 }
 
 .card-footer:last-child {
-  border-radius: 0 0 calc(1px - 1px) calc(1px - 1px);
+  border-radius: 0 0 0px 0px;
 }
 
 .card-header-tabs {
@@ -4961,19 +4961,19 @@ input[type="button"].btn-block {
 
 .card-img {
   width: 100%;
-  border-radius: calc(1px - 1px);
+  border-radius: 0px;
 }
 
 .card-img-top {
   width: 100%;
-  border-top-left-radius: calc(1px - 1px);
-  border-top-right-radius: calc(1px - 1px);
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
 }
 
 .card-img-bottom {
   width: 100%;
-  border-bottom-right-radius: calc(1px - 1px);
-  border-bottom-left-radius: calc(1px - 1px);
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
 }
 
 .card-deck {
@@ -10790,6 +10790,11 @@ label,
 
 .close:hover, .close:focus {
   opacity: 1;
+}
+
+.popover-header {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 .modal-header, .modal-footer {
