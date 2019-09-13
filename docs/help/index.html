@@ -100,6 +100,28 @@
             <p>Using the themes is as easy as downloading a CSS file and replacing the one that comes with <a href="https://getbootstrap.com" target="_blank">Bootstrap</a>.</p>
             <h4>Package</h4>
             <p>You can install as a package via npm with the command <code>npm install bootswatch</code>.</p>
+            <p>
+            <h5>React Users (create-react-app, or similar bundler)</h5>
+
+            <p>Modern JavaScript bundlers (webpack, parcel, rollup) support importing CSS from JS files. This can make it easier to deploy various 1st- and 3rd-party assets predictably.</p>
+            <p>Note: <i>There are tradeoffs to the following method, research your tooling before deploying to production.</i></p>
+            <p>Before continuing, ensure you've run npm install bootswatch in your local project folder. (Use either npm or yarn.)</p>
+            <p>Add the following import to your top-level <code>index.js</code> (or <code>App.js</code>) file. Add it before any other .css imports.</p>
+            <pre>
+import "bootswatch/dist/[theme]/bootstrap.min.css"; 
+// TODO: Note: Replace ^[theme]^ (examples: darkly, slate, cosmo, spacelab, and superhero. See https://bootswatch.com for current theme names.)
+</pre>
+            <p>Here's an example of updated imports in <code>App.js</code> to use "slate" theme (using a create-react-app fresh project.)</p>
+            <pre>
+import React from 'react';
+import logo from './logo.svg';
+import 'bootswatch/dist/slate/bootstrap.min.css'; // Added this :boom:
+import './App.css';
+
+function App() {
+...
+</pre>
+            </p>
             <h4>CDN</h4>
             <p>You can also hotlink the themes via CDN at <a href="http://www.bootstrapcdn.com/bootswatch/">BootstrapCDN</a>.</p>
             <h4>Sass</h4>
