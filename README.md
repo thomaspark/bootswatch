@@ -42,6 +42,33 @@ and `_bootswatch.scss`!
 
 You can install as a package with the command `npm install bootswatch`.
 
+#### React Users (`create-react-app`, or similar bundler)
+
+Modern JavaScript bundlers (webpack, parcel, rollup) support `import`ing CSS from JS files. This can make it easier to deploy various 1st and 3rd party assets predictably. Note: _There are tradeoffs to the following method, research your tooling before deploying to production._
+
+Before continuing, ensure you've run `npm install bootswatch` in your local project folder. (Use either `npm` or `yarn`.)
+
+Add the following `import` to your top-level `index.js` (or `App.js`) file. Add it **before** any other `.css` imports.
+
+```js
+import "bootswatch/dist/[theme]/bootstrap.min.css"; 
+// TODO: Note: Replace ^[theme]^ (examples: darkly, slate, cosmo, spacelab, and superhero. See https://bootswatch.com for current theme names.)
+```
+
+
+Here's an example of updated `imports` in `App.js` to use "slate" theme (using a `create-react-app` fresh project.)
+
+```js
+import React from 'react';
+import logo from './logo.svg';
+import 'bootswatch/dist/slate/bootstrap.min.css'; // Added this :boom:
+import './App.css';
+
+function App() {
+...
+```
+
+
 ### Via Ruby Gem
 
 In your Ruby project, you can access the latest version of each theme by adding
