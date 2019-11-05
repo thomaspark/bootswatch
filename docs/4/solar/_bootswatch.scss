@@ -154,9 +154,28 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Source+Sans+Pro" !defau
 
 // Forms =======================================================================
 
-// .input-group-addon {
-//   color: $body-color;
-// }
+.custom-control-input:checked ~ .custom-control-label::before {
+  background: $primary;
+}
+
+.custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+  border-color: $primary;
+}
+
+.custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+  background: $primary;
+  border-color: $primary;
+}
+
+.custom-switch {
+  .custom-control-label::after {
+    background-color: rgba(255, 255, 255, 1);
+  }
+
+  .custom-control-input:checked ~ .custom-control-label::after {
+    background-color: rgba(255, 255, 255, 0.75);
+  }
+}
 
 // Navs ========================================================================
 
