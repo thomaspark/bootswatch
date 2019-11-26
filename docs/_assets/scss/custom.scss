@@ -179,8 +179,19 @@ pre {
   padding: 6em 0 1em;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   background-color: #eaf1f1;
+  text-align: center;
+  .icon {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
   .fa {
-    margin-right: 0.2em;
+    display: inline-block;
+    padding: 0.8em;
+    font-size: 2rem;
+    background: rgb(52,154,237);
+    background: linear-gradient(145deg, rgba(59, 156, 234, 1.00) 50%, rgba(61, 184, 235, 1.00) 100%);
+    border-radius: 50%;
+    color: rgba(0, 0, 0, 0.5);
   }
   p {
     margin-bottom: 5em;
