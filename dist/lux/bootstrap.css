@@ -6,7 +6,7 @@
  * Based on Bootstrap
 */
 /*!
- * Bootstrap v4.4.0 (https://getbootstrap.com/)
+ * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -67,7 +67,7 @@ body {
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #919aa1;
+  color: #343a40;
   text-align: left;
   background-color: #fff;
 }
@@ -1875,7 +1875,7 @@ pre code {
 .table {
   width: 100%;
   margin-bottom: 1rem;
-  color: #919aa1;
+  color: #343a40;
 }
 
 .table th,
@@ -1925,7 +1925,7 @@ pre code {
 }
 
 .table-hover tbody tr:hover {
-  color: #919aa1;
+  color: #343a40;
   background-color: rgba(0, 0, 0, 0.075);
 }
 
@@ -2320,7 +2320,7 @@ select.form-control:focus::-ms-value {
   margin-bottom: 0;
   font-size: 0.875rem;
   line-height: 1.5;
-  color: #919aa1;
+  color: #343a40;
   background-color: transparent;
   border: solid transparent;
   border-width: 0px 0;
@@ -2390,7 +2390,8 @@ textarea.form-control {
   margin-left: -1.25rem;
 }
 
-.form-check-input[disabled] ~ .form-check-label {
+.form-check-input[disabled] ~ .form-check-label,
+.form-check-input:disabled ~ .form-check-label {
   color: #919aa1;
 }
 
@@ -2717,7 +2718,7 @@ textarea.form-control {
 .btn {
   display: inline-block;
   font-weight: 600;
-  color: #919aa1;
+  color: #343a40;
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
@@ -2745,7 +2746,7 @@ textarea.form-control {
 }
 
 .btn:hover {
-  color: #919aa1;
+  color: #343a40;
   text-decoration: none;
 }
 
@@ -3471,7 +3472,7 @@ input[type="button"].btn-block {
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
   font-size: 0.875rem;
-  color: #919aa1;
+  color: #343a40;
   text-align: left;
   list-style: none;
   background-color: #fff;
@@ -3993,11 +3994,11 @@ input[type="button"].btn-block {
   border-color: #737373;
 }
 
-.custom-control-input[disabled] ~ .custom-control-label {
+.custom-control-input[disabled] ~ .custom-control-label, .custom-control-input:disabled ~ .custom-control-label {
   color: #919aa1;
 }
 
-.custom-control-input[disabled] ~ .custom-control-label::before {
+.custom-control-input[disabled] ~ .custom-control-label::before, .custom-control-input:disabled ~ .custom-control-label::before {
   background-color: #eceeef;
 }
 
@@ -4194,7 +4195,8 @@ input[type="button"].btn-block {
           box-shadow: 0 0 0 0.2rem rgba(26, 26, 26, 0.25);
 }
 
-.custom-file-input[disabled] ~ .custom-file-label {
+.custom-file-input[disabled] ~ .custom-file-label,
+.custom-file-input:disabled ~ .custom-file-label {
   background-color: #eceeef;
 }
 
@@ -5668,7 +5670,7 @@ a.badge-dark:focus, a.badge-dark.focus {
 }
 
 .list-group-item-action:active {
-  color: #919aa1;
+  color: #343a40;
   background-color: #f7f7f9;
 }
 
@@ -6532,7 +6534,7 @@ a.close.disabled {
 
 .popover-body {
   padding: 0.5rem 0.75rem;
-  color: #919aa1;
+  color: #343a40;
 }
 
 .carousel {
@@ -10368,7 +10370,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .text-body {
-  color: #919aa1 !important;
+  color: #343a40 !important;
 }
 
 .text-muted {
@@ -10575,7 +10577,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .text-secondary {
-  color: #919aa1 !important;
+  color: #343a40 !important;
 }
 
 th {

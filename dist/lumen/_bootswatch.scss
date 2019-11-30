@@ -123,6 +123,17 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400
     color: #fff;
   }
 
+  &-hover tbody {
+    .table-primary:hover,
+    .table-success:hover,
+    .table-info:hover,
+    .table-warning:hover,
+    .table-danger:hover,
+    .table-dark:hover {
+      color: #fff;
+    }
+  }
+
   &-primary {
     &, > th, > td {
       background-color: $primary;
