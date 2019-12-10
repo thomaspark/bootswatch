@@ -177,6 +177,15 @@ legend {
   color: #fff;
 }
 
+.form-control {
+  background-clip: border-box;
+
+  &:disabled,
+  &[readonly] {
+    border-color: transparent;
+  }
+}
+
 // Navs ========================================================================
 
 .nav-tabs,

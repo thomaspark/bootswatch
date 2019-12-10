@@ -2228,7 +2228,7 @@ pre code {
   color: #282828;
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid transparent;
+  border: 1px solid #fff;
   border-radius: 0.25rem;
   -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
@@ -4198,7 +4198,7 @@ input[type="button"].btn-block {
   color: #282828;
   vertical-align: middle;
   background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23222' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 1rem center/8px 10px;
-  border: 1px solid transparent;
+  border: 1px solid #fff;
   border-radius: 0.25rem;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -10903,6 +10903,14 @@ table {
 
 legend {
   color: #fff;
+}
+
+.form-control {
+  background-clip: border-box;
+}
+
+.form-control:disabled, .form-control[readonly] {
+  border-color: transparent;
 }
 
 .nav-tabs .nav-link,
