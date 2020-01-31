@@ -4,7 +4,7 @@
 
 // Variables ===================================================================
 
-$web-font-path: "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" !default;
+$web-font-path: "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&display=swap" !default;
 @import url($web-font-path);
 
 // Navbar ======================================================================
@@ -29,6 +29,7 @@ body {
 
 .progress {
   @include box-shadow(none);
+
   .progress-bar {
     font-size: 8px;
     line-height: 8px;
