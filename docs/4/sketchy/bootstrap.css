@@ -1884,16 +1884,16 @@ pre code {
 .table td {
   padding: 0.75rem;
   vertical-align: top;
-  border-top: 1px solid #333;
+  border-top: 2px solid #333;
 }
 
 .table thead th {
   vertical-align: bottom;
-  border-bottom: 2px solid #333;
+  border-bottom: 4px solid #333;
 }
 
 .table tbody + tbody {
-  border-top: 2px solid #333;
+  border-top: 4px solid #333;
 }
 
 .table-sm th,
@@ -1902,17 +1902,17 @@ pre code {
 }
 
 .table-bordered {
-  border: 1px solid #333;
+  border: 2px solid #333;
 }
 
 .table-bordered th,
 .table-bordered td {
-  border: 1px solid #333;
+  border: 2px solid #333;
 }
 
 .table-bordered thead th,
 .table-bordered thead td {
-  border-bottom-width: 2px;
+  border-bottom-width: 4px;
 }
 
 .table-borderless th,
@@ -6234,7 +6234,7 @@ a.close.disabled {
   font-size: 0.875rem;
   background-color: rgba(255, 255, 255, 0.85);
   background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 2px solid #333;
   -webkit-box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
           box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
   -webkit-backdrop-filter: blur(10px);
@@ -6268,10 +6268,10 @@ a.close.disabled {
       -ms-flex-align: center;
           align-items: center;
   padding: 0.25rem 0.75rem;
-  color: #868e96;
+  color: #333;
   background-color: rgba(255, 255, 255, 0.85);
   background-clip: padding-box;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 2px solid #333;
 }
 
 .toast-body {
@@ -11085,6 +11085,14 @@ select.form-control {
 .jumbotron {
   border: 2px solid #333;
   border-radius: 555px 25px 15px 25px/25px 5px 35px 555px;
+}
+
+.toast {
+  border-radius: 10px 10px 15px 5px/5px 15px 5px 15px;
+}
+
+.toast-header {
+  font-family: "Cabin Sketch", cursive;
 }
 
 .modal-content {

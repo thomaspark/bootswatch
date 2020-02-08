@@ -241,6 +241,8 @@ label,
 }
 
 .close {
+  color: #fff;
+  text-shadow: none;
   opacity: 0.5;
 
   &:hover,
@@ -264,16 +266,5 @@ label,
   &-header,
   &-footer {
     background-color: $table-hover-bg;
-
-    .close {
-      color: #fff;
-      text-shadow: none;
-      opacity: 0.5;
-
-      &:hover,
-      &:focus {
-        opacity: 1;
-      }
-    }
   }
 }
