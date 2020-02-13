@@ -10933,6 +10933,26 @@ select.form-control {
   padding-left: 2.5rem;
 }
 
+.form-check-inline [type="checkbox"]:before {
+  left: 0;
+  top: 0;
+}
+
+.form-check-inline [type="checkbox"]:after {
+  left: 0.14em;
+  top: 0.12em;
+}
+
+.form-check-inline [type="radio"]:before {
+  left: 0;
+  top: 0;
+}
+
+.form-check-inline .form-check-label {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .dropdown-menu {
   border-radius: 555px 25px 25px 25px/25px 25px 25px 555px;
   overflow: hidden;

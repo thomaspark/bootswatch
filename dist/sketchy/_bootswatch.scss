@@ -211,6 +211,32 @@ select.form-control {
   padding-left: 2.5rem;
 }
 
+.form-check-inline {
+  [type="checkbox"] {
+    &:before {
+      left: 0;
+      top: 0;
+    }
+
+    &:after {
+      left: 0.14em;
+      top: 0.12em;
+    }
+  }
+
+  [type="radio"] {
+    &:before {
+      left: 0;
+      top: 0;
+    }
+  }
+
+  .form-check-label {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
 // Navs ========================================================================
 
 .dropdown-menu {
