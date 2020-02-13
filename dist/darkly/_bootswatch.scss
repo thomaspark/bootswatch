@@ -224,7 +224,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Lato:400,700,400italic&
 .card {
   @each $color, $value in $theme-colors {
     &.bg-#{$color} .card-header {
-        background-color: darken($value, 5%);
+        background-color: lighten($value, 5%);
     }
   }
 }
