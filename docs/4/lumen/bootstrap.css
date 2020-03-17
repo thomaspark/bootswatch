@@ -11150,10 +11150,13 @@ a.list-group-item-danger.active:hover, a.list-group-item-danger.active:focus {
           box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.05);
 }
 
-.modal .close {
+.modal .close,
+.toast .close {
   color: #000;
 }
 
-.modal .close:not(:disabled):not(.disabled):hover, .modal .close:not(:disabled):not(.disabled):focus {
+.modal .close:not(:disabled):not(.disabled):hover, .modal .close:not(:disabled):not(.disabled):focus,
+.toast .close:not(:disabled):not(.disabled):hover,
+.toast .close:not(:disabled):not(.disabled):focus {
   color: #000;
 }
