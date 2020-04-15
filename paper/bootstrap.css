@@ -2,7 +2,7 @@
 /*!
  * bootswatch v3.4.1
  * Homepage: http://bootswatch.com
- * Copyright 2012-2019 Thomas Park
+ * Copyright 2012-2020 Thomas Park
  * Licensed under MIT
  * Based on Bootstrap
 */
@@ -2560,9 +2560,9 @@ output {
   font-size: 13px;
   line-height: 1.846;
   color: #666666;
-  background-color: transparent;
+  background-color: #ffffff;
   background-image: none;
-  border: 1px solid transparent;
+  border: 1px solid #e6e6e6;
   border-radius: 3px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
@@ -2589,7 +2589,7 @@ output {
 .form-control[disabled],
 .form-control[readonly],
 fieldset[disabled] .form-control {
-  background-color: transparent;
+  background-color: #eeeeee;
   opacity: 1;
 }
 .form-control[disabled],
@@ -3849,7 +3849,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   color: #666666;
   text-align: center;
   background-color: transparent;
-  border: 1px solid transparent;
+  border: 1px solid #e6e6e6;
   border-radius: 3px;
 }
 .input-group-addon.input-sm {
@@ -6802,7 +6802,6 @@ button.close {
 }
 .btn {
   text-transform: uppercase;
-  border: none;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
   transition: all 0.4s;
 }
@@ -6869,10 +6868,8 @@ input[type=number],
 [type=email].form-control,
 [type=tel].form-control,
 [contenteditable].form-control {
-  padding: 0;
-  border: none;
-  border-radius: 0;
-  -webkit-appearance: none;
+  border-radius: 0.25rem;
+  border: 1px solid #e6e6e6;
   box-shadow: inset 0 -1px 0 #dddddd;
   font-size: 16px;
 }
@@ -6947,17 +6944,9 @@ input[type=number].input-lg,
 }
 select,
 select.form-control {
-  border: 0;
-  border-radius: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+  border-radius: 0.25rem;
   padding-left: 0;
   padding-right: 0\9;
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAMAAACelLz8AAAAJ1BMVEVmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmaP/QSjAAAADHRSTlMAAgMJC0uWpKa6wMxMdjkoAAAANUlEQVR4AeXJyQEAERAAsNl7Hf3X6xt0QL6JpZWq30pdvdadme+0PMdzvHm8YThHcT1H7K0BtOMDniZhWOgAAAAASUVORK5CYII=);
-  background-size: 13px;
-  background-repeat: no-repeat;
-  background-position: right center;
   box-shadow: inset 0 -1px 0 #dddddd;
   font-size: 16px;
   line-height: 1.5;
@@ -6977,11 +6966,6 @@ select.form-control.input-lg {
 select:focus,
 select.form-control:focus {
   box-shadow: inset 0 -2px 0 #2196f3;
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAMAAACelLz8AAAAJ1BMVEUhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISF8S9ewAAAADHRSTlMAAgMJC0uWpKa6wMxMdjkoAAAANUlEQVR4AeXJyQEAERAAsNl7Hf3X6xt0QL6JpZWq30pdvdadme+0PMdzvHm8YThHcT1H7K0BtOMDniZhWOgAAAAASUVORK5CYII=);
-}
-select[multiple],
-select.form-control[multiple] {
-  background: none;
 }
 .radio label,
 .radio-inline label,
@@ -7171,7 +7155,7 @@ input[type="checkbox"]:disabled:checked:after,
 .has-error .input-group-addon,
 .has-success .input-group-addon {
   color: #666666;
-  border-color: transparent;
+  border-color: #e6e6e6;
   background-color: transparent;
 }
 .form-group-lg select,
