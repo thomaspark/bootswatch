@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Bootswatch: Help</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="../4/materia/bootstrap.css" media="screen">
     <link rel="stylesheet" href="../_assets/css/custom.min.css">
     <style>
@@ -27,9 +27,9 @@
     </style>
     <script>
 
-     var _gaq = _gaq || [];
+       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-23019901-1']);
-      _gaq.push(['_setDomainName', "bootswatch.com"]);
+      _gaq.push(['_setDomainName', 'bootswatch.com']);
       _gaq.push(['_setAllowLinker', true]);
       _gaq.push(['_trackPageview']);
 
@@ -43,10 +43,10 @@
   </head>
   <body id="help">
 
-    
+
     <div class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
       <div class="container">
-        <a href="../" class="navbar-brand"><img src="../_assets/img/logo-nav.svg"> Bootswatch</a>
+        <a href="../" class="navbar-brand"><img src="../_assets/img/logo-nav.svg" alt=""> Bootswatch</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -97,7 +97,7 @@
         <div class="col-lg-9">
             <h1 id="quickstart">Quick Start</h1>
             <h4>Pre-Compiled CSS</h4>
-            <p>Using the themes is as easy as downloading a CSS file and replacing the one that comes with <a href="https://getbootstrap.com" target="_blank">Bootstrap</a>.</p>
+            <p>Using the themes is as easy as downloading a CSS file and replacing the one that comes with <a href="https://getbootstrap.com" rel="noopener" target="_blank">Bootstrap</a>.</p>
             <h4>Package</h4>
             <p>You can install as a package via npm with the command <code>npm install bootswatch</code>.</p>
             <p>
@@ -108,7 +108,7 @@
             <p>Before continuing, ensure you've run npm install bootswatch in your local project folder. (Use either npm or yarn.)</p>
             <p>Add the following import to your top-level <code>index.js</code> (or <code>App.js</code>) file. Add it before any other .css imports.</p>
             <pre>
-import "bootswatch/dist/[theme]/bootstrap.min.css"; 
+import "bootswatch/dist/[theme]/bootstrap.min.css";
 // TODO: Note: Replace ^[theme]^ (examples: darkly, slate, cosmo, spacelab, and superhero. See https://bootswatch.com for current theme names.)
 </pre>
             <p>Here's an example of updated imports in <code>App.js</code> to use "slate" theme (using a create-react-app fresh project.)</p>
@@ -123,7 +123,7 @@ function App() {
 </pre>
             </p>
             <h4>CDN</h4>
-            <p>You can also hotlink the themes via CDN at <a href="http://www.bootstrapcdn.com/bootswatch/">BootstrapCDN</a>.</p>
+            <p>You can also hotlink the themes via CDN at <a href="https://www.bootstrapcdn.com/bootswatch/">BootstrapCDN</a>.</p>
             <h4>Sass</h4>
             <p>If you're using Sass in your project, you can import the <code>_variables.scss</code> and <code>_bootswatch.scss</code> files for a given theme. This method allows you to override theme variables. Make sure to import Bootstrap's <code>bootstrap.scss</code> in between <code>_variables.scss</code> and <code>_bootswatch.scss</code>!</p>
             <pre>
@@ -140,16 +140,16 @@ function App() {
         <div class="row">
           <div class="col-lg-9">
             <h1 id="customization">Customization</h1>
-            <p>To modify a theme or create your own, follow the steps below in your terminal. You'll need to have <a href="https://help.github.com/articles/set-up-git" target="_blank">Git</a> and <a href="http://nodejs.org/" target="_blank">Node</a> installed.</p>
+            <p>To modify a theme or create your own, follow the steps below in your terminal. You'll need to have <a href="https://help.github.com/articles/set-up-git" rel="noopener" target="_blank">Git</a> and <a href="https://nodejs.org/" rel="noopener" target="_blank">Node</a> installed.</p>
             <ol>
               <li><p>Download the repository: <code>git clone https://github.com/thomaspark/bootswatch.git</code></p></li>
               <li><p>Install dependencies: <code>npm install</code></p></li>
-              <li><p>Make sure that you have <code>grunt</code> available in the command line. You can install <code>grunt-cli</code> as described on the <a href="http://gruntjs.com/getting-started">Grunt Getting Started page</a>.</p></li>
+              <li><p>Make sure that you have <code>grunt</code> available in the command line. You can install <code>grunt-cli</code> as described on the <a href="https://gruntjs.com/getting-started">Grunt Getting Started page</a>.</p></li>
               <li><p>In <code>/dist</code>, modify <code>_variables.scss</code> and <code>_bootswatch.scss</code> in one of the theme directories, or duplicate a theme directory to create a new one.</p></li>
               <li><p>Type <code>grunt swatch:[theme]</code> to build the CSS for a theme, e.g., <code>grunt swatch:flatly</code> for Flatly. Or type <code>grunt swatch</code> to build them all at once. </p></li>
               <li><p>You can run <code>grunt</code> to start a server, watch for any changes to the SASS files, and automatically build a theme and reload it on change. Run <code>grunt server</code> for just the server, and <code>grunt watch</code> for just the watcher.</p></li>
             </ol>
-            <p>Here are additional tips for <a href="http://www.smashingmagazine.com/2013/03/12/customizing-bootstrap/" target="_blank">customizing Bootstrap</a>.</p>
+            <p>Here are additional tips for <a href="https://www.smashingmagazine.com/2013/03/12/customizing-bootstrap/" rel="noopener" target="_blank">customizing Bootstrap</a>.</p>
             <p>If you prefer a web interface for customizing themes, check out <a href="https://bootstrap.build/">Bootstrap.build</a>. From within the builder, you can click the Import button to load the Bootswatch theme of your choice as a starting point.</p>
           </div>
         </div>
@@ -171,7 +171,7 @@ function App() {
               <li><code>scss</code></li>
               <li><code>scssVariables</code></li>
             </ul>
-            <p>Here's a <a href="http://jsbin.com/momonupayu/1/edit?html,js,output">demo</a> of the API in action.</p>
+            <p>Here's a <a href="https://jsbin.com/momonupayu/1/edit?html,js,output">demo</a> of the API in action.</p>
           </div>
         </div>
 
@@ -180,9 +180,9 @@ function App() {
           <div class="col-lg-9">
 
             <h1 id="tools">Tools</h1>
-            <p><a href="https://glyphsearch.com/" target="_blank">GlyphSearch</a> is a tool for searching icons from Glyphicons, Font Awesome, and other popular icon font libraries.</p>
-            <p><a href="https://thomaspark.co/projects/fontcdn/" target="_blank">FontCDN</a> is a tool for searching web fonts from Google Fonts.</p>
-            <p><a href="https://codepip.com" target="_blank">Codepip</a> has coding games for learning HTML, CSS, and JavaScript.</p>
+            <p><a href="https://glyphsearch.com/" rel="noopener" target="_blank">GlyphSearch</a> is a tool for searching icons from Glyphicons, Font Awesome, and other popular icon font libraries.</p>
+            <p><a href="https://thomaspark.co/projects/fontcdn/" rel="noopener" target="_blank">FontCDN</a> is a tool for searching web fonts from Google Fonts.</p>
+            <p><a href="https://codepip.com" rel="noopener" target="_blank">Codepip</a> has coding games for learning HTML, CSS, and JavaScript.</p>
 
             <h1 id="donate">Donate</h1>
             <p>Donations are gratefully accepted via <a href="https://github.com/sponsors/thomaspark/">GitHub</a> and <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PU2DH4BMF9MWS&source=url">PayPal</a>.</p>
