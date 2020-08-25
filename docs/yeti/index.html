@@ -7,20 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="../4/yeti/bootstrap.css" media="screen">
     <link rel="stylesheet" href="../_assets/css/custom.min.css">
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23019901-1"></script>
     <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-       var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-23019901-1']);
-      _gaq.push(['_setDomainName', 'bootswatch.com']);
-      _gaq.push(['_setAllowLinker', true]);
-      _gaq.push(['_trackPageview']);
-
-     (function() {
-       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-     })();
-
+      gtag('config', 'UA-23019901-1');
     </script>
   </head>
   <body>
@@ -1552,7 +1546,7 @@
 
             <ul class="list-unstyled">
               <li class="float-lg-right"><a href="#top">Back to top</a></li>
-              <li><a href="https://blog.bootswatch.com" onclick="pageTracker._link(this.href); return false;">Blog</a></li>
+              <li><a href="https://blog.bootswatch.com">Blog</a></li>
               <li><a href="https://blog.bootswatch.com/rss/">RSS</a></li>
               <li><a href="https://twitter.com/bootswatch">Twitter</a></li>
               <li><a href="https://github.com/thomaspark/bootswatch/">GitHub</a></li>
