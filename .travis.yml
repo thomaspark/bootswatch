@@ -1,12 +1,6 @@
-branches:
-  only:
-  - master
-  - gh-pages
 language: node_js
 node_js:
   - '12'
-before_install:
-- npm install -g grunt-cli recess
 script: grunt swatch
 git:
   depth: 10
