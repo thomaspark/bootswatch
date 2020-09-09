@@ -7,7 +7,6 @@
 // Buttons =====================================================================
 
 .btn {
-
   &:focus,
   &:active,
   &:active:focus,
@@ -64,7 +63,6 @@
   &.disabled:focus {
     box-shadow: none;
   }
-
 }
 
 // Typography ==================================================================
@@ -79,16 +77,15 @@
 // Forms =======================================================================
 
 .form-control:focus {
-  box-shadow: 0 0 5px rgba(100,65,164,.4);
+  box-shadow: 0 0 5px rgba(100, 65, 164, .4);
 }
 
 // Navs ========================================================================
 
 .nav-tabs {
-
   .nav-link,
   .nav-link.active, {
-    border-width: 0 0 1px 0;
+    border-width: 0 0 1px;
   }
 
   .nav-link:hover,
@@ -112,7 +109,7 @@
 // Indicators ==================================================================
 
 .badge {
-  padding-bottom: 0.4em;
+  padding-bottom: .4em;
 
   &-secondary,
   &-warning {
@@ -129,9 +126,8 @@
 // Containers ==================================================================
 
 .list-group {
-
   &-item {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, .8);
 
     &.active,
     &:hover,
@@ -140,7 +136,7 @@
     }
 
     &.active {
-      font-weight: bold;
+      font-weight: 700;
 
       &:hover {
         background-color: $list-group-hover-bg;
