@@ -28,7 +28,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,
     .dropdown-item:hover,
     .dropdown-item:focus {
       background-color: darken($primary, 5%);
-      color: #fff;
+      color: $white;
     }
   }
 }
@@ -48,7 +48,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,
     .dropdown-item:hover,
     .dropdown-item:focus  {
       background-color: darken($gray-800, 5%);
-      color: #fff;
+      color: $white;
     }
   }
 }
@@ -227,7 +227,7 @@ table {
   &-info,
   &-warning,
   &-danger {
-    color: #fff;
+    color: $white;
   }
 
   &-primary {
@@ -497,7 +497,7 @@ label,
 
   .alert-link {
     font-weight: normal;
-    color: #fff;
+    color: $white;
     text-decoration: underline;
   }
 

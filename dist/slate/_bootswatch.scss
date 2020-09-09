@@ -195,7 +195,7 @@
 
 .btn-outline {
   &-primary {
-    color: #fff;
+    color: $white;
   }
 }
 
@@ -228,7 +228,7 @@ h1, h2, h3, h4, h5, h6 {
   &-info,
   &-warning,
   &-danger {
-    color: #fff;
+    color: $white;
   }
 
   &-primary {
@@ -347,7 +347,7 @@ h1, h2, h3, h4, h5, h6 {
 // Forms =======================================================================
 
 legend {
-  color: #fff;
+  color: $white;
 }
 
 .input-group-addon {
@@ -378,7 +378,7 @@ legend {
 
   .nav-link,
   .nav-link:hover {
-    color: #fff;
+    color: $white;
   }
 }
 
@@ -388,7 +388,7 @@ legend {
     @include btn-shadow($gray-800);
     border: 1px solid rgba(0, 0, 0, 0.6);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-    color: #fff;
+    color: $white;
 
     &:hover {
       @include btn-shadow-inverse($gray-800);
@@ -439,7 +439,7 @@ legend {
 
   a,
   a:hover {
-    color: #fff;
+    color: $white;
   }
 }
 
@@ -459,7 +459,7 @@ legend {
 
   a,
   .alert-link {
-    color: #fff;
+    color: $white;
     text-decoration: underline;
   }
 
