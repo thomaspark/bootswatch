@@ -68,8 +68,7 @@ module.exports = function (grunt) {
         files: [
           {expand: true, cwd: 'node_modules/font-awesome', src: ['css/**', 'fonts/**'], dest: 'docs/_vendor/font-awesome/'},
           {expand: true, cwd: 'node_modules/jquery', src: ['dist/**'], dest: 'docs/_vendor/jquery/'},
-          {expand: true, cwd: 'node_modules/bootstrap', src: ['dist/**'], dest: 'docs/_vendor/bootstrap/'},
-          {expand: true, cwd: 'node_modules/popper.js', src: ['dist/**'], dest: 'docs/_vendor/popper.js/'}
+          {expand: true, cwd: 'node_modules/bootstrap', src: ['dist/**'], dest: 'docs/_vendor/bootstrap/'}
         ]
       },
       css: {
