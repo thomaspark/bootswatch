@@ -14,6 +14,9 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-sass');
 
+  // Force use of Unix newlines
+  grunt.util.linefeed = '\n';
+
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     builddir: 'dist',
