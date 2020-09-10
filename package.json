@@ -15,6 +15,9 @@
   "scripts": {
     "test": "grunt swatch"
   },
+  "files": [
+    "dist/**/*.{css,map,scss}"
+  ],
   "dependencies": {},
   "devDependencies": {
     "@lodder/grunt-postcss": "^2.0.4",
@@ -31,8 +34,5 @@
     "grunt-sass": "^3.1.0",
     "jquery": "^3.5.1",
     "node-sass": "^4.14.1"
-  },
-  "files": [
-    "dist/**/*.{css,scss}"
-  ]
+  }
 }
