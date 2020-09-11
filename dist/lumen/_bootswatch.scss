@@ -27,8 +27,8 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,w
 }
 
 .bg-light {
-  background-color: #fff !important;
-  border-color: darken(#fff, 5%);
+  background-color: $white !important;
+  border-color: darken($white, 5%);
 }
 
 // Buttons =====================================================================
@@ -120,7 +120,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,w
   &-info,
   &-warning,
   &-danger {
-    color: #fff;
+    color: $white;
   }
 
   &-hover tbody {
@@ -130,7 +130,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,w
     .table-warning:hover,
     .table-danger:hover,
     .table-dark:hover {
-      color: #fff;
+      color: $white;
     }
   }
 
@@ -426,7 +426,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,w
 
   .alert-link {
     font-weight: normal;
-    color: #fff;
+    color: $white;
     text-decoration: underline;
   }
 
