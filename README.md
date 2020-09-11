@@ -1,6 +1,6 @@
 # Bootswatch
 
-[![Bootswatch Logo](https://bootswatch.com/_assets/img/logo-dark.png)](https://bootswatch.com)
+[![Bootswatch Logo](https://bootswatch.com/_assets/img/logo-dark.png)](https://bootswatch.com/)
 
 Bootswatch is a collection of open source themes for [Bootstrap](https://getbootstrap.com/). Check it out at [bootswatch.com](https://bootswatch.com).
 
@@ -51,7 +51,7 @@ Before continuing, ensure you've run `npm install bootswatch` in your local proj
 Add the following `import` to your top-level `index.js` (or `App.js`) file. Add it **before** any other `.css` imports.
 
 ```js
-import "bootswatch/dist/[theme]/bootstrap.min.css"; 
+import "bootswatch/dist/[theme]/bootstrap.min.css";
 // TODO: Note: Replace ^[theme]^ (examples: darkly, slate, cosmo, spacelab, and superhero. See https://bootswatch.com for current theme names.)
 ```
 
@@ -128,8 +128,8 @@ It's through your contributions that Bootswatch will continue to improve. You ca
 
 Thomas Park
 
-+ https://github.com/thomaspark
-+ https://thomaspark.co
+* <https://github.com/thomaspark>
+* <https://thomaspark.co>
 
 
 ## Thanks
@@ -145,6 +145,6 @@ Thomas Park
 
 ## Copyright and License
 
-Copyright 2014-2019 Thomas Park
+Copyright 2014-2020 Thomas Park
 
 Code released under the MIT License.
