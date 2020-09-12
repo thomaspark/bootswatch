@@ -347,6 +347,10 @@ select.form-control {
 }
 
 .custom-radio .custom-control-input {
+  ~ .custom-control-label::after {
+    transform: scale(.75);
+  }
+
   &:checked {
     ~ .custom-control-label::before {
       background: $white;
@@ -354,11 +358,6 @@ select.form-control {
     ~ .custom-control-label::after {
       transform: scale(1.125);
       transition: 240ms;
-    }
-  }
-  & {
-    ~ .custom-control-label::after {
-      transform: scale(.75);
     }
   }
 }
@@ -414,10 +413,6 @@ select.form-control {
 
   .custom-control-input:active:checked:not(:disabled) ~ .custom-control-label::after {
     box-shadow: 0 1px 4px rgba(0, 0, 0, .3), 0 0 0 9px rgba(33, 150, 243, .16);
-  }
-
-  .custom-control-input:active:not(:checked) ~ .custom-control-label::before {
-    background-color: $gray-500;
   }
 
   .custom-control-input:active:not(:checked) ~ .custom-control-label::before {

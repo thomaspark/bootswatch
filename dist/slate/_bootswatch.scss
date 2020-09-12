@@ -481,13 +481,6 @@ legend {
 // Indicators ==================================================================
 
 .alert {
-  .close {
-    color: $close-color;
-    text-decoration: none;
-  }
-}
-
-.alert {
   border: none;
   color: $white;
 
@@ -509,6 +502,11 @@ legend {
     & .alert-link {
       color: $body-bg;
     }
+  }
+
+  .close {
+    color: $close-color;
+    text-decoration: none;
   }
 }
 

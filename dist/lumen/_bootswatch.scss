@@ -47,13 +47,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,w
     border-bottom-width: 2px;
     @include box-shadow(none);
   }
-}
 
-[class*="btn-outline"] {
-  border-top-width: 1px;
-}
-
-.btn {
   &-primary {
     border-color: darken($primary, 5%);
   }
@@ -85,6 +79,10 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,w
   &-dark {
     border-color: darken($dark, 5%);
   }
+}
+
+[class*="btn-outline"] {
+  border-top-width: 1px;
 }
 
 .btn-group-vertical {

@@ -63,10 +63,6 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&
     color: $text-muted;
   }
 
-  &-dark {
-    color: $white;
-  }
-
   &-primary {
     &,
     > th,
@@ -92,6 +88,8 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&
   }
 
   &-dark {
+    color: $white;
+
     &,
     > th,
     > td {
