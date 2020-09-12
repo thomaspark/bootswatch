@@ -13,7 +13,9 @@
     "url": "https://github.com/thomaspark/bootswatch/issues"
   },
   "scripts": {
-    "test": "grunt swatch"
+    "build": "grunt swatch",
+    "stylelint": "stylelint \"{build,dist,docs/_assets}/**/*.scss\" --rd",
+    "test": "npm run stylelint && npm run build"
   },
   "dependencies": {},
   "devDependencies": {
@@ -30,7 +32,9 @@
     "grunt-contrib-watch": "^1.1.0",
     "grunt-sass": "^3.1.0",
     "jquery": "^3.5.1",
-    "node-sass": "^4.14.1"
+    "node-sass": "^4.14.1",
+    "stylelint": "^13.6.1",
+    "stylelint-config-twbs-bootstrap": "^2.0.3"
   },
   "files": [
     "dist/**/*.{css,scss}"

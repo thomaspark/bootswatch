@@ -7,8 +7,6 @@
 $web-font-path: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" !default;
 @import url($web-font-path);
 
-// Navbar ======================================================================
-
 // Buttons =====================================================================
 
 .btn {
@@ -23,12 +21,9 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@4
   }
 }
 
-// Typography ==================================================================
-
 // Tables ======================================================================
 
 .table {
-
   &-primary,
   &-secondary,
   &-dark,
@@ -40,111 +35,146 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@4
   }
 
   &-primary {
-    &, > th, > td {
+    &,
+    > th,
+    > td {
       background-color: $primary;
     }
   }
 
   &-secondary {
-    &, > th, > td {
+    &,
+    > th,
+    > td {
       background-color: $secondary;
     }
   }
 
   &-light {
-    &, > th, > td {
+    &,
+    > th,
+    > td {
       background-color: $light;
     }
   }
 
   &-dark {
-    &, > th, > td {
+    &,
+    > th,
+    > td {
       background-color: $dark;
     }
   }
 
   &-success {
-    &, > th, > td {
+    &,
+    > th,
+    > td {
       background-color: $success;
     }
   }
 
   &-info {
-    &, > th, > td {
+    &,
+    > th,
+    > td {
       background-color: $info;
     }
   }
 
   &-danger {
-    &, > th, > td {
+    &,
+    > th,
+    > td {
       background-color: $danger;
     }
   }
 
   &-warning {
-    &, > th, > td {
+    &,
+    > th,
+    > td {
       background-color: $warning;
     }
   }
 
   &-active {
-    &, > th, > td {
+    &,
+    > th,
+    > td {
       background-color: $table-active-bg;
     }
   }
 
   &-hover {
-
     .table-primary:hover {
-      &, > th, > td {
+      &,
+      > th,
+      > td {
         background-color: darken($primary, 5%);
       }
     }
 
     .table-secondary:hover {
-      &, > th, > td {
+      &,
+      > th,
+      > td {
         background-color: darken($secondary, 5%);
       }
     }
 
     .table-light:hover {
-      &, > th, > td {
+      &,
+      > th,
+      > td {
         background-color: darken($light, 5%);
       }
     }
 
     .table-dark:hover {
-      &, > th, > td {
+      &,
+      > th,
+      > td {
         background-color: darken($dark, 5%);
       }
     }
 
     .table-success:hover {
-      &, > th, > td {
+      &,
+      > th,
+      > td {
         background-color: darken($success, 5%);
       }
     }
 
     .table-info:hover {
-      &, > th, > td {
+      &,
+      > th,
+      > td {
         background-color: darken($info, 5%);
       }
     }
 
     .table-danger:hover {
-      &, > th, > td {
+      &,
+      > th,
+      > td {
         background-color: darken($danger, 5%);
       }
     }
 
     .table-warning:hover {
-      &, > th, > td {
+      &,
+      > th,
+      > td {
         background-color: darken($warning, 5%);
       }
     }
 
     .table-active:hover {
-      &, > th, > td {
+      &,
+      > th,
+      > td {
         background-color: $table-active-bg;
       }
     }
@@ -173,11 +203,9 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@4
   }
 
   .custom-control-input:checked ~ .custom-control-label::after {
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, .75);
   }
 }
-
-// Navs ========================================================================
 
 // Indicators ==================================================================
 
@@ -209,7 +237,3 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@4
     }
   }
 }
-
-// Progress bars ===============================================================
-
-// Containers ==================================================================

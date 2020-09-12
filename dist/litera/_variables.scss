@@ -45,38 +45,35 @@ $body-color:                $gray-800 !default;
 
 // Fonts
 
+// stylelint-disable value-keyword-case
 $font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-serif:           Georgia, Cambria, "Times New Roman", Times, serif !default;
+// stylelint-enable
 
 $font-size-base:              1.063rem !default;
-
 $headings-font-weight:        700 !default;
 
 // Tables
 
-$table-border-color:          rgba(0,0,0,0.1) !default;
+$table-border-color:          rgba(0, 0, 0, .1) !default;
 
 // Buttons
 
-$input-btn-padding-y:         0.5rem !default;
+$input-btn-padding-y:         .5rem !default;
 $input-btn-padding-x:         1.1rem !default;
-
 $btn-font-family:             $font-family-sans-serif !default;
-$btn-font-size:               0.875rem !default;
-
-$btn-font-size-sm:            0.688rem !default;
+$btn-font-size:               .875rem !default;
+$btn-font-size-sm:            .688rem !default;
 
 // Forms
 
-$input-border-color:                    rgba(0,0,0,.1) !default;
-
+$input-border-color:                    rgba(0, 0, 0, .1) !default;
 $input-group-addon-bg:                  $gray-200 !default !default;
 
 // Navbar
 
-$navbar-dark-color:                 rgba($white,.6) !default;
+$navbar-dark-color:                 rgba($white, .6) !default;
 $navbar-dark-hover-color:           $white !default;
-
 $navbar-light-hover-color:          $body-color !default;
 $navbar-light-active-color:         $body-color !default;
 
@@ -86,8 +83,8 @@ $tooltip-font-size:                 11px !default;
 
 // Badges
 
-$badge-font-weight:                 normal !default;
-$badge-padding-y:                   0.6em !default;
+$badge-font-weight:                 400 !default;
+$badge-padding-y:                   .6em !default;
 $badge-padding-x:                   1.2em !default;
 
 // Alerts
