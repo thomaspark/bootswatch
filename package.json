@@ -17,6 +17,9 @@
     "stylelint": "stylelint \"{build,dist,docs/_assets}/**/*.scss\" --rd",
     "test": "npm run stylelint && npm run build"
   },
+  "files": [
+    "dist/**/*.{css,map,scss}"
+  ],
   "dependencies": {},
   "devDependencies": {
     "@lodder/grunt-postcss": "^2.0.4",
@@ -35,8 +38,5 @@
     "node-sass": "^4.14.1",
     "stylelint": "^13.6.1",
     "stylelint-config-twbs-bootstrap": "^2.0.3"
-  },
-  "files": [
-    "dist/**/*.{css,scss}"
-  ]
+  }
 }
