@@ -45,10 +45,9 @@ $link-color:                $success !default;
 
 // Fonts
 
+// stylelint-disable-next-line value-keyword-case
 $font-family-sans-serif:      "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-
-$font-size-base:              0.9375rem !default;
-
+$font-size-base:              .9375rem !default;
 $h1-font-size:                3rem !default;
 $h2-font-size:                2.5rem !default;
 $h3-font-size:                2rem !default;
@@ -68,13 +67,11 @@ $dropdown-link-hover-bg:            $primary !default;
 $nav-link-padding-y:                .5rem !default !default;
 $nav-link-padding-x:                2rem !default;
 $nav-link-disabled-color:           $gray-600 !default !default;
-
 $nav-tabs-border-color:             $gray-200 !default;
 
 // Navbar
 
 $navbar-padding-y:                  1rem !default;
-
 $navbar-dark-color:                 $white !default;
 $navbar-dark-hover-color:           $success !default;
 
@@ -84,14 +81,11 @@ $pagination-color:                  $white !default;
 $pagination-bg:                     $success !default;
 $pagination-border-width:           0 !default;
 $pagination-border-color:           transparent !default;
-
 $pagination-hover-color:            $white !default;
 $pagination-hover-bg:               darken($success, 15%) !default;
 $pagination-hover-border-color:     transparent !default;
-
 $pagination-active-bg:              $pagination-hover-bg !default;
 $pagination-active-border-color:    transparent !default;
-
 $pagination-disabled-color:         $gray-200 !default;
 $pagination-disabled-bg:            lighten($success, 15%) !default;
 $pagination-disabled-border-color:  transparent !default;
@@ -99,7 +93,6 @@ $pagination-disabled-border-color:  transparent !default;
 // List group
 
 $list-group-hover-bg:               $gray-200 !default;
-
 $list-group-disabled-bg:            $gray-200 !default;
 
 // Close

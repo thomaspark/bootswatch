@@ -20,7 +20,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700
   border-style: solid;
 
   &-fixed-top {
-    border-width: 0 0 1px 0;
+    border-width: 0 0 1px;
   }
 
   &-fixed-bottom {
@@ -57,7 +57,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700
 .btn-secondary:focus,
 .btn-secondary:not([disabled]):not(.disabled):active,
 .btn-secondary:not([disabled]):not(.disabled).active {
-  box-shadow: 0 0 0 0.2rem rgba($gray-200, 0.5);
+  box-shadow: 0 0 0 .2rem rgba($gray-200, .5);
 }
 
 .btn-success,
@@ -106,8 +106,6 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700
   color: $gray-700 !important;
 }
 
-// Tables ======================================================================
-
 // Forms =======================================================================
 
 legend,
@@ -126,9 +124,3 @@ label {
     text-decoration: none;
   }
 }
-
-// Indicators ==================================================================
-
-// Progress bars ===============================================================
-
-// Containers ==================================================================

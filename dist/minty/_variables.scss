@@ -28,8 +28,8 @@ $green:   #56cc9d !default;
 $teal:    #20c997 !default;
 $cyan:    #6cc3d5 !default;
 
-$primary:       #78C2AD !default;
-$secondary:     #F3969A !default;
+$primary:       #78c2ad !default;
+$secondary:     #f3969a !default;
 $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
@@ -51,12 +51,13 @@ $border-radius-sm:            .3rem !default;
 
 // Fonts
 
+// stylelint-disable-next-line value-keyword-case
 $headings-font-family:        "Montserrat", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
 $headings-color:              $gray-700 !default;
 
 // Tables
 
-$table-border-color:          rgba(0,0,0,0.05) !default;
+$table-border-color:          rgba(0, 0, 0, .05) !default;
 
 // Dropdowns
 
@@ -65,29 +66,25 @@ $dropdown-link-hover-bg:            $secondary !default;
 
 // Navbar
 
-$navbar-dark-color:                 rgba($white,.6) !default;
+$navbar-dark-color:                 rgba($white, .6) !default;
 $navbar-dark-hover-color:           $white !default;
-
-$navbar-light-color:                rgba($black,.3) !default;
+$navbar-light-color:                rgba($black, .3) !default;
 $navbar-light-hover-color:          $gray-700 !default;
 $navbar-light-active-color:         $gray-700 !default;
-$navbar-light-disabled-color:       rgba($black,.1) !default;
+$navbar-light-disabled-color:       rgba($black, .1) !default;
 
 // Pagination
 
 $pagination-color:                  $white !default;
 $pagination-bg:                     $primary !default;
 $pagination-border-color:           $primary !default;
-
 $pagination-hover-color:            $white !default;
 $pagination-hover-bg:               $secondary !default;
 $pagination-hover-border-color:     $pagination-hover-bg !default;
-
 $pagination-active-bg:              $secondary !default;
 $pagination-active-border-color:    $pagination-active-bg !default;
-
 $pagination-disabled-color:         $white !default;
-$pagination-disabled-bg:            #CCE8E0 !default;
+$pagination-disabled-bg:            #cce8e0 !default;
 $pagination-disabled-border-color:  $pagination-disabled-bg !default;
 
 // Breadcrumbs
