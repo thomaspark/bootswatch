@@ -6,7 +6,7 @@
   @include gradient-y-three-colors(lighten($color, 8%), $color, 60%, darken($color, 4%));
 }
 
-$text-shadow: 0 1px 0 rgba(0, 0, 0, 0.05) !default;
+$text-shadow: 0 1px 0 rgba(0, 0, 0, .05) !default;
 
 // Navbar ======================================================================
 
@@ -24,13 +24,13 @@ $text-shadow: 0 1px 0 rgba(0, 0, 0, 0.05) !default;
 
 .navbar-brand,
 .nav-link {
-  text-shadow: $text-shadow
+  text-shadow: $text-shadow;
 }
 
 // Buttons =====================================================================
 
 .btn {
-  text-shadow: $text-shadow
+  text-shadow: $text-shadow;
 }
 
 .btn-primary {
@@ -79,14 +79,15 @@ $text-shadow: 0 1px 0 rgba(0, 0, 0, 0.05) !default;
 .bg-warning,
 .bg-danger,
 .bg-dark {
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     color: $white;
   }
 }
-
-// Tables ======================================================================
-
-// Forms =======================================================================
 
 // Navs ========================================================================
 
@@ -95,9 +96,3 @@ $text-shadow: 0 1px 0 rgba(0, 0, 0, 0.05) !default;
     color: $gray-600;
   }
 }
-
-// Indicators ==================================================================
-
-// Progress bars ===============================================================
-
-// Containers ==================================================================

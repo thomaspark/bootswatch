@@ -12,7 +12,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;50
 @mixin ripple($color){
   position: relative;
 
-  &:after {
+  &::after {
     content: "";
     display: block;
     position: absolute;
@@ -30,7 +30,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;50
     transition: background .5s, opacity 1s;
   }
 
-  &:active:after {
+  &:active::after {
     background-size: 0 0;
     opacity: .2;
     transition: 0s;
@@ -38,7 +38,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;50
 
   &.disabled,
   &[disabled] {
-    &:after {
+    &::after {
       display: none;
     }
   }
@@ -48,34 +48,33 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;50
 
 .navbar {
   border: none;
-  box-shadow: 0 1px 2px rgba(0,0,0,.3);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .3);
 
   &-brand {
     font-size: 24px;
   }
 
   &-nav .nav-link {
-    padding-top: 0.9rem;
-    padding-bottom: 0.9rem;
+    padding-top: .9rem;
+    padding-bottom: .9rem;
   }
 
   &.bg-dark,
   &.bg-primary {
-
-    input[type=text],
-    input[type=password],
-    input[type=email],
-    input[type=number],
-    input[type=tel] {
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="number"],
+    input[type="tel"] {
       color: $white;
-      box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5);
+      box-shadow: inset 0 -1px 0 rgba(255, 255, 255, .5);
 
       &:focus {
         box-shadow: inset 0 -2px 0 $white;
       }
 
       &::placeholder {
-        color: rgba(255, 255, 255, 0.5);
+        color: rgba(255, 255, 255, .5);
       }
     }
   }
@@ -87,7 +86,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;50
   .btn-#{$class} {
     &:focus {
       background-color: $bg;
-      box-shadow: 0 0 0 2px rgba(204, 204, 204, 0.5);
+      box-shadow: 0 0 0 2px rgba(204, 204, 204, .5);
     }
 
     &:hover,
@@ -96,7 +95,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;50
     }
 
     &:active {
-      box-shadow: 2px 2px 4px rgba(0,0,0,.4);
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, .4);
     }
 
     @include ripple($color);
@@ -119,8 +118,8 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;50
 .btn {
   text-transform: uppercase;
   border: none;
-  box-shadow: 0 1px 4px rgba(0,0,0,.4);
-  transition: all 0.4s;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .4);
+  transition: all .4s;
 
   &-link {
     box-shadow: none;
@@ -148,13 +147,13 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;50
     &.disabled,
     &[disabled],
     fieldset[disabled] & {
-      background-color: rgba(0, 0, 0, 0.1);
-      color: rgba(0, 0, 0, 0.4);
+      background-color: rgba(0, 0, 0, .1);
+      color: rgba(0, 0, 0, .4);
       opacity: 1;
 
       &:hover,
       &:focus {
-        background-color: rgba(0, 0, 0, 0.1);
+        background-color: rgba(0, 0, 0, .1);
       }
     }
   }
@@ -172,12 +171,12 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;50
     display: inline-block;
     width: 0;
     height: 0;
-    margin-left: 0.3em;
+    margin-left: .3em;
     vertical-align: middle;
     content: "";
-    border-top: 0.3em solid;
-    border-right: 0.3em solid transparent;
-    border-left: 0.3em solid transparent;
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-left: .3em solid transparent;
   }
 }
 
@@ -200,7 +199,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;50
 
   .btn + .btn,
   .btn + .btn-group > .dropdown-toggle {
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, .4);
   }
 }
 
@@ -231,7 +230,7 @@ p {
   > tbody > tr,
   > tbody > tr > th,
   > tbody > tr > td {
-    transition: all 0.2s;
+    transition: all .2s;
   }
 }
 
@@ -257,17 +256,17 @@ p {
 textarea,
 textarea.form-control,
 input.form-control,
-input[type=text],
-input[type=password],
-input[type=email],
-input[type=number],
-[type=text].form-control,
-[type=password].form-control,
-[type=email].form-control,
-[type=tel].form-control,
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+[type="text"].form-control,
+[type="password"].form-control,
+[type="email"].form-control,
+[type="tel"].form-control,
 [contenteditable].form-control {
   box-shadow: inset 0 -1px 0 #ddd;
-  transition: box-shadow 0.2s;
+  transition: box-shadow .2s;
 
   &:focus {
     box-shadow: inset 0 -2px 0 $primary;
@@ -292,7 +291,7 @@ input[type=number],
 select,
 select.form-control {
   appearance: none;
-  padding: 0.5rem 0;
+  padding: .5rem 0;
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAYElEQVR4Ae3UsRFAUBgEYUNklKaPvyQVGEWIFKAnLrt4XyDwLtj4y3aoqk8K1CEU6FZPQweFzkZoo9CiLojsaoKQMYxwyBhGOGQMIxwyhhEOGSMIh9ysVjX+eEGBAgV6AUVIcbxo1u1TAAAAAElFTkSuQmCC");
   background-size: 13px;
   background-repeat: no-repeat;
@@ -348,6 +347,10 @@ select.form-control {
 }
 
 .custom-radio .custom-control-input {
+  ~ .custom-control-label::after {
+    transform: scale(.75);
+  }
+
   &:checked {
     ~ .custom-control-label::before {
       background: $white;
@@ -357,24 +360,18 @@ select.form-control {
       transition: 240ms;
     }
   }
-  & {
-    ~ .custom-control-label::after {
-      transform: scale(.75);
-    }
-  }
 }
 
 .custom-switch {
-
   .custom-control-label::before {
-    top: 0.125rem;
-    height: 0.875rem;
+    top: .125rem;
+    height: .875rem;
     background: $gray-500;
     border: none;
   }
 
-  .custom-control-input:disabled  ~ .custom-control-label {
-    opacity: 0.7;
+  .custom-control-input:disabled ~ .custom-control-label {
+    opacity: .7;
   }
 
   .custom-control-input:disabled ~ .custom-control-label::before {
@@ -383,11 +380,11 @@ select.form-control {
 
   .custom-control-label::after {
     background-color: $white;
-    box-shadow: 0 1px 4px rgba(0,0,0,.3);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
   }
 
   .custom-control-input:checked ~ .custom-control-label::before {
-    opacity: 0.38;
+    opacity: .38;
   }
 
   .custom-control-input:checked ~ .custom-control-label::after {
@@ -395,31 +392,27 @@ select.form-control {
   }
 
   .custom-control-input:hover:not(:disabled) ~ .custom-control-label::after {
-    box-shadow: 0 1px 4px rgba(0,0,0,.3), 0 0 0 9px rgba(0,0,0,0.05);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .3), 0 0 0 9px rgba(0, 0, 0, .05);
   }
 
   .custom-control-input:focus:not(:disabled) ~ .custom-control-label::after {
-    box-shadow: 0 1px 4px rgba(0,0,0,.3), 0 0 0 9px rgba(0,0,0,0.09);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .3), 0 0 0 9px rgba(0, 0, 0, .09);
   }
 
   .custom-control-input:active:not(:disabled) ~ .custom-control-label::after {
-    box-shadow: 0 1px 4px rgba(0,0,0,.3), 0 0 0 9px rgba(0,0,0,0.16);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .3), 0 0 0 9px rgba(0, 0, 0, .16);
   }
 
   .custom-control-input:hover:checked:not(:disabled) ~ .custom-control-label::after {
-    box-shadow: 0 1px 4px rgba(0,0,0,.3), 0 0 0 9px rgba(33,150,243,0.05);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .3), 0 0 0 9px rgba(33, 150, 243, .05);
   }
 
   .custom-control-input:focus:checked:not(:disabled) ~ .custom-control-label::after {
-    box-shadow: 0 1px 4px rgba(0,0,0,.3), 0 0 0 9px rgba(33,150,243,0.09);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .3), 0 0 0 9px rgba(33, 150, 243, .09);
   }
 
   .custom-control-input:active:checked:not(:disabled) ~ .custom-control-label::after {
-    box-shadow: 0 1px 4px rgba(0,0,0,.3), 0 0 0 9px rgba(33,150,243,0.16);
-  }
-
-  .custom-control-input:active:not(:checked) ~ .custom-control-label::before {
-    background-color: $gray-500;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .3), 0 0 0 9px rgba(33, 150, 243, .16);
   }
 
   .custom-control-input:active:not(:checked) ~ .custom-control-label::before {
@@ -428,12 +421,12 @@ select.form-control {
 }
 
 .has-warning {
-  input:not([type=checkbox]),
+  input:not([type="checkbox"]),
   .form-control,
   input.form-control[readonly],
-  input[type=text][readonly],
-  [type=text].form-control[readonly],
-  input:not([type=checkbox]):focus,
+  input[type="text"][readonly],
+  [type="text"].form-control[readonly],
+  input:not([type="checkbox"]):focus,
   .form-control:focus {
     border-bottom: none;
     box-shadow: inset 0 -2px 0 $warning;
@@ -441,12 +434,12 @@ select.form-control {
 }
 
 .has-danger {
-  input:not([type=checkbox]),
+  input:not([type="checkbox"]),
   .form-control,
   input.form-control[readonly],
-  input[type=text][readonly],
-  [type=text].form-control[readonly],
-  input:not([type=checkbox]):focus,
+  input[type="text"][readonly],
+  [type="text"].form-control[readonly],
+  input:not([type="checkbox"]):focus,
   .form-control:focus {
     border-bottom: none;
     box-shadow: inset 0 -2px 0 $danger;
@@ -454,12 +447,12 @@ select.form-control {
 }
 
 .has-success {
-  input:not([type=checkbox]),
+  input:not([type="checkbox"]),
   .form-control,
   input.form-control[readonly],
-  input[type=text][readonly],
-  [type=text].form-control[readonly],
-  input:not([type=checkbox]):focus,
+  input[type="text"][readonly],
+  [type="text"].form-control[readonly],
+  input:not([type="checkbox"]):focus,
   .form-control:focus {
     border-bottom: none;
     box-shadow: inset 0 -2px 0 $success;
@@ -468,7 +461,9 @@ select.form-control {
 
 // Remove the Bootstrap feedback styles for input addons
 .input-group-addon {
-  .has-warning &, .has-danger &, .has-success & {
+  .has-warning &,
+  .has-danger &,
+  .has-success & {
     color: $input-color;
     border-color: $input-group-addon-border-color;
     background-color: $input-group-addon-bg;
@@ -476,23 +471,21 @@ select.form-control {
 }
 
 .input-group {
-
   > .input-group-prepend > .input-group-text {
-    padding-right: 0.25rem;
+    padding-right: .25rem;
   }
 
   > .input-group-append > .input-group-text {
-    padding-left: 0.25rem;
+    padding-left: .25rem;
   }
 
   .form-control {
-    padding-left: 0.25rem;
-    padding-right: 0.25rem;
+    padding-left: .25rem;
+    padding-right: .25rem;
   }
 }
 
 .input-group-sm {
-
   > .input-group-prepend > .btn,
   > .input-group-append > .btn {
     padding: $input-btn-padding-y-sm $input-btn-padding-x-sm;
@@ -518,7 +511,6 @@ select.form-control {
 }
 
 .input-group-lg {
-
   > .input-group-prepend > .btn,
   > .input-group-append > .btn {
     padding: $input-btn-padding-y-lg $input-btn-padding-x-lg;
@@ -565,7 +557,7 @@ select.form-control {
     border: none;
     color: $body-color;
     box-shadow: inset 0 -1px 0 #ddd;
-    transition: all 0.2s;
+    transition: all .2s;
 
     &:hover {
       background-color: transparent;
@@ -591,7 +583,6 @@ select.form-control {
   }
 
   &.nav-justified {
-
     .nav-link,
     .nav-link:hover,
     .nav-link:focus,
@@ -610,7 +601,7 @@ select.form-control {
 .dropdown-menu {
   margin-top: 0;
   border: none;
-  box-shadow: 0 1px 4px rgba(0,0,0,.3);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
 }
 
 // Indicators ==================================================================
@@ -619,7 +610,13 @@ select.form-control {
   padding-right: 2.5rem;
   border: none;
 
-  &, h1, h2, h3, h4, h5, h6 {
+  &,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     color: $white;
   }
 
@@ -636,7 +633,7 @@ select.form-control {
   a:not(.btn),
   .alert-link {
     color: $white;
-    font-weight: bold;
+    font-weight: 700;
   }
 
   .close {
@@ -654,7 +651,6 @@ select.form-control {
 }
 
 .badge {
-
   &-secondary {
     background-color: $gray-500;
     color: $white;
@@ -670,17 +666,15 @@ select.form-control {
 }
 
 .tag {
-  padding: 4px 6px 4px;
+  padding: 4px 6px;
 }
-
-// Progress bars ===============================================================
 
 // Containers ==================================================================
 
 .close {
-  line-height: 0.5;
-  opacity: 0.6;
-  transition: all 0.2s;
+  line-height: .5;
+  opacity: .6;
+  transition: all .2s;
 
   &:hover {
     opacity: 1;
@@ -688,7 +682,7 @@ select.form-control {
 }
 
 .card {
-  box-shadow: 0 1px 4px rgba(0,0,0,.4);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .4);
 
   &.border-primary,
   &.border-secondary,
@@ -704,31 +698,41 @@ select.form-control {
 
 .alert-dismissible {
   .close {
-    padding: 0.5rem 0.75rem;
+    padding: .5rem .75rem;
   }
 }
 
 .list-group {
   &-item-action.active {
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       color: $white;
     }
   }
 }
 
 .modal-content {
-  border-radius: 0.2rem;
-  box-shadow: 0 6px 36px rgba(0,0,0,.3);
+  border-radius: .2rem;
+  box-shadow: 0 6px 36px rgba(0, 0, 0, .3);
 }
 
 .popover {
   border: none;
-  box-shadow: 0 1px 4px rgba(0,0,0,.3);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
 }
 
 .carousel {
   &-caption {
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       color: inherit;
     }
   }

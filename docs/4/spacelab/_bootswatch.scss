@@ -16,10 +16,9 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,
 // Navbar ======================================================================
 
 .navbar {
-
   .nav-link,
   .navbar-brand {
-    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.1);
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, .1);
     transition: color ease-in-out .2s;
   }
 
@@ -36,7 +35,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,
 
     .nav-link,
     .navbar-brand {
-      text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1);
+      text-shadow: 1px 1px 0 rgba(255, 255, 255, .1);
     }
 
     .navbar-brand {
@@ -52,7 +51,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,
 // Buttons =====================================================================
 
 .btn {
-  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.1);
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, .1);
 
   &-link {
     text-shadow: none;
@@ -73,30 +72,24 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,
   text-shadow: none;
 }
 
-// Typography ==================================================================
-
-// Tables ======================================================================
-
-// Forms =======================================================================
-
-// Navs ========================================================================
-
 // Indicators ==================================================================
 
 .badge {
-
   &-secondary {
     color: $white;
   }
 }
 
-// Progress bars ===============================================================
-
 // Containers ==================================================================
 
 .card,
 .list-group-item {
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     color: inherit;
   }
 }

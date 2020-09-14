@@ -41,7 +41,7 @@ $yiq-contrasted-threshold:  185 !default;
 
 // Body
 
-$body-bg:                   #2B3E50 !default;
+$body-bg:                   #2b3e50 !default;
 $body-color:                $gray-100 !default;
 
 // Components
@@ -51,19 +51,18 @@ $border-radius-lg:            0 !default;
 $border-radius-sm:            0 !default;
 
 // Fonts
+
+// stylelint-disable-next-line value-keyword-case
 $font-family-sans-serif:      "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 
-$text-muted:                  rgba(255,255,255,.4) !default;
+$text-muted:                  rgba(255, 255, 255, .4) !default;
 
 // Tables
 
-$table-accent-bg:             rgba($white,.05) !default;
-$table-hover-bg:              rgba($white,.075) !default;
-
-$table-border-color:          rgba($black,.15) !default;
-
+$table-accent-bg:             rgba($white, .05) !default;
+$table-hover-bg:              rgba($white, .075) !default;
+$table-border-color:          rgba($black, .15) !default;
 $table-head-bg:               $light !default;
-
 $table-dark-bg:               $light !default;
 $table-dark-border-color:     $gray-200 !default;
 $table-dark-color:            $body-bg !default;
@@ -71,36 +70,30 @@ $table-dark-color:            $body-bg !default;
 // Forms
 
 $input-disabled-bg:                 $gray-100 !default;
-
 $input-border-color:                transparent !default;
-
 $input-group-addon-color:           $body-color !default;
-
 $custom-file-button-color:          $white !default;
 $custom-file-border-color:          $gray-200 !default;
 
 // Dropdowns
 
 $dropdown-bg:                       $gray-200 !default;
-$dropdown-divider-bg:               rgba($black,.15) !default;
-
+$dropdown-divider-bg:               rgba($black, .15) !default;
 $dropdown-link-color:               $body-color !default;
 $dropdown-link-hover-color:         $dropdown-link-color !default;
 $dropdown-link-hover-bg:            $table-hover-bg !default;
 
 // Navs
 
-$nav-link-disabled-color:           rgba(255,255,255,.4) !default;
-
+$nav-link-disabled-color:           rgba(255, 255, 255, .4) !default;
 $nav-tabs-border-color:             $gray-200 !default;
 $nav-tabs-link-active-color:        $body-color !default;
 $nav-tabs-link-active-border-color: $gray-200 !default;
 
 // Navbar
 
-$navbar-padding-y:                  0.25rem !default;
-
-$navbar-dark-color:                 rgba($white,.75) !default;
+$navbar-padding-y:                  .25rem !default;
+$navbar-dark-color:                 rgba($white, .75) !default;
 $navbar-dark-hover-color:           $white !default;
 
 // Pagination
@@ -108,11 +101,9 @@ $navbar-dark-hover-color:           $white !default;
 $pagination-color:                  $white !default;
 $pagination-bg:                     $gray-200 !default;
 $pagination-border-color:           transparent !default;
-
 $pagination-hover-color:            $white !default;
 $pagination-hover-bg:               $nav-link-disabled-color !default;
 $pagination-hover-border-color:     $pagination-border-color !default;
-
 $pagination-disabled-color:         $nav-link-disabled-color !default;
 $pagination-disabled-bg:            $pagination-bg !default;
 $pagination-disabled-border-color:  $pagination-border-color !default;
@@ -126,14 +117,12 @@ $card-inner-border-radius:          0 !default;
 // Popovers
 
 $popover-bg:                        $gray-200 !default;
-
 $popover-header-bg:                 $table-hover-bg !default;
 
 // Toasts
 
 $toast-background-color:            $gray-200 !default;
-$toast-border-color:                rgba(0,0,0,.2) !default;
-
+$toast-border-color:                rgba(0, 0, 0, .2) !default;
 $toast-header-color:                $body-color !default;
 $toast-header-background-color:     $toast-background-color !default;
 $toast-header-border-color:         $toast-border-color !default;
@@ -141,18 +130,14 @@ $toast-header-border-color:         $toast-border-color !default;
 // Modals
 
 $modal-content-bg:                  $gray-200 !default;
-
-$modal-header-border-color:         rgba(0,0,0,.2) !default;
+$modal-header-border-color:         rgba(0, 0, 0, .2) !default;
 
 // List group
 
 $list-group-bg:                     $gray-200 !default;
 $list-group-border-color:           transparent !default;
-
 $list-group-hover-bg:               $nav-link-disabled-color !default;
-
 $list-group-disabled-color:         $nav-link-disabled-color !default;
-
 $list-group-action-color:           $white !default;
 $list-group-action-hover-color:     $white !default;
 

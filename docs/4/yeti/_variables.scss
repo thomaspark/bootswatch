@@ -47,43 +47,39 @@ $border-radius-sm:            0 !default;
 
 // Fonts
 
+// stylelint-disable-next-line value-keyword-case
 $font-family-sans-serif:      "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-
-$font-size-base:              0.9375rem !default;
-
+$font-size-base:              .9375rem !default;
+$font-size-sm:                $font-size-base * .88 !default;
 $headings-font-weight:        300 !default;
 
 // Buttons
 
-$input-btn-padding-x:         0.5rem !default;
-
+$input-btn-padding-x:         .5rem !default;
 $btn-font-weight:             300 !default;
 
 // Dropdowns
 
-$dropdown-border-color:             rgba($black,.1) !default;
-$dropdown-divider-bg:               rgba($black,.1) !default;
+$dropdown-border-color:             rgba($black, .1) !default;
+$dropdown-divider-bg:               rgba($black, .1) !default;
 
 // Navs
 
 $nav-link-disabled-color:           $gray-400 !default;
-
 $nav-tabs-border-color:             $dropdown-border-color !default;
 $nav-tabs-link-hover-border-color:  $nav-tabs-border-color !default;
 $nav-tabs-link-active-border-color: $nav-tabs-border-color !default;
 
 // Navbar
 
-$navbar-dark-color:                 rgba($white,.7) !default;
+$navbar-dark-color:                 rgba($white, .7) !default;
 $navbar-dark-hover-color:           $white !default;
 
 // Pagination
 
 $pagination-color:                  $gray-600 !default;
 $pagination-border-color:           $nav-tabs-border-color !default;
-
 $pagination-active-border-color:    darken($primary, 5%) !default;
-
 $pagination-disabled-color:         $gray-200 !default;
 
 // Jumbotron
