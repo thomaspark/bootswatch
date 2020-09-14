@@ -150,7 +150,8 @@ module.exports = grunt => {
             roundingPrecision: 6
           }
         },
-        sourceMap: true
+        sourceMap: true,
+        sourceMapInlineSources: true
       },
       dist: {
         src: [],
