@@ -125,7 +125,7 @@ module.exports = grunt => {
     postcss: {
       options: {
         processors: [
-          autoprefixer()
+          autoprefixer({ cascade: false })
         ],
         map: {
           inline: false,
