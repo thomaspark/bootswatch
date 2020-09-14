@@ -121,7 +121,7 @@ It's through your contributions that Bootswatch will continue to improve. You ca
 
 **Code:** Make a fix and submit it as a pull request. When making changes, it's important to keep the CSS and SASS versions in sync. To do this, be sure to edit the SASS source files for the particular theme first, then run the  tasks `grunt swatch` to build the CSS.
 
-**Donation:** Donations are gratefully accepted via [GitHub](https://github.com/sponsors/thomaspark/) and [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PU2DH4BMF9MWS&source=url).
+**Donation:** Donations are gratefully accepted via [GitHub](https://github.com/sponsors/thomaspark) and [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PU2DH4BMF9MWS&source=url).
 
 
 ## Author
@@ -129,14 +129,14 @@ It's through your contributions that Bootswatch will continue to improve. You ca
 Thomas Park
 
 * <https://github.com/thomaspark>
-* <https://thomaspark.co>
+* <https://thomaspark.co/>
 
 
 ## Thanks
 
 [Mark Otto](https://github.com/mdo) and [Jacob Thornton](https://github.com/fat) for [Bootstrap](https://github.com/twbs/bootstrap).
 
-[Jenil Gogari](http://www.jgog.in/) for his contributions to the Flatly theme.
+[Jenil Gogari](https://jgog.in/) for his contributions to the Flatly theme.
 
 [James Taylor](https://github.com/jostylr) for [cors-lite](https://github.com/jostylr/cors-lite).
 
