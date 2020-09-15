@@ -95,8 +95,7 @@ module.exports = grunt => {
           cwd: 'dist',
           src: [
             '**/*.css',
-            '**/*.scss',
-            '**/*.map'
+            '**/*.scss'
           ],
           dest: DOCS_DEST
         }]
@@ -142,9 +141,7 @@ module.exports = grunt => {
             specialComments: 'all',
             roundingPrecision: 6
           }
-        },
-        sourceMap: true,
-        sourceMapInlineSources: true
+        }
       },
       dist: {
         src: [],
