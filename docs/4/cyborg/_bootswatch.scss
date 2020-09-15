@@ -10,7 +10,6 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&di
 // Navbar ======================================================================
 
 .navbar {
-
   &.bg-primary {
     border: 1px solid $gray-700;
   }
@@ -25,13 +24,12 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&di
   }
 
   &.fixed-top {
-    border-width: 0 0 1px 0;
+    border-width: 0 0 1px;
   }
 
   &.fixed-bottom {
-    border-width: 1px 0 0 0;
+    border-width: 1px 0 0;
   }
-
 }
 
 // Buttons =====================================================================
@@ -48,8 +46,6 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&di
   }
 }
 
-// Typography ==================================================================
-
 // Tables ======================================================================
 
 table {
@@ -57,113 +53,147 @@ table {
 }
 
 .table {
-
   &-primary {
-    &, > th, > td {
+    &,
+    > th,
+    > td {
       background-color: $primary;
     }
   }
 
   &-secondary {
-    &, > th, > td {
+    &,
+    > th,
+    > td {
       background-color: $secondary;
     }
   }
 
   &-light {
-    &, > th, > td {
+    &,
+    > th,
+    > td {
       background-color: $light;
     }
   }
 
   &-dark {
-    &, > th, > td {
+    &,
+    > th,
+    > td {
       background-color: $dark;
     }
   }
 
   &-success {
-    &, > th, > td {
+    &,
+    > th,
+    > td {
       background-color: $success;
     }
   }
 
   &-info {
-    &, > th, > td {
+    &,
+    > th,
+    > td {
       background-color: $info;
     }
   }
 
   &-danger {
-    &, > th, > td {
+    &,
+    > th,
+    > td {
       background-color: $danger;
     }
   }
 
   &-warning {
-    &, > th, > td {
+    &,
+    > th,
+    > td {
       background-color: $warning;
     }
   }
 
   &-active {
-    &, > th, > td {
+    &,
+    > th,
+    > td {
       background-color: $table-active-bg;
     }
   }
 
   &-hover {
-
     .table-primary:hover {
-      &, > th, > td {
+      &,
+      > th,
+      > td {
         background-color: darken($primary, 5%);
       }
     }
 
     .table-secondary:hover {
-      &, > th, > td {
+      &,
+      > th,
+      > td {
         background-color: darken($secondary, 5%);
       }
     }
 
     .table-light:hover {
-      &, > th, > td {
+      &,
+      > th,
+      > td {
         background-color: darken($light, 5%);
       }
     }
 
     .table-dark:hover {
-      &, > th, > td {
+      &,
+      > th,
+      > td {
         background-color: darken($dark, 5%);
       }
     }
 
     .table-success:hover {
-      &, > th, > td {
+      &,
+      > th,
+      > td {
         background-color: darken($success, 5%);
       }
     }
 
     .table-info:hover {
-      &, > th, > td {
+      &,
+      > th,
+      > td {
         background-color: darken($info, 5%);
       }
     }
 
     .table-danger:hover {
-      &, > th, > td {
+      &,
+      > th,
+      > td {
         background-color: darken($danger, 5%);
       }
     }
 
     .table-warning:hover {
-      &, > th, > td {
+      &,
+      > th,
+      > td {
         background-color: darken($warning, 5%);
       }
     }
 
     .table-active:hover {
-      &, > th, > td {
+      &,
+      > th,
+      > td {
         background-color: $table-active-bg;
       }
     }
@@ -251,14 +281,12 @@ legend {
 }
 
 .close {
-  opacity: 0.6;
+  opacity: .6;
 
   &:hover {
     opacity: 1;
   }
 }
-
-// Progress bars ===============================================================
 
 // Containers ==================================================================
 
@@ -283,7 +311,12 @@ legend {
 
 .card,
 .list-group-item {
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     color: inherit;
   }
 }

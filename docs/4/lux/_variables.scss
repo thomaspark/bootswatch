@@ -41,37 +41,29 @@ $yiq-contrasted-threshold:  185 !default;
 
 // Options
 
-$enable-rounded:                              false !default;
+$enable-rounded:            false !default;
 
 // Body
 
 $body-color:                $gray-700 !default;
 
-// Components
-
-// $border-radius:               0 !default;
-// $border-radius-lg:            0 !default;
-// $border-radius-sm:            0 !default;
-
 // Fonts
 
+// stylelint-disable-next-line value-keyword-case
 $font-family-sans-serif:      "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-
-$font-size-base:              0.875rem !default;
-
+$font-size-base:              .875rem !default;
 $h1-font-size:                2rem !default;
 $h2-font-size:                1.75rem !default;
 $h3-font-size:                1.5rem !default;
 $h4-font-size:                1.25rem !default;
 $h5-font-size:                1rem !default;
-$h6-font-size:                0.75rem !default;
-
+$h6-font-size:                .75rem !default;
 $headings-font-weight:        600 !default;
 $headings-color:              $gray-900 !default;
 
 // Tables
 
-$table-border-color:          rgba(0, 0, 0, 0.05) !default;
+$table-border-color:          rgba(0, 0, 0, .05) !default;
 
 // Buttons + Forms
 
@@ -80,43 +72,33 @@ $input-btn-border-width:      0 !default;
 // Buttons
 
 $btn-line-height:             1.5rem !default;
-
-$input-btn-padding-y:         0.75rem !default;
+$input-btn-padding-y:         .75rem !default;
 $input-btn-padding-x:         1.5rem !default;
-
 $input-btn-padding-y-sm:      .5rem !default;
 $input-btn-padding-x-sm:      1rem !default;
-
 $input-btn-padding-y-lg:      2rem !default;
 $input-btn-padding-x-lg:      2rem !default;
-
 $btn-font-weight:             600 !default;
 
 // Forms
 
 $input-line-height:                     1.5 !default;
-
 $input-bg:                              $gray-200 !default;
 $input-disabled-bg:                     $gray-300 !default;
-
 $input-group-addon-bg:                  $gray-300 !default;
 
 // Navbar
 
 $navbar-padding-y:                  1.5rem !default;
-
 $navbar-dark-hover-color:           $white !default;
-
-$navbar-light-color:                rgba($black,.3) !default;
+$navbar-light-color:                rgba($black, .3) !default;
 $navbar-light-hover-color:          $gray-900 !default;
 $navbar-light-active-color:         $gray-900 !default;
 
 // Pagination
 
 $pagination-border-color:           transparent !default;
-
 $pagination-hover-border-color:     $pagination-border-color !default;
-
 $pagination-disabled-border-color:  $pagination-border-color !default;
 
 // Breadcrumbs

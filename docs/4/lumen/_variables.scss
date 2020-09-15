@@ -41,21 +41,19 @@ $yiq-contrasted-threshold: 200 !default;
 
 // Fonts
 
+// stylelint-disable-next-line value-keyword-case
 $font-family-sans-serif:      "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-
-$font-size-base:              0.875rem !default;
+$font-size-base:              .875rem !default;
 
 // Buttons
 
-$btn-font-size:               0.75rem !default;
-
-$btn-font-size-sm:            0.625rem !default;
-
-$btn-font-weight:             bold !default;
+$btn-font-size:               .75rem !default;
+$btn-font-size-sm:            .625rem !default;
+$btn-font-weight:             700 !default;
 
 // Dropdowns
 
-$dropdown-link-color:               rgba(0,0,0,.5) !default;
+$dropdown-link-color:         rgba(0, 0, 0, .5) !default;
 
 // Navs
 
@@ -68,12 +66,9 @@ $nav-tabs-link-active-border-color: $nav-tabs-border-color !default;
 
 $pagination-color:                  $gray-700 !default;
 $pagination-bg:                     $gray-200 !default;
-
 $pagination-hover-color:            $pagination-color !default;
 $pagination-hover-bg:               $pagination-bg !default;
-
 $pagination-active-border-color:    darken($primary, 5%) !default;
-
 $pagination-disabled-color:         $gray-600 !default;
 $pagination-disabled-bg:            $pagination-bg !default;
 
@@ -83,7 +78,7 @@ $jumbotron-bg:                      #fafafa !default;
 
 // Modals
 
-$modal-content-border-color:        rgba($black,.1) !default;
+$modal-content-border-color:        rgba($black, .1) !default;
 
 // Close
 

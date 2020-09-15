@@ -95,8 +95,7 @@ module.exports = grunt => {
           cwd: 'dist',
           src: [
             '**/*.css',
-            '**/*.scss',
-            '**/*.map'
+            '**/*.scss'
           ],
           dest: DOCS_DEST
         }]
@@ -106,9 +105,7 @@ module.exports = grunt => {
       options: {
         implementation: sass,
         outputStyle: 'expanded',
-        precision: 6,
-        sourceMap: true,
-        sourceMapContents: true
+        precision: 6
       },
       dist: {
         src: [],
@@ -126,12 +123,7 @@ module.exports = grunt => {
       options: {
         processors: [
           autoprefixer({ cascade: false })
-        ],
-        map: {
-          inline: false,
-          annotation: true,
-          sourcesContent: true
-        }
+        ]
       },
       dist: {
         src: [],
@@ -149,8 +141,7 @@ module.exports = grunt => {
             specialComments: 'all',
             roundingPrecision: 6
           }
-        },
-        sourceMap: true
+        }
       },
       dist: {
         src: [],
