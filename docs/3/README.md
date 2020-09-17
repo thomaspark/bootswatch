@@ -1,15 +1,15 @@
 Bootswatch
 ==========
 
-[![Bootswatch Logo](./assets/img/logo-dark.png)](http://bootswatch.com)
+[![Bootswatch Logo](./assets/img/logo-dark.png)](https://bootswatch.com)
 
-Bootswatch is a collection of open source themes for [Bootstrap](https://getbootstrap.com/). Check it out at [bootswatch.com](http://bootswatch.com).
+Bootswatch is a collection of open source themes for [Bootstrap](https://getbootstrap.com/). Check it out at [bootswatch.com](https://bootswatch.com).
 
 Usage
 -----
 Download the `bootstrap.min.css` file associated with a theme and replace Bootstrap's default stylesheet. You must still include Bootstrap's JavaScript file to have functional dropdowns, modals, etc.
 
-The themes are also hosted on [BootstrapCDN](http://www.bootstrapcdn.com/bootswatch/). 
+The themes are also hosted on [BootstrapCDN](https://www.bootstrapcdn.com/bootswatch/). 
 
 You can import a theme into your styles using either LESS or SASS.
 
@@ -40,12 +40,12 @@ Each theme consists of two LESS files. `variables.less`, which is included by de
 
 These files are also available in SASS.
 
-Check out the [Help page](http://bootswatch.com/help/) for more details on building your own theme.
+Check out the [Help page](https://bootswatch.com/help/) for more details on building your own theme.
 
 API
 -----
 
-A simple API is available for integrating your platform with Bootswatch. More info at http://bootswatch.com/help/#api
+A simple API is available for integrating your platform with Bootswatch. More info at https://bootswatch.com/help/#api
 
 Contributing
 -----
@@ -63,14 +63,14 @@ Author
 ------
 Thomas Park
 
-+ http://github.com/thomaspark
++ https://github.com/thomaspark
 + https://thomaspark.co
 
 Thanks
 ------
 [Mark Otto](https://github.com/mdo) and [Jacob Thornton](https://github.com/fat) for [Bootstrap](https://github.com/twbs/bootstrap).
 
-[Jenil Gogari](http://www.jgog.in/) for his contributions to the Flatly theme.
+[Jenil Gogari](https://jgog.in/) for his contributions to the Flatly theme.
 
 [James Taylor](https://github.com/jostylr) for [cors-lite](https://github.com/jostylr/cors-lite).
 
