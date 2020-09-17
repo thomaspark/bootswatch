@@ -57,7 +57,7 @@ It's through your contributions that Bootswatch will continue to improve. You ca
 
 **Code:** Make a fix and submit it as a pull request. When making changes, it's important to keep the CSS, LESS and SASS versions in sync. To do this, be sure to edit the LESS source files for the particular theme, then run the  tasks `grunt swatch` and `grunt:convert_less` to build the CSS and LESS.
 
-**Donation:** Donations are gratefully accepted via [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=F22JEM3Q78JC2) and [Gratipay](https://gratipay.com/bootswatch/).
+**Donation:** Donations are gratefully accepted via [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=F22JEM3Q78JC2).
 
 Author
 ------

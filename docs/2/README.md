@@ -18,7 +18,7 @@ Bootswatch is an open source project, and you’re welcome to modify the themes 
 
 Each raw theme consists of two LESS files. One is `variables.less`, which is included by default in Bootstrap and allows you to customize [these settings](https://getbootstrap.com/2.3.2/customize.html#variables). The other is called `bootswatch.less` and introduces more extensive structural changes.
 
-Check out the README in the [swatchmaker directory](https://github.com/thomaspark/bootswatch/tree/master/swatchmaker) for step-by-step instructions on building your own swatch.
+Check out the README in the [swatchmaker directory](https://github.com/thomaspark/bootswatch/tree/master/docs/2/swatchmaker) for step-by-step instructions on building your own swatch.
 
 API
 -----
@@ -47,7 +47,7 @@ Thanks
 
 [James Taylor](http://github.com/jostylr) for [cors-lite](https://github.com/jostylr/cors-lite).
 
-[Zack Maril](http://github.com/zmaril) for [bootswatch/swatchmaker/watcher.rb](https://github.com/thomaspark/bootswatch/blob/master/swatchmaker/watcher.rb).
+[Zack Maril](http://github.com/zmaril) for [bootswatch/swatchmaker/watcher.rb](https://github.com/thomaspark/bootswatch/blob/master/docs/2/swatchmaker/watcher.rb).
 
 [Gerald Hiller](https://twitter.com/geraldhiller) for the favicon.
 
