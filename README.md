@@ -1,15 +1,15 @@
 Bootswatch
 ==========
 
-[![Bootswatch Logo](./assets/img/logo-dark.png)](http://bootswatch.com)
+[![Bootswatch Logo](./assets/img/logo-dark.png)](https://bootswatch.com)
 
-Bootswatch is a collection of open source themes for [Bootstrap](http://getbootstrap.com/). Check it out at [bootswatch.com](http://bootswatch.com).
+Bootswatch is a collection of open source themes for [Bootstrap](https://getbootstrap.com/). Check it out at [bootswatch.com](https://bootswatch.com).
 
 Usage
 -----
 Download the `bootstrap.min.css` file associated with a theme and replace Bootstrap's default stylesheet. You must still include Bootstrap's JavaScript file to have functional dropdowns, modals, etc.
 
-The themes are also hosted on [BootstrapCDN](http://www.bootstrapcdn.com/bootswatch/). 
+The themes are also hosted on [BootstrapCDN](https://www.bootstrapcdn.com/bootswatch/). 
 
 You can import a theme into your styles using either LESS or SASS.
 
@@ -36,16 +36,16 @@ Customization
 ------
 Bootswatch is open source and you’re welcome to modify the themes.
 
-Each theme consists of two LESS files. `variables.less`, which is included by default in Bootstrap, allows you to customize [these settings](http://getbootstrap.com/customize/#less-variables). `bootswatch.less` introduces more extensive structural changes.
+Each theme consists of two LESS files. `variables.less`, which is included by default in Bootstrap, allows you to customize [these settings](https://getbootstrap.com/customize/#less-variables). `bootswatch.less` introduces more extensive structural changes.
 
 These files are also available in SASS.
 
-Check out the [Help page](http://bootswatch.com/help/) for more details on building your own theme.
+Check out the [Help page](https://bootswatch.com/help/) for more details on building your own theme.
 
 API
 -----
 
-A simple API is available for integrating your platform with Bootswatch. More info at http://bootswatch.com/help/#api
+A simple API is available for integrating your platform with Bootswatch. More info at https://bootswatch.com/help/#api
 
 Contributing
 -----
@@ -57,20 +57,20 @@ It's through your contributions that Bootswatch will continue to improve. You ca
 
 **Code:** Make a fix and submit it as a pull request. When making changes, it's important to keep the CSS, LESS and SASS versions in sync. To do this, be sure to edit the LESS source files for the particular theme, then run the  tasks `grunt swatch` and `grunt:convert_less` to build the CSS and LESS.
 
-**Donation:** Donations are gratefully accepted via [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=F22JEM3Q78JC2) and [Gratipay](https://gratipay.com/bootswatch/).
+**Donation:** Donations are gratefully accepted via [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=F22JEM3Q78JC2).
 
 Author
 ------
 Thomas Park
 
-+ http://github.com/thomaspark
-+ http://thomaspark.co
++ https://github.com/thomaspark
++ https://thomaspark.co
 
 Thanks
 ------
 [Mark Otto](https://github.com/mdo) and [Jacob Thornton](https://github.com/fat) for [Bootstrap](https://github.com/twbs/bootstrap).
 
-[Jenil Gogari](http://www.jgog.in/) for his contributions to the Flatly theme.
+[Jenil Gogari](https://jgog.in/) for his contributions to the Flatly theme.
 
 [James Taylor](https://github.com/jostylr) for [cors-lite](https://github.com/jostylr/cors-lite).
 
