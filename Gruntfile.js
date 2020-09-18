@@ -51,6 +51,7 @@ module.exports = grunt => {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-sass');
+  grunt.loadNpmTasks('grunt-html');
 
   // Force use of Unix newlines
   grunt.util.linefeed = '\n';
@@ -148,6 +149,21 @@ module.exports = grunt => {
         dest: ''
       }
     },
+    htmllint: {
+      options: {
+        ignore: [
+          /Attribute “autocomplete” is only allowed when the input type is.*/,
+          /Attribute “autocomplete” not allowed on element “button” at this point./,
+          /Bad value “” for attribute “action” on element “form”./
+        ]
+      },
+      src: [
+        'docs/**/*.html',
+        '!docs/**/bower_components/**/*.html',
+        '!docs/_vendor/**/*.html',
+        '!docs/2/**/*.html'
+      ]
+    },
     connect: {
       options: {
         hostname: 'localhost',
@@ -238,6 +254,7 @@ module.exports = grunt => {
   });
 
   grunt.registerTask('vendor', 'copy:vendor');
+
   grunt.registerTask('docs-css', ['sass:docs', 'postcss:docs']);
 
   grunt.registerTask('server', 'connect:keepalive');

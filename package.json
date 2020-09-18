@@ -14,8 +14,9 @@
   },
   "scripts": {
     "build": "grunt swatch",
+    "htmllint": "grunt htmllint",
     "stylelint": "stylelint \"{build,dist,docs/_assets}/**/*.scss\" --rd",
-    "test": "npm run stylelint"
+    "test": "npm run stylelint && npm run htmllint"
   },
   "files": [
     "dist/**/*.{css,scss}"
@@ -33,6 +34,7 @@
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-cssmin": "^3.0.0",
     "grunt-contrib-watch": "^1.1.0",
+    "grunt-html": "^14.2.0",
     "grunt-sass": "^3.1.0",
     "jquery": "^3.5.1",
     "node-sass": "^4.14.1",
