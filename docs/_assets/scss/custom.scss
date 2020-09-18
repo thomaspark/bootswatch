@@ -188,16 +188,16 @@ iframe {
   background-color: #eaf1f1;
   text-align: center;
   .icon {
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-  .fa {
-    display: inline-block;
-    padding: .8em;
-    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1rem;
     background: #349aed;
     background: linear-gradient(145deg, rgba(59, 156, 234, 1) 50%, rgba(61, 184, 235, 1) 100%);
     border-radius: 50%;
+    font-size: 2rem;
     color: rgba(0, 0, 0, .5);
   }
   p {
