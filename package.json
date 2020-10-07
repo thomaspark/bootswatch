@@ -15,7 +15,7 @@
   "scripts": {
     "build": "grunt swatch",
     "htmllint": "grunt htmllint",
-    "stylelint": "stylelint \"{build,dist,docs/_assets}/**/*.scss\" --rd",
+    "stylelint": "stylelint \"**/*.scss\" --rd",
     "test": "npm run stylelint"
   },
   "files": [
