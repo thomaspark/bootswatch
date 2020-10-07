@@ -33,7 +33,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;50
   &:active::after {
     background-size: 0 0;
     opacity: .2;
-    transition: 0s;
+    transition: none;
   }
 
   &.disabled,
@@ -119,7 +119,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;50
   text-transform: uppercase;
   border: none;
   box-shadow: 0 1px 4px rgba(0, 0, 0, .4);
-  transition: all .4s;
+  transition: color .4s, background-color .4s, border-color .4s, box-shadow .4s;
 
   &-link {
     box-shadow: none;
@@ -230,7 +230,7 @@ p {
   > tbody > tr,
   > tbody > tr > th,
   > tbody > tr > td {
-    transition: all .2s;
+    transition: background-color .2s, color .2s;
   }
 }
 
@@ -354,10 +354,11 @@ select.form-control {
   &:checked {
     ~ .custom-control-label::before {
       background: $white;
+      transition: border-color .24s;
     }
     ~ .custom-control-label::after {
       transform: scale(1.125);
-      transition: 240ms;
+      transition: background-image .24s, transform .24s;
     }
   }
 }
@@ -557,7 +558,7 @@ select.form-control {
     border: none;
     color: $body-color;
     box-shadow: inset 0 -1px 0 #ddd;
-    transition: all .2s;
+    transition: color .2s, box-shadow .2s;
 
     &:hover {
       background-color: transparent;
@@ -674,7 +675,7 @@ select.form-control {
 .close {
   line-height: .5;
   opacity: .6;
-  transition: all .2s;
+  transition: opacity .2s;
 
   &:hover {
     opacity: 1;
