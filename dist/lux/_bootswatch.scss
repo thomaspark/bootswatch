@@ -138,10 +138,10 @@ th {
 .custom-switch {
   .custom-control-label {
     &::after {
-      top: calc(.15625rem + 2px);
-      left: calc(-2.25rem + 2px);
-      width: calc(1rem - 4px);
-      height: calc(1rem - 4px);
+      top: add(.15625rem, 2px);
+      left: add(-2.25rem, 2px);
+      width: subtract(1rem, 4px);
+      height: subtract(1rem, 4px);
     }
   }
 }

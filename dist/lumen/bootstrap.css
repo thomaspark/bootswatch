@@ -10496,11 +10496,11 @@ a.text-dark:hover, a.text-dark:focus {
 .nav-tabs .nav-link, .nav-tabs .nav-link.disabled, .nav-tabs .nav-link.disabled:hover, .nav-tabs .nav-link.disabled:focus {
   margin-top: 6px;
   border-color: #f0f0f0;
-  transition: all .2s ease-in-out;
+  transition: padding-bottom .2s ease-in-out, margin-top .2s ease-in-out, border-bottom .2s ease-in-out;
 }
 
 .nav-tabs .nav-link:not(.disabled):hover, .nav-tabs .nav-link:not(.disabled):focus, .nav-tabs .nav-link.active {
-  padding-bottom: calc(.5rem + 6px);
+  padding-bottom: calc(0.5rem + 6px);
   border-bottom-color: transparent;
   margin-top: 0;
 }
