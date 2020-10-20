@@ -336,6 +336,10 @@ select.form-control {
 }
 
 .custom-checkbox .custom-control-input:checked {
+  ~ .custom-control-label::before {
+    background-image: none;
+  }
+
   ~ .custom-control-label::after {
     transform: scale(1.5);
   }
@@ -348,7 +352,8 @@ select.form-control {
 
   &:checked {
     ~ .custom-control-label::before {
-      background: $white;
+      background-color: $white;
+      background-image: none;
       transition: border-color .24s;
     }
     ~ .custom-control-label::after {
@@ -362,7 +367,7 @@ select.form-control {
   .custom-control-label::before {
     top: .125rem;
     height: .875rem;
-    background: $gray-500;
+    background-color: $gray-500;
     border: none;
   }
 
@@ -371,7 +376,7 @@ select.form-control {
   }
 
   .custom-control-input:disabled ~ .custom-control-label::before {
-    background: $gray-500;
+    background-color: $gray-500;
   }
 
   .custom-control-label::after {

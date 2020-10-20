@@ -11301,6 +11301,10 @@ select.form-control[multiple] {
   border-color: #2196f3;
 }
 
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+  background-image: none;
+}
+
 .custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
   -webkit-transform: scale(1.5);
   transform: scale(1.5);
@@ -11312,7 +11316,8 @@ select.form-control[multiple] {
 }
 
 .custom-radio .custom-control-input:checked ~ .custom-control-label::before {
-  background: #fff;
+  background-color: #fff;
+  background-image: none;
   transition: border-color .24s;
 }
 
@@ -11327,7 +11332,7 @@ select.form-control[multiple] {
 .custom-switch .custom-control-label::before {
   top: .125rem;
   height: .875rem;
-  background: #bbb;
+  background-color: #bbb;
   border: none;
 }
 
@@ -11336,7 +11341,7 @@ select.form-control[multiple] {
 }
 
 .custom-switch .custom-control-input:disabled ~ .custom-control-label::before {
-  background: #bbb;
+  background-color: #bbb;
 }
 
 .custom-switch .custom-control-label::after {

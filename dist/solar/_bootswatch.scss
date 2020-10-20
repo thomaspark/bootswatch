@@ -185,7 +185,8 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@4
 // Forms =======================================================================
 
 .custom-control-input:checked ~ .custom-control-label::before {
-  background: $primary;
+  background-color: $primary;
+  background-image: none;
 }
 
 .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
@@ -193,7 +194,8 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@4
 }
 
 .custom-control-input:not(:disabled):active ~ .custom-control-label::before {
-  background: $primary;
+  background-color: $primary;
+  background-image: none;
   border-color: $primary;
 }
 

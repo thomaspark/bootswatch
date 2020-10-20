@@ -10461,7 +10461,8 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .custom-control-input:checked ~ .custom-control-label::before {
-  background: #b58900;
+  background-color: #b58900;
+  background-image: none;
 }
 
 .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
@@ -10469,7 +10470,8 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .custom-control-input:not(:disabled):active ~ .custom-control-label::before {
-  background: #b58900;
+  background-color: #b58900;
+  background-image: none;
   border-color: #b58900;
 }
 
