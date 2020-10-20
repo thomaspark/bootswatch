@@ -255,7 +255,7 @@ table,
   @each $color, $value in $theme-colors {
     &-#{$color} {
       @if $enable-gradients {
-        background: $value linear-gradient(0deg, mix($body-bg, $value, 15%), $value) repeat-x;
+        background: $value linear-gradient($value, mix($body-bg, $value, 15%)) repeat-x;
       } @else {
         background-color: $value;
       }
