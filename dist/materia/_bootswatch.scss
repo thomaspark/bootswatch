@@ -12,7 +12,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;50
 @mixin ripple($color){
   position: relative;
 
-  &::after {
+  &::before {
     content: "";
     display: block;
     position: absolute;
@@ -30,7 +30,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;50
     transition: background .5s, opacity 1s;
   }
 
-  &:active::after {
+  &:active::before {
     background-size: 0 0;
     opacity: .2;
     transition: none;
@@ -38,10 +38,17 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;50
 
   &.disabled,
   &[disabled] {
-    &::after {
+    &::before {
       display: none;
     }
   }
+}
+
+.dropdown-toggle::after,
+.dropup .dropdown-toggle::after,
+.dropright .dropdown-toggle::after,
+.dropleft .dropdown-toggle::after {
+  border-width: 4px;
 }
 
 // Navbar ======================================================================
@@ -165,18 +172,6 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;50
 
   &-warning {
     color: $white;
-  }
-
-  &.dropdown-toggle::before {
-    display: inline-block;
-    width: 0;
-    height: 0;
-    margin-left: .3em;
-    vertical-align: middle;
-    content: "";
-    border-top: .3em solid;
-    border-right: .3em solid transparent;
-    border-left: .3em solid transparent;
   }
 }
 

@@ -10316,6 +10316,13 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
+.dropdown-toggle::after,
+.dropup .dropdown-toggle::after,
+.dropright .dropdown-toggle::after,
+.dropleft .dropdown-toggle::after {
+  border-width: 4px;
+}
+
 .navbar {
   border: none;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
@@ -10400,7 +10407,7 @@ a.text-dark:hover, a.text-dark:focus {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-.btn-primary::after {
+.btn-primary::before {
   content: "";
   display: block;
   position: absolute;
@@ -10419,13 +10426,13 @@ a.text-dark:hover, a.text-dark:focus {
   transition: background .5s, opacity 1s;
 }
 
-.btn-primary:active::after {
+.btn-primary:active::before {
   background-size: 0 0;
   opacity: .2;
-  transition: 0s;
+  transition: none;
 }
 
-.btn-primary.disabled::after, .btn-primary[disabled]::after {
+.btn-primary.disabled::before, .btn-primary[disabled]::before {
   display: none;
 }
 
@@ -10433,7 +10440,7 @@ a.text-dark:hover, a.text-dark:focus {
   position: relative;
 }
 
-.btn-outline-primary::after {
+.btn-outline-primary::before {
   content: "";
   display: block;
   position: absolute;
@@ -10452,13 +10459,13 @@ a.text-dark:hover, a.text-dark:focus {
   transition: background .5s, opacity 1s;
 }
 
-.btn-outline-primary:active::after {
+.btn-outline-primary:active::before {
   background-size: 0 0;
   opacity: .2;
-  transition: 0s;
+  transition: none;
 }
 
-.btn-outline-primary.disabled::after, .btn-outline-primary[disabled]::after {
+.btn-outline-primary.disabled::before, .btn-outline-primary[disabled]::before {
   display: none;
 }
 
@@ -10479,7 +10486,7 @@ a.text-dark:hover, a.text-dark:focus {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-.btn-secondary::after {
+.btn-secondary::before {
   content: "";
   display: block;
   position: absolute;
@@ -10498,13 +10505,13 @@ a.text-dark:hover, a.text-dark:focus {
   transition: background .5s, opacity 1s;
 }
 
-.btn-secondary:active::after {
+.btn-secondary:active::before {
   background-size: 0 0;
   opacity: .2;
-  transition: 0s;
+  transition: none;
 }
 
-.btn-secondary.disabled::after, .btn-secondary[disabled]::after {
+.btn-secondary.disabled::before, .btn-secondary[disabled]::before {
   display: none;
 }
 
@@ -10512,7 +10519,7 @@ a.text-dark:hover, a.text-dark:focus {
   position: relative;
 }
 
-.btn-outline-secondary::after {
+.btn-outline-secondary::before {
   content: "";
   display: block;
   position: absolute;
@@ -10531,13 +10538,13 @@ a.text-dark:hover, a.text-dark:focus {
   transition: background .5s, opacity 1s;
 }
 
-.btn-outline-secondary:active::after {
+.btn-outline-secondary:active::before {
   background-size: 0 0;
   opacity: .2;
-  transition: 0s;
+  transition: none;
 }
 
-.btn-outline-secondary.disabled::after, .btn-outline-secondary[disabled]::after {
+.btn-outline-secondary.disabled::before, .btn-outline-secondary[disabled]::before {
   display: none;
 }
 
@@ -10558,7 +10565,7 @@ a.text-dark:hover, a.text-dark:focus {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-.btn-success::after {
+.btn-success::before {
   content: "";
   display: block;
   position: absolute;
@@ -10577,13 +10584,13 @@ a.text-dark:hover, a.text-dark:focus {
   transition: background .5s, opacity 1s;
 }
 
-.btn-success:active::after {
+.btn-success:active::before {
   background-size: 0 0;
   opacity: .2;
-  transition: 0s;
+  transition: none;
 }
 
-.btn-success.disabled::after, .btn-success[disabled]::after {
+.btn-success.disabled::before, .btn-success[disabled]::before {
   display: none;
 }
 
@@ -10591,7 +10598,7 @@ a.text-dark:hover, a.text-dark:focus {
   position: relative;
 }
 
-.btn-outline-success::after {
+.btn-outline-success::before {
   content: "";
   display: block;
   position: absolute;
@@ -10610,13 +10617,13 @@ a.text-dark:hover, a.text-dark:focus {
   transition: background .5s, opacity 1s;
 }
 
-.btn-outline-success:active::after {
+.btn-outline-success:active::before {
   background-size: 0 0;
   opacity: .2;
-  transition: 0s;
+  transition: none;
 }
 
-.btn-outline-success.disabled::after, .btn-outline-success[disabled]::after {
+.btn-outline-success.disabled::before, .btn-outline-success[disabled]::before {
   display: none;
 }
 
@@ -10637,7 +10644,7 @@ a.text-dark:hover, a.text-dark:focus {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-.btn-info::after {
+.btn-info::before {
   content: "";
   display: block;
   position: absolute;
@@ -10656,13 +10663,13 @@ a.text-dark:hover, a.text-dark:focus {
   transition: background .5s, opacity 1s;
 }
 
-.btn-info:active::after {
+.btn-info:active::before {
   background-size: 0 0;
   opacity: .2;
-  transition: 0s;
+  transition: none;
 }
 
-.btn-info.disabled::after, .btn-info[disabled]::after {
+.btn-info.disabled::before, .btn-info[disabled]::before {
   display: none;
 }
 
@@ -10670,7 +10677,7 @@ a.text-dark:hover, a.text-dark:focus {
   position: relative;
 }
 
-.btn-outline-info::after {
+.btn-outline-info::before {
   content: "";
   display: block;
   position: absolute;
@@ -10689,13 +10696,13 @@ a.text-dark:hover, a.text-dark:focus {
   transition: background .5s, opacity 1s;
 }
 
-.btn-outline-info:active::after {
+.btn-outline-info:active::before {
   background-size: 0 0;
   opacity: .2;
-  transition: 0s;
+  transition: none;
 }
 
-.btn-outline-info.disabled::after, .btn-outline-info[disabled]::after {
+.btn-outline-info.disabled::before, .btn-outline-info[disabled]::before {
   display: none;
 }
 
@@ -10716,7 +10723,7 @@ a.text-dark:hover, a.text-dark:focus {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-.btn-warning::after {
+.btn-warning::before {
   content: "";
   display: block;
   position: absolute;
@@ -10735,13 +10742,13 @@ a.text-dark:hover, a.text-dark:focus {
   transition: background .5s, opacity 1s;
 }
 
-.btn-warning:active::after {
+.btn-warning:active::before {
   background-size: 0 0;
   opacity: .2;
-  transition: 0s;
+  transition: none;
 }
 
-.btn-warning.disabled::after, .btn-warning[disabled]::after {
+.btn-warning.disabled::before, .btn-warning[disabled]::before {
   display: none;
 }
 
@@ -10749,7 +10756,7 @@ a.text-dark:hover, a.text-dark:focus {
   position: relative;
 }
 
-.btn-outline-warning::after {
+.btn-outline-warning::before {
   content: "";
   display: block;
   position: absolute;
@@ -10768,13 +10775,13 @@ a.text-dark:hover, a.text-dark:focus {
   transition: background .5s, opacity 1s;
 }
 
-.btn-outline-warning:active::after {
+.btn-outline-warning:active::before {
   background-size: 0 0;
   opacity: .2;
-  transition: 0s;
+  transition: none;
 }
 
-.btn-outline-warning.disabled::after, .btn-outline-warning[disabled]::after {
+.btn-outline-warning.disabled::before, .btn-outline-warning[disabled]::before {
   display: none;
 }
 
@@ -10795,7 +10802,7 @@ a.text-dark:hover, a.text-dark:focus {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-.btn-danger::after {
+.btn-danger::before {
   content: "";
   display: block;
   position: absolute;
@@ -10814,13 +10821,13 @@ a.text-dark:hover, a.text-dark:focus {
   transition: background .5s, opacity 1s;
 }
 
-.btn-danger:active::after {
+.btn-danger:active::before {
   background-size: 0 0;
   opacity: .2;
-  transition: 0s;
+  transition: none;
 }
 
-.btn-danger.disabled::after, .btn-danger[disabled]::after {
+.btn-danger.disabled::before, .btn-danger[disabled]::before {
   display: none;
 }
 
@@ -10828,7 +10835,7 @@ a.text-dark:hover, a.text-dark:focus {
   position: relative;
 }
 
-.btn-outline-danger::after {
+.btn-outline-danger::before {
   content: "";
   display: block;
   position: absolute;
@@ -10847,13 +10854,13 @@ a.text-dark:hover, a.text-dark:focus {
   transition: background .5s, opacity 1s;
 }
 
-.btn-outline-danger:active::after {
+.btn-outline-danger:active::before {
   background-size: 0 0;
   opacity: .2;
-  transition: 0s;
+  transition: none;
 }
 
-.btn-outline-danger.disabled::after, .btn-outline-danger[disabled]::after {
+.btn-outline-danger.disabled::before, .btn-outline-danger[disabled]::before {
   display: none;
 }
 
@@ -10874,7 +10881,7 @@ a.text-dark:hover, a.text-dark:focus {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-.btn-dark::after {
+.btn-dark::before {
   content: "";
   display: block;
   position: absolute;
@@ -10893,13 +10900,13 @@ a.text-dark:hover, a.text-dark:focus {
   transition: background .5s, opacity 1s;
 }
 
-.btn-dark:active::after {
+.btn-dark:active::before {
   background-size: 0 0;
   opacity: .2;
-  transition: 0s;
+  transition: none;
 }
 
-.btn-dark.disabled::after, .btn-dark[disabled]::after {
+.btn-dark.disabled::before, .btn-dark[disabled]::before {
   display: none;
 }
 
@@ -10907,7 +10914,7 @@ a.text-dark:hover, a.text-dark:focus {
   position: relative;
 }
 
-.btn-outline-dark::after {
+.btn-outline-dark::before {
   content: "";
   display: block;
   position: absolute;
@@ -10926,13 +10933,13 @@ a.text-dark:hover, a.text-dark:focus {
   transition: background .5s, opacity 1s;
 }
 
-.btn-outline-dark:active::after {
+.btn-outline-dark:active::before {
   background-size: 0 0;
   opacity: .2;
-  transition: 0s;
+  transition: none;
 }
 
-.btn-outline-dark.disabled::after, .btn-outline-dark[disabled]::after {
+.btn-outline-dark.disabled::before, .btn-outline-dark[disabled]::before {
   display: none;
 }
 
@@ -10953,7 +10960,7 @@ a.text-dark:hover, a.text-dark:focus {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-.btn-light::after {
+.btn-light::before {
   content: "";
   display: block;
   position: absolute;
@@ -10972,13 +10979,13 @@ a.text-dark:hover, a.text-dark:focus {
   transition: background .5s, opacity 1s;
 }
 
-.btn-light:active::after {
+.btn-light:active::before {
   background-size: 0 0;
   opacity: .2;
-  transition: 0s;
+  transition: none;
 }
 
-.btn-light.disabled::after, .btn-light[disabled]::after {
+.btn-light.disabled::before, .btn-light[disabled]::before {
   display: none;
 }
 
@@ -10986,7 +10993,7 @@ a.text-dark:hover, a.text-dark:focus {
   position: relative;
 }
 
-.btn-outline-light::after {
+.btn-outline-light::before {
   content: "";
   display: block;
   position: absolute;
@@ -11005,13 +11012,13 @@ a.text-dark:hover, a.text-dark:focus {
   transition: background .5s, opacity 1s;
 }
 
-.btn-outline-light:active::after {
+.btn-outline-light:active::before {
   background-size: 0 0;
   opacity: .2;
-  transition: 0s;
+  transition: none;
 }
 
-.btn-outline-light.disabled::after, .btn-outline-light[disabled]::after {
+.btn-outline-light.disabled::before, .btn-outline-light[disabled]::before {
   display: none;
 }
 
@@ -11019,7 +11026,7 @@ a.text-dark:hover, a.text-dark:focus {
   text-transform: uppercase;
   border: none;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
-  transition: all .4s;
+  transition: color .4s, background-color .4s, border-color .4s, box-shadow .4s;
 }
 
 .btn-link {
@@ -11060,18 +11067,6 @@ fieldset[disabled] .btn-secondary:focus {
 
 .btn-warning {
   color: #fff;
-}
-
-.btn.dropdown-toggle::before {
-  display: inline-block;
-  width: 0;
-  height: 0;
-  margin-left: .3em;
-  vertical-align: middle;
-  content: "";
-  border-top: .3em solid;
-  border-right: .3em solid transparent;
-  border-left: .3em solid transparent;
 }
 
 .btn-group .btn + .btn,
@@ -11115,7 +11110,7 @@ p {
 .table-hover > tbody > tr,
 .table-hover > tbody > tr > th,
 .table-hover > tbody > tr > td {
-  transition: all .2s;
+  transition: background-color .2s, color .2s;
 }
 
 .thead-inverse th {
@@ -11318,12 +11313,15 @@ select.form-control[multiple] {
 
 .custom-radio .custom-control-input:checked ~ .custom-control-label::before {
   background: #fff;
+  transition: border-color .24s;
 }
 
 .custom-radio .custom-control-input:checked ~ .custom-control-label::after {
   -webkit-transform: scale(1.125);
   transform: scale(1.125);
-  transition: 240ms;
+  transition: background-image .24s, -webkit-transform .24s;
+  transition: background-image .24s, transform .24s;
+  transition: background-image .24s, transform .24s, -webkit-transform .24s;
 }
 
 .custom-switch .custom-control-label::before {
@@ -11498,7 +11496,7 @@ select.form-control[multiple] {
   border: none;
   color: #444;
   box-shadow: inset 0 -1px 0 #ddd;
-  transition: all .2s;
+  transition: color .2s, box-shadow .2s;
 }
 
 .nav-tabs .nav-link:hover,
@@ -11629,7 +11627,7 @@ select.form-control[multiple] {
 .close {
   line-height: .5;
   opacity: .6;
-  transition: all .2s;
+  transition: opacity .2s;
 }
 
 .close:hover {

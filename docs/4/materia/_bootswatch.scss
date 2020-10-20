@@ -12,7 +12,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;50
 @mixin ripple($color){
   position: relative;
 
-  &::after {
+  &::before {
     content: "";
     display: block;
     position: absolute;
@@ -30,18 +30,25 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;50
     transition: background .5s, opacity 1s;
   }
 
-  &:active::after {
+  &:active::before {
     background-size: 0 0;
     opacity: .2;
-    transition: 0s;
+    transition: none;
   }
 
   &.disabled,
   &[disabled] {
-    &::after {
+    &::before {
       display: none;
     }
   }
+}
+
+.dropdown-toggle::after,
+.dropup .dropdown-toggle::after,
+.dropright .dropdown-toggle::after,
+.dropleft .dropdown-toggle::after {
+  border-width: 4px;
 }
 
 // Navbar ======================================================================
@@ -119,7 +126,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;50
   text-transform: uppercase;
   border: none;
   box-shadow: 0 1px 4px rgba(0, 0, 0, .4);
-  transition: all .4s;
+  transition: color .4s, background-color .4s, border-color .4s, box-shadow .4s;
 
   &-link {
     box-shadow: none;
@@ -165,18 +172,6 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;50
 
   &-warning {
     color: $white;
-  }
-
-  &.dropdown-toggle::before {
-    display: inline-block;
-    width: 0;
-    height: 0;
-    margin-left: .3em;
-    vertical-align: middle;
-    content: "";
-    border-top: .3em solid;
-    border-right: .3em solid transparent;
-    border-left: .3em solid transparent;
   }
 }
 
@@ -230,7 +225,7 @@ p {
   > tbody > tr,
   > tbody > tr > th,
   > tbody > tr > td {
-    transition: all .2s;
+    transition: background-color .2s, color .2s;
   }
 }
 
@@ -354,10 +349,11 @@ select.form-control {
   &:checked {
     ~ .custom-control-label::before {
       background: $white;
+      transition: border-color .24s;
     }
     ~ .custom-control-label::after {
       transform: scale(1.125);
-      transition: 240ms;
+      transition: background-image .24s, transform .24s;
     }
   }
 }
@@ -557,7 +553,7 @@ select.form-control {
     border: none;
     color: $body-color;
     box-shadow: inset 0 -1px 0 #ddd;
-    transition: all .2s;
+    transition: color .2s, box-shadow .2s;
 
     &:hover {
       background-color: transparent;
@@ -674,7 +670,7 @@ select.form-control {
 .close {
   line-height: .5;
   opacity: .6;
-  transition: all .2s;
+  transition: opacity .2s;
 
   &:hover {
     opacity: 1;
