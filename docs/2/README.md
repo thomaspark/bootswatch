@@ -27,9 +27,9 @@ A simple API is available for integrating your platform with Bootswatch.
 
 The swatch objects are housed in an array called `themes`, and each swatch has the following properties:  `name`, `description`, `preview`, `thumbnail`, `css`, `css-min`, `less`, and `less-variables`.
 
-CORS and JSONP are supported. Send your request to `https://api.bootswatch.com`.
+CORS and JSONP are supported. Send your request to `https://bootswatch.com/api/2.json`.
 
-A simple demo, using mustache.js for templating: https://jsbin.com/asowud/1/edit
+A simple demo, using mustache.js for templating: https://jsbin.com/hiwuxilere/1/edit
 
 Feedback
 ------

@@ -5,7 +5,7 @@
     <title>Bootswatch: Default Bootstrap</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="../default/bootstrap.css" media="screen" id="stylesheet">
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css" media="screen" id="stylesheet">
     <link rel="stylesheet" href="../assets/css/custom.min.css">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -94,7 +94,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
     <script>
 
-      $.get("https://api.bootswatch.com/3/", function (data) {
+      $.get("https://bootswatch.com/api/3.json", function (data) {
           var menuTemplate = "<div id='menu' style='position:fixed;top:10px;right:10px;'><select>{{#.}}<option data-description='{{description}}'>{{name}}</option>{{/.}}</select></div>",
               menuHTML = Mustache.render(menuTemplate, data.themes);
 
