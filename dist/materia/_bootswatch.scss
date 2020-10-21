@@ -7,7 +7,7 @@
 $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" !default;
 @import url($web-font-path);
 
-// Effects =====================================================================
+// Mixins ======================================================================
 
 @mixin ripple($color){
   position: relative;
@@ -41,6 +41,30 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;50
     &::before {
       display: none;
     }
+  }
+}
+
+@mixin btn($class,$bg,$color){
+  .btn-#{$class} {
+    &:focus {
+      background-color: $bg;
+      box-shadow: 0 0 0 2px rgba(204, 204, 204, .5);
+    }
+
+    &:hover,
+    &:active:hover {
+      background-color: darken($bg, 6%);
+    }
+
+    &:active {
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, .4);
+    }
+
+    @include ripple($color);
+  }
+
+  .btn-outline-#{$class} {
+    @include ripple($color);
   }
 }
 
@@ -89,38 +113,14 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;50
 
 // Buttons =====================================================================
 
-@mixin btn($class,$bg,$color){
-  .btn-#{$class} {
-    &:focus {
-      background-color: $bg;
-      box-shadow: 0 0 0 2px rgba(204, 204, 204, .5);
-    }
-
-    &:hover,
-    &:active:hover {
-      background-color: darken($bg, 6%);
-    }
-
-    &:active {
-      box-shadow: 2px 2px 4px rgba(0, 0, 0, .4);
-    }
-
-    @include ripple($color);
-  }
-
-  .btn-outline-#{$class} {
-    @include ripple($color);
-  }
-}
-
-@include btn(primary,$primary,$white);
-@include btn(secondary,$secondary,$gray-500);
-@include btn(success,$success,$white);
-@include btn(info,$info,$white);
-@include btn(warning,$warning,$white);
-@include btn(danger,$danger,$white);
-@include btn(dark,$dark,$white);
-@include btn(light,$light,$white);
+@include btn(primary, $primary, $white);
+@include btn(secondary, $secondary, $gray-500);
+@include btn(success, $success, $white);
+@include btn(info, $info, $white);
+@include btn(warning, $warning, $white);
+@include btn(danger, $danger, $white);
+@include btn(dark, $dark, $white);
+@include btn(light, $light, $white);
 
 .btn {
   text-transform: uppercase;
