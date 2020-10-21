@@ -7,7 +7,7 @@
 $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" !default;
 @import url($web-font-path);
 
-// Effects =====================================================================
+// Mixins ======================================================================
 
 @mixin ripple($color){
   position: relative;
@@ -41,6 +41,30 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;50
     &::before {
       display: none;
     }
+  }
+}
+
+@mixin btn($class,$bg,$color){
+  .btn-#{$class} {
+    &:focus {
+      background-color: $bg;
+      box-shadow: 0 0 0 2px rgba(204, 204, 204, .5);
+    }
+
+    &:hover,
+    &:active:hover {
+      background-color: darken($bg, 6%);
+    }
+
+    &:active {
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, .4);
+    }
+
+    @include ripple($color);
+  }
+
+  .btn-outline-#{$class} {
+    @include ripple($color);
   }
 }
 
@@ -89,38 +113,14 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;50
 
 // Buttons =====================================================================
 
-@mixin btn($class,$bg,$color){
-  .btn-#{$class} {
-    &:focus {
-      background-color: $bg;
-      box-shadow: 0 0 0 2px rgba(204, 204, 204, .5);
-    }
-
-    &:hover,
-    &:active:hover {
-      background-color: darken($bg, 6%);
-    }
-
-    &:active {
-      box-shadow: 2px 2px 4px rgba(0, 0, 0, .4);
-    }
-
-    @include ripple($color);
-  }
-
-  .btn-outline-#{$class} {
-    @include ripple($color);
-  }
-}
-
-@include btn(primary,$primary,$white);
-@include btn(secondary,$secondary,$gray-500);
-@include btn(success,$success,$white);
-@include btn(info,$info,$white);
-@include btn(warning,$warning,$white);
-@include btn(danger,$danger,$white);
-@include btn(dark,$dark,$white);
-@include btn(light,$light,$white);
+@include btn(primary, $primary, $white);
+@include btn(secondary, $secondary, $gray-500);
+@include btn(success, $success, $white);
+@include btn(info, $info, $white);
+@include btn(warning, $warning, $white);
+@include btn(danger, $danger, $white);
+@include btn(dark, $dark, $white);
+@include btn(light, $light, $white);
 
 .btn {
   text-transform: uppercase;
@@ -287,8 +287,8 @@ select,
 select.form-control {
   appearance: none;
   padding: .5rem 0;
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAYElEQVR4Ae3UsRFAUBgEYUNklKaPvyQVGEWIFKAnLrt4XyDwLtj4y3aoqk8K1CEU6FZPQweFzkZoo9CiLojsaoKQMYxwyBhGOGQMIxwyhhEOGSMIh9ysVjX+eEGBAgV6AUVIcbxo1u1TAAAAAElFTkSuQmCC");
-  background-size: 13px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='4' viewBox='0 0 8 4'%3E%3Cpolygon fill='%23666' points='8 0 4 4 0 0'/%3E%3C/svg%3E%0A");
+  background-size: 8px 4px;
   background-repeat: no-repeat;
   background-position: right center;
   box-shadow: inset 0 -1px 0 #ddd;
@@ -309,7 +309,7 @@ select.form-control {
 
   &:focus {
     box-shadow: inset 0 -2px 0 $primary;
-    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAX0lEQVR4Ae3UsRFAQBQGYUNkVLH16E8FRhEiBeiJ8I9XILh7wcZftgPwSwV1CBV0Aw++w0LnR2iz0AJcEtmByULBPGKhYBrxUDCNeCiYRjwUzCOBTDOwAmPDCyqooIJe/0NPAtAIZgsAAAAASUVORK5CYII=");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='4' viewBox='0 0 8 4'%3E%3Cpolygon fill='%23212121' points='8 0 4 4 0 0'/%3E%3C/svg%3E%0A");
   }
 
   &[multiple] {
