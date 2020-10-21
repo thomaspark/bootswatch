@@ -7,6 +7,8 @@
 $web-font-path: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" !default;
 @import url($web-font-path);
 
+// Mixins ======================================================================
+
 @mixin shadow($width: 4px){
   border-style: solid;
   border-width: 0 1px $width 1px;
