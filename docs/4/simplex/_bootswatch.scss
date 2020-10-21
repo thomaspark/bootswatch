@@ -1,4 +1,4 @@
-// Simplex 4.5.2
+// Simplex 4.5.3
 // Bootswatch
 
 
@@ -6,6 +6,8 @@
 
 $web-font-path: "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" !default;
 @import url($web-font-path);
+
+// Mixins ======================================================================
 
 @mixin btn-shadow($color){
   @include gradient-y-three-colors(lighten($color, 3%), $color, 6%, darken($color, 3%));

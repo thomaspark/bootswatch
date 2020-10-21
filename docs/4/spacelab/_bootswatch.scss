@@ -1,4 +1,4 @@
-// Spacelab 4.5.2
+// Spacelab 4.5.3
 // Bootswatch
 
 
@@ -6,6 +6,8 @@
 
 $web-font-path: "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" !default;
 @import url($web-font-path);
+
+// Mixins ======================================================================
 
 @mixin btn-shadow($color){
   @include gradient-y-three-colors(lighten($color, 15%), $color, 50%, darken($color, 4%));
