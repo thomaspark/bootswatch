@@ -1,9 +1,21 @@
-# Bootswatch
+<p align="center">
+  <img width="200" height="200" src="./docs/_assets/img/logo-dark.svg">
+</p>
 
-[![Bootswatch Logo](https://bootswatch.com/_assets/img/logo-dark.png)](https://bootswatch.com/)
+<h3 align="center">Bootswatch</h3>
 
-Bootswatch is a collection of open source themes for [Bootstrap](https://getbootstrap.com/). Check it out at [bootswatch.com](https://bootswatch.com).
-
+<p align="center">
+  A collection of open source themes for <a href="https://getbootstrap.com/">Bootstrap</a>
+  <br>
+  <a href="https://bootswatch.com"><strong>View Bootswatch themes »</strong></a>
+  <br>
+  <br>
+  <a href="https://github.com/thomaspark/bootswatch/issues/new">Report bug</a>
+  ·
+  <a href="https://github.com/thomaspark/bootswatch/issues/new">Request feature</a>
+  ·
+  <a href="https://blog.bootswatch.com/">Blog</a>
+</p>
 
 ## Usage
 
@@ -12,7 +24,7 @@ There are a few different ways you can integrate Bootswatch into your project.
 ### Via Pre-compiled Asset
 
 Download the `bootstrap.min.css` file associated with a theme and replace
-Bootstrap's default stylesheet.  You must still include Bootstrap's JavaScript
+Bootstrap's default stylesheet. You must still include Bootstrap's JavaScript
 file to have functional dropdowns, modals, etc.
 
 ### Via CDN
