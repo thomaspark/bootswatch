@@ -9,7 +9,7 @@ Usage
 -----
 Download the `bootstrap.min.css` file associated with a theme and replace Bootstrap's default stylesheet. You must still include Bootstrap's JavaScript file to have functional dropdowns, modals, etc.
 
-The themes are also hosted on [BootstrapCDN](https://www.bootstrapcdn.com/bootswatch/). 
+The themes are also hosted on [jsDelivr](https://www.jsdelivr.com/package/npm/bootswatch). 
 
 You can import a theme into your styles using either LESS or SASS.
 

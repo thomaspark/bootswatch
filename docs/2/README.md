@@ -7,7 +7,7 @@ Usage
 -----
 Head over to [Bootswatch](https://bootswatch.com) and download the `bootstrap.min.css` file associated with a theme. Replace Bootstrap's stylesheet with this file.
 
-The themes are also hosted on [BootstrapCDN](https://www.bootstrapcdn.com/).
+The themes are also hosted on [jsDelivr](https://www.jsdelivr.com/package/npm/bootswatch).
 
 For use with Rails, check out [bootswatch-rails](https://github.com/maxim/bootswatch-rails) (Sass) and [twitter-bootswatch-rails](https://github.com/scottvrosenthal/twitter-bootswatch-rails) (LESS). For use with a Yeoman app or with Bower check out [bootswatch-scss](https://github.com/nrub/bootswatch-scss).
 

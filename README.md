@@ -29,8 +29,7 @@ file to have functional dropdowns, modals, etc.
 
 ### Via CDN
 
-Similar to above, but you can hotlink to the appropriate `bootstrap.min.css`
-hosted on [BootstrapCDN](https://www.bootstrapcdn.com/bootswatch/).
+You can use the themes via CDN at [jsDelivr](https://www.jsdelivr.com/package/npm/bootswatch).
 
 ### Via Sass Imports
 
