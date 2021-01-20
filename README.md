@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="200" height="200" src="./docs/_assets/img/logo-dark.svg">
+  <img width="200" height="200" src="https://bootswatch.com/_assets/img/logo-dark.svg">
 </p>
 
 <h3 align="center">Bootswatch</h3>
