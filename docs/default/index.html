@@ -326,30 +326,24 @@
             </p>
 
             <div class="bs-component mb-3">
-              <div class="btn-group btn-group-toggle" data-bs-toggle="buttons">
-                <label class="btn btn-primary active">
-                  <input type="checkbox" checked autocomplete="off"> Active
-                </label>
-                <label class="btn btn-primary">
-                  <input type="checkbox" autocomplete="off"> Check
-                </label>
-                <label class="btn btn-primary">
-                  <input type="checkbox" autocomplete="off"> Check
-                </label>
+              <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                <input type="checkbox" class="btn-check" id="btncheck1" checked autocomplete="off">
+                <label class="btn btn-primary" for="btncheck1">Checkbox 1</label>
+                <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                <label class="btn btn-primary" for="btncheck2">Checkbox 2</label>
+                <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                <label class="btn btn-primary" for="btncheck3">Checkbox 3</label>
               </div>
             </div>
 
             <div class="bs-component mb-3">
-              <div class="btn-group btn-group-toggle" data-bs-toggle="buttons">
-                <label class="btn btn-primary active">
-                  <input type="radio" name="options" id="option1" autocomplete="off" checked> Active
-                </label>
-                <label class="btn btn-primary">
-                  <input type="radio" name="options" id="option2" autocomplete="off"> Radio
-                </label>
-                <label class="btn btn-primary">
-                  <input type="radio" name="options" id="option3" autocomplete="off"> Radio
-                </label>
+              <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                <label class="btn btn-outline-primary" for="btnradio1">Radio 1</label>
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" checked>
+                <label class="btn btn-outline-primary" for="btnradio2">Radio 2</label>
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off" checked>
+                <label class="btn btn-outline-primary" for="btnradio3">Radio 3</label>
               </div>
             </div>
 
