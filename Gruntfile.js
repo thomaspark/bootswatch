@@ -16,7 +16,7 @@ const banner = `/*!
 
 const BUILD_DIR = 'build/';
 const DIST_DIR = 'dist/';
-const DOCS_DEST = 'docs/4/';
+const DOCS_DEST = 'docs/5/';
 const SWATCHES = [
   'cerulean',
   'cosmo',
