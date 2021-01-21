@@ -54,7 +54,7 @@
 body {
   margin: 0;
   font-family: var(--bs-font-sans-serif);
-  font-size: 0.8125rem;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
   color: #444;
@@ -87,45 +87,51 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 
 h1, .h1 {
-  font-size: calc(1.328125rem + 0.9375vw);
+  font-size: calc(1.375rem + 1.5vw);
 }
 
 @media (min-width: 1200px) {
   h1, .h1 {
-    font-size: 2.03125rem;
+    font-size: 2.5rem;
   }
 }
 
 h2, .h2 {
-  font-size: calc(1.2875rem + 0.45vw);
+  font-size: calc(1.325rem + 0.9vw);
 }
 
 @media (min-width: 1200px) {
   h2, .h2 {
-    font-size: 1.625rem;
+    font-size: 2rem;
   }
 }
 
 h3, .h3 {
-  font-size: calc(1.267187rem + 0.20625vw);
+  font-size: calc(1.3rem + 0.6vw);
 }
 
 @media (min-width: 1200px) {
   h3, .h3 {
-    font-size: 1.421875rem;
+    font-size: 1.75rem;
   }
 }
 
 h4, .h4 {
-  font-size: 1.21875rem;
+  font-size: calc(1.275rem + 0.3vw);
+}
+
+@media (min-width: 1200px) {
+  h4, .h4 {
+    font-size: 1.5rem;
+  }
 }
 
 h5, .h5 {
-  font-size: 1.015625rem;
+  font-size: 1.25rem;
 }
 
 h6, .h6 {
-  font-size: 0.8125rem;
+  font-size: 1rem;
 }
 
 p {
@@ -466,7 +472,7 @@ progress {
 }
 
 .lead {
-  font-size: 1.015625rem;
+  font-size: 1.25rem;
   font-weight: 300;
 }
 
@@ -567,7 +573,7 @@ progress {
 
 .blockquote {
   margin-bottom: 1rem;
-  font-size: 1.015625rem;
+  font-size: 1.25rem;
 }
 
 .blockquote > :last-child {
@@ -2081,15 +2087,15 @@ progress {
 }
 
 .col-form-label-lg {
-  padding-top: 1.015625rem;
-  padding-bottom: 1.015625rem;
-  font-size: 1.015625rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  font-size: 1.25rem;
 }
 
 .col-form-label-sm {
   padding-top: 0;
   padding-bottom: 0;
-  font-size: 0.710938rem;
+  font-size: 0.875rem;
 }
 
 .form-text {
@@ -2102,7 +2108,7 @@ progress {
   display: block;
   width: 100%;
   padding: 1rem 0;
-  font-size: 0.8125rem;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
   color: #666;
@@ -2249,7 +2255,7 @@ progress {
 .form-control-sm {
   min-height: 1.5em;
   padding: 0 0;
-  font-size: 0.710938rem;
+  font-size: 0.875rem;
   border-radius: 0;
 }
 
@@ -2269,23 +2275,23 @@ progress {
 }
 
 .form-control-lg {
-  min-height: calc(1.5em + 2.03125rem);
-  padding: 1.015625rem 0;
-  font-size: 1.015625rem;
+  min-height: calc(1.5em + 2.5rem);
+  padding: 1.25rem 0;
+  font-size: 1.25rem;
   border-radius: 0;
 }
 
 .form-control-lg::file-selector-button {
-  padding: 1.015625rem 0;
-  margin: -1.015625rem 0;
+  padding: 1.25rem 0;
+  margin: -1.25rem 0;
   -webkit-margin-end: 0;
   -moz-margin-end: 0;
   margin-inline-end: 0;
 }
 
 .form-control-lg::-webkit-file-upload-button {
-  padding: 1.015625rem 0;
-  margin: -1.015625rem 0;
+  padding: 1.25rem 0;
+  margin: -1.25rem 0;
   -webkit-margin-end: 0;
   margin-inline-end: 0;
 }
@@ -2299,7 +2305,7 @@ textarea.form-control-sm {
 }
 
 textarea.form-control-lg {
-  min-height: calc(1.5em + 2.03125rem);
+  min-height: calc(1.5em + 2.5rem);
 }
 
 .form-control-color {
@@ -2326,7 +2332,7 @@ textarea.form-control-lg {
   display: block;
   width: 100%;
   padding: 1rem 1rem 1rem 0;
-  font-size: 0.8125rem;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
   color: #666;
@@ -2368,19 +2374,19 @@ textarea.form-control-lg {
   padding-top: 0;
   padding-bottom: 0;
   padding-left: 0;
-  font-size: 0.710938rem;
+  font-size: 0.875rem;
 }
 
 .form-select-lg {
-  padding-top: 1.015625rem;
-  padding-bottom: 1.015625rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
   padding-left: 0;
-  font-size: 1.015625rem;
+  font-size: 1.25rem;
 }
 
 .form-check {
   display: block;
-  min-height: 1.21875rem;
+  min-height: 1.5rem;
   padding-left: 1.5em;
   margin-bottom: 0.125rem;
 }
@@ -2751,7 +2757,7 @@ textarea.form-control-lg {
   -ms-flex-align: center;
   align-items: center;
   padding: 1rem 0;
-  font-size: 0.8125rem;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
   color: #666;
@@ -2766,8 +2772,8 @@ textarea.form-control-lg {
 .input-group-lg > .form-select,
 .input-group-lg > .input-group-text,
 .input-group-lg > .btn {
-  padding: 1.015625rem 0;
-  font-size: 1.015625rem;
+  padding: 1.25rem 0;
+  font-size: 1.25rem;
   border-radius: 0;
 }
 
@@ -2776,7 +2782,7 @@ textarea.form-control-lg {
 .input-group-sm > .input-group-text,
 .input-group-sm > .btn {
   padding: 0 0;
-  font-size: 0.710938rem;
+  font-size: 0.875rem;
   border-radius: 0;
 }
 
@@ -2819,7 +2825,7 @@ textarea.form-control-lg {
   max-width: 100%;
   padding: 0.25rem 0.5rem;
   margin-top: .1rem;
-  font-size: 0.710938rem;
+  font-size: 0.875rem;
   color: #fff;
   background-color: rgba(76, 175, 80, 0.9);
   border-radius: 0.25rem;
@@ -2900,7 +2906,7 @@ textarea.form-control-lg {
   max-width: 100%;
   padding: 0.25rem 0.5rem;
   margin-top: .1rem;
-  font-size: 0.710938rem;
+  font-size: 0.875rem;
   color: #fff;
   background-color: rgba(229, 28, 35, 0.9);
   border-radius: 0.25rem;
@@ -2981,7 +2987,7 @@ textarea.form-control-lg {
   background-color: transparent;
   border: 1px solid transparent;
   padding: 0.8rem 1rem;
-  font-size: 0.8125rem;
+  font-size: 1rem;
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
@@ -3631,13 +3637,13 @@ fieldset:disabled .btn {
 
 .btn-lg, .btn-group-lg > .btn {
   padding: 0.5rem 1rem;
-  font-size: 1.015625rem;
+  font-size: 1.25rem;
   border-radius: 0.3rem;
 }
 
 .btn-sm, .btn-group-sm > .btn {
   padding: 0.25rem 0.5rem;
-  font-size: 0.710938rem;
+  font-size: 0.875rem;
   border-radius: 0.2rem;
 }
 
@@ -3706,7 +3712,7 @@ fieldset:disabled .btn {
   min-width: 10rem;
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
-  font-size: 0.8125rem;
+  font-size: 1rem;
   color: #444;
   text-align: left;
   list-style: none;
@@ -3932,7 +3938,7 @@ fieldset:disabled .btn {
   display: block;
   padding: 0.5rem 1rem;
   margin-bottom: 0;
-  font-size: 0.710938rem;
+  font-size: 0.875rem;
   color: #666;
   white-space: nowrap;
 }
@@ -4224,10 +4230,10 @@ fieldset:disabled .btn {
 }
 
 .navbar-brand {
-  padding-top: 0.347656rem;
-  padding-bottom: 0.347656rem;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
   margin-right: 1rem;
-  font-size: 1.015625rem;
+  font-size: 1.25rem;
   text-decoration: none;
   white-space: nowrap;
 }
@@ -4264,7 +4270,7 @@ fieldset:disabled .btn {
 
 .navbar-toggler {
   padding: 0.25rem 0.75rem;
-  font-size: 1.015625rem;
+  font-size: 1.25rem;
   line-height: 1;
   background-color: transparent;
   border: 1px solid transparent;
@@ -4734,7 +4740,7 @@ fieldset:disabled .btn {
   align-items: center;
   width: 100%;
   padding: 1rem 1.25rem;
-  font-size: 0.8125rem;
+  font-size: 1rem;
   color: #444;
   background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.125);
@@ -4946,7 +4952,7 @@ fieldset:disabled .btn {
 
 .pagination-lg .page-link {
   padding: 0.75rem 1.5rem;
-  font-size: 1.015625rem;
+  font-size: 1.25rem;
 }
 
 .pagination-lg .page-item:first-child .page-link {
@@ -4961,7 +4967,7 @@ fieldset:disabled .btn {
 
 .pagination-sm .page-link {
   padding: 0.25rem 0.5rem;
-  font-size: 0.710938rem;
+  font-size: 0.875rem;
 }
 
 .pagination-sm .page-item:first-child .page-link {
@@ -5130,7 +5136,7 @@ fieldset:disabled .btn {
   display: flex;
   height: 0.375rem;
   overflow: hidden;
-  font-size: 0.609375rem;
+  font-size: 0.75rem;
   background-color: #eee;
   border-radius: 0;
 }
@@ -5989,7 +5995,7 @@ fieldset:disabled .btn {
   word-spacing: normal;
   white-space: normal;
   line-break: auto;
-  font-size: 0.710938rem;
+  font-size: 0.875rem;
   word-wrap: break-word;
   opacity: 0;
 }
@@ -6102,7 +6108,7 @@ fieldset:disabled .btn {
   word-spacing: normal;
   white-space: normal;
   line-break: auto;
-  font-size: 0.710938rem;
+  font-size: 0.875rem;
   word-wrap: break-word;
   background-color: #fff;
   background-clip: padding-box;
@@ -6226,7 +6232,7 @@ fieldset:disabled .btn {
 .popover-header {
   padding: 0.5rem 1rem;
   margin-bottom: 0;
-  font-size: 0.8125rem;
+  font-size: 1rem;
   background-color: #f0f0f0;
   border-bottom: 1px solid #d8d8d8;
   border-top-left-radius: calc(0.3rem - 1px);
@@ -7741,27 +7747,27 @@ fieldset:disabled .btn {
 }
 
 .fs-1 {
-  font-size: calc(1.328125rem + 0.9375vw) !important;
+  font-size: calc(1.375rem + 1.5vw) !important;
 }
 
 .fs-2 {
-  font-size: calc(1.2875rem + 0.45vw) !important;
+  font-size: calc(1.325rem + 0.9vw) !important;
 }
 
 .fs-3 {
-  font-size: calc(1.267187rem + 0.20625vw) !important;
+  font-size: calc(1.3rem + 0.6vw) !important;
 }
 
 .fs-4 {
-  font-size: 1.21875rem !important;
+  font-size: calc(1.275rem + 0.3vw) !important;
 }
 
 .fs-5 {
-  font-size: 1.015625rem !important;
+  font-size: 1.25rem !important;
 }
 
 .fs-6 {
-  font-size: 0.8125rem !important;
+  font-size: 1rem !important;
 }
 
 .fst-italic {
@@ -10763,40 +10769,52 @@ fieldset:disabled .btn {
 
 @media (min-width: 1200px) {
   .fs-1 {
-    font-size: 2.03125rem !important;
+    font-size: 2.5rem !important;
   }
   .fs-2 {
-    font-size: 1.625rem !important;
+    font-size: 2rem !important;
   }
   .fs-3 {
-    font-size: 1.421875rem !important;
+    font-size: 1.75rem !important;
+  }
+  .fs-4 {
+    font-size: 1.5rem !important;
   }
   .fs-sm-1 {
-    font-size: 2.03125rem !important;
+    font-size: 2.5rem !important;
   }
   .fs-sm-2 {
-    font-size: 1.625rem !important;
+    font-size: 2rem !important;
   }
   .fs-sm-3 {
-    font-size: 1.421875rem !important;
+    font-size: 1.75rem !important;
+  }
+  .fs-sm-4 {
+    font-size: 1.5rem !important;
   }
   .fs-md-1 {
-    font-size: 2.03125rem !important;
+    font-size: 2.5rem !important;
   }
   .fs-md-2 {
-    font-size: 1.625rem !important;
+    font-size: 2rem !important;
   }
   .fs-md-3 {
-    font-size: 1.421875rem !important;
+    font-size: 1.75rem !important;
+  }
+  .fs-md-4 {
+    font-size: 1.5rem !important;
   }
   .fs-lg-1 {
-    font-size: 2.03125rem !important;
+    font-size: 2.5rem !important;
   }
   .fs-lg-2 {
-    font-size: 1.625rem !important;
+    font-size: 2rem !important;
   }
   .fs-lg-3 {
-    font-size: 1.421875rem !important;
+    font-size: 1.75rem !important;
+  }
+  .fs-lg-4 {
+    font-size: 1.5rem !important;
   }
 }
 
@@ -11597,7 +11615,6 @@ fieldset[disabled] .btn-secondary:focus {
 body,
 input,
 button {
-  -webkit-font-smoothing: antialiased;
   letter-spacing: .1px;
 }
 
@@ -11625,11 +11642,11 @@ p {
 }
 
 .col-form-label-sm {
-  font-size: 0.710938rem;
+  font-size: 0.875rem;
 }
 
 .col-form-label-lg {
-  font-size: 1.015625rem;
+  font-size: 1.25rem;
 }
 
 textarea,
@@ -11767,12 +11784,12 @@ select.form-control::-ms-expand {
 
 select.input-sm,
 select.form-control.input-sm {
-  font-size: 0.710938rem;
+  font-size: 0.875rem;
 }
 
 select.input-lg,
 select.form-control.input-lg {
-  font-size: 1.015625rem;
+  font-size: 1.25rem;
 }
 
 select:focus,

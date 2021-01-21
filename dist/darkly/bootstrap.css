@@ -54,7 +54,7 @@
 body {
   margin: 0;
   font-family: var(--bs-font-sans-serif);
-  font-size: 0.9375rem;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
   color: #fff;
@@ -117,21 +117,21 @@ h3, .h3 {
 }
 
 h4, .h4 {
-  font-size: calc(1.265625rem + 0.1875vw);
+  font-size: calc(1.275rem + 0.3vw);
 }
 
 @media (min-width: 1200px) {
   h4, .h4 {
-    font-size: 1.40625rem;
+    font-size: 1.5rem;
   }
 }
 
 h5, .h5 {
-  font-size: 1.171875rem;
+  font-size: 1.25rem;
 }
 
 h6, .h6 {
-  font-size: 0.9375rem;
+  font-size: 1rem;
 }
 
 p {
@@ -473,7 +473,7 @@ progress {
 }
 
 .lead {
-  font-size: 1.171875rem;
+  font-size: 1.25rem;
   font-weight: 300;
 }
 
@@ -574,7 +574,7 @@ progress {
 
 .blockquote {
   margin-bottom: 1rem;
-  font-size: 1.171875rem;
+  font-size: 1.25rem;
 }
 
 .blockquote > :last-child {
@@ -2090,13 +2090,13 @@ progress {
 .col-form-label-lg {
   padding-top: calc(0.5rem + 1px);
   padding-bottom: calc(0.5rem + 1px);
-  font-size: 1.171875rem;
+  font-size: 1.25rem;
 }
 
 .col-form-label-sm {
   padding-top: calc(0.25rem + 1px);
   padding-bottom: calc(0.25rem + 1px);
-  font-size: 0.825rem;
+  font-size: 0.875rem;
 }
 
 .form-text {
@@ -2109,7 +2109,7 @@ progress {
   display: block;
   width: 100%;
   padding: 0.375rem 0.75rem;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
   color: #fff;
@@ -2254,7 +2254,7 @@ progress {
 .form-control-sm {
   min-height: calc(1.5em + 0.5rem + 2px);
   padding: 0.25rem 0.5rem;
-  font-size: 0.825rem;
+  font-size: 0.875rem;
   border-radius: 0.2rem;
 }
 
@@ -2276,7 +2276,7 @@ progress {
 .form-control-lg {
   min-height: calc(1.5em + 1rem + 2px);
   padding: 0.5rem 1rem;
-  font-size: 1.171875rem;
+  font-size: 1.25rem;
   border-radius: 0.3rem;
 }
 
@@ -2331,7 +2331,7 @@ textarea.form-control-lg {
   display: block;
   width: 100%;
   padding: 0.375rem 1.75rem 0.375rem 0.75rem;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
   color: #fff;
@@ -2373,19 +2373,19 @@ textarea.form-control-lg {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   padding-left: 0.5rem;
-  font-size: 0.825rem;
+  font-size: 0.875rem;
 }
 
 .form-select-lg {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   padding-left: 1rem;
-  font-size: 1.171875rem;
+  font-size: 1.25rem;
 }
 
 .form-check {
   display: block;
-  min-height: 1.40625rem;
+  min-height: 1.5rem;
   padding-left: 1.5em;
   margin-bottom: 0.125rem;
 }
@@ -2752,7 +2752,7 @@ textarea.form-control-lg {
   -ms-flex-align: center;
   align-items: center;
   padding: 0.375rem 0.75rem;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
   color: #adb5bd;
@@ -2768,7 +2768,7 @@ textarea.form-control-lg {
 .input-group-lg > .input-group-text,
 .input-group-lg > .btn {
   padding: 0.5rem 1rem;
-  font-size: 1.171875rem;
+  font-size: 1.25rem;
   border-radius: 0.3rem;
 }
 
@@ -2777,7 +2777,7 @@ textarea.form-control-lg {
 .input-group-sm > .input-group-text,
 .input-group-sm > .btn {
   padding: 0.25rem 0.5rem;
-  font-size: 0.825rem;
+  font-size: 0.875rem;
   border-radius: 0.2rem;
 }
 
@@ -2820,7 +2820,7 @@ textarea.form-control-lg {
   max-width: 100%;
   padding: 0.25rem 0.5rem;
   margin-top: .1rem;
-  font-size: 0.825rem;
+  font-size: 0.875rem;
   color: #fff;
   background-color: rgba(0, 188, 140, 0.9);
   border-radius: 0.25rem;
@@ -2901,7 +2901,7 @@ textarea.form-control-lg {
   max-width: 100%;
   padding: 0.25rem 0.5rem;
   margin-top: .1rem;
-  font-size: 0.825rem;
+  font-size: 0.875rem;
   color: #fff;
   background-color: rgba(231, 76, 60, 0.9);
   border-radius: 0.25rem;
@@ -2982,7 +2982,7 @@ textarea.form-control-lg {
   background-color: transparent;
   border: 1px solid transparent;
   padding: 0.375rem 0.75rem;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
@@ -3592,13 +3592,13 @@ fieldset:disabled .btn {
 
 .btn-lg, .btn-group-lg > .btn {
   padding: 0.5rem 1rem;
-  font-size: 1.171875rem;
+  font-size: 1.25rem;
   border-radius: 0.3rem;
 }
 
 .btn-sm, .btn-group-sm > .btn {
   padding: 0.25rem 0.5rem;
-  font-size: 0.825rem;
+  font-size: 0.875rem;
   border-radius: 0.2rem;
 }
 
@@ -3667,7 +3667,7 @@ fieldset:disabled .btn {
   min-width: 10rem;
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   color: #fff;
   text-align: left;
   list-style: none;
@@ -3890,7 +3890,7 @@ fieldset:disabled .btn {
   display: block;
   padding: 0.5rem 1rem;
   margin-bottom: 0;
-  font-size: 0.825rem;
+  font-size: 0.875rem;
   color: #888;
   white-space: nowrap;
 }
@@ -4178,10 +4178,10 @@ fieldset:disabled .btn {
 }
 
 .navbar-brand {
-  padding-top: 0.324219rem;
-  padding-bottom: 0.324219rem;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
   margin-right: 1rem;
-  font-size: 1.171875rem;
+  font-size: 1.25rem;
   text-decoration: none;
   white-space: nowrap;
 }
@@ -4218,7 +4218,7 @@ fieldset:disabled .btn {
 
 .navbar-toggler {
   padding: 0.25rem 0.75rem;
-  font-size: 1.171875rem;
+  font-size: 1.25rem;
   line-height: 1;
   background-color: transparent;
   border: 1px solid transparent;
@@ -4693,7 +4693,7 @@ fieldset:disabled .btn {
   align-items: center;
   width: 100%;
   padding: 1rem 1.25rem;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   color: #fff;
   background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.125);
@@ -4905,7 +4905,7 @@ fieldset:disabled .btn {
 
 .pagination-lg .page-link {
   padding: 0.75rem 1.5rem;
-  font-size: 1.171875rem;
+  font-size: 1.25rem;
 }
 
 .pagination-lg .page-item:first-child .page-link {
@@ -4920,7 +4920,7 @@ fieldset:disabled .btn {
 
 .pagination-sm .page-link {
   padding: 0.25rem 0.5rem;
-  font-size: 0.825rem;
+  font-size: 0.875rem;
 }
 
 .pagination-sm .page-item:first-child .page-link {
@@ -5080,7 +5080,7 @@ fieldset:disabled .btn {
   display: flex;
   height: 1rem;
   overflow: hidden;
-  font-size: 0.703125rem;
+  font-size: 0.75rem;
   background-color: #444;
   border-radius: 0.25rem;
 }
@@ -5939,7 +5939,7 @@ fieldset:disabled .btn {
   word-spacing: normal;
   white-space: normal;
   line-break: auto;
-  font-size: 0.825rem;
+  font-size: 0.875rem;
   word-wrap: break-word;
   opacity: 0;
 }
@@ -6052,7 +6052,7 @@ fieldset:disabled .btn {
   word-spacing: normal;
   white-space: normal;
   line-break: auto;
-  font-size: 0.825rem;
+  font-size: 0.875rem;
   word-wrap: break-word;
   background-color: #303030;
   background-clip: padding-box;
@@ -6176,7 +6176,7 @@ fieldset:disabled .btn {
 .popover-header {
   padding: 0.5rem 1rem;
   margin-bottom: 0;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   background-color: #444;
   border-bottom: 1px solid #3d3d3d;
   border-top-left-radius: calc(0.3rem - 1px);
@@ -7701,15 +7701,15 @@ fieldset:disabled .btn {
 }
 
 .fs-4 {
-  font-size: calc(1.265625rem + 0.1875vw) !important;
+  font-size: calc(1.275rem + 0.3vw) !important;
 }
 
 .fs-5 {
-  font-size: 1.171875rem !important;
+  font-size: 1.25rem !important;
 }
 
 .fs-6 {
-  font-size: 0.9375rem !important;
+  font-size: 1rem !important;
 }
 
 .fst-italic {
@@ -10720,7 +10720,7 @@ fieldset:disabled .btn {
     font-size: 2rem !important;
   }
   .fs-4 {
-    font-size: 1.40625rem !important;
+    font-size: 1.5rem !important;
   }
   .fs-sm-1 {
     font-size: 3rem !important;
@@ -10732,7 +10732,7 @@ fieldset:disabled .btn {
     font-size: 2rem !important;
   }
   .fs-sm-4 {
-    font-size: 1.40625rem !important;
+    font-size: 1.5rem !important;
   }
   .fs-md-1 {
     font-size: 3rem !important;
@@ -10744,7 +10744,7 @@ fieldset:disabled .btn {
     font-size: 2rem !important;
   }
   .fs-md-4 {
-    font-size: 1.40625rem !important;
+    font-size: 1.5rem !important;
   }
   .fs-lg-1 {
     font-size: 3rem !important;
@@ -10756,7 +10756,7 @@ fieldset:disabled .btn {
     font-size: 2rem !important;
   }
   .fs-lg-4 {
-    font-size: 1.40625rem !important;
+    font-size: 1.5rem !important;
   }
 }
 
