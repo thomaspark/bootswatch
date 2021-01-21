@@ -1,0 +1,271 @@
+// stylelint-disable selector-max-id, selector-max-compound-selectors
+
+body {
+  padding-top: 120px;
+}
+
+pre {
+  background: #f7f7f9;
+}
+
+iframe {
+  overflow: hidden;
+  border: none;
+}
+
+@media (min-width: 768px) {
+  body > .navbar-transparent {
+    box-shadow: none;
+    .navbar-nav > .open > a {
+      box-shadow: none;
+    }
+  }
+}
+
+#home,
+#help {
+  font-size: .9rem;
+  .navbar {
+    background: #349aed;
+    background: linear-gradient(145deg, rgba(52, 154, 237, 1) 50%, rgba(52, 216, 237, 1) 100%);
+    transition: box-shadow 200ms ease-in;
+  }
+  .navbar-transparent {
+    background: none !important;
+    box-shadow: none;
+  }
+  .navbar-brand {
+    .nav-link {
+      display: inline-block;
+      margin-right: -30px;
+    }
+  }
+  .nav-link {
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #fff;
+  }
+}
+
+#home {
+  padding-top: 0;
+  .btn {
+    padding: .6rem .55rem .5rem;
+    box-shadow: none;
+    font-size: .7rem;
+    font-weight: 500;
+  }
+}
+
+.bs-docs-section {
+  margin-top: 4em;
+  .page-header h1 {
+    padding: 2rem 0;
+    font-size: 3rem;
+  }
+}
+
+.dropdown-menu.show[aria-labelledby="themes"] {
+  display: flex;
+  width: 420px;
+  flex-wrap: wrap;
+
+  .dropdown-item {
+    width: 33.333%;
+
+    &:first-child {
+      width: 100%;
+    }
+  }
+}
+
+.bs-component {
+  position: relative;
+  + .bs-component {
+    margin-top: 1rem;
+  }
+  .card {
+    margin-bottom: 1rem;
+  }
+  .modal {
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
+    bottom: auto;
+    z-index: 1;
+    display: block;
+  }
+  .modal-dialog {
+    width: 90%;
+  }
+  .popover {
+    position: relative;
+    display: inline-block;
+    width: 220px;
+    margin: 20px;
+  }
+}
+
+.source-button {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  font-weight: 700;
+}
+
+.source-button:hover {
+  cursor: pointer;
+}
+
+.bs-component:hover .source-button {
+  display: block;
+}
+
+#source-modal {
+  pre {
+    max-height: calc(100vh - 11rem);
+    background-color: rgba(0, 0, 0, .7);
+    color: rgba(255, 255, 255, .7);
+  }
+}
+
+.nav-tabs {
+  margin-bottom: 15px;
+}
+
+.progress {
+  margin-bottom: 10px;
+}
+
+#footer {
+  margin: 5em 0;
+  li {
+    float: left;
+    margin-right: 1.5em;
+    margin-bottom: 1.5em;
+  }
+  p {
+    clear: left;
+    margin-bottom: 0;
+  }
+}
+
+.splash {
+  padding: 12em 0 6em;
+  background: #349aed;
+  background: linear-gradient(145deg, rgba(52, 154, 237, 1) 50%, rgba(52, 216, 237, 1) 100%);
+  color: #fff;
+  text-align: center;
+  .logo {
+    width: 160px;
+  }
+  h1 {
+    font-size: 3em;
+    color: #fff;
+  }
+  #social {
+    margin: 2em 0 3em;
+  }
+  .alert {
+    margin: 2em 0;
+    border: none;
+  }
+  .sponsor a {
+    color: #fff;
+  }
+}
+
+.section-tout {
+  padding: 6em 0 1em;
+  border-bottom: 1px solid rgba(0, 0, 0, .05);
+  background-color: #eaf1f1;
+  text-align: center;
+  .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1rem;
+    background: #349aed;
+    background: linear-gradient(145deg, rgba(59, 156, 234, 1) 50%, rgba(61, 184, 235, 1) 100%);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: rgba(0, 0, 0, .5);
+  }
+  p {
+    margin-bottom: 5em;
+  }
+}
+
+.section-preview {
+  padding: 4em 0;
+  .preview {
+    margin-bottom: 4em;
+    background-color: #eaf1f1;
+    .image {
+      position: relative;
+      &::before {
+        box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .1);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: "";
+        pointer-events: none;
+      }
+    }
+    .options {
+      padding: 2em;
+      border: 1px solid rgba(0, 0, 0, .05);
+      border-top: none;
+      text-align: center;
+      p {
+        margin-bottom: 2em;
+      }
+    }
+  }
+  .dropdown-menu {
+    text-align: left;
+  }
+  .lead {
+    margin-bottom: 2em;
+  }
+}
+
+.sponsor {
+  #carbonads {
+    max-width: 240px;
+    margin: 0 auto;
+  }
+  .carbon-text {
+    display: block;
+    margin-top: 1em;
+    font-size: 12px;
+  }
+  .carbon-poweredby {
+    float: right;
+    margin-top: 1em;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .splash {
+    padding-top: 8em;
+    .logo {
+      width: 100px;
+    }
+    h1 {
+      font-size: 2em;
+    }
+  }
+  #banner {
+    margin-bottom: 2em;
+    text-align: center;
+  }
+}
