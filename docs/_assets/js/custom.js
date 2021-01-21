@@ -14,8 +14,21 @@
     event.preventDefault();
   })
 
-  $('.bs-component [data-toggle="popover"]').popover();
-  $('.bs-component [data-toggle="tooltip"]').tooltip();
+  var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+  var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+    return new bootstrap.Popover(popoverTriggerEl)
+  })
+
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+  })
+
+  var sourceModalElem = document.getElementById('source-modal');
+  if (sourceModalElem) {
+    var sourceModal = new bootstrap.Modal(document.getElementById('source-modal'));
+  }
+
   $('.bs-component').each(function () {
     var $button = $('<button class="source-button btn btn-primary btn-xs" role="button" tabindex="0">&lt; &gt;</button>');
     $(this).append($button);
@@ -27,7 +40,7 @@
     var html = $(this).parent().html();
     html = cleanSource(html);
     $('#source-modal pre').text(html);
-    $('#source-modal').modal();
+    sourceModal.show();
   })
 
   function cleanSource(html) {
