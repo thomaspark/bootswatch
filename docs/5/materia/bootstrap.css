@@ -11803,105 +11803,95 @@ select.form-control[multiple] {
   background: none;
 }
 
-.custom-control {
-  min-height: 1.5rem;
-}
-
-.custom-control-label::before {
-  top: 0;
+.form-check-input {
+  width: 1.25em;
+  height: 1.25em;
+  margin-top: 1px;
   border: 2px solid #ced4da;
 }
 
-.custom-control-label::after {
-  top: 0;
+.form-check-input:checked[type="radio"] {
+  background-size: 1.8em;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%232196f3' stroke='%23fff' stroke-width='1' /%3e%3c/svg%3e"), var(--bs-gradient);
 }
 
-.custom-control-input:checked ~ .custom-control-label::before {
-  border-color: #2196f3;
-}
-
-.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
-  background-image: none;
-}
-
-.custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
-  -webkit-transform: scale(1.5);
-  transform: scale(1.5);
-}
-
-.custom-radio .custom-control-input ~ .custom-control-label::after {
-  -webkit-transform: scale(0.75);
-  transform: scale(0.75);
-}
-
-.custom-radio .custom-control-input:checked ~ .custom-control-label::before {
-  background-color: #fff;
-  background-image: none;
-  transition: border-color .24s;
-}
-
-.custom-radio .custom-control-input:checked ~ .custom-control-label::after {
-  -webkit-transform: scale(1.125);
-  transform: scale(1.125);
-  transition: background-image .24s, -webkit-transform .24s;
-  transition: background-image .24s, transform .24s;
-  transition: background-image .24s, transform .24s, -webkit-transform .24s;
-}
-
-.custom-switch .custom-control-label::before {
-  top: .125rem;
-  height: .875rem;
-  background-color: #bbb;
+.form-check.form-switch .form-check-input {
+  position: relative;
+  height: 0.8em;
   border: none;
+  background-image: none;
+  background-color: #ced4da;
 }
 
-.custom-switch .custom-control-input:disabled ~ .custom-control-label {
-  opacity: .7;
+.form-check.form-switch .form-check-input:focus {
+  box-shadow: none;
 }
 
-.custom-switch .custom-control-input:disabled ~ .custom-control-label::before {
-  background-color: #bbb;
-}
-
-.custom-switch .custom-control-label::after {
+.form-check.form-switch .form-check-input:before {
+  content: "";
+  position: absolute;
+  top: -0.2em;
+  left: -0.2em;
+  width: 1.2em;
+  height: 1.2em;
   background-color: #fff;
+  border-radius: 50%;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  transition: left 0.15s ease-in-out;
 }
 
-.custom-switch .custom-control-input:checked ~ .custom-control-label::before {
-  opacity: .38;
+.form-check.form-switch .form-check-input:after {
+  content: "";
+  position: absolute;
+  top: -0.2em;
+  left: -0.2em;
+  width: 1.2em;
+  height: 1.2em;
+  border-radius: 50%;
+  box-shadow: 0 0 0 9px rgba(0, 0, 0, 0.05);
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  transition: left 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out;
+  transition: left 0.15s ease-in-out, transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: left 0.15s ease-in-out, transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out;
+  z-index: -1;
 }
 
-.custom-switch .custom-control-input:checked ~ .custom-control-label::after {
+.form-check.form-switch .form-check-input:hover:not(.disabled):after, .form-check.form-switch .form-check-input:focus:not(.disabled):after {
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+}
+
+.form-check.form-switch .form-check-input:focus:not(.disabled):after {
+  box-shadow: 0 0 0 9px rgba(0, 0, 0, 0.1);
+}
+
+.form-check.form-switch .form-check-input:checked {
+  background-color: rgba(33, 150, 243, 0.3);
+}
+
+.form-check.form-switch .form-check-input:checked:before {
   background-color: #2196f3;
+  left: calc(100% - 0.8em);
 }
 
-.custom-switch .custom-control-input:hover:not(:disabled) ~ .custom-control-label::after {
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 0 9px rgba(0, 0, 0, 0.05);
+.form-check.form-switch .form-check-input:checked:after {
+  left: calc(100% - 0.8em);
+  box-shadow: 0 0 0 9px rgba(33, 150, 243, 0.1);
 }
 
-.custom-switch .custom-control-input:focus:not(:disabled) ~ .custom-control-label::after {
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 0 9px rgba(0, 0, 0, 0.09);
+.form-check.form-switch .form-check-input:checked:hover:not(.disabled):after, .form-check.form-switch .form-check-input:checked:focus:not(.disabled):after {
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
 }
 
-.custom-switch .custom-control-input:active:not(:disabled) ~ .custom-control-label::after {
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 0 9px rgba(0, 0, 0, 0.16);
+.form-check.form-switch .form-check-input:checked:focus:not(.disabled):after {
+  box-shadow: 0 0 0 9px rgba(33, 150, 243, 0.2);
 }
 
-.custom-switch .custom-control-input:hover:checked:not(:disabled) ~ .custom-control-label::after {
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 0 9px rgba(33, 150, 243, 0.05);
-}
-
-.custom-switch .custom-control-input:focus:checked:not(:disabled) ~ .custom-control-label::after {
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 0 9px rgba(33, 150, 243, 0.09);
-}
-
-.custom-switch .custom-control-input:active:checked:not(:disabled) ~ .custom-control-label::after {
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 0 9px rgba(33, 150, 243, 0.16);
-}
-
-.custom-switch .custom-control-input:active:not(:checked) ~ .custom-control-label::before {
-  background-color: #bbb;
+.form-check:not(.form-switch) .form-check-input:checked[type="checkbox"] {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-width='2' d='M6 10l3 3l6-6'/%3e%3c/svg%3e"), var(--bs-gradient);
+  background-size: 1.6em;
 }
 
 .has-warning input:not([type="checkbox"]),

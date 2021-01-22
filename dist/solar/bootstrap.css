@@ -2400,11 +2400,11 @@ textarea.form-control-lg {
   height: 1em;
   margin-top: 0.25em;
   vertical-align: top;
-  background-color: #002b36;
+  background-color: rgba(255, 255, 255, 0.75);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  border: 1px solid rgba(0, 0, 0, 0.25);
+  border: 1px solid #fff;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -2439,8 +2439,8 @@ textarea.form-control-lg {
 }
 
 .form-check-input:checked {
-  background-color: #073642;
-  border-color: #073642;
+  background-color: #b58900;
+  border-color: #b58900;
 }
 
 .form-check-input:checked[type="checkbox"] {
@@ -2475,13 +2475,13 @@ textarea.form-control-lg {
 .form-switch .form-check-input {
   width: 2em;
   margin-left: -2.5em;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%280, 0, 0, 0.25%29'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%28255, 255, 255, 0.75%29'/%3e%3c/svg%3e");
   background-position: left center;
   border-radius: 2em;
 }
 
 .form-switch .form-check-input:focus {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23839ba1'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%28255, 255, 255, 0.75%29'/%3e%3c/svg%3e");
 }
 
 .form-switch .form-check-input:checked {
@@ -2537,7 +2537,7 @@ textarea.form-control-lg {
   width: 1rem;
   height: 1rem;
   margin-top: -0.25rem;
-  background-color: #073642;
+  background-color: #b58900;
   border: 0;
   border-radius: 1rem;
   -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -2562,7 +2562,7 @@ textarea.form-control-lg {
   height: 0.5rem;
   color: transparent;
   cursor: pointer;
-  background-color: #dee2e6;
+  background-color: #073642;
   border-color: transparent;
   border-radius: 1rem;
 }
@@ -2570,7 +2570,7 @@ textarea.form-control-lg {
 .form-range::-moz-range-thumb {
   width: 1rem;
   height: 1rem;
-  background-color: #073642;
+  background-color: #b58900;
   border: 0;
   border-radius: 1rem;
   -moz-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -2595,7 +2595,7 @@ textarea.form-control-lg {
   height: 0.5rem;
   color: transparent;
   cursor: pointer;
-  background-color: #dee2e6;
+  background-color: #073642;
   border-color: transparent;
   border-radius: 1rem;
 }
@@ -10938,29 +10938,6 @@ fieldset:disabled .btn {
 .table-hover .table-active:hover > th,
 .table-hover .table-active:hover > td {
   background-color: rgba(0, 0, 0, 0.1);
-}
-
-.custom-control-input:checked ~ .custom-control-label::before {
-  background-color: #b58900;
-  background-image: none;
-}
-
-.custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
-  border-color: #b58900;
-}
-
-.custom-control-input:not(:disabled):active ~ .custom-control-label::before {
-  background-color: #b58900;
-  background-image: none;
-  border-color: #b58900;
-}
-
-.custom-switch .custom-control-label::after {
-  background-color: white;
-}
-
-.custom-switch .custom-control-input:checked ~ .custom-control-label::after {
-  background-color: rgba(255, 255, 255, 0.75);
 }
 
 .alert {
