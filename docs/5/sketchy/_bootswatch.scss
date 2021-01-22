@@ -250,19 +250,18 @@ select.form-control {
       background-color: $white;
       border: 2px solid #333;
       border-radius: 50% 45% 40% 50% / 40% 50% 50% 45%;
-      transition: left 0.15s ease-in-out;
+      transition: left .15s ease-in-out;
     }
 
     &:checked::after {
       top: 0;
       left: 18px;
       background-color: $gray-800;
-      transition: left 0.15s ease-in-out;
     }
   }
 
   .form-check-label {
-    margin-left: 0.5em;
+    margin-left: .5em;
   }
 }
 

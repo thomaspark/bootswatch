@@ -331,7 +331,7 @@ select.form-control {
 .form-check.form-switch {
   .form-check-input {
     position: relative;
-    height: 0.8em;
+    height: .8em;
     border: none;
     background-image: none;
     background-color: $gray-400;
@@ -340,43 +340,43 @@ select.form-control {
       box-shadow: none;
     }
 
-    &:before {
+    &::before {
       content: "";
       position: absolute;
-      top: -0.2em;
-      left: -0.2em;
+      top: -.2em;
+      left: -.2em;
       width: 1.2em;
       height: 1.2em;
       background-color: $white;
       border-radius: 50%;
       box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
-      transition: left 0.15s ease-in-out;
+      transition: left .15s ease-in-out;
     }
 
-    &:after {
+    &::after {
       content: "";
       position: absolute;
-      top: -0.2em;
-      left: -0.2em;
+      top: -.2em;
+      left: -.2em;
       width: 1.2em;
       height: 1.2em;
       border-radius: 50%;
       box-shadow: 0 0 0 9px rgba(0, 0, 0, .05);
       transform: scale(0);
-      transition: left 0.15s ease-in-out, transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      transition: left .15s ease-in-out, transform .15s ease-in-out, box-shadow .15s ease-in-out;
       z-index: -1;
     }
 
     &:hover:not(.disabled),
     &:focus:not(.disabled) {
 
-      &:after {
-        transform: scale(0.9);
+      &::after {
+        transform: scale(.9);
       }
     }
 
     &:focus:not(.disabled) {
-      &:after {
+      &::after {
         box-shadow: 0 0 0 9px rgba(0, 0, 0, .1);
       }
     }
@@ -384,25 +384,25 @@ select.form-control {
     &:checked {
       background-color: rgba(33, 150, 243, .3);
 
-      &:before {
+      &::before {
         background-color: rgba(33, 150, 243, 1);
-        left: calc(100% - 0.8em);
+        left: calc(100% - .8em);
       }
 
-      &:after {
-        left: calc(100% - 0.8em);
+      &::after {
+        left: calc(100% - .8em);
         box-shadow: 0 0 0 9px rgba(33, 150, 243, .1);
       }
 
       &:hover:not(.disabled),
       &:focus:not(.disabled) {
-        &:after {
-          transform: scale(0.9);
+        &::after {
+          transform: scale(.9);
         }
       }
 
       &:focus:not(.disabled) {
-        &:after {
+        &::after {
           box-shadow: 0 0 0 9px rgba(33, 150, 243, .2);
         }
       }
