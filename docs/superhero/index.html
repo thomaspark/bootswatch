@@ -645,9 +645,8 @@
                     <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputFile">File input</label>
-                    <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
-                    <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+                    <label for="formFile" class="form-label">Default file input example</label>
+                    <input class="form-control" type="file" id="formFile">
                   </div>
                   <fieldset class="form-group">
                     <legend>Radio buttons</legend>
@@ -685,10 +684,25 @@
                       </label>
                     </div>
                   </fieldset>
+                  <fieldset>
+                    <legend>Switches</legend>
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                      <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
+                    </div>
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                      <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label>
+                    </div>
+                  </fieldset>
                   <fieldset class="form-group">
-                    <legend>Sliders</legend>
-                    <label for="customRange1">Example range</label>
-                    <input type="range" class="custom-range" id="customRange1">
+                    <legend>Ranges</legend>
+                      <label for="customRange1" class="form-label">Example range</label>
+                      <input type="range" class="form-range" id="customRange1">
+                      <label for="disabledRange" class="form-label">Disabled range</label>
+                      <input type="range" class="form-range" id="disabledRange" disabled>
+                      <label for="customRange3" class="form-label">Example range</label>
+                      <input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3">
                   </fieldset>
                   <button type="submit" class="btn btn-primary">Submit</button>
                 </fieldset>
@@ -754,64 +768,6 @@
               </div>
             </form>
 
-            <div class="bs-component">
-              <fieldset>
-                <legend>Custom forms</legend>
-                <div class="form-group">
-                  <div class="custom-control custom-radio">
-                    <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked>
-                    <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
-                  </div>
-                  <div class="custom-control custom-radio">
-                    <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-                    <label class="custom-control-label" for="customRadio2">Or toggle this other custom radio</label>
-                  </div>
-                  <div class="custom-control custom-radio">
-                    <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input" disabled>
-                    <label class="custom-control-label" for="customRadio3">Disabled custom radio</label>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="customCheck1" checked>
-                    <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
-                  </div>
-                  <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="customCheck2" disabled>
-                    <label class="custom-control-label" for="customCheck2">Disabled custom checkbox</label>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <div class="custom-control custom-switch">
-                    <input type="checkbox" class="custom-control-input" id="customSwitch1" checked>
-                    <label class="custom-control-label" for="customSwitch1">Toggle this switch element</label>
-                  </div>
-                  <div class="custom-control custom-switch">
-                    <input type="checkbox" class="custom-control-input" disabled id="customSwitch2">
-                    <label class="custom-control-label" for="customSwitch2">Disabled switch element</label>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <select class="custom-select">
-                    <option selected>Open this select menu</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <div class="input-group mb-3">
-                    <div class="custom-file">
-                      <input type="file" class="custom-file-input" id="inputGroupFile02">
-                      <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
-                    </div>
-                    <div class="input-group-append">
-                      <span class="input-group-text">Upload</span>
-                    </div>
-                  </div>
-                </div>
-              </fieldset>
-            </div>
           </div>
         </div>
       </div>
