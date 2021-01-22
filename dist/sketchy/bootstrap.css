@@ -10925,8 +10925,8 @@ select.form-control {
 [type="checkbox"]::before {
   content: "";
   position: absolute;
-  left: -1.2em;
-  top: -.9em;
+  left: 0;
+  top: -.1em;
   display: inline-block;
   width: 15px;
   height: 16px;
@@ -10937,8 +10937,8 @@ select.form-control {
 [type="checkbox"]:checked::after {
   content: "x";
   position: absolute;
-  left: -.64em;
-  top: -.48em;
+  left: .1em;
+  top: 0;
   font-size: 1.5rem;
   line-height: .5;
   color: #333;
@@ -10962,8 +10962,8 @@ select.form-control {
 [type="radio"]::before {
   content: "";
   position: absolute;
-  left: -1.2em;
-  top: -.9em;
+  left: 0;
+  top: -.1em;
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -10979,28 +10979,47 @@ select.form-control {
   border: 2px solid #aaa;
 }
 
-.form-check-label {
-  padding-left: 2.5rem;
+.form-check-input:focus {
+  box-shadow: none;
 }
 
-.form-check-inline [type="checkbox"]::before {
-  left: 0;
+.form-switch {
+  padding-left: 0;
+}
+
+.form-switch .form-check-input {
+  position: relative;
+  margin-left: 0;
+}
+
+.form-switch .form-check-input::before {
+  width: 32px;
+  border-radius: 30% 35% 30% 30% / 30% 50% 30% 45%;
+}
+
+.form-switch .form-check-input::after {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  position: absolute;
   top: 0;
-}
-
-.form-check-inline [type="checkbox"]::after {
-  left: .14em;
-  top: .12em;
-}
-
-.form-check-inline [type="radio"]::before {
   left: 0;
-  top: 0;
+  background-color: #fff;
+  border: 2px solid #333;
+  border-radius: 50% 45% 40% 50% / 40% 50% 50% 45%;
+  transition: left 0.15s ease-in-out;
 }
 
-.form-check-inline .form-check-label {
-  padding-left: 1rem;
-  padding-right: 1rem;
+.form-switch .form-check-input:checked::after {
+  top: 0;
+  left: 18px;
+  background-color: #333;
+  transition: left 0.15s ease-in-out;
+}
+
+.form-switch .form-check-label {
+  margin-left: 0.5em;
 }
 
 .dropdown-menu {
