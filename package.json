@@ -14,8 +14,10 @@
   },
   "scripts": {
     "build": "grunt swatch",
+    "docs": "grunt docs",
     "htmllint": "grunt htmllint",
     "stylelint": "stylelint \"**/*.scss\" --rd",
+    "release": "grunt release",
     "test": "npm run stylelint"
   },
   "files": [
