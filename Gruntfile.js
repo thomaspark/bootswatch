@@ -256,6 +256,8 @@ module.exports = grunt => {
   grunt.registerTask('vendor', 'copy:vendor');
 
   grunt.registerTask('docs-css', ['sass:docs', 'postcss:docs']);
+  grunt.registerTask('docs', ['docs-css', 'vendor']);
+  grunt.registerTask('release', ['swatch', 'docs']);
 
   grunt.registerTask('server', 'connect:keepalive');
 

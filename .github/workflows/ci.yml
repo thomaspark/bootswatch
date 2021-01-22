@@ -34,6 +34,9 @@ jobs:
       - name: Build the files
         run: npm run build
 
+      - name: Build the docs files
+        run: npm run docs
+
       - name: Run tests
         run: npm test
 
