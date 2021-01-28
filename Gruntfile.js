@@ -38,7 +38,8 @@ const SWATCHES = [
   'spacelab',
   'superhero',
   'united',
-  'yeti'
+  'yeti',
+  'zephyr'
 ];
 let BUILD_THEME = '';
 
