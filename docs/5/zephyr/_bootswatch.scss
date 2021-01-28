@@ -14,8 +14,8 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700
   font-weight: 500;
 
   .nav-item {
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
+    margin-left: .5rem;
+    margin-right: .5rem;
   }
 
   .navbar-nav {
@@ -29,11 +29,11 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700
   .navbar-nav {
     .nav-link {
       &:hover {
-        background-color: rgba(255, 255, 255, 0.1);
+        background-color: rgba(255, 255, 255, .1);
       }
 
       &.active {
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, .5);
       }
     }
   }
@@ -43,11 +43,11 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700
   .navbar-nav {
     .nav-link {
       &:hover {
-        background-color: rgba(0, 0, 0, 0.03);
+        background-color: rgba(0, 0, 0, .03);
       }
 
       &.active {
-        background-color: rgba(0, 0, 0, 0.05);
+        background-color: rgba(0, 0, 0, .05);
       }
     }
   }
@@ -95,7 +95,7 @@ thead th {
   .nav-link {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    border-width: 0 0 1px 0;
+    border-width: 0 0 1px;
   }
 
   .nav-link.active,
