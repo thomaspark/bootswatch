@@ -1,5 +1,7 @@
 // stylelint-disable selector-max-id, selector-max-compound-selectors
 
+$gradient: linear-gradient(145deg, #375ee3 0%, #4A8FE2 80%);;
+
 body {
   padding-top: 120px;
 }
@@ -25,8 +27,8 @@ iframe {
 #home,
 #help {
   .navbar {
-    background: #349aed;
-    background: linear-gradient(145deg, rgba(52, 154, 237, 1) 50%, rgba(52, 216, 237, 1) 100%);
+    background: #375ee3;
+    background: $gradient;
     transition: box-shadow 200ms ease-in;
   }
   .navbar-transparent {
@@ -44,10 +46,7 @@ iframe {
 #home {
   padding-top: 0;
   .btn {
-    padding: .6rem .55rem .5rem;
-    box-shadow: none;
-    font-size: .7rem;
-    font-weight: 500;
+    padding: .5rem .9rem;
   }
 }
 
@@ -149,8 +148,8 @@ iframe {
 
 .splash {
   padding: 12em 0 6em;
-  background: #349aed;
-  background: linear-gradient(145deg, rgba(52, 154, 237, 1) 50%, rgba(52, 216, 237, 1) 100%);
+  background: #375ee3;
+  background: $gradient;
   color: #fff;
   text-align: center;
   .logo {
@@ -184,8 +183,8 @@ iframe {
     width: 80px;
     height: 80px;
     margin: 0 auto 1rem;
-    background: #349aed;
-    background: linear-gradient(145deg, rgba(59, 156, 234, 1) 50%, rgba(61, 184, 235, 1) 100%);
+    background: #375ee3;
+    background: $gradient;
     border-radius: 50%;
     font-size: 2rem;
     color: rgba(0, 0, 0, .5);
