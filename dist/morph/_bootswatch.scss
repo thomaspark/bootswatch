@@ -36,7 +36,7 @@ $btn-box-shadow-inset: inset 2px 3px 6px rgba($black, .2), inset -3px -2px 6px r
   position: relative;
   color: $gray-700;
   border-radius: $btn-border-radius;
-  @include shadow;
+  @include shadow();
 
   &:focus {
     color: $gray-700;
@@ -46,7 +46,7 @@ $btn-box-shadow-inset: inset 2px 3px 6px rgba($black, .2), inset -3px -2px 6px r
   &:focus,
   &:active,
   &:active:focus {
-    @include shadow;
+    @include shadow();
     color: $gray-700;
   }
 
@@ -103,7 +103,7 @@ $btn-box-shadow-inset: inset 2px 3px 6px rgba($black, .2), inset -3px -2px 6px r
       }
 
       &:hover,
-      &:focus {      
+      &:focus {
         background-color: $value;
         border: none;
         box-shadow: 5px 5px 10px rgba($black, .2), -5px -5px 10px rgba($white, .1);
@@ -133,7 +133,7 @@ $btn-box-shadow-inset: inset 2px 3px 6px rgba($black, .2), inset -3px -2px 6px r
 
 .btn-group,
 .btn-group-vertical {
-  @include shadow;
+  @include shadow();
   border-radius: $btn-border-radius;
   border: none;
 
@@ -194,14 +194,14 @@ $btn-box-shadow-inset: inset 2px 3px 6px rgba($black, .2), inset -3px -2px 6px r
   > .btn-group:not(:first-child) > .btn {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    border-top: 1px solid rgba($black, 0.05);
+    border-top: 1px solid rgba($black, .05);
 
     &:hover,
     &:active,
     &:active:focus {
       border-top-left-radius: 0;
       border-top-right-radius: 0;
-      border-top: 1px solid rgba($black, 0.05);
+      border-top: 1px solid rgba($black, .05);
     }
   }
 
@@ -222,7 +222,7 @@ $btn-box-shadow-inset: inset 2px 3px 6px rgba($black, .2), inset -3px -2px 6px r
 .btn-check:checked + .btn,
 .btn-check:active + .btn {
   box-shadow: inset 2px 3px 6px rgba($black, .2);
-  
+
   @each $color, $value in $theme-colors {
     &-#{$color} {
       background-color: $value;
@@ -257,14 +257,12 @@ $btn-box-shadow-inset: inset 2px 3px 6px rgba($black, .2), inset -3px -2px 6px r
 }
 
 .nav-tabs {
-  @include shadow;
+  @include shadow();
   border-radius: $border-radius;
 
-  .nav-item { 
-    box-shadow: 1px 0 $border-color;
-  }
-
   .nav-item {
+    box-shadow: 1px 0 $border-color;
+
     &:first-child .nav-link {
       border-top-left-radius: $border-radius;
       border-bottom-left-radius: $border-radius;
@@ -283,7 +281,7 @@ $btn-box-shadow-inset: inset 2px 3px 6px rgba($black, .2), inset -3px -2px 6px r
 }
 
 .nav-pills {
-  @include shadow;
+  @include shadow();
   padding: 1rem;
   border-radius: $border-radius;
 
@@ -294,12 +292,12 @@ $btn-box-shadow-inset: inset 2px 3px 6px rgba($black, .2), inset -3px -2px 6px r
 }
 
 .breadcrumb {
-  @include shadow;
+  @include shadow();
   border-radius: $border-radius;
 }
 
 .pagination {
-  @include shadow;
+  @include shadow();
   justify-content: center;
   border-radius: $border-radius;
 }
@@ -373,7 +371,7 @@ $btn-box-shadow-inset: inset 2px 3px 6px rgba($black, .2), inset -3px -2px 6px r
 
   @each $color, $value in $theme-colors {
     &-#{$color} {
-      background-color: rgba($value, 0.75);
+      background-color: rgba($value, .75);
       box-shadow: $box-shadow-lg, inset 1px 1px 3px rgba(lighten($value, 80%), .4), inset -5px -5px 20px rgba(darken($value, 80%), .05);
     }
   }
@@ -438,7 +436,12 @@ $btn-box-shadow-inset: inset 2px 3px 6px rgba($black, .2), inset -3px -2px 6px r
     border-bottom: 1px solid $border-color;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     color: inherit;
   }
 }
@@ -451,5 +454,3 @@ $btn-box-shadow-inset: inset 2px 3px 6px rgba($black, .2), inset -3px -2px 6px r
 .list-group-item {
   background-color: transparent;
 }
-
-
