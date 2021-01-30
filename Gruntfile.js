@@ -29,6 +29,7 @@ const SWATCHES = [
   'lux',
   'materia',
   'minty',
+  'morph',
   'pulse',
   'sandstone',
   'simplex',
