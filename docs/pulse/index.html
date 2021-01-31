@@ -340,9 +340,12 @@
             </div>
           </div>
           <div class="col-lg-5">
-            <p class="bs-component">
-              <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
-            </p>
+            <div class="bs-component">
+              <div class="d-grid gap-2">
+                <button class="btn btn-lg btn-primary" type="button">Block button</button>
+                <button class="btn btn-lg btn-primary" type="button">Block button</button>
+              </div>
+            </div>
 
             <div class="bs-component mb-3">
               <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
@@ -769,6 +772,18 @@
                     <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
                     <span class="input-group-text">.00</span>
                   </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label mt-4">Floating labels</label>
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                  <label for="floatingInput">Email address</label>
+                </div>
+                <div class="form-floating">
+                  <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                  <label for="floatingPassword">Password</label>
                 </div>
               </div>
             </form>
