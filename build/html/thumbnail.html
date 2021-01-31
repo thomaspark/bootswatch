@@ -10,6 +10,8 @@
     <style>
       body {
         width: 500px;
+        height: 300px;
+        overflow: hidden;
         padding-top: 120px;
       }
 
@@ -24,6 +26,19 @@
         padding-left: 20px;
       }
 
+      .navbar .container-fluid {
+        flex-wrap: nowrap;
+      }
+
+      .navbar-nav {
+        flex-direction: row !important;
+      }
+
+      .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 0.75rem !important;
+        padding-left: 0.75rem !important;
+      }
+
       .lead {
         margin-bottom: 2em;
       }
@@ -35,18 +50,30 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
-      <a class="navbar-brand" href="#">Bootswatch</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarColor01">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Themes</a>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Bootswatch</a>
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Themes
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Download</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Download
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Help</a>
@@ -79,7 +106,7 @@
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
     <script>
-      $.get('../../docs/api/4.json', function (data) {
+      $.get('../../docs/api/5.json', function (data) {
         var menuTemplate = '<div id="menu" style="position:fixed;top:10px;right:10px;"><select>{{#.}}<option data-description="{{description}}">{{name}}</option>{{/.}}</select></div>';
         var menuHTML = Mustache.render(menuTemplate, data.themes);
 
@@ -89,7 +116,7 @@
           var theme = $('#menu :selected');
           $('#theme').text(theme.text());
           $('#description').text(theme.data('description'));
-          theme = '../../' + theme.text().toLowerCase() + '/bootstrap.min.css';
+          theme = '../../dist/' + theme.text().toLowerCase() + '/bootstrap.min.css';
           $('#stylesheet').attr('href', theme);
         });
       }, 'json');
