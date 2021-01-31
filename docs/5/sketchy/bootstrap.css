@@ -5491,22 +5491,22 @@ fieldset:disabled .btn {
   width: 1em;
   height: 1em;
   padding: 0.25em 0.25em;
-  color: #fff;
-  background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;
+  color: inherit;
+  background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='inherit'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;
   border: 0;
   border-radius: 25px;
-  opacity: 0.5;
+  opacity: 1;
 }
 
 .btn-close:hover {
-  color: #fff;
+  color: inherit;
   text-decoration: none;
-  opacity: 0.75;
+  opacity: 1;
 }
 
 .btn-close:focus {
   outline: none;
-  box-shadow: 0 0 0 0.25rem rgba(51, 51, 51, 0.25);
+  box-shadow: none;
   opacity: 1;
 }
 
@@ -10829,6 +10829,10 @@ fieldset:disabled .btn {
   border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;
 }
 
+.btn-check {
+  display: none;
+}
+
 button,
 input,
 optgroup,
@@ -11092,53 +11096,8 @@ select.form-control {
   border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;
 }
 
-.alert-dismissible .close {
-  color: transparent;
-}
-
-.alert-dismissible .close::before {
-  right: 1rem;
-  top: .8rem;
-}
-
-.alert-dismissible.alert-success {
-  border-color: #28a745;
-}
-
-.alert-dismissible.alert-success,
-.alert-dismissible.alert-success .alert-link,
-.alert-dismissible.alert-success .close::before {
-  color: #28a745;
-}
-
-.alert-dismissible.alert-info {
-  border-color: #17a2b8;
-}
-
-.alert-dismissible.alert-info,
-.alert-dismissible.alert-info .alert-link,
-.alert-dismissible.alert-info .close::before {
-  color: #17a2b8;
-}
-
-.alert-dismissible.alert-warning {
-  border-color: #ffc107;
-}
-
-.alert-dismissible.alert-warning,
-.alert-dismissible.alert-warning .alert-link,
-.alert-dismissible.alert-warning .close::before {
-  color: #ffc107;
-}
-
-.alert-dismissible.alert-danger {
-  border-color: #dc3545;
-}
-
-.alert-dismissible.alert-danger,
-.alert-dismissible.alert-danger .alert-link,
-.alert-dismissible.alert-danger .close::before {
-  color: #dc3545;
+.alert .btn-close::before {
+  color: inherit;
 }
 
 .progress {
@@ -11188,19 +11147,19 @@ select.form-control {
   border-bottom: 2px solid #333;
 }
 
-.popover.popover-left::before, .popover.bs-tether-element-attached-right::before {
+.popover.bs-popover-start::before, .popover.bs-popover-auto[data-popper-placement^="left"]::before, .popover.bs-tether-element-attached-right::before {
   right: -13px;
 }
 
-.popover.popover-top::before, .popover.bs-tether-element-attached-bottom::before {
+.popover.bs-popover-top::before, .popover.bs-popover-auto[data-popper-placement^="top"]::before, .popover.bs-tether-element-attached-bottom::before {
   bottom: -13px;
 }
 
-.popover.popover-bottom::before, .popover.bs-tether-element-attached-top::before {
+.popover.bs-popover-bottom::before, .popover.bs-popover-auto[data-popper-placement^="bottom"]::before, .popover.bs-tether-element-attached-top::before {
   top: -13px;
 }
 
-.popover.popover-right::before, .popover.bs-tether-element-attached-left::before {
+.popover.bs-popover-end::before, .popover.bs-popover-auto[data-popper-placement^="right"]::before, .popover.bs-tether-element-attached-left::before {
   left: -13px;
 }
 
@@ -11213,20 +11172,15 @@ pre {
   border-radius: 15px 5px 5px 25px/5px 25px 25px 5px;
 }
 
-.close,
-.close:hover,
-.close:focus,
-.close:active {
-  opacity: 1;
+.btn-close {
+  background-image: none;
 }
 
-.close::before,
-.close:hover::before,
-.close:focus::before,
-.close:active::before {
-  position: absolute;
+.btn-close::before {
   content: "X";
-  color: #333;
+  position: absolute;
+  right: 1rem;
+  top: .8rem;
 }
 
 .img-thumbnail {

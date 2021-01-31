@@ -343,54 +343,9 @@ select.form-control {
 .alert {
   border-radius: $border-radius-sketchy;
 
-  &-dismissible {
-    .close {
-      color: transparent;
-
-      &::before {
-        right: 1rem;
-        top: .8rem;
-      }
-    }
-
-    &.alert-success {
-      border-color: $success;
-
-      &,
-      .alert-link,
-      .close::before {
-        color: $success;
-      }
-    }
-
-    &.alert-info {
-      border-color: $info;
-
-      &,
-      .alert-link,
-      .close::before {
-        color: $info;
-      }
-    }
-
-    &.alert-warning {
-      border-color: $warning;
-
-      &,
-      .alert-link,
-      .close::before {
-        color: $warning;
-      }
-    }
-
-    &.alert-danger {
-      border-color: $danger;
-
-      &,
-      .alert-link,
-      .close::before {
-        color: $danger;
-      }
+  .btn-close {
+    &::before {
+      color: inherit;
     }
   }
 }
@@ -453,22 +408,22 @@ select.form-control {
     border-bottom: 2px solid $gray-800;
   }
 
-  &.popover-left::before,
+  &.bs-popover-start::before,
   &.bs-tether-element-attached-right::before {
     right: -13px;
   }
 
-  &.popover-top::before,
+  &.bs-popover-top::before,
   &.bs-tether-element-attached-bottom::before {
     bottom: -13px;
   }
 
-  &.popover-bottom::before,
+  &.bs-popover-bottom::before,
   &.bs-tether-element-attached-top::before {
     top: -13px;
   }
 
-  &.popover-right::before,
+  &.bs-popover-end::before,
   &.bs-tether-element-attached-left::before {
     left: -13px;
   }
@@ -485,16 +440,14 @@ pre {
   border-radius: 15px 5px 5px 25px/5px 25px 25px 5px;
 }
 
-.close,
-.close:hover,
-.close:focus,
-.close:active {
-  opacity: 1;
+.btn-close {
+  background-image: none;
 
   &::before {
-    position: absolute;
     content: "X";
-    color: $gray-800;
+    position: absolute;
+    right: 1rem;
+    top: .8rem;
   }
 }
 
