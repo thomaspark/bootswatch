@@ -1,6 +1,6 @@
 // stylelint-disable selector-max-id, selector-max-compound-selectors
 
-$gradient: linear-gradient(145deg, #375ee3 0%, #4a8fe2 80%) !default;
+$gradient: linear-gradient(145deg, #375ee3 0%, #6543e0 80%) !default;
 
 body {
   padding-top: 120px;
@@ -24,16 +24,20 @@ iframe {
   }
 }
 
+.navbar {
+  .fa,
+  .fab {
+    margin-right: .25rem;
+    font-size: 1rem;
+  }
+}
+
 #home,
 #help {
   .navbar {
     background: #375ee3;
     background: $gradient;
     transition: box-shadow 200ms ease-in;
-  }
-  .navbar-transparent {
-    background: none !important;
-    box-shadow: none;
   }
   .navbar-brand {
     .nav-link {
@@ -147,11 +151,15 @@ iframe {
 }
 
 .splash {
+  position: relative;
   padding: 12em 0 6em;
-  background: #375ee3;
-  background: $gradient;
+  background-color: #375ee3;
+  background-image: url("../img/splash.svg"), $gradient;
+  background-size: cover;
+  background-repeat: no-repeat;
   color: #fff;
   text-align: center;
+
   .logo {
     width: 160px;
   }
@@ -187,7 +195,7 @@ iframe {
     background: $gradient;
     border-radius: 50%;
     font-size: 2rem;
-    color: rgba(0, 0, 0, .5);
+    color: rgba(255, 255, 255, .9);
   }
   p {
     margin-bottom: 5em;
@@ -269,5 +277,20 @@ iframe {
   #banner {
     margin-bottom: 2em;
     text-align: center;
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar {
+    .fa {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-transparent {
+    background: none !important;
+    box-shadow: none;
   }
 }
