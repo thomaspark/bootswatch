@@ -39,6 +39,7 @@ const SWATCHES = [
   'spacelab',
   'superhero',
   'united',
+  'vapor',
   'yeti',
   'zephyr'
 ];
