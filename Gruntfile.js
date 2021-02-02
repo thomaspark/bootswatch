@@ -40,7 +40,7 @@ const SWATCHES = [
   'united',
   'yeti'
 ];
-let BUILD_THEME = '';
+let buildTheme = '';
 
 module.exports = grunt => {
   grunt.loadNpmTasks('@lodder/grunt-postcss');
@@ -139,8 +139,7 @@ module.exports = grunt => {
       options: {
         level: {
           1: {
-            specialComments: 'all',
-            roundingPrecision: 6
+            specialComments: 'all'
           }
         }
       },
@@ -175,13 +174,12 @@ module.exports = grunt => {
         options: {
           base: 'docs'
         }
-      },
-      keepalive: {}
+      }
     },
     watch: {
       options: {
         livereload: '<%= connect.options.livereload %>',
-        nospawn: true
+        spawn: false
       },
       dev: {
         files: [
@@ -194,7 +192,7 @@ module.exports = grunt => {
   });
 
   grunt.registerTask('build', 'build a regular theme from scss', theme => {
-    theme = theme ? theme : BUILD_THEME;
+    theme = theme ? theme : buildTheme;
 
     const themeDir = path.join(DIST_DIR, '/', theme);
     const isValidTheme = grunt.file.exists(path.join(themeDir, '/_variables.scss')) && grunt.file.exists(path.join(themeDir, '/_bootswatch.scss'));
@@ -240,6 +238,7 @@ module.exports = grunt => {
   });
 
   grunt.registerTask('swatch', 'build a theme from scss ', theme => {
+    // If no theme is passed, build all swatches
     theme = theme ? [theme] : SWATCHES;
 
     theme.forEach(t => {
@@ -249,17 +248,14 @@ module.exports = grunt => {
 
   grunt.event.on('watch', (action, filepath) => {
     const theme = path.basename(path.dirname(filepath));
+
     grunt.log.writeln(`${theme} changed...`);
-    BUILD_THEME = theme;
+    buildTheme = theme;
   });
 
+  grunt.registerTask('default', ['connect', 'watch']);
   grunt.registerTask('vendor', 'copy:vendor');
-
   grunt.registerTask('docs-css', ['sass:docs', 'postcss:docs']);
   grunt.registerTask('docs', ['docs-css', 'vendor']);
   grunt.registerTask('release', ['swatch', 'docs']);
-
-  grunt.registerTask('server', 'connect:keepalive');
-
-  grunt.registerTask('default', ['connect:base', 'watch']);
 };
