@@ -49,7 +49,7 @@ This method allows you to override theme variables.
 Make sure to import Bootstrap's `bootstrap.scss` in between `_variables.scss`
 and `_bootswatch.scss`!
 
-### Via NPM
+### Via npm
 
 You can install as a package with the command `npm install bootswatch`.
 
