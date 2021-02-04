@@ -62,6 +62,18 @@ $text-muted:                  $gray-600 !default;
 $table-accent-bg:             $gray-800 !default;
 $table-border-color:          $gray-700 !default;
 
+$table-variants: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark,
+) !default;
+// scss-docs-end table-variables
+
 // Forms
 
 $input-color:                       $gray-800 !default;

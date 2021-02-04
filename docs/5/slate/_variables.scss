@@ -59,6 +59,18 @@ $table-border-color:          rgba($black, .6) !default;
 $table-dark-border-color:     $table-border-color !default;
 $table-dark-color:            $white !default;
 
+$table-variants: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark,
+) !default;
+// scss-docs-end table-variables
+
 // Buttons
 
 $input-btn-padding-y:         .75rem !default;
