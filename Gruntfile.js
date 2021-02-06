@@ -31,6 +31,7 @@ const SWATCHES = [
   'minty',
   'morph',
   'pulse',
+  'quartz',
   'sandstone',
   'simplex',
   'sketchy',
