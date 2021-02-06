@@ -2,19 +2,19 @@
 // Bootswatch
 
 
-// Variables ===================================================================
+// Variables
 
 $web-font-path: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" !default;
 @import url($web-font-path);
 
-// Mixins ======================================================================
+// Mixins
 
 @mixin shadow($width: 4px){
   border-style: solid;
   border-width: 0 1px $width 1px;
 }
 
-// Navbar ======================================================================
+// Navbar
 
 .navbar {
   @include shadow();
@@ -33,7 +33,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,w
   border-color: darken($white, 5%);
 }
 
-// Buttons =====================================================================
+// Buttons
 
 .btn {
   @include shadow();
@@ -101,7 +101,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,w
   }
 }
 
-// Typography ==================================================================
+// Typography
 
 .text-secondary {
   color: $gray-700 !important;
@@ -111,7 +111,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,w
   color: $gray-600;
 }
 
-// Forms =======================================================================
+// Forms
 
 .form-control {
   box-shadow: inset 0 2px 0 rgba(0, 0, 0, .075);
@@ -126,7 +126,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,w
   }
 }
 
-// Navs ========================================================================
+// Navs
 
 .nav {
   .open > a,
@@ -226,7 +226,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,w
   }
 }
 
-// Indicators ==================================================================
+// Indicators
 
 .btn-close {
   text-decoration: none;
@@ -305,7 +305,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,w
   }
 }
 
-// Containers ==================================================================
+// Containers
 
 a.list-group-item {
   &-success {

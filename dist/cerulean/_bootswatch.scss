@@ -2,17 +2,17 @@
 // Bootswatch
 
 
-// Variables ===================================================================
+// Variables
 
 $text-shadow: 0 1px 0 rgba(0, 0, 0, .05) !default;
 
-// Mixins ======================================================================
+// Mixins
 
 @mixin btn-shadow($color){
   @include gradient-y-three-colors(lighten($color, 8%), $color, 60%, darken($color, 4%));
 }
 
-// Navbar ======================================================================
+// Navbar
 
 .bg-primary {
   @include btn-shadow($primary);
@@ -31,7 +31,7 @@ $text-shadow: 0 1px 0 rgba(0, 0, 0, .05) !default;
   text-shadow: $text-shadow;
 }
 
-// Buttons =====================================================================
+// Buttons
 
 .btn {
   text-shadow: $text-shadow;
@@ -70,8 +70,7 @@ $text-shadow: 0 1px 0 rgba(0, 0, 0, .05) !default;
   @include btn-shadow($dark);
 }
 
-
-// Typography ==================================================================
+// Typography
 
 .text-secondary {
   color: $gray-500 !important;
@@ -93,7 +92,7 @@ $text-shadow: 0 1px 0 rgba(0, 0, 0, .05) !default;
   }
 }
 
-// Navs ========================================================================
+// Navs
 
 .dropdown-menu {
   .dropdown-header {

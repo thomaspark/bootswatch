@@ -2,14 +2,14 @@
 // Bootswatch
 
 
-// Variables ===================================================================
+// Variables
 
 $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" !default;
 @import url($web-font-path);
 
-// Mixins ======================================================================
+// Mixins
 
-@mixin ripple($color){
+@mixin ripple($color) {
   position: relative;
 
   &::before {
@@ -75,7 +75,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;50
   border-width: 4px;
 }
 
-// Navbar ======================================================================
+// Navbar
 
 .navbar {
   border: none;
@@ -111,7 +111,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;50
   }
 }
 
-// Buttons =====================================================================
+// Buttons
 
 @include btn(primary, $primary, $white);
 @include btn(secondary, $secondary, $gray-500);
@@ -202,7 +202,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;50
   border: 1px solid #dfdfdf !important;
 }
 
-// Typography ==================================================================
+// Typography
 
 body,
 input,
@@ -218,7 +218,7 @@ p {
   color: $gray-500 !important;
 }
 
-// Tables ======================================================================
+// Tables
 
 .table-hover {
   > tbody > tr,
@@ -233,7 +233,7 @@ p {
   color: $white;
 }
 
-// Forms =======================================================================
+// Forms
 
 .col-form-label {
   font-size: 16px;
@@ -542,7 +542,7 @@ select.form-control {
   }
 }
 
-// Navs ========================================================================
+// Navs
 
 .nav-tabs {
   .nav-item + .nav-item {
@@ -603,7 +603,7 @@ select.form-control {
   box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
 }
 
-// Indicators ==================================================================
+// Indicators
 
 .alert {
   padding-right: 2.5rem;
@@ -664,7 +664,7 @@ select.form-control {
   padding: 4px 6px;
 }
 
-// Containers ==================================================================
+// Containers
 
 .card {
   box-shadow: 0 1px 4px rgba(0, 0, 0, .4);

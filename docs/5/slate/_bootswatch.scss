@@ -2,7 +2,7 @@
 // Bootswatch
 
 
-// Mixins ======================================================================
+// Mixins
 
 @mixin btn-shadow($color){
   @include gradient-y-three-colors(lighten($color, 6%), $color, 60%, darken($color, 4%));
@@ -14,7 +14,7 @@
   filter: none;
 }
 
-// Navbar ======================================================================
+// Navbar
 
 .navbar {
   border: 1px solid rgba(0, 0, 0, .6);
@@ -103,7 +103,7 @@
   }
 }
 
-// Buttons =====================================================================
+// Buttons
 
 .btn {
   border-color: rgba(0, 0, 0, .6);
@@ -211,7 +211,7 @@
   }
 }
 
-// Typography ==================================================================
+// Typography
 
 h1,
 h2,
@@ -222,7 +222,7 @@ h6 {
   text-shadow: -1px -1px 0 rgba(0, 0, 0, .3);
 }
 
-// Forms =======================================================================
+// Forms
 
 legend {
   color: $white;
@@ -234,7 +234,7 @@ legend {
   color: $white;
 }
 
-// Navs ========================================================================
+// Navs
 
 .nav-tabs {
   .nav-link {
@@ -318,7 +318,7 @@ legend {
   }
 }
 
-// Indicators ==================================================================
+// Indicators
 
 .alert {
   border: none;
@@ -353,7 +353,7 @@ legend {
   }
 }
 
-// Containers ==================================================================
+// Containers
 
 .list-group {
   &-item-action:hover {

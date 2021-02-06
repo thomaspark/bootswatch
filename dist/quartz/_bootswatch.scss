@@ -2,10 +2,10 @@
 // Bootswatch
 
 
-// Variables ===================================================================
+// Variables
 
 $body-bg-image: linear-gradient(90deg, darken($cyan, 10%), darken($purple, 10%), darken($pink, 5%)) !default;
-$frosted-opacity: .3;
+$frosted-opacity: .3 !default;
 
 @mixin glass($opacity: $frosted-opacity, $bg: $white) {
   border: none;
@@ -27,19 +27,19 @@ $frosted-opacity: .3;
   backdrop-filter: blur(5px);
 }
 
-// Body ========================================================================
+// Body
 
 body {
   background-image: $body-bg-image;
 }
 
-// Tables ======================================================================
+// Tables
 
 .table-secondary {
   --bs-table-hover-color: $white;
 }
 
-// Buttons =====================================================================
+// Buttons
 
 .btn {
   &-secondary {
@@ -67,13 +67,11 @@ body {
   margin-top: 0;
 }
 
-.bg-light {
-  .btn {
-    background-color: rgba($black, .2);
-  }
+.bg-light .btn {
+  background-color: rgba($black, .2);
 }
 
-// Forms =======================================================================
+// Forms
 
 .input-group-text,
 .form-control::-webkit-file-upload-button {
@@ -92,27 +90,25 @@ body {
   border-left: none;
 }
 
-.input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu), .input-group:not(.has-validation) > .dropdown-toggle:nth-last-child(n + 3) {
+.input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu),
+.input-group:not(.has-validation) > .dropdown-toggle:nth-last-child(n + 3) {
   border-right: none;
 }
 
 .form-select {
-  transition: border-color 0.15s ease-in-out;
+  transition: border-color .15s ease-in-out;
 }
 
-.bg-light {
-  .form-control {
-    border-color: rgba($black, .2);
-    color: $gray-800;
+.bg-light .form-control {
+  border-color: rgba($black, .2);
+  color: $gray-800;
 
-    &::-webkit-input-placeholder,
-    &::placeholder {
-      color: rgba($black, .2);
-    }
+  &::placeholder {
+    color: rgba($black, .2);
   }
 }
 
-// Navs ========================================================================
+// Navs
 
 .dropdown-menu {
   @include glass(.3);
@@ -156,7 +152,7 @@ body {
   }
 }
 
-// Indicators ==================================================================
+// Indicators
 
 .alert {
   @include glass();
@@ -188,7 +184,7 @@ body {
   }
 }
 
-// Containers ==================================================================
+// Containers
 
 .list-group {
   @include glass();

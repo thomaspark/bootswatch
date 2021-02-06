@@ -2,18 +2,18 @@
 // Bootswatch
 
 
-// Variables ===================================================================
+// Variables
 
 $web-font-path: "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" !default;
 @import url($web-font-path);
 
-// Navbar ======================================================================
+// Navbar
 
 .navbar {
   font-size: $font-size-sm;
 }
 
-// Buttons =====================================================================
+// Buttons
 
 .btn {
   @each $color, $value in $theme-colors {
@@ -27,7 +27,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&
   }
 }
 
-// Typography ==================================================================
+// Typography
 
 .dropdown-menu {
   font-size: $font-size-sm;
@@ -41,7 +41,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&
   color: $body-color;
 }
 
-// Tables ======================================================================
+// Tables
 
 .table {
   font-size: $font-size-sm;
@@ -64,7 +64,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&
   }
 }
 
-// Forms =======================================================================
+// Forms
 
 label,
 .radio label,
@@ -73,7 +73,7 @@ label,
   font-size: $font-size-sm;
 }
 
-// Navs ========================================================================
+// Navs
 
 .nav-tabs,
 .nav-pills {
@@ -93,7 +93,7 @@ label,
   text-decoration: none;
 }
 
-// Indicators ==================================================================
+// Indicators
 
 .alert {
   border: none;
@@ -123,14 +123,14 @@ label,
   }
 }
 
-// Popovers      ===============================================================
+// Popovers
 
 .popover-header {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
 
-// Containers ==================================================================
+// Containers
 
 .modal {
   &-header,

@@ -10854,7 +10854,7 @@ body {
 }
 
 .form-select {
-  transition: border-color 0.15s ease-in-out;
+  transition: border-color .15s ease-in-out;
 }
 
 .bg-light .form-control {
@@ -10866,7 +10866,19 @@ body {
   color: rgba(0, 0, 0, 0.2);
 }
 
-.bg-light .form-control::-webkit-input-placeholder, .bg-light .form-control::placeholder {
+.bg-light .form-control::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.bg-light .form-control:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.bg-light .form-control::-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.bg-light .form-control::placeholder {
   color: rgba(0, 0, 0, 0.2);
 }
 

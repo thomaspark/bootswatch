@@ -2,12 +2,12 @@
 // Bootswatch
 
 
-// Variables ===================================================================
+// Variables
 
 $web-font-path: "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" !default;
 @import url($web-font-path);
 
-// Mixins ======================================================================
+// Mixins
 
 @mixin btn-shadow($color){
   @include gradient-y-three-colors(lighten($color, 3%), $color, 6%, darken($color, 3%));
@@ -15,7 +15,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700
   border: 1px solid darken($color, 6.5%);
 }
 
-// Navbar ======================================================================
+// Navbar
 
 .navbar {
   border-width: 1px;
@@ -44,7 +44,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700
   border-color: darken($white, 6.5%);
 }
 
-// Buttons =====================================================================
+// Buttons
 
 .btn-primary,
 .btn-primary:hover {
@@ -102,20 +102,20 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700
   }
 }
 
-// Typography ==================================================================
+// Typography
 
 .text-secondary {
   color: $gray-600 !important;
 }
 
-// Forms =======================================================================
+// Forms
 
 legend,
 label {
   color: $headings-color;
 }
 
-// Navs =======================================================================
+// Navs
 
 .breadcrumb {
   border: 1px solid darken($white, 6.5%);

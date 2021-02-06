@@ -2,12 +2,12 @@
 // Bootswatch
 
 
-// Variables ===================================================================
+// Variables
 
 $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" !default;
 @import url($web-font-path);
 
-// Navbar ======================================================================
+// Navbar
 
 .navbar {
   &.bg-primary {
@@ -32,7 +32,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&di
   }
 }
 
-// Buttons =====================================================================
+// Buttons
 
 .btn {
   @each $color, $value in $theme-colors {
@@ -46,7 +46,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&di
   }
 }
 
-// Forms =======================================================================
+// Forms
 
 legend {
   color: $white;
@@ -61,7 +61,7 @@ legend {
   }
 }
 
-// Navs ========================================================================
+// Navs
 
 .nav-tabs,
 .nav-pills {
@@ -96,7 +96,7 @@ legend {
   }
 }
 
-// Indicators ==================================================================
+// Indicators
 
 .alert {
   border: none;
@@ -124,7 +124,7 @@ legend {
     color: $white;
   }
 }
-// Containers ==================================================================
+// Containers
 
 .list-group-item {
   &:hover {
