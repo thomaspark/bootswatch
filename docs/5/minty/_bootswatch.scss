@@ -104,84 +104,12 @@ legend {
 // Indicators
 
 .alert {
-  color: $white;
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: inherit;
-  }
-
   a,
   .alert-link {
     color: $white;
   }
 
-  &-primary {
-    &,
-    > th,
-    > td {
-      background-color: $primary;
-    }
-  }
-
-  &-secondary {
-    &,
-    > th,
-    > td {
-      background-color: $secondary;
-    }
-  }
-
-  &-success {
-    &,
-    > th,
-    > td {
-      background-color: $success;
-    }
-  }
-
-  &-info {
-    &,
-    > th,
-    > td {
-      background-color: $info;
-    }
-  }
-
-  &-danger {
-    &,
-    > th,
-    > td {
-      background-color: $danger;
-    }
-  }
-
-  &-warning {
-    &,
-    > th,
-    > td {
-      background-color: $warning;
-    }
-  }
-
-  &-dark {
-    &,
-    > th,
-    > td {
-      background-color: $dark;
-    }
-  }
-
   &-light {
-    &,
-    > th,
-    > td {
-      background-color: $light;
-    }
 
     &,
     a:not(.btn),
@@ -194,7 +122,7 @@ legend {
 .badge {
   color: $white;
 
-  &-light {
+  &.bg-light {
     color: $gray-700;
   }
 }
