@@ -37,7 +37,9 @@
   $('body').on('click', '.source-button', function (event) {
     event.preventDefault();
 
-    var html = $(this).parent().html();
+    var component = $(this).parent();
+    var html = component.attr('data-html') ? component.attr('data-html') : component.html();
+
     html = cleanSource(html);
     $('#source-modal pre').text(html);
     sourceModal.show();
