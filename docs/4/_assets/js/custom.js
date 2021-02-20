@@ -14,12 +14,18 @@
     event.preventDefault();
   })
 
+  $('.bs-component').each(function () {
+    var $component = $(this);
+    var $button = $('<button class="source-button btn btn-primary btn-xs" role="button" tabindex="0">&lt; &gt;</button>');
+    $component.append($button);
+
+    if ($component.find('[data-toggle="tooltip"]').length > 0) {
+      $component.attr('data-html', $component.html());
+    }  
+  });
+
   $('.bs-component [data-toggle="popover"]').popover();
   $('.bs-component [data-toggle="tooltip"]').tooltip();
-  $('.bs-component').each(function () {
-    var $button = $('<button class="source-button btn btn-primary btn-xs" role="button" tabindex="0">&lt; &gt;</button>');
-    $(this).append($button);
-  });
 
   $('body').on('click', '.source-button', function (event) {
     event.preventDefault();

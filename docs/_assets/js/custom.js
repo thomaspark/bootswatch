@@ -14,6 +14,16 @@
     event.preventDefault();
   })
 
+  $('.bs-component').each(function () {
+    var $component = $(this);
+    var $button = $('<button class="source-button btn btn-primary btn-xs" role="button" tabindex="0">&lt; &gt;</button>');
+    $component.append($button);
+
+    if ($component.find('[data-bs-toggle="tooltip"]').length > 0) {
+      $component.attr('data-html', $component.html());
+    }
+  });
+
   var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
   var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
     return new bootstrap.Popover(popoverTriggerEl)
@@ -28,11 +38,6 @@
   if (sourceModalElem) {
     var sourceModal = new bootstrap.Modal(document.getElementById('source-modal'));
   }
-
-  $('.bs-component').each(function () {
-    var $button = $('<button class="source-button btn btn-primary btn-xs" role="button" tabindex="0">&lt; &gt;</button>');
-    $(this).append($button);
-  });
 
   $('body').on('click', '.source-button', function (event) {
     event.preventDefault();
