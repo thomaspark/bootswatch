@@ -89,6 +89,11 @@ module.exports = grunt => {
           dest: 'docs/_vendor/jquery/'
         }, {
           expand: true,
+          cwd: 'node_modules/prismjs',
+          src: ['prism.js', 'themes/prism-okaidia.css'],
+          dest: 'docs/_vendor/prismjs/'
+        }, {
+          expand: true,
           cwd: 'node_modules/bootstrap',
           src: ['dist/**'],
           dest: 'docs/_vendor/bootstrap/'

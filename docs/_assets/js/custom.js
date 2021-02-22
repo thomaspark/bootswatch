@@ -46,7 +46,8 @@
     var html = component.attr('data-html') ? component.attr('data-html') : component.html();
 
     html = cleanSource(html);
-    $('#source-modal pre').text(html);
+    html = Prism.highlight(html, Prism.languages.html, 'html');
+    $('#source-modal code').html(html);
     sourceModal.show();
   })
 
