@@ -5,8 +5,9 @@
 // Variables ===================================================================
 
 $web-font-path: "https://fonts.googleapis.com/css?family=Neucha|Cabin+Sketch&display=swap" !default;
-@import url($web-font-path);
-
+@if $web-font-path {
+  @import url($web-font-path);
+}
 // stylelint-disable scss/dollar-variable-default
 $border-radius-sketchy:    255px 25px 225px 25px / 25px 225px 25px 255px;
 $border-radius-lg-sketchy: 55px 225px 15px 25px / 25px 25px 35px 355px;
