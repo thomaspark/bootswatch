@@ -1,11 +1,13 @@
-// Simplex 5.0.0-beta2
+// Simplex 5.0.0-beta3
 // Bootswatch
 
 
 // Variables
 
 $web-font-path: "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" !default;
-@import url($web-font-path);
+@if $web-font-path {
+  @import url($web-font-path);
+}
 
 // Mixins
 

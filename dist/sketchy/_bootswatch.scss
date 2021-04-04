@@ -1,11 +1,13 @@
-// Sketchy 5.0.0-beta2
+// Sketchy 5.0.0-beta3
 // Bootswatch
 
 
 // Variables
 
 $web-font-path: "https://fonts.googleapis.com/css?family=Neucha|Cabin+Sketch&display=swap" !default;
-@import url($web-font-path);
+@if $web-font-path {
+  @import url($web-font-path);
+}
 
 // stylelint-disable scss/dollar-variable-default
 $border-radius-sketchy:    255px 25px 225px 25px / 25px 225px 25px 255px;

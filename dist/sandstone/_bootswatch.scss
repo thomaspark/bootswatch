@@ -1,11 +1,13 @@
-// Sandstone 5.0.0-beta2
+// Sandstone 5.0.0-beta3
 // Bootswatch
 
 
 // Variables
 
 $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" !default;
-@import url($web-font-path);
+@if $web-font-path {
+  @import url($web-font-path);
+}
 
 // Navbar
 

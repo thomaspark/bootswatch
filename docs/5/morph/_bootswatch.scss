@@ -1,11 +1,13 @@
-// Morph 5.0.0-beta2
+// Morph 5.0.0-beta3
 // Bootswatch
 
 
 // Variables
 
 $web-font-path: "https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" !default;
-@import url($web-font-path);
+@if $web-font-path {
+  @import url($web-font-path);
+}
 
 $btn-box-shadow-inset: inset 2px 3px 6px rgba($black, .2), inset -3px -2px 6px rgba($white, .2) !default;
 
