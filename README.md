@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="200" height="200" src="./docs/_assets/img/logo-dark.svg">
+  <img width="200" height="200" src="https://bootswatch.com/_assets/img/logo-dark.svg">
 </p>
 
 <h3 align="center">Bootswatch</h3>
@@ -29,8 +29,7 @@ file to have functional dropdowns, modals, etc.
 
 ### Via CDN
 
-Similar to above, but you can hotlink to the appropriate `bootstrap.min.css`
-hosted on [BootstrapCDN](https://www.bootstrapcdn.com/bootswatch/).
+You can use the themes via CDN at [jsDelivr](https://www.jsdelivr.com/package/npm/bootswatch).
 
 ### Via Sass Imports
 
@@ -50,7 +49,7 @@ This method allows you to override theme variables.
 Make sure to import Bootstrap's `bootstrap.scss` in between `_variables.scss`
 and `_bootswatch.scss`!
 
-### Via NPM
+### Via npm
 
 You can install as a package with the command `npm install bootswatch`.
 
@@ -157,6 +156,6 @@ Thomas Park
 
 ## Copyright and License
 
-Copyright 2014-2020 Thomas Park
+Copyright 2014-2021 Thomas Park
 
 Code released under the MIT License.

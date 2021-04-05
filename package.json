@@ -1,7 +1,7 @@
 {
   "name": "bootswatch",
   "description": "Bootswatch is a collection of themes for Bootstrap.",
-  "version": "4.5.3",
+  "version": "4.6.0",
   "author": "Thomas Park",
   "homepage": "https://bootswatch.com",
   "license": "MIT",
@@ -14,8 +14,10 @@
   },
   "scripts": {
     "build": "grunt swatch",
+    "docs": "grunt docs",
     "htmllint": "grunt htmllint",
     "stylelint": "stylelint \"**/*.scss\" --rd",
+    "release": "grunt release",
     "test": "npm run stylelint"
   },
   "files": [
@@ -34,12 +36,21 @@
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-cssmin": "^3.0.0",
     "grunt-contrib-watch": "^1.1.0",
+  <<<<<<< master. 
     "grunt-html": "^14.3.0",
     "grunt-sass": "^3.1.0",
     "jquery": "^3.5.1",
     "node-sass": "^4.14.1",
     "postcss": "^8.2.6",
     "stylelint": "^13.10.0",
+  =======
+    "grunt-html": "^14.2.2",
+    "grunt-sass": "^3.1.0",
+    "jquery": "^3.5.1",
+    "node-sass": "^5.0.0",
+    "postcss": "^8.2.4",
+    "stylelint": "^13.9.0",
+  >>>>>>> master
     "stylelint-config-twbs-bootstrap": "^2.1.0"
   }
 }
