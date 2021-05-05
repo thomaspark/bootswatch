@@ -49,7 +49,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;50
   .btn-#{$class} {
     &:focus {
       background-color: $bg;
-      box-shadow: 0 0 0 2px rgba(204, 204, 204, .5);
+      box-shadow: $btn-focus-box-shadow;
     }
 
     &:hover,
@@ -58,7 +58,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;50
     }
 
     &:active {
-      box-shadow: 2px 2px 4px rgba(0, 0, 0, .4);
+      box-shadow: $btn-active-box-shadow;
     }
 
     @include ripple($color);
@@ -80,7 +80,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;50
 
 .navbar {
   border: none;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, .3);
+  box-shadow: 0 1px 2px rgba($black, .3);
 
   &-brand {
     font-size: 24px;
@@ -99,14 +99,14 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;50
     input[type="number"],
     input[type="tel"] {
       color: $white;
-      box-shadow: inset 0 -1px 0 rgba(255, 255, 255, .5);
+      box-shadow: inset 0 -1px 0 rgba($white, .5);
 
       &:focus {
         box-shadow: inset 0 -2px 0 $white;
       }
 
       &::placeholder {
-        color: rgba(255, 255, 255, .5);
+        color: rgba($white, .5);
       }
     }
   }
@@ -126,7 +126,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;50
 .btn {
   text-transform: uppercase;
   border: none;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, .4);
+  box-shadow: $btn-box-shadow;
   transition: color .4s, background-color .4s, border-color .4s, box-shadow .4s;
 
   &-link {
@@ -155,13 +155,13 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;50
     &.disabled,
     &[disabled],
     fieldset[disabled] & {
-      background-color: rgba(0, 0, 0, .1);
-      color: rgba(0, 0, 0, .4);
+      background-color: rgba($black, .1);
+      color: rgba($black, .4);
       opacity: 1;
 
       &:hover,
       &:focus {
-        background-color: rgba(0, 0, 0, .1);
+        background-color: rgba($black, .1);
       }
     }
   }
@@ -195,12 +195,17 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;50
 
   .btn + .btn,
   .btn + .btn-group > .dropdown-toggle {
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, .4);
+    box-shadow: 1px 1px 4px rgba($black, .4);
+  }
+
+  .btn:not(:disabled):not(.disabled):active,
+  .btn:not(:disabled):not(.disabled).active {
+    box-shadow: $btn-box-shadow;
   }
 }
 
 .border-secondary {
-  border: 1px solid #dfdfdf !important;
+  border: 1px solid mix($white, $black, 86.7%) !important;
 }
 
 // Typography ==================================================================
@@ -261,22 +266,22 @@ input[type="number"],
 [type="email"].form-control,
 [type="tel"].form-control,
 [contenteditable].form-control {
-  box-shadow: inset 0 -1px 0 #ddd;
+  box-shadow: $input-box-shadow;
   transition: box-shadow .2s;
 
   &:focus {
-    box-shadow: inset 0 -2px 0 $primary;
+    box-shadow: $input-focus-box-shadow;
   }
 
   &[disabled],
   &[readonly] {
     box-shadow: none;
-    border-bottom: 1px dotted #ddd;
+    border-bottom: 1px dotted mix($white, $black, 86.7%);
   }
 
   &[disabled],
   &[disabled]::placeholder {
-    color: #ddd;
+    color: mix($white, $black, 86.7%);
   }
 
   &::-ms-clear {
@@ -292,7 +297,7 @@ select.form-control {
   background-size: 8px 4px;
   background-repeat: no-repeat;
   background-position: right center;
-  box-shadow: inset 0 -1px 0 #ddd;
+  box-shadow: $input-box-shadow;
 
   &::-ms-expand {
     display: none;
@@ -309,7 +314,7 @@ select.form-control {
   }
 
   &:focus {
-    box-shadow: inset 0 -2px 0 $primary;
+    box-shadow: $input-focus-box-shadow;
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='4' viewBox='0 0 8 4'%3e%3cpolygon fill='%23212121' points='8 0 4 4 0 0'/%3e%3c/svg%3e%0a");
   }
 
@@ -382,7 +387,7 @@ select.form-control {
 
   .custom-control-label::after {
     background-color: $white;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+    box-shadow: 0 1px 4px rgba($black, .3);
   }
 
   .custom-control-input:checked ~ .custom-control-label::before {
@@ -394,27 +399,27 @@ select.form-control {
   }
 
   .custom-control-input:hover:not(:disabled) ~ .custom-control-label::after {
-    box-shadow: 0 1px 4px rgba(0, 0, 0, .3), 0 0 0 9px rgba(0, 0, 0, .05);
+    box-shadow: 0 1px 4px rgba($black, .3), 0 0 0 9px rgba($black, .05);
   }
 
   .custom-control-input:focus:not(:disabled) ~ .custom-control-label::after {
-    box-shadow: 0 1px 4px rgba(0, 0, 0, .3), 0 0 0 9px rgba(0, 0, 0, .09);
+    box-shadow: 0 1px 4px rgba($black, .3), 0 0 0 9px rgba($black, .09);
   }
 
   .custom-control-input:active:not(:disabled) ~ .custom-control-label::after {
-    box-shadow: 0 1px 4px rgba(0, 0, 0, .3), 0 0 0 9px rgba(0, 0, 0, .16);
+    box-shadow: 0 1px 4px rgba($black, .3), 0 0 0 9px rgba($black, .16);
   }
 
   .custom-control-input:hover:checked:not(:disabled) ~ .custom-control-label::after {
-    box-shadow: 0 1px 4px rgba(0, 0, 0, .3), 0 0 0 9px rgba(33, 150, 243, .05);
+    box-shadow: 0 1px 4px rgba($black, .3), 0 0 0 9px rgba(33, 150, 243, .05);
   }
 
   .custom-control-input:focus:checked:not(:disabled) ~ .custom-control-label::after {
-    box-shadow: 0 1px 4px rgba(0, 0, 0, .3), 0 0 0 9px rgba(33, 150, 243, .09);
+    box-shadow: 0 1px 4px rgba($black, .3), 0 0 0 9px rgba(33, 150, 243, .09);
   }
 
   .custom-control-input:active:checked:not(:disabled) ~ .custom-control-label::after {
-    box-shadow: 0 1px 4px rgba(0, 0, 0, .3), 0 0 0 9px rgba(33, 150, 243, .16);
+    box-shadow: 0 1px 4px rgba($black, .3), 0 0 0 9px rgba(33, 150, 243, .16);
   }
 
   .custom-control-input:active:not(:checked) ~ .custom-control-label::before {
@@ -494,11 +499,11 @@ select.form-control {
   }
 
   > .input-group-prepend > .input-group-text {
-    padding: $input-btn-padding-y-sm $input-btn-padding-x-sm $input-btn-padding-y-sm 0;
+    padding: 0 $input-btn-padding-x-sm $input-btn-padding-y-sm $input-btn-padding-x-sm;
   }
 
   > .input-group-append > .input-group-text {
-    padding: $input-btn-padding-y-sm 0 $input-btn-padding-y-sm $input-btn-padding-x-sm;
+    padding: 0 $input-btn-padding-x-sm $input-btn-padding-y-sm $input-btn-padding-x-sm;
   }
 
   > .input-group-prepend > .btn {
@@ -558,7 +563,7 @@ select.form-control {
     background-color: transparent;
     border: none;
     color: $body-color;
-    box-shadow: inset 0 -1px 0 #ddd;
+    box-shadow: inset 0 -1px 0 mix($white, $black, 86.7%);
     transition: color .2s, box-shadow .2s;
 
     &:hover {
@@ -581,7 +586,7 @@ select.form-control {
   }
 
   .nav-link.disabled {
-    box-shadow: inset 0 -1px 0 #ddd;
+    box-shadow: inset 0 -1px 0 mix($white, $black, 86.7%);
   }
 
   &.nav-justified {
@@ -603,7 +608,7 @@ select.form-control {
 .dropdown-menu {
   margin-top: 0;
   border: none;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+  box-shadow: 0 1px 4px rgba($black, .3);
 }
 
 // Indicators ==================================================================
@@ -684,7 +689,7 @@ select.form-control {
 }
 
 .card {
-  box-shadow: 0 1px 4px rgba(0, 0, 0, .4);
+  box-shadow: 0 1px 4px rgba($black, .4);
 
   &.border-primary,
   &.border-secondary,
@@ -719,12 +724,12 @@ select.form-control {
 
 .modal-content {
   border-radius: .2rem;
-  box-shadow: 0 6px 36px rgba(0, 0, 0, .3);
+  box-shadow: 0 6px 36px rgba($black, .3);
 }
 
 .popover {
   border: none;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+  box-shadow: 0 1px 4px rgba($black, .3);
 }
 
 .carousel {
