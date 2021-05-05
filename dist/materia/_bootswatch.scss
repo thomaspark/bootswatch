@@ -197,6 +197,11 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;50
   .btn + .btn-group > .dropdown-toggle {
     box-shadow: 1px 1px 4px rgba($black, .4);
   }
+
+  .btn:not(:disabled):not(.disabled):active,
+  .btn:not(:disabled):not(.disabled).active {
+    box-shadow: $btn-box-shadow;
+  }
 }
 
 .border-secondary {
