@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bootswatch: Help</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../materia/bootstrap.css">
+    <link rel="stylesheet" href="../_assets/css/custom.min.css">
+    <style>
+      h1 {
+        padding-top: 3em;
+      }
+
+      code {
+        background-color: #eee;
+        color: inherit;
+      }
+    </style>
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23019901-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-23019901-1');
+    </script>
+  </head>
+  <body id="help">
+    <div class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+      <div class="container">
+        <a href="../" class="navbar-brand">
+          <img class="d-inline-block mx-2" src="../_assets/img/logo.svg" alt="" width="30" height="28">
+          Bootswatch
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Themes <span class="caret"></span></a>
+              <div class="dropdown-menu" aria-labelledby="themes">
+                <a class="dropdown-item" href="../default/">Default</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="../cerulean/">Cerulean</a>
+                <a class="dropdown-item" href="../cosmo/">Cosmo</a>
+                <a class="dropdown-item" href="../cyborg/">Cyborg</a>
+                <a class="dropdown-item" href="../darkly/">Darkly</a>
+                <a class="dropdown-item" href="../flatly/">Flatly</a>
+                <a class="dropdown-item" href="../journal/">Journal</a>
+                <a class="dropdown-item" href="../litera/">Litera</a>
+                <a class="dropdown-item" href="../lumen/">Lumen</a>
+                <a class="dropdown-item" href="../lux/">Lux</a>
+                <a class="dropdown-item" href="../materia/">Materia</a>
+                <a class="dropdown-item" href="../minty/">Minty</a>
+                <a class="dropdown-item" href="../pulse/">Pulse</a>
+                <a class="dropdown-item" href="../sandstone/">Sandstone</a>
+                <a class="dropdown-item" href="../simplex/">Simplex</a>
+                <a class="dropdown-item" href="../sketchy/">Sketchy</a>
+                <a class="dropdown-item" href="../slate/">Slate</a>
+                <a class="dropdown-item" href="../solar/">Solar</a>
+                <a class="dropdown-item" href="../spacelab/">Spacelab</a>
+                <a class="dropdown-item" href="../superhero/">Superhero</a>
+                <a class="dropdown-item" href="../united/">United</a>
+                <a class="dropdown-item" href="../yeti/">Yeti</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../help/">Help</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://blog.bootswatch.com/">Blog</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9">
+          <h1 id="quickstart">Quick Start</h1>
+          <h4>Pre-Compiled CSS</h4>
+          <p>Using the themes is as easy as downloading a CSS file and replacing the one that comes with <a href="https://getbootstrap.com/" rel="noopener" target="_blank">Bootstrap</a>.</p>
+          <h4>Package</h4>
+          <p>You can install as a package via npm with the command <code>npm install bootswatch</code>.</p>
+          <h5>React Users (create-react-app, or similar bundler)</h5>
+
+          <p>Modern JavaScript bundlers (webpack, parcel, rollup) support importing CSS from JS files. This can make it easier to deploy various 1st- and 3rd-party assets predictably.</p>
+          <p>Note: <i>There are tradeoffs to the following method, research your tooling before deploying to production.</i></p>
+          <p>Before continuing, ensure you've run npm install bootswatch in your local project folder. (Use either npm or yarn.)</p>
+          <p>Add the following import to your top-level <code>index.js</code> (or <code>App.js</code>) file. Add it before any other .css imports.</p>
+          <pre>
+import "bootswatch/dist/[theme]/bootstrap.min.css";
+// TODO: Note: Replace ^[theme]^ (examples: darkly, slate, cosmo, spacelab, and superhero. See https://bootswatch.com/ for current theme names.)
+</pre>
+          <p>Here's an example of updated imports in <code>App.js</code> to use "slate" theme (using a create-react-app fresh project.)</p>
+          <pre>
+import React from 'react';
+import logo from './logo.svg';
+import 'bootswatch/dist/slate/bootstrap.min.css'; // Added this :boom:
+import './App.css';
+
+function App() {
+...
+</pre>
+
+          <h4>CDN</h4>
+          <p>You can also use the themes via CDN at <a href="https://www.jsdelivr.com/package/npm/bootswatch">jsDelivr</a>.</p>
+          <h4>Sass</h4>
+          <p>If you're using Sass in your project, you can import the <code>_variables.scss</code> and <code>_bootswatch.scss</code> files for a given theme. This method allows you to override theme variables. Make sure to import Bootstrap's <code>bootstrap.scss</code> in between <code>_variables.scss</code> and <code>_bootswatch.scss</code>!</p>
+          <pre>
+// Your variable overrides can go here, e.g.:
+// $h1-font-size: 3rem;
+
+@import "~bootswatch/dist/[theme]/variables";
+@import "~bootstrap/scss/bootstrap";
+@import "~bootswatch/dist/[theme]/bootswatch";
+</pre>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-9">
+          <h1 id="customization">Customization</h1>
+          <p>To modify a theme or create your own, follow the steps below in your terminal. You'll need to have <a href="https://docs.github.com/en/github/getting-started-with-github/set-up-git" rel="noopener" target="_blank">Git</a> and <a href="https://nodejs.org/" rel="noopener" target="_blank">Node</a> installed.</p>
+          <ol>
+            <li><p>Download the repository: <code>git clone https://github.com/thomaspark/bootswatch.git</code></p></li>
+            <li><p>Install dependencies: <code>npm install</code></p></li>
+            <li><p>Make sure that you have <code>grunt</code> available in the command line. You can install <code>grunt-cli</code> as described on the <a href="https://gruntjs.com/getting-started">Grunt Getting Started page</a>.</p></li>
+            <li><p>In <code>/dist</code>, modify <code>_variables.scss</code> and <code>_bootswatch.scss</code> in one of the theme directories, or duplicate a theme directory to create a new one.</p></li>
+            <li><p>Type <code>grunt swatch:[theme]</code> to build the CSS for a theme, e.g., <code>grunt swatch:flatly</code> for Flatly. Or type <code>grunt swatch</code> to build them all at once.</p></li>
+            <li><p>You can run <code>grunt</code> to start a server, watch for any changes to the SASS files, and automatically build a theme and reload it on change. Run <code>grunt server</code> for just the server, and <code>grunt watch</code> for just the watcher.</p></li>
+          </ol>
+          <p>Here are additional tips for <a href="https://www.smashingmagazine.com/2013/03/customizing-bootstrap/" rel="noopener" target="_blank">customizing Bootstrap</a>.</p>
+          <p>If you prefer a web interface for customizing themes, check out <a href="https://bootstrap.build/">Bootstrap.build</a>. From within the builder, you can click the Import button to load the Bootswatch theme of your choice as a starting point.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 id="api">API</h1>
+          <p>You can use the API to integrate the themes with your platform. Get:</p>
+          <p><a href="https://bootswatch.com/api/4.json">https://bootswatch.com/api/4.json</a></p>
+          <p>This returns an object with a <code>version</code> and a <code>themes</code> property. <code>themes</code> is an array with the following properties:</p>
+          <ul>
+            <li><code>name</code></li>
+            <li><code>description</code></li>
+            <li><code>preview</code></li>
+            <li><code>thumbnail</code></li>
+            <li><code>css</code></li>
+            <li><code>cssMin</code></li>
+            <li><code>cssCdn</code></li>
+            <li><code>scss</code></li>
+            <li><code>scssVariables</code></li>
+          </ul>
+          <p>Here's a <a href="https://jsbin.com/momonupayu/1/edit?html,js,output">demo</a> of the API in action.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-9">
+          <h1 id="tools">Tools</h1>
+          <p><a href="https://glyphsearch.com/" rel="noopener" target="_blank">GlyphSearch</a> is a tool for searching icons from Glyphicons, Font Awesome, and other popular icon font libraries.</p>
+          <p><a href="https://thomaspark.co/projects/fontcdn/" rel="noopener" target="_blank">FontCDN</a> is a tool for searching web fonts from Google Fonts.</p>
+          <p><a href="https://codepip.com" rel="noopener" target="_blank">Codepip</a> has coding games for learning HTML, CSS, and JavaScript.</p>
+
+          <h1 id="donate">Donate</h1>
+          <p>Donations are gratefully accepted via <a href="https://github.com/sponsors/thomaspark">GitHub</a> and <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PU2DH4BMF9MWS&source=url">PayPal</a>.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer id="footer">
+        <div class="row">
+          <div class="col-lg-12">
+            <ul class="list-unstyled">
+              <li class="float-lg-right"><a href="#top">Back to top</a></li>
+              <li><a href="https://blog.bootswatch.com/">Blog</a></li>
+              <li><a href="https://blog.bootswatch.com/rss/">RSS</a></li>
+              <li><a href="https://twitter.com/bootswatch">Twitter</a></li>
+              <li><a href="https://github.com/thomaspark/bootswatch">GitHub</a></li>
+              <li><a href="../help/#api">API</a></li>
+              <li><a href="../help/#donate">Donate</a></li>
+            </ul>
+            <p>Made by <a href="https://thomaspark.co/">Thomas Park</a>.</p>
+            <p>Code released under the <a href="https://github.com/thomaspark/bootswatch/blob/master/LICENSE">MIT License</a>.</p>
+            <p>Based on <a href="https://getbootstrap.com/" rel="nofollow">Bootstrap</a>. Icons from <a href="https://fontawesome.com/" rel="nofollow">Font Awesome</a>. Web fonts from <a href="https://fonts.google.com/" rel="nofollow">Google</a>.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="../_vendor/jquery/dist/jquery.min.js"></script>
+    <script src="../_vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../_assets/js/custom.js"></script>
+  </body>
+</html>

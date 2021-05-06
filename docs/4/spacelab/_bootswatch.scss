@@ -5,8 +5,9 @@
 // Variables ===================================================================
 
 $web-font-path: "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" !default;
-@import url($web-font-path);
-
+@if $web-font-path {
+  @import url($web-font-path);
+}
 // Mixins ======================================================================
 
 @mixin btn-shadow($color){
@@ -20,7 +21,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,
 .navbar {
   .nav-link,
   .navbar-brand {
-    text-shadow: -1px -1px 0 rgba(0, 0, 0, .1);
+    text-shadow: -1px -1px 0 rgba($black, .1);
     transition: color ease-in-out .2s;
   }
 
@@ -37,7 +38,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,
 
     .nav-link,
     .navbar-brand {
-      text-shadow: 1px 1px 0 rgba(255, 255, 255, .1);
+      text-shadow: 1px 1px 0 rgba($white, .1);
     }
 
     .navbar-brand {
@@ -53,7 +54,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,
 // Buttons =====================================================================
 
 .btn {
-  text-shadow: -1px -1px 0 rgba(0, 0, 0, .1);
+  text-shadow: -1px -1px 0 rgba($black, .1);
 
   &-link {
     text-shadow: none;

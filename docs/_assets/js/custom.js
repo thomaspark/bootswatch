@@ -19,13 +19,25 @@
     var $button = $('<button class="source-button btn btn-primary btn-xs" role="button" tabindex="0">&lt; &gt;</button>');
     $component.append($button);
 
-    if ($component.find('[data-toggle="tooltip"]').length > 0) {
+    if ($component.find('[data-bs-toggle="tooltip"]').length > 0) {
       $component.attr('data-html', $component.html());
-    }  
+    }
   });
 
-  $('.bs-component [data-toggle="popover"]').popover();
-  $('.bs-component [data-toggle="tooltip"]').tooltip();
+  var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+  var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+    return new bootstrap.Popover(popoverTriggerEl)
+  })
+
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+  })
+
+  var sourceModalElem = document.getElementById('source-modal');
+  if (sourceModalElem) {
+    var sourceModal = new bootstrap.Modal(document.getElementById('source-modal'));
+  }
 
   $('body').on('click', '.source-button', function (event) {
     event.preventDefault();
@@ -34,8 +46,9 @@
     var html = component.attr('data-html') ? component.attr('data-html') : component.html();
 
     html = cleanSource(html);
-    $('#source-modal pre').text(html);
-    $('#source-modal').modal();
+    html = Prism.highlight(html, Prism.languages.html, 'html');
+    $('#source-modal code').html(html);
+    sourceModal.show();
   })
 
   function cleanSource(html) {

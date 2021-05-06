@@ -16,7 +16,7 @@ const banner = `/*!
 
 const BUILD_DIR = 'build/';
 const DIST_DIR = 'dist/';
-const DOCS_DEST = 'docs/4/';
+const DOCS_DEST = 'docs/5/';
 const SWATCHES = [
   'cerulean',
   'cosmo',
@@ -29,7 +29,9 @@ const SWATCHES = [
   'lux',
   'materia',
   'minty',
+  'morph',
   'pulse',
+  'quartz',
   'sandstone',
   'simplex',
   'sketchy',
@@ -38,7 +40,9 @@ const SWATCHES = [
   'spacelab',
   'superhero',
   'united',
-  'yeti'
+  'vapor',
+  'yeti',
+  'zephyr'
 ];
 let buildTheme = '';
 
@@ -83,6 +87,11 @@ module.exports = grunt => {
           cwd: 'node_modules/jquery',
           src: ['dist/**'],
           dest: 'docs/_vendor/jquery/'
+        }, {
+          expand: true,
+          cwd: 'node_modules/prismjs',
+          src: ['prism.js', 'themes/prism-okaidia.css'],
+          dest: 'docs/_vendor/prismjs/'
         }, {
           expand: true,
           cwd: 'node_modules/bootstrap',

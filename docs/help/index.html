@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <title>Bootswatch: Help</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../4/materia/bootstrap.css">
+    <link rel="stylesheet" href="../5/zephyr/bootstrap.css">
+    <link rel="stylesheet" href="../_vendor/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="../_assets/css/custom.min.css">
     <style>
       h1 {
@@ -33,13 +34,13 @@
           <img class="d-inline-block mx-2" src="../_assets/img/logo.svg" alt="" width="30" height="28">
           Bootswatch
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Themes <span class="caret"></span></a>
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="themes">Themes <span class="caret"></span></a>
               <div class="dropdown-menu" aria-labelledby="themes">
                 <a class="dropdown-item" href="../default/">Default</a>
                 <div class="dropdown-divider"></div>
@@ -54,7 +55,9 @@
                 <a class="dropdown-item" href="../lux/">Lux</a>
                 <a class="dropdown-item" href="../materia/">Materia</a>
                 <a class="dropdown-item" href="../minty/">Minty</a>
+                <a class="dropdown-item" href="../morph/">Morph</a>
                 <a class="dropdown-item" href="../pulse/">Pulse</a>
+                <a class="dropdown-item" href="../quartz/">Quartz</a>
                 <a class="dropdown-item" href="../sandstone/">Sandstone</a>
                 <a class="dropdown-item" href="../simplex/">Simplex</a>
                 <a class="dropdown-item" href="../sketchy/">Sketchy</a>
@@ -63,7 +66,9 @@
                 <a class="dropdown-item" href="../spacelab/">Spacelab</a>
                 <a class="dropdown-item" href="../superhero/">Superhero</a>
                 <a class="dropdown-item" href="../united/">United</a>
+                <a class="dropdown-item" href="../vapor/">Vapor</a>
                 <a class="dropdown-item" href="../yeti/">Yeti</a>
+                <a class="dropdown-item" href="../zephyr/">Zephyr</a>
               </div>
             </li>
             <li class="nav-item">
@@ -71,6 +76,14 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="https://blog.bootswatch.com/">Blog</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ms-md-auto">
+            <li class="nav-item">
+              <a target="_blank" rel="noopener" class="nav-link" href="https://github.com/thomaspark/bootswatch/"><i class="fa fa-github"></i> GitHub</a>
+            </li>
+            <li class="nav-item">
+              <a target="_blank" rel="noopener" class="nav-link" href="https://twitter.com/bootswatch"><i class="fa fa-twitter"></i> Twitter</a>
             </li>
           </ul>
         </div>
@@ -142,7 +155,7 @@ function App() {
         <div class="col-lg-12">
           <h1 id="api">API</h1>
           <p>You can use the API to integrate the themes with your platform. Get:</p>
-          <p><a href="https://bootswatch.com/api/4.json">https://bootswatch.com/api/4.json</a></p>
+          <p><a href="https://bootswatch.com/api/5.json">https://bootswatch.com/api/5.json</a></p>
           <p>This returns an object with a <code>version</code> and a <code>themes</code> property. <code>themes</code> is an array with the following properties:</p>
           <ul>
             <li><code>name</code></li>
@@ -177,7 +190,7 @@ function App() {
         <div class="row">
           <div class="col-lg-12">
             <ul class="list-unstyled">
-              <li class="float-lg-right"><a href="#top">Back to top</a></li>
+              <li class="float-end"><a href="#top">Back to top</a></li>
               <li><a href="https://blog.bootswatch.com/">Blog</a></li>
               <li><a href="https://blog.bootswatch.com/rss/">RSS</a></li>
               <li><a href="https://twitter.com/bootswatch">Twitter</a></li>
