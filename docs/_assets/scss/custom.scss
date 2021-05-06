@@ -208,22 +208,10 @@ iframe {
         width: 100%;
         height: auto;
       }
-
-      &::before {
-        box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .1);
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        content: "";
-        pointer-events: none;
-      }
     }
     .options {
       padding: 2em;
-      border: 1px solid rgba(0, 0, 0, .05);
-      border-top: none;
+      border-top: 1px solid rgba(0, 0, 0, .125);
       text-align: center;
       p {
         margin-bottom: 2em;
