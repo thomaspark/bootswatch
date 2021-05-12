@@ -19,7 +19,7 @@ $text-shadow: 0 1px 0 rgba(0, 0, 0, .05) !default;
 }
 
 .bg-dark {
-  @include btn-shadow($blue);
+  @include btn-shadow($dark);
 }
 
 .bg-light {
@@ -97,5 +97,14 @@ $text-shadow: 0 1px 0 rgba(0, 0, 0, .05) !default;
 .dropdown-menu {
   .dropdown-header {
     color: $gray-600;
+  }
+}
+
+// Indicators
+
+.badge {
+  &.bg-secondary,
+  &.bg-light {
+    color: $dark;
   }
 }

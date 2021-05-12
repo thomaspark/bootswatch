@@ -100,7 +100,9 @@ table,
 }
 
 .badge {
-  vertical-align: bottom;
+  &.bg-light {
+    color: $dark;
+  }
 }
 
 // Containers

@@ -32,7 +32,7 @@
   --bs-info: #9c27b0;
   --bs-warning: #ff9800;
   --bs-danger: #e51c23;
-  --bs-light: #fff;
+  --bs-light: #f8f9fa;
   --bs-dark: #222;
   --bs-font-sans-serif: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -2009,15 +2009,15 @@ progress {
 }
 
 .table-light {
-  --bs-table-bg: #fff;
-  --bs-table-striped-bg: #f2f2f2;
+  --bs-table-bg: #f8f9fa;
+  --bs-table-striped-bg: #ecedee;
   --bs-table-striped-color: #000;
-  --bs-table-active-bg: #e6e6e6;
+  --bs-table-active-bg: #dfe0e1;
   --bs-table-active-color: #000;
-  --bs-table-hover-bg: #ececec;
+  --bs-table-hover-bg: #e5e6e7;
   --bs-table-hover-color: #000;
   color: #000;
-  border-color: #e6e6e6;
+  border-color: #dfe0e1;
 }
 
 .table-dark {
@@ -3310,46 +3310,46 @@ fieldset:disabled .btn {
 
 .btn-light {
   color: #000;
-  background-color: #fff;
+  background-color: #f8f9fa;
   background-image: var(--bs-gradient);
-  border-color: #fff;
+  border-color: #f8f9fa;
 }
 
 .btn-light:hover {
   color: #000;
-  background-color: white;
+  background-color: #f9fafb;
   background-image: var(--bs-gradient);
-  border-color: white;
+  border-color: #f9fafb;
 }
 
 .btn-check:focus + .btn-light, .btn-light:focus {
   color: #000;
-  background-color: white;
+  background-color: #f9fafb;
   background-image: var(--bs-gradient);
-  border-color: white;
-  box-shadow: 0 0 0 0.25rem rgba(217, 217, 217, 0.5);
+  border-color: #f9fafb;
+  box-shadow: 0 0 0 0.25rem rgba(211, 212, 213, 0.5);
 }
 
 .btn-check:checked + .btn-light,
 .btn-check:active + .btn-light, .btn-light:active, .btn-light.active,
 .show > .btn-light.dropdown-toggle {
   color: #000;
-  background-color: white;
+  background-color: #f9fafb;
   background-image: none;
-  border-color: white;
+  border-color: #f9fafb;
 }
 
 .btn-check:checked + .btn-light:focus,
 .btn-check:active + .btn-light:focus, .btn-light:active:focus, .btn-light.active:focus,
 .show > .btn-light.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.25rem rgba(217, 217, 217, 0.5);
+  box-shadow: 0 0 0 0.25rem rgba(211, 212, 213, 0.5);
 }
 
 .btn-light:disabled, .btn-light.disabled {
   color: #000;
-  background-color: #fff;
+  background-color: #f8f9fa;
   background-image: none;
-  border-color: #fff;
+  border-color: #f8f9fa;
 }
 
 .btn-dark {
@@ -3589,34 +3589,34 @@ fieldset:disabled .btn {
 }
 
 .btn-outline-light {
-  color: #fff;
-  border-color: #fff;
+  color: #f8f9fa;
+  border-color: #f8f9fa;
 }
 
 .btn-outline-light:hover {
   color: #000;
-  background-color: #fff;
-  border-color: #fff;
+  background-color: #f8f9fa;
+  border-color: #f8f9fa;
 }
 
 .btn-check:focus + .btn-outline-light, .btn-outline-light:focus {
-  box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 0 0.25rem rgba(248, 249, 250, 0.5);
 }
 
 .btn-check:checked + .btn-outline-light,
 .btn-check:active + .btn-outline-light, .btn-outline-light:active, .btn-outline-light.active, .btn-outline-light.dropdown-toggle.show {
   color: #000;
-  background-color: #fff;
-  border-color: #fff;
+  background-color: #f8f9fa;
+  border-color: #f8f9fa;
 }
 
 .btn-check:checked + .btn-outline-light:focus,
 .btn-check:active + .btn-outline-light:focus, .btn-outline-light:active:focus, .btn-outline-light.active:focus, .btn-outline-light.dropdown-toggle.show:focus {
-  box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 0 0.25rem rgba(248, 249, 250, 0.5);
 }
 
 .btn-outline-light:disabled, .btn-outline-light.disabled {
-  color: #fff;
+  color: #f8f9fa;
   background-color: transparent;
 }
 
@@ -5218,14 +5218,14 @@ fieldset:disabled .btn {
 }
 
 .alert-light {
-  color: #999999;
-  background-color: white;
+  color: #959596;
+  background-color: #fefefe;
   background-image: var(--bs-gradient);
-  border-color: white;
+  border-color: #fdfdfe;
 }
 
 .alert-light .alert-link {
-  color: #7a7a7a;
+  color: #777778;
 }
 
 .alert-dark {
@@ -5647,19 +5647,19 @@ fieldset:disabled .btn {
 }
 
 .list-group-item-light {
-  color: #999999;
-  background-color: white;
+  color: #959596;
+  background-color: #fefefe;
 }
 
 .list-group-item-light.list-group-item-action:hover, .list-group-item-light.list-group-item-action:focus {
-  color: #999999;
-  background-color: #e6e6e6;
+  color: #959596;
+  background-color: #e5e5e5;
 }
 
 .list-group-item-light.list-group-item-action.active {
   color: #fff;
-  background-color: #999999;
-  border-color: #999999;
+  background-color: #959596;
+  border-color: #959596;
 }
 
 .list-group-item-dark {
@@ -6818,11 +6818,11 @@ fieldset:disabled .btn {
 }
 
 .link-light {
-  color: #fff;
+  color: #f8f9fa;
 }
 
 .link-light:hover, .link-light:focus {
-  color: white;
+  color: #f9fafb;
 }
 
 .link-dark {
@@ -7224,7 +7224,7 @@ fieldset:disabled .btn {
 }
 
 .border-light {
-  border-color: #fff !important;
+  border-color: #f8f9fa !important;
 }
 
 .border-dark {
@@ -8096,7 +8096,7 @@ fieldset:disabled .btn {
 }
 
 .text-light {
-  color: #fff !important;
+  color: #f8f9fa !important;
 }
 
 .text-dark {
@@ -8152,7 +8152,7 @@ fieldset:disabled .btn {
 }
 
 .bg-light {
-  background-color: #fff !important;
+  background-color: #f8f9fa !important;
 }
 
 .bg-dark {
@@ -11637,12 +11637,12 @@ fieldset:disabled .btn {
 }
 
 .btn-light:focus {
-  background-color: #fff;
+  background-color: #f8f9fa;
   box-shadow: 0 0 0 2px rgba(204, 204, 204, 0.5);
 }
 
 .btn-light:hover, .btn-light:active:hover {
-  background-color: #f0f0f0;
+  background-color: #e6eaed;
 }
 
 .btn-light:active {
@@ -12268,7 +12268,7 @@ select.form-control[multiple] {
 }
 
 .alert-light {
-  background: #fff linear-gradient(180deg, white, #fff) repeat-x;
+  background: #f8f9fa linear-gradient(180deg, #f9fafb, #f8f9fa) repeat-x;
 }
 
 .alert-dark {
@@ -12289,17 +12289,8 @@ select.form-control[multiple] {
   color: #444;
 }
 
-.badge-secondary {
-  background-color: #bbb;
-  color: #fff;
-}
-
-.badge-light {
-  background-color: #eee;
-}
-
-.badge-warning {
-  color: #fff;
+.badge.bg-secondary, .badge.bg-light {
+  color: #222;
 }
 
 .tag {

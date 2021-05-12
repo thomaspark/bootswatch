@@ -330,11 +330,9 @@ label,
 }
 
 .badge {
-  padding-bottom: .3em;
-
-  &-warning,
-  &-info {
-    color: $white;
+  &.bg-secondary,
+  &.bg-light {
+    color: $dark;
   }
 }
 
