@@ -11038,20 +11038,38 @@ fieldset:disabled .btn {
   color: #212529;
 }
 
-.btn-secondary, .btn-secondary:hover, .btn-secondary:disabled, .btn-secondary.disabled,
-.btn-light,
-.btn-light:hover,
+.btn-secondary:disabled, .btn-secondary.disabled,
 .btn-light:disabled,
 .btn-light.disabled,
-.btn-outline-secondary,
-.btn-outline-secondary:hover,
 .btn-outline-secondary:disabled,
 .btn-outline-secondary.disabled,
-.btn-outline-light,
-.btn-outline-light:hover,
 .btn-outline-light:disabled,
 .btn-outline-light.disabled {
-  border: 1px solid #dee2e6;
+  border: 1px solid #f2f2f2;
+}
+
+.btn-secondary,
+.btn-outline-secondary {
+  border-color: #f2f2f2;
+}
+
+.btn-secondary:hover, .btn-secondary:active,
+.btn-outline-secondary:hover,
+.btn-outline-secondary:active {
+  background-color: #f2f2f2;
+  border-color: #f2f2f2;
+}
+
+.btn-light,
+.btn-outline-light {
+  border-color: #e9ecef;
+}
+
+.btn-light:hover, .btn-light:active,
+.btn-outline-light:hover,
+.btn-outline-light:active {
+  background-color: #e9ecef;
+  border-color: #e9ecef;
 }
 
 .table {
