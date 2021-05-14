@@ -1,4 +1,4 @@
-// Cosmo 5.0.0
+// Cosmo 5.0.1
 // Bootswatch
 
 
@@ -13,6 +13,14 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@3
 
 body {
   -webkit-font-smoothing: antialiased;
+}
+
+// Indicators
+
+.badge {
+  &.bg-light {
+    color: $dark;
+  }
 }
 
 // Progress bars

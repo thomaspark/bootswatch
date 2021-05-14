@@ -1,4 +1,4 @@
-// Simplex 5.0.0
+// Simplex 5.0.1
 // Bootswatch
 
 
@@ -126,5 +126,14 @@ label {
 .pagination {
   .page-link:hover {
     text-decoration: none;
+  }
+}
+
+// Indicators
+
+.badge {
+  &.bg-secondary,
+  &.bg-light {
+    color: $dark;
   }
 }

@@ -1,4 +1,4 @@
-// Materia 5.0.0
+// Materia 5.0.1
 // Bootswatch
 
 
@@ -648,17 +648,9 @@ select.form-control {
 }
 
 .badge {
-  &-secondary {
-    background-color: $gray-500;
-    color: $white;
-  }
-
-  &-light {
-    background-color: $gray-200;
-  }
-
-  &-warning {
-    color: $white;
+  &.bg-secondary,
+  &.bg-light {
+    color: $dark;
   }
 }
 

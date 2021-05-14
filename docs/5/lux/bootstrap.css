@@ -1,12 +1,12 @@
 /*!
- * Bootswatch v5.0.0
+ * Bootswatch v5.0.1
  * Homepage: https://bootswatch.com
  * Copyright 2012-2021 Thomas Park
  * Licensed under MIT
  * Based on Bootstrap
 */
 /*!
- * Bootstrap v5.0.0 (https://getbootstrap.com/)
+ * Bootstrap v5.0.1 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
@@ -1862,6 +1862,7 @@ progress {
 
 .table {
   --bs-table-bg: transparent;
+  --bs-table-accent-bg: transparent;
   --bs-table-striped-color: #55595c;
   --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
   --bs-table-active-color: #55595c;
@@ -2123,11 +2124,7 @@ progress {
   overflow: hidden;
 }
 
-.form-control[type="file"]:not(:disabled):not(:-moz-read-only) {
-  cursor: pointer;
-}
-
-.form-control[type="file"]:not(:disabled):not(:read-only) {
+.form-control[type="file"]:not(:disabled):not([readonly]) {
   cursor: pointer;
 }
 
@@ -2168,12 +2165,7 @@ progress {
   opacity: 1;
 }
 
-.form-control:-moz-read-only {
-  background-color: #eceeef;
-  opacity: 1;
-}
-
-.form-control:disabled, .form-control:read-only {
+.form-control:disabled, .form-control[readonly] {
   background-color: #eceeef;
   opacity: 1;
 }
@@ -2201,11 +2193,7 @@ progress {
   }
 }
 
-.form-control:hover:not(:disabled):not(:-moz-read-only)::file-selector-button {
-  background-color: #e0e2e3;
-}
-
-.form-control:hover:not(:disabled):not(:read-only)::file-selector-button {
+.form-control:hover:not(:disabled):not([readonly])::file-selector-button {
   background-color: #e0e2e3;
 }
 
@@ -2233,7 +2221,7 @@ progress {
   }
 }
 
-.form-control:hover:not(:disabled):not(:read-only)::-webkit-file-upload-button {
+.form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
   background-color: #e0e2e3;
 }
 
@@ -2314,11 +2302,7 @@ textarea.form-control-lg {
   padding: 0.75rem;
 }
 
-.form-control-color:not(:disabled):not(:-moz-read-only) {
-  cursor: pointer;
-}
-
-.form-control-color:not(:disabled):not(:read-only) {
+.form-control-color:not(:disabled):not([readonly]) {
   cursor: pointer;
 }
 
@@ -2865,6 +2849,12 @@ textarea.form-control-lg {
 .was-validated .input-group .form-control:valid, .input-group .form-control.is-valid, .was-validated
 .input-group .form-select:valid,
 .input-group .form-select.is-valid {
+  z-index: 1;
+}
+
+.was-validated .input-group .form-control:valid:focus, .input-group .form-control.is-valid:focus, .was-validated
+.input-group .form-select:valid:focus,
+.input-group .form-select.is-valid:focus {
   z-index: 3;
 }
 
@@ -2954,6 +2944,12 @@ textarea.form-control-lg {
 .was-validated .input-group .form-control:invalid, .input-group .form-control.is-invalid, .was-validated
 .input-group .form-select:invalid,
 .input-group .form-select.is-invalid {
+  z-index: 2;
+}
+
+.was-validated .input-group .form-control:invalid:focus, .input-group .form-control.is-invalid:focus, .was-validated
+.input-group .form-select:invalid:focus,
+.input-group .form-select.is-invalid:focus {
   z-index: 3;
 }
 
@@ -5455,15 +5451,6 @@ fieldset:disabled .btn {
   word-wrap: break-word;
 }
 
-.modal-open {
-  overflow: hidden;
-}
-
-.modal-open .modal {
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-
 .modal {
   position: fixed;
   top: 0;
@@ -5472,7 +5459,8 @@ fieldset:disabled .btn {
   display: none;
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   outline: 0;
 }
 
@@ -10756,6 +10744,10 @@ th {
 
 .badge-pill {
   border-radius: 10rem;
+}
+
+.badge.bg-secondary, .badge.bg-light {
+  color: #343a40;
 }
 
 .list-group-item h1, .list-group-item .h1,

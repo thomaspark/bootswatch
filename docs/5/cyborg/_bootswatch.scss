@@ -1,4 +1,4 @@
-// Cyborg 5.0.0
+// Cyborg 5.0.1
 // Bootswatch
 
 
@@ -122,40 +122,17 @@ legend {
 }
 
 .badge {
-  &-warning {
-    color: $white;
+  &.bg-dark {
+    color: $gray-900;
   }
 }
+
 // Containers
 
 .list-group-item {
+
   &:hover {
-    background-color: $gray-700;
-    color: $white;
-  }
-
-  &-action {
-    color: $gray-500;
-
-    .list-group-item-heading {
-      color: $gray-500;
-    }
-  }
-
-  &:hover .list-group-item-heading {
-    color: $white;
-  }
-}
-
-.card,
-.list-group-item {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: inherit;
+    border-color: $primary;
   }
 }
 
