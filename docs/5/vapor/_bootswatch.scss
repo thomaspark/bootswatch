@@ -24,7 +24,7 @@ $outrun: false !default;
 }
 
 @mixin box-shadow-lg($color) {
-  box-shadow: 0 0 2rem rgba(lighten($color, 5%), .4), 0 0 8rem rgba(lighten($color, 5%), .3);
+  box-shadow: 0 0 2rem rgba(tint-color($color, 10%), .4), 0 0 8rem rgba(tint-color($color, 10%), .3);
 }
 
 @mixin header-shadow($color) {
@@ -47,7 +47,7 @@ $outrun: false !default;
 // Body
 
 body {
-  background-image: linear-gradient(darken($body-bg, 5%) 0%, $body-bg 7%, $body-bg 80%, darken(#173e98, 25%) 100%);
+  background-image: linear-gradient(shade-color($body-bg, 10%) 0%, $body-bg 7%, $body-bg 80%, shade-color(#173e98, 50%) 100%);
   @include text-shadow-sm($body-color);
 
   @if ($outrun) {
@@ -88,7 +88,7 @@ body {
   }
 
   &-muted {
-    @include text-shadow-sm(darken($text-muted, 10%));
+    @include text-shadow-sm(shade-color($text-muted, 20%));
   }
 }
 
@@ -99,7 +99,7 @@ a {
 .blockquote {
 
   &-footer {
-    @include text-shadow-sm(darken($blockquote-footer-color, 10%));
+    @include text-shadow-sm(shade-color($blockquote-footer-color, 20%));
   }
 }
 

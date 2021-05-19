@@ -46,7 +46,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;50
   }
 }
 
-@mixin btn($class,$bg,$color){
+@mixin btn($class,$bg,$color) {
   .btn-#{$class} {
     &:focus {
       background-color: $bg;
@@ -55,7 +55,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;50
 
     &:hover,
     &:active:hover {
-      background-color: darken($bg, 6%);
+      background-color: shade-color($bg, 12%);
     }
 
     &:active {

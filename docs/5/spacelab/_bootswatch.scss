@@ -12,9 +12,9 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,
 // Mixins =
 
 @mixin btn-shadow($color) {
-  @include gradient-y-three-colors(lighten($color, 15%), $color, 50%, darken($color, 4%));
+  @include gradient-y-three-colors(tint-color($color, 24%), $color, 50%, shade-color($color, 8%));
   filter: none;
-  border: 1px solid darken($color, 10%);
+  border: 1px solid shade-color($color, 20%);
 }
 
 // Navbar
@@ -64,7 +64,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,
   }
 
   .btn-#{$color}:not(.disabled):hover {
-    @include btn-shadow(darken($value, 4%));
+    @include btn-shadow(shade-color($value, 8%));
   }
 }
 
