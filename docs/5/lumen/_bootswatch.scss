@@ -20,19 +20,12 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,w
 
 .navbar {
   @include shadow();
-}
 
-.bg-primary {
-  border-color: shade-color($primary, 10%);
-}
-
-.bg-dark {
-  border-color: shade-color($dark, 10%);
-}
-
-.bg-light {
-  background-color: $white !important;
-  border-color: shade-color($white, 10%);
+  @each $color, $value in $theme-colors {
+    &.bg-#{$color} {
+      border-color: shade-color($value, 10%);
+    }
+  }
 }
 
 // Buttons
