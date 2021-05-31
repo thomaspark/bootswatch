@@ -10997,35 +10997,67 @@ fieldset:disabled .btn {
   border-bottom-width: 2px;
 }
 
-.btn-primary {
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+  background-color: #158cba;
+}
+
+.btn-primary, .btn-primary:not(.disabled):hover, .btn-primary:not(.disabled):active, .btn-primary:focus {
   border-color: #137ea7;
 }
 
-.btn-secondary {
+.btn-secondary:hover, .btn-secondary:active, .btn-secondary:focus {
+  background-color: #f0f0f0;
+}
+
+.btn-secondary, .btn-secondary:not(.disabled):hover, .btn-secondary:not(.disabled):active, .btn-secondary:focus {
   border-color: #d8d8d8;
 }
 
-.btn-success {
+.btn-success:hover, .btn-success:active, .btn-success:focus {
+  background-color: #28b62c;
+}
+
+.btn-success, .btn-success:not(.disabled):hover, .btn-success:not(.disabled):active, .btn-success:focus {
   border-color: #24a428;
 }
 
-.btn-info {
+.btn-info:hover, .btn-info:active, .btn-info:focus {
+  background-color: #75caeb;
+}
+
+.btn-info, .btn-info:not(.disabled):hover, .btn-info:not(.disabled):active, .btn-info:focus {
   border-color: #69b6d4;
 }
 
-.btn-danger {
-  border-color: #e63b31;
+.btn-warning:hover, .btn-warning:active, .btn-warning:focus {
+  background-color: #ff851b;
 }
 
-.btn-warning {
+.btn-warning, .btn-warning:not(.disabled):hover, .btn-warning:not(.disabled):active, .btn-warning:focus {
   border-color: #e67818;
 }
 
-.btn-light {
+.btn-danger:hover, .btn-danger:active, .btn-danger:focus {
+  background-color: #ff4136;
+}
+
+.btn-danger, .btn-danger:not(.disabled):hover, .btn-danger:not(.disabled):active, .btn-danger:focus {
+  border-color: #e63b31;
+}
+
+.btn-light:hover, .btn-light:active, .btn-light:focus {
+  background-color: #f6f6f6;
+}
+
+.btn-light, .btn-light:not(.disabled):hover, .btn-light:not(.disabled):active, .btn-light:focus {
   border-color: #dddddd;
 }
 
-.btn-dark {
+.btn-dark:hover, .btn-dark:active, .btn-dark:focus {
+  background-color: #555;
+}
+
+.btn-dark, .btn-dark:not(.disabled):hover, .btn-dark:not(.disabled):active, .btn-dark:focus {
   border-color: #4d4d4d;
 }
 

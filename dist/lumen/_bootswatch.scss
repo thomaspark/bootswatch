@@ -45,36 +45,21 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,w
     @include box-shadow(none);
   }
 
-  &-primary {
-    border-color: shade-color($primary, 10%);
-  }
+  @each $color, $value in $theme-colors {
+    &-#{$color} {
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: $value;
+      }
 
-  &-secondary {
-    border-color: shade-color($secondary, 10%);
-  }
-
-  &-success {
-    border-color: shade-color($success, 10%);
-  }
-
-  &-info {
-    border-color: shade-color($info, 10%);
-  }
-
-  &-danger {
-    border-color: shade-color($danger, 10%);
-  }
-
-  &-warning {
-    border-color: shade-color($warning, 10%);
-  }
-
-  &-light {
-    border-color: shade-color($light, 10%);
-  }
-
-  &-dark {
-    border-color: shade-color($dark, 10%);
+      &,
+      &:not(.disabled):hover, 
+      &:not(.disabled):active,
+      &:focus {
+        border-color: shade-color($value, 10%);
+      }
+    }
   }
 }
 
