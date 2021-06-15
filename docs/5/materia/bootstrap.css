@@ -11028,11 +11028,13 @@ fieldset:disabled .btn {
   padding-bottom: .9rem;
 }
 
+.navbar.bg-dark input[type="search"],
 .navbar.bg-dark input[type="text"],
 .navbar.bg-dark input[type="password"],
 .navbar.bg-dark input[type="email"],
 .navbar.bg-dark input[type="number"],
-.navbar.bg-dark input[type="tel"], .navbar.bg-primary input[type="text"],
+.navbar.bg-dark input[type="tel"], .navbar.bg-primary input[type="search"],
+.navbar.bg-primary input[type="text"],
 .navbar.bg-primary input[type="password"],
 .navbar.bg-primary input[type="email"],
 .navbar.bg-primary input[type="number"],
@@ -11041,11 +11043,13 @@ fieldset:disabled .btn {
   box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5);
 }
 
+.navbar.bg-dark input[type="search"]:focus,
 .navbar.bg-dark input[type="text"]:focus,
 .navbar.bg-dark input[type="password"]:focus,
 .navbar.bg-dark input[type="email"]:focus,
 .navbar.bg-dark input[type="number"]:focus,
-.navbar.bg-dark input[type="tel"]:focus, .navbar.bg-primary input[type="text"]:focus,
+.navbar.bg-dark input[type="tel"]:focus, .navbar.bg-primary input[type="search"]:focus,
+.navbar.bg-primary input[type="text"]:focus,
 .navbar.bg-primary input[type="password"]:focus,
 .navbar.bg-primary input[type="email"]:focus,
 .navbar.bg-primary input[type="number"]:focus,
@@ -11053,27 +11057,29 @@ fieldset:disabled .btn {
   box-shadow: inset 0 -2px 0 #fff;
 }
 
-.navbar.bg-dark input[type="text"]::-webkit-input-placeholder, .navbar.bg-dark input[type="password"]::-webkit-input-placeholder, .navbar.bg-dark input[type="email"]::-webkit-input-placeholder, .navbar.bg-dark input[type="number"]::-webkit-input-placeholder, .navbar.bg-dark input[type="tel"]::-webkit-input-placeholder, .navbar.bg-primary input[type="text"]::-webkit-input-placeholder, .navbar.bg-primary input[type="password"]::-webkit-input-placeholder, .navbar.bg-primary input[type="email"]::-webkit-input-placeholder, .navbar.bg-primary input[type="number"]::-webkit-input-placeholder, .navbar.bg-primary input[type="tel"]::-webkit-input-placeholder {
+.navbar.bg-dark input[type="search"]::-webkit-input-placeholder, .navbar.bg-dark input[type="text"]::-webkit-input-placeholder, .navbar.bg-dark input[type="password"]::-webkit-input-placeholder, .navbar.bg-dark input[type="email"]::-webkit-input-placeholder, .navbar.bg-dark input[type="number"]::-webkit-input-placeholder, .navbar.bg-dark input[type="tel"]::-webkit-input-placeholder, .navbar.bg-primary input[type="search"]::-webkit-input-placeholder, .navbar.bg-primary input[type="text"]::-webkit-input-placeholder, .navbar.bg-primary input[type="password"]::-webkit-input-placeholder, .navbar.bg-primary input[type="email"]::-webkit-input-placeholder, .navbar.bg-primary input[type="number"]::-webkit-input-placeholder, .navbar.bg-primary input[type="tel"]::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.navbar.bg-dark input[type="text"]::-moz-placeholder, .navbar.bg-dark input[type="password"]::-moz-placeholder, .navbar.bg-dark input[type="email"]::-moz-placeholder, .navbar.bg-dark input[type="number"]::-moz-placeholder, .navbar.bg-dark input[type="tel"]::-moz-placeholder, .navbar.bg-primary input[type="text"]::-moz-placeholder, .navbar.bg-primary input[type="password"]::-moz-placeholder, .navbar.bg-primary input[type="email"]::-moz-placeholder, .navbar.bg-primary input[type="number"]::-moz-placeholder, .navbar.bg-primary input[type="tel"]::-moz-placeholder {
+.navbar.bg-dark input[type="search"]::-moz-placeholder, .navbar.bg-dark input[type="text"]::-moz-placeholder, .navbar.bg-dark input[type="password"]::-moz-placeholder, .navbar.bg-dark input[type="email"]::-moz-placeholder, .navbar.bg-dark input[type="number"]::-moz-placeholder, .navbar.bg-dark input[type="tel"]::-moz-placeholder, .navbar.bg-primary input[type="search"]::-moz-placeholder, .navbar.bg-primary input[type="text"]::-moz-placeholder, .navbar.bg-primary input[type="password"]::-moz-placeholder, .navbar.bg-primary input[type="email"]::-moz-placeholder, .navbar.bg-primary input[type="number"]::-moz-placeholder, .navbar.bg-primary input[type="tel"]::-moz-placeholder {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.navbar.bg-dark input[type="text"]:-ms-input-placeholder, .navbar.bg-dark input[type="password"]:-ms-input-placeholder, .navbar.bg-dark input[type="email"]:-ms-input-placeholder, .navbar.bg-dark input[type="number"]:-ms-input-placeholder, .navbar.bg-dark input[type="tel"]:-ms-input-placeholder, .navbar.bg-primary input[type="text"]:-ms-input-placeholder, .navbar.bg-primary input[type="password"]:-ms-input-placeholder, .navbar.bg-primary input[type="email"]:-ms-input-placeholder, .navbar.bg-primary input[type="number"]:-ms-input-placeholder, .navbar.bg-primary input[type="tel"]:-ms-input-placeholder {
+.navbar.bg-dark input[type="search"]:-ms-input-placeholder, .navbar.bg-dark input[type="text"]:-ms-input-placeholder, .navbar.bg-dark input[type="password"]:-ms-input-placeholder, .navbar.bg-dark input[type="email"]:-ms-input-placeholder, .navbar.bg-dark input[type="number"]:-ms-input-placeholder, .navbar.bg-dark input[type="tel"]:-ms-input-placeholder, .navbar.bg-primary input[type="search"]:-ms-input-placeholder, .navbar.bg-primary input[type="text"]:-ms-input-placeholder, .navbar.bg-primary input[type="password"]:-ms-input-placeholder, .navbar.bg-primary input[type="email"]:-ms-input-placeholder, .navbar.bg-primary input[type="number"]:-ms-input-placeholder, .navbar.bg-primary input[type="tel"]:-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.navbar.bg-dark input[type="text"]::-ms-input-placeholder, .navbar.bg-dark input[type="password"]::-ms-input-placeholder, .navbar.bg-dark input[type="email"]::-ms-input-placeholder, .navbar.bg-dark input[type="number"]::-ms-input-placeholder, .navbar.bg-dark input[type="tel"]::-ms-input-placeholder, .navbar.bg-primary input[type="text"]::-ms-input-placeholder, .navbar.bg-primary input[type="password"]::-ms-input-placeholder, .navbar.bg-primary input[type="email"]::-ms-input-placeholder, .navbar.bg-primary input[type="number"]::-ms-input-placeholder, .navbar.bg-primary input[type="tel"]::-ms-input-placeholder {
+.navbar.bg-dark input[type="search"]::-ms-input-placeholder, .navbar.bg-dark input[type="text"]::-ms-input-placeholder, .navbar.bg-dark input[type="password"]::-ms-input-placeholder, .navbar.bg-dark input[type="email"]::-ms-input-placeholder, .navbar.bg-dark input[type="number"]::-ms-input-placeholder, .navbar.bg-dark input[type="tel"]::-ms-input-placeholder, .navbar.bg-primary input[type="search"]::-ms-input-placeholder, .navbar.bg-primary input[type="text"]::-ms-input-placeholder, .navbar.bg-primary input[type="password"]::-ms-input-placeholder, .navbar.bg-primary input[type="email"]::-ms-input-placeholder, .navbar.bg-primary input[type="number"]::-ms-input-placeholder, .navbar.bg-primary input[type="tel"]::-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.5);
 }
 
+.navbar.bg-dark input[type="search"]::placeholder,
 .navbar.bg-dark input[type="text"]::placeholder,
 .navbar.bg-dark input[type="password"]::placeholder,
 .navbar.bg-dark input[type="email"]::placeholder,
 .navbar.bg-dark input[type="number"]::placeholder,
-.navbar.bg-dark input[type="tel"]::placeholder, .navbar.bg-primary input[type="text"]::placeholder,
+.navbar.bg-dark input[type="tel"]::placeholder, .navbar.bg-primary input[type="search"]::placeholder,
+.navbar.bg-primary input[type="text"]::placeholder,
 .navbar.bg-primary input[type="password"]::placeholder,
 .navbar.bg-primary input[type="email"]::placeholder,
 .navbar.bg-primary input[type="number"]::placeholder,
