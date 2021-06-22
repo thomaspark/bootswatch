@@ -1,4 +1,4 @@
-// Pulse 5.0.1
+// Pulse 5.0.2
 // Bootswatch
 
 // Buttons
@@ -24,8 +24,8 @@
 
     &.disabled {
       background-color: $white;
-      border-color: lighten(#ccc, 5%);
-      color: lighten($gray-900, 5%);
+      border-color: tint-color(#ccc, 5%);
+      color: tint-color($gray-900, 5%);
     }
   }
 
@@ -34,7 +34,7 @@
   }
 
   &-primary:focus {
-    box-shadow: 0 0 5px lighten($primary, 10%);
+    box-shadow: 0 0 5px tint-color($primary, 10%);
   }
 
   &-secondary:focus {
@@ -42,19 +42,19 @@
   }
 
   &-success:focus {
-    box-shadow: 0 0 5px lighten($success, 10%);
+    box-shadow: 0 0 5px tint-color($success, 10%);
   }
 
   &-info:focus {
-    box-shadow: 0 0 5px lighten($info, 10%);
+    box-shadow: 0 0 5px tint-color($info, 10%);
   }
 
   &-warning:focus {
-    box-shadow: 0 0 5px lighten($warning, 10%);
+    box-shadow: 0 0 5px tint-color($warning, 10%);
   }
 
   &-danger:focus {
-    box-shadow: 0 0 5px lighten($danger, 10%);
+    box-shadow: 0 0 5px tint-color($danger, 10%);
   }
 
   &.disabled:focus {

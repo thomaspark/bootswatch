@@ -1,4 +1,4 @@
-// Zephyr 5.0.1
+// Zephyr 5.0.2
 // Bootswatch
 
 
@@ -65,29 +65,29 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700
 
   &:disabled,
   &.disabled {
-    border: 1px solid darken($secondary, 5%);
+    border: 1px solid shade-color($secondary, 10%);
   }
 }
 
 .btn-secondary,
 .btn-outline-secondary {
-  border-color: darken($secondary, 5%);
+  border-color: shade-color($secondary, 10%);
 
   &:hover,
   &:active {
-    background-color: darken($secondary, 5%);
-    border-color: darken($secondary, 5%);
+    background-color: shade-color($secondary, 10%);
+    border-color: shade-color($secondary, 10%);
   }
 }
 
 .btn-light,
 .btn-outline-light {
-  border-color: darken($light, 5%);
+  border-color: shade-color($light, 10%);
 
   &:hover,
   &:active {
-    background-color: darken($light, 5%);
-    border-color: darken($light, 5%);
+    background-color: shade-color($light, 10%);
+    border-color: shade-color($light, 10%);
   }
 }
 

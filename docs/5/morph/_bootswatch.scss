@@ -1,4 +1,4 @@
-// Morph 5.0.1
+// Morph 5.0.2
 // Bootswatch
 
 
@@ -330,7 +330,7 @@ $btn-box-shadow-inset: inset 2px 3px 6px rgba($black, .2), inset -3px -2px 6px r
 
   &::-webkit-slider-thumb,
   &:focus::-webkit-slider-thumb {
-    box-shadow: 1px 1px 3px rgba($black, .2), inset 2px 2px 8px rgba(darken($form-range-thumb-bg, 50%), .1);
+    box-shadow: 1px 1px 3px rgba($black, .2), inset 2px 2px 8px rgba(shade-color($form-range-thumb-bg, 50%), .1);
   }
 }
 
@@ -356,7 +356,7 @@ $btn-box-shadow-inset: inset 2px 3px 6px rgba($black, .2), inset -3px -2px 6px r
 
 .form-control {
   &::-webkit-file-upload-button {
-    box-shadow: 2px 2px 5px rgba($black, .2), inset 3px 3px 10px rgba(darken($form-range-thumb-bg, 50%), .1);
+    box-shadow: 2px 2px 5px rgba($black, .2), inset 3px 3px 10px rgba(shade-color($form-range-thumb-bg, 50%), .1);
   }
 }
 
@@ -374,7 +374,7 @@ $btn-box-shadow-inset: inset 2px 3px 6px rgba($black, .2), inset -3px -2px 6px r
   @each $color, $value in $theme-colors {
     &-#{$color} {
       background-color: rgba($value, .75);
-      box-shadow: $box-shadow-lg, inset 1px 1px 3px rgba(lighten($value, 80%), .4), inset -5px -5px 20px rgba(darken($value, 80%), .05);
+      box-shadow: $box-shadow-lg, inset 1px 1px 3px rgba(tint-color($value, 80%), .4), inset -5px -5px 20px rgba(shade-color($value, 80%), .05);
     }
   }
 }
@@ -406,7 +406,7 @@ $btn-box-shadow-inset: inset 2px 3px 6px rgba($black, .2), inset -3px -2px 6px r
 }
 
 .progress {
-  box-shadow: inset 2px 4px 6px rgba(darken($body-bg, 50%), .2), inset -3px -2px 5px rgba($white, .8);
+  box-shadow: inset 2px 4px 6px rgba(shade-color($body-bg, 50%), .2), inset -3px -2px 5px rgba($white, .8);
 }
 
 .progress-bar {
@@ -426,11 +426,11 @@ $btn-box-shadow-inset: inset 2px 3px 6px rgba($black, .2), inset -3px -2px 6px r
 // Containers
 
 .card {
-  box-shadow: inset 2px 2px 6px rgba(darken($body-bg, 50%), .2), inset -3px -2px 4px rgba($white, .2);
+  box-shadow: inset 2px 2px 6px rgba(shade-color($body-bg, 50%), .2), inset -3px -2px 4px rgba($white, .2);
 
   @each $color, $value in $theme-colors {
     &-#{$color} {
-      box-shadow: inset 2px 2px 6px  rgba(darken($value, 80%), .05), inset -3px -2px 4px rgba(lighten($value, 80%), .2);
+      box-shadow: inset 2px 2px 6px  rgba(shade-color($value, 80%), .05), inset -3px -2px 4px rgba(tint-color($value, 80%), .2);
     }
   }
 
@@ -450,7 +450,7 @@ $btn-box-shadow-inset: inset 2px 3px 6px rgba($black, .2), inset -3px -2px 6px r
 
 .list-group {
   background-color: $card-bg;
-  box-shadow: inset 2px 2px 6px rgba(darken($body-bg, 50%), .2), inset -3px -2px 4px rgba($white, .2);
+  box-shadow: inset 2px 2px 6px rgba(shade-color($body-bg, 50%), .2), inset -3px -2px 4px rgba($white, .2);
 }
 
 .list-group-item {

@@ -1,4 +1,4 @@
-// Simplex 5.0.1
+// Simplex 5.0.2
 // Bootswatch
 
 
@@ -12,9 +12,9 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700
 // Mixins
 
 @mixin btn-shadow($color){
-  @include gradient-y-three-colors(lighten($color, 3%), $color, 6%, darken($color, 3%));
+  @include gradient-y-three-colors(tint-color($color, 6%), $color, 6%, shade-color($color, 6%));
   filter: none;
-  border: 1px solid darken($color, 6.5%);
+  border: 1px solid shade-color($color, 13%);
 }
 
 // Navbar
@@ -31,19 +31,19 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700
     border-top-width: 1px 0 0 0;
     border-style: solid;
   }
-}
 
-.bg-primary {
-  background-color: $primary !important;
-  border-color: darken($primary, 6.5%) !important;
-}
+  &.bg-primary {
+    background-color: $primary !important;
+    border-color: shade-color($primary, 13%) !important;
+  }
 
-.bg-dark {
-  border-color: darken($dark, 6.5%) !important;
-}
+  &.bg-dark {
+    border-color: shade-color($dark, 13%) !important;
+  }
 
-.bg-light {
-  border-color: darken($white, 6.5%);
+  &.bg-light {
+    border-color: shade-color($white, 13%);
+  }
 }
 
 // Buttons
@@ -120,7 +120,7 @@ label {
 // Navs
 
 .breadcrumb {
-  border: 1px solid darken($white, 6.5%);
+  border: 1px solid shade-color($white, 13%);
 }
 
 .pagination {

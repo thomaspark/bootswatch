@@ -1,10 +1,10 @@
-// Quartz 5.0.1
+// Quartz 5.0.2
 // Bootswatch
 
 
 // Variables
 
-$body-bg-image: linear-gradient(90deg, darken($cyan, 10%), darken($purple, 10%), darken($pink, 5%)) !default;
+$body-bg-image: linear-gradient(90deg, shade-color($cyan, 10%), shade-color($purple, 10%), shade-color($pink, 5%)) !default;
 $frosted-opacity: .3 !default;
 
 @mixin glass($opacity: $frosted-opacity, $bg: $white) {

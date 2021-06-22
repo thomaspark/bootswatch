@@ -1,16 +1,16 @@
-// Slate 5.0.1
+// Slate 5.0.2
 // Bootswatch
 
 
 // Mixins
 
 @mixin btn-shadow($color){
-  @include gradient-y-three-colors(lighten($color, 6%), $color, 60%, darken($color, 4%));
+  @include gradient-y-three-colors(tint-color($color, 12%), $color, 60%, shade-color($color, 8%));
   filter: none;
 }
 
 @mixin btn-shadow-inverse($color){
-  @include gradient-y-three-colors(darken($color, 18%), darken($color, 15%), 40%, darken($color, 13%));
+  @include gradient-y-three-colors(shade-color($color, 36%), shade-color($color, 30%), 40%, shade-color($color, 26%));
   filter: none;
 }
 
@@ -355,6 +355,6 @@ legend {
 
 .list-group {
   &-item-action:hover {
-    background-color: darken($gray-900, 5%);
+    background-color: shade-color($gray-900, 10%);
   }
 }

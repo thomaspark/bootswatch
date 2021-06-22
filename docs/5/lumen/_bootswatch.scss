@@ -1,4 +1,4 @@
-// Lumen 5.0.1
+// Lumen 5.0.2
 // Bootswatch
 
 
@@ -20,19 +20,12 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,w
 
 .navbar {
   @include shadow();
-}
 
-.bg-primary {
-  border-color: darken($primary, 5%);
-}
-
-.bg-dark {
-  border-color: darken($dark, 5%);
-}
-
-.bg-light {
-  background-color: $white !important;
-  border-color: darken($white, 5%);
+  @each $color, $value in $theme-colors {
+    &.bg-#{$color} {
+      border-color: shade-color($value, 10%);
+    }
+  }
 }
 
 // Buttons
@@ -52,36 +45,21 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,w
     @include box-shadow(none);
   }
 
-  &-primary {
-    border-color: darken($primary, 5%);
-  }
+  @each $color, $value in $theme-colors {
+    &-#{$color} {
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: $value;
+      }
 
-  &-secondary {
-    border-color: darken($secondary, 5%);
-  }
-
-  &-success {
-    border-color: darken($success, 5%);
-  }
-
-  &-info {
-    border-color: darken($info, 5%);
-  }
-
-  &-danger {
-    border-color: darken($danger, 5%);
-  }
-
-  &-warning {
-    border-color: darken($warning, 5%);
-  }
-
-  &-light {
-    border-color: darken($light, 5%);
-  }
-
-  &-dark {
-    border-color: darken($dark, 5%);
+      &,
+      &:not(.disabled):hover,
+      &:not(.disabled):active,
+      &:focus {
+        border-color: shade-color($value, 10%);
+      }
+    }
   }
 }
 
@@ -173,7 +151,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,w
 }
 
 .breadcrumb {
-  border-color: darken($breadcrumb-bg, 5%);
+  border-color: shade-color($breadcrumb-bg, 10%);
   @include shadow();
 }
 
@@ -246,42 +224,42 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,w
 
   &-primary {
     background-color: $primary;
-    border-color: darken($primary, 5%);
+    border-color: shade-color($primary, 10%);
   }
 
   &-secondary {
     background-color: $secondary;
-    border-color: darken($secondary, 5%);
+    border-color: shade-color($secondary, 10%);
   }
 
   &-success {
     background-color: $success;
-    border-color: darken($success, 5%);
+    border-color: shade-color($success, 10%);
   }
 
   &-info {
     background-color: $info;
-    border-color: darken($info, 5%);
+    border-color: shade-color($info, 10%);
   }
 
   &-danger {
     background-color: $danger;
-    border-color: darken($danger, 5%);
+    border-color: shade-color($danger, 10%);
   }
 
   &-warning {
     background-color: $warning;
-    border-color: darken($warning, 5%);
+    border-color: shade-color($warning, 10%);
   }
 
   &-dark {
     background-color: $dark;
-    border-color: darken($dark, 5%);
+    border-color: shade-color($dark, 10%);
   }
 
   &-light {
     background-color: $light;
-    border-color: darken($light, 5%);
+    border-color: shade-color($light, 10%);
   }
 
   .alert-link {
@@ -317,7 +295,7 @@ a.list-group-item {
 
     &.active:hover,
     &.active:focus {
-      background-color: darken($success, 5%);
+      background-color: shade-color($success, 10%);
     }
   }
 
@@ -328,7 +306,7 @@ a.list-group-item {
 
     &.active:hover,
     &.active:focus {
-      background-color: darken($warning, 5%);
+      background-color: shade-color($warning, 10%);
     }
   }
 
@@ -339,7 +317,7 @@ a.list-group-item {
 
     &.active:hover,
     &.active:focus {
-      background-color: darken($danger, 5%);
+      background-color: shade-color($danger, 10%);
     }
   }
 }

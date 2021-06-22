@@ -1,4 +1,4 @@
-// Materia 5.0.1
+// Materia 5.0.2
 // Bootswatch
 
 
@@ -46,7 +46,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;50
   }
 }
 
-@mixin btn($class,$bg,$color){
+@mixin btn($class,$bg,$color) {
   .btn-#{$class} {
     &:focus {
       background-color: $bg;
@@ -55,7 +55,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;50
 
     &:hover,
     &:active:hover {
-      background-color: darken($bg, 6%);
+      background-color: shade-color($bg, 12%);
     }
 
     &:active {
@@ -94,6 +94,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;50
 
   &.bg-dark,
   &.bg-primary {
+    input[type="search"],
     input[type="text"],
     input[type="password"],
     input[type="email"],
