@@ -11036,8 +11036,12 @@ body {
   border-right: none;
 }
 
-.form-select {
+.form-select:not([multiple]) {
   transition: border-color .15s ease-in-out;
+}
+
+.form-select:not([multiple]) option {
+  color: #000;
 }
 
 .bg-light .form-control {
