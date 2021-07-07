@@ -118,8 +118,10 @@ body {
   .nav-link {
     transition: none;
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: $white;
+      isolation: auto;
     }
 
     &,
@@ -142,13 +144,26 @@ body {
     border-radius: $border-radius;
     transform: scale(1.1);
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: $gray-800;
     }
   }
 
   .dropdown-menu {
     border-radius: $border-radius;
+  }
+}
+
+.nav-pills {
+  .nav-link {
+    transition: none;
+
+    &:hover,
+    &:focus {
+      color: $white;
+      isolation: auto;
+    }
   }
 }
 
