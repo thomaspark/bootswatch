@@ -1,4 +1,4 @@
-// Quartz 5.0.2
+// Quartz 5.1.0
 // Bootswatch
 
 
@@ -95,8 +95,12 @@ body {
   border-right: none;
 }
 
-.form-select {
+.form-select:not([multiple]) {
   transition: border-color .15s ease-in-out;
+
+  option {
+    color: $black;
+  }
 }
 
 .bg-light .form-control {
@@ -118,8 +122,10 @@ body {
   .nav-link {
     transition: none;
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: $white;
+      isolation: auto;
     }
 
     &,
@@ -142,13 +148,26 @@ body {
     border-radius: $border-radius;
     transform: scale(1.1);
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: $gray-800;
     }
   }
 
   .dropdown-menu {
     border-radius: $border-radius;
+  }
+}
+
+.nav-pills {
+  .nav-link {
+    transition: none;
+
+    &:hover,
+    &:focus {
+      color: $white;
+      isolation: auto;
+    }
   }
 }
 
