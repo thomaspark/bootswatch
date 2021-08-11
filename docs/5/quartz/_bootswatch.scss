@@ -199,7 +199,7 @@ body {
 
 .badge {
   &.bg-secondary {
-    --bs-bg-opacity: 0.4;
+    --bs-bg-opacity: .4;
   }
 
   &.bg-light {
@@ -218,8 +218,8 @@ body {
 
   @each $color, $value in $theme-colors {
     @if ($color == secondary) {
-        --bs-secondary-rgb: transparent;
-      } @else {
+      --bs-secondary-rgb: transparent;
+    } @else {
       &.bg-#{$color} {
         background-image: none;
       }
