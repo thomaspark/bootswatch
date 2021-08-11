@@ -251,6 +251,11 @@ body {
   }
 }
 
+.accordion-item {
+  @include glass();
+  box-shadow: none;
+}
+
 .toast {
   @include glass();
 }
