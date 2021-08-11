@@ -213,8 +213,12 @@ body {
   @include glass();
 
   @each $color, $value in $theme-colors {
-    &.bg-#{$color} {
-      background-image: none;
+    @if ($color == secondary) {
+        --bs-secondary-rgb: transparent;
+      } @else {
+      &.bg-#{$color} {
+        background-image: none;
+      }
     }
   }
 
