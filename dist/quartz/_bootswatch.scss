@@ -198,6 +198,10 @@ body {
 }
 
 .badge {
+  &.bg-secondary {
+    --bs-bg-opacity: 0.4;
+  }
+
   &.bg-light {
     color: $gray-800;
   }
