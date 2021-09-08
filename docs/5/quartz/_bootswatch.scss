@@ -1,4 +1,4 @@
-// Quartz 5.1.0
+// Quartz 5.1.1
 // Bootswatch
 
 
@@ -198,6 +198,10 @@ body {
 }
 
 .badge {
+  &.bg-secondary {
+    --bs-bg-opacity: .4;
+  }
+
   &.bg-light {
     color: $gray-800;
   }
@@ -213,8 +217,12 @@ body {
   @include glass();
 
   @each $color, $value in $theme-colors {
-    &.bg-#{$color} {
-      background-image: none;
+    @if ($color == secondary) {
+      --bs-secondary-rgb: transparent;
+    } @else {
+      &.bg-#{$color} {
+        background-image: none;
+      }
     }
   }
 
@@ -245,6 +253,11 @@ body {
   &-header {
     font-weight: $headings-font-weight;
   }
+}
+
+.accordion-item {
+  @include glass();
+  box-shadow: none;
 }
 
 .toast {

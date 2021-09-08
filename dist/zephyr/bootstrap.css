@@ -1,12 +1,12 @@
 /*!
- * Bootswatch v5.1.0
+ * Bootswatch v5.1.1
  * Homepage: https://bootswatch.com
  * Copyright 2012-2021 Thomas Park
  * Licensed under MIT
  * Based on Bootstrap
 */
 /*!
- * Bootstrap v5.1.0 (https://getbootstrap.com/)
+ * Bootstrap v5.1.1 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
@@ -53,7 +53,8 @@
   --bs-dark-rgb: 33, 37, 41;
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
-  --bs-body-rgb: 73, 80, 87;
+  --bs-body-color-rgb: 73, 80, 87;
+  --bs-body-bg-rgb: 255, 255, 255;
   --bs-font-sans-serif: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
@@ -8468,7 +8469,7 @@ fieldset:disabled .btn {
 
 .text-body {
   --bs-text-opacity: 1;
-  color: rgba(var(--bs-body-rgb), var(--bs-text-opacity)) !important;
+  color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)) !important;
 }
 
 .text-muted {
@@ -8559,7 +8560,7 @@ fieldset:disabled .btn {
 
 .bg-body {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-body-rgb), var(--bs-bg-opacity)) !important;
+  background-color: rgba(var(--bs-body-bg-rgb), var(--bs-bg-opacity)) !important;
 }
 
 .bg-transparent {
