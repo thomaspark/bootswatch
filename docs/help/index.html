@@ -6,17 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../5/zephyr/bootstrap.css">
     <link rel="stylesheet" href="../_vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../_vendor/prismjs/themes/prism-okaidia.css">
     <link rel="stylesheet" href="../_assets/css/custom.min.css">
-    <style>
-      h1 {
-        padding-top: 3em;
-      }
-
-      code {
-        background-color: #eee;
-        color: inherit;
-      }
-    </style>
     <!-- Global Site Tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23019901-1"></script>
     <script>
@@ -27,7 +18,7 @@
       gtag('config', 'UA-23019901-1');
     </script>
   </head>
-  <body id="help">
+  <body id="help" class="page-help">
     <div class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
       <div class="container">
         <a href="../" class="navbar-brand">
@@ -104,39 +95,38 @@
           <p>Note: <i>There are tradeoffs to the following method, research your tooling before deploying to production.</i></p>
           <p>Before continuing, ensure you've run npm install bootswatch in your local project folder. (Use either npm or yarn.)</p>
           <p>Add the following import to your top-level <code>index.js</code> (or <code>App.js</code>) file. Add it before any other .css imports.</p>
-          <pre>
-import "bootswatch/dist/[theme]/bootstrap.min.css";
-// TODO: Note: Replace ^[theme]^ (examples: darkly, slate, cosmo, spacelab, and superhero. See https://bootswatch.com/ for current theme names.)
-</pre>
+          <pre><code class="language-js">import "bootswatch/dist/[theme]/bootstrap.min.css";
+// TODO: Note: Replace ^[theme]^ with one of the the themes, for example:
+// darkly, slate, cosmo, spacelab, superhero, etc
+// See https://bootswatch.com/ for current theme names.)
+</code></pre>
           <p>Here's an example of updated imports in <code>App.js</code> to use "slate" theme (using a create-react-app fresh project.)</p>
-          <pre>
-import React from 'react';
+          <pre><code class="language-js">import React from 'react';
 import logo from './logo.svg';
 import 'bootswatch/dist/slate/bootstrap.min.css'; // Added this :boom:
 import './App.css';
 
 function App() {
 ...
-</pre>
+</code></pre>
 
           <h4>CDN</h4>
           <p>You can also use the themes via CDN at <a href="https://www.jsdelivr.com/package/npm/bootswatch">jsDelivr</a>.</p>
           <h4>Sass</h4>
           <p>If you're using Sass in your project, you can import the <code>_variables.scss</code> and <code>_bootswatch.scss</code> files for a given theme. This method allows you to override theme variables. Make sure to import Bootstrap's <code>bootstrap.scss</code> in between <code>_variables.scss</code> and <code>_bootswatch.scss</code>!</p>
-          <pre>
-// Your variable overrides can go here, e.g.:
+          <pre><code class="language-scss">// Your variable overrides can go here, e.g.:
 // $h1-font-size: 3rem;
 
 @import "~bootswatch/dist/[theme]/variables";
 @import "~bootstrap/scss/bootstrap";
 @import "~bootswatch/dist/[theme]/bootswatch";
-</pre>
+</code></pre>
         </div>
       </div>
 
       <div class="row">
         <div class="col-lg-9">
-          <h1 id="customization">Customization</h1>
+          <h1 id="customization" class="pt-5">Customization</h1>
           <p>To modify a theme or create your own, follow the steps below in your terminal. You'll need to have <a href="https://docs.github.com/en/github/getting-started-with-github/set-up-git" rel="noopener" target="_blank">Git</a> and <a href="https://nodejs.org/" rel="noopener" target="_blank">Node</a> installed.</p>
           <ol>
             <li><p>Download the repository: <code>git clone https://github.com/thomaspark/bootswatch.git</code></p></li>
@@ -208,6 +198,7 @@ function App() {
 
     <script src="../_vendor/jquery/dist/jquery.min.js"></script>
     <script src="../_vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../_vendor/prismjs/prism.js"></script>
     <script src="../_assets/js/custom.js"></script>
   </body>
 </html>

@@ -19,8 +19,8 @@ iframe {
   }
 }
 
-#home,
-#help {
+.page-home,
+.page-help {
   .navbar {
     background: $gradient;
   }
@@ -32,7 +32,7 @@ iframe {
   }
 }
 
-#home {
+.page-home {
   padding-top: 0;
   .btn {
     padding: .5rem .9rem;
@@ -267,6 +267,17 @@ iframe {
 .bs-component > .btn,
 .bs-component > .btn-toolbar > .btn-group,
 .bs-component > .btn-group,
-#home .section-preview .card .btn-group {
+.page-home .section-preview .card .btn-group {
   margin-bottom: .25rem;
+}
+
+.page-help {
+  padding-top: 5rem;
+
+  h3,
+  h4,
+  h5 {
+    padding-top: 1rem;
+    padding-bottom: .75rem;
+  }
 }

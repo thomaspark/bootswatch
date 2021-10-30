@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  var $navBar = $('#home > .navbar');
+  var $navBar = $('.page-home > .navbar');
 
   $(window).scroll(function () {
     var top = $(document).scrollTop();
