@@ -160,9 +160,7 @@ module.exports = grunt => {
     htmllint: {
       options: {
         ignore: [
-          /Attribute “autocomplete” is only allowed when the input type is.*/,
-          /Attribute “autocomplete” not allowed on element “button” at this point./,
-          /Bad value “” for attribute “action” on element “form”./
+          /Attribute “autocomplete” is only allowed when the input type is.*/
         ]
       },
       src: [
