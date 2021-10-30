@@ -1,4 +1,4 @@
-// stylelint-disable selector-max-id, selector-max-compound-selectors
+// stylelint-disable selector-max-id
 
 $gradient: linear-gradient(145deg, #375ee3 0%, #6543e0 80%) !default;
 
@@ -9,15 +9,6 @@ body {
 iframe {
   overflow: hidden;
   border: none;
-}
-
-@media (min-width: 768px) {
-  body > .navbar-transparent {
-    box-shadow: none;
-    .navbar-nav > .open > a {
-      box-shadow: none;
-    }
-  }
 }
 
 .navbar {
@@ -31,9 +22,7 @@ iframe {
 #home,
 #help {
   .navbar {
-    background: #375ee3;
     background: $gradient;
-    transition: box-shadow 200ms ease-in;
   }
   .navbar-brand {
     .nav-link {
@@ -64,7 +53,7 @@ iframe {
   flex-wrap: wrap;
 
   .dropdown-item {
-    width: 33.333%;
+    width: 33.333333%;
 
     &:first-child {
       width: 100%;
@@ -185,7 +174,6 @@ iframe {
     width: 80px;
     height: 80px;
     margin: 0 auto 1rem;
-    background: #375ee3;
     background: $gradient;
     border-radius: 50%;
     font-size: 2rem;
@@ -273,7 +261,6 @@ iframe {
 @media (min-width: 992px) {
   .navbar-transparent {
     background: none !important;
-    box-shadow: none;
   }
 }
 
