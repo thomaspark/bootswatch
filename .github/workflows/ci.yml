@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 env:
   FORCE_COLOR: 2
-  NODE: 14
+  NODE: 16
 
 jobs:
   test:
@@ -25,14 +25,14 @@ jobs:
       - name: Install npm dependencies
         run: npm ci
 
-      - name: Build the files
+      - name: Build themes
         run: npm run build
 
-      - name: Build the docs files
+      - name: Build docs
         run: npm run docs
 
       - name: Run tests
         run: npm test
 
-      - name: Run vnu.jar tests
+      - name: Run vnu-jar
         run: npm run htmllint
