@@ -1,7 +1,7 @@
 'use strict';
 
 const path = require('path');
-const sass = require('node-sass');
+const sass = require('sass');
 const autoprefixer = require('autoprefixer');
 const pkg = require('./package.json');
 
@@ -114,8 +114,7 @@ module.exports = grunt => {
     sass: {
       options: {
         implementation: sass,
-        outputStyle: 'expanded',
-        precision: 6
+        outputStyle: 'expanded'
       },
       dist: {
         src: [],
