@@ -209,7 +209,7 @@ module.exports = grunt => {
       return;
     }
 
-    const concatSrc = path.join(BUILD_DIR, '/scss/build.scss');
+    const concatSrc = path.join(BUILD_DIR, '/build.scss');
     const concatDest = path.join(themeDir, '/build.scss');
     const cssDest = path.join(themeDir, '/bootstrap.css');
     const cssDestMin = path.join(themeDir, '/bootstrap.min.css');
