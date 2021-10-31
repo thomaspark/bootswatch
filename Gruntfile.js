@@ -6,17 +6,13 @@ const autoprefixer = require('autoprefixer');
 const pkg = require('./package.json');
 
 const banner = `/*!
- * Bootswatch v${pkg.version}
- * Homepage: ${pkg.homepage}
+ * Bootswatch v${pkg.version} (${pkg.homepage})
  * Copyright 2012-${new Date().getFullYear()} ${pkg.author}
  * Licensed under ${pkg.license}
  * Based on Bootstrap
 */
 `;
 
-const BUILD_DIR = 'build/';
-const DIST_DIR = 'dist/';
-const DOCS_DEST = 'docs/5/';
 const SWATCHES = [
   'cerulean',
   'cosmo',
@@ -44,6 +40,10 @@ const SWATCHES = [
   'yeti',
   'zephyr'
 ];
+
+const BUILD_DIR = 'build/';
+const DIST_DIR = 'dist/';
+const DOCS_DEST = 'docs/5/';
 let buildTheme = '';
 
 module.exports = grunt => {
