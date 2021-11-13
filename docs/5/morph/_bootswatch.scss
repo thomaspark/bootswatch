@@ -355,7 +355,7 @@ $btn-box-shadow-inset: inset 2px 3px 6px rgba($black, .2), inset -3px -2px 6px r
 }
 
 .form-control {
-  &::-webkit-file-upload-button {
+  &::file-selector-button {
     box-shadow: 2px 2px 5px rgba($black, .2), inset 3px 3px 10px rgba(shade-color($form-range-thumb-bg, 50%), .1);
   }
 }
