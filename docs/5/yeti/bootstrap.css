@@ -11452,9 +11452,8 @@ label,
   border-color: rgba(0, 0, 0, 0.1);
   background-color: #eee;
 }
-.nav-tabs .nav-link:hover,
-.nav-tabs .nav-link:focus {
-  background-color: #f0f0f0;
+.nav-tabs .nav-item + .nav-item .nav-link {
+  border-left: none;
 }
 
 .nav-pills .active {

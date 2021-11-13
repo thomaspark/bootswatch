@@ -246,9 +246,10 @@ label,
     background-color: $gray-200;
   }
 
-  .nav-link:hover,
-  .nav-link:focus {
-    background-color: tint-color($gray-200, 10%);
+  .nav-item + .nav-item {
+    .nav-link {
+      border-left: none;
+    }
   }
 }
 
