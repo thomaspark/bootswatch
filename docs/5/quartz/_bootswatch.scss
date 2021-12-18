@@ -43,8 +43,8 @@ body {
 
 .btn {
   &-secondary {
-    border: none;
     color: $white;
+    border: none;
 
     &:hover,
     &:focus {
@@ -104,8 +104,8 @@ body {
 }
 
 .bg-light .form-control {
-  border-color: rgba($black, .2);
   color: $gray-800;
+  border-color: rgba($black, .2);
 
   &::placeholder {
     color: rgba($black, .2);
@@ -182,12 +182,12 @@ body {
   @each $color, $value in $theme-colors {
     $opacity: .7;
     &-#{$color}::after {
-      content: "";
       position: absolute;
-      left: 0;
       top: 0;
+      left: 0;
       width: .5rem;
       height: 100%;
+      content: "";
       background-color: $value;
     }
   }

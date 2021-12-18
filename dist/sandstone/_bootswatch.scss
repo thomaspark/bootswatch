@@ -25,8 +25,8 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;70
 
 .sandstone {
   font-size: 13px;
-  line-height: 22px;
   font-weight: 500;
+  line-height: 22px;
   text-transform: uppercase;
 }
 
@@ -93,17 +93,17 @@ input,
   .nav-link.disabled,
   .nav-link.disabled:hover,
   .nav-link.disabled:focus {
+    color: $nav-link-disabled-color;
     background-color: $gray-200;
     border-color: $gray-300;
-    color: $nav-link-disabled-color;
   }
 }
 
 .nav-pills {
   .nav-link {
     @extend .sandstone;
-    border: 1px solid transparent;
     color: $gray-600;
+    border: 1px solid transparent;
   }
 
   .nav-link.active,
@@ -115,9 +115,9 @@ input,
 
   .nav-link.disabled,
   .nav-link.disabled:hover {
+    color: $gray-300;
     background-color: transparent;
     border-color: transparent;
-    color: $gray-300;
   }
 }
 

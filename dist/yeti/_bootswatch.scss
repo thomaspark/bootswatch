@@ -27,8 +27,8 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,
     .dropdown-item.active,
     .dropdown-item:hover,
     .dropdown-item:focus {
-      background-color: shade-color($primary, 10%);
       color: $white;
+      background-color: shade-color($primary, 10%);
     }
   }
 }
@@ -47,8 +47,8 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,
     .dropdown-item.active,
     .dropdown-item:hover,
     .dropdown-item:focus  {
-      background-color: shade-color($gray-800, 10%);
       color: $white;
+      background-color: shade-color($gray-800, 10%);
     }
   }
 }
@@ -65,8 +65,8 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,
     .dropdown-item.active,
     .dropdown-item:hover,
     .dropdown-item:focus  {
-      background-color: tint-color($gray-200, 10%);
       color: $navbar-light-hover-color;
+      background-color: tint-color($gray-200, 10%);
     }
   }
 }
@@ -87,8 +87,8 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,
   }
 
   &-info {
-    border-color: shade-color($info, 10%);
     color: $white;
+    border-color: shade-color($info, 10%);
   }
 
   &-danger {
@@ -96,8 +96,8 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,
   }
 
   &-warning {
-    border-color: shade-color($warning, 10%);
     color: $white;
+    border-color: shade-color($warning, 10%);
   }
 
   &-light {
@@ -242,8 +242,8 @@ label,
   .nav-link.disabled,
   .nav-link.disabled:hover,
   .nav-link.disabled:focus {
-    border-color: $nav-tabs-border-color;
     background-color: $gray-200;
+    border-color: $nav-tabs-border-color;
   }
 
   .nav-item + .nav-item {
@@ -260,20 +260,20 @@ label,
 }
 
 .breadcrumb {
-  border: 1px solid $dropdown-border-color;
   font-size: $font-size-sm;
   font-weight: 300;
   text-transform: uppercase;
+  border: 1px solid $dropdown-border-color;
 }
 
 .pagination {
   font-weight: 300;
 
   .page-link {
+    margin-right: .1em;
+    margin-left: .1em;
     border-color: transparent;
     border-radius: 3px;
-    margin-left: .1em;
-    margin-right: .1em;
 
     &:hover,
     &:focus {

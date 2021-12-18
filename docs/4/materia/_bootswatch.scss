@@ -14,21 +14,21 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;50
   position: relative;
 
   &::before {
-    content: "";
-    display: block;
     position: absolute;
-    width: 100%;
-    height: 100%;
     top: 0;
     left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
     margin-left: 0;
-    @include gradient-radial($color 10%, transparent 10.01%);
-    background-size: 1000% 1000%;
+    pointer-events: none;
+    content: "";
     background-position: 50%;
+    background-size: 1000% 1000%;
     border: none;
     opacity: 0;
-    pointer-events: none;
     transition: background .5s, opacity 1s;
+    @include gradient-radial($color 10%, transparent 10.01%);
   }
 
   &:active::before {
@@ -130,14 +130,14 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;50
   transition: color .4s, background-color .4s, border-color .4s, box-shadow .4s;
 
   &-link {
-    box-shadow: none;
     color: $link-color;
+    box-shadow: none;
 
     &:hover,
     &:focus {
-      box-shadow: none;
       color: $link-hover-color;
       text-decoration: $link-hover-decoration;
+      box-shadow: none;
     }
 
     &.disabled, // Although btn-link is intended for buttons, which want to look like link, I include here a.disable for the sake of consistency
@@ -155,8 +155,8 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;50
     &.disabled,
     &[disabled],
     fieldset[disabled] & {
-      background-color: rgba($black, .1);
       color: rgba($black, .4);
+      background-color: rgba($black, .1);
       opacity: 1;
 
       &:hover,
@@ -167,8 +167,8 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;50
   }
 
   &-outline-secondary {
-    border-color: $gray-200;
     color: $gray-300;
+    border-color: $gray-200;
   }
 
   &-warning {
@@ -236,8 +236,8 @@ p {
 }
 
 .thead-inverse th {
-  background-color: $primary;
   color: $white;
+  background-color: $primary;
 }
 
 // Forms =======================================================================
@@ -275,8 +275,8 @@ input[type="number"],
 
   &[disabled],
   &[readonly] {
-    box-shadow: none;
     border-bottom: 1px dotted mix($white, $black, 86.7%);
+    box-shadow: none;
   }
 
   &[disabled],
@@ -291,13 +291,13 @@ input[type="number"],
 
 select,
 select.form-control {
-  appearance: none;
   padding: .5rem 0;
   background-image: escape-svg(url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 4'%3e%3cpolygon fill='#{$gray-600}' points='8 0 4 4 0 0'/%3e%3c/svg%3e%0a"));
-  background-size: 8px 4px;
   background-repeat: no-repeat;
   background-position: right center;
+  background-size: 8px 4px;
   box-shadow: $input-box-shadow;
+  appearance: none;
 
   &::-ms-expand {
     display: none;
@@ -314,8 +314,8 @@ select.form-control {
   }
 
   &:focus {
-    box-shadow: $input-focus-box-shadow;
     background-image: escape-svg(url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 4'%3e%3cpolygon fill='#{$gray-900}' points='8 0 4 4 0 0'/%3e%3c/svg%3e%0a"));
+    box-shadow: $input-focus-box-shadow;
   }
 
   &[multiple] {
@@ -364,8 +364,8 @@ select.form-control {
       transition: border-color .24s;
     }
     ~ .custom-control-label::after {
-      transform: scale(1.125);
       transition: background-image .24s, transform .24s;
+      transform: scale(1.125);
     }
   }
 }
@@ -473,8 +473,8 @@ select.form-control {
   .has-danger &,
   .has-success & {
     color: $input-color;
-    border-color: $input-group-addon-border-color;
     background-color: $input-group-addon-bg;
+    border-color: $input-group-addon-border-color;
   }
 }
 
@@ -488,8 +488,8 @@ select.form-control {
   }
 
   .form-control {
-    padding-left: .25rem;
     padding-right: .25rem;
+    padding-left: .25rem;
   }
 }
 
@@ -561,28 +561,28 @@ select.form-control {
   .nav-link,
   .nav-link:focus {
     margin-right: 0;
+    color: $body-color;
     background-color: transparent;
     border: none;
-    color: $body-color;
     box-shadow: inset 0 -1px 0 mix($white, $black, 86.7%);
     transition: color .2s, box-shadow .2s;
 
     &:hover {
+      color: $primary;
       background-color: transparent;
       box-shadow: inset 0 -2px 0 $primary;
-      color: $primary;
     }
   }
 
   .nav-link.active,
   .nav-link.active:focus {
+    color: $primary;
     border: none;
     box-shadow: inset 0 -2px 0 $primary;
-    color: $primary;
 
     &:hover {
-      border: none;
       color: $primary;
+      border: none;
     }
   }
 
@@ -640,8 +640,8 @@ select.form-control {
 
   a:not(.btn),
   .alert-link {
-    color: $white;
     font-weight: 700;
+    color: $white;
   }
 
   .close {
@@ -660,8 +660,8 @@ select.form-control {
 
 .badge {
   &-secondary {
-    background-color: $gray-500;
     color: $white;
+    background-color: $gray-500;
   }
 
   &-light {

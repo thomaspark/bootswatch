@@ -49,8 +49,8 @@ iframe {
 
 .dropdown-menu.show[aria-labelledby="themes"] {
   display: flex;
-  width: 420px;
   flex-wrap: wrap;
+  width: 420px;
 
   .dropdown-item {
     width: 33.333333%;
@@ -73,8 +73,8 @@ iframe {
     position: relative;
     top: auto;
     right: auto;
-    left: auto;
     bottom: auto;
+    left: auto;
     z-index: 1;
     display: block;
   }
@@ -90,11 +90,11 @@ iframe {
 }
 
 .source-button {
-  display: none;
   position: absolute;
   top: 0;
   right: 0;
   z-index: 100;
+  display: none;
   font-weight: 700;
 }
 
@@ -128,20 +128,20 @@ iframe {
     margin-bottom: 1.5em;
   }
   p {
-    clear: left;
     margin-bottom: 0;
+    clear: left;
   }
 }
 
 .splash {
   position: relative;
   padding: 12em 0 6em;
-  background-color: #375ee3;
-  background-image: url("../img/splash.svg"), $gradient;
-  background-size: cover;
-  background-repeat: no-repeat;
   color: #fff;
   text-align: center;
+  background-color: #375ee3;
+  background-image: url("../img/splash.svg"), $gradient;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   .logo {
     width: 160px;
@@ -164,20 +164,20 @@ iframe {
 
 .section-tout {
   padding: 6em 0 1em;
-  border-bottom: 1px solid rgba(0, 0, 0, .05);
-  background-color: #eaf1f1;
   text-align: center;
+  background-color: #eaf1f1;
+  border-bottom: 1px solid rgba(0, 0, 0, .05);
   .icon {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     width: 80px;
     height: 80px;
     margin: 0 auto 1rem;
-    background: $gradient;
-    border-radius: 50%;
     font-size: 2rem;
     color: rgba(255, 255, 255, .9);
+    background: $gradient;
+    border-radius: 50%;
   }
   p {
     margin-bottom: 5em;
@@ -199,8 +199,8 @@ iframe {
     }
     .options {
       padding: 2em;
-      border-top: 1px solid rgba(0, 0, 0, .125);
       text-align: center;
+      border-top: 1px solid rgba(0, 0, 0, .125);
       p {
         margin-bottom: 2em;
       }
