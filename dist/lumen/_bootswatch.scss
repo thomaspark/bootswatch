@@ -124,8 +124,8 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,w
     &:not(.disabled):focus,
     &.active {
       padding-bottom: add(.5rem, 6px);
-      border-bottom-color: transparent;
       margin-top: 0;
+      border-bottom-color: transparent;
     }
   }
 
@@ -151,16 +151,16 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,w
   > li > span {
     position: relative;
     top: 0;
-    @include shadow();
-    color: $pagination-color;
     font-weight: 700;
+    color: $pagination-color;
     text-transform: uppercase;
+    @include shadow();
 
     &:hover,
     &:focus {
       top: 1px;
-      border-bottom-width: 3px;
       text-decoration: none;
+      border-bottom-width: 3px;
     }
 
     &:active {
@@ -191,8 +191,8 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,w
     &,
     &:hover,
     &:active {
-      border-left-width: 2px;
       border-right-width: 2px;
+      border-left-width: 2px;
     }
   }
 }

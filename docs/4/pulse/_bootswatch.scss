@@ -12,20 +12,20 @@
   }
 
   &-secondary {
+    color: $gray-900;
     background-color: $white;
     border-color: #ccc;
-    color: $gray-900;
 
     &:hover {
+      color: $gray-900;
       background-color: $gray-300;
       border-color: $gray-500;
-      color: $gray-900;
     }
 
     &.disabled {
+      color: lighten($gray-900, 5%);
       background-color: $white;
       border-color: lighten(#ccc, 5%);
-      color: lighten($gray-900, 5%);
     }
   }
 

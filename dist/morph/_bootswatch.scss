@@ -19,17 +19,17 @@ $btn-box-shadow-inset: inset 2px 3px 6px rgba($black, .2), inset -3px -2px 6px r
 }
 
 @mixin shadow-outline($shadow: $box-shadow) {
-  content: "";
   position: absolute;
-  left: -.5rem;
-  right: -.5rem;
   top: -.5rem;
+  right: -.5rem;
   bottom: -.5rem;
+  left: -.5rem;
+  z-index: -1;
+  content: "";
   background-color: $body-bg;
   border: 1px solid rgba($white, .1);
   box-shadow: $shadow;
   transition: background-color .15s ease-in-out, border .15s ease-in-out, box-shadow .15s ease-in-out, color .15s ease-in-out;
-  z-index: -1;
 }
 
 // Buttons
@@ -64,11 +64,11 @@ $btn-box-shadow-inset: inset 2px 3px 6px rgba($black, .2), inset -3px -2px 6px r
       &:active,
       &:active:focus {
         @if ($color == secondary or $color == light) {
-          background-color: $gray-200;
           color: $gray-700;
+          background-color: $gray-200;
         } @else {
-          background-color: $value;
           color: $white;
+          background-color: $value;
         }
       }
     }
@@ -85,9 +85,9 @@ $btn-box-shadow-inset: inset 2px 3px 6px rgba($black, .2), inset -3px -2px 6px r
   }
 
   &.disabled {
+    color: $gray-700;
     background-color: $gray-200;
     box-shadow: 2px 2px 5px rgba($black, .1), -2px -2px 5px rgba($white, .5);
-    color: $gray-700;
   }
 }
 
@@ -95,8 +95,8 @@ $btn-box-shadow-inset: inset 2px 3px 6px rgba($black, .2), inset -3px -2px 6px r
   @each $color, $value in $theme-colors {
     &-#{$color} {
       background-color: $value;
-      box-shadow: 5px 5px 10px rgba($black, .2), -5px -5px 10px rgba($white, .1);
       border: none;
+      box-shadow: 5px 5px 10px rgba($black, .2), -5px -5px 10px rgba($white, .1);
 
       @if ($color == secondary or $color == light) {
         color: $gray-700;
@@ -136,14 +136,14 @@ $btn-box-shadow-inset: inset 2px 3px 6px rgba($black, .2), inset -3px -2px 6px r
 .btn-group,
 .btn-group-vertical {
   @include shadow();
-  border-radius: $btn-border-radius;
   border: none;
+  border-radius: $btn-border-radius;
 
   .btn,
   .btn-group {
     margin: 0;
-    box-shadow: none;
     border: none;
+    box-shadow: none;
 
     &:hover,
     &:active,
@@ -194,29 +194,29 @@ $btn-box-shadow-inset: inset 2px 3px 6px rgba($black, .2), inset -3px -2px 6px r
   > .btn:nth-child(n + 3),
   > :not(.btn-check) + .btn,
   > .btn-group:not(:first-child) > .btn {
+    border-top: 1px solid rgba($black, .05);
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    border-top: 1px solid rgba($black, .05);
 
     &:hover,
     &:active,
     &:active:focus {
+      border-top: 1px solid rgba($black, .05);
       border-top-left-radius: 0;
       border-top-right-radius: 0;
-      border-top: 1px solid rgba($black, .05);
     }
   }
 
   > .btn:not(:last-child):not(.dropdown-toggle),
   > .btn-group:not(:last-child) > .btn {
-    border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
 
     &:hover,
     &:active,
     &:active:focus {
-      border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
     }
   }
 }
@@ -243,8 +243,8 @@ $btn-box-shadow-inset: inset 2px 3px 6px rgba($black, .2), inset -3px -2px 6px r
 
 .btn-check:not(:checked) + .btn,
 .btn-check:not(:checked) + .btn:active {
-  background-color: $gray-200;
   color: $gray-700;
+  background-color: $gray-200;
 }
 
 .btn-check:checked ~ .btn-check:active + .btn,
@@ -312,9 +312,9 @@ $btn-box-shadow-inset: inset 2px 3px 6px rgba($black, .2), inset -3px -2px 6px r
   box-shadow: $box-shadow-inset;
 
   > .form-control {
-    background: none;
-    padding-left: 0;
     padding-right: 0;
+    padding-left: 0;
+    background: none;
     box-shadow: none;
   }
 

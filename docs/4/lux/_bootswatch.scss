@@ -12,8 +12,8 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;6
 
 .navbar {
   font-size: $font-size-sm;
-  text-transform: uppercase;
   font-weight: 600;
+  text-transform: uppercase;
 
   &-nav {
     .nav-link {
@@ -68,15 +68,15 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;6
 }
 
 .btn-outline-secondary {
-  border-color: $gray-600;
   color: $gray-600;
+  border-color: $gray-600;
 
   &:not([disabled]):not(.disabled):hover,
   &:not([disabled]):not(.disabled):focus,
   &:not([disabled]):not(.disabled):active {
+    color: $white;
     background-color: $gray-400;
     border-color: $gray-400;
-    color: $white;
   }
 
   &:not([disabled]):not(.disabled):focus {

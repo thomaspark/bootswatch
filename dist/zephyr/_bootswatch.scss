@@ -16,8 +16,8 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700
   font-weight: 500;
 
   .nav-item {
-    margin-left: .5rem;
     margin-right: .5rem;
+    margin-left: .5rem;
   }
 
   .navbar-nav {
@@ -94,13 +94,13 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700
 // Tables
 
 .table {
-  box-shadow: $box-shadow-lg;
   font-size: $font-size-sm;
+  box-shadow: $box-shadow-lg;
 }
 
 thead th {
-  text-transform: uppercase;
   font-size: $font-size-sm;
+  text-transform: uppercase;
 }
 
 // Forms
@@ -140,11 +140,11 @@ thead th {
 }
 
 .breadcrumb {
+  font-size: $font-size-sm;
+  font-weight: 500;
   border: 1px solid $gray-300;
   border-radius: $border-radius;
   box-shadow: $box-shadow;
-  font-size: $font-size-sm;
-  font-weight: 500;
 
   &-item {
     padding: 1rem .5rem 1rem 0;
