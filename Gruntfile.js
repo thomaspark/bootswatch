@@ -79,9 +79,9 @@ module.exports = grunt => {
       vendor: {
         files: [{
           expand: true,
-          cwd: 'node_modules/font-awesome',
-          src: ['css/**', 'fonts/**'],
-          dest: 'docs/_vendor/font-awesome/'
+          cwd: 'node_modules/bootstrap-icons',
+          src: ['font/**'],
+          dest: 'docs/_vendor/bootstrap-icons/'
         }, {
           expand: true,
           cwd: 'node_modules/jquery',

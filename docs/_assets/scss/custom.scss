@@ -12,8 +12,7 @@ iframe {
 }
 
 .navbar {
-  .fa,
-  .fab {
+  .bi {
     margin-right: .25rem;
     font-size: 1rem;
   }
@@ -175,6 +174,7 @@ iframe {
     height: 80px;
     margin: 0 auto 1rem;
     font-size: 2rem;
+    line-height: 1;
     color: rgba(255, 255, 255, .9);
     background: $gradient;
     border-radius: 50%;
@@ -252,7 +252,7 @@ iframe {
 
 @media (max-width: 991px) {
   .navbar {
-    .fa {
+    .bi {
       display: none;
     }
   }
