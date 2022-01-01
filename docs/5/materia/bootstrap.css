@@ -1,8 +1,7 @@
 @charset "UTF-8";
 /*!
- * Bootswatch v5.1.3
- * Homepage: https://bootswatch.com
- * Copyright 2012-2021 Thomas Park
+ * Bootswatch v5.1.3 (https://bootswatch.com)
+ * Copyright 2012-2022 Thomas Park
  * Licensed under MIT
  * Based on Bootstrap
 */
@@ -11412,21 +11411,21 @@ textarea.form-control-lg {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 .btn-primary::before {
-  content: "";
-  display: block;
   position: absolute;
-  width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
   margin-left: 0;
-  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
-  background-size: 1000% 1000%;
+  pointer-events: none;
+  content: "";
   background-position: 50%;
+  background-size: 1000% 1000%;
   border: none;
   opacity: 0;
-  pointer-events: none;
   transition: background 0.5s, opacity 1s;
+  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
 }
 .btn-primary:active::before {
   background-size: 0 0;
@@ -11441,21 +11440,21 @@ textarea.form-control-lg {
   position: relative;
 }
 .btn-outline-primary::before {
-  content: "";
-  display: block;
   position: absolute;
-  width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
   margin-left: 0;
-  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
-  background-size: 1000% 1000%;
+  pointer-events: none;
+  content: "";
   background-position: 50%;
+  background-size: 1000% 1000%;
   border: none;
   opacity: 0;
-  pointer-events: none;
   transition: background 0.5s, opacity 1s;
+  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
 }
 .btn-outline-primary:active::before {
   background-size: 0 0;
@@ -11480,21 +11479,21 @@ textarea.form-control-lg {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 .btn-secondary::before {
-  content: "";
-  display: block;
   position: absolute;
-  width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
   margin-left: 0;
-  background-image: radial-gradient(circle, #bbb 10%, transparent 10.01%);
-  background-size: 1000% 1000%;
+  pointer-events: none;
+  content: "";
   background-position: 50%;
+  background-size: 1000% 1000%;
   border: none;
   opacity: 0;
-  pointer-events: none;
   transition: background 0.5s, opacity 1s;
+  background-image: radial-gradient(circle, #bbb 10%, transparent 10.01%);
 }
 .btn-secondary:active::before {
   background-size: 0 0;
@@ -11509,21 +11508,21 @@ textarea.form-control-lg {
   position: relative;
 }
 .btn-outline-secondary::before {
-  content: "";
-  display: block;
   position: absolute;
-  width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
   margin-left: 0;
-  background-image: radial-gradient(circle, #bbb 10%, transparent 10.01%);
-  background-size: 1000% 1000%;
+  pointer-events: none;
+  content: "";
   background-position: 50%;
+  background-size: 1000% 1000%;
   border: none;
   opacity: 0;
-  pointer-events: none;
   transition: background 0.5s, opacity 1s;
+  background-image: radial-gradient(circle, #bbb 10%, transparent 10.01%);
 }
 .btn-outline-secondary:active::before {
   background-size: 0 0;
@@ -11548,21 +11547,21 @@ textarea.form-control-lg {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 .btn-success::before {
-  content: "";
-  display: block;
   position: absolute;
-  width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
   margin-left: 0;
-  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
-  background-size: 1000% 1000%;
+  pointer-events: none;
+  content: "";
   background-position: 50%;
+  background-size: 1000% 1000%;
   border: none;
   opacity: 0;
-  pointer-events: none;
   transition: background 0.5s, opacity 1s;
+  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
 }
 .btn-success:active::before {
   background-size: 0 0;
@@ -11577,21 +11576,21 @@ textarea.form-control-lg {
   position: relative;
 }
 .btn-outline-success::before {
-  content: "";
-  display: block;
   position: absolute;
-  width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
   margin-left: 0;
-  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
-  background-size: 1000% 1000%;
+  pointer-events: none;
+  content: "";
   background-position: 50%;
+  background-size: 1000% 1000%;
   border: none;
   opacity: 0;
-  pointer-events: none;
   transition: background 0.5s, opacity 1s;
+  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
 }
 .btn-outline-success:active::before {
   background-size: 0 0;
@@ -11616,21 +11615,21 @@ textarea.form-control-lg {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 .btn-info::before {
-  content: "";
-  display: block;
   position: absolute;
-  width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
   margin-left: 0;
-  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
-  background-size: 1000% 1000%;
+  pointer-events: none;
+  content: "";
   background-position: 50%;
+  background-size: 1000% 1000%;
   border: none;
   opacity: 0;
-  pointer-events: none;
   transition: background 0.5s, opacity 1s;
+  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
 }
 .btn-info:active::before {
   background-size: 0 0;
@@ -11645,21 +11644,21 @@ textarea.form-control-lg {
   position: relative;
 }
 .btn-outline-info::before {
-  content: "";
-  display: block;
   position: absolute;
-  width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
   margin-left: 0;
-  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
-  background-size: 1000% 1000%;
+  pointer-events: none;
+  content: "";
   background-position: 50%;
+  background-size: 1000% 1000%;
   border: none;
   opacity: 0;
-  pointer-events: none;
   transition: background 0.5s, opacity 1s;
+  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
 }
 .btn-outline-info:active::before {
   background-size: 0 0;
@@ -11684,21 +11683,21 @@ textarea.form-control-lg {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 .btn-warning::before {
-  content: "";
-  display: block;
   position: absolute;
-  width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
   margin-left: 0;
-  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
-  background-size: 1000% 1000%;
+  pointer-events: none;
+  content: "";
   background-position: 50%;
+  background-size: 1000% 1000%;
   border: none;
   opacity: 0;
-  pointer-events: none;
   transition: background 0.5s, opacity 1s;
+  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
 }
 .btn-warning:active::before {
   background-size: 0 0;
@@ -11713,21 +11712,21 @@ textarea.form-control-lg {
   position: relative;
 }
 .btn-outline-warning::before {
-  content: "";
-  display: block;
   position: absolute;
-  width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
   margin-left: 0;
-  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
-  background-size: 1000% 1000%;
+  pointer-events: none;
+  content: "";
   background-position: 50%;
+  background-size: 1000% 1000%;
   border: none;
   opacity: 0;
-  pointer-events: none;
   transition: background 0.5s, opacity 1s;
+  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
 }
 .btn-outline-warning:active::before {
   background-size: 0 0;
@@ -11752,21 +11751,21 @@ textarea.form-control-lg {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 .btn-danger::before {
-  content: "";
-  display: block;
   position: absolute;
-  width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
   margin-left: 0;
-  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
-  background-size: 1000% 1000%;
+  pointer-events: none;
+  content: "";
   background-position: 50%;
+  background-size: 1000% 1000%;
   border: none;
   opacity: 0;
-  pointer-events: none;
   transition: background 0.5s, opacity 1s;
+  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
 }
 .btn-danger:active::before {
   background-size: 0 0;
@@ -11781,21 +11780,21 @@ textarea.form-control-lg {
   position: relative;
 }
 .btn-outline-danger::before {
-  content: "";
-  display: block;
   position: absolute;
-  width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
   margin-left: 0;
-  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
-  background-size: 1000% 1000%;
+  pointer-events: none;
+  content: "";
   background-position: 50%;
+  background-size: 1000% 1000%;
   border: none;
   opacity: 0;
-  pointer-events: none;
   transition: background 0.5s, opacity 1s;
+  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
 }
 .btn-outline-danger:active::before {
   background-size: 0 0;
@@ -11820,21 +11819,21 @@ textarea.form-control-lg {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 .btn-dark::before {
-  content: "";
-  display: block;
   position: absolute;
-  width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
   margin-left: 0;
-  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
-  background-size: 1000% 1000%;
+  pointer-events: none;
+  content: "";
   background-position: 50%;
+  background-size: 1000% 1000%;
   border: none;
   opacity: 0;
-  pointer-events: none;
   transition: background 0.5s, opacity 1s;
+  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
 }
 .btn-dark:active::before {
   background-size: 0 0;
@@ -11849,21 +11848,21 @@ textarea.form-control-lg {
   position: relative;
 }
 .btn-outline-dark::before {
-  content: "";
-  display: block;
   position: absolute;
-  width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
   margin-left: 0;
-  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
-  background-size: 1000% 1000%;
+  pointer-events: none;
+  content: "";
   background-position: 50%;
+  background-size: 1000% 1000%;
   border: none;
   opacity: 0;
-  pointer-events: none;
   transition: background 0.5s, opacity 1s;
+  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
 }
 .btn-outline-dark:active::before {
   background-size: 0 0;
@@ -11888,21 +11887,21 @@ textarea.form-control-lg {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 .btn-light::before {
-  content: "";
-  display: block;
   position: absolute;
-  width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
   margin-left: 0;
-  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
-  background-size: 1000% 1000%;
+  pointer-events: none;
+  content: "";
   background-position: 50%;
+  background-size: 1000% 1000%;
   border: none;
   opacity: 0;
-  pointer-events: none;
   transition: background 0.5s, opacity 1s;
+  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
 }
 .btn-light:active::before {
   background-size: 0 0;
@@ -11917,21 +11916,21 @@ textarea.form-control-lg {
   position: relative;
 }
 .btn-outline-light::before {
-  content: "";
-  display: block;
   position: absolute;
-  width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
   margin-left: 0;
-  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
-  background-size: 1000% 1000%;
+  pointer-events: none;
+  content: "";
   background-position: 50%;
+  background-size: 1000% 1000%;
   border: none;
   opacity: 0;
-  pointer-events: none;
   transition: background 0.5s, opacity 1s;
+  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
 }
 .btn-outline-light:active::before {
   background-size: 0 0;
@@ -11949,28 +11948,28 @@ textarea.form-control-lg {
   transition: color 0.4s, background-color 0.4s, border-color 0.4s, box-shadow 0.4s;
 }
 .btn-link {
-  box-shadow: none;
   color: #2196f3;
+  box-shadow: none;
 }
 .btn-link:hover, .btn-link:focus {
-  box-shadow: none;
   color: #1a78c2;
+  box-shadow: none;
 }
 .btn-link.disabled:hover, .btn-link.disabled:active:hover, .btn-link[disabled]:hover, .btn-link[disabled]:active:hover, fieldset[disabled] .btn-link:hover, fieldset[disabled] .btn-link:active:hover {
   color: #666;
   text-decoration: none;
 }
 .btn-secondary.disabled, .btn-secondary[disabled], fieldset[disabled] .btn-secondary {
-  background-color: rgba(0, 0, 0, 0.1);
   color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.1);
   opacity: 1;
 }
 .btn-secondary.disabled:hover, .btn-secondary.disabled:focus, .btn-secondary[disabled]:hover, .btn-secondary[disabled]:focus, fieldset[disabled] .btn-secondary:hover, fieldset[disabled] .btn-secondary:focus {
   background-color: rgba(0, 0, 0, 0.1);
 }
 .btn-outline-secondary {
-  border-color: #eee;
   color: #dee2e6;
+  border-color: #eee;
 }
 .btn-warning {
   color: #fff;
@@ -12018,8 +12017,8 @@ p {
 }
 
 .thead-inverse th {
-  background-color: #2196f3;
   color: #fff;
+  background-color: #2196f3;
 }
 
 .col-form-label {
@@ -12084,8 +12083,8 @@ input[type=number][readonly],
 [type=tel].form-control[readonly],
 [contenteditable].form-control[disabled],
 [contenteditable].form-control[readonly] {
-  box-shadow: none;
   border-bottom: 1px dotted #ddd;
+  box-shadow: none;
 }
 textarea[disabled]::-moz-placeholder, textarea.form-control[disabled]::-moz-placeholder, input.form-control[disabled]::-moz-placeholder, input[type=text][disabled]::-moz-placeholder, input[type=password][disabled]::-moz-placeholder, input[type=email][disabled]::-moz-placeholder, input[type=number][disabled]::-moz-placeholder, [type=text].form-control[disabled]::-moz-placeholder, [type=password].form-control[disabled]::-moz-placeholder, [type=email].form-control[disabled]::-moz-placeholder, [type=tel].form-control[disabled]::-moz-placeholder, [contenteditable].form-control[disabled]::-moz-placeholder {
   color: #ddd;
@@ -12118,15 +12117,15 @@ input[type=number][disabled]::placeholder,
 
 select,
 select.form-control {
+  padding: 0.5rem 0;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 4'%3e%3cpath fill='%23666' d='M8 0 4 4 0 0z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 8px 4px;
+  box-shadow: inset 0 -1px 0 #ddd;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  padding: 0.5rem 0;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 4'%3e%3cpath fill='%23666' d='M8 0 4 4 0 0z'/%3e%3c/svg%3e");
-  background-size: 8px 4px;
-  background-repeat: no-repeat;
-  background-position: right center;
-  box-shadow: inset 0 -1px 0 #ddd;
 }
 select.input-sm,
 select.form-control.input-sm {
@@ -12138,8 +12137,8 @@ select.form-control.input-lg {
 }
 select:focus,
 select.form-control:focus {
-  box-shadow: inset 0 -2px 0 #2196f3;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 4'%3e%3cpath fill='%23212121' d='M8 0 4 4 0 0z'/%3e%3c/svg%3e");
+  box-shadow: inset 0 -2px 0 #2196f3;
 }
 select[multiple],
 select.form-control[multiple] {
@@ -12153,45 +12152,45 @@ select.form-control[multiple] {
   border: 2px solid #ced4da;
 }
 .form-check-input:checked[type=radio] {
-  background-size: 1.8em;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%232196f3' stroke='%23fff'/%3e%3c/svg%3e"), var(--bs-gradient);
+  background-size: 1.8em;
 }
 
 .form-switch .form-check-input {
   position: relative;
   height: 0.8em;
-  border: none;
   margin-top: 0.29em;
-  background-image: none;
   background-color: #ced4da;
+  background-image: none;
+  border: none;
 }
 .form-switch .form-check-input:focus {
   box-shadow: none;
 }
 .form-switch .form-check-input::before {
-  content: "";
   position: absolute;
   top: -0.2em;
   left: -0.2em;
   width: 1.2em;
   height: 1.2em;
+  content: "";
   background-color: #fff;
   border-radius: 50%;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
   transition: left 0.15s ease-in-out;
 }
 .form-switch .form-check-input::after {
-  content: "";
   position: absolute;
   top: -0.2em;
   left: -0.2em;
+  z-index: -1;
   width: 1.2em;
   height: 1.2em;
+  content: "";
   border-radius: 50%;
   box-shadow: 0 0 0 9px rgba(0, 0, 0, 0.05);
-  transform: scale(0);
   transition: left 0.15s ease-in-out, transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  z-index: -1;
+  transform: scale(0);
 }
 .form-switch .form-check-input:hover:not(.disabled)::after, .form-switch .form-check-input:focus:not(.disabled)::after {
   transform: scale(0.9);
@@ -12203,8 +12202,8 @@ select.form-control[multiple] {
   background-color: rgba(33, 150, 243, 0.3);
 }
 .form-switch .form-check-input:checked::before {
-  background-color: #2196f3;
   left: calc(100% - 0.8em);
+  background-color: #2196f3;
 }
 .form-switch .form-check-input:checked::after {
   left: calc(100% - 0.8em);
@@ -12257,8 +12256,8 @@ select.form-control[multiple] {
 
 .has-warning .input-group-addon, .has-danger .input-group-addon, .has-success .input-group-addon {
   color: #666;
-  border-color: transparent;
   background-color: transparent;
+  border-color: transparent;
 }
 
 .form-group-lg select,
@@ -12272,28 +12271,28 @@ select.form-control[multiple] {
 .nav-tabs .nav-link,
 .nav-tabs .nav-link:focus {
   margin-right: 0;
+  color: #444;
   background-color: transparent;
   border: none;
-  color: #444;
   box-shadow: inset 0 -1px 0 #ddd;
   transition: color 0.2s, box-shadow 0.2s;
 }
 .nav-tabs .nav-link:hover,
 .nav-tabs .nav-link:focus:hover {
+  color: #2196f3;
   background-color: transparent;
   box-shadow: inset 0 -2px 0 #2196f3;
-  color: #2196f3;
 }
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-link.active:focus {
+  color: #2196f3;
   border: none;
   box-shadow: inset 0 -2px 0 #2196f3;
-  color: #2196f3;
 }
 .nav-tabs .nav-link.active:hover,
 .nav-tabs .nav-link.active:focus:hover {
-  border: none;
   color: #2196f3;
+  border: none;
 }
 .nav-tabs .nav-link.disabled {
   box-shadow: inset 0 -1px 0 #ddd;
@@ -12361,8 +12360,8 @@ select.form-control[multiple] {
 }
 .alert a:not(.btn),
 .alert .alert-link {
-  color: #fff;
   font-weight: 700;
+  color: #fff;
 }
 .alert-secondary,
 .alert-secondary a:not(.btn),
