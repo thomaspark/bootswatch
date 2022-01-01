@@ -28,6 +28,7 @@ const SWATCHES = [
   'morph',
   'pulse',
   'quartz',
+  'regent',
   'sandstone',
   'simplex',
   'sketchy',
