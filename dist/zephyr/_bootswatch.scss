@@ -172,16 +172,30 @@ thead th {
 
 // Containers
 
+.list-group-item,
+.card {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6 {
+    color: inherit;
+  }
+}
+
 .list-group {
   box-shadow: $box-shadow-lg;
 }
 
 .card {
   box-shadow: $box-shadow-lg;
-
-  &-title {
-    color: inherit;
-  }
 }
 
 .modal-footer {
