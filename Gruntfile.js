@@ -5,14 +5,6 @@ const sass = require('sass');
 const autoprefixer = require('autoprefixer');
 const pkg = require('./package.json');
 
-const banner = `/*!
- * Bootswatch v${pkg.version} (${pkg.homepage})
- * Copyright 2012-${new Date().getFullYear()} ${pkg.author}
- * Licensed under ${pkg.license}
- * Based on Bootstrap
-*/
-`;
-
 const SWATCHES = [
   'cerulean',
   'cosmo',
@@ -68,9 +60,6 @@ module.exports = grunt => {
       }
     },
     concat: {
-      options: {
-        banner
-      },
       dist: {
         src: [],
         dest: ''
@@ -215,6 +204,16 @@ module.exports = grunt => {
     const cssDest = path.join(themeDir, '/bootstrap.css');
     const cssDestMin = path.join(themeDir, '/bootstrap.min.css');
 
+    const banner = `/*!
+ * Bootswatch v${pkg.version} (${pkg.homepage})
+ * Theme: ${theme}
+ * Copyright 2012-${new Date().getFullYear()} ${pkg.author}
+ * Licensed under ${pkg.license}
+ * Based on Bootstrap
+*/
+      `;
+
+    grunt.config.set('concat.options', {banner});
     grunt.config.set('concat.dist', {
       src: concatSrc,
       dest: concatDest
