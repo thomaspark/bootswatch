@@ -53,12 +53,22 @@
       return;
     }
 
+    sourceModalElement.querySelector('.btn-copy').addEventListener('click', (e) => {
+      if (navigator.clipboard) {
+        const code = sourceModalElement.querySelector('.modal-body pre').innerText;
+        navigator.clipboard.writeText(code);
+      }
+
+      const sourceModal = bootstrap.Modal.getOrCreateInstance(sourceModalElement);
+      sourceModal.hide();
+    });
+
     document.body.addEventListener('click', event => {
       if (!event.target.matches('.source-button')) {
         return;
       }
 
-      const sourceModal = new bootstrap.Modal(sourceModalElement);
+      const sourceModal = bootstrap.Modal.getOrCreateInstance(sourceModalElement);
       let html = event.target.parentNode.innerHTML;
 
       html = Prism.highlight(cleanSource(html), Prism.languages.html, 'html');
@@ -85,7 +95,7 @@
   const bsComponents = document.querySelectorAll('.bs-component');
 
   for (const element of bsComponents) {
-    const button = '<button class="source-button btn btn-primary btn-xs" type="button" tabindex="0">&lt; &gt;</button>';
+    const button = '<button class="source-button btn btn-primary btn-xs" type="button" tabindex="0"><i class="bi bi-code"></i></button>';
     element.insertAdjacentHTML('beforeend', button);
   }
 
