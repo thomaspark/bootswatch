@@ -1,4 +1,4 @@
-// Materia 5.1.3
+// Materia 5.2.0
 // Bootswatch
 
 
@@ -15,21 +15,21 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;50
   position: relative;
 
   &::before {
-    content: "";
-    display: block;
     position: absolute;
-    width: 100%;
-    height: 100%;
     top: 0;
     left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
     margin-left: 0;
-    @include gradient-radial($color 10%, transparent 10.01%);
-    background-size: 1000% 1000%;
+    pointer-events: none;
+    content: "";
     background-position: 50%;
+    background-size: 1000% 1000%;
     border: none;
     opacity: 0;
-    pointer-events: none;
     transition: background .5s, opacity 1s;
+    @include gradient-radial($color 10%, transparent 10.01%);
   }
 
   &:active::before {
@@ -132,14 +132,14 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;50
   transition: color .4s, background-color .4s, border-color .4s, box-shadow .4s;
 
   &-link {
-    box-shadow: none;
     color: $link-color;
+    box-shadow: none;
 
     &:hover,
     &:focus {
-      box-shadow: none;
       color: $link-hover-color;
       text-decoration: $link-hover-decoration;
+      box-shadow: none;
     }
 
     &.disabled, // Although btn-link is intended for buttons, which want to look like link, I include here a.disable for the sake of consistency
@@ -157,8 +157,8 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;50
     &.disabled,
     &[disabled],
     fieldset[disabled] & {
-      background-color: rgba(0, 0, 0, .1);
       color: rgba(0, 0, 0, .4);
+      background-color: rgba(0, 0, 0, .1);
       opacity: 1;
 
       &:hover,
@@ -169,8 +169,8 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;50
   }
 
   &-outline-secondary {
-    border-color: $gray-200;
     color: $gray-300;
+    border-color: $gray-200;
   }
 
   &-warning {
@@ -232,8 +232,8 @@ p {
 }
 
 .thead-inverse th {
-  background-color: $primary;
   color: $white;
+  background-color: $primary;
 }
 
 // Forms
@@ -271,33 +271,25 @@ input[type="number"],
 
   &[disabled],
   &[readonly] {
-    box-shadow: none;
     border-bottom: 1px dotted #ddd;
+    box-shadow: none;
   }
 
   &[disabled],
   &[disabled]::placeholder {
     color: #ddd;
   }
-
-  &::-ms-clear {
-    display: none;
-  }
 }
 
 select,
 select.form-control {
-  appearance: none;
   padding: .5rem 0;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='4' viewBox='0 0 8 4'%3e%3cpolygon fill='%23666' points='8 0 4 4 0 0'/%3e%3c/svg%3e%0a");
-  background-size: 8px 4px;
+  background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 4'><path fill='#{$gray-600}' d='M8 0 4 4 0 0z'/></svg>"));
   background-repeat: no-repeat;
   background-position: right center;
+  background-size: 8px 4px;
   box-shadow: inset 0 -1px 0 #ddd;
-
-  &::-ms-expand {
-    display: none;
-  }
+  appearance: none;
 
   &.input {
     &-sm {
@@ -310,8 +302,8 @@ select.form-control {
   }
 
   &:focus {
+    background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 4'><path fill='#{$gray-900}' d='M8 0 4 4 0 0z'/></svg>"));
     box-shadow: inset 0 -2px 0 $primary;
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='4' viewBox='0 0 8 4'%3e%3cpolygon fill='%23212121' points='8 0 4 4 0 0'/%3e%3c/svg%3e%0a");
   }
 
   &[multiple] {
@@ -326,30 +318,31 @@ select.form-control {
   border: 2px solid $gray-400;
 
   &:checked[type="radio"] {
+    background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$blue}' stroke='#{$white}'/></svg>")), var(--bs-gradient);
     background-size: 1.8em;
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%232196f3' stroke='%23fff' stroke-width='1' /%3e%3c/svg%3e"), var(--bs-gradient);
   }
 }
 
-.form-check.form-switch {
+.form-switch {
   .form-check-input {
     position: relative;
     height: .8em;
-    border: none;
-    background-image: none;
+    margin-top: .29em;
     background-color: $gray-400;
+    background-image: none;
+    border: none;
 
     &:focus {
       box-shadow: none;
     }
 
     &::before {
-      content: "";
       position: absolute;
       top: -.2em;
       left: -.2em;
       width: 1.2em;
       height: 1.2em;
+      content: "";
       background-color: $white;
       border-radius: 50%;
       box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
@@ -357,17 +350,17 @@ select.form-control {
     }
 
     &::after {
-      content: "";
       position: absolute;
       top: -.2em;
       left: -.2em;
+      z-index: -1;
       width: 1.2em;
       height: 1.2em;
+      content: "";
       border-radius: 50%;
       box-shadow: 0 0 0 9px rgba(0, 0, 0, .05);
-      transform: scale(0);
       transition: left .15s ease-in-out, transform .15s ease-in-out, box-shadow .15s ease-in-out;
-      z-index: -1;
+      transform: scale(0);
     }
 
     &:hover:not(.disabled),
@@ -388,8 +381,8 @@ select.form-control {
       background-color: rgba(33, 150, 243, .3);
 
       &::before {
-        background-color: rgba(33, 150, 243, 1);
         left: calc(100% - .8em);
+        background-color: rgba(33, 150, 243, 1);
       }
 
       &::after {
@@ -416,7 +409,7 @@ select.form-control {
 .form-check:not(.form-switch) {
   .form-check-input {
     &:checked[type="checkbox"] {
-      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-width='2' d='M6 10l3 3l6-6'/%3e%3c/svg%3e"), var(--bs-gradient);
+      background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$white}' stroke-width='2' d='m6 10 3 3 6-6'/></svg>")), var(--bs-gradient);
       background-size: 1.6em;
     }
   }
@@ -467,8 +460,8 @@ select.form-control {
   .has-danger &,
   .has-success & {
     color: $input-color;
-    border-color: $input-group-addon-border-color;
     background-color: $input-group-addon-bg;
+    border-color: $input-group-addon-border-color;
   }
 }
 
@@ -489,28 +482,28 @@ select.form-control {
   .nav-link,
   .nav-link:focus {
     margin-right: 0;
+    color: $body-color;
     background-color: transparent;
     border: none;
-    color: $body-color;
     box-shadow: inset 0 -1px 0 #ddd;
     transition: color .2s, box-shadow .2s;
 
     &:hover {
+      color: $primary;
       background-color: transparent;
       box-shadow: inset 0 -2px 0 $primary;
-      color: $primary;
     }
   }
 
   .nav-link.active,
   .nav-link.active:focus {
+    color: $primary;
     border: none;
     box-shadow: inset 0 -2px 0 $primary;
-    color: $primary;
 
     &:hover {
-      border: none;
       color: $primary;
+      border: none;
     }
   }
 
@@ -568,8 +561,8 @@ select.form-control {
 
   a:not(.btn),
   .alert-link {
-    color: $white;
     font-weight: 700;
+    color: $white;
   }
 
   &-secondary,
@@ -629,9 +622,10 @@ select.form-control {
 }
 
 .modal,
-.toast {
+.toast,
+.offcanvas {
   .btn-close {
-    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'><path d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/></svg>");
+    background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$black}'><path d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/></svg>"));
   }
 }
 

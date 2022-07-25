@@ -1,4 +1,4 @@
-// Materia 4.6.0
+// Materia 4.6.2
 // Bootswatch
 
 
@@ -293,7 +293,7 @@ select,
 select.form-control {
   appearance: none;
   padding: .5rem 0;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='4' viewBox='0 0 8 4'%3e%3cpolygon fill='%23666' points='8 0 4 4 0 0'/%3e%3c/svg%3e%0a");
+  background-image: escape-svg(url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='4' viewBox='0 0 8 4'%3e%3cpolygon fill='#{$gray-600}' points='8 0 4 4 0 0'/%3e%3c/svg%3e%0a"));
   background-size: 8px 4px;
   background-repeat: no-repeat;
   background-position: right center;
@@ -315,7 +315,7 @@ select.form-control {
 
   &:focus {
     box-shadow: $input-focus-box-shadow;
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='4' viewBox='0 0 8 4'%3e%3cpolygon fill='%23212121' points='8 0 4 4 0 0'/%3e%3c/svg%3e%0a");
+    background-image: escape-svg(url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='4' viewBox='0 0 8 4'%3e%3cpolygon fill='#{$gray-900}' points='8 0 4 4 0 0'/%3e%3c/svg%3e%0a"));
   }
 
   &[multiple] {
@@ -331,6 +331,7 @@ select.form-control {
   &::before {
     top: 0;
     border: 2px solid $gray-400;
+    box-shadow: none;
   }
   &::after {
     top: 0;

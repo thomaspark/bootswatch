@@ -1,81 +1,115 @@
+/* globals bootstrap:false, Prism:false */
+
 (function () {
   'use strict';
 
-  $(window).scroll(function () {
-    var top = $(document).scrollTop();
-    if (top > 50) {
-      $('#home > .navbar').removeClass('navbar-transparent');
-    } else {
-      $('#home > .navbar').addClass('navbar-transparent');
-    }
-  })
-
-  $('a[href="#"]').click(function (event) {
-    event.preventDefault();
-  })
-
-  $('.bs-component').each(function () {
-    var $component = $(this);
-    var $button = $('<button class="source-button btn btn-primary btn-xs" role="button" tabindex="0">&lt; &gt;</button>');
-    $component.append($button);
-
-    if ($component.find('[data-bs-toggle="tooltip"]').length > 0) {
-      $component.attr('data-html', $component.html());
-    }
-  });
-
-  var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-  var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-    return new bootstrap.Popover(popoverTriggerEl)
-  })
-
-  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-    return new bootstrap.Tooltip(tooltipTriggerEl)
-  })
-
-  var sourceModalElem = document.getElementById('source-modal');
-  if (sourceModalElem) {
-    var sourceModal = new bootstrap.Modal(document.getElementById('source-modal'));
-  }
-
-  $('body').on('click', '.source-button', function (event) {
-    event.preventDefault();
-
-    var component = $(this).parent();
-    var html = component.attr('data-html') ? component.attr('data-html') : component.html();
-
-    html = cleanSource(html);
-    html = Prism.highlight(html, Prism.languages.html, 'html');
-    $('#source-modal code').html(html);
-    sourceModal.show();
-  })
-
-  function cleanSource(html) {
-    html = html.replace(/×/g, '&times;')
+  //  Helper functions
+  function escapeHtml(html) {
+    return html.replace(/×/g, '&times;')
                .replace(/«/g, '&laquo;')
                .replace(/»/g, '&raquo;')
                .replace(/←/g, '&larr;')
-               .replace(/→/g, '&rarr;')
+               .replace(/→/g, '&rarr;');
+  }
 
-    var lines = html.split(/\n/);
+  function cleanSource(html) {
+    // Escape HTML, split the lines to an Array, remove empty elements
+    // and finally remove the last element
+    let lines = escapeHtml(html).split('\n').filter(Boolean).slice(0, -1);
+    const indentSize = lines[0].length - lines[0].trim().length;
+    const re = new RegExp(' {' + indentSize + '}');
 
-    lines.shift();
-    lines.splice(-1, 1);
-
-    var indentSize = lines[0].length - lines[0].trim().length;
-    var re = new RegExp(' {' + indentSize + '}');
-
-    lines = lines.map(function (line) {
-      if (line.match(re)) {
-        line = line.slice(Math.max(0, indentSize));
-      }
-
-      return line;
+    lines = lines.map(line => {
+      return re.test(line) ? line.slice(Math.max(0, indentSize)) : line;
     });
 
-    lines = lines.join('\n');
+    return lines.join('\n');
+  }
 
-    return lines;
+  // Add/remove `.navbar-transparent` on scroll; should probably be throttled later
+  function addNavbarTransparentClass() {
+    const navBarElement = document.querySelector('#home > .navbar');
+
+    if (!navBarElement) {
+      return;
+    }
+
+    window.addEventListener('scroll', () => {
+      const scroll = document.documentElement.scrollTop;
+
+      if (scroll > 50) {
+        navBarElement.classList.remove('navbar-transparent');
+      } else {
+        navBarElement.classList.add('navbar-transparent');
+      }
+    });
+  }
+
+  // Add source modals
+  function addSourceModals() {
+    const sourceModalElement = document.getElementById('source-modal');
+
+    if (!sourceModalElement) {
+      return;
+    }
+
+    sourceModalElement.querySelector('.btn-copy').addEventListener('click', (e) => {
+      if (navigator.clipboard) {
+        const code = sourceModalElement.querySelector('.modal-body pre').innerText;
+        navigator.clipboard.writeText(code);
+      }
+
+      const sourceModal = bootstrap.Modal.getOrCreateInstance(sourceModalElement);
+      sourceModal.hide();
+    });
+
+    document.body.addEventListener('click', event => {
+      if (!event.target.matches('.source-button')) {
+        return;
+      }
+
+      const sourceModal = bootstrap.Modal.getOrCreateInstance(sourceModalElement);
+      let html = event.target.parentNode.innerHTML;
+
+      html = Prism.highlight(cleanSource(html), Prism.languages.html, 'html');
+
+      sourceModalElement.querySelector('code').innerHTML = html;
+      sourceModal.show();
+    }, false);
+  }
+
+  addNavbarTransparentClass();
+
+  addSourceModals();
+
+  // Prevent empty `a` elements or `submit` buttons from navigating away
+  const targets = document.querySelectorAll('[href="#"], [type="submit"]');
+
+  for (const element of targets) {
+    element.addEventListener('click', event => {
+      event.preventDefault();
+    });
+  }
+
+  // Add the "View Source" buttons in each component
+  const bsComponents = document.querySelectorAll('.bs-component');
+
+  for (const element of bsComponents) {
+    const button = '<button class="source-button btn btn-primary btn-xs" type="button" tabindex="0"><i class="bi bi-code"></i></button>';
+    element.insertAdjacentHTML('beforeend', button);
+  }
+
+  // Initialize popovers
+  const popoverElements = document.querySelectorAll('[data-bs-toggle="popover"]');
+
+  for (const popover of popoverElements) {
+    new bootstrap.Popover(popover); // eslint-disable-line no-new
+  }
+
+  // Initialize tooltips
+  const tooltipElements = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+
+  for (const tooltip of tooltipElements) {
+    new bootstrap.Tooltip(tooltip); // eslint-disable-line no-new
   }
 })();

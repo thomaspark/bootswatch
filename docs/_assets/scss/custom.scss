@@ -1,4 +1,4 @@
-// stylelint-disable selector-max-id, selector-max-compound-selectors
+// stylelint-disable selector-max-id
 
 $gradient: linear-gradient(145deg, #375ee3 0%, #6543e0 80%) !default;
 
@@ -11,18 +11,8 @@ iframe {
   border: none;
 }
 
-@media (min-width: 768px) {
-  body > .navbar-transparent {
-    box-shadow: none;
-    .navbar-nav > .open > a {
-      box-shadow: none;
-    }
-  }
-}
-
 .navbar {
-  .fa,
-  .fab {
+  .bi {
     margin-right: .25rem;
     font-size: 1rem;
   }
@@ -31,9 +21,7 @@ iframe {
 #home,
 #help {
   .navbar {
-    background: #375ee3;
     background: $gradient;
-    transition: box-shadow 200ms ease-in;
   }
   .navbar-brand {
     .nav-link {
@@ -60,11 +48,11 @@ iframe {
 
 .dropdown-menu.show[aria-labelledby="themes"] {
   display: flex;
-  width: 420px;
   flex-wrap: wrap;
+  width: 420px;
 
   .dropdown-item {
-    width: 33.333%;
+    width: 33.333333%;
 
     &:first-child {
       width: 100%;
@@ -84,8 +72,8 @@ iframe {
     position: relative;
     top: auto;
     right: auto;
-    left: auto;
     bottom: auto;
+    left: auto;
     z-index: 1;
     display: block;
   }
@@ -101,12 +89,16 @@ iframe {
 }
 
 .source-button {
-  display: none;
   position: absolute;
   top: 0;
   right: 0;
   z-index: 100;
+  display: none;
   font-weight: 700;
+
+  i {
+    pointer-events: none;
+  }
 }
 
 .source-button:hover {
@@ -123,10 +115,6 @@ iframe {
   }
 }
 
-.nav-tabs {
-  margin-bottom: 15px;
-}
-
 .progress {
   margin-bottom: 10px;
 }
@@ -139,20 +127,20 @@ iframe {
     margin-bottom: 1.5em;
   }
   p {
-    clear: left;
     margin-bottom: 0;
+    clear: left;
   }
 }
 
 .splash {
   position: relative;
   padding: 12em 0 6em;
-  background-color: #375ee3;
-  background-image: url("../img/splash.svg"), $gradient;
-  background-size: cover;
-  background-repeat: no-repeat;
   color: #fff;
   text-align: center;
+  background-color: #375ee3;
+  background-image: url("../img/splash.svg"), $gradient;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   .logo {
     width: 160px;
@@ -175,21 +163,21 @@ iframe {
 
 .section-tout {
   padding: 6em 0 1em;
-  border-bottom: 1px solid rgba(0, 0, 0, .05);
-  background-color: #eaf1f1;
   text-align: center;
+  background-color: #eaf1f1;
+  border-bottom: 1px solid rgba(0, 0, 0, .05);
   .icon {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     width: 80px;
     height: 80px;
     margin: 0 auto 1rem;
-    background: #375ee3;
+    font-size: 2rem;
+    line-height: 1;
+    color: rgba(255, 255, 255, .9);
     background: $gradient;
     border-radius: 50%;
-    font-size: 2rem;
-    color: rgba(255, 255, 255, .9);
   }
   p {
     margin-bottom: 5em;
@@ -211,8 +199,8 @@ iframe {
     }
     .options {
       padding: 2em;
-      border-top: 1px solid rgba(0, 0, 0, .125);
       text-align: center;
+      border-top: 1px solid rgba(0, 0, 0, .125);
       p {
         margin-bottom: 2em;
       }
@@ -264,7 +252,7 @@ iframe {
 
 @media (max-width: 991px) {
   .navbar {
-    .fa {
+    .bi {
       display: none;
     }
   }
@@ -273,7 +261,6 @@ iframe {
 @media (min-width: 992px) {
   .navbar-transparent {
     background: none !important;
-    box-shadow: none;
   }
 }
 

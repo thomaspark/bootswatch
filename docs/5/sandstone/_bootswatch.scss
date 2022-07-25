@@ -1,4 +1,4 @@
-// Sandstone 5.1.3
+// Sandstone 5.2.0
 // Bootswatch
 
 
@@ -11,22 +11,10 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;70
 
 // Navbar
 
-.bg-primary {
-  background-color: $dark !important;
-}
-
-.bg-dark {
-  background-color: $secondary !important;
-}
-
-.bg-light {
-  background-color: $gray-200 !important;
-}
-
 .sandstone {
   font-size: 13px;
-  line-height: 22px;
   font-weight: 500;
+  line-height: 22px;
   text-transform: uppercase;
 }
 
@@ -93,17 +81,17 @@ input,
   .nav-link.disabled,
   .nav-link.disabled:hover,
   .nav-link.disabled:focus {
+    color: $nav-link-disabled-color;
     background-color: $gray-200;
     border-color: $gray-300;
-    color: $nav-link-disabled-color;
   }
 }
 
 .nav-pills {
   .nav-link {
     @extend .sandstone;
-    border: 1px solid transparent;
     color: $gray-600;
+    border: 1px solid transparent;
   }
 
   .nav-link.active,
@@ -115,9 +103,9 @@ input,
 
   .nav-link.disabled,
   .nav-link.disabled:hover {
+    color: $gray-300;
     background-color: transparent;
     border-color: transparent;
-    color: $gray-300;
   }
 }
 
@@ -236,8 +224,9 @@ input,
 // Containers
 
 .modal,
-.toast {
+.toast,
+.offcanvas {
   .btn-close {
-    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23dfd7ca'><path d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/></svg>");
+    background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$gray-300}'><path d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/></svg>"));
   }
 }

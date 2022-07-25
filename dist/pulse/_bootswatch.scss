@@ -1,4 +1,4 @@
-// Pulse 5.1.3
+// Pulse 5.2.0
 // Bootswatch
 
 // Buttons
@@ -12,20 +12,20 @@
   }
 
   &-secondary {
+    color: $gray-900;
     background-color: $white;
     border-color: #ccc;
-    color: $gray-900;
 
     &:hover {
+      color: $gray-900;
       background-color: $gray-300;
       border-color: $gray-500;
-      color: $gray-900;
     }
 
     &.disabled {
+      color: tint-color($gray-900, 5%);
       background-color: $white;
       border-color: tint-color(#ccc, 5%);
-      color: tint-color($gray-900, 5%);
     }
   }
 

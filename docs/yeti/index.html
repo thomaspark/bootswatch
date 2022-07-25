@@ -5,7 +5,7 @@
     <title>Bootswatch: Yeti</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../5/yeti/bootstrap.css">
-    <link rel="stylesheet" href="../_vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../_vendor/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../_vendor/prismjs/themes/prism-okaidia.css">
     <link rel="stylesheet" href="../_assets/css/custom.min.css">
     <!-- Global Site Tag (gtag.js) - Google Analytics -->
@@ -28,7 +28,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="themes">Themes <span class="caret"></span></a>
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="themes">Themes</a>
               <div class="dropdown-menu" aria-labelledby="themes">
                 <a class="dropdown-item" href="../default/">Default</a>
                 <div class="dropdown-divider"></div>
@@ -66,7 +66,7 @@
               <a class="nav-link" href="https://blog.bootswatch.com/">Blog</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="download">Yeti <span class="caret"></span></a>
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="download">Yeti</a>
               <div class="dropdown-menu" aria-labelledby="download">
                 <a class="dropdown-item" rel="noopener" target="_blank" href="https://jsfiddle.net/bootswatch/96c7utnf/">Open in JSFiddle</a>
                 <div class="dropdown-divider"></div>
@@ -80,10 +80,10 @@
           </ul>
           <ul class="navbar-nav ms-md-auto">
             <li class="nav-item">
-              <a target="_blank" rel="noopener" class="nav-link" href="https://github.com/thomaspark/bootswatch/"><i class="fa fa-github"></i> GitHub</a>
+              <a target="_blank" rel="noopener" class="nav-link" href="https://github.com/thomaspark/bootswatch/"><i class="bi bi-github"></i> GitHub</a>
             </li>
             <li class="nav-item">
-              <a target="_blank" rel="noopener" class="nav-link" href="https://twitter.com/bootswatch"><i class="fa fa-twitter"></i> Twitter</a>
+              <a target="_blank" rel="noopener" class="nav-link" href="https://twitter.com/bootswatch"><i class="bi bi-twitter"></i> Twitter</a>
             </li>
           </ul>
         </div>
@@ -674,20 +674,20 @@
                   <fieldset class="form-group">
                     <legend class="mt-4">Radio buttons</legend>
                     <div class="form-check">
-                      <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                      <input class="form-check-input" type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                      <label class="form-check-label" for="optionsRadios1">
                         Option one is this and that&mdash;be sure to include why it's great
                       </label>
                     </div>
                     <div class="form-check">
-                      <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+                      <input class="form-check-input" type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                      <label class="form-check-label" for="optionsRadios2">
                         Option two can be something else and selecting it will deselect option one
                       </label>
                     </div>
                     <div class="form-check disabled">
-                      <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+                      <input class="form-check-input" type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+                      <label class="form-check-label" for="optionsRadios3">
                         Option three is disabled
                       </label>
                     </div>
@@ -707,7 +707,7 @@
                       </label>
                     </div>
                   </fieldset>
-                  <fieldset>
+                  <fieldset class="form-group">
                     <legend class="mt-4">Switches</legend>
                     <div class="form-check form-switch">
                       <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
@@ -1511,6 +1511,37 @@
                 </div>
               </div>
             </div>
+            <h2>Offcanvas</h2>
+            <div class="bs-component">
+              <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                Link with href
+              </a>
+              <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                Button with data-bs-target
+              </button>
+
+              <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+                  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div>
+                    Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+                  </div>
+                  <div class="dropdown mt-3">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+                      Dropdown button
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="col-lg-6">
             <h2>Popovers</h2>
@@ -1557,7 +1588,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h4 class="modal-title">Source Code</h4>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
+              <button type="button" class="btn btn-primary btn-copy"><i class="bi bi-clipboard"></i> Copy Code</button>
             </div>
             <div class="modal-body">
               <pre class="language-html"><code></code></pre>
@@ -1587,7 +1618,6 @@
       </footer>
     </div>
 
-    <script src="../_vendor/jquery/dist/jquery.min.js"></script>
     <script src="../_vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../_vendor/prismjs/prism.js" data-manual></script>
     <script src="../_assets/js/custom.js"></script>

@@ -1,22 +1,10 @@
 'use strict';
 
 const path = require('path');
-const sass = require('node-sass');
+const sass = require('sass');
 const autoprefixer = require('autoprefixer');
 const pkg = require('./package.json');
 
-const banner = `/*!
- * Bootswatch v${pkg.version}
- * Homepage: ${pkg.homepage}
- * Copyright 2012-${new Date().getFullYear()} ${pkg.author}
- * Licensed under ${pkg.license}
- * Based on Bootstrap
-*/
-`;
-
-const BUILD_DIR = 'build/';
-const DIST_DIR = 'dist/';
-const DOCS_DEST = 'docs/5/';
 const SWATCHES = [
   'cerulean',
   'cosmo',
@@ -44,6 +32,10 @@ const SWATCHES = [
   'yeti',
   'zephyr'
 ];
+
+const BUILD_DIR = 'build/';
+const DIST_DIR = 'dist/';
+const DOCS_DEST = 'docs/5/';
 let buildTheme = '';
 
 module.exports = grunt => {
@@ -67,9 +59,6 @@ module.exports = grunt => {
       }
     },
     concat: {
-      options: {
-        banner
-      },
       dist: {
         src: [],
         dest: ''
@@ -79,9 +68,9 @@ module.exports = grunt => {
       vendor: {
         files: [{
           expand: true,
-          cwd: 'node_modules/font-awesome',
-          src: ['css/**', 'fonts/**'],
-          dest: 'docs/_vendor/font-awesome/'
+          cwd: 'node_modules/bootstrap-icons',
+          src: ['font/**'],
+          dest: 'docs/_vendor/bootstrap-icons/'
         }, {
           expand: true,
           cwd: 'node_modules/jquery',
@@ -114,8 +103,7 @@ module.exports = grunt => {
     sass: {
       options: {
         implementation: sass,
-        outputStyle: 'expanded',
-        precision: 6
+        outputStyle: 'expanded'
       },
       dist: {
         src: [],
@@ -160,9 +148,7 @@ module.exports = grunt => {
     htmllint: {
       options: {
         ignore: [
-          /Attribute “autocomplete” is only allowed when the input type is.*/,
-          /Attribute “autocomplete” not allowed on element “button” at this point./,
-          /Bad value “” for attribute “action” on element “form”./
+          /Attribute “autocomplete” is only allowed when the input type is.*/
         ]
       },
       src: [
@@ -217,6 +203,16 @@ module.exports = grunt => {
     const cssDest = path.join(themeDir, '/bootstrap.css');
     const cssDestMin = path.join(themeDir, '/bootstrap.min.css');
 
+    const banner = `/*!
+ * Bootswatch v${pkg.version} (${pkg.homepage})
+ * Theme: ${theme}
+ * Copyright 2012-${new Date().getFullYear()} ${pkg.author}
+ * Licensed under ${pkg.license}
+ * Based on Bootstrap
+*/
+      `;
+
+    grunt.config.set('concat.options', {banner});
     grunt.config.set('concat.dist', {
       src: concatSrc,
       dest: concatDest

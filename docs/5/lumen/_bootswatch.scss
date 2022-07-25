@@ -1,4 +1,4 @@
-// Lumen 5.1.3
+// Lumen 5.2.0
 // Bootswatch
 
 
@@ -124,8 +124,8 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,w
     &:not(.disabled):focus,
     &.active {
       padding-bottom: add(.5rem, 6px);
-      border-bottom-color: transparent;
       margin-top: 0;
+      border-bottom-color: transparent;
     }
   }
 
@@ -151,16 +151,16 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,w
   > li > span {
     position: relative;
     top: 0;
-    @include shadow();
-    color: $pagination-color;
     font-weight: 700;
+    color: $pagination-color;
     text-transform: uppercase;
+    @include shadow();
 
     &:hover,
     &:focus {
       top: 1px;
-      border-bottom-width: 3px;
       text-decoration: none;
+      border-bottom-width: 3px;
     }
 
     &:active {
@@ -191,8 +191,8 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,w
     &,
     &:hover,
     &:active {
-      border-left-width: 2px;
       border-right-width: 2px;
+      border-left-width: 2px;
     }
   }
 }
@@ -314,8 +314,9 @@ a.list-group-item {
 }
 
 .modal,
-.toast {
+.toast,
+.offcanvas {
   .btn-close {
-    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'><path d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/></svg>");
+    background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$black}'><path d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/></svg>"));
   }
 }
