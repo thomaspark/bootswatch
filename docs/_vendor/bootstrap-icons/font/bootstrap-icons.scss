@@ -1,8 +1,11 @@
 $bootstrap-icons-font: "bootstrap-icons" !default;
-$bootstrap-icons-font-src: url("./fonts/bootstrap-icons.woff2?30af91bf14e37666a085fb8a161ff36d") format("woff2"),
-url("./fonts/bootstrap-icons.woff?30af91bf14e37666a085fb8a161ff36d") format("woff") !default;
+$bootstrap-icons-font-dir: "./fonts" !default;
+$bootstrap-icons-font-file: #{$bootstrap-icons-font-dir}/#{$bootstrap-icons-font} !default;
+$bootstrap-icons-font-hash: "8d200481aa7f02a2d63a331fc782cfaf" !default;
+$bootstrap-icons-font-src: url("#{$bootstrap-icons-font-file}.woff2?#{$bootstrap-icons-font-hash}") format("woff2"), url("#{$bootstrap-icons-font-file}.woff?#{$bootstrap-icons-font-hash}") format("woff") !default;
 
 @font-face {
+  font-display: block;
   font-family: $bootstrap-icons-font;
   src: $bootstrap-icons-font-src;
 }
@@ -1558,6 +1561,325 @@ $bootstrap-icons-map: (
   "mortarboard-fill": "\f6fd",
   "mortarboard": "\f6fe",
   "terminal-x": "\f6ff",
+  "arrow-through-heart-fill": "\f700",
+  "arrow-through-heart": "\f701",
+  "badge-sd-fill": "\f702",
+  "badge-sd": "\f703",
+  "bag-heart-fill": "\f704",
+  "bag-heart": "\f705",
+  "balloon-fill": "\f706",
+  "balloon-heart-fill": "\f707",
+  "balloon-heart": "\f708",
+  "balloon": "\f709",
+  "box2-fill": "\f70a",
+  "box2-heart-fill": "\f70b",
+  "box2-heart": "\f70c",
+  "box2": "\f70d",
+  "braces-asterisk": "\f70e",
+  "calendar-heart-fill": "\f70f",
+  "calendar-heart": "\f710",
+  "calendar2-heart-fill": "\f711",
+  "calendar2-heart": "\f712",
+  "chat-heart-fill": "\f713",
+  "chat-heart": "\f714",
+  "chat-left-heart-fill": "\f715",
+  "chat-left-heart": "\f716",
+  "chat-right-heart-fill": "\f717",
+  "chat-right-heart": "\f718",
+  "chat-square-heart-fill": "\f719",
+  "chat-square-heart": "\f71a",
+  "clipboard-check-fill": "\f71b",
+  "clipboard-data-fill": "\f71c",
+  "clipboard-fill": "\f71d",
+  "clipboard-heart-fill": "\f71e",
+  "clipboard-heart": "\f71f",
+  "clipboard-minus-fill": "\f720",
+  "clipboard-plus-fill": "\f721",
+  "clipboard-pulse": "\f722",
+  "clipboard-x-fill": "\f723",
+  "clipboard2-check-fill": "\f724",
+  "clipboard2-check": "\f725",
+  "clipboard2-data-fill": "\f726",
+  "clipboard2-data": "\f727",
+  "clipboard2-fill": "\f728",
+  "clipboard2-heart-fill": "\f729",
+  "clipboard2-heart": "\f72a",
+  "clipboard2-minus-fill": "\f72b",
+  "clipboard2-minus": "\f72c",
+  "clipboard2-plus-fill": "\f72d",
+  "clipboard2-plus": "\f72e",
+  "clipboard2-pulse-fill": "\f72f",
+  "clipboard2-pulse": "\f730",
+  "clipboard2-x-fill": "\f731",
+  "clipboard2-x": "\f732",
+  "clipboard2": "\f733",
+  "emoji-kiss-fill": "\f734",
+  "emoji-kiss": "\f735",
+  "envelope-heart-fill": "\f736",
+  "envelope-heart": "\f737",
+  "envelope-open-heart-fill": "\f738",
+  "envelope-open-heart": "\f739",
+  "envelope-paper-fill": "\f73a",
+  "envelope-paper-heart-fill": "\f73b",
+  "envelope-paper-heart": "\f73c",
+  "envelope-paper": "\f73d",
+  "filetype-aac": "\f73e",
+  "filetype-ai": "\f73f",
+  "filetype-bmp": "\f740",
+  "filetype-cs": "\f741",
+  "filetype-css": "\f742",
+  "filetype-csv": "\f743",
+  "filetype-doc": "\f744",
+  "filetype-docx": "\f745",
+  "filetype-exe": "\f746",
+  "filetype-gif": "\f747",
+  "filetype-heic": "\f748",
+  "filetype-html": "\f749",
+  "filetype-java": "\f74a",
+  "filetype-jpg": "\f74b",
+  "filetype-js": "\f74c",
+  "filetype-jsx": "\f74d",
+  "filetype-key": "\f74e",
+  "filetype-m4p": "\f74f",
+  "filetype-md": "\f750",
+  "filetype-mdx": "\f751",
+  "filetype-mov": "\f752",
+  "filetype-mp3": "\f753",
+  "filetype-mp4": "\f754",
+  "filetype-otf": "\f755",
+  "filetype-pdf": "\f756",
+  "filetype-php": "\f757",
+  "filetype-png": "\f758",
+  "filetype-ppt-1": "\f759",
+  "filetype-ppt": "\f75a",
+  "filetype-psd": "\f75b",
+  "filetype-py": "\f75c",
+  "filetype-raw": "\f75d",
+  "filetype-rb": "\f75e",
+  "filetype-sass": "\f75f",
+  "filetype-scss": "\f760",
+  "filetype-sh": "\f761",
+  "filetype-svg": "\f762",
+  "filetype-tiff": "\f763",
+  "filetype-tsx": "\f764",
+  "filetype-ttf": "\f765",
+  "filetype-txt": "\f766",
+  "filetype-wav": "\f767",
+  "filetype-woff": "\f768",
+  "filetype-xls-1": "\f769",
+  "filetype-xls": "\f76a",
+  "filetype-xml": "\f76b",
+  "filetype-yml": "\f76c",
+  "heart-arrow": "\f76d",
+  "heart-pulse-fill": "\f76e",
+  "heart-pulse": "\f76f",
+  "heartbreak-fill": "\f770",
+  "heartbreak": "\f771",
+  "hearts": "\f772",
+  "hospital-fill": "\f773",
+  "hospital": "\f774",
+  "house-heart-fill": "\f775",
+  "house-heart": "\f776",
+  "incognito": "\f777",
+  "magnet-fill": "\f778",
+  "magnet": "\f779",
+  "person-heart": "\f77a",
+  "person-hearts": "\f77b",
+  "phone-flip": "\f77c",
+  "plugin": "\f77d",
+  "postage-fill": "\f77e",
+  "postage-heart-fill": "\f77f",
+  "postage-heart": "\f780",
+  "postage": "\f781",
+  "postcard-fill": "\f782",
+  "postcard-heart-fill": "\f783",
+  "postcard-heart": "\f784",
+  "postcard": "\f785",
+  "search-heart-fill": "\f786",
+  "search-heart": "\f787",
+  "sliders2-vertical": "\f788",
+  "sliders2": "\f789",
+  "trash3-fill": "\f78a",
+  "trash3": "\f78b",
+  "valentine": "\f78c",
+  "valentine2": "\f78d",
+  "wrench-adjustable-circle-fill": "\f78e",
+  "wrench-adjustable-circle": "\f78f",
+  "wrench-adjustable": "\f790",
+  "filetype-json": "\f791",
+  "filetype-pptx": "\f792",
+  "filetype-xlsx": "\f793",
+  "1-circle-1": "\f794",
+  "1-circle-fill-1": "\f795",
+  "1-circle-fill": "\f796",
+  "1-circle": "\f797",
+  "1-square-fill": "\f798",
+  "1-square": "\f799",
+  "2-circle-1": "\f79a",
+  "2-circle-fill-1": "\f79b",
+  "2-circle-fill": "\f79c",
+  "2-circle": "\f79d",
+  "2-square-fill": "\f79e",
+  "2-square": "\f79f",
+  "3-circle-1": "\f7a0",
+  "3-circle-fill-1": "\f7a1",
+  "3-circle-fill": "\f7a2",
+  "3-circle": "\f7a3",
+  "3-square-fill": "\f7a4",
+  "3-square": "\f7a5",
+  "4-circle-1": "\f7a6",
+  "4-circle-fill-1": "\f7a7",
+  "4-circle-fill": "\f7a8",
+  "4-circle": "\f7a9",
+  "4-square-fill": "\f7aa",
+  "4-square": "\f7ab",
+  "5-circle-1": "\f7ac",
+  "5-circle-fill-1": "\f7ad",
+  "5-circle-fill": "\f7ae",
+  "5-circle": "\f7af",
+  "5-square-fill": "\f7b0",
+  "5-square": "\f7b1",
+  "6-circle-1": "\f7b2",
+  "6-circle-fill-1": "\f7b3",
+  "6-circle-fill": "\f7b4",
+  "6-circle": "\f7b5",
+  "6-square-fill": "\f7b6",
+  "6-square": "\f7b7",
+  "7-circle-1": "\f7b8",
+  "7-circle-fill-1": "\f7b9",
+  "7-circle-fill": "\f7ba",
+  "7-circle": "\f7bb",
+  "7-square-fill": "\f7bc",
+  "7-square": "\f7bd",
+  "8-circle-1": "\f7be",
+  "8-circle-fill-1": "\f7bf",
+  "8-circle-fill": "\f7c0",
+  "8-circle": "\f7c1",
+  "8-square-fill": "\f7c2",
+  "8-square": "\f7c3",
+  "9-circle-1": "\f7c4",
+  "9-circle-fill-1": "\f7c5",
+  "9-circle-fill": "\f7c6",
+  "9-circle": "\f7c7",
+  "9-square-fill": "\f7c8",
+  "9-square": "\f7c9",
+  "airplane-engines-fill": "\f7ca",
+  "airplane-engines": "\f7cb",
+  "airplane-fill": "\f7cc",
+  "airplane": "\f7cd",
+  "alexa": "\f7ce",
+  "alipay": "\f7cf",
+  "android": "\f7d0",
+  "android2": "\f7d1",
+  "box-fill": "\f7d2",
+  "box-seam-fill": "\f7d3",
+  "browser-chrome": "\f7d4",
+  "browser-edge": "\f7d5",
+  "browser-firefox": "\f7d6",
+  "browser-safari": "\f7d7",
+  "c-circle-1": "\f7d8",
+  "c-circle-fill-1": "\f7d9",
+  "c-circle-fill": "\f7da",
+  "c-circle": "\f7db",
+  "c-square-fill": "\f7dc",
+  "c-square": "\f7dd",
+  "capsule-pill": "\f7de",
+  "capsule": "\f7df",
+  "car-front-fill": "\f7e0",
+  "car-front": "\f7e1",
+  "cassette-fill": "\f7e2",
+  "cassette": "\f7e3",
+  "cc-circle-1": "\f7e4",
+  "cc-circle-fill-1": "\f7e5",
+  "cc-circle-fill": "\f7e6",
+  "cc-circle": "\f7e7",
+  "cc-square-fill": "\f7e8",
+  "cc-square": "\f7e9",
+  "cup-hot-fill": "\f7ea",
+  "cup-hot": "\f7eb",
+  "currency-rupee": "\f7ec",
+  "dropbox": "\f7ed",
+  "escape": "\f7ee",
+  "fast-forward-btn-fill": "\f7ef",
+  "fast-forward-btn": "\f7f0",
+  "fast-forward-circle-fill": "\f7f1",
+  "fast-forward-circle": "\f7f2",
+  "fast-forward-fill": "\f7f3",
+  "fast-forward": "\f7f4",
+  "filetype-sql": "\f7f5",
+  "fire": "\f7f6",
+  "google-play": "\f7f7",
+  "h-circle-1": "\f7f8",
+  "h-circle-fill-1": "\f7f9",
+  "h-circle-fill": "\f7fa",
+  "h-circle": "\f7fb",
+  "h-square-fill": "\f7fc",
+  "h-square": "\f7fd",
+  "indent": "\f7fe",
+  "lungs-fill": "\f7ff",
+  "lungs": "\f800",
+  "microsoft-teams": "\f801",
+  "p-circle-1": "\f802",
+  "p-circle-fill-1": "\f803",
+  "p-circle-fill": "\f804",
+  "p-circle": "\f805",
+  "p-square-fill": "\f806",
+  "p-square": "\f807",
+  "pass-fill": "\f808",
+  "pass": "\f809",
+  "prescription": "\f80a",
+  "prescription2": "\f80b",
+  "r-circle-1": "\f80c",
+  "r-circle-fill-1": "\f80d",
+  "r-circle-fill": "\f80e",
+  "r-circle": "\f80f",
+  "r-square-fill": "\f810",
+  "r-square": "\f811",
+  "repeat-1": "\f812",
+  "repeat": "\f813",
+  "rewind-btn-fill": "\f814",
+  "rewind-btn": "\f815",
+  "rewind-circle-fill": "\f816",
+  "rewind-circle": "\f817",
+  "rewind-fill": "\f818",
+  "rewind": "\f819",
+  "train-freight-front-fill": "\f81a",
+  "train-freight-front": "\f81b",
+  "train-front-fill": "\f81c",
+  "train-front": "\f81d",
+  "train-lightrail-front-fill": "\f81e",
+  "train-lightrail-front": "\f81f",
+  "truck-front-fill": "\f820",
+  "truck-front": "\f821",
+  "ubuntu": "\f822",
+  "unindent": "\f823",
+  "unity": "\f824",
+  "universal-access-circle": "\f825",
+  "universal-access": "\f826",
+  "virus": "\f827",
+  "virus2": "\f828",
+  "wechat": "\f829",
+  "yelp": "\f82a",
+  "sign-stop-fill": "\f82b",
+  "sign-stop-lights-fill": "\f82c",
+  "sign-stop-lights": "\f82d",
+  "sign-stop": "\f82e",
+  "sign-turn-left-fill": "\f82f",
+  "sign-turn-left": "\f830",
+  "sign-turn-right-fill": "\f831",
+  "sign-turn-right": "\f832",
+  "sign-turn-slight-left-fill": "\f833",
+  "sign-turn-slight-left": "\f834",
+  "sign-turn-slight-right-fill": "\f835",
+  "sign-turn-slight-right": "\f836",
+  "sign-yield-fill": "\f837",
+  "sign-yield": "\f838",
+  "ev-station-fill": "\f839",
+  "ev-station": "\f83a",
+  "fuel-pump-diesel-fill": "\f83b",
+  "fuel-pump-diesel": "\f83c",
+  "fuel-pump-fill": "\f83d",
+  "fuel-pump": "\f83e",
 );
 
 .bi-123::before { content: map-get($bootstrap-icons-map, "123"); }
@@ -3095,3 +3417,322 @@ $bootstrap-icons-map: (
 .bi-mortarboard-fill::before { content: map-get($bootstrap-icons-map, "mortarboard-fill"); }
 .bi-mortarboard::before { content: map-get($bootstrap-icons-map, "mortarboard"); }
 .bi-terminal-x::before { content: map-get($bootstrap-icons-map, "terminal-x"); }
+.bi-arrow-through-heart-fill::before { content: map-get($bootstrap-icons-map, "arrow-through-heart-fill"); }
+.bi-arrow-through-heart::before { content: map-get($bootstrap-icons-map, "arrow-through-heart"); }
+.bi-badge-sd-fill::before { content: map-get($bootstrap-icons-map, "badge-sd-fill"); }
+.bi-badge-sd::before { content: map-get($bootstrap-icons-map, "badge-sd"); }
+.bi-bag-heart-fill::before { content: map-get($bootstrap-icons-map, "bag-heart-fill"); }
+.bi-bag-heart::before { content: map-get($bootstrap-icons-map, "bag-heart"); }
+.bi-balloon-fill::before { content: map-get($bootstrap-icons-map, "balloon-fill"); }
+.bi-balloon-heart-fill::before { content: map-get($bootstrap-icons-map, "balloon-heart-fill"); }
+.bi-balloon-heart::before { content: map-get($bootstrap-icons-map, "balloon-heart"); }
+.bi-balloon::before { content: map-get($bootstrap-icons-map, "balloon"); }
+.bi-box2-fill::before { content: map-get($bootstrap-icons-map, "box2-fill"); }
+.bi-box2-heart-fill::before { content: map-get($bootstrap-icons-map, "box2-heart-fill"); }
+.bi-box2-heart::before { content: map-get($bootstrap-icons-map, "box2-heart"); }
+.bi-box2::before { content: map-get($bootstrap-icons-map, "box2"); }
+.bi-braces-asterisk::before { content: map-get($bootstrap-icons-map, "braces-asterisk"); }
+.bi-calendar-heart-fill::before { content: map-get($bootstrap-icons-map, "calendar-heart-fill"); }
+.bi-calendar-heart::before { content: map-get($bootstrap-icons-map, "calendar-heart"); }
+.bi-calendar2-heart-fill::before { content: map-get($bootstrap-icons-map, "calendar2-heart-fill"); }
+.bi-calendar2-heart::before { content: map-get($bootstrap-icons-map, "calendar2-heart"); }
+.bi-chat-heart-fill::before { content: map-get($bootstrap-icons-map, "chat-heart-fill"); }
+.bi-chat-heart::before { content: map-get($bootstrap-icons-map, "chat-heart"); }
+.bi-chat-left-heart-fill::before { content: map-get($bootstrap-icons-map, "chat-left-heart-fill"); }
+.bi-chat-left-heart::before { content: map-get($bootstrap-icons-map, "chat-left-heart"); }
+.bi-chat-right-heart-fill::before { content: map-get($bootstrap-icons-map, "chat-right-heart-fill"); }
+.bi-chat-right-heart::before { content: map-get($bootstrap-icons-map, "chat-right-heart"); }
+.bi-chat-square-heart-fill::before { content: map-get($bootstrap-icons-map, "chat-square-heart-fill"); }
+.bi-chat-square-heart::before { content: map-get($bootstrap-icons-map, "chat-square-heart"); }
+.bi-clipboard-check-fill::before { content: map-get($bootstrap-icons-map, "clipboard-check-fill"); }
+.bi-clipboard-data-fill::before { content: map-get($bootstrap-icons-map, "clipboard-data-fill"); }
+.bi-clipboard-fill::before { content: map-get($bootstrap-icons-map, "clipboard-fill"); }
+.bi-clipboard-heart-fill::before { content: map-get($bootstrap-icons-map, "clipboard-heart-fill"); }
+.bi-clipboard-heart::before { content: map-get($bootstrap-icons-map, "clipboard-heart"); }
+.bi-clipboard-minus-fill::before { content: map-get($bootstrap-icons-map, "clipboard-minus-fill"); }
+.bi-clipboard-plus-fill::before { content: map-get($bootstrap-icons-map, "clipboard-plus-fill"); }
+.bi-clipboard-pulse::before { content: map-get($bootstrap-icons-map, "clipboard-pulse"); }
+.bi-clipboard-x-fill::before { content: map-get($bootstrap-icons-map, "clipboard-x-fill"); }
+.bi-clipboard2-check-fill::before { content: map-get($bootstrap-icons-map, "clipboard2-check-fill"); }
+.bi-clipboard2-check::before { content: map-get($bootstrap-icons-map, "clipboard2-check"); }
+.bi-clipboard2-data-fill::before { content: map-get($bootstrap-icons-map, "clipboard2-data-fill"); }
+.bi-clipboard2-data::before { content: map-get($bootstrap-icons-map, "clipboard2-data"); }
+.bi-clipboard2-fill::before { content: map-get($bootstrap-icons-map, "clipboard2-fill"); }
+.bi-clipboard2-heart-fill::before { content: map-get($bootstrap-icons-map, "clipboard2-heart-fill"); }
+.bi-clipboard2-heart::before { content: map-get($bootstrap-icons-map, "clipboard2-heart"); }
+.bi-clipboard2-minus-fill::before { content: map-get($bootstrap-icons-map, "clipboard2-minus-fill"); }
+.bi-clipboard2-minus::before { content: map-get($bootstrap-icons-map, "clipboard2-minus"); }
+.bi-clipboard2-plus-fill::before { content: map-get($bootstrap-icons-map, "clipboard2-plus-fill"); }
+.bi-clipboard2-plus::before { content: map-get($bootstrap-icons-map, "clipboard2-plus"); }
+.bi-clipboard2-pulse-fill::before { content: map-get($bootstrap-icons-map, "clipboard2-pulse-fill"); }
+.bi-clipboard2-pulse::before { content: map-get($bootstrap-icons-map, "clipboard2-pulse"); }
+.bi-clipboard2-x-fill::before { content: map-get($bootstrap-icons-map, "clipboard2-x-fill"); }
+.bi-clipboard2-x::before { content: map-get($bootstrap-icons-map, "clipboard2-x"); }
+.bi-clipboard2::before { content: map-get($bootstrap-icons-map, "clipboard2"); }
+.bi-emoji-kiss-fill::before { content: map-get($bootstrap-icons-map, "emoji-kiss-fill"); }
+.bi-emoji-kiss::before { content: map-get($bootstrap-icons-map, "emoji-kiss"); }
+.bi-envelope-heart-fill::before { content: map-get($bootstrap-icons-map, "envelope-heart-fill"); }
+.bi-envelope-heart::before { content: map-get($bootstrap-icons-map, "envelope-heart"); }
+.bi-envelope-open-heart-fill::before { content: map-get($bootstrap-icons-map, "envelope-open-heart-fill"); }
+.bi-envelope-open-heart::before { content: map-get($bootstrap-icons-map, "envelope-open-heart"); }
+.bi-envelope-paper-fill::before { content: map-get($bootstrap-icons-map, "envelope-paper-fill"); }
+.bi-envelope-paper-heart-fill::before { content: map-get($bootstrap-icons-map, "envelope-paper-heart-fill"); }
+.bi-envelope-paper-heart::before { content: map-get($bootstrap-icons-map, "envelope-paper-heart"); }
+.bi-envelope-paper::before { content: map-get($bootstrap-icons-map, "envelope-paper"); }
+.bi-filetype-aac::before { content: map-get($bootstrap-icons-map, "filetype-aac"); }
+.bi-filetype-ai::before { content: map-get($bootstrap-icons-map, "filetype-ai"); }
+.bi-filetype-bmp::before { content: map-get($bootstrap-icons-map, "filetype-bmp"); }
+.bi-filetype-cs::before { content: map-get($bootstrap-icons-map, "filetype-cs"); }
+.bi-filetype-css::before { content: map-get($bootstrap-icons-map, "filetype-css"); }
+.bi-filetype-csv::before { content: map-get($bootstrap-icons-map, "filetype-csv"); }
+.bi-filetype-doc::before { content: map-get($bootstrap-icons-map, "filetype-doc"); }
+.bi-filetype-docx::before { content: map-get($bootstrap-icons-map, "filetype-docx"); }
+.bi-filetype-exe::before { content: map-get($bootstrap-icons-map, "filetype-exe"); }
+.bi-filetype-gif::before { content: map-get($bootstrap-icons-map, "filetype-gif"); }
+.bi-filetype-heic::before { content: map-get($bootstrap-icons-map, "filetype-heic"); }
+.bi-filetype-html::before { content: map-get($bootstrap-icons-map, "filetype-html"); }
+.bi-filetype-java::before { content: map-get($bootstrap-icons-map, "filetype-java"); }
+.bi-filetype-jpg::before { content: map-get($bootstrap-icons-map, "filetype-jpg"); }
+.bi-filetype-js::before { content: map-get($bootstrap-icons-map, "filetype-js"); }
+.bi-filetype-jsx::before { content: map-get($bootstrap-icons-map, "filetype-jsx"); }
+.bi-filetype-key::before { content: map-get($bootstrap-icons-map, "filetype-key"); }
+.bi-filetype-m4p::before { content: map-get($bootstrap-icons-map, "filetype-m4p"); }
+.bi-filetype-md::before { content: map-get($bootstrap-icons-map, "filetype-md"); }
+.bi-filetype-mdx::before { content: map-get($bootstrap-icons-map, "filetype-mdx"); }
+.bi-filetype-mov::before { content: map-get($bootstrap-icons-map, "filetype-mov"); }
+.bi-filetype-mp3::before { content: map-get($bootstrap-icons-map, "filetype-mp3"); }
+.bi-filetype-mp4::before { content: map-get($bootstrap-icons-map, "filetype-mp4"); }
+.bi-filetype-otf::before { content: map-get($bootstrap-icons-map, "filetype-otf"); }
+.bi-filetype-pdf::before { content: map-get($bootstrap-icons-map, "filetype-pdf"); }
+.bi-filetype-php::before { content: map-get($bootstrap-icons-map, "filetype-php"); }
+.bi-filetype-png::before { content: map-get($bootstrap-icons-map, "filetype-png"); }
+.bi-filetype-ppt-1::before { content: map-get($bootstrap-icons-map, "filetype-ppt-1"); }
+.bi-filetype-ppt::before { content: map-get($bootstrap-icons-map, "filetype-ppt"); }
+.bi-filetype-psd::before { content: map-get($bootstrap-icons-map, "filetype-psd"); }
+.bi-filetype-py::before { content: map-get($bootstrap-icons-map, "filetype-py"); }
+.bi-filetype-raw::before { content: map-get($bootstrap-icons-map, "filetype-raw"); }
+.bi-filetype-rb::before { content: map-get($bootstrap-icons-map, "filetype-rb"); }
+.bi-filetype-sass::before { content: map-get($bootstrap-icons-map, "filetype-sass"); }
+.bi-filetype-scss::before { content: map-get($bootstrap-icons-map, "filetype-scss"); }
+.bi-filetype-sh::before { content: map-get($bootstrap-icons-map, "filetype-sh"); }
+.bi-filetype-svg::before { content: map-get($bootstrap-icons-map, "filetype-svg"); }
+.bi-filetype-tiff::before { content: map-get($bootstrap-icons-map, "filetype-tiff"); }
+.bi-filetype-tsx::before { content: map-get($bootstrap-icons-map, "filetype-tsx"); }
+.bi-filetype-ttf::before { content: map-get($bootstrap-icons-map, "filetype-ttf"); }
+.bi-filetype-txt::before { content: map-get($bootstrap-icons-map, "filetype-txt"); }
+.bi-filetype-wav::before { content: map-get($bootstrap-icons-map, "filetype-wav"); }
+.bi-filetype-woff::before { content: map-get($bootstrap-icons-map, "filetype-woff"); }
+.bi-filetype-xls-1::before { content: map-get($bootstrap-icons-map, "filetype-xls-1"); }
+.bi-filetype-xls::before { content: map-get($bootstrap-icons-map, "filetype-xls"); }
+.bi-filetype-xml::before { content: map-get($bootstrap-icons-map, "filetype-xml"); }
+.bi-filetype-yml::before { content: map-get($bootstrap-icons-map, "filetype-yml"); }
+.bi-heart-arrow::before { content: map-get($bootstrap-icons-map, "heart-arrow"); }
+.bi-heart-pulse-fill::before { content: map-get($bootstrap-icons-map, "heart-pulse-fill"); }
+.bi-heart-pulse::before { content: map-get($bootstrap-icons-map, "heart-pulse"); }
+.bi-heartbreak-fill::before { content: map-get($bootstrap-icons-map, "heartbreak-fill"); }
+.bi-heartbreak::before { content: map-get($bootstrap-icons-map, "heartbreak"); }
+.bi-hearts::before { content: map-get($bootstrap-icons-map, "hearts"); }
+.bi-hospital-fill::before { content: map-get($bootstrap-icons-map, "hospital-fill"); }
+.bi-hospital::before { content: map-get($bootstrap-icons-map, "hospital"); }
+.bi-house-heart-fill::before { content: map-get($bootstrap-icons-map, "house-heart-fill"); }
+.bi-house-heart::before { content: map-get($bootstrap-icons-map, "house-heart"); }
+.bi-incognito::before { content: map-get($bootstrap-icons-map, "incognito"); }
+.bi-magnet-fill::before { content: map-get($bootstrap-icons-map, "magnet-fill"); }
+.bi-magnet::before { content: map-get($bootstrap-icons-map, "magnet"); }
+.bi-person-heart::before { content: map-get($bootstrap-icons-map, "person-heart"); }
+.bi-person-hearts::before { content: map-get($bootstrap-icons-map, "person-hearts"); }
+.bi-phone-flip::before { content: map-get($bootstrap-icons-map, "phone-flip"); }
+.bi-plugin::before { content: map-get($bootstrap-icons-map, "plugin"); }
+.bi-postage-fill::before { content: map-get($bootstrap-icons-map, "postage-fill"); }
+.bi-postage-heart-fill::before { content: map-get($bootstrap-icons-map, "postage-heart-fill"); }
+.bi-postage-heart::before { content: map-get($bootstrap-icons-map, "postage-heart"); }
+.bi-postage::before { content: map-get($bootstrap-icons-map, "postage"); }
+.bi-postcard-fill::before { content: map-get($bootstrap-icons-map, "postcard-fill"); }
+.bi-postcard-heart-fill::before { content: map-get($bootstrap-icons-map, "postcard-heart-fill"); }
+.bi-postcard-heart::before { content: map-get($bootstrap-icons-map, "postcard-heart"); }
+.bi-postcard::before { content: map-get($bootstrap-icons-map, "postcard"); }
+.bi-search-heart-fill::before { content: map-get($bootstrap-icons-map, "search-heart-fill"); }
+.bi-search-heart::before { content: map-get($bootstrap-icons-map, "search-heart"); }
+.bi-sliders2-vertical::before { content: map-get($bootstrap-icons-map, "sliders2-vertical"); }
+.bi-sliders2::before { content: map-get($bootstrap-icons-map, "sliders2"); }
+.bi-trash3-fill::before { content: map-get($bootstrap-icons-map, "trash3-fill"); }
+.bi-trash3::before { content: map-get($bootstrap-icons-map, "trash3"); }
+.bi-valentine::before { content: map-get($bootstrap-icons-map, "valentine"); }
+.bi-valentine2::before { content: map-get($bootstrap-icons-map, "valentine2"); }
+.bi-wrench-adjustable-circle-fill::before { content: map-get($bootstrap-icons-map, "wrench-adjustable-circle-fill"); }
+.bi-wrench-adjustable-circle::before { content: map-get($bootstrap-icons-map, "wrench-adjustable-circle"); }
+.bi-wrench-adjustable::before { content: map-get($bootstrap-icons-map, "wrench-adjustable"); }
+.bi-filetype-json::before { content: map-get($bootstrap-icons-map, "filetype-json"); }
+.bi-filetype-pptx::before { content: map-get($bootstrap-icons-map, "filetype-pptx"); }
+.bi-filetype-xlsx::before { content: map-get($bootstrap-icons-map, "filetype-xlsx"); }
+.bi-1-circle-1::before { content: map-get($bootstrap-icons-map, "1-circle-1"); }
+.bi-1-circle-fill-1::before { content: map-get($bootstrap-icons-map, "1-circle-fill-1"); }
+.bi-1-circle-fill::before { content: map-get($bootstrap-icons-map, "1-circle-fill"); }
+.bi-1-circle::before { content: map-get($bootstrap-icons-map, "1-circle"); }
+.bi-1-square-fill::before { content: map-get($bootstrap-icons-map, "1-square-fill"); }
+.bi-1-square::before { content: map-get($bootstrap-icons-map, "1-square"); }
+.bi-2-circle-1::before { content: map-get($bootstrap-icons-map, "2-circle-1"); }
+.bi-2-circle-fill-1::before { content: map-get($bootstrap-icons-map, "2-circle-fill-1"); }
+.bi-2-circle-fill::before { content: map-get($bootstrap-icons-map, "2-circle-fill"); }
+.bi-2-circle::before { content: map-get($bootstrap-icons-map, "2-circle"); }
+.bi-2-square-fill::before { content: map-get($bootstrap-icons-map, "2-square-fill"); }
+.bi-2-square::before { content: map-get($bootstrap-icons-map, "2-square"); }
+.bi-3-circle-1::before { content: map-get($bootstrap-icons-map, "3-circle-1"); }
+.bi-3-circle-fill-1::before { content: map-get($bootstrap-icons-map, "3-circle-fill-1"); }
+.bi-3-circle-fill::before { content: map-get($bootstrap-icons-map, "3-circle-fill"); }
+.bi-3-circle::before { content: map-get($bootstrap-icons-map, "3-circle"); }
+.bi-3-square-fill::before { content: map-get($bootstrap-icons-map, "3-square-fill"); }
+.bi-3-square::before { content: map-get($bootstrap-icons-map, "3-square"); }
+.bi-4-circle-1::before { content: map-get($bootstrap-icons-map, "4-circle-1"); }
+.bi-4-circle-fill-1::before { content: map-get($bootstrap-icons-map, "4-circle-fill-1"); }
+.bi-4-circle-fill::before { content: map-get($bootstrap-icons-map, "4-circle-fill"); }
+.bi-4-circle::before { content: map-get($bootstrap-icons-map, "4-circle"); }
+.bi-4-square-fill::before { content: map-get($bootstrap-icons-map, "4-square-fill"); }
+.bi-4-square::before { content: map-get($bootstrap-icons-map, "4-square"); }
+.bi-5-circle-1::before { content: map-get($bootstrap-icons-map, "5-circle-1"); }
+.bi-5-circle-fill-1::before { content: map-get($bootstrap-icons-map, "5-circle-fill-1"); }
+.bi-5-circle-fill::before { content: map-get($bootstrap-icons-map, "5-circle-fill"); }
+.bi-5-circle::before { content: map-get($bootstrap-icons-map, "5-circle"); }
+.bi-5-square-fill::before { content: map-get($bootstrap-icons-map, "5-square-fill"); }
+.bi-5-square::before { content: map-get($bootstrap-icons-map, "5-square"); }
+.bi-6-circle-1::before { content: map-get($bootstrap-icons-map, "6-circle-1"); }
+.bi-6-circle-fill-1::before { content: map-get($bootstrap-icons-map, "6-circle-fill-1"); }
+.bi-6-circle-fill::before { content: map-get($bootstrap-icons-map, "6-circle-fill"); }
+.bi-6-circle::before { content: map-get($bootstrap-icons-map, "6-circle"); }
+.bi-6-square-fill::before { content: map-get($bootstrap-icons-map, "6-square-fill"); }
+.bi-6-square::before { content: map-get($bootstrap-icons-map, "6-square"); }
+.bi-7-circle-1::before { content: map-get($bootstrap-icons-map, "7-circle-1"); }
+.bi-7-circle-fill-1::before { content: map-get($bootstrap-icons-map, "7-circle-fill-1"); }
+.bi-7-circle-fill::before { content: map-get($bootstrap-icons-map, "7-circle-fill"); }
+.bi-7-circle::before { content: map-get($bootstrap-icons-map, "7-circle"); }
+.bi-7-square-fill::before { content: map-get($bootstrap-icons-map, "7-square-fill"); }
+.bi-7-square::before { content: map-get($bootstrap-icons-map, "7-square"); }
+.bi-8-circle-1::before { content: map-get($bootstrap-icons-map, "8-circle-1"); }
+.bi-8-circle-fill-1::before { content: map-get($bootstrap-icons-map, "8-circle-fill-1"); }
+.bi-8-circle-fill::before { content: map-get($bootstrap-icons-map, "8-circle-fill"); }
+.bi-8-circle::before { content: map-get($bootstrap-icons-map, "8-circle"); }
+.bi-8-square-fill::before { content: map-get($bootstrap-icons-map, "8-square-fill"); }
+.bi-8-square::before { content: map-get($bootstrap-icons-map, "8-square"); }
+.bi-9-circle-1::before { content: map-get($bootstrap-icons-map, "9-circle-1"); }
+.bi-9-circle-fill-1::before { content: map-get($bootstrap-icons-map, "9-circle-fill-1"); }
+.bi-9-circle-fill::before { content: map-get($bootstrap-icons-map, "9-circle-fill"); }
+.bi-9-circle::before { content: map-get($bootstrap-icons-map, "9-circle"); }
+.bi-9-square-fill::before { content: map-get($bootstrap-icons-map, "9-square-fill"); }
+.bi-9-square::before { content: map-get($bootstrap-icons-map, "9-square"); }
+.bi-airplane-engines-fill::before { content: map-get($bootstrap-icons-map, "airplane-engines-fill"); }
+.bi-airplane-engines::before { content: map-get($bootstrap-icons-map, "airplane-engines"); }
+.bi-airplane-fill::before { content: map-get($bootstrap-icons-map, "airplane-fill"); }
+.bi-airplane::before { content: map-get($bootstrap-icons-map, "airplane"); }
+.bi-alexa::before { content: map-get($bootstrap-icons-map, "alexa"); }
+.bi-alipay::before { content: map-get($bootstrap-icons-map, "alipay"); }
+.bi-android::before { content: map-get($bootstrap-icons-map, "android"); }
+.bi-android2::before { content: map-get($bootstrap-icons-map, "android2"); }
+.bi-box-fill::before { content: map-get($bootstrap-icons-map, "box-fill"); }
+.bi-box-seam-fill::before { content: map-get($bootstrap-icons-map, "box-seam-fill"); }
+.bi-browser-chrome::before { content: map-get($bootstrap-icons-map, "browser-chrome"); }
+.bi-browser-edge::before { content: map-get($bootstrap-icons-map, "browser-edge"); }
+.bi-browser-firefox::before { content: map-get($bootstrap-icons-map, "browser-firefox"); }
+.bi-browser-safari::before { content: map-get($bootstrap-icons-map, "browser-safari"); }
+.bi-c-circle-1::before { content: map-get($bootstrap-icons-map, "c-circle-1"); }
+.bi-c-circle-fill-1::before { content: map-get($bootstrap-icons-map, "c-circle-fill-1"); }
+.bi-c-circle-fill::before { content: map-get($bootstrap-icons-map, "c-circle-fill"); }
+.bi-c-circle::before { content: map-get($bootstrap-icons-map, "c-circle"); }
+.bi-c-square-fill::before { content: map-get($bootstrap-icons-map, "c-square-fill"); }
+.bi-c-square::before { content: map-get($bootstrap-icons-map, "c-square"); }
+.bi-capsule-pill::before { content: map-get($bootstrap-icons-map, "capsule-pill"); }
+.bi-capsule::before { content: map-get($bootstrap-icons-map, "capsule"); }
+.bi-car-front-fill::before { content: map-get($bootstrap-icons-map, "car-front-fill"); }
+.bi-car-front::before { content: map-get($bootstrap-icons-map, "car-front"); }
+.bi-cassette-fill::before { content: map-get($bootstrap-icons-map, "cassette-fill"); }
+.bi-cassette::before { content: map-get($bootstrap-icons-map, "cassette"); }
+.bi-cc-circle-1::before { content: map-get($bootstrap-icons-map, "cc-circle-1"); }
+.bi-cc-circle-fill-1::before { content: map-get($bootstrap-icons-map, "cc-circle-fill-1"); }
+.bi-cc-circle-fill::before { content: map-get($bootstrap-icons-map, "cc-circle-fill"); }
+.bi-cc-circle::before { content: map-get($bootstrap-icons-map, "cc-circle"); }
+.bi-cc-square-fill::before { content: map-get($bootstrap-icons-map, "cc-square-fill"); }
+.bi-cc-square::before { content: map-get($bootstrap-icons-map, "cc-square"); }
+.bi-cup-hot-fill::before { content: map-get($bootstrap-icons-map, "cup-hot-fill"); }
+.bi-cup-hot::before { content: map-get($bootstrap-icons-map, "cup-hot"); }
+.bi-currency-rupee::before { content: map-get($bootstrap-icons-map, "currency-rupee"); }
+.bi-dropbox::before { content: map-get($bootstrap-icons-map, "dropbox"); }
+.bi-escape::before { content: map-get($bootstrap-icons-map, "escape"); }
+.bi-fast-forward-btn-fill::before { content: map-get($bootstrap-icons-map, "fast-forward-btn-fill"); }
+.bi-fast-forward-btn::before { content: map-get($bootstrap-icons-map, "fast-forward-btn"); }
+.bi-fast-forward-circle-fill::before { content: map-get($bootstrap-icons-map, "fast-forward-circle-fill"); }
+.bi-fast-forward-circle::before { content: map-get($bootstrap-icons-map, "fast-forward-circle"); }
+.bi-fast-forward-fill::before { content: map-get($bootstrap-icons-map, "fast-forward-fill"); }
+.bi-fast-forward::before { content: map-get($bootstrap-icons-map, "fast-forward"); }
+.bi-filetype-sql::before { content: map-get($bootstrap-icons-map, "filetype-sql"); }
+.bi-fire::before { content: map-get($bootstrap-icons-map, "fire"); }
+.bi-google-play::before { content: map-get($bootstrap-icons-map, "google-play"); }
+.bi-h-circle-1::before { content: map-get($bootstrap-icons-map, "h-circle-1"); }
+.bi-h-circle-fill-1::before { content: map-get($bootstrap-icons-map, "h-circle-fill-1"); }
+.bi-h-circle-fill::before { content: map-get($bootstrap-icons-map, "h-circle-fill"); }
+.bi-h-circle::before { content: map-get($bootstrap-icons-map, "h-circle"); }
+.bi-h-square-fill::before { content: map-get($bootstrap-icons-map, "h-square-fill"); }
+.bi-h-square::before { content: map-get($bootstrap-icons-map, "h-square"); }
+.bi-indent::before { content: map-get($bootstrap-icons-map, "indent"); }
+.bi-lungs-fill::before { content: map-get($bootstrap-icons-map, "lungs-fill"); }
+.bi-lungs::before { content: map-get($bootstrap-icons-map, "lungs"); }
+.bi-microsoft-teams::before { content: map-get($bootstrap-icons-map, "microsoft-teams"); }
+.bi-p-circle-1::before { content: map-get($bootstrap-icons-map, "p-circle-1"); }
+.bi-p-circle-fill-1::before { content: map-get($bootstrap-icons-map, "p-circle-fill-1"); }
+.bi-p-circle-fill::before { content: map-get($bootstrap-icons-map, "p-circle-fill"); }
+.bi-p-circle::before { content: map-get($bootstrap-icons-map, "p-circle"); }
+.bi-p-square-fill::before { content: map-get($bootstrap-icons-map, "p-square-fill"); }
+.bi-p-square::before { content: map-get($bootstrap-icons-map, "p-square"); }
+.bi-pass-fill::before { content: map-get($bootstrap-icons-map, "pass-fill"); }
+.bi-pass::before { content: map-get($bootstrap-icons-map, "pass"); }
+.bi-prescription::before { content: map-get($bootstrap-icons-map, "prescription"); }
+.bi-prescription2::before { content: map-get($bootstrap-icons-map, "prescription2"); }
+.bi-r-circle-1::before { content: map-get($bootstrap-icons-map, "r-circle-1"); }
+.bi-r-circle-fill-1::before { content: map-get($bootstrap-icons-map, "r-circle-fill-1"); }
+.bi-r-circle-fill::before { content: map-get($bootstrap-icons-map, "r-circle-fill"); }
+.bi-r-circle::before { content: map-get($bootstrap-icons-map, "r-circle"); }
+.bi-r-square-fill::before { content: map-get($bootstrap-icons-map, "r-square-fill"); }
+.bi-r-square::before { content: map-get($bootstrap-icons-map, "r-square"); }
+.bi-repeat-1::before { content: map-get($bootstrap-icons-map, "repeat-1"); }
+.bi-repeat::before { content: map-get($bootstrap-icons-map, "repeat"); }
+.bi-rewind-btn-fill::before { content: map-get($bootstrap-icons-map, "rewind-btn-fill"); }
+.bi-rewind-btn::before { content: map-get($bootstrap-icons-map, "rewind-btn"); }
+.bi-rewind-circle-fill::before { content: map-get($bootstrap-icons-map, "rewind-circle-fill"); }
+.bi-rewind-circle::before { content: map-get($bootstrap-icons-map, "rewind-circle"); }
+.bi-rewind-fill::before { content: map-get($bootstrap-icons-map, "rewind-fill"); }
+.bi-rewind::before { content: map-get($bootstrap-icons-map, "rewind"); }
+.bi-train-freight-front-fill::before { content: map-get($bootstrap-icons-map, "train-freight-front-fill"); }
+.bi-train-freight-front::before { content: map-get($bootstrap-icons-map, "train-freight-front"); }
+.bi-train-front-fill::before { content: map-get($bootstrap-icons-map, "train-front-fill"); }
+.bi-train-front::before { content: map-get($bootstrap-icons-map, "train-front"); }
+.bi-train-lightrail-front-fill::before { content: map-get($bootstrap-icons-map, "train-lightrail-front-fill"); }
+.bi-train-lightrail-front::before { content: map-get($bootstrap-icons-map, "train-lightrail-front"); }
+.bi-truck-front-fill::before { content: map-get($bootstrap-icons-map, "truck-front-fill"); }
+.bi-truck-front::before { content: map-get($bootstrap-icons-map, "truck-front"); }
+.bi-ubuntu::before { content: map-get($bootstrap-icons-map, "ubuntu"); }
+.bi-unindent::before { content: map-get($bootstrap-icons-map, "unindent"); }
+.bi-unity::before { content: map-get($bootstrap-icons-map, "unity"); }
+.bi-universal-access-circle::before { content: map-get($bootstrap-icons-map, "universal-access-circle"); }
+.bi-universal-access::before { content: map-get($bootstrap-icons-map, "universal-access"); }
+.bi-virus::before { content: map-get($bootstrap-icons-map, "virus"); }
+.bi-virus2::before { content: map-get($bootstrap-icons-map, "virus2"); }
+.bi-wechat::before { content: map-get($bootstrap-icons-map, "wechat"); }
+.bi-yelp::before { content: map-get($bootstrap-icons-map, "yelp"); }
+.bi-sign-stop-fill::before { content: map-get($bootstrap-icons-map, "sign-stop-fill"); }
+.bi-sign-stop-lights-fill::before { content: map-get($bootstrap-icons-map, "sign-stop-lights-fill"); }
+.bi-sign-stop-lights::before { content: map-get($bootstrap-icons-map, "sign-stop-lights"); }
+.bi-sign-stop::before { content: map-get($bootstrap-icons-map, "sign-stop"); }
+.bi-sign-turn-left-fill::before { content: map-get($bootstrap-icons-map, "sign-turn-left-fill"); }
+.bi-sign-turn-left::before { content: map-get($bootstrap-icons-map, "sign-turn-left"); }
+.bi-sign-turn-right-fill::before { content: map-get($bootstrap-icons-map, "sign-turn-right-fill"); }
+.bi-sign-turn-right::before { content: map-get($bootstrap-icons-map, "sign-turn-right"); }
+.bi-sign-turn-slight-left-fill::before { content: map-get($bootstrap-icons-map, "sign-turn-slight-left-fill"); }
+.bi-sign-turn-slight-left::before { content: map-get($bootstrap-icons-map, "sign-turn-slight-left"); }
+.bi-sign-turn-slight-right-fill::before { content: map-get($bootstrap-icons-map, "sign-turn-slight-right-fill"); }
+.bi-sign-turn-slight-right::before { content: map-get($bootstrap-icons-map, "sign-turn-slight-right"); }
+.bi-sign-yield-fill::before { content: map-get($bootstrap-icons-map, "sign-yield-fill"); }
+.bi-sign-yield::before { content: map-get($bootstrap-icons-map, "sign-yield"); }
+.bi-ev-station-fill::before { content: map-get($bootstrap-icons-map, "ev-station-fill"); }
+.bi-ev-station::before { content: map-get($bootstrap-icons-map, "ev-station"); }
+.bi-fuel-pump-diesel-fill::before { content: map-get($bootstrap-icons-map, "fuel-pump-diesel-fill"); }
+.bi-fuel-pump-diesel::before { content: map-get($bootstrap-icons-map, "fuel-pump-diesel"); }
+.bi-fuel-pump-fill::before { content: map-get($bootstrap-icons-map, "fuel-pump-fill"); }
+.bi-fuel-pump::before { content: map-get($bootstrap-icons-map, "fuel-pump"); }
