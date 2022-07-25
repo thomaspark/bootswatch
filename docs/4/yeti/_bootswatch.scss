@@ -1,4 +1,4 @@
-// Yeti 4.6.1
+// Yeti 4.6.2
 // Bootswatch
 
 
@@ -27,8 +27,8 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,
     .dropdown-item.active,
     .dropdown-item:hover,
     .dropdown-item:focus {
-      color: $white;
       background-color: darken($primary, 5%);
+      color: $white;
     }
   }
 }
@@ -47,8 +47,8 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,
     .dropdown-item.active,
     .dropdown-item:hover,
     .dropdown-item:focus  {
-      color: $white;
       background-color: darken($gray-800, 5%);
+      color: $white;
     }
   }
 }
@@ -65,8 +65,8 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,
     .dropdown-item.active,
     .dropdown-item:hover,
     .dropdown-item:focus  {
-      color: $navbar-light-hover-color;
       background-color: lighten($gray-200, 5%);
+      color: $navbar-light-hover-color;
     }
   }
 }
@@ -87,8 +87,8 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,
   }
 
   &-info {
-    color: $white;
     border-color: darken($info, 5%);
+    color: $white;
   }
 
   &-danger {
@@ -96,8 +96,8 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,
   }
 
   &-warning {
-    color: $white;
     border-color: darken($warning, 5%);
+    color: $white;
   }
 
   &-light {
@@ -399,8 +399,8 @@ label,
   .nav-link.disabled,
   .nav-link.disabled:hover,
   .nav-link.disabled:focus {
-    background-color: $gray-200;
     border-color: $nav-tabs-border-color;
+    background-color: $gray-200;
   }
 
   .nav-link:hover,
@@ -416,21 +416,21 @@ label,
 }
 
 .breadcrumb {
+  border: 1px solid $dropdown-border-color;
+  border-radius: 3px;
   font-size: $font-size-sm;
   font-weight: 300;
   text-transform: uppercase;
-  border: 1px solid $dropdown-border-color;
-  border-radius: 3px;
 }
 
 .pagination {
   font-weight: 300;
 
   .page-link {
-    margin-right: .1em;
-    margin-left: .1em;
     border-color: transparent;
     border-radius: 3px;
+    margin-left: .1em;
+    margin-right: .1em;
 
     &:hover,
     &:focus {
@@ -464,8 +464,8 @@ label,
 // Indicators ==================================================================
 
 .close {
-  text-shadow: none;
   opacity: .6;
+  text-shadow: none;
 
   &:hover,
   &:focus {

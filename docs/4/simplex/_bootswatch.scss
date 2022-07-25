@@ -1,4 +1,4 @@
-// Simplex 4.6.1
+// Simplex 4.6.2
 // Bootswatch
 
 
@@ -19,16 +19,16 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700
 // Navbar ======================================================================
 
 .navbar {
-  border-style: solid;
   border-width: 1px;
+  border-style: solid;
 
   &-fixed-top {
     border-width: 0 0 1px;
   }
 
   &-fixed-bottom {
-    border-style: solid;
     border-top-width: 1px 0 0 0;
+    border-style: solid;
   }
 }
 
@@ -94,12 +94,12 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700
 }
 
 .btn-outline-secondary {
-  color: $gray-400;
   border-color: $gray-400;
+  color: $gray-400;
 
   &:hover {
-    color: $white;
     background-color: $gray-400;
+    color: $white;
   }
 }
 

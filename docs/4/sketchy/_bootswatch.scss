@@ -1,4 +1,4 @@
-// Sketchy 4.6.1
+// Sketchy 4.6.2
 // Bootswatch
 
 
@@ -17,8 +17,8 @@ $border-radius-sm-sketchy: 255px 25px 225px 25px / 25px 225px 25px 255px;
 // Navbar ======================================================================
 
 .navbar {
-  border-style: solid;
   border-width: 2px;
+  border-style: solid;
   border-radius: 25px 25px 55px 5px/5px 55px 25px 25px;
 
   &.bg-light {
@@ -26,13 +26,13 @@ $border-radius-sm-sketchy: 255px 25px 225px 25px / 25px 225px 25px 255px;
   }
 
   &.fixed-top {
-    border-width: 0 0 2px;
     border-radius: 0 25px 225px 0/25px 0 25px 255px;
+    border-width: 0 0 2px;
   }
 
   &.fixed-bottom {
-    border-width: 2px 0 0;
     border-radius: 255px 25px 0 25px/25px 225px 25px 0;
+    border-width: 2px 0 0;
   }
 
   &-brand {
@@ -45,8 +45,8 @@ $border-radius-sm-sketchy: 255px 25px 225px 25px / 25px 225px 25px 255px;
 // Buttons =====================================================================
 
 .btn {
-  text-decoration: none;
   border-radius: $border-radius-sketchy;
+  text-decoration: none;
 
   &-lg {
     border-radius: $border-radius-lg-sketchy;
@@ -81,11 +81,11 @@ table {
 }
 
 .table-bordered {
-  overflow: hidden;
-  border-spacing: 0;
-  border-collapse: separate;
   background-color: $gray-800;
+  border-collapse: separate;
+  border-spacing: 0;
   border-radius: 5px 25px 5px 25px/25px 5px 25px 5px;
+  overflow: hidden;
 
   th,
   td {
@@ -96,8 +96,8 @@ table {
   .table-success:hover {
     td,
     th {
-      color: $white;
       background-color: $success;
+      color: $white;
     }
   }
 
@@ -105,8 +105,8 @@ table {
   .table-info:hover {
     td,
     th {
-      color: $white;
       background-color: $info;
+      color: $white;
     }
   }
 
@@ -114,8 +114,8 @@ table {
   .table-warning:hover {
     td,
     th {
-      color: $white;
       background-color: $warning;
+      color: $white;
     }
   }
 
@@ -123,8 +123,8 @@ table {
   .table-danger:hover {
     td,
     th {
-      color: $white;
       background-color: $danger;
+      color: $white;
     }
   }
 }
@@ -157,32 +157,32 @@ select.form-control {
 
 [type="checkbox"] {
   position: relative;
+  appearance: none;
   width: 0;
   height: 0;
-  cursor: pointer;
   border: none;
-  appearance: none;
+  cursor: pointer;
 
   &::before {
+    content: "";
     position: absolute;
-    top: -.9em;
     left: -1.2em;
+    top: -.9em;
     display: inline-block;
     width: 15px;
     height: 16px;
-    content: "";
     border: 2px solid $gray-800;
     border-radius: 2px 8px 2px 4px / 5px 3px 5px 3px;
   }
 
   &:checked::after {
+    content: "x";
     position: absolute;
-    top: -.48em;
     left: -.64em;
+    top: -.48em;
     font-size: 1.5rem;
     line-height: .5;
     color: $gray-800;
-    content: "x";
   }
 
   &:disabled {
@@ -194,20 +194,20 @@ select.form-control {
 
 [type="radio"] {
   position: relative;
+  appearance: none;
   width: 0;
   height: 0;
-  cursor: pointer;
   border: none;
-  appearance: none;
+  cursor: pointer;
 
   &::before {
+    content: "";
     position: absolute;
-    top: -.9em;
     left: -1.2em;
+    top: -.9em;
     display: inline-block;
     width: 16px;
     height: 16px;
-    content: "";
     border: 2px solid $gray-800;
     border-radius: 50% 45% 40% 50% / 40% 50% 50% 45%;
   }
@@ -230,34 +230,34 @@ select.form-control {
 .form-check-inline {
   [type="checkbox"] {
     &::before {
-      top: 0;
       left: 0;
+      top: 0;
     }
 
     &::after {
-      top: .12em;
       left: .14em;
+      top: .12em;
     }
   }
 
   [type="radio"] {
     &::before {
-      top: 0;
       left: 0;
+      top: 0;
     }
   }
 
   .form-check-label {
-    padding-right: 1rem;
     padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
 // Navs ========================================================================
 
 .dropdown-menu {
-  overflow: hidden;
   border-radius: 555px 25px 25px 25px/25px 25px 25px 555px;
+  overflow: hidden;
 }
 
 .dropdown-divider {
@@ -265,15 +265,15 @@ select.form-control {
 }
 
 .list-group {
-  overflow: hidden;
   background-color: $gray-800;
   border: 2px solid $gray-800;
   border-radius: 45px 15px 35px 5px/15px 5px 15px 65px;
+  overflow: hidden;
 
   &-item {
-    border-top: 2px solid $gray-800;
-    border-right: none;
     border-left: none;
+    border-right: none;
+    border-top: 2px solid $gray-800;
     border-radius: 255px 5px 225px 5px/25px 225px 25px 255px;
 
     &:first-child {
@@ -336,8 +336,8 @@ select.form-control {
       color: transparent;
 
       &::before {
-        top: .8rem;
         right: 1rem;
+        top: .8rem;
       }
     }
 
@@ -406,8 +406,8 @@ select.form-control {
   }
 
   &-header {
-    border-color: inherit;
     border-bottom-width: 2px;
+    border-color: inherit;
 
     &:first-child {
       border-radius: 3px 3px 0 0/23px 23px 0 0;
@@ -486,8 +486,8 @@ pre {
 
   &::before {
     position: absolute;
-    color: $gray-800;
     content: "X";
+    color: $gray-800;
   }
 }
 

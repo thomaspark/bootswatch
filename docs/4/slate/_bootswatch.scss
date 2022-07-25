@@ -1,4 +1,4 @@
-// Slate 4.6.1
+// Slate 4.6.2
 // Bootswatch
 
 
@@ -17,8 +17,8 @@
 // Navbar ======================================================================
 
 .navbar {
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
   border: 1px solid rgba(0, 0, 0, .6);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
 
   .container {
     padding: 0;
@@ -38,8 +38,8 @@
 
   .nav-link {
     padding: 1rem;
-    border-right: 1px solid rgba(0, 0, 0, .2);
     border-left: 1px solid rgba(255, 255, 255, .1);
+    border-right: 1px solid rgba(0, 0, 0, .2);
 
     &:hover,
     &:focus {
@@ -106,8 +106,8 @@
 // Buttons =====================================================================
 
 .btn {
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
   border-color: rgba(0, 0, 0, .6);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
 
   &:not([disabled]):not(.disabled).active,
   &.disabled {
@@ -390,8 +390,8 @@ legend {
 
 .input-group-addon {
   @include btn-shadow($secondary);
-  color: $white;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+  color: $white;
 }
 
 // Navs ========================================================================
@@ -422,9 +422,9 @@ legend {
 .nav-pills {
   .nav-link {
     @include btn-shadow($gray-800);
-    color: $white;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
     border: 1px solid rgba(0, 0, 0, .6);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+    color: $white;
 
     &:hover {
       @include btn-shadow-inverse($gray-800);
@@ -467,9 +467,9 @@ legend {
 }
 
 .breadcrumb {
+  border: 1px solid rgba(0, 0, 0, .6);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
   background-color: transparent;
-  border: 1px solid rgba(0, 0, 0, .6);
   @include btn-shadow($gray-800);
 
   a,
@@ -481,8 +481,8 @@ legend {
 // Indicators ==================================================================
 
 .alert {
-  color: $white;
   border: none;
+  color: $white;
 
   a,
   .alert-link {
