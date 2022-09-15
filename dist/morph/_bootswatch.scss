@@ -1,4 +1,4 @@
-// Morph 5.2.0
+// Morph 5.2.1
 // Bootswatch
 
 
@@ -10,6 +10,12 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;70
 }
 
 $btn-box-shadow-inset: inset 2px 3px 6px rgba($black, .2), inset -3px -2px 6px rgba($white, .2) !default;
+
+:root {
+  color-scheme: light;
+}
+
+// Mixins
 
 @mixin shadow($shadow: $box-shadow) {
   background-color: $gray-200;

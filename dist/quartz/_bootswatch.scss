@@ -1,4 +1,4 @@
-// Quartz 5.2.0
+// Quartz 5.2.1
 // Bootswatch
 
 
@@ -6,6 +6,12 @@
 
 $body-bg-image: linear-gradient(90deg, shade-color($cyan, 10%), shade-color($purple, 10%), shade-color($pink, 5%)) !default;
 $frosted-opacity: .3 !default;
+
+:root {
+  color-scheme: light;
+}
+
+// Mixins
 
 @mixin glass($opacity: $frosted-opacity, $bg: $white) {
   border: none;

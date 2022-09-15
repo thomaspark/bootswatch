@@ -1,4 +1,4 @@
-// Materia 5.2.0
+// Materia 5.2.1
 // Bootswatch
 
 
@@ -7,6 +7,10 @@
 $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" !default;
 @if $web-font-path {
   @import url($web-font-path);
+}
+
+:root {
+  color-scheme: light;
 }
 
 // Mixins
@@ -580,10 +584,6 @@ select.form-control {
   &.bg-light {
     color: $dark;
   }
-}
-
-.tag {
-  padding: 4px 6px;
 }
 
 // Containers

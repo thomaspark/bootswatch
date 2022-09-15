@@ -1,4 +1,4 @@
-// Sketchy 5.2.0
+// Sketchy 5.2.1
 // Bootswatch
 
 
@@ -14,6 +14,10 @@ $border-radius-sketchy:    255px 25px 225px 25px / 25px 225px 25px 255px;
 $border-radius-lg-sketchy: 55px 225px 15px 25px / 25px 25px 35px 355px;
 $border-radius-sm-sketchy: 255px 25px 225px 25px / 25px 225px 25px 255px;
 // style-enable scss/dollar-variable-default
+
+:root {
+  color-scheme: light;
+}
 
 // Navbar
 
@@ -59,7 +63,8 @@ $border-radius-sm-sketchy: 255px 25px 225px 25px / 25px 225px 25px 255px;
 }
 
 .btn-check {
-  display: none;
+  display: inline-block;
+  opacity: 0;
 }
 
 // Typography
@@ -70,6 +75,11 @@ optgroup,
 select,
 textarea {
   font-family: $font-family-sans-serif;
+}
+
+b,
+strong {
+  font-family: $headings-font-family;
 }
 
 blockquote {
@@ -179,6 +189,10 @@ select.form-control {
     border-radius: 2px 8px 2px 4px / 5px 3px 5px 3px;
   }
 
+  &:focus::before {
+    box-shadow: 0 0 0 .25rem rgb(51 51 51 / 25%);
+  }
+
   &:checked::after {
     position: absolute;
     top: 0;
@@ -214,6 +228,10 @@ select.form-control {
     content: "";
     border: 2px solid $gray-800;
     border-radius: 50% 45% 40% 50% / 40% 50% 50% 45%;
+  }
+
+  &:focus::before {
+    box-shadow: 0 0 0 .25rem rgb(51 51 51 / 25%);
   }
 
   &:checked::before {
