@@ -7,6 +7,12 @@
 $body-bg-image: linear-gradient(90deg, shade-color($cyan, 10%), shade-color($purple, 10%), shade-color($pink, 5%)) !default;
 $frosted-opacity: .3 !default;
 
+:root {
+  color-scheme: light;
+}
+
+// Mixins
+
 @mixin glass($opacity: $frosted-opacity, $bg: $white) {
   border: none;
   box-shadow: inset 1px 1px $border-color, inset -1px -1px rgba($white, .1), $box-shadow;
