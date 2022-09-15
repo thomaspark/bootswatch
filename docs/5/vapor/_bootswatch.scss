@@ -103,6 +103,12 @@ a {
   }
 }
 
+hr {
+  border-top: 1px solid $primary;
+  @include box-shadow($primary);
+  opacity: 1;
+}
+
 // Tables
 
 table,
