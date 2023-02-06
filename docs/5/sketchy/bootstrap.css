@@ -2,7 +2,7 @@
 /*!
  * Bootswatch v5.2.3 (https://bootswatch.com)
  * Theme: sketchy
- * Copyright 2012-2022 Thomas Park
+ * Copyright 2012-2023 Thomas Park
  * Licensed under MIT
  * Based on Bootstrap
 */
@@ -11029,14 +11029,20 @@ select.form-control {
 [type=checkbox]:focus::before {
   box-shadow: 0 0 0 0.25rem rgba(51, 51, 51, 0.25);
 }
-[type=checkbox]:checked::after {
+[type=checkbox]:checked::after, [type=checkbox]:indeterminate::after {
   position: absolute;
   top: 0;
   left: 0.1em;
   font-size: 1.5rem;
   line-height: 0.5;
   color: #333;
+}
+[type=checkbox]:checked::after {
   content: "x";
+}
+[type=checkbox]:indeterminate::after {
+  top: 0.1em;
+  content: "-";
 }
 [type=checkbox]:disabled::before {
   border: 2px solid #aaa;

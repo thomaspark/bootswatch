@@ -193,14 +193,23 @@ select.form-control {
     box-shadow: 0 0 0 .25rem rgba(51, 51, 51, .25);
   }
 
-  &:checked::after {
+  &:checked::after,
+  &:indeterminate::after {
     position: absolute;
     top: 0;
     left: .1em;
     font-size: 1.5rem;
     line-height: .5;
     color: $gray-800;
+  }
+
+  &:checked::after {
     content: "x";
+  }
+
+  &:indeterminate::after {
+    top: .1em;
+    content: "-";
   }
 
   &:disabled {
