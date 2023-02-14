@@ -2,7 +2,7 @@
 /*!
  * Bootswatch v5.2.3 (https://bootswatch.com)
  * Theme: superhero
- * Copyright 2012-2022 Thomas Park
+ * Copyright 2012-2023 Thomas Park
  * Licensed under MIT
  * Based on Bootstrap
 */
@@ -26,14 +26,14 @@
   --bs-cyan: #5bc0de;
   --bs-black: #000;
   --bs-white: #fff;
-  --bs-gray: #868e96;
+  --bs-gray: #4e5d6c;
   --bs-gray-dark: #343a40;
   --bs-gray-100: #ebebeb;
-  --bs-gray-200: #4e5d6c;
-  --bs-gray-300: #dee2e6;
-  --bs-gray-400: #ced4da;
-  --bs-gray-500: #adb5bd;
-  --bs-gray-600: #868e96;
+  --bs-gray-200: #dee2e6;
+  --bs-gray-300: #ced4da;
+  --bs-gray-400: #adb5bd;
+  --bs-gray-500: #868e96;
+  --bs-gray-600: #4e5d6c;
   --bs-gray-700: #495057;
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
@@ -68,7 +68,7 @@
   --bs-body-bg: #0f2537;
   --bs-border-width: 1px;
   --bs-border-style: solid;
-  --bs-border-color: #dee2e6;
+  --bs-border-color: #ced4da;
   --bs-border-color-translucent: rgba(0, 0, 0, 0.175);
   --bs-border-radius: 0;
   --bs-border-radius-sm: 0;
@@ -600,7 +600,7 @@ progress {
   margin-top: -1rem;
   margin-bottom: 1rem;
   font-size: 0.875em;
-  color: #868e96;
+  color: #4e5d6c;
 }
 .blockquote-footer::before {
   content: "— ";
@@ -631,7 +631,7 @@ progress {
 
 .figure-caption {
   font-size: 0.875em;
-  color: #868e96;
+  color: #4e5d6c;
 }
 
 .container,
@@ -2221,7 +2221,7 @@ textarea.form-control-lg {
   background-image: none;
 }
 .form-select:disabled {
-  background-color: #4e5d6c;
+  background-color: #dee2e6;
 }
 .form-select:-moz-focusring {
   color: transparent;
@@ -2417,7 +2417,7 @@ textarea.form-control-lg {
   height: 0.5rem;
   color: transparent;
   cursor: pointer;
-  background-color: #dee2e6;
+  background-color: #ced4da;
   border-color: transparent;
   border-radius: 1rem;
 }
@@ -2446,7 +2446,7 @@ textarea.form-control-lg {
   height: 0.5rem;
   color: transparent;
   cursor: pointer;
-  background-color: #dee2e6;
+  background-color: #ced4da;
   border-color: transparent;
   border-radius: 1rem;
 }
@@ -2454,10 +2454,10 @@ textarea.form-control-lg {
   pointer-events: none;
 }
 .form-range:disabled::-webkit-slider-thumb {
-  background-color: #adb5bd;
+  background-color: #868e96;
 }
 .form-range:disabled::-moz-range-thumb {
-  background-color: #adb5bd;
+  background-color: #868e96;
 }
 
 .form-floating {
@@ -3169,7 +3169,7 @@ textarea.form-control-lg {
   --bs-btn-hover-border-color: transparent;
   --bs-btn-active-color: var(--bs-link-hover-color);
   --bs-btn-active-border-color: transparent;
-  --bs-btn-disabled-color: #868e96;
+  --bs-btn-disabled-color: #4e5d6c;
   --bs-btn-disabled-border-color: transparent;
   --bs-btn-box-shadow: none;
   --bs-btn-focus-shadow-rgb: 103, 170, 235;
@@ -3280,10 +3280,10 @@ textarea.form-control-lg {
   --bs-dropdown-link-hover-bg: rgba(255, 255, 255, 0.075);
   --bs-dropdown-link-active-color: #fff;
   --bs-dropdown-link-active-bg: #4c9be8;
-  --bs-dropdown-link-disabled-color: #adb5bd;
+  --bs-dropdown-link-disabled-color: #868e96;
   --bs-dropdown-item-padding-x: 1rem;
   --bs-dropdown-item-padding-y: 0.25rem;
-  --bs-dropdown-header-color: #868e96;
+  --bs-dropdown-header-color: #4e5d6c;
   --bs-dropdown-header-padding-x: 1rem;
   --bs-dropdown-header-padding-y: 0.5rem;
   position: absolute;
@@ -3535,18 +3535,18 @@ textarea.form-control-lg {
 }
 
 .dropdown-menu-dark {
-  --bs-dropdown-color: #dee2e6;
+  --bs-dropdown-color: #ced4da;
   --bs-dropdown-bg: #343a40;
   --bs-dropdown-border-color: var(--bs-border-color-translucent);
   --bs-dropdown-box-shadow: ;
-  --bs-dropdown-link-color: #dee2e6;
+  --bs-dropdown-link-color: #ced4da;
   --bs-dropdown-link-hover-color: #fff;
   --bs-dropdown-divider-bg: rgba(0, 0, 0, 0.15);
   --bs-dropdown-link-hover-bg: rgba(255, 255, 255, 0.15);
   --bs-dropdown-link-active-color: #fff;
   --bs-dropdown-link-active-bg: #4c9be8;
-  --bs-dropdown-link-disabled-color: #adb5bd;
-  --bs-dropdown-header-color: #adb5bd;
+  --bs-dropdown-link-disabled-color: #868e96;
+  --bs-dropdown-header-color: #868e96;
 }
 
 .btn-group,
@@ -3690,7 +3690,7 @@ textarea.form-control-lg {
   --bs-nav-tabs-border-width: 1px;
   --bs-nav-tabs-border-color: #4e5d6c;
   --bs-nav-tabs-border-radius: 0;
-  --bs-nav-tabs-link-hover-border-color: #4e5d6c #4e5d6c #4e5d6c;
+  --bs-nav-tabs-link-hover-border-color: #dee2e6 #dee2e6 #4e5d6c;
   --bs-nav-tabs-link-active-color: #ebebeb;
   --bs-nav-tabs-link-active-bg: #0f2537;
   --bs-nav-tabs-link-active-border-color: #4e5d6c;
@@ -4555,7 +4555,7 @@ textarea.form-control-lg {
   --bs-pagination-hover-bg: rgba(255, 255, 255, 0.4);
   --bs-pagination-hover-border-color: transparent;
   --bs-pagination-focus-color: var(--bs-link-hover-color);
-  --bs-pagination-focus-bg: #4e5d6c;
+  --bs-pagination-focus-bg: #dee2e6;
   --bs-pagination-focus-box-shadow: 0 0 0 0.25rem rgba(76, 155, 232, 0.25);
   --bs-pagination-active-color: #fff;
   --bs-pagination-active-bg: #4c9be8;
@@ -4837,7 +4837,7 @@ textarea.form-control-lg {
   --bs-list-group-action-hover-color: #fff;
   --bs-list-group-action-hover-bg: rgba(255, 255, 255, 0.4);
   --bs-list-group-action-active-color: #ebebeb;
-  --bs-list-group-action-active-bg: #4e5d6c;
+  --bs-list-group-action-active-bg: #dee2e6;
   --bs-list-group-disabled-color: rgba(255, 255, 255, 0.4);
   --bs-list-group-disabled-bg: #4e5d6c;
   --bs-list-group-active-color: #fff;

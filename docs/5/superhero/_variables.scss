@@ -9,11 +9,11 @@ $theme: "superhero" !default;
 
 $white:    #fff !default;
 $gray-100: #ebebeb !default;
-$gray-200: #4e5d6c !default;
-$gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
-$gray-600: #868e96 !default;
+$gray-200: #dee2e6 !default;
+$gray-300: #ced4da !default;
+$gray-400: #adb5bd !default;
+$gray-500: #868e96 !default;
+$gray-600: #4e5d6c !default;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
@@ -31,12 +31,12 @@ $teal:    #20c997 !default;
 $cyan:    #5bc0de !default;
 
 $primary:       $blue !default;
-$secondary:     $gray-200 !default;
+$secondary:     $gray-600 !default;
 $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
-$light:         lighten($gray-200, 35%) !default;
+$light:         lighten($gray-600, 35%) !default;
 $dark:          #20374c !default;
 
 $min-contrast-ratio:   1.6 !default;
@@ -45,6 +45,7 @@ $min-contrast-ratio:   1.6 !default;
 
 $body-bg:                   #0f2537 !default;
 $body-color:                $gray-100 !default;
+
 
 // Components
 
@@ -66,7 +67,7 @@ $table-hover-bg:              rgba($white, .075) !default;
 $table-border-color:          rgba($black, .15) !default;
 $table-head-bg:               $light !default;
 $table-dark-bg:               $light !default;
-$table-dark-border-color:     $gray-200 !default;
+$table-dark-border-color:     $gray-600 !default;
 $table-dark-color:            $body-bg !default;
 
 $table-bg-scale:              0% !default;
@@ -80,9 +81,10 @@ $input-color:                       $gray-900 !default;
 $input-border-color:                transparent !default;
 $input-border-width:                0 !default;
 
-$input-placeholder-color:               $gray-600 !default;
+$input-placeholder-color:               $gray-500 !default;
 
 $input-group-addon-color:           $body-color !default;
+$input-group-addon-bg:              $gray-600 !default;
 
 $form-check-input-bg:                     $white !default;
 $form-check-input-border:                 none !default;
@@ -93,7 +95,7 @@ $form-floating-label-opacity:     1 !default;
 
 // Dropdowns
 
-$dropdown-bg:                       $gray-200 !default;
+$dropdown-bg:                       $gray-600 !default;
 $dropdown-divider-bg:               rgba($black, .15) !default;
 $dropdown-link-color:               $body-color !default;
 $dropdown-link-hover-color:         $dropdown-link-color !default;
@@ -102,9 +104,9 @@ $dropdown-link-hover-bg:            $table-hover-bg !default;
 // Navs
 
 $nav-link-disabled-color:           rgba(255, 255, 255, .4) !default;
-$nav-tabs-border-color:             $gray-200 !default;
+$nav-tabs-border-color:             $gray-600 !default;
 $nav-tabs-link-active-color:        $body-color !default;
-$nav-tabs-link-active-border-color: $gray-200 !default;
+$nav-tabs-link-active-border-color: $gray-600 !default;
 
 // Navbar
 
@@ -114,7 +116,7 @@ $navbar-dark-hover-color:           $white !default;
 // Pagination
 
 $pagination-color:                  $white !default;
-$pagination-bg:                     $gray-200 !default;
+$pagination-bg:                     $gray-600 !default;
 $pagination-border-color:           transparent !default;
 $pagination-hover-color:            $white !default;
 $pagination-hover-bg:               $nav-link-disabled-color !default;
@@ -126,17 +128,17 @@ $pagination-disabled-border-color:  $pagination-border-color !default;
 // Cards
 
 $card-cap-bg:                       $table-hover-bg !default;
-$card-bg:                           $gray-200 !default;
+$card-bg:                           $gray-600 !default;
 $card-inner-border-radius:          0 !default;
 
 // Popovers
 
-$popover-bg:                        $gray-200 !default;
+$popover-bg:                        $gray-600 !default;
 $popover-header-bg:                 $table-hover-bg !default;
 
 // Toasts
 
-$toast-background-color:            $gray-200 !default;
+$toast-background-color:            $gray-600 !default;
 $toast-border-color:                rgba(0, 0, 0, .2) !default;
 $toast-header-color:                $body-color !default;
 $toast-header-background-color:     $toast-background-color !default;
@@ -144,13 +146,17 @@ $toast-header-border-color:         $toast-border-color !default;
 
 // Modals
 
-$modal-content-bg:                  $gray-200 !default;
+$modal-content-bg:                  $gray-600 !default;
 $modal-header-border-color:         rgba(0, 0, 0, .2) !default;
+
+// Progress bars
+
+$progress-bg:                       $gray-600 !default;
 
 // List group
 
 $list-group-color:                  $white !default;
-$list-group-bg:                     $gray-200 !default;
+$list-group-bg:                     $gray-600 !default;
 $list-group-border-color:           transparent !default;
 $list-group-hover-bg:               $nav-link-disabled-color !default;
 $list-group-disabled-color:         $nav-link-disabled-color !default;
@@ -161,7 +167,7 @@ $list-group-action-hover-color:     $white !default;
 
 $breadcrumb-padding-y:              .375rem !default;
 $breadcrumb-padding-x:              .75rem !default;
-$breadcrumb-bg:                     $gray-200 !default;
+$breadcrumb-bg:                     $gray-600 !default;
 $breadcrumb-divider-color:          $body-color !default;
 $breadcrumb-active-color:           $body-color !default;
 
