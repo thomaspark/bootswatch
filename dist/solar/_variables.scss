@@ -74,14 +74,18 @@ $table-bg-scale:              0% !default;
 
 // Forms
 
-$input-bg:                              #a9bdbd !default;
-$input-disabled-bg:                     #657b83 !default;
+$input-bg:                              $gray-500 !default;
+$input-disabled-color:                  $gray-100 !default;
+$input-disabled-bg:                     $gray-600 !default;
 
 $input-color:                           $gray-800 !default;
 $input-border-color:                    rgba($black, .15) !default;
 $input-placeholder-color:               #657b83 !default;
 $input-group-addon-color:               $gray-600 !default;
 $input-group-addon-bg:                  $gray-800 !default;
+
+$form-select-disabled-color:        $gray-700 !default;
+$form-select-disabled-bg:           $input-disabled-bg !default;
 
 $form-check-input-bg:                     rgba(255, 255, 255, .75) !default;
 $form-check-input-border:                 1px solid $white !default;

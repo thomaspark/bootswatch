@@ -2,7 +2,7 @@
 /*!
  * Bootswatch v5.2.3 (https://bootswatch.com)
  * Theme: vapor
- * Copyright 2012-2022 Thomas Park
+ * Copyright 2012-2023 Thomas Park
  * Licensed under MIT
  * Based on Bootstrap
 */
@@ -2045,6 +2045,7 @@ progress {
   opacity: 1;
 }
 .form-control:disabled {
+  color: #adb5bd;
   background-color: #250d49;
   opacity: 1;
 }
@@ -2220,7 +2221,8 @@ textarea.form-control-lg {
   background-image: none;
 }
 .form-select:disabled {
-  background-color: #e9ecef;
+  color: rgba(255, 255, 255, 0.4);
+  background-color: #250d49;
 }
 .form-select:-moz-focusring {
   color: transparent;
