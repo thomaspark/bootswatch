@@ -16,7 +16,7 @@
     "build": "grunt swatch",
     "docs": "grunt docs",
     "htmllint": "grunt htmllint",
-    "stylelint": "stylelint \"dist/**/*.scss\" --rd",
+    "stylelint": "stylelint \"dist/**/*.scss\"",
     "release": "grunt release",
     "test": "npm run stylelint"
   },
@@ -25,22 +25,22 @@
   ],
   "devDependencies": {
     "@lodder/grunt-postcss": "^3.1.1",
-    "autoprefixer": "^10.4.12",
+    "autoprefixer": "^10.4.14",
     "bootstrap": "^5.2.3",
-    "bootstrap-icons": "^1.9.1",
-    "grunt": "^1.5.3",
-    "grunt-contrib-clean": "^2.0.0",
-    "grunt-contrib-concat": "^2.0.0",
+    "bootstrap-icons": "^1.10.4",
+    "grunt": "^1.6.1",
+    "grunt-contrib-clean": "^2.0.1",
+    "grunt-contrib-concat": "^2.1.0",
     "grunt-contrib-connect": "^3.0.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-cssmin": "^4.0.0",
     "grunt-contrib-watch": "^1.1.0",
-    "grunt-html": "^15.1.0",
+    "grunt-html": "^17.0.0",
     "grunt-sass": "^3.1.0",
-    "postcss": "^8.4.17",
-    "prismjs": "^1.25.0",
-    "sass": "^1.55.0",
-    "stylelint": "^14.11.0",
-    "stylelint-config-twbs-bootstrap": "^3.0.0"
+    "postcss": "^8.4.21",
+    "prismjs": "^1.29.0",
+    "sass": "^1.62.0",
+    "stylelint": "^15.4.0",
+    "stylelint-config-twbs-bootstrap": "^9.0.1"
   }
 }

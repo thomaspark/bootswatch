@@ -1,0 +1,27 @@
+{
+  "extends": [
+    "stylelint-config-twbs-bootstrap"
+  ],
+  "reportInvalidScopeDisables": true,
+  "reportNeedlessDisables": true,
+  "rules": {
+    "declaration-no-important": null,
+    "import-notation": null,
+    "selector-max-class": null,
+    "selector-max-type": null,
+    "selector-no-qualifying-type": null
+  },
+  "overrides": [
+    {
+      "files": "**/*.scss",
+      "rules": {
+        "scss/dollar-variable-default": [
+           true,
+           {
+             "ignore": "local"
+           }
+         ]
+      }
+    }
+  ]
+}
