@@ -156,6 +156,6 @@ Thomas Park
 
 ## Copyright and License
 
-Copyright 2014-2021 Thomas Park
+Copyright 2014-2023 Thomas Park
 
 Code released under the MIT License.
