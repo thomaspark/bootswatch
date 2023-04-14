@@ -7,7 +7,7 @@
 <p align="center">
   A collection of open source themes for <a href="https://getbootstrap.com/">Bootstrap</a>
   <br>
-  <a href="https://bootswatch.com"><strong>View Bootswatch themes »</strong></a>
+  <a href="https://bootswatch.com/"><strong>View Bootswatch themes »</strong></a>
   <br>
   <br>
   <a href="https://github.com/thomaspark/bootswatch/issues/new">Report bug</a>
@@ -66,7 +66,6 @@ import "bootswatch/dist/[theme]/bootstrap.min.css";
 // TODO: Note: Replace ^[theme]^ (examples: darkly, slate, cosmo, spacelab, and superhero. See https://bootswatch.com for current theme names.)
 ```
 
-
 Here's an example of updated `imports` in `App.js` to use "slate" theme (using a `create-react-app` fresh project.)
 
 ```js
@@ -78,7 +77,6 @@ import './App.css';
 function App() {
 ...
 ```
-
 
 ### Via Ruby Gem
 
@@ -112,7 +110,6 @@ And thus be able to import themes via Sass like so:
 A simple JSON API is available for integrating your platform with Bootswatch.
 More info can be found on the [Help page](https://bootswatch.com/help/#api).
 
-
 ## Customization
 
 Bootswatch is open source and you’re welcome to modify the themes.
@@ -121,19 +118,17 @@ Each theme consists of two SASS files. `_variables.scss`, which is included by d
 
 Check out the [Help page](https://bootswatch.com/help/#customization) for more details on building your own theme.
 
-
 ## Contributing
 
-It's through your contributions that Bootswatch will continue to improve. You can contribute in several ways.
+It's through your contributions that Bootswatch will continue to improve. You can contribute in several ways:
 
-**Issues:** Provide a detailed report of any bugs you encounter and open an issue on [GitHub](https://github.com/thomaspark/bootswatch/issues).
+* **Issues:** Provide a detailed report of any bugs you encounter and open an issue on [GitHub](https://github.com/thomaspark/bootswatch/issues).
 
-**Documentation:** If you'd like to fix a typo or beef up the docs, you can fork the project, make your changes, and submit a pull request.
+* **Documentation:** If you'd like to fix a typo or beef up the docs, you can fork the project, make your changes, and submit a pull request.
 
-**Code:** Make a fix and submit it as a pull request. When making changes, it's important to keep the CSS and SASS versions in sync. To do this, be sure to edit the SASS source files for the particular theme first, then run the  tasks `grunt swatch` to build the CSS.
+* **Code:** Make a fix and submit it as a pull request. When making changes, it's important to keep the CSS and SASS versions in sync. To do this, be sure to edit the SASS source files for the particular theme first, then run the  tasks `grunt swatch` to build the CSS.
 
-**Donation:** Donations are gratefully accepted via [GitHub](https://github.com/sponsors/thomaspark) and [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PU2DH4BMF9MWS&source=url).
-
+* **Donation:** Donations are gratefully accepted via [GitHub](https://github.com/sponsors/thomaspark) and [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PU2DH4BMF9MWS&source=url).
 
 ## Author
 
@@ -142,20 +137,15 @@ Thomas Park
 * <https://github.com/thomaspark>
 * <https://thomaspark.co/>
 
-
 ## Thanks
 
-[Mark Otto](https://github.com/mdo) and [Jacob Thornton](https://github.com/fat) for [Bootstrap](https://github.com/twbs/bootstrap).
-
-[Jenil Gogari](https://jgog.in/) for his contributions to the Flatly theme.
-
-[James Taylor](https://github.com/jostylr) for [cors-lite](https://github.com/jostylr/cors-lite).
-
-[Corey Sewell](https://github.com/cjsewell) for SASS conversion.
-
+* [Mark Otto](https://github.com/mdo) and [Jacob Thornton](https://github.com/fat) for [Bootstrap](https://github.com/twbs/bootstrap).
+* [Jenil Gogari](https://jgog.in/) for his contributions to the Flatly theme.
+* [James Taylor](https://github.com/jostylr) for [cors-lite](https://github.com/jostylr/cors-lite).
+* [Corey Sewell](https://github.com/cjsewell) for SASS conversion.
 
 ## Copyright and License
 
 Copyright 2014-2021 Thomas Park
 
-Code released under the MIT License.
+Code released under the [MIT License](LICENSE).
