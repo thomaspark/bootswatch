@@ -1,26 +1,41 @@
 name: CI
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - "**"
+      - "!dependabot/**"
+  pull_request:
+  workflow_dispatch:
 
 env:
   FORCE_COLOR: 2
-  NODE: 16
+  NODE_LTS: 18
+
+permissions:
+  contents: read
 
 jobs:
-  test:
+  build:
+    name: Build on Node ${{ matrix.node }}
     runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        node: [14, 16, 18]
 
     steps:
       - name: Clone repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          node-version: "${{ env.NODE }}"
+          node-version: ${{ matrix.node }}
           cache: npm
-
-      - run: java -version
 
       - name: Install npm dependencies
         run: npm ci
@@ -30,6 +45,27 @@ jobs:
 
       - name: Build docs
         run: npm run docs
+
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_LTS }}
+          cache: npm
+
+      - run: java -version
+
+      - name: Install npm dependencies
+        run: npm ci
 
       - name: Run tests
         run: npm test
