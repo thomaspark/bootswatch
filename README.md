@@ -140,6 +140,7 @@ Thomas Park
 ## Thanks
 
 * [Mark Otto](https://github.com/mdo) and [Jacob Thornton](https://github.com/fat) for [Bootstrap](https://github.com/twbs/bootstrap).
+* [XhmikosR](https://github.com/xhmikosr) for ongoing maintenance support.
 * [Jenil Gogari](https://jgog.in/) for his contributions to the Flatly theme.
 * [James Taylor](https://github.com/jostylr) for [cors-lite](https://github.com/jostylr/cors-lite).
 * [Corey Sewell](https://github.com/cjsewell) for SASS conversion.
