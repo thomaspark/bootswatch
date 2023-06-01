@@ -19,7 +19,7 @@
     </script>
   </head>
   <body>
-    <div class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+    <div class="navbar navbar-expand-lg fixed-top bg-primary" data-bs-theme="dark">
       <div class="container">
         <a href="../" class="navbar-brand">Bootswatch</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,7 +27,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav">
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown" data-bs-theme="light">
               <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="themes">Themes</a>
               <div class="dropdown-menu" aria-labelledby="themes">
                 <a class="dropdown-item" href="../default/">Default</a>
@@ -65,7 +65,7 @@
             <li class="nav-item">
               <a class="nav-link" href="https://blog.bootswatch.com/">Blog</a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown" data-bs-theme="light">
               <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="download">Vapor</a>
               <div class="dropdown-menu" aria-labelledby="download">
                 <a class="dropdown-item" rel="noopener" target="_blank" href="https://jsfiddle.net/bootswatch/vudjzmer/">Open in JSFiddle</a>
@@ -80,10 +80,32 @@
           </ul>
           <ul class="navbar-nav ms-md-auto">
             <li class="nav-item">
-              <a target="_blank" rel="noopener" class="nav-link" href="https://github.com/thomaspark/bootswatch/"><i class="bi bi-github"></i> GitHub</a>
+              <a target="_blank" rel="noopener" class="nav-link" href="https://github.com/thomaspark/bootswatch/"><i class="bi bi-github"></i><span class="d-lg-none ms-2">GitHub</span></a>
             </li>
             <li class="nav-item">
-              <a target="_blank" rel="noopener" class="nav-link" href="https://twitter.com/bootswatch"><i class="bi bi-twitter"></i> Twitter</a>
+              <a target="_blank" rel="noopener" class="nav-link" href="https://twitter.com/bootswatch"><i class="bi bi-twitter"></i><span class="d-lg-none ms-2">Twitter</span></a>
+            </li>
+            <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+              <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+              <hr class="d-lg-none my-2 text-white-50">
+            </li>
+            <li class="nav-item dropdown" data-bs-theme="light">
+              <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="theme-menu" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme">
+                <i class="bi bi-circle-half"></i>
+                <span class="d-lg-none ms-2">Toggle theme</span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                  <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                    <i class="bi bi-sun-fill"></i><span class="ms-2">Light</span>
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="true">
+                    <i class="bi bi-moon-stars-fill"></i><span class="ms-2">Dark</span>
+                  </button>
+                </li>
+              </ul>
             </li>
           </ul>
         </div>
@@ -115,7 +137,7 @@
             </div>
 
             <div class="bs-component">
-              <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+              <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
                 <div class="container-fluid">
                   <a class="navbar-brand" href="#">Navbar</a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
@@ -159,7 +181,7 @@
             </div>
 
             <div class="bs-component">
-              <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+              <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
                 <div class="container-fluid">
                   <a class="navbar-brand" href="#">Navbar</a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
@@ -203,7 +225,7 @@
             </div>
 
             <div class="bs-component">
-              <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <nav class="navbar navbar-expand-lg bg-light" data-bs-theme="light">
                 <div class="container-fluid">
                   <a class="navbar-brand" href="#">Navbar</a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
@@ -445,7 +467,7 @@
               <h6>Heading 6</h6>
               <h3>
                 Heading
-                <small class="text-muted">with muted text</small>
+                <small class="text-body-secondary">with faded secondary text</small>
               </h3>
               <p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
             </div>
@@ -463,13 +485,26 @@
           <div class="col-lg-4">
             <div class="bs-component">
               <h2>Emphasis classes</h2>
-              <p class="text-muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
-              <p class="text-primary">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p class="text-secondary">Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
-              <p class="text-warning">Etiam porta sem malesuada magna mollis euismod.</p>
-              <p class="text-danger">Donec ullamcorper nulla non metus auctor fringilla.</p>
-              <p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
-              <p class="text-info">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+              <p class="text-primary">.text-primary</p>
+              <p class="text-primary-emphasis">.text-primary-emphasis</p>
+              <p class="text-secondary">.text-secondary</p>
+              <p class="text-secondary-emphasis">.text-secondary-emphasis</p>
+              <p class="text-success">.text-success</p>
+              <p class="text-success-emphasis">.text-success-emphasis</p>
+              <p class="text-danger">.text-danger</p>
+              <p class="text-danger-emphasis">.text-danger-emphasis</p>
+              <p class="text-warning">.text-warning</p>
+              <p class="text-warning-emphasis">.text-warning-emphasis</p>
+              <p class="text-info">.text-info</p>
+              <p class="text-info">.text-info-emphasis</p>
+              <p class="text-light">.text-light</p>
+              <p class="text-light">.text-light-emphasis</p>
+              <p class="text-dark">.text-dark</p>
+              <p class="text-dark">.text-dark-emphasis</p>
+              <p class="text-body">.text-body</p>
+              <p class="text-body">.text-body-emphasis</p>
+              <p class="text-body-secondary">.text-body-secondary</p>
+              <p class="text-body-tertiary">.text-body-tertiary</p>
             </div>
           </div>
         </div>
@@ -646,6 +681,16 @@
                   <div class="form-group">
                     <label for="exampleSelect1" class="form-label mt-4">Example select</label>
                     <select class="form-select" id="exampleSelect1">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleSelect1" class="form-label mt-4">Example disabled select</label>
+                    <select class="form-select" id="exampleDisabledSelect1" disabled>
                       <option>1</option>
                       <option>2</option>
                       <option>3</option>
@@ -1221,6 +1266,41 @@
                 </li>
               </ul>
             </div>
+            <div class="bs-component">
+              <ul class="list-group">
+                <li class="list-group-item list-group-item-primary d-flex justify-content-between align-items-center">
+                  Cras justo odio
+                  <span class="badge bg-primary rounded-pill">14</span>
+                </li>
+                <li class="list-group-item list-group-item-secondary d-flex justify-content-between align-items-center">
+                  Dapibus ac facilisis in
+                  <span class="badge bg-primary rounded-pill">2</span>
+                </li>
+                <li class="list-group-item list-group-item-success d-flex justify-content-between align-items-center">
+                  Morbi leo risus
+                  <span class="badge bg-primary rounded-pill">1</span>
+                <li class="list-group-item list-group-item-info d-flex justify-content-between align-items-center">
+                  Cras justo odio
+                  <span class="badge bg-primary rounded-pill">5</span>
+                </li>
+                <li class="list-group-item list-group-item-warning d-flex justify-content-between align-items-center">
+                  Dapibus ac facilisis in
+                  <span class="badge bg-primary rounded-pill">4</span>
+                </li>
+                <li class="list-group-item list-group-item-danger d-flex justify-content-between align-items-center">
+                  Morbi leo risus
+                  <span class="badge bg-primary rounded-pill">9</span>
+                </li>
+                <li class="list-group-item list-group-item-light d-flex justify-content-between align-items-center">
+                  Morbi leo risus
+                  <span class="badge bg-primary rounded-pill">8</span>
+                </li>
+                <li class="list-group-item list-group-item-dark d-flex justify-content-between align-items-center">
+                  Morbi leo risus
+                  <span class="badge bg-primary rounded-pill">0</span>
+                </li>
+              </ul>
+            </div>
           </div>
           <div class="col-lg-4">
             <div class="bs-component">
@@ -1255,7 +1335,7 @@
           </div>
         </div>
 
-        <div class="row">
+        <div class="row mt-5">
           <div class="col-lg-12">
             <h2>Cards</h2>
           </div>

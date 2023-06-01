@@ -1,4 +1,4 @@
-// Solar 5.2.2
+// Solar 5.3.0
 // Bootswatch
 
 $theme: "solar" !default;
@@ -59,7 +59,7 @@ $component-active-bg:         $gray-800 !default;
 
 // Fonts
 
-$font-family-sans-serif:      "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default !default;
+$font-family-sans-serif:      "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 
 // Tables
 
@@ -74,14 +74,18 @@ $table-bg-scale:              0% !default;
 
 // Forms
 
-$input-bg:                              #a9bdbd !default;
-$input-disabled-bg:                     #657b83 !default;
+$input-bg:                              $gray-500 !default;
+$input-disabled-color:                  $gray-100 !default;
+$input-disabled-bg:                     $gray-600 !default;
 
 $input-color:                           $gray-800 !default;
 $input-border-color:                    rgba($black, .15) !default;
 $input-placeholder-color:               #657b83 !default;
 $input-group-addon-color:               $gray-600 !default;
 $input-group-addon-bg:                  $gray-800 !default;
+
+$form-select-disabled-color:        $gray-700 !default;
+$form-select-disabled-bg:           $input-disabled-bg !default;
 
 $form-check-input-bg:                     rgba(255, 255, 255, .75) !default;
 $form-check-input-border:                 1px solid $white !default;
@@ -113,8 +117,8 @@ $nav-tabs-link-active-border-color: $nav-tabs-border-color !default;
 
 // Navbars
 
-$navbar-light-color:                rgba($black, .4) !default !default;
-$navbar-light-active-color:         rgba($black, .7) !default !default;
+$navbar-light-color:                rgba($black, .4) !default;
+$navbar-light-active-color:         rgba($black, .7) !default;
 
 // Pagination
 

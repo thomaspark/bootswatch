@@ -19,7 +19,7 @@
     </script>
   </head>
   <body>
-    <div class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+    <div class="navbar navbar-expand-lg fixed-top bg-primary" data-bs-theme="dark">
       <div class="container">
         <a href="../" class="navbar-brand">Bootswatch</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,7 +27,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav">
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown" data-bs-theme="light">
               <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="themes">Themes</a>
               <div class="dropdown-menu" aria-labelledby="themes">
                 <a class="dropdown-item" href="../default/">Default</a>
@@ -65,7 +65,7 @@
             <li class="nav-item">
               <a class="nav-link" href="https://blog.bootswatch.com/">Blog</a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown" data-bs-theme="light">
               <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="download">Cerulean</a>
               <div class="dropdown-menu" aria-labelledby="download">
                 <a class="dropdown-item" rel="noopener" target="_blank" href="https://jsfiddle.net/bootswatch/82h1mweq/">Open in JSFiddle</a>
@@ -80,10 +80,32 @@
           </ul>
           <ul class="navbar-nav ms-md-auto">
             <li class="nav-item">
-              <a target="_blank" rel="noopener" class="nav-link" href="https://github.com/thomaspark/bootswatch/"><i class="bi bi-github"></i> GitHub</a>
+              <a target="_blank" rel="noopener" class="nav-link" href="https://github.com/thomaspark/bootswatch/"><i class="bi bi-github"></i><span class="d-lg-none ms-2">GitHub</span></a>
             </li>
             <li class="nav-item">
-              <a target="_blank" rel="noopener" class="nav-link" href="https://twitter.com/bootswatch"><i class="bi bi-twitter"></i> Twitter</a>
+              <a target="_blank" rel="noopener" class="nav-link" href="https://twitter.com/bootswatch"><i class="bi bi-twitter"></i><span class="d-lg-none ms-2">Twitter</span></a>
+            </li>
+            <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+              <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+              <hr class="d-lg-none my-2 text-white-50">
+            </li>
+            <li class="nav-item dropdown" data-bs-theme="light">
+              <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="theme-menu" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme">
+                <i class="bi bi-circle-half"></i>
+                <span class="d-lg-none ms-2">Toggle theme</span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                  <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                    <i class="bi bi-sun-fill"></i><span class="ms-2">Light</span>
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="true">
+                    <i class="bi bi-moon-stars-fill"></i><span class="ms-2">Dark</span>
+                  </button>
+                </li>
+              </ul>
             </li>
           </ul>
         </div>
@@ -115,7 +137,7 @@
             </div>
 
             <div class="bs-component">
-              <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+              <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
                 <div class="container-fluid">
                   <a class="navbar-brand" href="#">Navbar</a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
@@ -159,7 +181,7 @@
             </div>
 
             <div class="bs-component">
-              <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+              <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
                 <div class="container-fluid">
                   <a class="navbar-brand" href="#">Navbar</a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
@@ -203,7 +225,7 @@
             </div>
 
             <div class="bs-component">
-              <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <nav class="navbar navbar-expand-lg bg-light" data-bs-theme="light">
                 <div class="container-fluid">
                   <a class="navbar-brand" href="#">Navbar</a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
@@ -445,7 +467,7 @@
               <h6>Heading 6</h6>
               <h3>
                 Heading
-                <small class="text-muted">with muted text</small>
+                <small class="text-body-secondary">with faded secondary text</small>
               </h3>
               <p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
             </div>
@@ -463,13 +485,26 @@
           <div class="col-lg-4">
             <div class="bs-component">
               <h2>Emphasis classes</h2>
-              <p class="text-muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
-              <p class="text-primary">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p class="text-secondary">Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
-              <p class="text-warning">Etiam porta sem malesuada magna mollis euismod.</p>
-              <p class="text-danger">Donec ullamcorper nulla non metus auctor fringilla.</p>
-              <p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
-              <p class="text-info">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+              <p class="text-primary">.text-primary</p>
+              <p class="text-primary-emphasis">.text-primary-emphasis</p>
+              <p class="text-secondary">.text-secondary</p>
+              <p class="text-secondary-emphasis">.text-secondary-emphasis</p>
+              <p class="text-success">.text-success</p>
+              <p class="text-success-emphasis">.text-success-emphasis</p>
+              <p class="text-danger">.text-danger</p>
+              <p class="text-danger-emphasis">.text-danger-emphasis</p>
+              <p class="text-warning">.text-warning</p>
+              <p class="text-warning-emphasis">.text-warning-emphasis</p>
+              <p class="text-info">.text-info</p>
+              <p class="text-info">.text-info-emphasis</p>
+              <p class="text-light">.text-light</p>
+              <p class="text-light">.text-light-emphasis</p>
+              <p class="text-dark">.text-dark</p>
+              <p class="text-dark">.text-dark-emphasis</p>
+              <p class="text-body">.text-body</p>
+              <p class="text-body">.text-body-emphasis</p>
+              <p class="text-body-secondary">.text-body-secondary</p>
+              <p class="text-body-tertiary">.text-body-tertiary</p>
             </div>
           </div>
         </div>
@@ -635,16 +670,16 @@
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
+                    <label for="exampleInputEmail1" class="form-label mt-4">Email address</label>
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
+                    <label for="exampleInputPassword1" class="form-label mt-4">Password</label>
                     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                   </div>
                   <div class="form-group">
-                    <label for="exampleSelect1">Example select</label>
+                    <label for="exampleSelect1" class="form-label mt-4">Example select</label>
                     <select class="form-select" id="exampleSelect1">
                       <option>1</option>
                       <option>2</option>
@@ -654,7 +689,17 @@
                     </select>
                   </div>
                   <div class="form-group">
-                    <label for="exampleSelect2">Example multiple select</label>
+                    <label for="exampleSelect1" class="form-label mt-4">Example disabled select</label>
+                    <select class="form-select" id="exampleDisabledSelect1" disabled>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleSelect2" class="form-label mt-4">Example multiple select</label>
                     <select multiple class="form-select" id="exampleSelect2">
                       <option>1</option>
                       <option>2</option>
@@ -664,11 +709,11 @@
                     </select>
                   </div>
                   <div class="form-group">
-                    <label for="exampleTextarea">Example textarea</label>
+                    <label for="exampleTextarea" class="form-label mt-4">Example textarea</label>
                     <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
                   </div>
                   <div class="form-group">
-                    <label for="formFile" class="form-label">Default file input example</label>
+                    <label for="formFile" class="form-label mt-4">Default file input example</label>
                     <input class="form-control" type="file" id="formFile">
                   </div>
                   <fieldset class="form-group">
@@ -693,7 +738,7 @@
                     </div>
                   </fieldset>
                   <fieldset class="form-group">
-                    <legend>Checkboxes</legend>
+                    <legend class="mt-4">Checkboxes</legend>
                     <div class="form-check">
                       <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                       <label class="form-check-label" for="flexCheckDefault">
@@ -719,7 +764,7 @@
                     </div>
                   </fieldset>
                   <fieldset class="form-group">
-                    <legend>Ranges</legend>
+                    <legend class="mt-4">Ranges</legend>
                       <label for="customRange1" class="form-label">Example range</label>
                       <input type="range" class="form-range" id="customRange1">
                       <label for="disabledRange" class="form-label">Disabled range</label>
@@ -743,35 +788,35 @@
 
               <div class="form-group">
                 <fieldset>
-                  <label class="form-label" for="readOnlyInput">Readonly input</label>
+                  <label class="form-label mt-4" for="readOnlyInput">Readonly input</label>
                   <input class="form-control" id="readOnlyInput" type="text" placeholder="Readonly input here..." readonly>
                 </fieldset>
               </div>
 
               <div class="form-group has-success">
-                <label class="form-label" for="inputValid">Valid input</label>
+                <label class="form-label mt-4" for="inputValid">Valid input</label>
                 <input type="text" value="correct value" class="form-control is-valid" id="inputValid">
                 <div class="valid-feedback">Success! You've done it.</div>
               </div>
 
               <div class="form-group has-danger">
-                <label class="form-label" for="inputInvalid">Invalid input</label>
+                <label class="form-label mt-4" for="inputInvalid">Invalid input</label>
                 <input type="text" value="wrong value" class="form-control is-invalid" id="inputInvalid">
                 <div class="invalid-feedback">Sorry, that username's taken. Try another?</div>
               </div>
 
               <div class="form-group">
-                <label class="col-form-label col-form-label-lg" for="inputLarge">Large input</label>
+                <label class="col-form-label col-form-label-lg mt-4" for="inputLarge">Large input</label>
                 <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" id="inputLarge">
               </div>
 
               <div class="form-group">
-                <label class="col-form-label" for="inputDefault">Default input</label>
+                <label class="col-form-label mt-4" for="inputDefault">Default input</label>
                 <input type="text" class="form-control" placeholder="Default input" id="inputDefault">
               </div>
 
               <div class="form-group">
-                <label class="col-form-label col-form-label-sm" for="inputSmall">Small input</label>
+                <label class="col-form-label col-form-label-sm mt-4" for="inputSmall">Small input</label>
                 <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm" id="inputSmall">
               </div>
 

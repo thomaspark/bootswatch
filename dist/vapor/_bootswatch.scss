@@ -1,4 +1,4 @@
-// Vapor 5.2.2
+// Vapor 5.3.0
 // Bootswatch
 
 
@@ -181,11 +181,11 @@ table,
 .navbar-light {
   &,
   a {
-    @include text-shadow-sm($navbar-light-color);
+    @include text-shadow-sm($black);
   }
 
   .navbar-brand {
-    @include text-shadow($navbar-light-color);
+    @include text-shadow($black);
   }
 }
 
