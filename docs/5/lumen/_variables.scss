@@ -1,4 +1,4 @@
-// Lumen 5.2.3
+// Lumen 5.3.0
 // Bootswatch
 
 $theme: "lumen" !default;
@@ -41,6 +41,11 @@ $dark:          $gray-700 !default;
 
 $min-contrast-ratio:   1.75 !default;
 
+// Prefix for :root CSS variables
+
+$variable-prefix:             bs- !default; // Deprecated in v5.2.0 for the shorter `$prefix`
+$prefix:                      $variable-prefix !default;
+
 // Fonts
 
 // stylelint-disable-next-line value-keyword-case
@@ -56,19 +61,17 @@ $btn-font-weight:             700 !default;
 
 // Dropdowns
 
-$dropdown-link-color:         rgba(0, 0, 0, .5) !default;
+$dropdown-link-color:         var(--#{$prefix}tertiary-color) !default;
 
 // Navs
 
-$nav-tabs-border-color:             $gray-200 !default;
-$nav-tabs-link-hover-border-color:  $nav-tabs-border-color !default;
-$nav-tabs-link-active-color:        $gray-900 !default;
-$nav-tabs-link-active-border-color: $nav-tabs-border-color !default;
+$nav-link-color:                    var(--#{$prefix}link-color) !default;
 
 // Pagination
 
 $pagination-color:                  $gray-700 !default;
-$pagination-bg:                     $gray-200 !default;
+$pagination-bg:                     var(--#{$prefix}tertiary-bg) !default;
+$pagination-border-color:           var(--#{$prefix}border-color) !default;
 $pagination-hover-color:            $pagination-color !default;
 $pagination-hover-bg:               $pagination-bg !default;
 $pagination-active-border-color:    darken($primary, 5%) !default;
