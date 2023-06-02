@@ -114,7 +114,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,
 }
 
 .btn-outline-secondary {
-  color: $black;
+  color: var(--bs-primary-color);
 }
 
 .btn-group {
@@ -245,22 +245,6 @@ label,
   font-weight: 300;
 }
 
-.nav-tabs {
-  .nav-link,
-  .nav-link.disabled,
-  .nav-link.disabled:hover,
-  .nav-link.disabled:focus {
-    background-color: $gray-200;
-    border-color: $nav-tabs-border-color;
-  }
-
-  .nav-item + .nav-item {
-    .nav-link {
-      border-left: none;
-    }
-  }
-}
-
 .nav-pills {
   .active {
     border: 1px solid shade-color($primary, 10%);
@@ -312,29 +296,19 @@ label,
   font-weight: 300;
 }
 
+.list-group-item.disabled,
+.list-group-item:disabled {
+  background-color: var(--bs-secondary-bg);
+}
+
 // Indicators
 
 .alert {
   font-size: $font-size-sm;
   font-weight: 300;
-  color: $white;
 
   .alert-link {
-    color: $white;
     text-decoration: underline;
-  }
-
-  &:not(.alert-secondary):not(.alert-light) .btn-close {
-    background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$white}'><path d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/></svg>"));
-  }
-
-  &-secondary,
-  &-light {
-    &,
-    a:not(.btn),
-    .alert-link {
-      color: $body-color;
-    }
   }
 }
 
