@@ -12280,20 +12280,18 @@ table,
 .navbar.bg-dark {
   box-shadow: 0 0 2px rgba(23, 2, 41, 0.9), 0 0 4px rgba(23, 2, 41, 0.4), 0 0 1rem rgba(23, 2, 41, 0.3), 0 0 4rem rgba(23, 2, 41, 0.1);
 }
-
-.navbar-dark,
-.navbar-dark a {
+.navbar[data-bs-theme=dark],
+.navbar[data-bs-theme=dark] a {
   text-shadow: 0 0 1px rgba(255, 255, 255, 0.3), 0 0 2px rgba(255, 255, 255, 0.3), 0 0 5px rgba(255, 255, 255, 0.2);
 }
-.navbar-dark .navbar-brand {
+.navbar[data-bs-theme=dark] .navbar-brand {
   text-shadow: 0 0 1px rgba(255, 255, 255, 0.6), 0 0 3px rgba(255, 255, 255, 0.5), 0 0 0.5rem rgba(255, 255, 255, 0.3), 0 0 2rem rgba(255, 255, 255, 0.2);
 }
-
-.navbar-light,
-.navbar-light a {
+.navbar[data-bs-theme=light],
+.navbar[data-bs-theme=light] a {
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 0 2px rgba(0, 0, 0, 0.3), 0 0 5px rgba(0, 0, 0, 0.2);
 }
-.navbar-light .navbar-brand {
+.navbar[data-bs-theme=light] .navbar-brand {
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.6), 0 0 3px rgba(0, 0, 0, 0.5), 0 0 0.5rem rgba(0, 0, 0, 0.3), 0 0 2rem rgba(0, 0, 0, 0.2);
 }
 

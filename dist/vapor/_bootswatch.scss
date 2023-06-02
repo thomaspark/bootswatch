@@ -165,27 +165,27 @@ table,
       @include box-shadow($value);
     }
   }
-}
 
-.navbar-dark {
-  &,
-  a {
-    @include text-shadow-sm($navbar-dark-color);
+  &[data-bs-theme="dark"] {
+    &,
+    a {
+      @include text-shadow-sm($white);
+    }
+
+    .navbar-brand {
+      @include text-shadow($white);
+    }
   }
 
-  .navbar-brand {
-    @include text-shadow($navbar-dark-color);
-  }
-}
+  &[data-bs-theme="light"] {
+    &,
+    a {
+      @include text-shadow-sm($black);
+    }
 
-.navbar-light {
-  &,
-  a {
-    @include text-shadow-sm($black);
-  }
-
-  .navbar-brand {
-    @include text-shadow($black);
+    .navbar-brand {
+      @include text-shadow($black);
+    }
   }
 }
 
