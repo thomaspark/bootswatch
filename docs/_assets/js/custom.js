@@ -85,11 +85,9 @@
     if (!themeMenu) return;
 
     document.querySelectorAll('[data-bs-theme-value]').forEach(value => {
-    console.log('foo');
       value.addEventListener('click', () => {
         const theme = value.getAttribute('data-bs-theme-value');
         document.documentElement.setAttribute('data-bs-theme', theme);
-        console.log(theme);
       });
     });
   }
