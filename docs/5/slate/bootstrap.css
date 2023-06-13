@@ -2126,7 +2126,7 @@ progress {
   color: #272b30;
   background-color: #fff;
   background-clip: padding-box;
-  border: var(--bs-border-width) solid var(--bs-border-color);
+  border: var(--bs-border-width) solid rgba(0, 0, 0, 0.6);
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -2178,8 +2178,8 @@ progress {
   margin: -0.75rem -1rem;
   -webkit-margin-end: 1rem;
   margin-inline-end: 1rem;
-  color: #272b30;
-  background-color: var(--bs-tertiary-bg);
+  color: #999;
+  background-color: #52575c;
   pointer-events: none;
   border-color: inherit;
   border-style: solid;
@@ -2194,8 +2194,8 @@ progress {
   margin: -0.75rem -1rem;
   -webkit-margin-end: 1rem;
   margin-inline-end: 1rem;
-  color: #272b30;
-  background-color: var(--bs-tertiary-bg);
+  color: #999;
+  background-color: #52575c;
   pointer-events: none;
   border-color: inherit;
   border-style: solid;
@@ -2214,10 +2214,10 @@ progress {
   }
 }
 .form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
-  background-color: var(--bs-secondary-bg);
+  background-color: #464a4f;
 }
 .form-control:hover:not(:disabled):not([readonly])::file-selector-button {
-  background-color: var(--bs-secondary-bg);
+  background-color: #464a4f;
 }
 
 .form-control-plaintext {
@@ -2324,7 +2324,7 @@ textarea.form-control-lg {
   background-repeat: no-repeat;
   background-position: right 1rem center;
   background-size: 16px 12px;
-  border: var(--bs-border-width) solid var(--bs-border-color);
+  border: var(--bs-border-width) solid rgba(0, 0, 0, 0.6);
   border-radius: var(--bs-border-radius);
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   -webkit-appearance: none;
@@ -2739,11 +2739,11 @@ textarea.form-control-lg {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #272b30;
+  color: #999;
   text-align: center;
   white-space: nowrap;
-  background-color: var(--bs-tertiary-bg);
-  border: var(--bs-border-width) solid var(--bs-border-color);
+  background-color: #52575c;
+  border: var(--bs-border-width) solid rgba(0, 0, 0, 0.6);
   border-radius: var(--bs-border-radius);
 }
 
@@ -12241,10 +12241,6 @@ h6,
 
 legend {
   color: #fff;
-}
-
-.form-control {
-  color-scheme: light;
 }
 
 .input-group-addon {

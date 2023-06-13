@@ -72,13 +72,16 @@ $input-color:                       $gray-800 !default;
 $input-border-color:                $body-bg !default;
 $input-group-addon-color:           $gray-500 !default;
 $input-group-addon-bg:              $gray-700 !default;
+$input-placeholder-color:           $gray-600 !default;
 
 $form-check-input-bg:                     $white !default;
 $form-check-input-border:                 none !default;
 
 $form-select-disabled-color:        $gray-600 !default;
 
-$form-file-button-color:          $white !default;
+$form-file-button-color:          $input-group-addon-color !default;
+$form-file-button-bg:             $input-group-addon-bg !default;
+$form-file-button-hover-bg:       darken($form-file-button-bg, 5%) !default;
 
 // Dropdowns
 

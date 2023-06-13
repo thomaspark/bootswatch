@@ -69,12 +69,10 @@ label,
   font-size: $font-size-sm;
 }
 
-.form-control{
-  color-scheme: light;
-}
-
 .form-floating {
-  label {
+  > label,
+  > .form-control:focus ~ label,
+  > .form-control:not(:placeholder-shown) ~ label {
     color: $input-placeholder-color;
   }
 }

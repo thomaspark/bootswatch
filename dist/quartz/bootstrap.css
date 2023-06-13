@@ -2589,10 +2589,10 @@ textarea.form-control-lg {
   pointer-events: none;
 }
 .form-range:disabled::-webkit-slider-thumb {
-  background-color: #adb5bd;
+  background-color: var(--bs-secondary-color);
 }
 .form-range:disabled::-moz-range-thumb {
-  background-color: #adb5bd;
+  background-color: var(--bs-secondary-color);
 }
 
 .form-floating {
@@ -12079,6 +12079,10 @@ body {
   background-image: linear-gradient(90deg, #33b7e2, #5e62b0, #dc307c);
 }
 
+[data-bs-theme=dark] body {
+  color: #fff;
+}
+
 .table-secondary {
   --bs-table-hover-color: $white;
 }
@@ -12123,6 +12127,14 @@ body {
   border: none;
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
+}
+
+.form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.form-control:hover:not(:disabled):not([readonly])::file-selector-button {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .input-group-text {

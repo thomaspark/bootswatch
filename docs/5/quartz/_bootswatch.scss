@@ -35,6 +35,12 @@ body {
   background-image: $body-bg-image;
 }
 
+@include color-mode(dark) {
+  body {
+    color: $white;
+  }
+}
+
 // Tables
 
 .table-secondary {
@@ -81,6 +87,10 @@ body {
   background-image: linear-gradient(125deg, rgba($white, .3), rgba($white, .2) 70%);
   border: none;
   backdrop-filter: blur(5px);
+}
+
+.form-control:hover:not(:disabled):not([readonly])::file-selector-button {
+  background-color: rgba($white, 0.1);
 }
 
 .input-group-text {

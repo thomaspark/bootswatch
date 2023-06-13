@@ -2180,7 +2180,7 @@ progress {
   -webkit-margin-end: 0.75rem;
   margin-inline-end: 0.75rem;
   color: #ebebeb;
-  background-color: var(--bs-tertiary-bg);
+  background-color: #4e5d6c;
   pointer-events: none;
   border-color: inherit;
   border-style: solid;
@@ -2196,7 +2196,7 @@ progress {
   -webkit-margin-end: 0.75rem;
   margin-inline-end: 0.75rem;
   color: #ebebeb;
-  background-color: var(--bs-tertiary-bg);
+  background-color: #4e5d6c;
   pointer-events: none;
   border-color: inherit;
   border-style: solid;
@@ -2215,10 +2215,10 @@ progress {
   }
 }
 .form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
-  background-color: var(--bs-secondary-bg);
+  background-color: #43505d;
 }
 .form-control:hover:not(:disabled):not([readonly])::file-selector-button {
-  background-color: var(--bs-secondary-bg);
+  background-color: #43505d;
 }
 
 .form-control-plaintext {
@@ -12139,11 +12139,13 @@ label,
   font-size: 0.875rem;
 }
 
-.form-control {
-  color-scheme: light;
+.form-floating > .form-control:not(:-moz-placeholder-shown) ~ label {
+  color: #868e96;
 }
 
-.form-floating label {
+.form-floating > label,
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label {
   color: #868e96;
 }
 
