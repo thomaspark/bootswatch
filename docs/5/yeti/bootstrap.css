@@ -4762,8 +4762,8 @@ textarea.form-control-lg {
   --bs-pagination-active-color: #fff;
   --bs-pagination-active-bg: #008cba;
   --bs-pagination-active-border-color: #0079a1;
-  --bs-pagination-disabled-color: #eee;
-  --bs-pagination-disabled-bg: var(--bs-secondary-bg);
+  --bs-pagination-disabled-color: #ccc;
+  --bs-pagination-disabled-bg: transparent;
   --bs-pagination-disabled-border-color: var(--bs-border-color);
   display: flex;
   padding-left: 0;
@@ -12287,6 +12287,10 @@ label,
 .pagination-sm .page-item:first-child .page-link,
 .pagination-sm .page-item:last-child .page-link {
   border-radius: 3px;
+}
+
+[data-bs-theme=dark] .pagination {
+  --bs-pagination-disabled-color: #495057;
 }
 
 .list-group {

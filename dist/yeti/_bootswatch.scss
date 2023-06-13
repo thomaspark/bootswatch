@@ -287,6 +287,12 @@ label,
   }
 }
 
+@include color-mode(dark) {
+  .pagination {
+    --bs-pagination-disabled-color: #{$gray-700};
+  }
+}
+
 .list-group {
   font-size: $font-size-sm;
   font-weight: 300;
