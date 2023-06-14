@@ -26,6 +26,11 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,w
       border-color: shade-color($value, 10%);
     }
   }
+
+  &.bg-body-secondary,
+  &.bg-body-tertiary {
+    border-color: rgba(0, 0, 0, 0.1);
+  }
 }
 
 // Buttons
@@ -64,7 +69,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,w
 }
 
 .btn-outline-secondary {
-  color: $black;
+  color: var(--bs-tertiary-color);
 }
 
 [class*="btn-outline"] {

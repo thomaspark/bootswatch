@@ -12103,6 +12103,9 @@ textarea.form-control-lg {
 .navbar.bg-dark {
   border-color: #4d4d4d;
 }
+.navbar.bg-body-secondary, .navbar.bg-body-tertiary {
+  border-color: rgba(0, 0, 0, 0.1);
+}
 
 .btn {
   border-style: solid;
@@ -12167,7 +12170,7 @@ textarea.form-control-lg {
 }
 
 .btn-outline-secondary {
-  color: #000;
+  color: var(--bs-tertiary-color);
 }
 
 [class*=btn-outline] {

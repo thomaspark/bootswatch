@@ -3962,15 +3962,15 @@ textarea.form-control-lg {
 .navbar {
   --bs-navbar-padding-x: 0;
   --bs-navbar-padding-y: 0.5rem;
-  --bs-navbar-color: rgba(0, 0, 0, 0.7);
-  --bs-navbar-hover-color: #000;
+  --bs-navbar-color: rgba(var(--bs-emphasis-color-rgb), 0.65);
+  --bs-navbar-hover-color: rgba(var(--bs-emphasis-color-rgb), 0.8);
   --bs-navbar-disabled-color: rgba(var(--bs-emphasis-color-rgb), 0.3);
-  --bs-navbar-active-color: #000;
+  --bs-navbar-active-color: rgba(var(--bs-emphasis-color-rgb), 1);
   --bs-navbar-brand-padding-y: 0.3125rem;
   --bs-navbar-brand-margin-end: 1rem;
   --bs-navbar-brand-font-size: 1.25rem;
-  --bs-navbar-brand-color: #000;
-  --bs-navbar-brand-hover-color: #000;
+  --bs-navbar-brand-color: rgba(var(--bs-emphasis-color-rgb), 1);
+  --bs-navbar-brand-hover-color: rgba(var(--bs-emphasis-color-rgb), 1);
   --bs-navbar-nav-link-padding-x: 0.5rem;
   --bs-navbar-toggler-padding-y: 0.25rem;
   --bs-navbar-toggler-padding-x: 0.75rem;
@@ -12076,22 +12076,6 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-.bg-dark {
-  background-color: #000 !important;
-}
-
-.bg-light {
-  color: #000;
-  background-color: #fff !important;
-  border: 1px solid #eee;
-}
-.bg-light.navbar-fixed-top {
-  border-width: 0 0 1px;
-}
-.bg-light.navbar-fixed-bottom {
-  border-width: 1px 0 0;
-}
-
 .navbar {
   font-family: "News Cycle", "Arial Narrow Bold", sans-serif;
   font-size: 18px;
