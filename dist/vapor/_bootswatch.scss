@@ -49,6 +49,7 @@ $outrun: false !default;
 // Body
 
 body {
+  min-height: 100vh;
   background-image: linear-gradient(shade-color($body-bg, 10%) 0%, $body-bg 7%, $body-bg 80%, shade-color(#173e98, 50%) 100%);
   @include text-shadow-sm($body-color);
 
