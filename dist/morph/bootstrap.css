@@ -12569,13 +12569,21 @@ textarea.form-control-lg {
   box-shadow: inset 2px 2px 8px rgba(55, 94, 148, 0.3), inset -3px -2px 5px rgba(255, 255, 255, 0.8);
 }
 .input-group > .form-control {
-  padding-right: 0;
-  padding-left: 0;
   background: none;
   box-shadow: none;
 }
 .input-group .input-group-text {
   background: none;
+}
+.input-group .btn {
+  border: none;
+  border-radius: 0;
+}
+.input-group .btn:first-child {
+  border-radius: 0.375rem 0 0 0.375rem;
+}
+.input-group .btn:last-child {
+  border-radius: 0 0.375rem 0.375rem 0;
 }
 
 .form-range::-webkit-slider-runnable-track {

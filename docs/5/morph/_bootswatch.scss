@@ -314,14 +314,25 @@ $btn-box-shadow-inset: inset 2px 3px 6px rgba($black, .2), inset -3px -2px 6px r
   box-shadow: $box-shadow-inset;
 
   > .form-control {
-    padding-right: 0;
-    padding-left: 0;
     background: none;
     box-shadow: none;
   }
 
   .input-group-text {
     background: none;
+  }
+
+  .btn {
+    border: none;
+    border-radius: 0;
+
+    &:first-child {
+      border-radius: $border-radius 0 0 $border-radius;
+    }
+
+    &:last-child {
+      border-radius: 0 $border-radius $border-radius 0;
+    }
   }
 }
 
