@@ -12,6 +12,11 @@
 }
 
 @mixin btn-shadow-inverse($color){
+  @include gradient-y-three-colors(shade-color($color, 16%), shade-color($color, 10%), 40%, shade-color($color, 6%));
+  filter: none;
+}
+
+@mixin btn-shadow-inverse-dark($color){
   @include gradient-y-three-colors(shade-color($color, 36%), shade-color($color, 30%), 40%, shade-color($color, 26%));
   filter: none;
 }
@@ -19,7 +24,7 @@
 // Navbar
 
 .navbar {
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
   border: 1px solid rgba(0, 0, 0, .6);
 
   .container {
@@ -42,12 +47,6 @@
     padding: 1rem;
     border-right: 1px solid rgba(0, 0, 0, .2);
     border-left: 1px solid rgba(255, 255, 255, .1);
-
-    &:hover,
-    &:focus {
-      @include btn-shadow-inverse($gray-800);
-      border-left: 1px solid rgba(0, 0, 0, .2);
-    }
   }
 
   &-brand {
@@ -65,14 +64,20 @@
     margin-left: 0;
   }
 
-  &.bg-light {
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, .1);
+  @each $color, $value in $theme-colors {
+    &.bg-#{$color} {
 
-    .nav-link {
-      &:hover,
-      &:focus {
-        @include btn-shadow-inverse($gray-600);
-        border-left: 1px solid rgba(0, 0, 0, .2);
+      .nav-link {
+        &:hover {
+          @include btn-shadow-inverse($value);
+          border-left: 1px solid rgba(0, 0, 0, .2);
+        }
+
+        &:active,
+        &.active {
+          @include btn-shadow-inverse-dark($value);
+          border-left: 1px solid rgba(0, 0, 0, .2);
+        }
       }
     }
   }
@@ -124,74 +129,20 @@
   &:not([disabled]):not(.disabled).active:hover {
     border-color: rgba(0, 0, 0, .6);
   }
-}
 
-.btn-primary {
-  @include btn-shadow($primary);
+  @each $color, $value in $theme-colors {
+    &-#{$color} {
+      @include btn-shadow($value);
 
-  &:not([disabled]):not(.disabled):hover,
-  &:not([disabled]):not(.disabled):focus,
-  &:not([disabled]):not(.disabled):active:hover,
-  &:not([disabled]):not(.disabled).active:hover {
-    @include btn-shadow-inverse($primary);
-  }
-}
+      &:not([disabled]):not(.disabled):hover {
+        @include btn-shadow-inverse($value);
+      }
 
-.btn-secondary {
-  @include btn-shadow($secondary);
-
-  &:not([disabled]):not(.disabled):hover,
-  &:not([disabled]):not(.disabled):focus,
-  &:not([disabled]):not(.disabled):active,
-  &:not([disabled]):not(.disabled).active {
-    @include btn-shadow-inverse($secondary);
-  }
-}
-
-.btn-success {
-  @include btn-shadow($success);
-  color: $white;
-
-  &:not([disabled]):not(.disabled):hover,
-  &:not([disabled]):not(.disabled):focus,
-  &:not([disabled]):not(.disabled):active,
-  &:not([disabled]):not(.disabled).active {
-    @include btn-shadow-inverse($success);
-  }
-}
-
-.btn-info {
-  @include btn-shadow($info);
-  color: $white;
-
-  &:not([disabled]):not(.disabled):hover,
-  &:not([disabled]):not(.disabled):focus,
-  &:not([disabled]):not(.disabled):active,
-  &:not([disabled]):not(.disabled).active {
-    @include btn-shadow-inverse($info);
-  }
-}
-
-.btn-warning {
-  @include btn-shadow($warning);
-  color: $white;
-
-  &:not([disabled]):not(.disabled):hover,
-  &:not([disabled]):not(.disabled):focus,
-  &:not([disabled]):not(.disabled):active,
-  &:not([disabled]):not(.disabled).active {
-    @include btn-shadow-inverse($warning);
-  }
-}
-
-.btn-danger {
-  @include btn-shadow($danger);
-
-  &:not([disabled]):not(.disabled):hover,
-  &:not([disabled]):not(.disabled):focus,
-  &:not([disabled]):not(.disabled):active,
-  &:not([disabled]):not(.disabled).active {
-    @include btn-shadow-inverse($danger);
+      &:not([disabled]):not(.disabled):active:hover,
+      &:not([disabled]):not(.disabled).active:hover {
+        @include btn-shadow-inverse-dark($value);
+      }
+    }
   }
 }
 
@@ -211,6 +162,12 @@
   .btn.active {
     border-color: rgba(0, 0, 0, .6);
   }
+}
+
+.btn-check:checked + .btn,
+.btn-check + .btn:hover {
+  border-color: rgba(0, 0, 0, .6);
+  color: $white;
 }
 
 // Typography
