@@ -1,4 +1,4 @@
-// Morph 5.3.0
+// Morph 5.3.1
 // Bootswatch
 
 
@@ -381,8 +381,8 @@ $btn-box-shadow-inset: inset 2px 3px 6px rgba($black, .2), inset -3px -2px 6px r
 // Indicators
 
 .alert {
-  box-shadow: $dropdown-box-shadow;
   backdrop-filter: blur(3px);
+  box-shadow: $dropdown-box-shadow;
 
   @each $color, $value in $theme-colors {
     &-#{$color} {
@@ -406,16 +406,16 @@ $btn-box-shadow-inset: inset 2px 3px 6px rgba($black, .2), inset -3px -2px 6px r
 
   &-inner,
   .arrow {
-    box-shadow: $dropdown-box-shadow;
     backdrop-filter: blur(3px);
+    box-shadow: $dropdown-box-shadow;
   }
 }
 
 .popover,
 .toast,
 .modal-content {
-  box-shadow: $dropdown-box-shadow;
   backdrop-filter: blur(3px);
+  box-shadow: $dropdown-box-shadow;
 }
 
 .progress {
