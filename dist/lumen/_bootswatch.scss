@@ -1,4 +1,4 @@
-// Lumen 5.3.0
+// Lumen 5.3.1
 // Bootswatch
 
 
@@ -7,10 +7,6 @@
 $web-font-path: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" !default;
 @if $web-font-path {
   @import url($web-font-path);
-}
-
-:root {
-  color-scheme: light;
 }
 
 // Mixins
@@ -29,6 +25,11 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,w
     &.bg-#{$color} {
       border-color: shade-color($value, 10%);
     }
+  }
+
+  &.bg-body-secondary,
+  &.bg-body-tertiary {
+    border-color: rgba(0, 0, 0, .1);
   }
 }
 
@@ -68,7 +69,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,w
 }
 
 .btn-outline-secondary {
-  color: $black;
+  color: var(--bs-tertiary-color);
 }
 
 [class*="btn-outline"] {

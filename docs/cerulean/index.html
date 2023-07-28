@@ -70,8 +70,11 @@
               <div class="dropdown-menu" aria-labelledby="download">
                 <a class="dropdown-item" rel="noopener" target="_blank" href="https://jsfiddle.net/bootswatch/82h1mweq/">Open in JSFiddle</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="../5/cerulean/bootstrap.min.css" download>bootstrap.min.css</a>
                 <a class="dropdown-item" href="../5/cerulean/bootstrap.css" download>bootstrap.css</a>
+                <a class="dropdown-item" href="../5/cerulean/bootstrap.min.css" download>bootstrap.min.css</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="../5/cerulean/bootstrap.rtl.css" download>bootstrap.rtl.css</a>
+                <a class="dropdown-item" href="../5/cerulean/bootstrap.rtl.min.css" download>bootstrap.rtl.min.css</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="../5/cerulean/_variables.scss" download>_variables.scss</a>
                 <a class="dropdown-item" href="../5/cerulean/_bootswatch.scss" download>_bootswatch.scss</a>
@@ -233,6 +236,50 @@
                   </button>
 
                   <div class="collapse navbar-collapse" id="navbarColor03">
+                    <ul class="navbar-nav me-auto">
+                      <li class="nav-item">
+                        <a class="nav-link active" href="#">Home
+                          <span class="visually-hidden">(current)</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="#">Separated link</a>
+                        </div>
+                      </li>
+                    </ul>
+                    <form class="d-flex">
+                      <input class="form-control me-sm-2" type="search" placeholder="Search">
+                      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                  </div>
+                </div>
+              </nav>
+            </div>
+
+            <div class="bs-component">
+              <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">Navbar</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor04" aria-controls="navbarColor04" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+
+                  <div class="collapse navbar-collapse" id="navbarColor04">
                     <ul class="navbar-nav me-auto">
                       <li class="nav-item">
                         <a class="nav-link active" href="#">Home
@@ -676,7 +723,7 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1" class="form-label mt-4">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" autocomplete="off">
                   </div>
                   <div class="form-group">
                     <label for="exampleSelect1" class="form-label mt-4">Example select</label>
@@ -842,7 +889,7 @@
                   <label for="floatingInput">Email address</label>
                 </div>
                 <div class="form-floating">
-                  <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                  <input type="password" class="form-control" id="floatingPassword" placeholder="Password" autocomplete="off">
                   <label for="floatingPassword">Password</label>
                 </div>
               </div>

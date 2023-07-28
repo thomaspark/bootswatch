@@ -48,6 +48,7 @@ module.exports = grunt => {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-html');
+  grunt.loadNpmTasks('grunt-shell');
 
   // Force use of Unix newlines
   grunt.util.linefeed = '\n';
@@ -94,7 +95,8 @@ module.exports = grunt => {
           cwd: 'dist',
           src: [
             '**/*.css',
-            '**/*.scss'
+            '**/*.scss',
+            '**/*.map'
           ],
           dest: DOCS_DEST
         }]
@@ -138,9 +140,14 @@ module.exports = grunt => {
           1: {
             specialComments: 'all'
           }
-        }
+        },
+        sourceMap: true
       },
       dist: {
+        src: [],
+        dest: ''
+      },
+      rtl: {
         src: [],
         dest: ''
       }
@@ -183,7 +190,21 @@ module.exports = grunt => {
         ],
         tasks: 'build'
       }
+    },
+    shell: {  
+      options: {
+        stderr: false
+      },
+      rtlcss: {
+        command: function (theme) {
+          return `rtlcss dist/${theme}/bootstrap.css dist/${theme}/bootstrap.rtl.css`;
+        }
+      }
     }
+  });
+
+  grunt.registerTask('rtlcss', function (theme) {
+    grunt.task.run('shell:rtlcss:' + theme);
   });
 
   grunt.registerTask('build', 'build a regular theme from scss', theme => {
@@ -202,6 +223,8 @@ module.exports = grunt => {
     const concatDest = path.join(themeDir, '/build.scss');
     const cssDest = path.join(themeDir, '/bootstrap.css');
     const cssDestMin = path.join(themeDir, '/bootstrap.min.css');
+    const cssDestRtl = path.join(themeDir, '/bootstrap.rtl.css');
+    const cssDestRtlMin = path.join(themeDir, '/bootstrap.rtl.min.css');
 
     const banner = `/*!
  * Bootswatch v${pkg.version} (${pkg.homepage})
@@ -231,6 +254,10 @@ module.exports = grunt => {
       src: cssDest,
       dest: cssDestMin
     });
+    grunt.config.set('cssmin.rtl', {
+      src: cssDestRtl,
+      dest: cssDestRtlMin
+    });
 
     grunt.task.run([
       'concat',
@@ -238,6 +265,8 @@ module.exports = grunt => {
       'postcss:dist',
       'clean:build',
       'cssmin:dist',
+      `rtlcss:${theme}`,
+      'cssmin:rtl',
       'copy:css'
     ]);
   });

@@ -1,4 +1,4 @@
-// Vapor 5.3.0
+// Vapor 5.3.1
 // Bootswatch
 
 
@@ -10,10 +10,6 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Lato:wght@400;700&disp
 }
 
 $outrun: false !default;
-
-:root {
-  color-scheme: dark;
-}
 
 // Mixins
 
@@ -53,6 +49,7 @@ $outrun: false !default;
 // Body
 
 body {
+  min-height: 100vh;
   background-image: linear-gradient(shade-color($body-bg, 10%) 0%, $body-bg 7%, $body-bg 80%, shade-color(#173e98, 50%) 100%);
   @include text-shadow-sm($body-color);
 
@@ -165,27 +162,27 @@ table,
       @include box-shadow($value);
     }
   }
-}
 
-.navbar-dark {
-  &,
-  a {
-    @include text-shadow-sm($navbar-dark-color);
+  &[data-bs-theme="dark"] {
+    &,
+    a {
+      @include text-shadow-sm($white);
+    }
+
+    .navbar-brand {
+      @include text-shadow($white);
+    }
   }
 
-  .navbar-brand {
-    @include text-shadow($navbar-dark-color);
-  }
-}
+  &[data-bs-theme="light"] {
+    &,
+    a {
+      @include text-shadow-sm($black);
+    }
 
-.navbar-light {
-  &,
-  a {
-    @include text-shadow-sm($black);
-  }
-
-  .navbar-brand {
-    @include text-shadow($black);
+    .navbar-brand {
+      @include text-shadow($black);
+    }
   }
 }
 
@@ -276,6 +273,8 @@ legend {
 }
 
 .tooltip {
+  --bs-tooltip-bg: var(--bs-body-bg);
+  --bs-tooltip-color: var(--bs-body-color);
 
   &-inner,
   .arrow {

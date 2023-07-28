@@ -1,4 +1,4 @@
-// Superhero 5.3.0
+// Superhero 5.3.1
 // Bootswatch
 
 $theme: "superhero" !default;
@@ -24,13 +24,13 @@ $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #e83e8c !default;
 $red:     #d9534f !default;
-$orange:  #f0ad4e !default;
+$orange:  #df6919 !default;
 $yellow:  #ffc107 !default;
 $green:   #5cb85c !default;
 $teal:    #20c997 !default;
 $cyan:    #5bc0de !default;
 
-$primary:       $blue !default;
+$primary:       $orange !default;
 $secondary:     $gray-600 !default;
 $success:       $green !default;
 $info:          $cyan !default;
@@ -93,7 +93,9 @@ $form-select-disabled-color:        $input-disabled-color !default;
 $form-check-input-bg:                     $white !default;
 $form-check-input-border:                 none !default;
 
-$form-file-button-color:          $body-color !default;
+$form-file-button-color:          $input-group-addon-color !default;
+$form-file-button-bg:             $input-group-addon-bg !default;
+$form-file-button-hover-bg:       darken($form-file-button-bg, 5%) !default;
 
 $form-floating-label-opacity:     1 !default;
 

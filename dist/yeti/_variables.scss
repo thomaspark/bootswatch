@@ -1,4 +1,4 @@
-// Yeti 5.3.0
+// Yeti 5.3.1
 // Bootswatch
 
 $theme: "yeti" !default;
@@ -37,7 +37,7 @@ $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-200 !default;
-$dark:          $gray-900 !default;
+$dark:          $gray-800 !default;
 
 $min-contrast-ratio:   1.9 !default;
 
@@ -67,13 +67,6 @@ $btn-font-weight:             300 !default;
 $dropdown-border-color:             rgba($black, .1) !default;
 $dropdown-divider-bg:               rgba($black, .1) !default;
 
-// Navs
-
-$nav-link-disabled-color:           $gray-400 !default;
-$nav-tabs-border-color:             $dropdown-border-color !default;
-$nav-tabs-link-hover-border-color:  $nav-tabs-border-color !default;
-$nav-tabs-link-active-border-color: $nav-tabs-border-color !default;
-
 // Navbar
 
 $navbar-dark-color:                 rgba($white, .7) !default;
@@ -82,9 +75,10 @@ $navbar-dark-hover-color:           $white !default;
 // Pagination
 
 $pagination-color:                  $gray-600 !default;
-$pagination-border-color:           $nav-tabs-border-color !default;
+// $pagination-border-color:           $nav-tabs-border-color !default;
 $pagination-active-border-color:    darken($primary, 5%) !default;
-$pagination-disabled-color:         $gray-200 !default;
+$pagination-disabled-bg:            transparent !default;
+$pagination-disabled-color:         $gray-400 !default;
 
 // Cards
 
@@ -98,17 +92,6 @@ $badge-padding-x:                   1rem !default;
 // Alerts
 
 $alert-link-font-weight:            400 !default;
-
-$alert-bg-scale:                    0% !default;
-
-// Progress bars
-
-$progress-bg:                       $gray-400 !default;
-$progress-bar-color:                $white !default;
-
-// List group
-
-$list-group-disabled-bg:            $gray-200 !default;
 
 // Breadcrumbs
 

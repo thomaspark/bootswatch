@@ -1,4 +1,4 @@
-// Simplex 5.3.0
+// Simplex 5.3.1
 // Bootswatch
 
 
@@ -7,10 +7,6 @@
 $web-font-path: "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" !default;
 @if $web-font-path {
   @import url($web-font-path);
-}
-
-:root {
-  color-scheme: light;
 }
 
 // Mixins
@@ -37,7 +33,6 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700
   }
 
   &.bg-primary {
-    background-color: $primary !important;
     border-color: shade-color($primary, 13%) !important;
   }
 

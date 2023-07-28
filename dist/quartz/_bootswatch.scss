@@ -1,4 +1,4 @@
-// Quartz 5.3.0
+// Quartz 5.3.1
 // Bootswatch
 
 
@@ -6,10 +6,6 @@
 
 $body-bg-image: linear-gradient(90deg, shade-color($cyan, 10%), shade-color($purple, 10%), shade-color($pink, 5%)) !default;
 $frosted-opacity: .3 !default;
-
-:root {
-  color-scheme: dark;
-}
 
 // Mixins
 
@@ -37,6 +33,12 @@ $frosted-opacity: .3 !default;
 
 body {
   background-image: $body-bg-image;
+}
+
+@include color-mode(dark) {
+  body {
+    color: $white;
+  }
 }
 
 // Tables
@@ -83,8 +85,12 @@ body {
 .form-control::file-selector-button {
   background-color: transparent;
   background-image: linear-gradient(125deg, rgba($white, .3), rgba($white, .2) 70%);
-  border: none;
   backdrop-filter: blur(5px);
+  border: none;
+}
+
+.form-control:hover:not(:disabled):not([readonly])::file-selector-button {
+  background-color: rgba($white, .1);
 }
 
 .input-group-text {
