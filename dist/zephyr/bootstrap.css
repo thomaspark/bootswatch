@@ -100,7 +100,7 @@
   --bs-tertiary-color-rgb: 73, 80, 87;
   --bs-tertiary-bg: #f8f9fa;
   --bs-tertiary-bg-rgb: 248, 249, 250;
-  --bs-heading-color: #212529;
+  --bs-heading-color: var(--bs-primary-color);
   --bs-link-color: #3459e6;
   --bs-link-color-rgb: 52, 89, 230;
   --bs-link-decoration: underline;
@@ -2752,7 +2752,7 @@ textarea.form-control-lg {
   color: var(--bs-body-color);
   text-align: center;
   white-space: nowrap;
-  background-color: #f8f9fa;
+  background-color: var(--bs-tertiary-bg);
   border: var(--bs-border-width) solid var(--bs-border-color);
   border-radius: var(--bs-border-radius);
 }
@@ -4768,22 +4768,22 @@ textarea.form-control-lg {
   --bs-pagination-padding-x: 1rem;
   --bs-pagination-padding-y: 0.5rem;
   --bs-pagination-font-size: 1rem;
-  --bs-pagination-color: #495057;
+  --bs-pagination-color: var(--bs-primary-bg);
   --bs-pagination-bg: var(--bs-body-bg);
   --bs-pagination-border-width: var(--bs-border-width);
   --bs-pagination-border-color: var(--bs-border-color);
   --bs-pagination-border-radius: var(--bs-border-radius);
-  --bs-pagination-hover-color: #495057;
-  --bs-pagination-hover-bg: #f8f9fa;
+  --bs-pagination-hover-color: var(--bs-primary-bg);
+  --bs-pagination-hover-bg: var(--bs-secondary-bg);
   --bs-pagination-hover-border-color: var(--bs-border-color);
-  --bs-pagination-focus-color: #495057;
+  --bs-pagination-focus-color: var(--bs-primary-bg);
   --bs-pagination-focus-bg: var(--bs-secondary-bg);
   --bs-pagination-focus-box-shadow: 0 0 0 0.25rem rgba(52, 89, 230, 0.25);
   --bs-pagination-active-color: #fff;
   --bs-pagination-active-bg: #3459e6;
   --bs-pagination-active-border-color: #3459e6;
-  --bs-pagination-disabled-color: var(--bs-secondary-color);
-  --bs-pagination-disabled-bg: var(--bs-secondary-bg);
+  --bs-pagination-disabled-color: var(--bs-tertiary-color);
+  --bs-pagination-disabled-bg: var(--bs-tertiary-bg);
   --bs-pagination-disabled-border-color: var(--bs-border-color);
   display: flex;
   padding-left: 0;
@@ -5444,7 +5444,7 @@ textarea.form-control-lg {
   --bs-toast-border-color: var(--bs-border-color-translucent);
   --bs-toast-border-radius: var(--bs-border-radius);
   --bs-toast-box-shadow: var(--bs-box-shadow);
-  --bs-toast-header-color: #212529;
+  --bs-toast-header-color: var(--bs-primary-color);
   --bs-toast-header-bg: rgba(var(--bs-body-bg-rgb), 0.85);
   --bs-toast-header-border-color: var(--bs-border-color-translucent);
   width: var(--bs-toast-max-width);
@@ -5507,7 +5507,7 @@ textarea.form-control-lg {
   --bs-modal-margin: 0.5rem;
   --bs-modal-color: ;
   --bs-modal-bg: var(--bs-body-bg);
-  --bs-modal-border-color: #dee2e6;
+  --bs-modal-border-color: var(--bs-border-color-translucent);
   --bs-modal-border-width: var(--bs-border-width);
   --bs-modal-border-radius: var(--bs-border-radius-lg);
   --bs-modal-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
@@ -5908,7 +5908,7 @@ textarea.form-control-lg {
   --bs-popover-header-padding-x: 1rem;
   --bs-popover-header-padding-y: 0.5rem;
   --bs-popover-header-font-size: 1rem;
-  --bs-popover-header-color: #212529;
+  --bs-popover-header-color: var(--bs-primary-color);
   --bs-popover-header-bg: var(--bs-secondary-bg);
   --bs-popover-body-padding-x: 1rem;
   --bs-popover-body-padding-y: 1rem;
@@ -6339,7 +6339,7 @@ textarea.form-control-lg {
   --bs-offcanvas-color: var(--bs-body-color);
   --bs-offcanvas-bg: var(--bs-body-bg);
   --bs-offcanvas-border-width: var(--bs-border-width);
-  --bs-offcanvas-border-color: #dee2e6;
+  --bs-offcanvas-border-color: var(--bs-border-color-translucent);
   --bs-offcanvas-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
   --bs-offcanvas-transition: transform 0.3s ease-in-out;
   --bs-offcanvas-title-line-height: 1.5;
@@ -12214,7 +12214,7 @@ thead th {
 .breadcrumb {
   font-size: 0.875rem;
   font-weight: 500;
-  border: 1px solid #dee2e6;
+  border: 1px solid var(--bs-secondary-bg);
   border-radius: 0.375rem;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
@@ -12270,7 +12270,7 @@ thead th {
 }
 
 .modal-footer {
-  background-color: #f8f9fa;
+  background-color: var(--bs-tertiary-bg);
 }
 
 .modal-content {

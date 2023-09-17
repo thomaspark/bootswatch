@@ -47,7 +47,7 @@ $enable-shadows:              true !default;
 
 $body-color:                $gray-700 !default;
 
-$headings-color:              $gray-900 !default;
+$headings-color:              var(--bs-primary-color) !default;
 
 // Fonts
 
@@ -89,8 +89,6 @@ $form-label-font-weight:                500 !default;
 
 $input-box-shadow:                      $box-shadow !default;
 
-$input-group-addon-bg:                  $gray-100 !default;
-
 // Navs
 
 $nav-link-color:                    $body-color !default;
@@ -122,12 +120,15 @@ $dropdown-item-padding-x:           1rem !default;
 $pagination-padding-y:              .5rem !default;
 $pagination-padding-x:              1rem !default;
 
-$pagination-color:                  $gray-700 !default;
+$pagination-color:                  var(--bs-primary-bg) !default;
 
 $pagination-focus-color:            $pagination-color !default;
 
 $pagination-hover-color:            $pagination-color !default;
-$pagination-hover-bg:               $gray-100 !default;
+$pagination-hover-bg:               var(--bs-secondary-bg) !default;
+
+$pagination-disabled-color:         var(--bs-tertiary-color) !default;
+$pagination-disabled-bg:            var(--bs-tertiary-bg) !default;
 
 // Cards
 $card-spacer-x:                     1.5rem !default;
@@ -140,7 +141,6 @@ $toast-header-color:                $headings-color !default;
 
 // Modals
 
-$modal-content-border-color:        $gray-300 !default;
 $modal-header-border-width:         0 !default;
 
 // List group
