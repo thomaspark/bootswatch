@@ -1,4 +1,4 @@
-// Flatly 5.3.1
+// Flatly 5.3.2
 // Bootswatch
 
 $theme: "flatly" !default;
@@ -59,6 +59,7 @@ $table-bg-scale:              0% !default;
 
 // Dropdowns
 
+$dropdown-border-color:             $gray-400 !default;
 $dropdown-link-color:               $gray-700 !default;
 $dropdown-link-hover-color:         $white !default;
 $dropdown-link-hover-bg:            $primary !default;
@@ -68,17 +69,22 @@ $dropdown-link-hover-bg:            $primary !default;
 $nav-link-padding-y:                .5rem !default;
 $nav-link-padding-x:                2rem !default;
 $nav-link-disabled-color:           $gray-600 !default;
-$nav-tabs-border-color:             $gray-200 !default;
+
+$nav-tabs-border-color:             $dropdown-border-color !default;
+$nav-tabs-link-hover-border-color:  $nav-tabs-border-color $nav-tabs-border-color transparent !default;
+$nav-tabs-link-active-color:        $success !default;
+$nav-tabs-link-active-border-color: $nav-tabs-link-hover-border-color !default;
+
 
 // Navbar
 
 $navbar-padding-y:                  1rem !default;
 $navbar-dark-color:                 $white !default;
-$navbar-dark-hover-color:           $primary !default;
-$navbar-dark-active-color:          $primary !default;
+$navbar-dark-hover-color:           $success !default;
+$navbar-dark-active-color:          $success !default;
 
 $navbar-dark-brand-color:                 $white !default;
-$navbar-dark-brand-hover-color:           $navbar-dark-brand-color !default;
+$navbar-dark-brand-hover-color:           $navbar-dark-hover-color !default;
 
 // Pagination
 
