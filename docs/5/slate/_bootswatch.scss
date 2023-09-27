@@ -329,4 +329,12 @@ legend {
   &-item-action:hover {
     background-color: shade-color($gray-900, 10%);
   }
+
+  @each $color, $value in $theme-colors {
+    &-item-#{$color} {
+      background-color: $value;
+      border-color: $list-group-border-color;
+    }
+  }
 }
+
