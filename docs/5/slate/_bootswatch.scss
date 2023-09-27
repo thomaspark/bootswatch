@@ -7,7 +7,7 @@
 // Mixins
 
 @mixin btn-shadow($color){
-  @include gradient-y-three-colors(tint-color($color, 12%), $color, 60%, shade-color($color, 8%));
+  @include gradient-y-three-colors(tint-color($color, 5%), $color, 20%, shade-color($color, 20%));
   filter: none;
 }
 
