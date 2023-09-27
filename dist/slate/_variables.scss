@@ -39,6 +39,8 @@ $danger:        $red !default;
 $light:         $gray-200 !default;
 $dark:          $gray-900 !default;
 
+$primary-bg-subtle:       lighten($gray-800, 10%) !default;
+
 $min-contrast-ratio:   1.95 !default;
 
 // Body
@@ -127,6 +129,12 @@ $pagination-disabled-border-color:  rgba($black, .6) !default;
 $card-border-color:                 rgba($black, .6) !default;
 $card-cap-bg:                       lighten($gray-800, 10%) !default;
 $card-bg:                           lighten($body-bg, 5%) !default;
+
+// Accordions
+
+$accordion-bg:                      lighten($body-bg, 5%) !default;
+$accordion-border-color:            $table-border-color !default;
+$accordion-button-active-color:     $white !default;
 
 // Popovers
 
