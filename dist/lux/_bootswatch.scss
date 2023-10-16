@@ -6,7 +6,7 @@
 
 $web-font-path: "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;500;600;700&display=swap" !default;
 @if #{$web-font-path} {
-  @import url("#{$web-font-path}");
+  @import url($web-font-path);
 }
 
 // Navbar
