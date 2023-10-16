@@ -6,7 +6,7 @@
 
 $web-font-path: "https://fonts.googleapis.com/css?family=Neucha|Cabin+Sketch&display=swap" !default;
 @if #{$web-font-path} {
-  @import url($web-font-path);
+  @import url("#{$web-font-path}");
 }
 
 // stylelint-disable scss/dollar-variable-default
