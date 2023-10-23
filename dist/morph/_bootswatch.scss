@@ -529,6 +529,13 @@ $box-shadow-dark: 5px 5px 10px rgba(darken($dark, 50%), .2), -5px -5px 10px rgba
     box-shadow: inset 2px 2px 6px rgba(shade-color($dark, 50%), .2), inset -3px -2px 4px rgba($white, .05);
   }
 
+  .card {
+    &.bg-secondary,
+    &.bg-light {
+      color: $body-color;
+    }
+  }
+
   .modal-content,
   .popover,
   .toast {
