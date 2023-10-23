@@ -2184,7 +2184,7 @@ progress {
   -webkit-margin-end: 1.5rem;
   margin-inline-end: 1.5rem;
   color: var(--bs-body-color);
-  background-color: #f0f5fa;
+  background-color: var(--bs-tertiary-bg);
   pointer-events: none;
   border-color: inherit;
   border-style: solid;
@@ -2200,7 +2200,7 @@ progress {
   -webkit-margin-end: 1.5rem;
   margin-inline-end: 1.5rem;
   color: var(--bs-body-color);
-  background-color: #f0f5fa;
+  background-color: var(--bs-tertiary-bg);
   pointer-events: none;
   border-color: inherit;
   border-style: solid;
@@ -4423,7 +4423,7 @@ textarea.form-control-lg {
   --bs-card-cap-color: ;
   --bs-card-height: ;
   --bs-card-color: ;
-  --bs-card-bg: #e4ebf5;
+  --bs-card-bg: var(--bs-body-bg);
   --bs-card-img-overlay-padding: 1rem;
   --bs-card-group-margin: 0.75rem;
   position: relative;
@@ -4771,7 +4771,7 @@ textarea.form-control-lg {
   --bs-pagination-padding-y: 1rem;
   --bs-pagination-font-size: 1rem;
   --bs-pagination-color: #7b8ab8;
-  --bs-pagination-bg: #d9e3f1;
+  --bs-pagination-bg: transparent;
   --bs-pagination-border-width: var(--bs-border-width);
   --bs-pagination-border-color: var(--bs-border-color);
   --bs-pagination-border-radius: var(--bs-border-radius);
@@ -4785,7 +4785,7 @@ textarea.form-control-lg {
   --bs-pagination-active-bg: transparent;
   --bs-pagination-active-border-color: #378dfc;
   --bs-pagination-disabled-color: #adb6d3;
-  --bs-pagination-disabled-bg: #d9e3f1;
+  --bs-pagination-disabled-bg: transparent;
   --bs-pagination-disabled-border-color: var(--bs-border-color);
   display: flex;
   padding-right: 0;
@@ -5047,7 +5047,7 @@ textarea.form-control-lg {
 
 .list-group {
   --bs-list-group-color: var(--bs-body-color);
-  --bs-list-group-bg: #e4ebf5;
+  --bs-list-group-bg: var(--bs-body-bg);
   --bs-list-group-border-color: var(--bs-border-color);
   --bs-list-group-border-width: var(--bs-border-width);
   --bs-list-group-border-radius: var(--bs-border-radius);
@@ -5441,7 +5441,7 @@ textarea.form-control-lg {
   --bs-toast-max-width: 350px;
   --bs-toast-font-size: 0.875rem;
   --bs-toast-color: ;
-  --bs-toast-bg: rgba(240, 245, 250, 0.8);
+  --bs-toast-bg: rgba(var(--bs-body-bg-rgb), 0.85);
   --bs-toast-border-width: 0;
   --bs-toast-border-color: var(--bs-border-color-translucent);
   --bs-toast-border-radius: var(--bs-border-radius);
@@ -5508,7 +5508,7 @@ textarea.form-control-lg {
   --bs-modal-padding: 1rem;
   --bs-modal-margin: 0.5rem;
   --bs-modal-color: ;
-  --bs-modal-bg: rgba(240, 245, 250, 0.8);
+  --bs-modal-bg: var(--bs-body-bg);
   --bs-modal-border-color: var(--bs-border-color-translucent);
   --bs-modal-border-width: var(--bs-border-width);
   --bs-modal-border-radius: var(--bs-border-radius-lg);
@@ -5803,7 +5803,7 @@ textarea.form-control-lg {
   --bs-tooltip-margin: ;
   --bs-tooltip-font-size: 0.875rem;
   --bs-tooltip-color: #7b8ab8;
-  --bs-tooltip-bg: rgba(240, 245, 250, 0.8);
+  --bs-tooltip-bg: var(--bs-emphasis-color);
   --bs-tooltip-border-radius: var(--bs-border-radius);
   --bs-tooltip-opacity: 0.9;
   --bs-tooltip-arrow-width: 0.8rem;
@@ -5893,7 +5893,7 @@ textarea.form-control-lg {
   --bs-popover-zindex: 1070;
   --bs-popover-max-width: 276px;
   --bs-popover-font-size: 0.875rem;
-  --bs-popover-bg: rgba(240, 245, 250, 0.8);
+  --bs-popover-bg: var(--bs-body-bg);
   --bs-popover-border-width: var(--bs-border-width);
   --bs-popover-border-color: var(--bs-border-color-translucent);
   --bs-popover-border-radius: var(--bs-border-radius-lg);
@@ -5907,7 +5907,7 @@ textarea.form-control-lg {
   --bs-popover-body-padding-x: 1rem;
   --bs-popover-body-padding-y: 1rem;
   --bs-popover-body-color: var(--bs-body-color);
-  --bs-popover-arrow-width: 1rem;
+  --bs-popover-arrow-width: 0;
   --bs-popover-arrow-height: 0.5rem;
   --bs-popover-arrow-border: var(--bs-popover-border-color);
   z-index: var(--bs-popover-zindex);
@@ -12140,6 +12140,14 @@ textarea.form-control-lg {
   box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.1), 2px -2px 5px rgba(255, 255, 255, 0.5);
 }
 
+[data-bs-theme=dark] .btn {
+  background-color: #212529;
+  border: none;
+  box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2), 5px -5px 10px rgba(255, 255, 255, 0.05);
+  transition: background-color 0.15s ease-in-out, border 0.15s ease-in-out, box-shadow 0.15s ease-in-out, color 0.15s ease-in-out;
+  color: rgba(255, 255, 255, 0.75);
+}
+
 .btn-outline-primary {
   background-color: #378dfc;
   border: none;
@@ -12318,6 +12326,15 @@ textarea.form-control-lg {
   border: none;
 }
 
+[data-bs-theme=dark] .btn-group,
+[data-bs-theme=dark] .btn-group-vertical {
+  background-color: #212529;
+  border: none;
+  box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2), 5px -5px 10px rgba(255, 255, 255, 0.05);
+  transition: background-color 0.15s ease-in-out, border 0.15s ease-in-out, box-shadow 0.15s ease-in-out, color 0.15s ease-in-out;
+  color: rgba(255, 255, 255, 0.75);
+}
+
 .btn-group > .btn:nth-child(n+3),
 .btn-group > :not(.btn-check) + .btn,
 .btn-group > .btn-group:not(:first-child) > .btn {
@@ -12468,6 +12485,12 @@ textarea.form-control-lg {
   box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
+[data-bs-theme=dark] .btn-check:not(:checked) + .btn,
+[data-bs-theme=dark] .btn-check:not(:checked) + .btn:active {
+  background-color: #212529;
+  color: rgba(255, 255, 255, 0.75);
+}
+
 .dropdown-menu {
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
@@ -12523,6 +12546,17 @@ textarea.form-control-lg {
   transition: background-color 0.15s ease-in-out, border 0.15s ease-in-out, box-shadow 0.15s ease-in-out, color 0.15s ease-in-out;
   justify-content: center;
   border-radius: 0.375rem;
+}
+
+[data-bs-theme=dark] .nav-tabs,
+[data-bs-theme=dark] .nav-pills,
+[data-bs-theme=dark] .breadcrumb,
+[data-bs-theme=dark] .pagination {
+  background-color: #212529;
+  border: none;
+  box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2), 5px -5px 10px rgba(255, 255, 255, 0.05);
+  transition: background-color 0.15s ease-in-out, border 0.15s ease-in-out, box-shadow 0.15s ease-in-out, color 0.15s ease-in-out;
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .input-group {
@@ -12583,6 +12617,19 @@ textarea.form-control-lg {
 .form-select:not([multiple]) {
   position: relative;
   box-shadow: -5px 5px 10px rgba(55, 94, 148, 0.2), 5px -5px 10px rgba(255, 255, 255, 0.4);
+}
+
+[data-bs-theme=dark] .form-control:disabled {
+  background-color: #bed1e6;
+}
+[data-bs-theme=dark] .form-control::-webkit-file-upload-button {
+  box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.2), inset -3px 3px 10px rgba(120, 123, 125, 0.1);
+}
+[data-bs-theme=dark] .form-control::file-selector-button {
+  box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.2), inset -3px 3px 10px rgba(120, 123, 125, 0.1);
+}
+[data-bs-theme=dark] .form-select:not([multiple]) {
+  box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2), 5px -5px 10px rgba(255, 255, 255, 0.05);
 }
 
 .alert {
@@ -12706,10 +12753,26 @@ textarea.form-control-lg {
 }
 
 .list-group {
-  background-color: #e4ebf5;
+  background-color: var(--bs-body-bg);
   box-shadow: inset -2px 2px 6px rgba(109, 114, 121, 0.2), inset 3px -2px 4px rgba(255, 255, 255, 0.2);
 }
 
 .list-group-item {
   background-color: transparent;
+}
+
+[data-bs-theme=dark] .card,
+[data-bs-theme=dark] .list-group {
+  background-color: #202428;
+  box-shadow: inset -2px 2px 6px rgba(17, 19, 21, 0.2), inset 3px -2px 4px rgba(255, 255, 255, 0.05);
+}
+[data-bs-theme=dark] .modal-content,
+[data-bs-theme=dark] .popover,
+[data-bs-theme=dark] .toast {
+  background-color: #282c2f;
+  box-shadow: -8px 8px 40px rgba(0, 0, 0, 0.15), inset -1px 1px 3px rgba(255, 255, 255, 0.05), inset 5px -5px 20px rgba(0, 0, 0, 0.05);
+}
+[data-bs-theme=dark] .popover-header,
+[data-bs-theme=dark] .toast-header {
+  color: #fff;
 }
