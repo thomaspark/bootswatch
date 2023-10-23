@@ -274,8 +274,8 @@ $box-shadow-dark: 5px 5px 10px rgba(darken($dark, 50%), .2), -5px -5px 10px rgba
 @include color-mode(dark) {
   .btn-check:not(:checked) + .btn,
   .btn-check:not(:checked) + .btn:active {
-    background-color: $dark;
     color: $navbar-dark-color;
+    background-color: $dark;
   }
 }
 
@@ -533,7 +533,7 @@ $box-shadow-dark: 5px 5px 10px rgba(darken($dark, 50%), .2), -5px -5px 10px rgba
   .popover,
   .toast {
     background-color: mix($white, $dark, 3%);
-    box-shadow: 8px 8px 40px rgba(0, 0, 0, 0.15), inset 1px 1px 3px rgba(255, 255, 255, 0.05), inset -5px -5px 20px rgba(0, 0, 0, 0.05)
+    box-shadow: 8px 8px 40px rgba(0, 0, 0, .15), inset 1px 1px 3px rgba(255, 255, 255, .05), inset -5px -5px 20px rgba(0, 0, 0, .05);
   }
 
   .popover-header,
