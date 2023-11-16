@@ -12,6 +12,14 @@ $text-shadow: 0 1px 0 rgba(0, 0, 0, .05) !default;
   @include gradient-y-three-colors(tint-color($color, 16%), $color, 60%, shade-color($color, 6%));
 }
 
+@mixin btn-shadow-hover($color){
+  @include gradient-y-three-colors($color, shade-color($color, 5%), 60%, shade-color($color, 15%));
+}
+
+@mixin btn-shadow-active($color){
+  @include gradient-y-three-colors(shade-color($color, 20%), shade-color($color, 20%), 60%, shade-color($color, 30%));
+}
+
 // Navbar
 
 .navbar {
@@ -41,6 +49,18 @@ $text-shadow: 0 1px 0 rgba(0, 0, 0, .05) !default;
 @each $color, $value in $theme-colors {
   .btn-#{$color} {
     @include btn-shadow($value);
+  }
+
+  .btn-#{$color}:hover {
+    @include btn-shadow-hover($value);
+  }
+
+  .btn-#{$color}:active {
+    @include btn-shadow-active($value);
+  }
+
+  .btn-check:checked + .btn-#{$color} {
+    @include btn-shadow-active($value);
   }
 }
 
