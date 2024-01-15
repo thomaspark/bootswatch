@@ -2,7 +2,7 @@
 /*!
  * Bootswatch v5.3.2 (https://bootswatch.com)
  * Theme: lux
- * Copyright 2012-2023 Thomas Park
+ * Copyright 2012-2024 Thomas Park
  * Licensed under MIT
  * Based on Bootstrap
 */
@@ -11883,6 +11883,48 @@ th {
 .table-sm th,
 .table-sm td {
   padding: 0.75rem;
+}
+
+[data-bs-theme=dark] .form-control {
+  color: #55595c;
+}
+[data-bs-theme=dark] .form-control::-moz-placeholder {
+  color: rgba(85, 89, 92, 0.75);
+}
+[data-bs-theme=dark] .form-control::placeholder {
+  color: rgba(85, 89, 92, 0.75);
+}
+[data-bs-theme=dark] .form-floating > .form-control:not(:-moz-placeholder-shown) ~ label {
+  color: rgba(85, 89, 92, 0.75);
+}
+[data-bs-theme=dark] .form-floating > label,
+[data-bs-theme=dark] .form-floating > .form-control:focus ~ label,
+[data-bs-theme=dark] .form-floating > .form-control:not(:placeholder-shown) ~ label,
+[data-bs-theme=dark] .form-floating > .form-control-plaintext ~ label,
+[data-bs-theme=dark] .form-floating > .form-select ~ label {
+  color: rgba(85, 89, 92, 0.75);
+}
+[data-bs-theme=dark] .form-floating > .form-control::-moz-placeholder, [data-bs-theme=dark] .form-floating > .form-control-plaintext::-moz-placeholder {
+  color: transparent;
+}
+[data-bs-theme=dark] .form-floating > .form-control::placeholder,
+[data-bs-theme=dark] .form-floating > .form-control-plaintext::placeholder {
+  color: transparent;
+}
+[data-bs-theme=dark] .form-check-input:checked {
+  background-color: rgba(85, 89, 92, 0.75);
+}
+[data-bs-theme=dark] .form-switch .form-check-input {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='rgba(0, 0, 0, 0.25)'/></svg>");
+}
+[data-bs-theme=dark] .form-range::-webkit-slider-thumb {
+  background-color: #919aa1;
+}
+[data-bs-theme=dark] .form-range:disabled::-webkit-slider-thumb {
+  background-color: #343a40;
+}
+[data-bs-theme=dark] .input-group-text {
+  color: rgba(85, 89, 92, 0.75);
 }
 
 .dropdown-menu {

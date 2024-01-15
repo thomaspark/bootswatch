@@ -130,6 +130,53 @@ th {
   }
 }
 
+// Forms
+
+@include color-mode(dark) {
+  .form-control {
+    color: $body-color;
+
+    &::placeholder {
+      color: $body-secondary-color;
+    }
+  }
+
+  .form-floating {
+    > label,
+    > .form-control:focus ~ label,
+    > .form-control:not(:placeholder-shown) ~ label,
+    > .form-control-plaintext ~ label,
+    > .form-select ~ label {
+      color: $body-secondary-color;
+    }
+
+    > .form-control::placeholder,
+    > .form-control-plaintext::placeholder {
+      color: transparent;
+    }
+  }
+
+  .form-check-input:checked {
+    background-color: $body-secondary-color;
+  }
+
+  .form-switch .form-check-input {
+    background-image: $form-switch-bg-image;
+  }
+
+  .form-range::-webkit-slider-thumb {
+    background-color: $gray-600;
+  }
+
+  .form-range:disabled::-webkit-slider-thumb {
+    background-color: $gray-800;
+  }
+
+  .input-group-text {
+    color: $body-secondary-color;
+  }
+}
+
 // Navs
 
 .dropdown-menu {
