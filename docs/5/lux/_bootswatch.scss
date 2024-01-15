@@ -89,6 +89,12 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;3
   border: 1px solid $gray-400 !important;
 }
 
+@include color-mode(dark) {
+  .btn-primary {
+    background-color: #080808;
+  }
+}
+
 // Typography
 
 body {
