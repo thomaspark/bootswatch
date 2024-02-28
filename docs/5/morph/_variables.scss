@@ -1,4 +1,4 @@
-// Morph 5.3.2
+// Morph 5.3.3
 // Bootswatch
 
 $theme: "morph" !default;
@@ -110,8 +110,6 @@ $form-range-thumb-bg:                      $gray-100 !default;
 $form-range-thumb-active-bg:               $form-range-thumb-bg !default;
 $form-range-thumb-disabled-bg:             $gray-200 !default;
 
-$form-file-button-bg:             $gray-100 !default;
-
 // Navs
 
 $nav-link-color:                    $body-color !default;
@@ -152,7 +150,7 @@ $pagination-padding-y-sm:           .5rem !default;
 $pagination-padding-y-lg:           1.5rem !default;
 
 $pagination-color:                  $gray-700 !default;
-$pagination-bg:                     $body-bg !default;
+$pagination-bg:                     transparent !default;
 
 $pagination-active-color:           darken($pagination-color, 20%) !default;
 $pagination-active-bg:              transparent !default;
@@ -166,22 +164,19 @@ $pagination-disabled-bg:            $pagination-bg !default;
 $card-spacer-y:                     1.5rem !default;
 $card-spacer-x:                     1.5rem !default;
 $card-cap-bg:                       transparent !default;
-$card-bg:                           lighten($body-bg, 3%) !default;
 
 // Tooltips
 
 $tooltip-color:                     $body-color !default;
-$tooltip-bg:                        $dropdown-bg !default;
 
 // Popovers
 
-$popover-bg:                        $dropdown-bg !default;
-
 $popover-header-bg:                 transparent !default;
+
+$popover-arrow-width:               0 !default;
 
 // Toasts
 
-$toast-background-color:            $dropdown-bg !default;
 $toast-border-width:                0 !default;
 
 $toast-header-color:                $body-color !default;
@@ -194,16 +189,12 @@ $badge-padding-x:                   1.25em !default;
 
 // Modals
 
-$modal-content-bg:                  $dropdown-bg !default;
-
 // Progress bars
 
 $progress-height:                   1.5rem !default;
 $progress-border-radius:            $border-radius-pill !default;
 
 // List groups
-
-$list-group-bg:                     $card-bg !default;
 
 $list-group-hover-bg:               transparent !default;
 $list-group-active-color:           $link-color !default;

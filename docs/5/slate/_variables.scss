@@ -1,4 +1,4 @@
-// Slate 5.3.2
+// Slate 5.3.3
 // Bootswatch
 
 $theme: "slate" !default;
@@ -38,6 +38,8 @@ $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-200 !default;
 $dark:          $gray-900 !default;
+
+$primary-bg-subtle:       lighten($gray-800, 10%) !default;
 
 $min-contrast-ratio:   1.95 !default;
 
@@ -110,6 +112,8 @@ $nav-tabs-link-active-border-color: $nav-tabs-border-color !default;
 $navbar-padding-y:                  0 !default;
 
 // Pagination
+$pagination-padding-y:              $input-btn-padding-y !default;
+$pagination-padding-x:              $input-btn-padding-x !default;
 
 $pagination-color:                  $white !default;
 $pagination-bg:                     transparent !default;
@@ -127,6 +131,12 @@ $pagination-disabled-border-color:  rgba($black, .6) !default;
 $card-border-color:                 rgba($black, .6) !default;
 $card-cap-bg:                       lighten($gray-800, 10%) !default;
 $card-bg:                           lighten($body-bg, 5%) !default;
+
+// Accordions
+
+$accordion-bg:                      lighten($body-bg, 5%) !default;
+$accordion-border-color:            $table-border-color !default;
+$accordion-button-active-color:     $white !default;
 
 // Popovers
 

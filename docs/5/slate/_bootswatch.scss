@@ -1,4 +1,4 @@
-// Slate 5.3.2
+// Slate 5.3.3
 // Bootswatch
 
 
@@ -7,7 +7,7 @@
 // Mixins
 
 @mixin btn-shadow($color){
-  @include gradient-y-three-colors(tint-color($color, 12%), $color, 60%, shade-color($color, 8%));
+  @include gradient-y-three-colors(tint-color($color, 5%), $color, 20%, shade-color($color, 20%));
   filter: none;
 }
 
@@ -329,4 +329,12 @@ legend {
   &-item-action:hover {
     background-color: shade-color($gray-900, 10%);
   }
+
+  @each $color, $value in $theme-colors {
+    &-item-#{$color} {
+      background-color: $value;
+      border-color: $list-group-border-color;
+    }
+  }
 }
+

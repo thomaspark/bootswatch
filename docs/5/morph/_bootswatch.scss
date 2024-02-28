@@ -1,4 +1,4 @@
-// Morph 5.3.2
+// Morph 5.3.3
 // Bootswatch
 
 
@@ -6,21 +6,23 @@
 
 $web-font-path: "https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" !default;
 @if $web-font-path {
-  @import url($web-font-path);
+  @import url("#{$web-font-path}");
 }
 
 $btn-box-shadow-inset: inset 2px 3px 6px rgba($black, .2), inset -3px -2px 6px rgba($white, .2) !default;
 
+$box-shadow-dark: 5px 5px 10px rgba(darken($dark, 50%), .2), -5px -5px 10px rgba($white, .05) !default;
+
 // Mixins
 
-@mixin shadow($shadow: $box-shadow) {
-  background-color: $gray-200;
+@mixin shadow($bg: $gray-200, $shadow: $box-shadow) {
+  background-color: $bg;
   border: none;
   box-shadow: $shadow;
   transition: background-color .15s ease-in-out, border .15s ease-in-out, box-shadow .15s ease-in-out, color .15s ease-in-out;
 }
 
-@mixin shadow-outline($shadow: $box-shadow) {
+@mixin shadow-outline($bg: $body-bg, $shadow: $box-shadow) {
   position: absolute;
   top: -.5rem;
   right: -.5rem;
@@ -28,7 +30,7 @@ $btn-box-shadow-inset: inset 2px 3px 6px rgba($black, .2), inset -3px -2px 6px r
   left: -.5rem;
   z-index: -1;
   content: "";
-  background-color: $body-bg;
+  background-color: $bg;
   border: 1px solid rgba($white, .1);
   box-shadow: $shadow;
   transition: background-color .15s ease-in-out, border .15s ease-in-out, box-shadow .15s ease-in-out, color .15s ease-in-out;
@@ -93,6 +95,13 @@ $btn-box-shadow-inset: inset 2px 3px 6px rgba($black, .2), inset -3px -2px 6px r
   }
 }
 
+@include color-mode(dark) {
+  .btn {
+    @include shadow($dark, $box-shadow-dark);
+    color: $navbar-dark-color;
+  }
+}
+
 .btn-outline {
   @each $color, $value in $theme-colors {
     &-#{$color} {
@@ -153,6 +162,14 @@ $btn-box-shadow-inset: inset 2px 3px 6px rgba($black, .2), inset -3px -2px 6px r
     &:active:focus {
       border: none;
     }
+  }
+}
+
+@include color-mode(dark) {
+  .btn-group,
+  .btn-group-vertical {
+    @include shadow($dark, $box-shadow-dark);
+    color: $navbar-dark-color;
   }
 }
 
@@ -254,6 +271,14 @@ $btn-box-shadow-inset: inset 2px 3px 6px rgba($black, .2), inset -3px -2px 6px r
   box-shadow: inset 0 3px 6px rgba($black, .2);
 }
 
+@include color-mode(dark) {
+  .btn-check:not(:checked) + .btn,
+  .btn-check:not(:checked) + .btn:active {
+    color: $navbar-dark-color;
+    background-color: $dark;
+  }
+}
+
 // Navs
 
 .dropdown-menu {
@@ -304,6 +329,16 @@ $btn-box-shadow-inset: inset 2px 3px 6px rgba($black, .2), inset -3px -2px 6px r
   @include shadow();
   justify-content: center;
   border-radius: $border-radius;
+}
+
+@include color-mode(dark) {
+  .nav-tabs,
+  .nav-pills,
+  .breadcrumb,
+  .pagination {
+    @include shadow($dark, $box-shadow-dark);
+    color: $navbar-dark-color;
+  }
 }
 
 // Forms
@@ -376,6 +411,22 @@ $btn-box-shadow-inset: inset 2px 3px 6px rgba($black, .2), inset -3px -2px 6px r
 .form-select:not([multiple]) {
   position: relative;
   box-shadow: $box-shadow;
+}
+
+@include color-mode(dark) {
+  .form-control {
+    &:disabled {
+      background-color: $gray-400;
+    }
+
+    &::file-selector-button {
+      box-shadow: 2px 2px 5px rgba($black, .2), inset 3px 3px 10px rgba(shade-color($form-range-thumb-bg, 50%), .1);
+    }
+  }
+
+  .form-select:not([multiple]) {
+    box-shadow: $box-shadow-dark;
+  }
 }
 
 // Indicators
@@ -468,4 +519,32 @@ $btn-box-shadow-inset: inset 2px 3px 6px rgba($black, .2), inset -3px -2px 6px r
 
 .list-group-item {
   background-color: transparent;
+}
+
+@include color-mode(dark) {
+
+  .card,
+  .list-group {
+    background-color: mix($black, $dark, 3%);
+    box-shadow: inset 2px 2px 6px rgba(shade-color($dark, 50%), .2), inset -3px -2px 4px rgba($white, .05);
+  }
+
+  .card {
+    &.bg-secondary,
+    &.bg-light {
+      color: $body-color;
+    }
+  }
+
+  .modal-content,
+  .popover,
+  .toast {
+    background-color: mix($white, $dark, 3%);
+    box-shadow: 8px 8px 40px rgba(0, 0, 0, .15), inset 1px 1px 3px rgba(255, 255, 255, .05), inset -5px -5px 20px rgba(0, 0, 0, .05);
+  }
+
+  .popover-header,
+  .toast-header {
+    color: $white;
+  }
 }

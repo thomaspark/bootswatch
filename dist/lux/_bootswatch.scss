@@ -1,4 +1,4 @@
-// Lux 5.3.2
+// Lux 5.3.3
 // Bootswatch
 
 
@@ -6,7 +6,7 @@
 
 $web-font-path: "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;500;600;700&display=swap" !default;
 @if $web-font-path {
-  @import url($web-font-path);
+  @import url("#{$web-font-path}");
 }
 
 // Navbar
@@ -89,6 +89,12 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;3
   border: 1px solid $gray-400 !important;
 }
 
+@include color-mode(dark) {
+  .btn-primary {
+    background-color: #080808;
+  }
+}
+
 // Typography
 
 body {
@@ -127,6 +133,53 @@ th {
     td {
       padding: .75rem;
     }
+  }
+}
+
+// Forms
+
+@include color-mode(dark) {
+  .form-control {
+    color: $body-color;
+
+    &::placeholder {
+      color: $body-secondary-color;
+    }
+  }
+
+  .form-floating {
+    > label,
+    > .form-control:focus ~ label,
+    > .form-control:not(:placeholder-shown) ~ label,
+    > .form-control-plaintext ~ label,
+    > .form-select ~ label {
+      color: $body-secondary-color;
+    }
+
+    > .form-control::placeholder,
+    > .form-control-plaintext::placeholder {
+      color: transparent;
+    }
+  }
+
+  .form-check-input:checked {
+    background-color: $body-secondary-color;
+  }
+
+  .form-switch .form-check-input {
+    background-image: $form-switch-bg-image;
+  }
+
+  .form-range::-webkit-slider-thumb {
+    background-color: $gray-600;
+  }
+
+  .form-range:disabled::-webkit-slider-thumb {
+    background-color: $gray-800;
+  }
+
+  .input-group-text {
+    color: $body-secondary-color;
   }
 }
 
