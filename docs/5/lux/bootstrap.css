@@ -2088,22 +2088,22 @@ progress {
 }
 
 .col-form-label {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+  padding-top: calc(0.75rem + var(--bs-border-width));
+  padding-bottom: calc(0.75rem + var(--bs-border-width));
   margin-bottom: 0;
   font-size: inherit;
   line-height: 1.5;
 }
 
 .col-form-label-lg {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: calc(2rem + var(--bs-border-width));
+  padding-bottom: calc(2rem + var(--bs-border-width));
   font-size: 1.25rem;
 }
 
 .col-form-label-sm {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: calc(0.5rem + var(--bs-border-width));
+  padding-bottom: calc(0.5rem + var(--bs-border-width));
   font-size: 0.875rem;
 }
 
@@ -2126,7 +2126,7 @@ progress {
   appearance: none;
   background-color: #f7f7f9;
   background-clip: padding-box;
-  border: 0 solid var(--bs-border-color);
+  border: var(--bs-border-width) solid var(--bs-border-color);
   border-radius: 0;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
@@ -2180,7 +2180,7 @@ progress {
   border-color: inherit;
   border-style: solid;
   border-width: 0;
-  border-inline-end-width: 0;
+  border-inline-end-width: var(--bs-border-width);
   border-radius: 0;
   -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -2196,7 +2196,7 @@ progress {
   border-color: inherit;
   border-style: solid;
   border-width: 0;
-  border-inline-end-width: 0;
+  border-inline-end-width: var(--bs-border-width);
   border-radius: 0;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
@@ -2225,7 +2225,7 @@ progress {
   color: var(--bs-body-color);
   background-color: transparent;
   border: solid transparent;
-  border-width: 0 0;
+  border-width: var(--bs-border-width) 0;
 }
 .form-control-plaintext:focus {
   outline: 0;
@@ -2236,7 +2236,7 @@ progress {
 }
 
 .form-control-sm {
-  min-height: calc(1.5em + 1rem + calc(0 * 2));
+  min-height: calc(1.5em + 1rem + calc(var(--bs-border-width) * 2));
   padding: 0.5rem 1rem;
   font-size: 0.875rem;
 }
@@ -2254,7 +2254,7 @@ progress {
 }
 
 .form-control-lg {
-  min-height: calc(1.5em + 4rem + calc(0 * 2));
+  min-height: calc(1.5em + 4rem + calc(var(--bs-border-width) * 2));
   padding: 2rem 2rem;
   font-size: 1.25rem;
 }
@@ -2272,18 +2272,18 @@ progress {
 }
 
 textarea.form-control {
-  min-height: calc(1.5em + 1.5rem + calc(0 * 2));
+  min-height: calc(1.5em + 1.5rem + calc(var(--bs-border-width) * 2));
 }
 textarea.form-control-sm {
-  min-height: calc(1.5em + 1rem + calc(0 * 2));
+  min-height: calc(1.5em + 1rem + calc(var(--bs-border-width) * 2));
 }
 textarea.form-control-lg {
-  min-height: calc(1.5em + 4rem + calc(0 * 2));
+  min-height: calc(1.5em + 4rem + calc(var(--bs-border-width) * 2));
 }
 
 .form-control-color {
   width: 3rem;
-  height: calc(1.5em + 1.5rem + calc(0 * 2));
+  height: calc(1.5em + 1.5rem + calc(var(--bs-border-width) * 2));
   padding: 0.75rem;
 }
 .form-control-color:not(:disabled):not([readonly]) {
@@ -2296,10 +2296,10 @@ textarea.form-control-lg {
   border: 0 !important;
 }
 .form-control-color.form-control-sm {
-  height: calc(1.5em + 1rem + calc(0 * 2));
+  height: calc(1.5em + 1rem + calc(var(--bs-border-width) * 2));
 }
 .form-control-color.form-control-lg {
-  height: calc(1.5em + 4rem + calc(0 * 2));
+  height: calc(1.5em + 4rem + calc(var(--bs-border-width) * 2));
 }
 
 .form-select {
@@ -2319,7 +2319,7 @@ textarea.form-control-lg {
   background-repeat: no-repeat;
   background-position: right 1.5rem center;
   background-size: 16px 12px;
-  border: 0 solid var(--bs-border-color);
+  border: var(--bs-border-width) solid var(--bs-border-color);
   border-radius: 0;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
@@ -2587,8 +2587,8 @@ textarea.form-control-lg {
 .form-floating > .form-control,
 .form-floating > .form-control-plaintext,
 .form-floating > .form-select {
-  height: calc(3.5rem + calc(0 * 2));
-  min-height: calc(3.5rem + calc(0 * 2));
+  height: calc(3.5rem + calc(var(--bs-border-width) * 2));
+  min-height: calc(3.5rem + calc(var(--bs-border-width) * 2));
   line-height: 1.25;
 }
 .form-floating > label {
@@ -2603,7 +2603,7 @@ textarea.form-control-lg {
   text-overflow: ellipsis;
   white-space: nowrap;
   pointer-events: none;
-  border: 0 solid transparent;
+  border: var(--bs-border-width) solid transparent;
   transform-origin: 0 0;
   transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
 }
@@ -2677,7 +2677,7 @@ textarea.form-control-lg {
   transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
 }
 .form-floating > .form-control-plaintext ~ label {
-  border-width: 0 0;
+  border-width: var(--bs-border-width) 0;
 }
 .form-floating > :disabled ~ label,
 .form-floating > .form-control:disabled ~ label {
@@ -2727,7 +2727,7 @@ textarea.form-control-lg {
   text-align: center;
   white-space: nowrap;
   background-color: #eceeef;
-  border: 0 solid var(--bs-border-color);
+  border: var(--bs-border-width) solid var(--bs-border-color);
 }
 
 .input-group-lg > .form-control,
@@ -2752,7 +2752,7 @@ textarea.form-control-lg {
 }
 
 .input-group > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
-  margin-left: calc(0 * -1);
+  margin-left: calc(var(--bs-border-width) * -1);
 }
 .valid-feedback {
   display: none;
@@ -2941,7 +2941,7 @@ textarea.form-control-lg {
   --bs-btn-line-height: 1.5rem;
   --bs-btn-color: var(--bs-body-color);
   --bs-btn-bg: transparent;
-  --bs-btn-border-width: 0;
+  --bs-btn-border-width: var(--bs-border-width);
   --bs-btn-border-color: transparent;
   --bs-btn-border-radius: var(--bs-border-radius);
   --bs-btn-hover-border-color: transparent;
@@ -3709,7 +3709,7 @@ textarea.form-control-lg {
 
 .btn-group > :not(.btn-check:first-child) + .btn,
 .btn-group > .btn-group:not(:first-child) {
-  margin-left: calc(0 * -1);
+  margin-left: calc(var(--bs-border-width) * -1);
 }
 .dropdown-toggle-split {
   padding-right: 1.125rem;
@@ -3743,7 +3743,7 @@ textarea.form-control-lg {
 }
 .btn-group-vertical > .btn:not(:first-child),
 .btn-group-vertical > .btn-group:not(:first-child) {
-  margin-top: calc(0 * -1);
+  margin-top: calc(var(--bs-border-width) * -1);
 }
 .nav {
   --bs-nav-link-padding-x: 1rem;
@@ -11776,6 +11776,10 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+:root {
+  --bs-border-width: 0;
+}
+
 .navbar {
   font-size: 0.875rem;
   font-weight: 600;
