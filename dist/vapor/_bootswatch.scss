@@ -224,6 +224,14 @@ table,
   }
 }
 
+.nav-underline {
+  .nav-link {
+    &.active {
+      @include text-shadow-sm($nav-underline-link-active-color);
+    }
+  }
+}
+
 // Forms
 
 legend {
