@@ -15,6 +15,18 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+// Tables
+
+.table-primary,
+.table-secondary,
+.table-success,
+.table-warning,
+.table-danger,
+.table-info,
+.table-light {
+  --#{$prefix}table-color: #{$body-color};
+}
+
 // Forms
 
 .form-range::-moz-range-thumb {

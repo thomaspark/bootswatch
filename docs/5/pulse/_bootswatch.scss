@@ -72,6 +72,16 @@
   border-color: $table-border-color;
 }
 
+.table-primary,
+.table-secondary,
+.table-success,
+.table-warning,
+.table-danger,
+.table-info,
+.table-light {
+  --#{$prefix}table-color: #{$body-color};
+}
+
 // Forms
 
 .form-control:focus {
