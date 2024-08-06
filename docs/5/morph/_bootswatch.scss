@@ -341,6 +341,18 @@ $box-shadow-dark: 5px 5px 10px rgba(darken($dark, 50%), .2), -5px -5px 10px rgba
   }
 }
 
+// Tables
+
+.table-primary,
+.table-secondary,
+.table-success,
+.table-warning,
+.table-danger,
+.table-info,
+.table-light {
+  --#{$prefix}table-color: #{$body-color};
+}
+
 // Forms
 
 .input-group {

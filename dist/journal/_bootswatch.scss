@@ -9,6 +9,18 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;70
   @import url("#{$web-font-path}");
 }
 
+// Tables
+
+.table-primary,
+.table-secondary,
+.table-success,
+.table-warning,
+.table-danger,
+.table-info,
+.table-light {
+  --#{$prefix}table-color: #{$body-color};
+}
+
 // Navbar
 
 .navbar {

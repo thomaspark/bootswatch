@@ -221,6 +221,11 @@ table {
   font-size: $font-size-sm;
 }
 
+.table-secondary,
+.table-light {
+  --#{$prefix}table-color: #{$body-color};
+}
+
 // Forms
 
 label,

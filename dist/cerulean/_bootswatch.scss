@@ -20,6 +20,18 @@ $text-shadow: 0 1px 0 rgba(0, 0, 0, .05) !default;
   @include gradient-y-three-colors(shade-color($color, 20%), shade-color($color, 20%), 60%, shade-color($color, 30%));
 }
 
+// Tables
+
+.table-primary,
+.table-secondary,
+.table-success,
+.table-warning,
+.table-danger,
+.table-info,
+.table-light {
+  --#{$prefix}table-color: #{$body-color};
+}
+
 // Navbar
 
 .navbar {

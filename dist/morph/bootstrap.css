@@ -1869,15 +1869,15 @@ progress {
   --bs-table-bg-type: initial;
   --bs-table-color-state: initial;
   --bs-table-bg-state: initial;
-  --bs-table-color: var(--bs-emphasis-color);
+  --bs-table-color: initial;
   --bs-table-bg: var(--bs-body-bg);
   --bs-table-border-color: var(--bs-border-color);
   --bs-table-accent-bg: transparent;
-  --bs-table-striped-color: var(--bs-emphasis-color);
+  --bs-table-striped-color: initial;
   --bs-table-striped-bg: rgba(var(--bs-emphasis-color-rgb), 0.05);
-  --bs-table-active-color: var(--bs-emphasis-color);
+  --bs-table-active-color: initial;
   --bs-table-active-bg: rgba(var(--bs-emphasis-color-rgb), 0.1);
-  --bs-table-hover-color: var(--bs-emphasis-color);
+  --bs-table-hover-color: initial;
   --bs-table-hover-bg: rgba(var(--bs-emphasis-color-rgb), 0.075);
   width: 100%;
   margin-bottom: 1rem;
@@ -12581,6 +12581,16 @@ textarea.form-control-lg {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.05);
   transition: background-color 0.15s ease-in-out, border 0.15s ease-in-out, box-shadow 0.15s ease-in-out, color 0.15s ease-in-out;
   color: rgba(255, 255, 255, 0.75);
+}
+
+.table-primary,
+.table-secondary,
+.table-success,
+.table-warning,
+.table-danger,
+.table-info,
+.table-light {
+  --bs-table-color: #7b8ab8;
 }
 
 .input-group {
