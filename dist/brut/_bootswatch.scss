@@ -9,12 +9,10 @@
   --#{$prefix}border-color: #000;
 }
 
-[data-bs-theme=light],
-[data-bs-theme=dark] {
+[data-bs-theme="light"],
+[data-bs-theme="dark"] {
   --#{$prefix}border-color: #000;
 }
-
-// $text-shadow: 0 1px 0 rgba(0, 0, 0, .05) !default;
 
 // Mixins
 
@@ -24,12 +22,6 @@
 
 .table {
   border: 2px solid $black;
-}
-
-// Typography
-
-a {
-  font-weight: $headings-font-weight;
 }
 
 // Navbar
@@ -50,8 +42,8 @@ a {
   }
 
   .dropdown-toggle::after {
-    margin-left: 0.15em;
-    vertical-align: 0.15em;
+    margin-left: .15em;
+    vertical-align: .15em;
   }
 
   &-toggler {
@@ -59,27 +51,14 @@ a {
   }
 }
 
-// .navbar {
-//   @each $color, $value in $theme-colors {
-//     &.bg-#{$color} {
-//       @include btn-shadow($value);
-//     }
-//   }
-// }
-
-// .navbar-brand,
-// .nav-link {
-//   text-shadow: $text-shadow;
-// }
-
 // Buttons
 
 .btn {
-  border-color: $black;
   margin: 3px 0 0 3px;
+  border-color: $black;
   @include btn-shadow();
+  transition: all .3s;
   transform: translate(-3px, -3px);
-  transition: all 0.3s;
 
   &:hover {
     border-color: $black;
@@ -99,10 +78,10 @@ a {
 
 @each $color, $value in $theme-colors {
   .btn-outline-#{$color} {
+    color: $black;
     background-color: #{$value};
     box-shadow: none;
     transform: translate(0, 0);
-    color: $black;
 
     &:hover {
       @include btn-shadow();
@@ -143,13 +122,15 @@ a {
 }
 
 .btn-check + .btn:hover {
-  border-color: $black;
   color: $black;
+  border-color: $black;
 }
 
 .btn-check:checked + .btn,
 :not(.btn-check) + .btn:active,
-.btn:first-child:active, .btn.active, .btn.show {
+.btn:first-child:active,
+.btn.active,
+.btn.show {
   border-color: $black;
   box-shadow: none;
   transform: translate(0, 0);
@@ -157,42 +138,26 @@ a {
 
 // Typography
 
-// .text-secondary {
-//   color: $gray-500 !important;
-// }
-
-// .bg-primary,
-// .bg-success,
-// .bg-info,
-// .bg-warning,
-// .bg-danger,
-// .bg-dark {
-//   h1,
-//   h2,
-//   h3,
-//   h4,
-//   h5,
-//   h6 {
-//     color: $white;
-//   }
-// }
+a {
+  font-weight: $headings-font-weight;
+}
 
 // Forms
 
 .form-range {
 
   &:not([disabled])::-moz-range-progress {
-    height: 0.6rem;
+    height: .6rem;
     background-color: $primary;
     border-radius: 6px 0 0 6px;
   }
 
   &:not([disabled])::-ms-fill-lower {
-    height: 0.6rem;
+    height: .6rem;
     background-color: $primary;
     border-radius: 6px 0 0 6px;
   }
-  
+
   &::-webkit-slider-runnable-track {
     border: 2px solid $black;
   }
@@ -200,19 +165,19 @@ a {
   &::-moz-range-track {
     border: 2px solid $black;
   }
-  
+
   &::-webkit-slider-thumb {
-    margin-top: -0.4rem;
+    margin-top: -.4rem;
   }
-  
+
   &::-moz-range-thumb {
-    margin-top: -0.4rem;
+    margin-top: -.4rem;
   }
-  
+
   &:focus::-webkit-slider-thumb {
     box-shadow: none;
   }
-  
+
   &:focus::-moz-range-thumb {
     box-shadow: none;
   }
@@ -222,11 +187,10 @@ a {
 
 .nav-tabs {
   gap: 4px;
-  padding: 0.4rem 0.4rem calc(0.4rem + 2px);
+  padding: .4rem .4rem calc(.4rem + 2px);
+  font-weight: $headings-font-weight;
   border: 2px solid $black;
   border-radius: $border-radius-lg;
-
-  font-weight: $headings-font-weight;
 
   .nav-link {
     border-width: 2px;
@@ -236,13 +200,12 @@ a {
     &:hover {
       border: 2px solid $black;
     }
-    
   }
 }
 
 .tab-content {
-  margin-top: 1rem;
   padding: 1rem;
+  margin-top: 1rem;
   border: 2px solid $black;
   border-radius: $border-radius-lg;
 }
@@ -257,8 +220,8 @@ a {
 }
 
 .breadcrumb {
-  border: 2px solid $black;
   font-weight: $headings-font-weight;
+  border: 2px solid $black;
 
   a {
     color: $black;
@@ -274,13 +237,11 @@ a {
   font-weight: 700;
 }
 
-
-
 @each $color, $value in $theme-colors {
   .list-group-item-#{$color} {
+    color: $black;
     background-color: #{$value};
     border-color: $black;
-    color: $black;
   }
 }
 
@@ -288,13 +249,12 @@ a {
   color: $white;
 }
 
-
 // Indicators
 
 .alert {
+  color: $black;
   border: 2px solid $black;
   @include btn-shadow();
-  color: $black;
 }
 
 .alert-link {
