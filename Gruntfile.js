@@ -6,6 +6,7 @@ const autoprefixer = require('autoprefixer');
 const pkg = require('./package.json');
 
 const SWATCHES = [
+  'brut',
   'cerulean',
   'cosmo',
   'cyborg',
