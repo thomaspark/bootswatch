@@ -101,15 +101,24 @@
   color: $white;
 }
 
+.btn-group {
+  .btn {
+    margin-left: 0;
+  }
+}
+
 .btn-group,
 .btn-group-vertical {
   .btn {
     &:hover,
+    &:active,
     &:focus {
       z-index: 0;
     }
+
   }
 
+  > .btn-check:focus + .btn,
   > .btn-check:checked + .btn {
     z-index: 0;
   }
