@@ -1,4 +1,4 @@
-// Minty 5.3.3
+// Minty 5.3.5
 // Bootswatch
 
 
@@ -70,6 +70,12 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;50
   &-outline-light {
     color: $light;
   }
+}
+
+// Tables
+
+.table-light {
+  --#{$prefix}table-color: #{$body-color};
 }
 
 // Forms

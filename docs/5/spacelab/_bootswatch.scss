@@ -1,4 +1,4 @@
-// Spacelab 5.3.3
+// Spacelab 5.3.5
 // Bootswatch
 
 
@@ -92,4 +92,16 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,
   h6 {
     color: inherit;
   }
+}
+
+// Tables
+
+.table-primary,
+.table-secondary,
+.table-success,
+.table-warning,
+.table-danger,
+.table-info,
+.table-light {
+  --#{$prefix}table-color: #{$body-color};
 }

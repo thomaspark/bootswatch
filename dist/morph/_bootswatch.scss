@@ -1,4 +1,4 @@
-// Morph 5.3.3
+// Morph 5.3.5
 // Bootswatch
 
 
@@ -339,6 +339,18 @@ $box-shadow-dark: 5px 5px 10px rgba(darken($dark, 50%), .2), -5px -5px 10px rgba
     @include shadow($dark, $box-shadow-dark);
     color: $navbar-dark-color;
   }
+}
+
+// Tables
+
+.table-primary,
+.table-secondary,
+.table-success,
+.table-warning,
+.table-danger,
+.table-info,
+.table-light {
+  --#{$prefix}table-color: #{$body-color};
 }
 
 // Forms

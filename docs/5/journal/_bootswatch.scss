@@ -1,4 +1,4 @@
-// Journal 5.3.3
+// Journal 5.3.5
 // Bootswatch
 
 
@@ -7,6 +7,18 @@
 $web-font-path: "https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap" !default;
 @if $web-font-path {
   @import url("#{$web-font-path}");
+}
+
+// Tables
+
+.table-primary,
+.table-secondary,
+.table-success,
+.table-warning,
+.table-danger,
+.table-info,
+.table-light {
+  --#{$prefix}table-color: #{$body-color};
 }
 
 // Navbar

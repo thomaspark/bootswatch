@@ -1,4 +1,4 @@
-// Zephyr 5.3.3
+// Zephyr 5.3.5
 // Bootswatch
 
 
@@ -105,6 +105,16 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700
 thead th {
   font-size: $font-size-sm;
   text-transform: uppercase;
+}
+
+.table-primary,
+.table-secondary,
+.table-success,
+.table-warning,
+.table-danger,
+.table-info,
+.table-light {
+  --#{$prefix}table-color: #{$body-color};
 }
 
 // Forms

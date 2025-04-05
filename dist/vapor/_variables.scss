@@ -1,4 +1,4 @@
-// Vapor 5.3.3
+// Vapor 5.3.5
 // Bootswatch
 
 $theme: "vapor" !default;
@@ -72,9 +72,11 @@ $text-muted:                  rgba($body-color, .3) !default;
 
 $blockquote-footer-color:     $text-muted !default;
 
+$vr-border-width:             1px !default;
+
 // Tables
 
-$table-color:                 $white !default;
+$table-color:                 initial !default;
 
 $table-bg-scale:              0% !default;
 
@@ -105,6 +107,8 @@ $form-range-thumb-disabled-bg:             $purple !default;
 $nav-link-disabled-color:           $text-muted !default;
 
 $nav-tabs-link-active-color:        $component-active-bg !default;
+
+$nav-underline-link-active-color:   $component-active-bg !default;
 
 // Dropdowns
 

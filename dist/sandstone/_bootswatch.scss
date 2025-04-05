@@ -1,4 +1,4 @@
-// Sandstone 5.3.3
+// Sandstone 5.3.5
 // Bootswatch
 
 
@@ -50,6 +50,16 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;70
   .thead-dark th {
     background-color: $dark;
   }
+}
+
+.table-primary,
+.table-secondary,
+.table-success,
+.table-warning,
+.table-danger,
+.table-info,
+.table-light {
+  --#{$prefix}table-color: #{$body-color};
 }
 
 // Forms

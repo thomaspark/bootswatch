@@ -1,4 +1,4 @@
-// Cyborg 5.3.3
+// Cyborg 5.3.5
 // Bootswatch
 
 $theme: "cyborg" !default;
@@ -60,7 +60,7 @@ $headings-color:          $white !default;
 
 // Tables
 
-$table-color:                   $white !default;
+$table-color:                   initial !default;
 $table-accent-bg:               rgba($white, .05) !default;
 $table-hover-bg:                rgba($white, .075) !default;
 $table-border-color:            $gray-700 !default;
@@ -80,7 +80,8 @@ $input-disabled-bg:                 $gray-400 !default;
 
 $input-color:                       $gray-900 !default;
 $input-border-color:                $white !default;
-$input-border-width:                0 !default;
+// stylelint-disable-next-line length-zero-no-unit
+$input-border-width:                0px !default;
 
 $input-group-addon-color:           $white !default;
 $input-group-addon-bg:              $gray-700 !default;
@@ -108,6 +109,8 @@ $nav-tabs-link-hover-border-color:            $nav-tabs-border-color !default;
 $nav-tabs-link-active-color:                  $white !default;
 $nav-tabs-link-active-bg:                     $nav-tabs-border-color !default;
 $nav-tabs-link-active-border-color:           $nav-tabs-border-color !default;
+
+$nav-underline-link-active-color:   $white !default;
 
 // Navbar
 

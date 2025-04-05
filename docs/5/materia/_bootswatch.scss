@@ -1,4 +1,4 @@
-// Materia 5.3.3
+// Materia 5.3.5
 // Bootswatch
 
 
@@ -234,6 +234,16 @@ p {
 .thead-inverse th {
   color: $white;
   background-color: $primary;
+}
+
+.table-primary,
+.table-secondary,
+.table-success,
+.table-warning,
+.table-danger,
+.table-info,
+.table-light {
+  --#{$prefix}table-color: #{$body-color};
 }
 
 // Forms

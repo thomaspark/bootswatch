@@ -1,4 +1,4 @@
-// Darkly 5.3.3
+// Darkly 5.3.5
 // Bootswatch
 
 
@@ -15,6 +15,10 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0
   &-footer {
     color: $gray-600;
   }
+}
+
+.text-secondary {
+  color: var(--bs-secondary-color) !important;
 }
 
 // Forms
@@ -34,19 +38,6 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0
 }
 
 // Navs
-
-.nav-tabs,
-.nav-pills {
-  .nav-link,
-  .nav-link.active,
-  .nav-link.active:focus,
-  .nav-link.active:hover,
-  .nav-item.open .nav-link,
-  .nav-item.open .nav-link:focus,
-  .nav-item.open .nav-link:hover {
-    color: $white;
-  }
-}
 
 .breadcrumb a {
   color: $white;

@@ -1,0 +1,312 @@
+// Brite 5.3.5
+// Bootswatch
+
+
+// Variables
+
+:root {
+  --#{$prefix}border-width: 2px;
+  --#{$prefix}border-color: #000;
+}
+
+[data-bs-theme="light"],
+[data-bs-theme="dark"] {
+  --#{$prefix}border-color: #000;
+}
+
+// Mixins
+
+@mixin btn-shadow(){
+  box-shadow: 3px 3px 0 0 var(--#{$prefix}border-color);
+}
+
+.table {
+  border: 2px solid $black;
+}
+
+// Navbar
+
+.navbar {
+  $navbar-border-width: 2px;
+  font-size: $font-size-lg;
+  font-weight: $headings-font-weight;
+
+  border: $navbar-border-width solid $black;
+
+  &.fixed-top {
+    border-width: 0 0 $navbar-border-width 0;
+  }
+
+  &.fixed-bottom {
+    border-width: $navbar-border-width 0 0 0;
+  }
+
+  .dropdown-toggle::after {
+    margin-left: .15em;
+    vertical-align: .15em;
+  }
+
+  &-toggler {
+    --bs-border-width: 2px;
+  }
+}
+
+// Buttons
+
+.btn {
+  margin: 3px 0 0 3px;
+  border-color: $black;
+  @include btn-shadow();
+  transition: all .3s;
+  transform: translate(-3px, -3px);
+
+  &:hover {
+    border-color: $black;
+    box-shadow: none;
+    transform: translate(0, 0);
+  }
+
+  &.disabled {
+    border-color: $black;
+  }
+
+  &-link,
+  &-link:hover {
+    color: $black;
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .btn-outline-#{$color} {
+    color: $black;
+    background-color: #{$value};
+    box-shadow: none;
+    transform: translate(0, 0);
+
+    &:hover {
+      @include btn-shadow();
+      transform: translate(-3px, -3px);
+    }
+  }
+
+  .btn-check + .btn-#{$color},
+  .btn-check + .btn-outline-#{$color} {
+    &:hover {
+      background-color: #{$value};
+    }
+  }
+}
+
+.btn-outline-dark {
+  color: $white;
+}
+
+.btn-group {
+  .btn {
+    margin-left: 0;
+  }
+}
+
+.btn-group,
+.btn-group-vertical {
+  .btn {
+    &:hover,
+    &:active,
+    &:focus {
+      z-index: 0;
+    }
+
+  }
+
+  > .btn-check:focus + .btn,
+  > .btn-check:checked + .btn {
+    z-index: 0;
+  }
+}
+
+.btn-check + .btn {
+  border-color: $black;
+  @include btn-shadow();
+  transform: translate(-3px, -3px);
+}
+
+.btn-check + .btn:hover {
+  color: $black;
+  border-color: $black;
+}
+
+.btn-check:checked + .btn,
+:not(.btn-check) + .btn:active,
+.btn:first-child:active,
+.btn.active,
+.btn.show {
+  border-color: $black;
+  box-shadow: none;
+  transform: translate(0, 0);
+}
+
+// Typography
+
+a {
+  font-weight: $headings-font-weight;
+}
+
+// Forms
+
+.form-range {
+
+  &:not([disabled])::-moz-range-progress {
+    height: .6rem;
+    background-color: $primary;
+    border-radius: 6px 0 0 6px;
+  }
+
+  &:not([disabled])::-ms-fill-lower {
+    height: .6rem;
+    background-color: $primary;
+    border-radius: 6px 0 0 6px;
+  }
+
+  &::-webkit-slider-runnable-track {
+    border: 2px solid $black;
+  }
+
+  &::-moz-range-track {
+    border: 2px solid $black;
+  }
+
+  &::-webkit-slider-thumb {
+    margin-top: -.4rem;
+  }
+
+  &::-moz-range-thumb {
+    margin-top: -.4rem;
+  }
+
+  &:focus::-webkit-slider-thumb {
+    box-shadow: none;
+  }
+
+  &:focus::-moz-range-thumb {
+    box-shadow: none;
+  }
+}
+
+// Navs
+
+.nav-tabs {
+  gap: 4px;
+  padding: .4rem .4rem calc(.4rem + 2px);
+  font-weight: $headings-font-weight;
+  border: 2px solid $black;
+  border-radius: $border-radius-lg;
+
+  .nav-link {
+    border-width: 2px;
+    border-radius: $border-radius;
+
+    &.active,
+    &:hover {
+      border: 2px solid $black;
+    }
+  }
+}
+
+.tab-content {
+  padding: 1rem;
+  margin-top: 1rem;
+  border: 2px solid $black;
+  border-radius: $border-radius-lg;
+}
+
+.nav-pills {
+  gap: 4px;
+  font-weight: $headings-font-weight;
+
+  .nav-link {
+    border: 2px solid $black;
+  }
+}
+
+.breadcrumb {
+  font-weight: $headings-font-weight;
+  border: 2px solid $black;
+
+  a {
+    color: $black;
+  }
+}
+
+.dropdown-menu {
+  @include btn-shadow();
+  border-radius: $border-radius;
+}
+
+.dropdown-header {
+  font-weight: 700;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+  color: #000;
+}
+
+@each $color, $value in $theme-colors {
+  .list-group-item-#{$color} {
+    color: $black;
+    background-color: #{$value};
+    border-color: $black;
+  }
+}
+
+.list-group-item-dark {
+  color: $white;
+}
+
+// Indicators
+
+.alert {
+  color: $black;
+  border: 2px solid $black;
+  @include btn-shadow();
+}
+
+.alert-link {
+  color: $black;
+}
+
+.alert-dark {
+  color: $white;
+}
+
+@each $color, $value in $theme-colors {
+  .alert-#{$color} {
+    background-color: #{$value};
+  }
+}
+
+.badge {
+  border: 2px solid $black;
+
+  &.bg-dark {
+    color: $white;
+  }
+}
+
+.progress {
+  border: 2px solid $black;
+
+  &-bar {
+    border-right: 2px solid $black;
+  }
+}
+
+.modal {
+  &-content {
+    @include btn-shadow();
+  }
+}
+
+.vr {
+  width: 2px;
+  background-color: $black;
+}

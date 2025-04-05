@@ -1,4 +1,4 @@
-// Materia 5.3.3
+// Materia 5.3.5
 // Bootswatch
 
 $theme: "materia" !default;
@@ -54,6 +54,12 @@ $font-family-sans-serif:    Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI
 $font-size-base:            1rem !default;
 $font-weight-base:          400 !default;
 
+$line-height-base:            1.5 !default;
+
+// Tables
+
+$table-color:                 initial !default;
+
 // Buttons
 
 $input-btn-padding-y:       .8rem !default;
@@ -77,6 +83,12 @@ $input-border-radius-lg:         0 !default;
 $input-border-radius-sm:         0 !default;
 $input-placeholder-color:        rgba(0, 0, 0, .4) !default;
 $input-group-addon-bg:           transparent !default;
+
+$input-height:                          calc($line-height-base * 1em + $input-padding-y * 2) !default;
+$input-height-sm:                       $line-height-base * 1em !default;
+$input-height-lg:                       calc($line-height-base * 1em + $input-padding-y-lg * 2) !default;
+
+$form-floating-height:                  3.5rem !default;
 
 // Navs
 
