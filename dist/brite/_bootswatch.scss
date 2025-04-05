@@ -1,4 +1,4 @@
-// Brite 5.3.3
+// Brite 5.3.5
 // Bootswatch
 
 
@@ -246,6 +246,10 @@ a {
   font-weight: 700;
 }
 
+.dropdown-item:hover, .dropdown-item:focus {
+  color: #000;
+}
+
 @each $color, $value in $theme-colors {
   .list-group-item-#{$color} {
     color: $black;
@@ -300,4 +304,9 @@ a {
   &-content {
     @include btn-shadow();
   }
+}
+
+.vr {
+  width: 2px;
+  background-color: $black;
 }
