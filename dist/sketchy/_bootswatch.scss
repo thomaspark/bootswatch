@@ -290,19 +290,19 @@ select.form-control {
 }
 
 [data-bs-theme="dark"] {
-  [type=radio]::before {
+  [type="radio"]::before {
     border-color: $white;
   }
 
-  [type=radio]:checked::before {
+  [type="radio"]:checked::before {
     background-color: $white;
   }
 
-  [type=checkbox]::before {
+  [type="checkbox"]::before {
     border-color: $white;
   }
-  
-  [type=checkbox]:checked::before {
+
+  [type="checkbox"]:checked::before {
     background-color: $white;
   }
 
@@ -451,10 +451,9 @@ select.form-control {
   border-radius: $border-radius-sm-sketchy;
 }
 
-[data-bs-theme="dark"] {
-  .progress, .progress-stacked {
-    background-color: $secondary;
-  }
+[data-bs-theme="dark"] .progress,
+[data-bs-theme="dark"] .progress-stacked {
+  background-color: $secondary;
 }
 
 // Containers
