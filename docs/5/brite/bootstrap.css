@@ -7,7 +7,7 @@
  * Based on Bootstrap
 */
 /*!
- * Bootstrap  v5.3.5 (https://getbootstrap.com/)
+ * Bootstrap  v5.3.6 (https://getbootstrap.com/)
  * Copyright 2011-2025 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
@@ -4549,24 +4549,24 @@ textarea.form-control-lg {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
-  .card-group > .card:not(:last-child) .card-img-top,
-  .card-group > .card:not(:last-child) .card-header {
+  .card-group > .card:not(:last-child) > .card-img-top,
+  .card-group > .card:not(:last-child) > .card-header {
     border-top-right-radius: 0;
   }
-  .card-group > .card:not(:last-child) .card-img-bottom,
-  .card-group > .card:not(:last-child) .card-footer {
+  .card-group > .card:not(:last-child) > .card-img-bottom,
+  .card-group > .card:not(:last-child) > .card-footer {
     border-bottom-right-radius: 0;
   }
   .card-group > .card:not(:first-child) {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
-  .card-group > .card:not(:first-child) .card-img-top,
-  .card-group > .card:not(:first-child) .card-header {
+  .card-group > .card:not(:first-child) > .card-img-top,
+  .card-group > .card:not(:first-child) > .card-header {
     border-top-left-radius: 0;
   }
-  .card-group > .card:not(:first-child) .card-img-bottom,
-  .card-group > .card:not(:first-child) .card-footer {
+  .card-group > .card:not(:first-child) > .card-img-bottom,
+  .card-group > .card:not(:first-child) > .card-footer {
     border-bottom-left-radius: 0;
   }
 }
@@ -7187,6 +7187,10 @@ textarea.form-control-lg {
 .visually-hidden:not(caption),
 .visually-hidden-focusable:not(:focus):not(:focus-within):not(caption) {
   position: absolute !important;
+}
+.visually-hidden *,
+.visually-hidden-focusable:not(:focus):not(:focus-within) * {
+  overflow: hidden !important;
 }
 
 .stretched-link::after {
@@ -12289,6 +12293,11 @@ textarea.form-control-lg {
   transform: translate(0, 0);
 }
 
+[data-bs-theme=dark] .btn-link,
+[data-bs-theme=dark] .btn-link:hover {
+  color: #fff;
+}
+
 a {
   font-weight: 500;
 }
@@ -12426,6 +12435,34 @@ a {
   color: #fff;
 }
 
+[data-bs-theme=dark] .nav-tabs .nav-link,
+[data-bs-theme=dark] .nav-pills .nav-link {
+  --bs-nav-link-color: #fff;
+}
+[data-bs-theme=dark] .nav-tabs .nav-link:hover, [data-bs-theme=dark] .nav-tabs .nav-link:focus,
+[data-bs-theme=dark] .nav-pills .nav-link:hover,
+[data-bs-theme=dark] .nav-pills .nav-link:focus {
+  --bs-nav-link-hover-color: #fff;
+}
+[data-bs-theme=dark] .page-link {
+  --bs-pagination-color: #fff;
+}
+[data-bs-theme=dark] .page-link:hover {
+  --bs-pagination-hover-color: #fff;
+}
+[data-bs-theme=dark] .nav-underline .nav-link {
+  --bs-nav-link-color: #fff;
+}
+[data-bs-theme=dark] .nav-underline .nav-link:hover, [data-bs-theme=dark] .nav-underline .nav-link:focus {
+  --bs-nav-link-hover-color: #fff;
+}
+[data-bs-theme=dark] .breadcrumb a {
+  color: #fff;
+}
+[data-bs-theme=dark] .breadcrumb-item.active {
+  --bs-breadcrumb-item-active-color: #fff;
+}
+
 .alert {
   color: #000;
   border: 2px solid #000;
@@ -12493,4 +12530,8 @@ a {
 .vr {
   width: 2px;
   background-color: #000;
+}
+
+[data-bs-theme=dark] .toast-header {
+  --bs-toast-header-color: #fff;
 }

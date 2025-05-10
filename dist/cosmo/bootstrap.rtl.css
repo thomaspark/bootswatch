@@ -1,13 +1,13 @@
 @charset "UTF-8";
 /*!
- * Bootswatch v5.3.5 (https://bootswatch.com)
+ * Bootswatch v5.3.6 (https://bootswatch.com)
  * Theme: cosmo
  * Copyright 2012-2025 Thomas Park
  * Licensed under MIT
  * Based on Bootstrap
 */
 /*!
- * Bootstrap  v5.3.5 (https://getbootstrap.com/)
+ * Bootstrap  v5.3.6 (https://getbootstrap.com/)
  * Copyright 2011-2025 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
@@ -6890,6 +6890,10 @@ textarea.form-control-lg {
 .visually-hidden:not(caption),
 .visually-hidden-focusable:not(:focus):not(:focus-within):not(caption) {
   position: absolute !important;
+}
+.visually-hidden *,
+.visually-hidden-focusable:not(:focus):not(:focus-within) * {
+  overflow: hidden !important;
 }
 
 .stretched-link::after {
