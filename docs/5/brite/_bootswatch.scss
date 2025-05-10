@@ -1,4 +1,4 @@
-// Brite 5.3.5
+// Brite 5.3.6
 // Bootswatch
 
 
@@ -145,6 +145,11 @@
   transform: translate(0, 0);
 }
 
+[data-bs-theme="dark"] .btn-link,
+[data-bs-theme="dark"] .btn-link:hover {
+  color: #fff;
+}
+
 // Typography
 
 a {
@@ -263,6 +268,51 @@ a {
   color: $white;
 }
 
+[data-bs-theme="dark"] {
+  .nav-tabs,
+  .nav-pills {
+    .nav-link {
+      --#{$prefix}nav-link-color: #fff;
+
+      &:hover,
+      &:focus {
+        --#{$prefix}nav-link-hover-color: #fff;
+      }
+    }
+  }
+
+  .page-link {
+    --#{$prefix}pagination-color: #fff;
+
+    &:hover {
+      --#{$prefix}pagination-hover-color: #fff;
+    }
+  }
+
+  .nav-underline {
+    .nav-link {
+      --#{$prefix}nav-link-color: #fff;
+
+      &:hover,
+      &:focus {
+        --#{$prefix}nav-link-hover-color: #fff;
+      }
+    }
+  }
+
+  .breadcrumb {
+    a {
+      color: $white;
+    }
+  }
+
+  .breadcrumb-item {
+    &.active {
+      --#{$prefix}breadcrumb-item-active-color: #fff;
+    }
+  }
+}
+
 // Indicators
 
 .alert {
@@ -310,4 +360,8 @@ a {
 .vr {
   width: 2px;
   background-color: $black;
+}
+
+[data-bs-theme="dark"] .toast-header {
+  --#{$prefix}toast-header-color: #fff;
 }
