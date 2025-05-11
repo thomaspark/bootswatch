@@ -199,6 +199,15 @@ a {
 
 // Navs
 
+.nav {
+  &:not(.nav-tabs, .nav-pills)
+  .nav-link {
+    &.active {
+      font-weight: bold;
+    }
+  }
+}
+
 .nav-tabs {
   gap: 4px;
   padding: .4rem .4rem calc(.4rem + 2px);
@@ -289,7 +298,7 @@ a {
     }
   }
 
-  .nav-underline {
+  .nav {
     .nav-link {
       --#{$prefix}nav-link-color: #fff;
 

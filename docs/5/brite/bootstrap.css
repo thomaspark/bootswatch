@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*!
- * Bootswatch v5.3.5 (https://bootswatch.com)
+ * Bootswatch v5.3.6 (https://bootswatch.com)
  * Theme: brite
  * Copyright 2012-2025 Thomas Park
  * Licensed under MIT
@@ -12331,6 +12331,10 @@ a {
   box-shadow: none;
 }
 
+.nav:not(.nav-tabs, .nav-pills) .nav-link.active {
+  font-weight: bold;
+}
+
 .nav-tabs {
   gap: 4px;
   padding: 0.4rem 0.4rem calc(0.4rem + 2px);
@@ -12450,10 +12454,10 @@ a {
 [data-bs-theme=dark] .page-link:hover {
   --bs-pagination-hover-color: #fff;
 }
-[data-bs-theme=dark] .nav-underline .nav-link {
+[data-bs-theme=dark] .nav .nav-link {
   --bs-nav-link-color: #fff;
 }
-[data-bs-theme=dark] .nav-underline .nav-link:hover, [data-bs-theme=dark] .nav-underline .nav-link:focus {
+[data-bs-theme=dark] .nav .nav-link:hover, [data-bs-theme=dark] .nav .nav-link:focus {
   --bs-nav-link-hover-color: #fff;
 }
 [data-bs-theme=dark] .breadcrumb a {
