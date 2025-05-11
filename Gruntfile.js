@@ -184,17 +184,21 @@ module.exports = grunt => {
           'dist/*/_variables.scss',
           'dist/*/_bootswatch.scss'
         ],
-        tasks: 'build'
+        tasks: ['build', 'shell:csslint']
       }
     },
     shell: {  
       options: {
-        stderr: false
+        stderr: false,
+        failOnError: false
       },
       rtlcss: {
         command: function (theme) {
           return `rtlcss dist/${theme}/bootstrap.css dist/${theme}/bootstrap.rtl.css`;
         }
+      },
+      csslint: {
+        command: 'stylelint "dist/**/*.scss"'
       }
     }
   });
