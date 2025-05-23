@@ -5610,7 +5610,7 @@ textarea.form-control-lg {
   --bs-popover-header-padding-y: 0.5rem;
   --bs-popover-header-font-size: 1rem;
   --bs-popover-header-color: #1a1a1a;
-  --bs-popover-header-bg: var(--bs-secondary-bg);
+  --bs-popover-header-bg: transparent;
   --bs-popover-body-padding-x: 1rem;
   --bs-popover-body-padding-y: 1rem;
   --bs-popover-body-color: var(--bs-body-color);
@@ -12026,4 +12026,12 @@ th {
 
 .modal-dialog {
   box-shadow: var(--bs-box-shadow);
+}
+
+.popover {
+  --bs-popover-border-color: transparent;
+  box-shadow: var(--bs-box-shadow);
+}
+.popover .popover-arrow {
+  --bs-popover-border-width: 1px;
 }

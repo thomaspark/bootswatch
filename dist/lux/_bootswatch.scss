@@ -284,3 +284,12 @@ th {
 .modal-dialog {
   box-shadow: var(--bs-box-shadow);
 }
+
+.popover {
+  --bs-popover-border-color: transparent;
+  box-shadow: var(--bs-box-shadow);
+
+  .popover-arrow {
+    --bs-popover-border-width: 1px;
+  }
+}
