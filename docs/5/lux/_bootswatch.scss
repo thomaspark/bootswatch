@@ -293,3 +293,12 @@ th {
     --bs-popover-border-width: 1px;
   }
 }
+
+
+@include color-mode(dark) {
+  .modal-content,
+  .popover,
+  .toast {
+    background-color: lighten($gray-900, 5%);
+  }
+}

@@ -5184,7 +5184,7 @@ textarea.form-control-lg {
   --bs-toast-border-radius: var(--bs-border-radius);
   --bs-toast-box-shadow: var(--bs-box-shadow);
   --bs-toast-header-color: var(--bs-secondary-color);
-  --bs-toast-header-bg: rgba(var(--bs-body-bg-rgb), 0.85);
+  --bs-toast-header-bg: transparent;
   --bs-toast-header-border-color: var(--bs-border-color-translucent);
   width: var(--bs-toast-max-width);
   max-width: 100%;
@@ -5609,7 +5609,7 @@ textarea.form-control-lg {
   --bs-popover-header-padding-x: 1rem;
   --bs-popover-header-padding-y: 0.5rem;
   --bs-popover-header-font-size: 1rem;
-  --bs-popover-header-color: #1a1a1a;
+  --bs-popover-header-color: var(--bs-popover-header-color);
   --bs-popover-header-bg: transparent;
   --bs-popover-body-padding-x: 1rem;
   --bs-popover-body-padding-y: 1rem;
@@ -12034,4 +12034,10 @@ th {
 }
 .popover .popover-arrow {
   --bs-popover-border-width: 1px;
+}
+
+[data-bs-theme=dark] .modal-content,
+[data-bs-theme=dark] .popover,
+[data-bs-theme=dark] .toast {
+  background-color: #272727;
 }
