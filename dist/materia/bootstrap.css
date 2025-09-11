@@ -1,13 +1,13 @@
 @charset "UTF-8";
 /*!
- * Bootswatch v5.3.7 (https://bootswatch.com)
+ * Bootswatch v5.3.8 (https://bootswatch.com)
  * Theme: materia
  * Copyright 2012-2025 Thomas Park
  * Licensed under MIT
  * Based on Bootstrap
 */
 /*!
- * Bootstrap  v5.3.7 (https://getbootstrap.com/)
+ * Bootstrap  v5.3.8 (https://getbootstrap.com/)
  * Copyright 2011-2025 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
@@ -554,6 +554,10 @@ legend + * {
 [type=search] {
   -webkit-appearance: textfield;
   outline-offset: -2px;
+}
+[type=search]::-webkit-search-cancel-button {
+  cursor: pointer;
+  filter: grayscale(1);
 }
 
 /* rtl:raw:
@@ -6259,6 +6263,7 @@ textarea.form-control-lg {
 .spinner-grow,
 .spinner-border {
   display: inline-block;
+  flex-shrink: 0;
   width: var(--bs-spinner-width);
   height: var(--bs-spinner-height);
   vertical-align: var(--bs-spinner-vertical-align);
@@ -12916,7 +12921,7 @@ select.form-control[multiple] {
   margin-top: 1px;
   border: 2px solid #ced4da;
 }
-.form-check-input:checked[type=radio] {
+:not(.form-check) > .form-check-input:checked[type=radio] {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%232196f3' stroke='%23fff'/%3e%3c/svg%3e"), var(--bs-gradient);
   background-size: 1.8em;
 }

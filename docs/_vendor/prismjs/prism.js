@@ -227,7 +227,7 @@ var Prism = (function (_self) {
 				if (typeof document === 'undefined') {
 					return null;
 				}
-				if ('currentScript' in document && 1 < 2 /* hack to trip TS' flow analysis */) {
+				if (document.currentScript && document.currentScript.tagName === 'SCRIPT' && 1 < 2 /* hack to trip TS' flow analysis */) {
 					return /** @type {any} */ (document.currentScript);
 				}
 
