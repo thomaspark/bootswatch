@@ -12344,6 +12344,17 @@ a.list-group-item-danger.active:hover, a.list-group-item-danger.active:focus {
   background-color: #e63b31;
 }
 
+.card, .modal-content, .popover, .toast {
+  border-style: solid;
+  border-width: 0 1px 4px 1px;
+  border-top-width: 1px;
+}
+
+.accordion-item:last-child, .list-group-item:last-child {
+  border-style: solid;
+  border-width: 0 1px 4px 1px;
+}
+
 .modal .btn-close,
 .toast .btn-close,
 .offcanvas .btn-close {

@@ -330,6 +330,15 @@ a.list-group-item {
   }
 }
 
+.card, .modal-content, .popover, .toast {
+  @include shadow();
+  border-top-width: 1px;
+}
+
+.accordion-item:last-child, .list-group-item:last-child {
+  @include shadow();
+}
+
 .modal,
 .toast,
 .offcanvas {
