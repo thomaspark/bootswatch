@@ -293,6 +293,10 @@ label,
 }
 
 @include color-mode(dark) {
+  .dropdown-menu {
+    --bs-dropdown-bg: var(--bs-gray-800);
+  }
+
   .pagination {
     --bs-pagination-disabled-color: #{$gray-700};
   }
