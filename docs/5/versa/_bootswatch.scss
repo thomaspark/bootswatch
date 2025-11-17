@@ -203,16 +203,31 @@ $border-dark: rgba(255, 255, 255, .08) !default;
 }
 
 .btn-group {
+  box-shadow: $box-shadow;
+
   .btn:first-child {
     border-color: transparent;
     border-width: 0 0 0 1px;
     box-shadow: none;
   }
 
+  .btn-secondary {
+    // border-color: $gray-200;
+
+    &:first-child {
+      border: 1px solid $gray-200;
+    }
+  }
+
   :not(.btn-check) + .btn {
     border-color: $gray-200;
     border-width: 0 0 0 1px;
     box-shadow: none;
+
+    &-secondary {
+      // border-color: $gray-200;
+      border-width: 1px;
+    }
 
     &:hover {
       z-index: 0;
