@@ -185,21 +185,27 @@ iframe {
 
 .section-preview {
   padding: 4em 0;
+
   .preview {
     margin-bottom: 4em;
+    border: none;
     background-color: #eaf1f1;
+    overflow: hidden;
+
     .image {
       position: relative;
 
       img {
         width: 100%;
         height: auto;
+        object-fit: cover;
+        object-position: center;
       }
     }
     .options {
       padding: 2em;
       text-align: center;
-      border-top: 1px solid rgba(0, 0, 0, .125);
+
       p {
         margin-bottom: 2em;
       }
