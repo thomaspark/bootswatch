@@ -1,0 +1,147 @@
+// Versa 5.3.8
+// Bootswatch
+
+
+// Variables
+
+
+// Mixins
+
+// Tables
+
+// Navbar
+
+.navbar {
+  font-weight: $font-weight-medium;
+
+  .form-control {
+    background-color: rgba(0, 0, 0, .04);
+    border-width: 0;
+  }
+}
+
+.nav-link {
+  font-size: $input-btn-font-size;
+  border-radius: $border-radius;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, .04);
+  }
+}
+
+.navbar[data-bs-theme="dark"] {
+  .nav-link {
+    &:hover {
+      background-color: rgba(255, 255, 255, .08);
+    }
+  }
+
+  .form-control {
+    background-color: rgba(255, 255, 255, .08);
+  }
+
+  .dropdown-menu,
+  .dropdown-divider {
+    border-color: rgba(255, 255, 255, .08);
+  }
+
+  .dropdown-menu {
+    background-color: $gray-800;
+  }
+
+}
+
+// Buttons
+
+.btn {
+  border-color: transparent;
+  box-shadow: $box-shadow;
+
+  &-light,
+  &-outline-light {
+    &,
+    &:hover {
+      border-color: $gray-200;
+    }
+
+    :not(.btn-check) + &:active {
+      border-color: $gray-200;
+      border-width: 1px;
+    }
+  }
+}
+
+.btn-outline-primary,
+.btn-outline-secondary,
+.btn-outline-success,
+.btn-outline-info,
+.btn-outline-warning,
+.btn-outline-danger,
+.btn-outline-dark,
+.btn-outline-light {
+  border-color: $gray-200;
+  border-width: 1px;
+  color: $body-color;
+}
+
+.btn-check + .btn:hover {
+  z-index: 0;
+  border-color: $gray-200;
+}
+
+.btn-check:checked + .btn:hover {
+  border-color: $black;
+}
+
+.btn-group {
+  .btn:first-child {
+    border-color: transparent;
+    border-width: 0 0 0 1px;
+    box-shadow: none;
+  }
+
+  :not(.btn-check) + .btn {
+    border-color: $gray-200;
+    border-width: 0 0 0 1px;
+    box-shadow: none;
+
+    &:hover {
+      z-index: 0;
+    }
+  }
+}
+
+
+// Typography
+
+
+// Navs
+
+.dropdown-menu {
+  box-shadow: $box-shadow-lg;
+}
+
+.dropdown-item {
+  width: calc(100% - 1rem);
+  margin-inline: .5rem;
+  border-radius: $border-radius-sm;
+}
+
+
+
+// Indicators
+
+.badge {
+  &.bg-secondary,
+  &.bg-light {
+    color: $gray-900;
+  }
+
+  &.bg-light {
+    border: 1px solid $gray-200;
+  }
+}
+
+.vr {
+  background-color: $gray-200;
+}

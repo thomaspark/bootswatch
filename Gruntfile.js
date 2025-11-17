@@ -30,6 +30,7 @@ const SWATCHES = [
   'superhero',
   'united',
   'vapor',
+  'versa',
   'yeti',
   'zephyr'
 ];

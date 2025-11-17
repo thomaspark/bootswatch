@@ -1,0 +1,127 @@
+// Versa 5.3.8
+// Bootswatch
+
+$theme: "versa" !default;
+
+//
+// Color system
+//
+
+$white:    #fff !default;
+$gray-100: #f5f5f5 !default;
+$gray-200: #e5e5e5 !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #868e96 !default;
+$gray-700: #495057 !default;
+$gray-800: #2e2e2e !default;
+$gray-900: #161616 !default;
+$black:    #000 !default;
+
+$blue:    #2b80ff !default;
+$indigo:  #605fff !default;
+$purple:  #ac47ff !default;
+$pink:    #d63384 !default;
+$red:     #e7020b !default;
+$orange:  #ff6801 !default;
+$yellow:  #efb100 !default;
+$green:   #04c951 !default;
+$teal:    #02bba7 !default;
+$cyan:    #00b9db !default;
+
+$primary:       $gray-900 !default;
+$secondary:     $gray-100 !default;
+$success:       $green !default;
+$info:          $blue !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $white !default;
+$dark:          $gray-800 !default;
+
+$min-contrast-ratio:   1.6 !default;
+
+// Components
+
+$border-color:                $gray-200 !default;
+
+$border-radius:               .5rem !default;
+$border-radius-sm:            calc(.625rem - 4px) !default;
+$border-radius-pill:          50rem !default;
+
+$box-shadow:                  rgba(0, 0, 0, .05) 0 1px 2px 0 !default;
+$box-shadow-lg:               rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.1) 0px 2px 4px -2px !default;
+
+
+// Body
+
+$body-color:                #0a0a0a !default;
+
+// Fonts
+
+$font-size-base:              .9375rem !default;
+
+$font-weight-normal:          400 !default;
+$font-weight-medium:          500 !default;
+
+// Tables
+
+// Buttons + Forms
+
+$input-btn-padding-y:         .5rem !default;
+$input-btn-padding-x:         1rem !default;
+$input-btn-font-size:         .875rem !default;
+
+$input-btn-padding-y-sm:      .375rem !default;
+$input-btn-padding-x-sm:      .875rem !default;
+$input-btn-font-size-sm:      $font-size-base !default;
+
+$input-btn-padding-y-lg:      .875rem !default;
+$input-btn-padding-x-lg:      1.5rem !default;
+$input-btn-font-size-lg:      $font-size-base !default;
+
+
+// Buttons
+
+$btn-font-weight:             $font-weight-medium !default;
+
+$btn-border-radius-sm:        $border-radius !default;
+$btn-border-radius-lg:        $border-radius !default;
+
+$btn-hover-bg-shade-amount:       0% !default;
+$btn-hover-bg-tint-amount:        0% !default;
+$btn-hover-border-shade-amount:   0% !default;
+$btn-hover-border-tint-amount:    0% !default;
+$btn-active-bg-shade-amount:      0% !default;
+$btn-active-bg-tint-amount:       0% !default;
+$btn-active-border-shade-amount:  0% !default;
+$btn-active-border-tint-amount:   0% !default;
+
+// Navbar
+
+$navbar-padding-y:                  1rem !default;
+
+$navbar-nav-link-padding-x:         .75rem !default;
+
+$navbar-light-color:                $black !default;
+$navbar-light-hover-color:          $black !default;
+$navbar-light-active-color:         $black !default;
+
+
+$navbar-dark-color:                 $white !default;
+$navbar-dark-hover-color:           $white !default;
+$navbar-dark-active-color:          $white !default;
+
+// Dropdowns
+
+$dropdown-font-size:                $input-btn-font-size !default;
+$dropdown-color:                    $body-color !default;
+$dropdown-border-color:             $border-color !default;
+
+$dropdown-item-padding-y:           .5rem !default;
+$dropdown-item-padding-x:           .375rem !default;
+
+// Badges
+
+$badge-font-weight:                 $font-weight-medium !default;
+
