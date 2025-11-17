@@ -13,8 +13,8 @@ $gray-200: #e5e5e5 !default;
 $gray-300: #dee2e6 !default;
 $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
-$gray-600: #868e96 !default;
-$gray-700: #495057 !default;
+$gray-600: #737373 !default;
+$gray-700: #6c6c6c !default;
 $gray-800: #2e2e2e !default;
 $gray-900: #161616 !default;
 $black:    #000 !default;
@@ -46,6 +46,7 @@ $min-contrast-ratio:   1.6 !default;
 $border-color:                $gray-200 !default;
 
 $border-radius:               .5rem !default;
+$border-radius-lg:            .875rem !default;
 $border-radius-sm:            calc(.625rem - 4px) !default;
 $border-radius-pill:          50rem !default;
 
@@ -60,6 +61,7 @@ $body-color:                #0a0a0a !default;
 // Fonts
 
 $font-size-base:              .9375rem !default;
+$font-size-sm:                .875rem !default;
 
 $font-weight-normal:          400 !default;
 $font-weight-medium:          500 !default;
@@ -97,6 +99,10 @@ $btn-active-bg-tint-amount:       0% !default;
 $btn-active-border-shade-amount:  0% !default;
 $btn-active-border-tint-amount:   0% !default;
 
+// Navs
+
+$nav-link-disabled-color:           $gray-600 !default;
+
 // Navbar
 
 $navbar-padding-y:                  1rem !default;
@@ -121,7 +127,52 @@ $dropdown-border-color:             $border-color !default;
 $dropdown-item-padding-y:           .5rem !default;
 $dropdown-item-padding-x:           .375rem !default;
 
+// Pagination
+
+$pagination-padding-x:              1rem !default;
+$pagination-padding-x-sm:           .75rem !default;
+
+$pagination-border-color:           transparent !default;
+
+$pagination-hover-border-color:     transparent !default;
+
+$pagination-active-color:           inherit !default;
+$pagination-active-bg:              transparent !default;
+$pagination-active-border-color:    $border-color !default;
+
+
+$pagination-disabled-bg:            transparent !default;
+$pagination-disabled-border-color:  transparent !default;
+
+// Cards
+
+// Accordion
+
+// Tooltips
+
+// Popovers
+
+// Toasts
+
 // Badges
 
 $badge-font-weight:                 $font-weight-medium !default;
+
+// Modals
+
+// Alerts
+
+// Progress bars
+
+$progress-height:                   .5rem !default;
+
+// List group
+
+// Breadcrumbs
+
+$breadcrumb-item-padding-x:         1rem !default;
+$breadcrumb-font-size:              $font-size-sm !default;
+$breadcrumb-divider-color:          $gray-600 !default;
+$breadcrumb-active-color:           $body-color !default;
+$breadcrumb-divider:                quote("〉") !default;
 
