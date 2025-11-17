@@ -44,6 +44,7 @@ $min-contrast-ratio:   1.6 !default;
 // Components
 
 $border-color:                $gray-200 !default;
+$border-color-translucent:    rgba($black, .075) !default;
 
 $border-radius:               .5rem !default;
 $border-radius-lg:            .875rem !default;
@@ -67,6 +68,18 @@ $font-weight-normal:          400 !default;
 $font-weight-medium:          500 !default;
 
 // Tables
+
+$table-th-font-weight:        $font-weight-medium !default;
+
+$table-active-bg-factor:      1 !default;
+$table-active-bg:             rgba($gray-100, $table-active-bg-factor) !default;
+
+$table-hover-bg-factor:       .05 !default;
+
+$table-border-factor:         0.05 !default;
+$table-border-color:          $border-color !default;
+
+$table-bg-scale:              -92% !default;
 
 // Buttons + Forms
 
@@ -103,6 +116,9 @@ $btn-active-border-tint-amount:   0% !default;
 
 $nav-link-disabled-color:           $gray-600 !default;
 
+$nav-pills-link-active-color:       $body-color !default;
+$nav-pills-link-active-bg:          $white !default;
+
 // Navbar
 
 $navbar-padding-y:                  1rem !default;
@@ -125,7 +141,10 @@ $dropdown-color:                    $body-color !default;
 $dropdown-border-color:             $border-color !default;
 
 $dropdown-item-padding-y:           .5rem !default;
-$dropdown-item-padding-x:           .375rem !default;
+$dropdown-item-padding-x:           .5rem !default;
+
+$dropdown-header-color:             $black !default;
+$dropdown-header-padding-x:         .875rem !default;
 
 // Pagination
 
@@ -150,9 +169,18 @@ $pagination-disabled-border-color:  transparent !default;
 
 // Tooltips
 
+$tooltip-font-size:                 $font-size-sm * 0.875 !default;
+$tooltip-padding-x:                 .675rem !default;
+
 // Popovers
 
+$popover-box-shadow:                $box-shadow-lg !default;
+
+$popover-header-bg:                 transparent !default;
+
 // Toasts
+
+$toast-header-color:                $body-color !default;
 
 // Badges
 
@@ -176,3 +204,12 @@ $breadcrumb-divider-color:          $gray-600 !default;
 $breadcrumb-active-color:           $body-color !default;
 $breadcrumb-divider:                quote("〉") !default;
 
+// Close
+
+$btn-close-width:            .5em !default;
+$btn-close-color:            $gray-800 !default;
+
+// Offcanvas
+
+$offcanvas-padding-y:               2rem !default;
+$offcanvas-padding-x:               2rem !default;

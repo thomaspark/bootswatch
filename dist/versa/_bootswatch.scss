@@ -14,6 +14,10 @@
 
 // Tables
 
+.table {
+  font-size: $font-size-sm;
+}
+
 // Navbar
 
 .navbar {
@@ -139,14 +143,59 @@
 
 // Navs
 
+.nav-tabs {
+  font-weight: $font-weight-medium;
+
+  .nav-link {
+    padding-inline: 1.25rem;
+    margin-inline: .25rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .dropdown-menu {
+    border-radius: $border-radius;
+  }
+}
+
+.nav-pills {
+  padding: .25rem .1rem;
+  background-color: $gray-100;
+  border-radius: $border-radius;
+  font-weight: $font-weight-medium;
+
+  .nav-link {
+    padding-inline: 1.25rem;
+    margin-inline: .25rem;
+
+    &:hover {
+      background: none;
+    }
+
+    &.active {
+      box-shadow: $box-shadow;
+    }
+  }
+
+  .dropdown-menu {
+    border-radius: $border-radius;
+  }
+}
+
+.tab-content {
+  padding: 1rem;
+}
+
 .nav-underline {
+  font-weight: $font-weight-medium;
+
   .nav-link {
     padding-inline: 1rem;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 
     &.active {
-      font-weight: inherit;
+      font-weight: $font-weight-medium;
     }
   }
 }
@@ -238,6 +287,19 @@
   &.bg-light {
     border: 1px solid $gray-200;
   }
+}
+
+.tooltip {
+  font-weight: $font-weight-light;
+}
+
+.popover,
+.toast {
+  box-shadow: $box-shadow-lg;
+}
+
+.offcanvas {
+  padding: $offcanvas-padding-y $offcanvas-padding-x;
 }
 
 .vr {
