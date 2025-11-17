@@ -31,12 +31,12 @@ $teal:    #02bba7 !default;
 $cyan:    #00b9db !default;
 
 $primary:       $gray-900 !default;
-$secondary:     $gray-100 !default;
+$secondary:     $white !default;
 $success:       $green !default;
 $info:          $blue !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
-$light:         $white !default;
+$light:         $gray-100 !default;
 $dark:          $gray-800 !default;
 
 $min-contrast-ratio:   1.6 !default;
@@ -61,11 +61,15 @@ $body-color:                #0a0a0a !default;
 
 // Fonts
 
+$font-family-sans-serif:      ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+
 $font-size-base:              .9375rem !default;
 $font-size-sm:                .875rem !default;
 
 $font-weight-normal:          400 !default;
 $font-weight-medium:          500 !default;
+
+$lead-font-weight:            $font-weight-normal !default;
 
 // Tables
 
@@ -79,7 +83,7 @@ $table-hover-bg-factor:       .05 !default;
 $table-border-factor:         .05 !default;
 $table-border-color:          $border-color !default;
 
-$table-bg-scale:              -92% !default;
+$table-bg-scale:              0% !default;
 
 // Buttons + Forms
 
@@ -103,7 +107,7 @@ $btn-font-weight:             $font-weight-medium !default;
 $btn-border-radius-sm:        $border-radius !default;
 $btn-border-radius-lg:        $border-radius !default;
 
-$btn-hover-bg-shade-amount:       0% !default;
+$btn-hover-bg-shade-amount:       10% !default;
 $btn-hover-bg-tint-amount:        0% !default;
 $btn-hover-border-shade-amount:   0% !default;
 $btn-hover-border-tint-amount:    0% !default;
@@ -192,6 +196,8 @@ $pagination-disabled-border-color:  transparent !default;
 // Cards
 
 // Accordion
+
+$accordion-button-active-bg:              transparent !default;
 
 // Tooltips
 
