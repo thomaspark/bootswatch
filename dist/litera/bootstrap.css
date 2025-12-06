@@ -2156,7 +2156,7 @@ progress {
   appearance: none;
   background-color: var(--bs-body-bg);
   background-clip: padding-box;
-  border: var(--bs-border-width) solid rgba(0, 0, 0, 0.1);
+  border: var(--bs-border-width) solid var(--bs-border-color);
   border-radius: var(--bs-border-radius);
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
@@ -2358,7 +2358,7 @@ textarea.form-control-lg {
   background-repeat: no-repeat;
   background-position: right 1.1rem center;
   background-size: 16px 12px;
-  border: var(--bs-border-width) solid rgba(0, 0, 0, 0.1);
+  border: var(--bs-border-width) solid var(--bs-border-color);
   border-radius: var(--bs-border-radius);
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
@@ -2777,8 +2777,8 @@ textarea.form-control-lg {
   color: var(--bs-body-color);
   text-align: center;
   white-space: nowrap;
-  background-color: #e9ecef;
-  border: var(--bs-border-width) solid rgba(0, 0, 0, 0.1);
+  background-color: var(--bs-tertiary-bg);
+  border: var(--bs-border-width) solid var(--bs-border-color);
   border-radius: var(--bs-border-radius);
 }
 
