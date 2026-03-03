@@ -10,6 +10,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;70
 }
 
 $btn-box-shadow-inset: inset 2px 3px 6px rgba($black, .2), inset -3px -2px 6px rgba($white, .2) !default;
+$btn-box-shadow-inset-dark: inset 2px 3px 6px rgba($black, .1), inset -3px -2px 6px rgba($black, .1) !default;
 
 $box-shadow-dark: 5px 5px 10px rgba(darken($dark, 50%), .2), -5px -5px 10px rgba($white, .05) !default;
 
@@ -356,18 +357,6 @@ $box-shadow-dark: 5px 5px 10px rgba(darken($dark, 50%), .2), -5px -5px 10px rgba
 // Forms
 
 .input-group {
-  background-color: $gray-100;
-  border-radius: $border-radius;
-  box-shadow: $box-shadow-inset;
-
-  > .form-control {
-    background: none;
-    box-shadow: none;
-  }
-
-  .input-group-text {
-    background: none;
-  }
 
   .btn {
     border: none;
@@ -426,6 +415,12 @@ $box-shadow-dark: 5px 5px 10px rgba(darken($dark, 50%), .2), -5px -5px 10px rgba
 }
 
 @include color-mode(dark) {
+  .form-control,
+  .form-select {
+    background-color: darken($dark, 1%);
+    box-shadow: $btn-box-shadow-inset-dark;
+  }
+
   .form-control {
     &:disabled {
       background-color: $gray-400;

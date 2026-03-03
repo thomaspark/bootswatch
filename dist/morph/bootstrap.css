@@ -2,7 +2,7 @@
 /*!
  * Bootswatch v5.3.8 (https://bootswatch.com)
  * Theme: morph
- * Copyright 2012-2025 Thomas Park
+ * Copyright 2012-2026 Thomas Park
  * Licensed under MIT
  * Based on Bootstrap
 */
@@ -12607,18 +12607,6 @@ textarea.form-control-lg {
   --bs-table-color: #7b8ab8;
 }
 
-.input-group {
-  background-color: #f0f5fa;
-  border-radius: 0.375rem;
-  box-shadow: inset 2px 2px 8px rgba(55, 94, 148, 0.3), inset -3px -2px 5px rgba(255, 255, 255, 0.8);
-}
-.input-group > .form-control {
-  background: none;
-  box-shadow: none;
-}
-.input-group .input-group-text {
-  background: none;
-}
 .input-group .btn {
   border: none;
   border-radius: 0;
@@ -12667,6 +12655,11 @@ textarea.form-control-lg {
   box-shadow: 5px 5px 10px rgba(55, 94, 148, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.4);
 }
 
+[data-bs-theme=dark] .form-control,
+[data-bs-theme=dark] .form-select {
+  background-color: #1f2226;
+  box-shadow: inset 2px 3px 6px rgba(0, 0, 0, 0.1), inset -3px -2px 6px rgba(0, 0, 0, 0.1);
+}
 [data-bs-theme=dark] .form-control:disabled {
   background-color: #bed1e6;
 }
