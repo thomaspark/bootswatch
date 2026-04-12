@@ -71,6 +71,12 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;6
   border-color: $gray-600;
   color: $gray-600;
 
+  &.disabled,
+  &:disabled {
+    color: $gray-600;
+    background-color: transparent;
+  }
+  
   &:not([disabled]):not(.disabled):hover,
   &:not([disabled]):not(.disabled):focus,
   &:not([disabled]):not(.disabled):active {
